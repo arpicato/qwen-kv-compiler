@@ -1,0 +1,1627 @@
+{
+  "scope": "Exact normalized question audit only; shared operations/templates/policies remain familiar; no holdout claim.",
+  "prior_files": {
+    "inputs/clean_eval_v1/cases.json": "41777f423aaa73b2d167d77ebbb2dec8f181fd6814aefebba471ebc91628251b",
+    "inputs/clean_eval_v2/cases.json": "cc82e236f669196f2ff1c80da211e6c8934ec7d1801e1a2b1b0e0833701680f8",
+    "inputs/controlled4b/cases.json": "5b9b75eeb5c96fb9ac1d15e80fed29038b32b75df7311e4c35bea7a451d2b406",
+    "inputs/joint/gate.json": "1df13e1c35a0f4d3e2ec1e645b3981586e52c48549f8b245b7f767a8fa0df585",
+    "inputs/natural_refactors_v3/cases.json": "1456ccb9b4af9db091514523b1d214cc04e53c9d86451042d4125349eaa0ef24",
+    "inputs/transplant_refactors_v4/cases.json": "f469319e434e19d80d8b05fb1ff3e4680514121605b1dddd960e4e2c166aee81",
+    "results/HANDWRITTEN27B_CASES.json": "5aa1960cbf9029129836bb4301732be99ccbb5b6b9646a5b20968a3303ab3341",
+    "results/POLICY40_CASES.json": "7ab3deab61f4dd504d982b54c04dd308521e608b6d380f4f11bb3894972a7903",
+    "results/POLICY_TARGET_CASES.json": "7088a056df337d6b29c7826e921de2759c01b0f74addc69754288471534cdf17"
+  },
+  "counts": {
+    "cases": 120,
+    "prior_exact": 77,
+    "calibration_exact": 0
+  },
+  "rows": [
+    {
+      "id": "b-money-inclusive-unapproved",
+      "category": "money_unapproved",
+      "family": "money-inclusive",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-inclusive-unapproved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-inclusive-approved",
+      "category": "money_approved",
+      "family": "money-inclusive",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-inclusive-approved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-exclusive-unapproved",
+      "category": "money_unapproved",
+      "family": "money-exclusive",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-exclusive-unapproved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-exclusive-approved",
+      "category": "money_approved",
+      "family": "money-exclusive",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-exclusive-approved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-refund-floor-unapproved",
+      "category": "money_unapproved",
+      "family": "money-refund-floor",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-refund-floor-unapproved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-refund-floor-approved",
+      "category": "money_approved",
+      "family": "money-refund-floor",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-refund-floor-approved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-ceiling-unapproved",
+      "category": "money_unapproved",
+      "family": "money-ceiling",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-ceiling-unapproved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-ceiling-approved",
+      "category": "money_approved",
+      "family": "money-ceiling",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-ceiling-approved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-half-up-unapproved",
+      "category": "money_unapproved",
+      "family": "money-half-up",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-half-up-unapproved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-half-up-approved",
+      "category": "money_approved",
+      "family": "money-half-up",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-half-up-approved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-bankers-unapproved",
+      "category": "money_unapproved",
+      "family": "money-bankers",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-bankers-unapproved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-bankers-approved",
+      "category": "money_approved",
+      "family": "money-bankers",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-bankers-approved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-ceil-fee-unapproved",
+      "category": "money_unapproved",
+      "family": "money-ceil-fee",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-ceil-fee-unapproved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-ceil-fee-approved",
+      "category": "money_approved",
+      "family": "money-ceil-fee",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-ceil-fee-approved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-odd-first-unapproved",
+      "category": "money_unapproved",
+      "family": "money-odd-first",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-odd-first-unapproved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-odd-first-approved",
+      "category": "money_approved",
+      "family": "money-odd-first",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-odd-first-approved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-distribute-unapproved",
+      "category": "money_unapproved",
+      "family": "money-distribute",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-distribute-unapproved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-distribute-approved",
+      "category": "money_approved",
+      "family": "money-distribute",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-distribute-approved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-proportional-unapproved",
+      "category": "money_unapproved",
+      "family": "money-proportional",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-proportional-unapproved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-proportional-approved",
+      "category": "money_approved",
+      "family": "money-proportional",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-proportional-approved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-tier-unapproved",
+      "category": "money_unapproved",
+      "family": "money-tier",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-tier-unapproved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-tier-approved",
+      "category": "money_approved",
+      "family": "money-tier",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-tier-approved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-credit-first-unapproved",
+      "category": "money_unapproved",
+      "family": "money-credit-first",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-credit-first-unapproved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-credit-first-approved",
+      "category": "money_approved",
+      "family": "money-credit-first",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-credit-first-approved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-tax-order-unapproved",
+      "category": "money_unapproved",
+      "family": "money-tax-order",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-tax-order-unapproved",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Clarify that returned total includes net principal and tax; paired wording identical."
+      ]
+    },
+    {
+      "id": "b-money-tax-order-approved",
+      "category": "money_approved",
+      "family": "money-tax-order",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-tax-order-approved",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Clarify that returned total includes net principal and tax; paired wording identical."
+      ]
+    },
+    {
+      "id": "b-money-negative-policy-unapproved",
+      "category": "money_unapproved",
+      "family": "money-negative-policy",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-negative-policy-unapproved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-negative-policy-approved",
+      "category": "money_approved",
+      "family": "money-negative-policy",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-negative-policy-approved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-sum-rounding-unapproved",
+      "category": "money_unapproved",
+      "family": "money-sum-rounding",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-sum-rounding-unapproved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-sum-rounding-approved",
+      "category": "money_approved",
+      "family": "money-sum-rounding",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-sum-rounding-approved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-per-line-unapproved",
+      "category": "money_unapproved",
+      "family": "money-per-line",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-per-line-unapproved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-per-line-approved",
+      "category": "money_approved",
+      "family": "money-per-line",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-per-line-approved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-waiver-unapproved",
+      "category": "money_unapproved",
+      "family": "money-waiver",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-waiver-unapproved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-waiver-approved",
+      "category": "money_approved",
+      "family": "money-waiver",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-waiver-approved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-negative-round-unapproved",
+      "category": "money_unapproved",
+      "family": "money-negative-round",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-negative-round-unapproved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-negative-round-approved",
+      "category": "money_approved",
+      "family": "money-negative-round",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-negative-round-approved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-increment-unapproved",
+      "category": "money_unapproved",
+      "family": "money-increment",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-increment-unapproved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-increment-approved",
+      "category": "money_approved",
+      "family": "money-increment",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-increment-approved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-partial-unapproved",
+      "category": "money_unapproved",
+      "family": "money-partial",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-partial-unapproved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "b-money-partial-approved",
+      "category": "money_approved",
+      "family": "money-partial",
+      "source": "inputs/clean_eval_v2/cases.json",
+      "source_id": "b-money-partial-approved",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/clean_eval_v2/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "usernames-shared",
+      "category": "rule_shared",
+      "family": "refactor-usernames-shared",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "usernames-shared",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/transplant_refactors_v4/cases.json",
+        "results/POLICY40_CASES.json",
+        "results/POLICY_TARGET_CASES.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "usernames-shared-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-usernames-shared",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "usernames-shared",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "batch-size-shared",
+      "category": "rule_shared",
+      "family": "refactor-batch-size-shared",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "batch-size-shared",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/transplant_refactors_v4/cases.json",
+        "results/POLICY40_CASES.json",
+        "results/POLICY_TARGET_CASES.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "batch-size-shared-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-batch-size-shared",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "batch-size-shared",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "timeouts-shared",
+      "category": "rule_shared",
+      "family": "refactor-timeouts-shared",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "timeouts-shared",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/transplant_refactors_v4/cases.json",
+        "results/POLICY40_CASES.json",
+        "results/POLICY_TARGET_CASES.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "timeouts-shared-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-timeouts-shared",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "timeouts-shared",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "page-size-shared",
+      "category": "rule_shared",
+      "family": "refactor-page-size-shared",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "page-size-shared",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Disambiguate cap as rejection, matching recorded contract; no clamping."
+      ]
+    },
+    {
+      "id": "page-size-shared-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-page-size-shared",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "page-size-shared",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "project-slug-shared",
+      "category": "rule_shared",
+      "family": "refactor-project-slug-shared",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "project-slug-shared",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/transplant_refactors_v4/cases.json",
+        "results/POLICY40_CASES.json",
+        "results/POLICY_TARGET_CASES.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "project-slug-shared-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-project-slug-shared",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "project-slug-shared",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "retry-count-shared",
+      "category": "rule_shared",
+      "family": "refactor-retry-count-shared",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "retry-count-shared",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/transplant_refactors_v4/cases.json",
+        "results/POLICY40_CASES.json",
+        "results/POLICY_TARGET_CASES.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "retry-count-shared-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-retry-count-shared",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "retry-count-shared",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "tags-shared",
+      "category": "rule_shared",
+      "family": "refactor-tags-shared",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "tags-shared",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/transplant_refactors_v4/cases.json",
+        "results/POLICY40_CASES.json",
+        "results/POLICY_TARGET_CASES.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "tags-shared-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-tags-shared",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "tags-shared",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "ports-shared",
+      "category": "rule_shared",
+      "family": "refactor-ports-shared",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "ports-shared",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/transplant_refactors_v4/cases.json",
+        "results/POLICY40_CASES.json",
+        "results/POLICY_TARGET_CASES.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "ports-shared-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-ports-shared",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "ports-shared",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "new-upload-size",
+      "category": "rule_shared",
+      "family": "refactor-new-upload-size",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-upload-size",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/transplant_refactors_v4/cases.json",
+        "results/POLICY_TARGET_CASES.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "new-upload-size-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-new-upload-size",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-upload-size",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "new-worker-count",
+      "category": "rule_shared",
+      "family": "refactor-new-worker-count",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-worker-count",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/transplant_refactors_v4/cases.json",
+        "results/POLICY_TARGET_CASES.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "new-worker-count-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-new-worker-count",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-worker-count",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "new-ticket-title",
+      "category": "rule_shared",
+      "family": "refactor-new-ticket-title",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-ticket-title",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/transplant_refactors_v4/cases.json",
+        "results/POLICY_TARGET_CASES.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "new-ticket-title-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-new-ticket-title",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-ticket-title",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "new-cache-key",
+      "category": "rule_shared",
+      "family": "refactor-new-cache-key",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-cache-key",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/transplant_refactors_v4/cases.json",
+        "results/POLICY_TARGET_CASES.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "new-cache-key-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-new-cache-key",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-cache-key",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "new-chunk-size",
+      "category": "rule_shared",
+      "family": "refactor-new-chunk-size",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-chunk-size",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/transplant_refactors_v4/cases.json",
+        "results/POLICY_TARGET_CASES.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "new-chunk-size-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-new-chunk-size",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-chunk-size",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "new-http-status",
+      "category": "rule_shared",
+      "family": "refactor-new-http-status",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-http-status",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/transplant_refactors_v4/cases.json",
+        "results/POLICY_TARGET_CASES.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "new-http-status-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-new-http-status",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-http-status",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "new-day-number",
+      "category": "rule_shared",
+      "family": "refactor-new-day-number",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-day-number",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/transplant_refactors_v4/cases.json",
+        "results/POLICY_TARGET_CASES.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "new-day-number-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-new-day-number",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-day-number",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "new-percentage",
+      "category": "rule_shared",
+      "family": "refactor-new-percentage",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-percentage",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/transplant_refactors_v4/cases.json",
+        "results/POLICY_TARGET_CASES.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "new-percentage-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-new-percentage",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-percentage",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "new-sort-direction",
+      "category": "rule_shared",
+      "family": "refactor-new-sort-direction",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-sort-direction",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/transplant_refactors_v4/cases.json",
+        "results/POLICY_TARGET_CASES.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "new-sort-direction-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-new-sort-direction",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-sort-direction",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "new-locale-code",
+      "category": "rule_shared",
+      "family": "refactor-new-locale-code",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-locale-code",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/transplant_refactors_v4/cases.json",
+        "results/POLICY_TARGET_CASES.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "new-locale-code-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-new-locale-code",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-locale-code",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "new-thread-count",
+      "category": "rule_shared",
+      "family": "refactor-new-thread-count",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-thread-count",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/transplant_refactors_v4/cases.json",
+        "results/POLICY_TARGET_CASES.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "new-thread-count-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-new-thread-count",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-thread-count",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "new-document-name",
+      "category": "rule_shared",
+      "family": "refactor-new-document-name",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-document-name",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/transplant_refactors_v4/cases.json",
+        "results/POLICY_TARGET_CASES.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "new-document-name-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-new-document-name",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-document-name",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "new-revision",
+      "category": "rule_shared",
+      "family": "refactor-new-revision",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-revision",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/transplant_refactors_v4/cases.json",
+        "results/POLICY_TARGET_CASES.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "new-revision-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-new-revision",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-revision",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "new-email-address",
+      "category": "rule_shared",
+      "family": "refactor-new-email-address",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-email-address",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/transplant_refactors_v4/cases.json",
+        "results/POLICY_TARGET_CASES.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "new-email-address-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-new-email-address",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-email-address",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "new-retention-days",
+      "category": "rule_shared",
+      "family": "refactor-new-retention-days",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-retention-days",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/transplant_refactors_v4/cases.json",
+        "results/POLICY_TARGET_CASES.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "new-retention-days-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-new-retention-days",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-retention-days",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "new-file-extension",
+      "category": "rule_shared",
+      "family": "refactor-new-file-extension",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-file-extension",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/transplant_refactors_v4/cases.json",
+        "results/POLICY_TARGET_CASES.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "new-file-extension-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-new-file-extension",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-file-extension",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "new-sequence-length",
+      "category": "rule_shared",
+      "family": "refactor-new-sequence-length",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-sequence-length",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/transplant_refactors_v4/cases.json",
+        "results/POLICY_TARGET_CASES.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "new-sequence-length-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-new-sequence-length",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-sequence-length",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "new-queue-priority",
+      "category": "rule_shared",
+      "family": "refactor-new-queue-priority",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-queue-priority",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/transplant_refactors_v4/cases.json",
+        "results/POLICY_TARGET_CASES.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "new-queue-priority-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-new-queue-priority",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-queue-priority",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "new-window-seconds",
+      "category": "rule_shared",
+      "family": "refactor-new-window-seconds",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-window-seconds",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/transplant_refactors_v4/cases.json",
+        "results/POLICY_TARGET_CASES.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "new-window-seconds-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-new-window-seconds",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-window-seconds",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "new-path-segment",
+      "category": "rule_shared",
+      "family": "refactor-new-path-segment",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-path-segment",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/transplant_refactors_v4/cases.json",
+        "results/POLICY_TARGET_CASES.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "new-path-segment-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-new-path-segment",
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-path-segment",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "gate-download-count",
+      "category": "rule_shared",
+      "family": "refactor-gate-download-count",
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-download-count",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/joint/gate.json",
+        "inputs/transplant_refactors_v4/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "gate-download-count-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-gate-download-count",
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-download-count",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "gate-region",
+      "category": "rule_shared",
+      "family": "refactor-gate-region",
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-region",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/joint/gate.json",
+        "inputs/transplant_refactors_v4/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "gate-region-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-gate-region",
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-region",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "gate-cache-age",
+      "category": "rule_shared",
+      "family": "refactor-gate-cache-age",
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-cache-age",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/joint/gate.json",
+        "inputs/transplant_refactors_v4/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "gate-cache-age-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-gate-cache-age",
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-cache-age",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "gate-channel",
+      "category": "rule_shared",
+      "family": "refactor-gate-channel",
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-channel",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/joint/gate.json",
+        "inputs/transplant_refactors_v4/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "gate-channel-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-gate-channel",
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-channel",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "gate-file-mode",
+      "category": "rule_shared",
+      "family": "refactor-gate-file-mode",
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-file-mode",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/joint/gate.json",
+        "inputs/transplant_refactors_v4/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "gate-file-mode-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-gate-file-mode",
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-file-mode",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "gate-columns",
+      "category": "rule_shared",
+      "family": "refactor-gate-columns",
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-columns",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/joint/gate.json",
+        "inputs/transplant_refactors_v4/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "gate-columns-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-gate-columns",
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-columns",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "gate-token-prefix",
+      "category": "rule_shared",
+      "family": "refactor-gate-token-prefix",
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-token-prefix",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/joint/gate.json",
+        "inputs/transplant_refactors_v4/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "gate-token-prefix-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-gate-token-prefix",
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-token-prefix",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "gate-job-window",
+      "category": "rule_shared",
+      "family": "refactor-gate-job-window",
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-job-window",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/joint/gate.json",
+        "inputs/transplant_refactors_v4/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "gate-job-window-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-gate-job-window",
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-job-window",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "gate-segment-length",
+      "category": "rule_shared",
+      "family": "refactor-gate-segment-length",
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-segment-length",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/joint/gate.json",
+        "inputs/transplant_refactors_v4/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "gate-segment-length-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-gate-segment-length",
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-segment-length",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "gate-stream-id",
+      "category": "rule_shared",
+      "family": "refactor-gate-stream-id",
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-stream-id",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/joint/gate.json",
+        "inputs/transplant_refactors_v4/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "gate-stream-id-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-gate-stream-id",
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-stream-id",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "gate-priority-code",
+      "category": "rule_shared",
+      "family": "refactor-gate-priority-code",
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-priority-code",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/joint/gate.json",
+        "inputs/transplant_refactors_v4/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "gate-priority-code-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-gate-priority-code",
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-priority-code",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    },
+    {
+      "id": "gate-depth",
+      "category": "rule_shared",
+      "family": "refactor-gate-depth",
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-depth",
+      "model_text_changed": false,
+      "prior_exact_question_files": [
+        "inputs/joint/gate.json",
+        "inputs/transplant_refactors_v4/cases.json"
+      ],
+      "calibration_exact": false,
+      "changes": []
+    },
+    {
+      "id": "gate-depth-distinct",
+      "category": "rule_distinct",
+      "family": "refactor-gate-depth",
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-depth",
+      "model_text_changed": true,
+      "prior_exact_question_files": [],
+      "calibration_exact": false,
+      "changes": [
+        "Matched primary-only change; secondary retains original contract."
+      ]
+    }
+  ]
+}

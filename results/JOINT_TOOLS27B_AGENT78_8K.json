@@ -1,0 +1,734 @@
+{
+  "config": {
+    "probeset_id": "2274bcd35bf7f7b51857c163",
+    "max_tokens": 64,
+    "cap": 32768,
+    "model": "/home/arpin/exllamav3-rocm/models/Qwen3.8-27B-EXL3-3.5bpw",
+    "teacher": "/mnt/data/artifacts/kvcompile/artifacts/agent/long_policy4k27b_v1/teacher",
+    "compiled": "/mnt/data/artifacts/kvcompile/artifacts/agent/long_policy8k27b_v1/compiled",
+    "arms": [
+      "compiled"
+    ],
+    "n_sys": 26341
+  },
+  "summary": {
+    "probeset": "/mnt/data/artifacts/kvcompile/artifacts/agent/joint_tools27b_v1/agent78.json",
+    "probeset_id": "2274bcd35bf7f7b51857c163",
+    "n": 78,
+    "gen_protocol": "exl3-gpu-argmax-eos-set",
+    "max_tokens": 64,
+    "compiled": "/mnt/data/artifacts/kvcompile/artifacts/agent/long_policy8k27b_v1/compiled",
+    "slots": 8192,
+    "by_arm_acc": {
+      "compiled": 0.9230769230769231
+    },
+    "complete": true,
+    "elapsed_s": 74.83563542366028
+  },
+  "rows": {
+    "compiled": [
+      {
+        "kind": "lookup",
+        "q": "Which package manager do Node services use?",
+        "answer": "pnpm",
+        "ok": true,
+        "pred": "pnpm",
+        "stop": "eos",
+        "n_tok": 2
+      },
+      {
+        "kind": "lookup",
+        "q": "Which package manager do Python services use?",
+        "answer": "uv",
+        "ok": true,
+        "pred": "`uv`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "What command runs the full test suite across the repo?",
+        "answer": "pnpm -r test",
+        "ok": true,
+        "pred": "`pnpm -r test`",
+        "stop": "eos",
+        "n_tok": 7
+      },
+      {
+        "kind": "lookup",
+        "q": "Which Python linter must pass before commit?",
+        "answer": "ruff",
+        "ok": true,
+        "pred": "`ruff check`",
+        "stop": "eos",
+        "n_tok": 5
+      },
+      {
+        "kind": "lookup",
+        "q": "Which JavaScript linter must pass before commit?",
+        "answer": "eslint",
+        "ok": true,
+        "pred": "eslint",
+        "stop": "eos",
+        "n_tok": 1
+      },
+      {
+        "kind": "lookup",
+        "q": "Where do secrets live in this repo?",
+        "answer": "infra/secrets/",
+        "ok": true,
+        "pred": "`infra/secrets/` \u2014 gitignored, SOPS-encrypted, never committed.",
+        "stop": "eos",
+        "n_tok": 18
+      },
+      {
+        "kind": "lookup",
+        "q": "How are the secrets in infra/secrets/ encrypted?",
+        "answer": "sops",
+        "ok": false,
+        "pred": "I'll check the secrets directory and any related documentation.\n\n<tool_call>\n<function=Bash>\n<parameter=command>\nls -la /home/dev/services/infra/secrets/ 2>/dev/null || echo \"Directory not found\"\n</parameter>\n<parameter=description>\nList secrets directory",
+        "stop": "cap",
+        "n_tok": 64
+      },
+      {
+        "kind": "style",
+        "q": "What commit-message convention is required?",
+        "answer": "conventional commits",
+        "ok": true,
+        "pred": "Conventional Commits: `fix:`, `feat:`, `chore:`.",
+        "stop": "eos",
+        "n_tok": 18
+      },
+      {
+        "kind": "style",
+        "q": "May database migrations be edited after they are merged?",
+        "answer": "no",
+        "ok": true,
+        "pred": "No. Per the project conventions in AGENTS.md, database migrations are append-only and must be reversible. Once merged, they should not be edited; any changes require a new migration.",
+        "stop": "eos",
+        "n_tok": 37
+      },
+      {
+        "kind": "style",
+        "q": "How many logical changes belong in one pull request?",
+        "answer": "one",
+        "ok": true,
+        "pred": "One.",
+        "stop": "eos",
+        "n_tok": 2
+      },
+      {
+        "kind": "lookup",
+        "q": "Which directory holds architecture decision records?",
+        "answer": "docs/adr/",
+        "ok": true,
+        "pred": "`docs/adr/`",
+        "stop": "eos",
+        "n_tok": 6
+      },
+      {
+        "kind": "style",
+        "q": "What should you do if a test fails in a service you did not touch?",
+        "answer": "report it",
+        "ok": true,
+        "pred": "Report it \u2014 do not fix it. Per the repo conventions, cross-service breakage is escalated to the `#platform` channel rather than patched locally.",
+        "stop": "eos",
+        "n_tok": 31
+      },
+      {
+        "kind": "lookup",
+        "q": "Which GitHub organisation is the GitHub MCP server scoped to?",
+        "answer": "acme-platform",
+        "ok": true,
+        "pred": "The GitHub MCP server is scoped to the `acme-platform` organisation.",
+        "stop": "eos",
+        "n_tok": 15
+      },
+      {
+        "kind": "lookup",
+        "q": "Is the postgres MCP server read-only or read-write?",
+        "answer": "read-only",
+        "ok": true,
+        "pred": "Read-only. The postgres MCP server provides read-only access with queries limited to 30 seconds, and DDL is explicitly prohibited.",
+        "stop": "eos",
+        "n_tok": 27
+      },
+      {
+        "kind": "lookup",
+        "q": "How long may a postgres MCP query run?",
+        "answer": "30 seconds",
+        "ok": true,
+        "pred": "30 seconds.",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "Which projects does the sentry MCP server cover?",
+        "answer": "production",
+        "ok": true,
+        "pred": "I don't have a tool to list Sentry projects. The instructions only state it covers \"production projects\" for the current org, without naming them.",
+        "stop": "eos",
+        "n_tok": 30
+      },
+      {
+        "kind": "lookup",
+        "q": "Should you force-push when using the GitHub server?",
+        "answer": "no",
+        "ok": true,
+        "pred": "No. The GitHub server instructions explicitly state: \"Never force-push.\"",
+        "stop": "eos",
+        "n_tok": 14
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which skill covers pre-release verification for a service?",
+        "answer": "release-checklist",
+        "ok": true,
+        "pred": "`release-checklist`",
+        "stop": "eos",
+        "n_tok": 5
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which skill guides triage and postmortem for a production incident?",
+        "answer": "incident-response",
+        "ok": true,
+        "pred": "`incident-response`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which skill authors and reviews a reversible database migration?",
+        "answer": "db-migration",
+        "ok": true,
+        "pred": "The `db-migration` skill authors and reviews a reversible database migration.",
+        "stop": "eos",
+        "n_tok": 15
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which skill reviews API changes for backwards compatibility?",
+        "answer": "api-review",
+        "ok": true,
+        "pred": "`api-review`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which skill audits cloud spend for a service?",
+        "answer": "cost-audit",
+        "ok": true,
+        "pred": "`cost-audit`",
+        "stop": "eos",
+        "n_tok": 5
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which skill produces onboarding steps for a new engineer?",
+        "answer": "onboarding-guide",
+        "ok": true,
+        "pred": "`onboarding-guide`",
+        "stop": "eos",
+        "n_tok": 5
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool creates a new issue in a repository?",
+        "answer": "create_issue",
+        "ok": true,
+        "pred": "`mcp__github__create_issue`",
+        "stop": "eos",
+        "n_tok": 9
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool creates a pull request?",
+        "answer": "create_pull_request",
+        "ok": true,
+        "pred": "`mcp__github__create_pull_request`",
+        "stop": "eos",
+        "n_tok": 10
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool creates a new branch?",
+        "answer": "create_branch",
+        "ok": true,
+        "pred": "`mcp__github__create_branch`",
+        "stop": "eos",
+        "n_tok": 9
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool adds a comment to an issue?",
+        "answer": "add_issue_comment",
+        "ok": true,
+        "pred": "`mcp__github__add_issue_comment`",
+        "stop": "eos",
+        "n_tok": 10
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool forks a repository?",
+        "answer": "fork_repository",
+        "ok": true,
+        "pred": "`mcp__github__fork_repository`",
+        "stop": "eos",
+        "n_tok": 9
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool creates a gist?",
+        "answer": "create_gist",
+        "ok": true,
+        "pred": "`mcp__github__create_gist`",
+        "stop": "eos",
+        "n_tok": 10
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool lists workflow runs for a repository?",
+        "answer": "actions_list",
+        "ok": true,
+        "pred": "`mcp__github__actions_list` with `method: 'list_workflow_runs'`.",
+        "stop": "eos",
+        "n_tok": 19
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool deletes a repository?",
+        "answer": "delete_repository",
+        "ok": true,
+        "pred": "`mcp__github__delete_repository`",
+        "stop": "eos",
+        "n_tok": 9
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `create_issue`, name one required argument.",
+        "answer": "title",
+        "ok": false,
+        "pred": "`issue_number`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `create_branch`, what is the required branch argument?",
+        "answer": "branch",
+        "ok": true,
+        "pred": "The required argument is `branch` (the name for the new branch).",
+        "stop": "eos",
+        "n_tok": 15
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `fork_repository`, which argument names the target owner?",
+        "answer": "owner",
+        "ok": false,
+        "pred": "`organization`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `create_pull_request`, which argument names the source branch?",
+        "answer": "head",
+        "ok": true,
+        "pred": "`head`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "unrelated",
+        "q": "What is the capital of Spain?",
+        "answer": "Madrid",
+        "ok": true,
+        "pred": "Madrid",
+        "stop": "eos",
+        "n_tok": 1
+      },
+      {
+        "kind": "unrelated",
+        "q": "What is 8 times 7?",
+        "answer": "56",
+        "ok": true,
+        "pred": "56",
+        "stop": "eos",
+        "n_tok": 2
+      },
+      {
+        "kind": "unrelated",
+        "q": "What is the chemical symbol for iron?",
+        "answer": "Fe",
+        "ok": true,
+        "pred": "Fe",
+        "stop": "eos",
+        "n_tok": 1
+      },
+      {
+        "kind": "unrelated",
+        "q": "How many months are in a year?",
+        "answer": "12",
+        "ok": true,
+        "pred": "12",
+        "stop": "eos",
+        "n_tok": 2
+      },
+      {
+        "kind": "style",
+        "q": "Should the assistant guess a URL it is not sure about?",
+        "answer": "no",
+        "ok": true,
+        "pred": "No.",
+        "stop": "eos",
+        "n_tok": 2
+      },
+      {
+        "kind": "style",
+        "q": "Is the assistant allowed to use emojis without being asked?",
+        "answer": "no",
+        "ok": true,
+        "pred": "No.",
+        "stop": "eos",
+        "n_tok": 2
+      },
+      {
+        "kind": "style",
+        "q": "How long should a normal answer be, in lines?",
+        "answer": "4",
+        "ok": true,
+        "pred": "1-4 lines.",
+        "stop": "eos",
+        "n_tok": 5
+      },
+      {
+        "kind": "style",
+        "q": "What markdown flavour should responses use?",
+        "answer": "github-flavored",
+        "ok": true,
+        "pred": "GitHub-flavored markdown.",
+        "stop": "eos",
+        "n_tok": 5
+      },
+      {
+        "kind": "style",
+        "q": "Should the assistant add explanatory comments to code by default?",
+        "answer": "no",
+        "ok": true,
+        "pred": "No. The system prompt explicitly states: \"NEVER introduce or add ANY comments unless explicitly requested by the user.\"",
+        "stop": "eos",
+        "n_tok": 23
+      },
+      {
+        "kind": "lookup",
+        "q": "Where should bugs in the opencode tool be reported?",
+        "answer": "github",
+        "ok": false,
+        "pred": "I'll check the opencode documentation for where to report bugs.\n\n<tool_call>\n<function=WebFetch>\n<parameter=url>\nhttps://opencode.ai/docs\n</parameter>\n</function>\n</tool_call>",
+        "stop": "eos",
+        "n_tok": 44
+      },
+      {
+        "kind": "lookup",
+        "q": "Which command shows help for the CLI tool?",
+        "answer": "/help",
+        "ok": true,
+        "pred": "`--help`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "style",
+        "q": "Should the assistant summarise what it did after finishing a task?",
+        "answer": "no",
+        "ok": true,
+        "pred": "No. The instructions say to avoid post-task explanations unless the user asks.",
+        "stop": "eos",
+        "n_tok": 15
+      },
+      {
+        "kind": "style",
+        "q": "Should the assistant commit changes on its own?",
+        "answer": "no",
+        "ok": true,
+        "pred": "No. Never commit unless the user explicitly asks you to.",
+        "stop": "eos",
+        "n_tok": 12
+      },
+      {
+        "kind": "lookup",
+        "q": "What does the assistant use to answer questions about opencode itself?",
+        "answer": "webfetch",
+        "ok": true,
+        "pred": "The assistant uses the `WebFetch` tool to retrieve information from the opencode documentation at https://opencode.ai/docs.",
+        "stop": "eos",
+        "n_tok": 25
+      },
+      {
+        "kind": "lookup",
+        "q": "What file gives each deployable service its configuration?",
+        "answer": "service.yaml",
+        "ok": true,
+        "pred": "`service.yaml`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "Which directory must never have generated files edited by hand?",
+        "answer": "infra/.gen/",
+        "ok": true,
+        "pred": "`infra/` \u2014 specifically `infra/` (generated files must never be edited by hand).",
+        "stop": "eos",
+        "n_tok": 20
+      },
+      {
+        "kind": "style",
+        "q": "Are architecture decision records editable after they are written?",
+        "answer": "no",
+        "ok": false,
+        "pred": "Yes. ADRs are append-only \u2014 you add new ADRs to supersede old ones, but you don't edit existing ones.",
+        "stop": "eos",
+        "n_tok": 29
+      },
+      {
+        "kind": "style",
+        "q": "How large should a pull request diff ideally stay, in lines?",
+        "answer": "400",
+        "ok": true,
+        "pred": "Per the project conventions in AGENTS.md, keep diffs under **400 lines** where possible.",
+        "stop": "eos",
+        "n_tok": 21
+      },
+      {
+        "kind": "lookup",
+        "q": "Which channel owns cross-service breakage?",
+        "answer": "#platform",
+        "ok": true,
+        "pred": "The `#platform` channel owns cross-service breakage.",
+        "stop": "eos",
+        "n_tok": 12
+      },
+      {
+        "kind": "style",
+        "q": "What prefix does a feature commit use?",
+        "answer": "feat",
+        "ok": true,
+        "pred": "`feat:`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "style",
+        "q": "What prefix does a bug-fix commit use?",
+        "answer": "fix",
+        "ok": true,
+        "pred": "`fix:`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "style",
+        "q": "What prefix does a maintenance commit use?",
+        "answer": "chore",
+        "ok": false,
+        "pred": "`fix:`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "style",
+        "q": "Do Python services use pnpm?",
+        "answer": "no",
+        "ok": true,
+        "pred": "No. Python services use `uv`; Node.js services use `pnpm`.",
+        "stop": "eos",
+        "n_tok": 16
+      },
+      {
+        "kind": "lookup",
+        "q": "Which tool runs tests for a single named service?",
+        "answer": "pnpm --filter",
+        "ok": true,
+        "pred": "`pnpm --filter <service> test`",
+        "stop": "eos",
+        "n_tok": 10
+      },
+      {
+        "kind": "lookup",
+        "q": "Name one directory that holds terraform modules.",
+        "answer": "infra/",
+        "ok": true,
+        "pred": "`infra/`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "style",
+        "q": "What kind of change must every database migration support?",
+        "answer": "rollback",
+        "ok": true,
+        "pred": "Every database migration must be **reversible** (i.e., support a rollback/down migration).",
+        "stop": "eos",
+        "n_tok": 19
+      },
+      {
+        "kind": "style",
+        "q": "Can the postgres MCP server run DDL statements?",
+        "answer": "no",
+        "ok": true,
+        "pred": "No. The postgres MCP server is limited to read-only access and explicitly does not allow DDL statements.",
+        "stop": "eos",
+        "n_tok": 21
+      },
+      {
+        "kind": "lookup",
+        "q": "Before a postgres query returning over 1000 rows, what must you run?",
+        "answer": "explain",
+        "ok": true,
+        "pred": "`explain`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "What scope do GitHub write tools require?",
+        "answer": "repo",
+        "ok": true,
+        "pred": "The `repo` scope.",
+        "stop": "eos",
+        "n_tok": 6
+      },
+      {
+        "kind": "lookup",
+        "q": "How many sentry issue lookups are allowed per minute?",
+        "answer": "100",
+        "ok": true,
+        "pred": "100",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "style",
+        "q": "Should you push directly to a protected branch?",
+        "answer": "no",
+        "ok": true,
+        "pred": "No. Use `create_pull_request` rather than pushing directly to a protected branch.",
+        "stop": "eos",
+        "n_tok": 17
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which skill would you use to plan a staged rollout?",
+        "answer": "release-checklist",
+        "ok": true,
+        "pred": "`skill:release-checklist`",
+        "stop": "eos",
+        "n_tok": 7
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which skill handles postmortems?",
+        "answer": "incident-response",
+        "ok": true,
+        "pred": "incident-response",
+        "stop": "eos",
+        "n_tok": 2
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which skill covers a backfill strategy?",
+        "answer": "db-migration",
+        "ok": true,
+        "pred": "None of the available skills cover a backfill strategy. The closest is `db-migration` (reversible migrations), but it doesn't address backfilling.",
+        "stop": "eos",
+        "n_tok": 33
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which skill checks gRPC compatibility?",
+        "answer": "api-review",
+        "ok": true,
+        "pred": "None of the available skills check gRPC compatibility. The closest is `api-review`, which covers API compatibility and versioning generally.",
+        "stop": "eos",
+        "n_tok": 26
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool updates a single file's contents in a repository?",
+        "answer": "create_or_update_file",
+        "ok": true,
+        "pred": "`mcp__github__create_or_update_file`",
+        "stop": "eos",
+        "n_tok": 11
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool removes a repository?",
+        "answer": "delete_repository",
+        "ok": true,
+        "pred": "`mcp__github__delete_repository`",
+        "stop": "eos",
+        "n_tok": 9
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool retrieves details about a specific Actions run?",
+        "answer": "actions_get",
+        "ok": true,
+        "pred": "`mcp__github__actions_get` with `method: 'get_workflow_run'` and the `resource_id` set to the workflow run ID.",
+        "stop": "eos",
+        "n_tok": 32
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool assigns a copilot agent to an issue?",
+        "answer": "assign_copilot_to_issue",
+        "ok": true,
+        "pred": "`mcp__github__assign_copilot_to_issue`",
+        "stop": "eos",
+        "n_tok": 13
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool creates a repository ruleset?",
+        "answer": "create_repository_ruleset",
+        "ok": true,
+        "pred": "`mcp__github__create_repository_ruleset`",
+        "stop": "eos",
+        "n_tok": 11
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool dismisses a notification?",
+        "answer": "dismiss_notification",
+        "ok": true,
+        "pred": "`mcp__github__dismiss_notification`",
+        "stop": "eos",
+        "n_tok": 9
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool lists the user's notifications?",
+        "answer": "list_notifications",
+        "ok": true,
+        "pred": "`mcp__github__list_notifications`",
+        "stop": "eos",
+        "n_tok": 9
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool searches code across repositories?",
+        "answer": "search_code",
+        "ok": true,
+        "pred": "`mcp__github__search_code`",
+        "stop": "eos",
+        "n_tok": 9
+      }
+    ]
+  }
+}

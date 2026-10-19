@@ -1,0 +1,82 @@
+{
+  "config": {
+    "data_sha256": "3ca7fe9e13b05b5483ca2dc70f6d2ee40a0bda6a235d8183ee7b78fc72f43d80",
+    "cases_sha256": "ae311e38214cd5b33f15f844aeb51a2fa4c0d86542b1a954b0dfa40c12bab0a4",
+    "prefix_sha256": "8159572093982f0e4f5738870eb720d0978728746cfd401a2b97d33fee1abdf8",
+    "rank": 8,
+    "lr": 0.001,
+    "epochs": 3,
+    "seed": 0,
+    "objective": "full-answer-token-CE-including-EOS",
+    "layers": [
+      32,
+      33,
+      34,
+      35
+    ]
+  },
+  "history": [
+    {
+      "epoch": 0,
+      "train_ce": null,
+      "validation_ce": 1.9731246817713683,
+      "validation_correct": 45,
+      "validation_cap_proxies": 13,
+      "dev_correct": 1,
+      "dev_cap_proxies": 0
+    },
+    {
+      "epoch": 1,
+      "train_ce": 0.4658380679441271,
+      "validation_ce": 0.39140531669858253,
+      "validation_correct": 70,
+      "validation_cap_proxies": 17,
+      "dev_correct": 1,
+      "dev_cap_proxies": 0
+    },
+    {
+      "epoch": 2,
+      "train_ce": 0.3008050805276812,
+      "validation_ce": 0.3475769383987307,
+      "validation_correct": 71,
+      "validation_cap_proxies": 15,
+      "dev_correct": 1,
+      "dev_cap_proxies": 0
+    },
+    {
+      "epoch": 3,
+      "train_ce": 0.2353788198401611,
+      "validation_ce": 0.4131159079411573,
+      "validation_correct": 78,
+      "validation_cap_proxies": 24,
+      "dev_correct": 1,
+      "dev_cap_proxies": 1
+    }
+  ],
+  "trainable_parameters": 327680,
+  "forward_ce_abs_diff": 0.0,
+  "preflight": [
+    {
+      "tokens": 35,
+      "seconds": 0.537091206992045,
+      "ce": 8.54743480682373,
+      "peak_gib": 8.548234939575195
+    },
+    {
+      "tokens": 75,
+      "seconds": 0.10369968399754725,
+      "ce": 1.3946045637130737,
+      "peak_gib": 8.65739393234253
+    },
+    {
+      "tokens": 167,
+      "seconds": 0.11198099798639305,
+      "ce": 1.3793121576309204,
+      "peak_gib": 9.002860069274902
+    }
+  ],
+  "best_epoch": 2,
+  "total_s": 930.4342701169953,
+  "peak_gib": 9.387383460998535,
+  "complete": true
+}

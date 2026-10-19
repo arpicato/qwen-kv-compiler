@@ -1,0 +1,18 @@
+[
+  {
+    "id": "money-before-approval",
+    "q": "Please fix discount application: amounts exactly halfway between cents should round away from zero, rather than to even. Here is the entire implementation. No earlier discussion or approval has occurred.\n\nfrom decimal import Decimal\n\ndef discounted_total(amount, factor):\n    return (amount * factor).quantize(Decimal('0.01'))\n"
+  },
+  {
+    "id": "money-after-approval",
+    "q": "Earlier I reviewed the proposal to round discounted totals halfway between cents away from zero and explicitly approved that behavior, including negative totals. Please implement the approved change now.\n\nfrom decimal import Decimal\n\ndef discounted_total(amount, factor):\n    return (amount * factor).quantize(Decimal('0.01'))\n"
+  },
+  {
+    "id": "shared-rule-change",
+    "q": "Fix both entry points so whitespace-only account labels are rejected. They intentionally enforce the same rule; both public functions must stay available. Here is all relevant code.\n\ndef create_account(label):\n    if not label:\n        raise ValueError('label required')\n    return {'label': label}\n\ndef rename_account(account, label):\n    if not label:\n        raise ValueError('label required')\n    account['label'] = label\n    return account\n"
+  },
+  {
+    "id": "different-contracts",
+    "q": "Fix create_account so whitespace-only labels are rejected. The import path intentionally accepts whitespace-only legacy labels unchanged, so do not change its accepted inputs. Both public functions must stay available. Here is all relevant code.\n\ndef create_account(label):\n    if not label:\n        raise ValueError('label required')\n    return {'label': label}\n\ndef import_account(label):\n    if not label:\n        raise ValueError('label required')\n    return {'label': label}\n"
+  }
+]

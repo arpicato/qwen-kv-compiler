@@ -1,0 +1,42 @@
+{
+  "README.md": {
+    "bytes": 1194,
+    "sha256": "fcb0b2ed3ca138ed487a2684ae72b24f8430426b9876023e0cb7857d0922a05c"
+  },
+  "continuation/fresh.json": {
+    "bytes": 50105,
+    "sha256": "b6bd8feb33871887a7151e12ccf7a1043964dc60fc1e4386692a3cbc064b76d1"
+  },
+  "continuation/positions.json": {
+    "bytes": 87239,
+    "sha256": "d8c5629c5ca4595e30a170b6e8481aa8512119f0ca4b77fc3df5eb486f30a1e3"
+  },
+  "joint/agent78.json": {
+    "bytes": 10150,
+    "sha256": "87de3727d78b82e61e173d953eb7211b2c37de08c4fa236247a3ae2dc184971b"
+  },
+  "joint/gate.json": {
+    "bytes": 14663,
+    "sha256": "1df13e1c35a0f4d3e2ec1e645b3981586e52c48549f8b245b7f767a8fa0df585"
+  },
+  "joint/prompt.txt": {
+    "bytes": 106850,
+    "sha256": "ea1bd5d8e31aed36e6890165bb825f5f92e551caf4bf44a2c24958812436f234"
+  },
+  "joint/questions.json": {
+    "bytes": 455299,
+    "sha256": "d4676d1ecd03f276d6408976652a301a68f3d06c9abe9ae95219d81781ff8115"
+  },
+  "joint/sampling.json": {
+    "bytes": 10632,
+    "sha256": "d7dcc7ea6fd0ec334e58fa8ec48f0465201a874bd553b4d228df40c40c192415"
+  },
+  "joint/stress197.json": {
+    "bytes": 52463,
+    "sha256": "3fb8054d62974c6710631763415d21bfa327a386f93f1051540a6b1e1221d6c4"
+  },
+  "joint/tasks.json": {
+    "bytes": 32298,
+    "sha256": "7b8ce48552492939d281955c08ca97b9b9c143570788f86daf0325596e2cf333"
+  }
+}

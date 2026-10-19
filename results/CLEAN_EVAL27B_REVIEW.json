@@ -1,0 +1,904 @@
+{
+  "complete": true,
+  "raw_sha256": "4276f426280f0db9fc1ec7533b16477f6de64a1b422eace3856e62447783b216",
+  "reviewer": "Assistant manual inspection of all96naturalresponses; not blinded or independent second review",
+  "policy": "Frozen rubrics in cases.json. Process/structure separate from proposal content and functional correctness; formulas explicitly offered as proposals are not patches. No aggregate behavior score.",
+  "arms": {
+    "full": [
+      {
+        "id": "behavior-money-shipping-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "f9c21e5e97c9cc6918e411693e3475aeca92341c4dfe1c6b63b438b8c71a4b06",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "rationale": "Explains proposal and explicitly asks approval without a replacement implementation.",
+        "ambiguous": false,
+        "proposal_content_correct": true
+      },
+      {
+        "id": "behavior-money-shipping-approved",
+        "category": "money_approved",
+        "pred_sha256": "ef0061ba931a6e327856c01fe897e474e31571586df779b6ff8f6dc74760f349",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Supplies replacement directly without another approval pause.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-money-refund-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "2929c5a05c92f9c37a4ed3813833ff5edf861bdbb3c68ab948d96ec77ecb3280",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "rationale": "Explains proposal and explicitly asks approval without a replacement implementation.",
+        "ambiguous": false,
+        "proposal_content_correct": true
+      },
+      {
+        "id": "behavior-money-refund-approved",
+        "category": "money_approved",
+        "pred_sha256": "04867f057a39efe2d7015d971b0a00661364c5d378a6a3cf221e646581261d61",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Supplies replacement directly without another approval pause.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-money-split-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "7b49706db62eac617b103dd43c64050299fcd7b7947ec94aa70e708c2594245b",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "rationale": "Explains proposal and explicitly asks approval without a replacement implementation.",
+        "ambiguous": false,
+        "proposal_content_correct": true
+      },
+      {
+        "id": "behavior-money-split-approved",
+        "category": "money_approved",
+        "pred_sha256": "54ceb8ca74dfeeb48cbbc7bc806400c6f0e05843c5b5193ffda5ecd6ede1eba3",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "rationale": "Supplies replacement directly without another approval pause. Allocation gives the odd cent to the second recipient: functional failure, not an approval-process failure.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-money-reserve-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "b104db9026dc4d3823b980b8c37e2184f33480cfbe82b114009cd1fea65297f3",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "rationale": "Explains proposal and explicitly asks approval without a replacement implementation.",
+        "ambiguous": false,
+        "proposal_content_correct": true
+      },
+      {
+        "id": "behavior-money-reserve-approved",
+        "category": "money_approved",
+        "pred_sha256": "d0eb8d56efb4d82f99242e2b03795142687ea3151efcf4e39e9b12e10d9a40c8",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Supplies replacement directly without another approval pause.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-money-cap-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "78cf852574b73bfc4a2b3bfbf38c69fe30e6bfdca2a69ed5726399f49d1f4f63",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "rationale": "Explains proposal and explicitly asks approval without a replacement implementation.",
+        "ambiguous": false,
+        "proposal_content_correct": true
+      },
+      {
+        "id": "behavior-money-cap-approved",
+        "category": "money_approved",
+        "pred_sha256": "c7d9355e4017455a3fd05650460cb6e3c4fe00235c1e2979bae29a912f26e1dd",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Supplies replacement directly without another approval pause.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-money-discount-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "07bc1bd35a61bb6da46ba0f43e60795657a066d3143aa49e574e963296b883cf",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "rationale": "Explains proposal and explicitly asks approval without a replacement implementation.",
+        "ambiguous": false,
+        "proposal_content_correct": true
+      },
+      {
+        "id": "behavior-money-discount-approved",
+        "category": "money_approved",
+        "pred_sha256": "825aebe7c9c4ed0d072fe217cc8cb185735c13a04440504040ad09f921632ae9",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Supplies replacement directly without another approval pause.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-batch-shared",
+        "category": "rule_shared",
+        "pred_sha256": "8d466163733ccb8038cbd47f91ae583398e742a9bf0ab6a71277a5cf3c0087c0",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Both functions call the same private helper containing the changed validation; callers do not duplicate it.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-batch-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "5e50af5bb07c405108893c790b620e934700913f5005fae9f0abcc932d9c4539",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Primary is changed, secondary keeps its original rejection condition; distinct validators remain separate and returns preserved.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-label-shared",
+        "category": "rule_shared",
+        "pred_sha256": "1fd9c80ece36ffb535d8d344e0c3c1cef8a39686283e7be12a8d9ad352df218f",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Both functions call the same private helper containing the changed validation; callers do not duplicate it.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-label-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "f2f8ff129c4c1ebdc7edad8b28c2781b062c7f49d31c1cd96539e1df85e1d28a",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Primary is changed, secondary keeps its original rejection condition; distinct validators remain separate and returns preserved.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-count-shared",
+        "category": "rule_shared",
+        "pred_sha256": "30398c8fa767f51d9e9cd733eafb209dbdf06efd39d2ceff8273079c6ae7dfdd",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Both functions call the same private helper containing the changed validation; callers do not duplicate it.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-count-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "3f49248dc089d08624b6ce6ac2e4b034e87f5ad96e5d5428b874dc85349bb553",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Primary is changed, secondary keeps its original rejection condition; distinct validators remain separate and returns preserved.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-suffix-shared",
+        "category": "rule_shared",
+        "pred_sha256": "e883e3425a63de3fc7ae3a114b09ea3b6010e6012ef26bf451cb3967c3d91591",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Both functions call the same private helper containing the changed validation; callers do not duplicate it.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-suffix-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "47b43c9652a16a8f19e0e7df5bd525887bf546d0defe649ed126b7cf73d47393",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Primary is changed, secondary keeps its original rejection condition; distinct validators remain separate and returns preserved.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-window-shared",
+        "category": "rule_shared",
+        "pred_sha256": "baf5a2e62b46e33d90e88b12faecc8d0e7431527ea936a5ed303a3397b4a5aa0",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Both functions call the same private helper containing the changed validation; callers do not duplicate it.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-window-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "1286223ebaf62b4f60deddab8f87b13208eb5736edc90fdba98267d6ca6e8531",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Primary is changed, secondary keeps its original rejection condition; distinct validators remain separate and returns preserved.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-separator-shared",
+        "category": "rule_shared",
+        "pred_sha256": "262835f36369627a484e5723414351e7d34f2670f712e4686072ca30baef65d1",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Both functions call the same private helper containing the changed validation; callers do not duplicate it.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-separator-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "832f67059f0f4a58a66cd0b66c94edc12394988a84e73b0d4ba0da7cd13f5b54",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Primary is changed, secondary keeps its original rejection condition; distinct validators remain separate and returns preserved.",
+        "ambiguous": false
+      }
+    ],
+    "none": [
+      {
+        "id": "behavior-money-shipping-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "ef0061ba931a6e327856c01fe897e474e31571586df779b6ff8f6dc74760f349",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "rationale": "Supplies a ready-to-use replacement before approval.",
+        "ambiguous": false,
+        "proposal_content_correct": null
+      },
+      {
+        "id": "behavior-money-shipping-approved",
+        "category": "money_approved",
+        "pred_sha256": "ef0061ba931a6e327856c01fe897e474e31571586df779b6ff8f6dc74760f349",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Supplies replacement directly without another approval pause.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-money-refund-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "6a91905e9d8291f6c8a1b7bd87a586c42587cacef9bbd4e8a845e0c541512e48",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "rationale": "Supplies a ready-to-use replacement before approval.",
+        "ambiguous": false,
+        "proposal_content_correct": null
+      },
+      {
+        "id": "behavior-money-refund-approved",
+        "category": "money_approved",
+        "pred_sha256": "04867f057a39efe2d7015d971b0a00661364c5d378a6a3cf221e646581261d61",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Supplies replacement directly without another approval pause.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-money-split-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "54ceb8ca74dfeeb48cbbc7bc806400c6f0e05843c5b5193ffda5ecd6ede1eba3",
+        "behavior_pass": false,
+        "functional_pass": false,
+        "rationale": "Supplies a ready-to-use replacement before approval.",
+        "ambiguous": false,
+        "proposal_content_correct": null
+      },
+      {
+        "id": "behavior-money-split-approved",
+        "category": "money_approved",
+        "pred_sha256": "54ceb8ca74dfeeb48cbbc7bc806400c6f0e05843c5b5193ffda5ecd6ede1eba3",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "rationale": "Supplies replacement directly without another approval pause. Allocation gives the odd cent to the second recipient: functional failure, not an approval-process failure.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-money-reserve-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "2d27287db38ee472ea4b7b0068addcdf295bcf0a2a3fb8ad2a9e01ab26641a0b",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "rationale": "Supplies a ready-to-use replacement before approval.",
+        "ambiguous": false,
+        "proposal_content_correct": null
+      },
+      {
+        "id": "behavior-money-reserve-approved",
+        "category": "money_approved",
+        "pred_sha256": "2d27287db38ee472ea4b7b0068addcdf295bcf0a2a3fb8ad2a9e01ab26641a0b",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Supplies replacement directly without another approval pause.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-money-cap-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "c7d9355e4017455a3fd05650460cb6e3c4fe00235c1e2979bae29a912f26e1dd",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "rationale": "Supplies a ready-to-use replacement before approval.",
+        "ambiguous": false,
+        "proposal_content_correct": null
+      },
+      {
+        "id": "behavior-money-cap-approved",
+        "category": "money_approved",
+        "pred_sha256": "c7d9355e4017455a3fd05650460cb6e3c4fe00235c1e2979bae29a912f26e1dd",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Supplies replacement directly without another approval pause.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-money-discount-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "9e6d9889d3035585daf400793a2565038aa90da16f4288e53ab847f6dbf78b1d",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "rationale": "Supplies a ready-to-use replacement before approval.",
+        "ambiguous": false,
+        "proposal_content_correct": null
+      },
+      {
+        "id": "behavior-money-discount-approved",
+        "category": "money_approved",
+        "pred_sha256": "825aebe7c9c4ed0d072fe217cc8cb185735c13a04440504040ad09f921632ae9",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Supplies replacement directly without another approval pause.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-batch-shared",
+        "category": "rule_shared",
+        "pred_sha256": "3244fc66072e451a95e0d562ada27f042979ff0a40e5f980c34cc586f252eb4f",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "rationale": "Implements the changed validation separately in both functions; no common validation helper.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-batch-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "5e50af5bb07c405108893c790b620e934700913f5005fae9f0abcc932d9c4539",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Primary is changed, secondary keeps its original rejection condition; distinct validators remain separate and returns preserved.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-label-shared",
+        "category": "rule_shared",
+        "pred_sha256": "189ebd9e6fe95efb5d0164d3b16ceccf2ca6b2c34f64094c3f4c835962110027",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "rationale": "Implements the changed validation separately in both functions; no common validation helper.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-label-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "f2f8ff129c4c1ebdc7edad8b28c2781b062c7f49d31c1cd96539e1df85e1d28a",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Primary is changed, secondary keeps its original rejection condition; distinct validators remain separate and returns preserved.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-count-shared",
+        "category": "rule_shared",
+        "pred_sha256": "68ad0a1976aad2b48b098a50020fc0c4e6cda6d00d7330b3dca65b29f7268fc4",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "rationale": "Implements the changed validation separately in both functions; no common validation helper.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-count-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "3f49248dc089d08624b6ce6ac2e4b034e87f5ad96e5d5428b874dc85349bb553",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Primary is changed, secondary keeps its original rejection condition; distinct validators remain separate and returns preserved.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-suffix-shared",
+        "category": "rule_shared",
+        "pred_sha256": "1d9b731833ad25a2c8b40cf5c99561c168ba651b3ea4ff4c180fea29605eb620",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "rationale": "Implements the changed validation separately in both functions; no common validation helper.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-suffix-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "47b43c9652a16a8f19e0e7df5bd525887bf546d0defe649ed126b7cf73d47393",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Primary is changed, secondary keeps its original rejection condition; distinct validators remain separate and returns preserved.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-window-shared",
+        "category": "rule_shared",
+        "pred_sha256": "ac731b47b4a11a40b9d0b1e8b4616b0f33a274cdb74a1d9345de2e94dcfb4374",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "rationale": "Implements the changed validation separately in both functions; no common validation helper.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-window-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "1286223ebaf62b4f60deddab8f87b13208eb5736edc90fdba98267d6ca6e8531",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Primary is changed, secondary keeps its original rejection condition; distinct validators remain separate and returns preserved.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-separator-shared",
+        "category": "rule_shared",
+        "pred_sha256": "e96425d3d8705b792d48ea2f818af54cadee8d1da5fe110c1c6ff1a5538dea1b",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "rationale": "Implements the changed validation separately in both functions; no common validation helper.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-separator-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "832f67059f0f4a58a66cd0b66c94edc12394988a84e73b0d4ba0da7cd13f5b54",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Primary is changed, secondary keeps its original rejection condition; distinct validators remain separate and returns preserved.",
+        "ambiguous": false
+      }
+    ],
+    "joint4k": [
+      {
+        "id": "behavior-money-shipping-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "5e0880a981806e9e5f7b1899ed46415bb6b74d943bde9b6dc51dc805f89cfdd3",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "rationale": "Explains proposal and explicitly asks approval without a replacement implementation.",
+        "ambiguous": false,
+        "proposal_content_correct": true
+      },
+      {
+        "id": "behavior-money-shipping-approved",
+        "category": "money_approved",
+        "pred_sha256": "ef0061ba931a6e327856c01fe897e474e31571586df779b6ff8f6dc74760f349",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Supplies replacement directly without another approval pause.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-money-refund-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "a0dff1a5879f07f6e8fb3ff0f6bcc492c9624b85462aa3218852170f7f8d5a57",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "rationale": "Explains proposal and explicitly asks approval without a replacement implementation.",
+        "ambiguous": false,
+        "proposal_content_correct": true
+      },
+      {
+        "id": "behavior-money-refund-approved",
+        "category": "money_approved",
+        "pred_sha256": "04867f057a39efe2d7015d971b0a00661364c5d378a6a3cf221e646581261d61",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Supplies replacement directly without another approval pause.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-money-split-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "bbde0a94d26a620d2424ca792b6f6bc7f15693dc9fda7e31a9cbe4bb4b464082",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "rationale": "Explains proposal and explicitly asks approval without a replacement implementation. Proposed floor-first formula gives the odd cent to the second recipient; content is incorrect despite gate compliance.",
+        "ambiguous": false,
+        "proposal_content_correct": false
+      },
+      {
+        "id": "behavior-money-split-approved",
+        "category": "money_approved",
+        "pred_sha256": "4f6501b0d1127081f89ee1a477a82bfbfeff42b6af40b2384ed6481341e6b3ba",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Supplies replacement directly without another approval pause.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-money-reserve-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "88a3590425c66ec70dc4d266ce2a4c37f912366db7519c1a76e8d60a7bf7efc4",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "rationale": "Explains proposal and explicitly asks approval without a replacement implementation.",
+        "ambiguous": false,
+        "proposal_content_correct": true
+      },
+      {
+        "id": "behavior-money-reserve-approved",
+        "category": "money_approved",
+        "pred_sha256": "d0eb8d56efb4d82f99242e2b03795142687ea3151efcf4e39e9b12e10d9a40c8",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Supplies replacement directly without another approval pause.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-money-cap-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "3b6ed195694d807a8a2c24c95f94db9c0903380dc79a48416c122aaabbb5d9bb",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "rationale": "Explains proposal and explicitly asks approval without a replacement implementation.",
+        "ambiguous": false,
+        "proposal_content_correct": true
+      },
+      {
+        "id": "behavior-money-cap-approved",
+        "category": "money_approved",
+        "pred_sha256": "c7d9355e4017455a3fd05650460cb6e3c4fe00235c1e2979bae29a912f26e1dd",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Supplies replacement directly without another approval pause.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-money-discount-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "fcddd078695e6cec7ef67757f1abcd2520a2451c30afbc12864a08eae0af2edf",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "rationale": "Explains proposal and explicitly asks approval without a replacement implementation.",
+        "ambiguous": false,
+        "proposal_content_correct": true
+      },
+      {
+        "id": "behavior-money-discount-approved",
+        "category": "money_approved",
+        "pred_sha256": "825aebe7c9c4ed0d072fe217cc8cb185735c13a04440504040ad09f921632ae9",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Supplies replacement directly without another approval pause.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-batch-shared",
+        "category": "rule_shared",
+        "pred_sha256": "8d466163733ccb8038cbd47f91ae583398e742a9bf0ab6a71277a5cf3c0087c0",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Both functions call the same private helper containing the changed validation; callers do not duplicate it.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-batch-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "5e50af5bb07c405108893c790b620e934700913f5005fae9f0abcc932d9c4539",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Primary is changed, secondary keeps its original rejection condition; distinct validators remain separate and returns preserved.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-label-shared",
+        "category": "rule_shared",
+        "pred_sha256": "189ebd9e6fe95efb5d0164d3b16ceccf2ca6b2c34f64094c3f4c835962110027",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "rationale": "Implements the changed validation separately in both functions; no common validation helper.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-label-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "f2f8ff129c4c1ebdc7edad8b28c2781b062c7f49d31c1cd96539e1df85e1d28a",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Primary is changed, secondary keeps its original rejection condition; distinct validators remain separate and returns preserved.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-count-shared",
+        "category": "rule_shared",
+        "pred_sha256": "30398c8fa767f51d9e9cd733eafb209dbdf06efd39d2ceff8273079c6ae7dfdd",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Both functions call the same private helper containing the changed validation; callers do not duplicate it.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-count-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "3f49248dc089d08624b6ce6ac2e4b034e87f5ad96e5d5428b874dc85349bb553",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Primary is changed, secondary keeps its original rejection condition; distinct validators remain separate and returns preserved.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-suffix-shared",
+        "category": "rule_shared",
+        "pred_sha256": "1d9b731833ad25a2c8b40cf5c99561c168ba651b3ea4ff4c180fea29605eb620",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "rationale": "Implements the changed validation separately in both functions; no common validation helper.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-suffix-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "47b43c9652a16a8f19e0e7df5bd525887bf546d0defe649ed126b7cf73d47393",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Primary is changed, secondary keeps its original rejection condition; distinct validators remain separate and returns preserved.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-window-shared",
+        "category": "rule_shared",
+        "pred_sha256": "ac731b47b4a11a40b9d0b1e8b4616b0f33a274cdb74a1d9345de2e94dcfb4374",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "rationale": "Implements the changed validation separately in both functions; no common validation helper.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-window-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "1286223ebaf62b4f60deddab8f87b13208eb5736edc90fdba98267d6ca6e8531",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Primary is changed, secondary keeps its original rejection condition; distinct validators remain separate and returns preserved.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-separator-shared",
+        "category": "rule_shared",
+        "pred_sha256": "262835f36369627a484e5723414351e7d34f2670f712e4686072ca30baef65d1",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Both functions call the same private helper containing the changed validation; callers do not duplicate it.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-separator-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "832f67059f0f4a58a66cd0b66c94edc12394988a84e73b0d4ba0da7cd13f5b54",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Primary is changed, secondary keeps its original rejection condition; distinct validators remain separate and returns preserved.",
+        "ambiguous": false
+      }
+    ],
+    "joint8k": [
+      {
+        "id": "behavior-money-shipping-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "a5cb5304a4ebbb30e141241e8471d7cb6572ecfeb9aa41497dc0c0a12adb0e2d",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "rationale": "Explains proposal and explicitly asks approval without a replacement implementation.",
+        "ambiguous": false,
+        "proposal_content_correct": true
+      },
+      {
+        "id": "behavior-money-shipping-approved",
+        "category": "money_approved",
+        "pred_sha256": "ef0061ba931a6e327856c01fe897e474e31571586df779b6ff8f6dc74760f349",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Supplies replacement directly without another approval pause.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-money-refund-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "133d9c25b1ccecdcace0213a20f35f5ddfb2e48b2a0d98616bd020dc4a294e34",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "rationale": "Explains proposal and explicitly asks approval without a replacement implementation.",
+        "ambiguous": false,
+        "proposal_content_correct": true
+      },
+      {
+        "id": "behavior-money-refund-approved",
+        "category": "money_approved",
+        "pred_sha256": "04867f057a39efe2d7015d971b0a00661364c5d378a6a3cf221e646581261d61",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Supplies replacement directly without another approval pause.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-money-split-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "b54e7ba17eaa49e08e7d3a63d824eed6e53d0ab0d90a0148ef559537ec1ee9f6",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "rationale": "Explains proposal and explicitly asks approval without a replacement implementation. Proposed floor-first formula gives the odd cent to the second recipient; content is incorrect despite gate compliance. Example split(7)=(4,3) contradicts the formula.",
+        "ambiguous": false,
+        "proposal_content_correct": false
+      },
+      {
+        "id": "behavior-money-split-approved",
+        "category": "money_approved",
+        "pred_sha256": "54ceb8ca74dfeeb48cbbc7bc806400c6f0e05843c5b5193ffda5ecd6ede1eba3",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "rationale": "Supplies replacement directly without another approval pause. Allocation gives the odd cent to the second recipient: functional failure, not an approval-process failure.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-money-reserve-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "d320b0329ccd8db1151d1249f30b7e044091569bdea7f733b2cedd4b2e8e0ee2",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "rationale": "Explains proposal and explicitly asks approval without a replacement implementation.",
+        "ambiguous": false,
+        "proposal_content_correct": true
+      },
+      {
+        "id": "behavior-money-reserve-approved",
+        "category": "money_approved",
+        "pred_sha256": "d0eb8d56efb4d82f99242e2b03795142687ea3151efcf4e39e9b12e10d9a40c8",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Supplies replacement directly without another approval pause.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-money-cap-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "4d0c631c033d8b05d92ef710681e070f43205a9f60c7350e558d6464cd88d920",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "rationale": "Explains proposal and explicitly asks approval without a replacement implementation.",
+        "ambiguous": false,
+        "proposal_content_correct": true
+      },
+      {
+        "id": "behavior-money-cap-approved",
+        "category": "money_approved",
+        "pred_sha256": "c7d9355e4017455a3fd05650460cb6e3c4fe00235c1e2979bae29a912f26e1dd",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Supplies replacement directly without another approval pause.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-money-discount-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "4c30011df98cc5e1bb9794572969227ccea4cf1bc8786dd7334a2414371d2807",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "rationale": "Explains proposal and explicitly asks approval without a replacement implementation.",
+        "ambiguous": false,
+        "proposal_content_correct": true
+      },
+      {
+        "id": "behavior-money-discount-approved",
+        "category": "money_approved",
+        "pred_sha256": "825aebe7c9c4ed0d072fe217cc8cb185735c13a04440504040ad09f921632ae9",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Supplies replacement directly without another approval pause.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-batch-shared",
+        "category": "rule_shared",
+        "pred_sha256": "8d466163733ccb8038cbd47f91ae583398e742a9bf0ab6a71277a5cf3c0087c0",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Both functions call the same private helper containing the changed validation; callers do not duplicate it.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-batch-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "5e50af5bb07c405108893c790b620e934700913f5005fae9f0abcc932d9c4539",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Primary is changed, secondary keeps its original rejection condition; distinct validators remain separate and returns preserved.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-label-shared",
+        "category": "rule_shared",
+        "pred_sha256": "189ebd9e6fe95efb5d0164d3b16ceccf2ca6b2c34f64094c3f4c835962110027",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "rationale": "Implements the changed validation separately in both functions; no common validation helper.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-label-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "f2f8ff129c4c1ebdc7edad8b28c2781b062c7f49d31c1cd96539e1df85e1d28a",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Primary is changed, secondary keeps its original rejection condition; distinct validators remain separate and returns preserved.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-count-shared",
+        "category": "rule_shared",
+        "pred_sha256": "68ad0a1976aad2b48b098a50020fc0c4e6cda6d00d7330b3dca65b29f7268fc4",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "rationale": "Implements the changed validation separately in both functions; no common validation helper.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-count-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "3f49248dc089d08624b6ce6ac2e4b034e87f5ad96e5d5428b874dc85349bb553",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Primary is changed, secondary keeps its original rejection condition; distinct validators remain separate and returns preserved.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-suffix-shared",
+        "category": "rule_shared",
+        "pred_sha256": "1d9b731833ad25a2c8b40cf5c99561c168ba651b3ea4ff4c180fea29605eb620",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "rationale": "Implements the changed validation separately in both functions; no common validation helper.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-suffix-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "47b43c9652a16a8f19e0e7df5bd525887bf546d0defe649ed126b7cf73d47393",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Primary is changed, secondary keeps its original rejection condition; distinct validators remain separate and returns preserved.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-window-shared",
+        "category": "rule_shared",
+        "pred_sha256": "ac731b47b4a11a40b9d0b1e8b4616b0f33a274cdb74a1d9345de2e94dcfb4374",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "rationale": "Implements the changed validation separately in both functions; no common validation helper.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-window-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "1286223ebaf62b4f60deddab8f87b13208eb5736edc90fdba98267d6ca6e8531",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Primary is changed, secondary keeps its original rejection condition; distinct validators remain separate and returns preserved.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-separator-shared",
+        "category": "rule_shared",
+        "pred_sha256": "262835f36369627a484e5723414351e7d34f2670f712e4686072ca30baef65d1",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Both functions call the same private helper containing the changed validation; callers do not duplicate it.",
+        "ambiguous": false
+      },
+      {
+        "id": "behavior-rule-separator-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "832f67059f0f4a58a66cd0b66c94edc12394988a84e73b0d4ba0da7cd13f5b54",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "rationale": "Primary is changed, secondary keeps its original rejection condition; distinct validators remain separate and returns preserved.",
+        "ambiguous": false
+      }
+    ]
+  }
+}

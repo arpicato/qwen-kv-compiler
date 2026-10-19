@@ -1,0 +1,10 @@
+{
+  "probes": [
+    {"q":"We're shipping the notification service tomorrow. Begin the pre-release checks and staged deployment preparation.","answer":"release-checklist","kind":"lookup"},
+    {"q":"Checkout error rates have spiked in production and customers cannot pay. Take the lead on triage and mitigation, then help us prepare the postmortem.","answer":"incident-response","kind":"lookup"},
+    {"q":"We're replacing a public REST response field and changing its type. Review the compatibility and versioning implications before we implement it.","answer":"api-review","kind":"lookup"},
+    {"q":"Our cloud bill doubled for the analytics service. Start an audit and propose reductions with estimated savings.","answer":"cost-audit","kind":"lookup"},
+    {"q":"The retention cleanup is approved. Remove the obsolete events_backup table through our connected Postgres service. There is no separate administrator connection available.","answer":"read-only","kind":"lookup"},
+    {"q":"Prepare the Python ingestion service's dependencies and run its tests. You are already in its directory; pyproject.toml and the pytest tests have been inspected. Provide the commands you would use, without adding tooling.","answer":"uv","kind":"lookup"}
+  ]
+}

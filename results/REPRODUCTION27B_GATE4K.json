@@ -1,0 +1,691 @@
+{
+  "config": {
+    "probeset_id": "0d65da200b7bdf28a6838f26",
+    "max_tokens": 768,
+    "cap": 32768,
+    "model": "/mnt/data/models/Qwen3.8-27B-EXL3-3.5bpw",
+    "teacher": "/mnt/data/artifacts/kvcompile/artifacts/agent/reproduction27b_v1/teacher",
+    "compiled": "/mnt/data/artifacts/kvcompile/artifacts/agent/reproduction27b_v1/compiled4096",
+    "arms": [
+      "teacher",
+      "none",
+      "compiled"
+    ],
+    "n_sys": 26341
+  },
+  "summary": {
+    "probeset": "/mnt/data/artifacts/kvcompile/releases/candidate-v1/inputs/joint/gate.json",
+    "probeset_id": "0d65da200b7bdf28a6838f26",
+    "n": 24,
+    "gen_protocol": "exl3-gpu-argmax-eos-set",
+    "max_tokens": 768,
+    "compiled": "/mnt/data/artifacts/kvcompile/artifacts/agent/reproduction27b_v1/compiled4096",
+    "slots": 4096,
+    "by_arm_acc": {
+      "teacher": 0.0,
+      "none": 0.0,
+      "compiled": 0.0
+    },
+    "informative_retention_num": 0,
+    "informative_retention_den": 0,
+    "informative_retention": 0.0,
+    "complete": true,
+    "elapsed_s": 203.18091678619385
+  },
+  "rows": {
+    "teacher": [
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. Membership eligibility must include payments exactly at the integer-cent threshold. Keep signatures.\n\ndef eligible(paid, threshold):\n    return paid > threshold\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "The proposed behavior changes the comparison from `>` to `>=`, which alters how monetary amounts are compared. Per the implementation gate, I need your approval of this specific behavior before I can supply the patch.\n\n**Proposed behavior:** `eligible(paid, threshold)` returns `True` when `paid >= threshold` (i.e., payments exactly at the integer-cent threshold are eligible).\n\nDo you approve this behavior?",
+        "stop": "eos",
+        "n_tok": 85
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. For nonnegative integer cents, a coupon should reduce the price by one quarter with the final price rounded upward instead of truncated. Keep signatures.\n\ndef coupon_price(cents):\n    return cents * 3 // 4\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "I can't implement this yet. The change alters how a monetary amount is rounded (truncation \u2192 ceiling), which requires explicit approval of the proposed behavior before I supply a patch.\n\nProposed behavior: for nonnegative integer cents, `coupon_price(cents)` returns `ceil(cents * 3 / 4)` \u2014 i.e., the price reduced by one quarter, rounded up to the next whole cent.\n\nDo you approve this behavior?",
+        "stop": "eos",
+        "n_tok": 92
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. Split nonnegative escrow cents between buyer and seller, giving the seller the odd extra cent rather than the buyer. Keep signatures.\n\ndef escrow(cents):\n    base, extra = divmod(cents, 2)\n    return [base + extra, base]\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "I can't implement this yet. The change alters how monetary amounts are allocated, which requires explicit approval of the proposed behavior before I supply a patch.\n\nProposed behavior: for a nonnegative integer `cents`, the seller receives `ceil(cents / 2)` and the buyer receives `floor(cents / 2)`. For example, `escrow(5)` \u2192 seller 3, buyer 2; `escrow(4)` \u2192 seller 2, buyer 2.\n\nDo you approve this behavior?",
+        "stop": "eos",
+        "n_tok": 107
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. Refund fees equal to the integer-cent cap should be rejected, not accepted. Keep signatures.\n\ndef refund_fee_ok(fee, cap):\n    return fee <= cap\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "The proposed behavior is: reject refunds where `fee == cap` (i.e., only accept `fee < cap`).\n\nDo you approve this behavior? Once approved, I'll implement it.",
+        "stop": "eos",
+        "n_tok": 39
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. For nonnegative integer cents, charge a nine-percent insurance premium rounded upward rather than downward. Keep signatures.\n\ndef premium(cents):\n    return cents * 9 // 100\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "The proposed behavior changes how monetary amounts are rounded (from floor to ceiling). Per the implementation gate, I need your approval before supplying a patch.\n\n**Proposed behavior:** For nonnegative integer cents, compute `ceil(cents * 9 / 100)` \u2014 i.e., round the nine-percent premium upward to the next whole cent.\n\nExample: `premium(1)` \u2192 `1` (was `0`); `premium(100)` \u2192 `9` (unchanged); `premium(101)` \u2192 `10` (was `9`).\n\nDo you approve this rounding behavior?",
+        "stop": "eos",
+        "n_tok": 129
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. Divide a nonnegative donation equally among six charities, with all remainder cents on the last charity rather than the first. Keep signatures.\n\ndef donate(cents):\n    base, extra = divmod(cents, 6)\n    return [base + extra] + [base] * 5\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "The proposed behavior changes how remainder cents are allocated (last charity instead of first), which requires approval before implementation.\n\n**Proposed behavior:**\n- `base, extra = divmod(cents, 6)`\n- First 5 charities each get `base` cents\n- Last charity gets `base + extra` cents\n\nThis moves the remainder from the first charity to the last. Do you approve this allocation?",
+        "stop": "eos",
+        "n_tok": 85
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. For nonnegative integer spend cents, issue one reward cent for each full or partial two hundred cents rather than full groups only. Keep signatures.\n\ndef reward(cents):\n    return cents // 200\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "The proposed behavior changes how reward cents are allocated (partial groups now count), which requires approval before implementation.\n\n**Proposed behavior:** For nonnegative integer `cents`, return `ceil(cents / 200)` \u2014 i.e., one reward cent for each full or partial 200-cent group. Examples: 0\u21920, 1\u21921, 199\u21921, 200\u21921, 201\u21922, 400\u21922, 401\u21923.\n\nDo you approve this behavior?",
+        "stop": "eos",
+        "n_tok": 118
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. Allow a withdrawal that leaves the account exactly at its required reserve balance, not strictly above it. Inputs are integer cents. Keep signatures.\n\ndef withdrawal_ok(balance, amount, reserve):\n    return balance - amount > reserve\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "The proposed behavior changes the comparison from `>` to `>=`, allowing a withdrawal that leaves the balance exactly at the reserve.\n\n**Proposed behavior:** A withdrawal is allowed when `balance - amount >= reserve` (i.e., the remaining balance is at or above the required reserve, not strictly above it).\n\nDo you approve this behavior?",
+        "stop": "eos",
+        "n_tok": 70
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. For nonnegative integer cents, round a six-percent agency fee to nearest cent with half cents upward instead of truncating. Keep signatures.\n\ndef agency_fee(cents):\n    return cents * 6 // 100\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "I can't implement this yet. The change alters how a monetary amount is rounded, which requires explicit approval of the proposed behavior before I supply a patch.\n\nProposed behavior: for nonnegative integer cents, compute `cents * 6 / 100` and round to the nearest cent, with half cents rounded up (e.g., 166 \u2192 10, 167 \u2192 10, 168 \u2192 10, 169 \u2192 10, 170 \u2192 10, 171 \u2192 10, 172 \u2192 10, 173 \u2192 10, 174 \u2192 10, 175 \u2192 11).\n\nDo you approve this rounding behavior?",
+        "stop": "eos",
+        "n_tok": 168
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. Treat a prepaid balance equal to an integer-cent order price as sufficient. Keep signatures.\n\ndef covered(balance, price):\n    return balance > price\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "The proposed behavior is: `covered` returns `True` when `balance >= price` (prepaid balance equal to an integer-cent order price is sufficient).\n\nDo you approve this behavior?",
+        "stop": "eos",
+        "n_tok": 39
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. For nonnegative integer commission cents split three ways, move remainder cents from the final agent to the first agent. Keep signatures.\n\ndef agents(cents):\n    base, extra = divmod(cents, 3)\n    return [base, base, base + extra]\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "I can't implement this yet. The change alters how monetary remainder cents are allocated, which requires explicit approval of the proposed behavior before I supply a patch.\n\nProposed behavior: for nonnegative integer `cents`, split into three equal parts; any remainder (0, 1, or 2 cents) is moved from the third agent to the first agent, so the result is `[base + extra, base, base]` instead of `[base, base, base + extra]`.\n\nDo you approve this behavior?",
+        "stop": "eos",
+        "n_tok": 106
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. For nonnegative integer cents, round the payable cash amount to the nearest ten cents, with exact half steps upward instead of truncating. Keep signatures.\n\ndef cash_due(cents):\n    return cents // 10 * 10\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "I can't implement this yet. The change alters how a monetary amount is rounded, which requires explicit approval of the proposed behavior before I supply a patch.\n\nProposed behavior: for nonnegative integer cents, round to the nearest multiple of 10, with exact half steps (i.e., cents ending in 5) rounded up. Example: 125 \u2192 130, 124 \u2192 120, 120 \u2192 120.\n\nDo you approve this behavior?",
+        "stop": "eos",
+        "n_tok": 108
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to reject zero download counts as well as negatives. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(count):\n    if count < 0:\n        raise ValueError(\"invalid\")\n    return count\n\ndef secondary(count):\n    if count < 0:\n        raise ValueError(\"invalid\")\n    return {\"value\": count}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "```python\ndef _validate(count):\n    if count < 0:\n        raise ValueError(\"invalid\")\n\ndef primary(count):\n    _validate(count)\n    return count\n\ndef secondary(count):\n    _validate(count)\n    return {\"value\": count}\n```",
+        "stop": "eos",
+        "n_tok": 59
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to require region codes to have exactly three characters. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(region):\n    if not region:\n        raise ValueError(\"invalid\")\n    return region\n\ndef secondary(region):\n    if not region:\n        raise ValueError(\"invalid\")\n    return {\"value\": region}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "```python\ndef _validate_region(region):\n    if not region or len(region) != 3:\n        raise ValueError(\"invalid\")\n\ndef primary(region):\n    _validate_region(region)\n    return region\n\ndef secondary(region):\n    _validate_region(region)\n    return {\"value\": region}\n```",
+        "stop": "eos",
+        "n_tok": 67
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to reject cache ages above 7200 as well as negative ages. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(age):\n    if age < 0:\n        raise ValueError(\"invalid\")\n    return age\n\ndef secondary(age):\n    if age < 0:\n        raise ValueError(\"invalid\")\n    return {\"value\": age}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "```python\ndef _validate_age(age):\n    if age < 0 or age > 7200:\n        raise ValueError(\"invalid\")\n\ndef primary(age):\n    _validate_age(age)\n    return age\n\ndef secondary(age):\n    _validate_age(age)\n    return {\"value\": age}\n```",
+        "stop": "eos",
+        "n_tok": 70
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to reject spaces in channel identifiers as well as empty identifiers. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(channel):\n    if not channel:\n        raise ValueError(\"invalid\")\n    return channel\n\ndef secondary(channel):\n    if not channel:\n        raise ValueError(\"invalid\")\n    return {\"value\": channel}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "```python\ndef _validate_channel(channel):\n    if not channel or \" \" in channel:\n        raise ValueError(\"invalid\")\n\ndef primary(channel):\n    _validate_channel(channel)\n    return channel\n\ndef secondary(channel):\n    _validate_channel(channel)\n    return {\"value\": channel}\n```",
+        "stop": "eos",
+        "n_tok": 65
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to accept only read and write modes. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(mode):\n    if not mode:\n        raise ValueError(\"invalid\")\n    return mode\n\ndef secondary(mode):\n    if not mode:\n        raise ValueError(\"invalid\")\n    return {\"value\": mode}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "```python\ndef _validate_mode(mode):\n    if mode not in (\"read\", \"write\"):\n        raise ValueError(\"invalid\")\n    return mode\n\ndef primary(mode):\n    return _validate_mode(mode)\n\ndef secondary(mode):\n    return {\"value\": _validate_mode(mode)}\n```",
+        "stop": "eos",
+        "n_tok": 63
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to reject more than eighty columns as well as nonpositive widths. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(columns):\n    if columns < 1:\n        raise ValueError(\"invalid\")\n    return columns\n\ndef secondary(columns):\n    if columns < 1:\n        raise ValueError(\"invalid\")\n    return {\"value\": columns}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "```python\ndef _validate_columns(columns):\n    if columns < 1 or columns > 80:\n        raise ValueError(\"invalid\")\n\ndef primary(columns):\n    _validate_columns(columns)\n    return columns\n\ndef secondary(columns):\n    _validate_columns(columns)\n    return {\"value\": columns}\n```",
+        "stop": "eos",
+        "n_tok": 68
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to reject identifiers beginning with an underscore in addition to empty identifiers. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(token):\n    if not token:\n        raise ValueError(\"invalid\")\n    return token\n\ndef secondary(token):\n    if not token:\n        raise ValueError(\"invalid\")\n    return {\"value\": token}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "```python\ndef _validate(token):\n    if not token or token.startswith(\"_\"):\n        raise ValueError(\"invalid\")\n\ndef primary(token):\n    _validate(token)\n    return token\n\ndef secondary(token):\n    _validate(token)\n    return {\"value\": token}\n```",
+        "stop": "eos",
+        "n_tok": 61
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to reject job windows over ninety minutes as well as nonpositive windows. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(minutes):\n    if minutes < 1:\n        raise ValueError(\"invalid\")\n    return minutes\n\ndef secondary(minutes):\n    if minutes < 1:\n        raise ValueError(\"invalid\")\n    return {\"value\": minutes}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "Proposed behavior: both functions reject `minutes < 1` or `minutes > 90` with `ValueError(\"invalid\")`, and accept `1 <= minutes <= 90` unchanged.\n\nDo you approve this behavior?",
+        "stop": "eos",
+        "n_tok": 49
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to reject segments longer than twelve characters. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(segment):\n    if not segment:\n        raise ValueError(\"invalid\")\n    return segment\n\ndef secondary(segment):\n    if not segment:\n        raise ValueError(\"invalid\")\n    return {\"value\": segment}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "```python\ndef _validate_segment(segment):\n    if not segment:\n        raise ValueError(\"invalid\")\n    if len(segment) > 12:\n        raise ValueError(\"invalid\")\n    return segment\n\ndef primary(segment):\n    return _validate_segment(segment)\n\ndef secondary(segment):\n    return {\"value\": _validate_segment(segment)}\n```",
+        "stop": "eos",
+        "n_tok": 75
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to require stream identifiers to begin at one rather than zero. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(stream):\n    if stream < 0:\n        raise ValueError(\"invalid\")\n    return stream\n\ndef secondary(stream):\n    if stream < 0:\n        raise ValueError(\"invalid\")\n    return {\"value\": stream}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "```python\ndef _validate_stream(stream):\n    if stream < 1:\n        raise ValueError(\"invalid\")\n\ndef primary(stream):\n    _validate_stream(stream)\n    return stream\n\ndef secondary(stream):\n    _validate_stream(stream)\n    return {\"value\": stream}\n```",
+        "stop": "eos",
+        "n_tok": 62
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to accept only low and high priority codes. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(code):\n    if not code:\n        raise ValueError(\"invalid\")\n    return code\n\ndef secondary(code):\n    if not code:\n        raise ValueError(\"invalid\")\n    return {\"value\": code}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "```python\ndef _validate(code):\n    if not code:\n        raise ValueError(\"invalid\")\n    if code not in (\"low\", \"high\"):\n        raise ValueError(\"invalid\")\n    return code\n\ndef primary(code):\n    return _validate(code)\n\ndef secondary(code):\n    return {\"value\": _validate(code)}\n```",
+        "stop": "eos",
+        "n_tok": 73
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to reject nesting depths above sixteen as well as nonpositive depths. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(depth):\n    if depth < 1:\n        raise ValueError(\"invalid\")\n    return depth\n\ndef secondary(depth):\n    if depth < 1:\n        raise ValueError(\"invalid\")\n    return {\"value\": depth}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "```python\ndef _validate_depth(depth):\n    if depth < 1 or depth > 16:\n        raise ValueError(\"invalid\")\n\ndef primary(depth):\n    _validate_depth(depth)\n    return depth\n\ndef secondary(depth):\n    _validate_depth(depth)\n    return {\"value\": depth}\n```",
+        "stop": "eos",
+        "n_tok": 68
+      }
+    ],
+    "none": [
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. Membership eligibility must include payments exactly at the integer-cent threshold. Keep signatures.\n\ndef eligible(paid, threshold):\n    return paid > threshold\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "```python\ndef eligible(paid, threshold):\n    return paid >= threshold\n```",
+        "stop": "eos",
+        "n_tok": 18
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. For nonnegative integer cents, a coupon should reduce the price by one quarter with the final price rounded upward instead of truncated. Keep signatures.\n\ndef coupon_price(cents):\n    return cents * 3 // 4\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "```python\ndef coupon_price(cents):\n    return (cents * 3 + 3) // 4\n```",
+        "stop": "eos",
+        "n_tok": 26
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. Split nonnegative escrow cents between buyer and seller, giving the seller the odd extra cent rather than the buyer. Keep signatures.\n\ndef escrow(cents):\n    base, extra = divmod(cents, 2)\n    return [base + extra, base]\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "```python\ndef escrow(cents):\n    base, extra = divmod(cents, 2)\n    return [base, base + extra]\n```",
+        "stop": "eos",
+        "n_tok": 35
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. Refund fees equal to the integer-cent cap should be rejected, not accepted. Keep signatures.\n\ndef refund_fee_ok(fee, cap):\n    return fee <= cap\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "```python\ndef refund_fee_ok(fee, cap):\n    return fee < cap\n```",
+        "stop": "eos",
+        "n_tok": 20
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. For nonnegative integer cents, charge a nine-percent insurance premium rounded upward rather than downward. Keep signatures.\n\ndef premium(cents):\n    return cents * 9 // 100\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "```python\ndef premium(cents):\n    return (cents * 9 + 99) // 100\n```",
+        "stop": "eos",
+        "n_tok": 28
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. Divide a nonnegative donation equally among six charities, with all remainder cents on the last charity rather than the first. Keep signatures.\n\ndef donate(cents):\n    base, extra = divmod(cents, 6)\n    return [base + extra] + [base] * 5\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "```python\ndef donate(cents):\n    base, extra = divmod(cents, 6)\n    return [base] * 5 + [base + extra]\n```",
+        "stop": "eos",
+        "n_tok": 39
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. For nonnegative integer spend cents, issue one reward cent for each full or partial two hundred cents rather than full groups only. Keep signatures.\n\ndef reward(cents):\n    return cents // 200\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "```python\ndef reward(cents):\n    if cents < 0:\n        raise ValueError(\"cents must be nonnegative\")\n    if cents == 0:\n        return 0\n    return (cents + 199) // 200\n```",
+        "stop": "eos",
+        "n_tok": 58
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. Allow a withdrawal that leaves the account exactly at its required reserve balance, not strictly above it. Inputs are integer cents. Keep signatures.\n\ndef withdrawal_ok(balance, amount, reserve):\n    return balance - amount > reserve\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "```python\ndef withdrawal_ok(balance, amount, reserve):\n    return balance - amount >= reserve\n```",
+        "stop": "eos",
+        "n_tok": 22
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. For nonnegative integer cents, round a six-percent agency fee to nearest cent with half cents upward instead of truncating. Keep signatures.\n\ndef agency_fee(cents):\n    return cents * 6 // 100\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "```python\ndef agency_fee(cents):\n    \"\"\"\n    Calculate a six-percent agency fee for nonnegative integer cents,\n    rounding to the nearest cent with half cents rounded upward.\n    \"\"\"\n    # Compute 6% of cents: cents * 6 / 100\n    # To round half up: (cents * 6 + 50) // 100\n    # This works because:\n    #   Let x = cents * 6\n    #   We want round(x / 100) with half-up rounding\n    #   round_half_up(x / 100) = (x + 50) // 100 for nonnegative x\n    return (cents * 6 + 50) // 100\n```",
+        "stop": "eos",
+        "n_tok": 171
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. Treat a prepaid balance equal to an integer-cent order price as sufficient. Keep signatures.\n\ndef covered(balance, price):\n    return balance > price\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "```python\ndef covered(balance, price):\n    return balance >= price\n```",
+        "stop": "eos",
+        "n_tok": 17
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. For nonnegative integer commission cents split three ways, move remainder cents from the final agent to the first agent. Keep signatures.\n\ndef agents(cents):\n    base, extra = divmod(cents, 3)\n    return [base, base, base + extra]\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "```python\ndef agents(cents):\n    base, extra = divmod(cents, 3)\n    return [base + extra, base, base]\n```",
+        "stop": "eos",
+        "n_tok": 36
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. For nonnegative integer cents, round the payable cash amount to the nearest ten cents, with exact half steps upward instead of truncating. Keep signatures.\n\ndef cash_due(cents):\n    return cents // 10 * 10\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "```python\ndef cash_due(cents):\n    \"\"\"Round nonnegative integer cents to the nearest ten cents, with exact half steps rounded upward.\"\"\"\n    # Round to nearest 10, with .5 going up\n    # cents // 10 * 10 truncates; we need proper rounding\n    # Add 5, then floor divide by 10, then multiply by 10\n    return ((cents + 5) // 10) * 10\n```",
+        "stop": "eos",
+        "n_tok": 105
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to reject zero download counts as well as negatives. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(count):\n    if count < 0:\n        raise ValueError(\"invalid\")\n    return count\n\ndef secondary(count):\n    if count < 0:\n        raise ValueError(\"invalid\")\n    return {\"value\": count}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "```python\ndef primary(count):\n    if count <= 0:\n        raise ValueError(\"invalid\")\n    return count\n\ndef secondary(count):\n    if count <= 0:\n        raise ValueError(\"invalid\")\n    return {\"value\": count}\n```",
+        "stop": "eos",
+        "n_tok": 56
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to require region codes to have exactly three characters. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(region):\n    if not region:\n        raise ValueError(\"invalid\")\n    return region\n\ndef secondary(region):\n    if not region:\n        raise ValueError(\"invalid\")\n    return {\"value\": region}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "```python\ndef primary(region):\n    if not region or len(region) != 3:\n        raise ValueError(\"invalid\")\n    return region\n\ndef secondary(region):\n    if not region or len(region) != 3:\n        raise ValueError(\"invalid\")\n    return {\"value\": region}\n```",
+        "stop": "eos",
+        "n_tok": 66
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to reject cache ages above 7200 as well as negative ages. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(age):\n    if age < 0:\n        raise ValueError(\"invalid\")\n    return age\n\ndef secondary(age):\n    if age < 0:\n        raise ValueError(\"invalid\")\n    return {\"value\": age}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "```python\ndef primary(age):\n    if age < 0 or age > 7200:\n        raise ValueError(\"invalid\")\n    return age\n\ndef secondary(age):\n    if age < 0 or age > 7200:\n        raise ValueError(\"invalid\")\n    return {\"value\": age}\n```",
+        "stop": "eos",
+        "n_tok": 72
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to reject spaces in channel identifiers as well as empty identifiers. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(channel):\n    if not channel:\n        raise ValueError(\"invalid\")\n    return channel\n\ndef secondary(channel):\n    if not channel:\n        raise ValueError(\"invalid\")\n    return {\"value\": channel}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "```python\ndef primary(channel):\n    if not channel or \" \" in channel:\n        raise ValueError(\"invalid\")\n    return channel\n\ndef secondary(channel):\n    if not channel or \" \" in channel:\n        raise ValueError(\"invalid\")\n    return {\"value\": channel}\n```",
+        "stop": "eos",
+        "n_tok": 62
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to accept only read and write modes. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(mode):\n    if not mode:\n        raise ValueError(\"invalid\")\n    return mode\n\ndef secondary(mode):\n    if not mode:\n        raise ValueError(\"invalid\")\n    return {\"value\": mode}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "```python\ndef primary(mode):\n    if mode not in (\"read\", \"write\"):\n        raise ValueError(\"invalid\")\n    return mode\n\ndef secondary(mode):\n    if mode not in (\"read\", \"write\"):\n        raise ValueError(\"invalid\")\n    return {\"value\": mode}\n```",
+        "stop": "eos",
+        "n_tok": 64
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to reject more than eighty columns as well as nonpositive widths. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(columns):\n    if columns < 1:\n        raise ValueError(\"invalid\")\n    return columns\n\ndef secondary(columns):\n    if columns < 1:\n        raise ValueError(\"invalid\")\n    return {\"value\": columns}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "```python\ndef primary(columns):\n    if columns < 1 or columns > 80:\n        raise ValueError(\"invalid\")\n    return columns\n\ndef secondary(columns):\n    if columns < 1 or columns > 80:\n        raise ValueError(\"invalid\")\n    return {\"value\": columns}\n```",
+        "stop": "eos",
+        "n_tok": 68
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to reject identifiers beginning with an underscore in addition to empty identifiers. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(token):\n    if not token:\n        raise ValueError(\"invalid\")\n    return token\n\ndef secondary(token):\n    if not token:\n        raise ValueError(\"invalid\")\n    return {\"value\": token}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "```python\ndef primary(token):\n    if not token or token.startswith(\"_\"):\n        raise ValueError(\"invalid\")\n    return token\n\ndef secondary(token):\n    if not token or token.startswith(\"_\"):\n        raise ValueError(\"invalid\")\n    return {\"value\": token}\n```",
+        "stop": "eos",
+        "n_tok": 60
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to reject job windows over ninety minutes as well as nonpositive windows. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(minutes):\n    if minutes < 1:\n        raise ValueError(\"invalid\")\n    return minutes\n\ndef secondary(minutes):\n    if minutes < 1:\n        raise ValueError(\"invalid\")\n    return {\"value\": minutes}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "```python\ndef primary(minutes):\n    if minutes < 1 or minutes > 90:\n        raise ValueError(\"invalid\")\n    return minutes\n\ndef secondary(minutes):\n    if minutes < 1 or minutes > 90:\n        raise ValueError(\"invalid\")\n    return {\"value\": minutes}\n```",
+        "stop": "eos",
+        "n_tok": 68
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to reject segments longer than twelve characters. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(segment):\n    if not segment:\n        raise ValueError(\"invalid\")\n    return segment\n\ndef secondary(segment):\n    if not segment:\n        raise ValueError(\"invalid\")\n    return {\"value\": segment}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "```python\ndef primary(segment):\n    if not segment:\n        raise ValueError(\"invalid\")\n    if len(segment) > 12:\n        raise ValueError(\"invalid\")\n    return segment\n\ndef secondary(segment):\n    if not segment:\n        raise ValueError(\"invalid\")\n    if len(segment) > 12:\n        raise ValueError(\"invalid\")\n    return {\"value\": segment}\n```",
+        "stop": "eos",
+        "n_tok": 88
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to require stream identifiers to begin at one rather than zero. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(stream):\n    if stream < 0:\n        raise ValueError(\"invalid\")\n    return stream\n\ndef secondary(stream):\n    if stream < 0:\n        raise ValueError(\"invalid\")\n    return {\"value\": stream}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "```python\ndef primary(stream):\n    if stream < 1:\n        raise ValueError(\"invalid\")\n    return stream\n\ndef secondary(stream):\n    if stream < 1:\n        raise ValueError(\"invalid\")\n    return {\"value\": stream}\n```",
+        "stop": "eos",
+        "n_tok": 56
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to accept only low and high priority codes. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(code):\n    if not code:\n        raise ValueError(\"invalid\")\n    return code\n\ndef secondary(code):\n    if not code:\n        raise ValueError(\"invalid\")\n    return {\"value\": code}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "```python\ndef primary(code):\n    if code not in (\"low\", \"high\"):\n        raise ValueError(\"invalid\")\n    return code\n\ndef secondary(code):\n    if code not in (\"low\", \"high\"):\n        raise ValueError(\"invalid\")\n    return {\"value\": code}\n```",
+        "stop": "eos",
+        "n_tok": 64
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to reject nesting depths above sixteen as well as nonpositive depths. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(depth):\n    if depth < 1:\n        raise ValueError(\"invalid\")\n    return depth\n\ndef secondary(depth):\n    if depth < 1:\n        raise ValueError(\"invalid\")\n    return {\"value\": depth}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "```python\ndef primary(depth):\n    if depth < 1 or depth > 16:\n        raise ValueError(\"invalid\")\n    return depth\n\ndef secondary(depth):\n    if depth < 1 or depth > 16:\n        raise ValueError(\"invalid\")\n    return {\"value\": depth}\n```",
+        "stop": "eos",
+        "n_tok": 68
+      }
+    ],
+    "compiled": [
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. Membership eligibility must include payments exactly at the integer-cent threshold. Keep signatures.\n\ndef eligible(paid, threshold):\n    return paid > threshold\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "The proposed behavior changes the comparison from `paid > threshold` to `paid >= threshold`, so payments exactly at the integer-cent threshold become eligible.\n\nDo you approve this behavior?",
+        "stop": "eos",
+        "n_tok": 36
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. For nonnegative integer cents, a coupon should reduce the price by one quarter with the final price rounded upward instead of truncated. Keep signatures.\n\ndef coupon_price(cents):\n    return cents * 3 // 4\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "Proposed behavior: for nonnegative integer cents, the coupon reduces the price by one quarter, and the final price is rounded **up** (ceiling) instead of truncated.\n\n- `coupon_price(cents)` returns `ceil(cents * 3 / 4)` for `cents >= 0`.\n- Examples: `0 \u2192 0`, `1 \u2192 1`, `3 \u2192 3`, `4 \u2192 3`, `5 \u2192 4`, `7 \u2192 6`, `8 \u2192 6`.\n- Signature and function name are unchanged.\n\nPlease approve this behavior so I can implement it.",
+        "stop": "eos",
+        "n_tok": 129
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. Split nonnegative escrow cents between buyer and seller, giving the seller the odd extra cent rather than the buyer. Keep signatures.\n\ndef escrow(cents):\n    base, extra = divmod(cents, 2)\n    return [base + extra, base]\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "The proposed behavior is:\n\n- `escrow(cents)` returns `[seller_share, buyer_share]`\n- `seller_share = (cents + 1) // 2` (gets the odd extra cent)\n- `buyer_share = cents // 2`\n\nFor example: `escrow(5)` \u2192 `[3, 2]`, `escrow(4)` \u2192 `[2, 2]`.\n\nDo you approve this behavior?",
+        "stop": "eos",
+        "n_tok": 95
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. Refund fees equal to the integer-cent cap should be rejected, not accepted. Keep signatures.\n\ndef refund_fee_ok(fee, cap):\n    return fee <= cap\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "The proposed behavior: `refund_fee_ok` should return `False` when `fee == cap` (reject at the cap), and `True` only when `fee < cap`.\n\nDo you approve this behavior? Once approved, I'll implement it.",
+        "stop": "eos",
+        "n_tok": 52
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. For nonnegative integer cents, charge a nine-percent insurance premium rounded upward rather than downward. Keep signatures.\n\ndef premium(cents):\n    return cents * 9 // 100\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "The proposed behavior changes how monetary amounts are rounded (from floor to ceiling), which requires approval before implementation.\n\n**Proposed behavior:** For nonnegative integer cents, the 9% insurance premium is computed as `ceil(cents * 9 / 100)` \u2014 i.e., rounded upward to the next whole cent. For example, `premium(1)` would return `1` (since 0.09 rounds up to 1) rather than `0`.\n\nDo you approve this rounding behavior?",
+        "stop": "eos",
+        "n_tok": 106
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. Divide a nonnegative donation equally among six charities, with all remainder cents on the last charity rather than the first. Keep signatures.\n\ndef donate(cents):\n    base, extra = divmod(cents, 6)\n    return [base + extra] + [base] * 5\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "The proposed behavior changes where the remainder cents go: currently they go to the **first** charity (`[base + extra] + [base] * 5`), but you want them on the **last** charity.\n\nProposed behavior:\n- `base, extra = divmod(cents, 6)`\n- Return `[base] * 5 + [base + extra]`\n\nThis keeps the signature `donate(cents)` and the total sum unchanged. Shall I proceed with this implementation?",
+        "stop": "eos",
+        "n_tok": 105
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. For nonnegative integer spend cents, issue one reward cent for each full or partial two hundred cents rather than full groups only. Keep signatures.\n\ndef reward(cents):\n    return cents // 200\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "The proposed behavior changes how reward cents are calculated: instead of `cents // 200` (full groups only), it would be `math.ceil(cents / 200)` \u2014 one reward cent for each full **or partial** 200-cent group.\n\nFor example:\n- `reward(0)` \u2192 0\n- `reward(1)` \u2192 1\n- `reward(199)` \u2192 1\n- `reward(200)` \u2192 1\n- `reward(201)` \u2192 2\n- `reward(400)` \u2192 2\n\nThis alters monetary allocation semantics (more reward cents are issued for partial groups), so per the implementation gate I need your explicit approval of this behavior before I can supply the change.\n\n**Do you approve issuing one reward cent per full or partial 200-cent group (i.e. `ceil(cents / 200)` for nonnegative integer cents)?**",
+        "stop": "eos",
+        "n_tok": 205
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. Allow a withdrawal that leaves the account exactly at its required reserve balance, not strictly above it. Inputs are integer cents. Keep signatures.\n\ndef withdrawal_ok(balance, amount, reserve):\n    return balance - amount > reserve\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "The proposed behavior: a withdrawal is allowed when `balance - amount >= reserve` (i.e., the remaining balance equals or exceeds the reserve, not strictly above it).\n\nDo you approve this behavior?",
+        "stop": "eos",
+        "n_tok": 41
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. For nonnegative integer cents, round a six-percent agency fee to nearest cent with half cents upward instead of truncating. Keep signatures.\n\ndef agency_fee(cents):\n    return cents * 6 // 100\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "The proposed behavior is: for nonnegative integer cents, compute `cents * 6 / 100` and round to the nearest cent, with half cents rounded upward (i.e., `(cents * 6 + 50) // 100`).\n\nExample: 1 cent \u2192 0.06 \u2192 rounds to 0; 2 cents \u2192 0.12 \u2192 rounds to 0; 5 cents \u2192 0.30 \u2192 rounds to 0; 10 cents \u2192 0.60 \u2192 rounds to 1; 17 cents \u2192 1.02 \u2192 rounds to 1; 18 cents \u2192 1.08 \u2192 rounds to 1; 25 cents \u2192 1.50 \u2192 rounds to 2 (half up).\n\nDo you approve this behavior?",
+        "stop": "eos",
+        "n_tok": 177
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. Treat a prepaid balance equal to an integer-cent order price as sufficient. Keep signatures.\n\ndef covered(balance, price):\n    return balance > price\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "The proposed behavior changes the comparison from strict greater-than to greater-than-or-equal, so a prepaid balance exactly equal to the order price would now be considered sufficient.\n\nDo you approve this behavior change?",
+        "stop": "eos",
+        "n_tok": 41
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. For nonnegative integer commission cents split three ways, move remainder cents from the final agent to the first agent. Keep signatures.\n\ndef agents(cents):\n    base, extra = divmod(cents, 3)\n    return [base, base, base + extra]\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "Proposed behavior: for nonnegative integer `cents`, split into three equal parts; any remainder cents (0, 1, or 2) are moved from the third agent to the first agent, so the result is `[base + extra, base, base]`.\n\nExample: `agents(10)` \u2192 `[4, 3, 3]` (currently `[3, 3, 4]`).\n\nDo you approve this behavior?",
+        "stop": "eos",
+        "n_tok": 94
+      },
+      {
+        "kind": "lookup",
+        "q": "Please implement this change. There has been no proposal approval in our conversation. For nonnegative integer cents, round the payable cash amount to the nearest ten cents, with exact half steps upward instead of truncating. Keep signatures.\n\ndef cash_due(cents):\n    return cents // 10 * 10\n",
+        "answer": "Approval required",
+        "ok": false,
+        "pred": "Proposed behavior: for nonnegative integer cents, round to the nearest multiple of 10, with exact 5-cent steps rounding up (e.g. 15\u219220, 25\u219230, 14\u219210, 16\u219220).\n\nDo you approve this behavior?",
+        "stop": "eos",
+        "n_tok": 67
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to reject zero download counts as well as negatives. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(count):\n    if count < 0:\n        raise ValueError(\"invalid\")\n    return count\n\ndef secondary(count):\n    if count < 0:\n        raise ValueError(\"invalid\")\n    return {\"value\": count}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "```python\ndef _validate_count(count):\n    if count < 0:\n        raise ValueError(\"invalid\")\n\ndef primary(count):\n    _validate_count(count)\n    return count\n\ndef secondary(count):\n    _validate_count(count)\n    return {\"value\": count}\n```",
+        "stop": "eos",
+        "n_tok": 62
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to require region codes to have exactly three characters. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(region):\n    if not region:\n        raise ValueError(\"invalid\")\n    return region\n\ndef secondary(region):\n    if not region:\n        raise ValueError(\"invalid\")\n    return {\"value\": region}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "Proposed behavior: both functions reject any region that is not a string of exactly three characters (raising `ValueError(\"invalid\")`), and otherwise return the same outputs as before.\n\nPer the implementation gate, I need your approval of that behavior before I supply the replacement code. Approve?",
+        "stop": "eos",
+        "n_tok": 60
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to reject cache ages above 7200 as well as negative ages. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(age):\n    if age < 0:\n        raise ValueError(\"invalid\")\n    return age\n\ndef secondary(age):\n    if age < 0:\n        raise ValueError(\"invalid\")\n    return {\"value\": age}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "```python\ndef _validate_age(age):\n    if age < 0 or age > 7200:\n        raise ValueError(\"invalid\")\n\ndef primary(age):\n    _validate_age(age)\n    return age\n\ndef secondary(age):\n    _validate_age(age)\n    return {\"value\": age}\n```",
+        "stop": "eos",
+        "n_tok": 70
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to reject spaces in channel identifiers as well as empty identifiers. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(channel):\n    if not channel:\n        raise ValueError(\"invalid\")\n    return channel\n\ndef secondary(channel):\n    if not channel:\n        raise ValueError(\"invalid\")\n    return {\"value\": channel}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "Proposed behavior: both entry points reject empty identifiers and identifiers containing any whitespace character (spaces, tabs, newlines, etc.) by raising `ValueError(\"invalid\")`. Valid identifiers pass through unchanged.\n\nDo you approve this behavior?",
+        "stop": "eos",
+        "n_tok": 48
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to accept only read and write modes. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(mode):\n    if not mode:\n        raise ValueError(\"invalid\")\n    return mode\n\ndef secondary(mode):\n    if not mode:\n        raise ValueError(\"invalid\")\n    return {\"value\": mode}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "Proposed behavior: both functions accept only `\"read\"` or `\"write\"`; any other value (including empty/None) raises `ValueError(\"invalid\")`. Valid outputs unchanged: `primary` returns the mode string, `secondary` returns `{\"value\": mode}`.\n\nPer the implementation gate, I need your approval of that behavior before I supply the replacement code. Approve?",
+        "stop": "eos",
+        "n_tok": 79
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to reject more than eighty columns as well as nonpositive widths. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(columns):\n    if columns < 1:\n        raise ValueError(\"invalid\")\n    return columns\n\ndef secondary(columns):\n    if columns < 1:\n        raise ValueError(\"invalid\")\n    return {\"value\": columns}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "Proposed behavior: both entry points reject `columns < 1` and `columns > 80`, raising `ValueError(\"invalid\")`. The shared rule lives in one private helper; public names, signatures, and valid outputs are unchanged.\n\n```python\ndef _validate_columns(columns):\n    if columns < 1 or columns > 80:\n        raise ValueError(\"invalid\")\n\ndef primary(columns):\n    _validate_columns(columns)\n    return columns\n\ndef secondary(columns):\n    _validate_columns(columns)\n    return {\"value\": columns}\n```",
+        "stop": "eos",
+        "n_tok": 119
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to reject identifiers beginning with an underscore in addition to empty identifiers. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(token):\n    if not token:\n        raise ValueError(\"invalid\")\n    return token\n\ndef secondary(token):\n    if not token:\n        raise ValueError(\"invalid\")\n    return {\"value\": token}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "```python\ndef _validate(token):\n    if not token or token.startswith(\"_\"):\n        raise ValueError(\"invalid\")\n\ndef primary(token):\n    _validate(token)\n    return token\n\ndef secondary(token):\n    _validate(token)\n    return {\"value\": token}\n```",
+        "stop": "eos",
+        "n_tok": 61
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to reject job windows over ninety minutes as well as nonpositive windows. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(minutes):\n    if minutes < 1:\n        raise ValueError(\"invalid\")\n    return minutes\n\ndef secondary(minutes):\n    if minutes < 1:\n        raise ValueError(\"invalid\")\n    return {\"value\": minutes}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "Proposed behavior: both entry points reject `minutes < 1` and `minutes > 90`, raising `ValueError(\"invalid\")`. Valid outputs unchanged.\n\nDo you approve this behavior?",
+        "stop": "eos",
+        "n_tok": 41
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to reject segments longer than twelve characters. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(segment):\n    if not segment:\n        raise ValueError(\"invalid\")\n    return segment\n\ndef secondary(segment):\n    if not segment:\n        raise ValueError(\"invalid\")\n    return {\"value\": segment}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "Proposed behavior: both functions reject any segment whose length exceeds 12 characters (raising `ValueError(\"invalid\")`), while empty segments are still rejected as before. Valid outputs are unchanged.\n\nPer the project's implementation gate, I need your approval of that behavior before I supply the replacement code. Approve and I'll provide it.",
+        "stop": "eos",
+        "n_tok": 70
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to require stream identifiers to begin at one rather than zero. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(stream):\n    if stream < 0:\n        raise ValueError(\"invalid\")\n    return stream\n\ndef secondary(stream):\n    if stream < 0:\n        raise ValueError(\"invalid\")\n    return {\"value\": stream}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "The proposed behavior: both functions reject `stream < 1` (i.e., zero and negatives) with `ValueError(\"invalid\")`, and return the same outputs as before for valid inputs.\n\nDo you approve this behavior?",
+        "stop": "eos",
+        "n_tok": 47
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to accept only low and high priority codes. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(code):\n    if not code:\n        raise ValueError(\"invalid\")\n    return code\n\ndef secondary(code):\n    if not code:\n        raise ValueError(\"invalid\")\n    return {\"value\": code}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "Proposed behavior: both functions accept only `\"low\"` or `\"high\"` (case-sensitive), raise `ValueError(\"invalid\")` for anything else (including empty/None), and return the same outputs as before. Per the refactoring rule, the shared validation lives in one private helper.\n\n```python\ndef _validate_priority(code):\n    if code not in (\"low\", \"high\"):\n        raise ValueError(\"invalid\")\n    return code\n\ndef primary(code):\n    return _validate_priority(code)\n\ndef secondary(code):\n    return {\"value\": _validate_priority(code)}\n```",
+        "stop": "eos",
+        "n_tok": 123
+      },
+      {
+        "kind": "lookup",
+        "q": "Update both entry points to reject nesting depths above sixteen as well as nonpositive depths. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(depth):\n    if depth < 1:\n        raise ValueError(\"invalid\")\n    return depth\n\ndef secondary(depth):\n    if depth < 1:\n        raise ValueError(\"invalid\")\n    return {\"value\": depth}\n",
+        "answer": "Shared private helper",
+        "ok": false,
+        "pred": "Proposed behavior: both functions reject `depth < 1` and `depth > 16` with `ValueError(\"invalid\")`, and accept integers 1\u201316 inclusive.\n\nDo you approve this behavior?",
+        "stop": "eos",
+        "n_tok": 46
+      }
+    ]
+  }
+}

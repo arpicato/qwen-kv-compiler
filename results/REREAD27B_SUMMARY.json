@@ -1,0 +1,342 @@
+{
+  "dev": {
+    "n": 194,
+    "informative_n": 89,
+    "arms": {
+      "teacher": {
+        "correct": 193,
+        "caps": 0,
+        "informative_correct": 89,
+        "by_kind": {
+          "lookup": {
+            "n": 132,
+            "correct": 132
+          },
+          "tool_select": {
+            "n": 62,
+            "correct": 61
+          }
+        }
+      },
+      "none": {
+        "correct": 104,
+        "caps": 151,
+        "informative_correct": 0,
+        "by_kind": {
+          "lookup": {
+            "n": 132,
+            "correct": 103
+          },
+          "tool_select": {
+            "n": 62,
+            "correct": 1
+          }
+        }
+      },
+      "warm": {
+        "correct": 182,
+        "caps": 1,
+        "informative_correct": 85,
+        "by_kind": {
+          "lookup": {
+            "n": 132,
+            "correct": 123
+          },
+          "tool_select": {
+            "n": 62,
+            "correct": 59
+          }
+        }
+      },
+      "reread": {
+        "correct": 179,
+        "caps": 1,
+        "informative_correct": 84,
+        "by_kind": {
+          "lookup": {
+            "n": 132,
+            "correct": 121
+          },
+          "tool_select": {
+            "n": 62,
+            "correct": 58
+          }
+        }
+      }
+    },
+    "gains": [
+      "Which tool should be used to do the following: Search for pull requests in GitHub repositories using issues search syntax already scoped to is:pr"
+    ],
+    "losses": [
+      "Which tool should be used to do the following: Add a comment and/or reaction to a specific issue or issue comment in a GitHub repository.",
+      "Which tool should be used to do the following: Unresolve a previously resolved review thread on a pull request.",
+      "For the tool `assign_copilot_to_issue_with_intent`, which argument is described as: Git reference (e.g., branch) that the agent will start its work from. If not specified, defaults to the repository's default branch. Ignored when is_suggestion is true",
+      "For the tool `list_secret_scanning_alerts`, which argument is described as: Filter by resolution"
+    ],
+    "eval_s": 623.8416879177094
+  },
+  "agent78": {
+    "n": 78,
+    "informative_n": 45,
+    "arms": {
+      "teacher": {
+        "correct": 76,
+        "caps": 1,
+        "informative_correct": 45,
+        "by_kind": {
+          "lookup": {
+            "n": 28,
+            "correct": 27
+          },
+          "style": {
+            "n": 20,
+            "correct": 20
+          },
+          "tool_select": {
+            "n": 26,
+            "correct": 25
+          },
+          "unrelated": {
+            "n": 4,
+            "correct": 4
+          }
+        }
+      },
+      "none": {
+        "correct": 32,
+        "caps": 74,
+        "informative_correct": 0,
+        "by_kind": {
+          "lookup": {
+            "n": 28,
+            "correct": 11
+          },
+          "style": {
+            "n": 20,
+            "correct": 14
+          },
+          "tool_select": {
+            "n": 26,
+            "correct": 3
+          },
+          "unrelated": {
+            "n": 4,
+            "correct": 4
+          }
+        }
+      },
+      "warm": {
+        "correct": 74,
+        "caps": 2,
+        "informative_correct": 43,
+        "by_kind": {
+          "lookup": {
+            "n": 28,
+            "correct": 28
+          },
+          "style": {
+            "n": 20,
+            "correct": 18
+          },
+          "tool_select": {
+            "n": 26,
+            "correct": 24
+          },
+          "unrelated": {
+            "n": 4,
+            "correct": 4
+          }
+        }
+      },
+      "reread": {
+        "correct": 73,
+        "caps": 1,
+        "informative_correct": 42,
+        "by_kind": {
+          "lookup": {
+            "n": 28,
+            "correct": 27
+          },
+          "style": {
+            "n": 20,
+            "correct": 18
+          },
+          "tool_select": {
+            "n": 26,
+            "correct": 24
+          },
+          "unrelated": {
+            "n": 4,
+            "correct": 4
+          }
+        }
+      }
+    },
+    "gains": [],
+    "losses": [
+      "What does the assistant use to answer questions about opencode itself?"
+    ],
+    "eval_s": 317.07896661758423
+  },
+  "stress197": {
+    "n": 197,
+    "informative_n": 107,
+    "arms": {
+      "teacher": {
+        "correct": 197,
+        "caps": 0,
+        "informative_correct": 107,
+        "by_kind": {
+          "lookup": {
+            "n": 135,
+            "correct": 135
+          },
+          "tool_select": {
+            "n": 62,
+            "correct": 62
+          }
+        }
+      },
+      "none": {
+        "correct": 90,
+        "caps": 159,
+        "informative_correct": 0,
+        "by_kind": {
+          "lookup": {
+            "n": 135,
+            "correct": 89
+          },
+          "tool_select": {
+            "n": 62,
+            "correct": 1
+          }
+        }
+      },
+      "warm": {
+        "correct": 175,
+        "caps": 2,
+        "informative_correct": 91,
+        "by_kind": {
+          "lookup": {
+            "n": 135,
+            "correct": 117
+          },
+          "tool_select": {
+            "n": 62,
+            "correct": 58
+          }
+        }
+      },
+      "reread": {
+        "correct": 178,
+        "caps": 1,
+        "informative_correct": 93,
+        "by_kind": {
+          "lookup": {
+            "n": 135,
+            "correct": 119
+          },
+          "tool_select": {
+            "n": 62,
+            "correct": 59
+          }
+        }
+      }
+    },
+    "gains": [
+      "Which tool should be used to do the following: Add review comment to the requester's latest pending pull request review.",
+      "For the tool `create_repository`, which argument is described as: Organization to create the repository in (omit to create in your personal account)",
+      "For the tool `list_global_security_advisories`, which argument is described as: Filter by publish or update date or date range (ISO 8601 date or range).",
+      "For the tool `projects_write`, which argument is described as: Start date in YYYY-MM-DD format. Used for 'create_project_status_update' and 'create_iteration_field' methods."
+    ],
+    "losses": [
+      "For the tool `list_secret_scanning_alerts`, which argument is described as: A comma-separated list of secret types to return. All default secret patterns are returned. To return generic patterns, pass the token name(s) in the parameter."
+    ],
+    "eval_s": 628.9394414424896
+  },
+  "diagnostic12": {
+    "n": 12,
+    "informative_n": 9,
+    "arms": {
+      "teacher": {
+        "correct": 12,
+        "caps": 0,
+        "informative_correct": 9,
+        "by_kind": {
+          "lookup": {
+            "n": 12,
+            "correct": 12
+          }
+        }
+      },
+      "none": {
+        "correct": 3,
+        "caps": 6,
+        "informative_correct": 0,
+        "by_kind": {
+          "lookup": {
+            "n": 12,
+            "correct": 3
+          }
+        }
+      },
+      "warm": {
+        "correct": 10,
+        "caps": 0,
+        "informative_correct": 8,
+        "by_kind": {
+          "lookup": {
+            "n": 12,
+            "correct": 10
+          }
+        }
+      },
+      "reread": {
+        "correct": 10,
+        "caps": 1,
+        "informative_correct": 8,
+        "by_kind": {
+          "lookup": {
+            "n": 12,
+            "correct": 10
+          }
+        }
+      }
+    },
+    "gains": [],
+    "losses": [],
+    "eval_s": 117.52201557159424,
+    "splits": {
+      "dev": {
+        "n": 6,
+        "teacher": 6,
+        "warm": 5,
+        "reread": 5
+      },
+      "test": {
+        "n": 6,
+        "teacher": 6,
+        "warm": 5,
+        "reread": 5
+      }
+    }
+  },
+  "artifacts": {
+    "warm": {
+      "kv_bytes": 536870912,
+      "compile_s": 2502.4390642642975,
+      "manifest_sha256": "74db0a84561f93acc4576e042b34f126e5b12ae2df5af79de3b7084a12239a5d"
+    },
+    "reread": {
+      "kv_bytes": 536870912,
+      "compile_s": 2585.2217824459076,
+      "manifest_sha256": "ef3e4c34913c6089cfc49be41fe8a1a2209df16fa7eb965055840a3a3d27fc82"
+    }
+  },
+  "timing": {
+    "gate_s": 517.0377466678619,
+    "capture_s": 813.5172021389008,
+    "eval_s": 1687.3821115493774,
+    "total_s": 8105.597907066345
+  }
+}

@@ -1,0 +1,765 @@
+{
+  "complete": true,
+  "rows": [
+    {
+      "id": "natural-count-zero",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('schedule_batch', (0,), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-retry-limit",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('start_worker', (-1,), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-batch-multiple",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('encode_upload', (7,), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-integer-bool",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('launch_pool', (True,), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-finite-number",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 24, in <module>\nAssertionError: ('store_reading', (nan,), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-name-empty",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('register_name', ('',), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-unicode-space",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('save_key', ('a\\tb',), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-ascii-digits",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('submit_token', ('\u0661',), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-case-sensitive-prefix",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('enqueue_code', ('JOB-a',), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-control-chars",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('export_label', ('a\\tb',), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-relative-path",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('fetch_asset', ('../a',), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-file-extension",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 14, in <module>\n  File \"<stdin>\", line 3, in import_file\nValueError: invalid\n"
+      }
+    },
+    {
+      "id": "natural-hidden-component",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('scan_path', ('a/.cache/b',), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-empty-segment",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('publish_route', ('/a',), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-backslash",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('load_manifest', ('a\\\\b',), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-unique-items",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('index_items', ([1, 1],), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-all-positive",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('submit_counts', ([0, 2],), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-sorted-input",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('merge_input', ([2, 1],), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-maximum-items",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('send_batch', ([1, 2, 3, 4, 5],), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-pair-width",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('write_rows', ([[1]],), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-required-keys",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('ingest_record', ({'id': 2},), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-unknown-keys",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('execute_options', ({'timeout': 5, 'retry': 2},), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-duplicate-values",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('register_aliases', ({'a': 1, 'b': 1},), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-exclusive-options",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('fetch_page', ({'cursor': 'a', 'offset': 0},), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-nested-config",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('plan_config', ({'limits': []},), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-interval",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('book_interval', (1, 1), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-page-size",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('list_page', (1, 0), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-offset-alignment",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('read_block', (3, 4), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-dimensions",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('render_tile', (9, 8), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-bounded-window",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('slice_window', (3, 2, 4), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-date-validity",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('store_date', (2023, 2, 29), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-ipv4",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('connect_ipv4', ('256.1.2.3',), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-json-object",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('load_settings', ('[]',), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-hex-bytes",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('load_digest', ('gg',), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-utf8-length",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('store_message', ('\u00e9\u00e9\u00e9\u00e9\u00e9',), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-reserved-names",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('open_account', ('ROOT',), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-newline-header",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('write_header', ('a\\rb',), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-delimiter",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('write_field', ('a,b',), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-version-parts",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('publish_version', ('1.x.3',), 'accepted invalid')\n"
+      }
+    },
+    {
+      "id": "natural-token-alphabet",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nAssertionError: ('encode_token', ('a b',), 'accepted invalid')\n"
+      }
+    }
+  ]
+}

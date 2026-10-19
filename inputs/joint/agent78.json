@@ -1,0 +1,394 @@
+{
+  "probes": [
+    {
+      "answer": "pnpm",
+      "kind": "lookup",
+      "q": "Which package manager do Node services use?"
+    },
+    {
+      "answer": "uv",
+      "kind": "lookup",
+      "q": "Which package manager do Python services use?"
+    },
+    {
+      "answer": "pnpm -r test",
+      "kind": "lookup",
+      "q": "What command runs the full test suite across the repo?"
+    },
+    {
+      "answer": "ruff",
+      "kind": "lookup",
+      "q": "Which Python linter must pass before commit?"
+    },
+    {
+      "answer": "eslint",
+      "kind": "lookup",
+      "q": "Which JavaScript linter must pass before commit?"
+    },
+    {
+      "answer": "infra/secrets/",
+      "kind": "lookup",
+      "q": "Where do secrets live in this repo?"
+    },
+    {
+      "answer": "sops",
+      "kind": "lookup",
+      "q": "How are the secrets in infra/secrets/ encrypted?"
+    },
+    {
+      "answer": "conventional commits",
+      "kind": "style",
+      "q": "What commit-message convention is required?"
+    },
+    {
+      "answer": "no",
+      "kind": "style",
+      "q": "May database migrations be edited after they are merged?"
+    },
+    {
+      "answer": "one",
+      "kind": "style",
+      "q": "How many logical changes belong in one pull request?"
+    },
+    {
+      "answer": "docs/adr/",
+      "kind": "lookup",
+      "q": "Which directory holds architecture decision records?"
+    },
+    {
+      "answer": "report it",
+      "kind": "style",
+      "q": "What should you do if a test fails in a service you did not touch?"
+    },
+    {
+      "answer": "acme-platform",
+      "kind": "lookup",
+      "q": "Which GitHub organisation is the GitHub MCP server scoped to?"
+    },
+    {
+      "answer": "read-only",
+      "kind": "lookup",
+      "q": "Is the postgres MCP server read-only or read-write?"
+    },
+    {
+      "answer": "30 seconds",
+      "kind": "lookup",
+      "q": "How long may a postgres MCP query run?"
+    },
+    {
+      "answer": "production",
+      "kind": "lookup",
+      "q": "Which projects does the sentry MCP server cover?"
+    },
+    {
+      "answer": "no",
+      "kind": "lookup",
+      "q": "Should you force-push when using the GitHub server?"
+    },
+    {
+      "answer": "release-checklist",
+      "kind": "tool_select",
+      "q": "Which skill covers pre-release verification for a service?"
+    },
+    {
+      "answer": "incident-response",
+      "kind": "tool_select",
+      "q": "Which skill guides triage and postmortem for a production incident?"
+    },
+    {
+      "answer": "db-migration",
+      "kind": "tool_select",
+      "q": "Which skill authors and reviews a reversible database migration?"
+    },
+    {
+      "answer": "api-review",
+      "kind": "tool_select",
+      "q": "Which skill reviews API changes for backwards compatibility?"
+    },
+    {
+      "answer": "cost-audit",
+      "kind": "tool_select",
+      "q": "Which skill audits cloud spend for a service?"
+    },
+    {
+      "answer": "onboarding-guide",
+      "kind": "tool_select",
+      "q": "Which skill produces onboarding steps for a new engineer?"
+    },
+    {
+      "answer": "create_issue",
+      "kind": "tool_select",
+      "q": "Which tool creates a new issue in a repository?"
+    },
+    {
+      "answer": "create_pull_request",
+      "kind": "tool_select",
+      "q": "Which tool creates a pull request?"
+    },
+    {
+      "answer": "create_branch",
+      "kind": "tool_select",
+      "q": "Which tool creates a new branch?"
+    },
+    {
+      "answer": "add_issue_comment",
+      "kind": "tool_select",
+      "q": "Which tool adds a comment to an issue?"
+    },
+    {
+      "answer": "fork_repository",
+      "kind": "tool_select",
+      "q": "Which tool forks a repository?"
+    },
+    {
+      "answer": "create_gist",
+      "kind": "tool_select",
+      "q": "Which tool creates a gist?"
+    },
+    {
+      "answer": "actions_list",
+      "kind": "tool_select",
+      "q": "Which tool lists workflow runs for a repository?"
+    },
+    {
+      "answer": "delete_repository",
+      "kind": "tool_select",
+      "q": "Which tool deletes a repository?"
+    },
+    {
+      "answer": "title",
+      "kind": "lookup",
+      "q": "For the tool `create_issue`, name one required argument."
+    },
+    {
+      "answer": "branch",
+      "kind": "lookup",
+      "q": "For the tool `create_branch`, what is the required branch argument?"
+    },
+    {
+      "answer": "owner",
+      "kind": "lookup",
+      "q": "For the tool `fork_repository`, which argument names the target owner?"
+    },
+    {
+      "answer": "head",
+      "kind": "lookup",
+      "q": "For the tool `create_pull_request`, which argument names the source branch?"
+    },
+    {
+      "answer": "Madrid",
+      "kind": "unrelated",
+      "q": "What is the capital of Spain?"
+    },
+    {
+      "answer": "56",
+      "kind": "unrelated",
+      "q": "What is 8 times 7?"
+    },
+    {
+      "answer": "Fe",
+      "kind": "unrelated",
+      "q": "What is the chemical symbol for iron?"
+    },
+    {
+      "answer": "12",
+      "kind": "unrelated",
+      "q": "How many months are in a year?"
+    },
+    {
+      "answer": "no",
+      "kind": "style",
+      "q": "Should the assistant guess a URL it is not sure about?"
+    },
+    {
+      "answer": "no",
+      "kind": "style",
+      "q": "Is the assistant allowed to use emojis without being asked?"
+    },
+    {
+      "answer": "4",
+      "kind": "style",
+      "q": "How long should a normal answer be, in lines?"
+    },
+    {
+      "answer": "github-flavored",
+      "kind": "style",
+      "q": "What markdown flavour should responses use?"
+    },
+    {
+      "answer": "no",
+      "kind": "style",
+      "q": "Should the assistant add explanatory comments to code by default?"
+    },
+    {
+      "answer": "github",
+      "kind": "lookup",
+      "q": "Where should bugs in the opencode tool be reported?"
+    },
+    {
+      "answer": "/help",
+      "kind": "lookup",
+      "q": "Which command shows help for the CLI tool?"
+    },
+    {
+      "answer": "no",
+      "kind": "style",
+      "q": "Should the assistant summarise what it did after finishing a task?"
+    },
+    {
+      "answer": "no",
+      "kind": "style",
+      "q": "Should the assistant commit changes on its own?"
+    },
+    {
+      "answer": "webfetch",
+      "kind": "lookup",
+      "q": "What does the assistant use to answer questions about opencode itself?"
+    },
+    {
+      "answer": "service.yaml",
+      "kind": "lookup",
+      "q": "What file gives each deployable service its configuration?"
+    },
+    {
+      "answer": "infra/.gen/",
+      "kind": "lookup",
+      "q": "Which directory must never have generated files edited by hand?"
+    },
+    {
+      "answer": "no",
+      "kind": "style",
+      "q": "Are architecture decision records editable after they are written?"
+    },
+    {
+      "answer": "400",
+      "kind": "style",
+      "q": "How large should a pull request diff ideally stay, in lines?"
+    },
+    {
+      "answer": "#platform",
+      "kind": "lookup",
+      "q": "Which channel owns cross-service breakage?"
+    },
+    {
+      "answer": "feat",
+      "kind": "style",
+      "q": "What prefix does a feature commit use?"
+    },
+    {
+      "answer": "fix",
+      "kind": "style",
+      "q": "What prefix does a bug-fix commit use?"
+    },
+    {
+      "answer": "chore",
+      "kind": "style",
+      "q": "What prefix does a maintenance commit use?"
+    },
+    {
+      "answer": "no",
+      "kind": "style",
+      "q": "Do Python services use pnpm?"
+    },
+    {
+      "answer": "pnpm --filter",
+      "kind": "lookup",
+      "q": "Which tool runs tests for a single named service?"
+    },
+    {
+      "answer": "infra/",
+      "kind": "lookup",
+      "q": "Name one directory that holds terraform modules."
+    },
+    {
+      "answer": "rollback",
+      "kind": "style",
+      "q": "What kind of change must every database migration support?"
+    },
+    {
+      "answer": "no",
+      "kind": "style",
+      "q": "Can the postgres MCP server run DDL statements?"
+    },
+    {
+      "answer": "explain",
+      "kind": "lookup",
+      "q": "Before a postgres query returning over 1000 rows, what must you run?"
+    },
+    {
+      "answer": "repo",
+      "kind": "lookup",
+      "q": "What scope do GitHub write tools require?"
+    },
+    {
+      "answer": "100",
+      "kind": "lookup",
+      "q": "How many sentry issue lookups are allowed per minute?"
+    },
+    {
+      "answer": "no",
+      "kind": "style",
+      "q": "Should you push directly to a protected branch?"
+    },
+    {
+      "answer": "release-checklist",
+      "kind": "tool_select",
+      "q": "Which skill would you use to plan a staged rollout?"
+    },
+    {
+      "answer": "incident-response",
+      "kind": "tool_select",
+      "q": "Which skill handles postmortems?"
+    },
+    {
+      "answer": "db-migration",
+      "kind": "tool_select",
+      "q": "Which skill covers a backfill strategy?"
+    },
+    {
+      "answer": "api-review",
+      "kind": "tool_select",
+      "q": "Which skill checks gRPC compatibility?"
+    },
+    {
+      "answer": "create_or_update_file",
+      "kind": "tool_select",
+      "q": "Which tool updates a single file's contents in a repository?"
+    },
+    {
+      "answer": "delete_repository",
+      "kind": "tool_select",
+      "q": "Which tool removes a repository?"
+    },
+    {
+      "answer": "actions_get",
+      "kind": "tool_select",
+      "q": "Which tool retrieves details about a specific Actions run?"
+    },
+    {
+      "answer": "assign_copilot_to_issue",
+      "kind": "tool_select",
+      "q": "Which tool assigns a copilot agent to an issue?"
+    },
+    {
+      "answer": "create_repository_ruleset",
+      "kind": "tool_select",
+      "q": "Which tool creates a repository ruleset?"
+    },
+    {
+      "answer": "dismiss_notification",
+      "kind": "tool_select",
+      "q": "Which tool dismisses a notification?"
+    },
+    {
+      "answer": "list_notifications",
+      "kind": "tool_select",
+      "q": "Which tool lists the user's notifications?"
+    },
+    {
+      "answer": "search_code",
+      "kind": "tool_select",
+      "q": "Which tool searches code across repositories?"
+    }
+  ]
+}

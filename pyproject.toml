@@ -1,0 +1,11 @@
+[project]
+name = "qwen-kv-compiler"
+version = "0.1.0"
+description = "Qwen hybrid-model system-prefix KV compilation research"
+license = "MIT-0"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy==2.5.2",
+    "safetensors==0.8.0",
+]

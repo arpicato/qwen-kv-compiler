@@ -1,0 +1,62 @@
+{
+  "config": {
+    "freeze_sha256": "a16431db3b47c3c8d246de9bacd426231a766dbe7bbf9f0cc7813ab994808e3f",
+    "split": "debug",
+    "arms": [
+      "full"
+    ]
+  },
+  "complete": true,
+  "elapsed_s": 79.19659948348999,
+  "rows": {
+    "full": {
+      "knowledge": [
+        {
+          "id": "debug-knowledge",
+          "category": "instruction_recall",
+          "pred": "`ruff check`",
+          "stop": "eos",
+          "tokens": 5,
+          "correct": true
+        }
+      ],
+      "tools": [
+        {
+          "id": "debug-tools",
+          "category": "single_call",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__list_branches\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"sandbox-check\",\"page\":3,\"perPage\":4}}",
+              "stop": "eos",
+              "tokens": 33,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 1
+        }
+      ],
+      "behavior": [
+        {
+          "id": "debug-behavior",
+          "category": "money_approved",
+          "pred": "```python\ndef charge(a, b):\n    return a + b\n```",
+          "stop": "eos",
+          "tokens": 17,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        }
+      ]
+    }
+  }
+}

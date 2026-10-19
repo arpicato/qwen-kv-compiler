@@ -1,0 +1,1194 @@
+{
+  "cap": 32768,
+  "debug": [
+    {
+      "id": "debug-direct",
+      "kind": "debug",
+      "q": "Fetch git tag debug-v1 in acme-platform/sandbox.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "sandbox",
+                "tag": "debug-v1"
+              },
+              "call": "mcp__github__get_tag"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "debug-ask",
+      "kind": "debug",
+      "q": "Fetch a gist. Its ID is not provided.",
+      "steps": [
+        {
+          "ask_any": [
+            "id",
+            "which gist"
+          ],
+          "reply": "Its ID is debug123."
+        },
+        {
+          "accept": [
+            {
+              "arguments": {
+                "gist_id": "debug123"
+              },
+              "call": "mcp__github__get_gist"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "grader": "exact accepted JSON calls/values; no extra fields; all steps; advice keyword rubric",
+  "limits": "40 cases, 6 templated two-step cases; new task format, not 40 independent tool families; no native tool tokens, live services or end-to-end coding",
+  "max_tokens": 256,
+  "protocol": "offline-json-tasks27b-v1",
+  "test": [
+    {
+      "id": "pr-body",
+      "kind": "single_call",
+      "q": "Set PR #42 description in acme-platform/widget to \"Release notes updated\". Leave the title alone.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "arguments": {
+                "body": "Release notes updated",
+                "owner": "acme-platform",
+                "pullNumber": 42,
+                "repo": "widget"
+              },
+              "call": "mcp__github__update_pull_request_body"
+            },
+            {
+              "arguments": {
+                "body": "Release notes updated",
+                "owner": "acme-platform",
+                "pullNumber": 42,
+                "repo": "widget"
+              },
+              "call": "mcp__github__update_pull_request"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "pr-title",
+      "kind": "single_call",
+      "q": "Rename PR #18 in acme-platform/widget to \"Handle empty batches\". Change nothing else.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "arguments": {
+                "owner": "acme-platform",
+                "pullNumber": 18,
+                "repo": "widget",
+                "title": "Handle empty batches"
+              },
+              "call": "mcp__github__update_pull_request_title"
+            },
+            {
+              "arguments": {
+                "owner": "acme-platform",
+                "pullNumber": 18,
+                "repo": "widget",
+                "title": "Handle empty batches"
+              },
+              "call": "mcp__github__update_pull_request"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "pr-ready",
+      "kind": "single_call",
+      "q": "Mark PR #23 in acme-platform/widget ready for review, leaving its content unchanged.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "arguments": {
+                "draft": false,
+                "owner": "acme-platform",
+                "pullNumber": 23,
+                "repo": "widget"
+              },
+              "call": "mcp__github__update_pull_request_draft_state"
+            },
+            {
+              "arguments": {
+                "draft": false,
+                "owner": "acme-platform",
+                "pullNumber": 23,
+                "repo": "widget"
+              },
+              "call": "mcp__github__update_pull_request"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "pr-close",
+      "kind": "single_call",
+      "q": "Close PR #36 in acme-platform/widget without merging it.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "arguments": {
+                "owner": "acme-platform",
+                "pullNumber": 36,
+                "repo": "widget",
+                "state": "closed"
+              },
+              "call": "mcp__github__update_pull_request_state"
+            },
+            {
+              "arguments": {
+                "owner": "acme-platform",
+                "pullNumber": 36,
+                "repo": "widget",
+                "state": "closed"
+              },
+              "call": "mcp__github__update_pull_request"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "pr-create",
+      "kind": "single_call",
+      "q": "Open a draft PR in acme-platform/widget from fix/timeout into release with title \"Bound retries\" and description \"Avoid infinite waits\".",
+      "steps": [
+        {
+          "accept": [
+            {
+              "arguments": {
+                "base": "release",
+                "body": "Avoid infinite waits",
+                "draft": true,
+                "head": "fix/timeout",
+                "owner": "acme-platform",
+                "repo": "widget",
+                "title": "Bound retries"
+              },
+              "call": "mcp__github__create_pull_request"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "branch",
+      "kind": "single_call",
+      "q": "Create branch docs/setup in acme-platform/widget from release, not the default branch.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "arguments": {
+                "branch": "docs/setup",
+                "from_branch": "release",
+                "owner": "acme-platform",
+                "repo": "widget"
+              },
+              "call": "mcp__github__create_branch"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "issue-create",
+      "kind": "single_call",
+      "q": "File an issue in acme-platform/widget titled \"Cache stalls\" with body \"Occurs after reconnect\".",
+      "steps": [
+        {
+          "accept": [
+            {
+              "arguments": {
+                "body": "Occurs after reconnect",
+                "owner": "acme-platform",
+                "repo": "widget",
+                "title": "Cache stalls"
+              },
+              "call": "mcp__github__create_issue"
+            },
+            {
+              "arguments": {
+                "body": "Occurs after reconnect",
+                "method": "create",
+                "owner": "acme-platform",
+                "repo": "widget",
+                "title": "Cache stalls"
+              },
+              "call": "mcp__github__issue_write"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "issue-body",
+      "kind": "single_call",
+      "q": "Replace the description of issue #31 in acme-platform/widget with \"Fixed in nightly\".",
+      "steps": [
+        {
+          "accept": [
+            {
+              "arguments": {
+                "body": "Fixed in nightly",
+                "issue_number": 31,
+                "owner": "acme-platform",
+                "repo": "widget"
+              },
+              "call": "mcp__github__update_issue_body"
+            },
+            {
+              "arguments": {
+                "body": "Fixed in nightly",
+                "issue_number": 31,
+                "method": "update",
+                "owner": "acme-platform",
+                "repo": "widget"
+              },
+              "call": "mcp__github__issue_write"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "issue-title",
+      "kind": "single_call",
+      "q": "Rename issue #57 in acme-platform/widget to \"Reconnect freezes\".",
+      "steps": [
+        {
+          "accept": [
+            {
+              "arguments": {
+                "issue_number": 57,
+                "owner": "acme-platform",
+                "repo": "widget",
+                "title": "Reconnect freezes"
+              },
+              "call": "mcp__github__update_issue_title"
+            },
+            {
+              "arguments": {
+                "issue_number": 57,
+                "method": "update",
+                "owner": "acme-platform",
+                "repo": "widget",
+                "title": "Reconnect freezes"
+              },
+              "call": "mcp__github__issue_write"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "comment-edit",
+      "kind": "single_call",
+      "q": "Edit conversation comment 882 in acme-platform/widget to read \"Retested successfully\". This is not a review comment.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "arguments": {
+                "body": "Retested successfully",
+                "comment_id": 882,
+                "owner": "acme-platform",
+                "repo": "widget"
+              },
+              "call": "mcp__github__update_issue_comment"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "tag",
+      "kind": "single_call",
+      "q": "Retrieve the git tag object for v2.7 in acme-platform/widget, not its release notes.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "widget",
+                "tag": "v2.7"
+              },
+              "call": "mcp__github__get_tag"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "release",
+      "kind": "single_call",
+      "q": "Retrieve the release notes for v2.7 in acme-platform/widget, not the git tag object.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "widget",
+                "tag": "v2.7"
+              },
+              "call": "mcp__github__get_release_by_tag"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "gist",
+      "kind": "single_call",
+      "q": "Fetch the stored content of gist a91bc0. Do not list gists.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "arguments": {
+                "gist_id": "a91bc0"
+              },
+              "call": "mcp__github__get_gist"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "advisory",
+      "kind": "single_call",
+      "q": "Fetch global advisory GHSA-abcd-2345-6789, not repository alerts.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "arguments": {
+                "ghsaId": "GHSA-abcd-2345-6789"
+              },
+              "call": "mcp__github__get_global_security_advisory"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "file",
+      "kind": "single_call",
+      "q": "Read src/queue.py in acme-platform/widget at refs/heads/release.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "arguments": {
+                "owner": "acme-platform",
+                "path": "src/queue.py",
+                "ref": "refs/heads/release",
+                "repo": "widget"
+              },
+              "call": "mcp__github__get_file_contents"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "blame",
+      "kind": "single_call",
+      "q": "Find who last changed lines 20 through 35 of src/queue.py in acme-platform/widget at release.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "arguments": {
+                "end_line": 35,
+                "owner": "acme-platform",
+                "path": "src/queue.py",
+                "ref": "release",
+                "repo": "widget",
+                "start_line": 20
+              },
+              "call": "mcp__github__get_file_blame"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "code-alert",
+      "kind": "single_call",
+      "q": "Inspect code-scanning alert 17 in acme-platform/widget, not a dependency alert.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "arguments": {
+                "alertNumber": 17,
+                "owner": "acme-platform",
+                "repo": "widget"
+              },
+              "call": "mcp__github__get_code_scanning_alert"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "dependency-alert",
+      "kind": "single_call",
+      "q": "Inspect Dependabot alert 17 in acme-platform/widget, not a code-scanning alert.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "arguments": {
+                "alertNumber": 17,
+                "owner": "acme-platform",
+                "repo": "widget"
+              },
+              "call": "mcp__github__get_dependabot_alert"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "team",
+      "kind": "single_call",
+      "q": "List the usernames on team runtime in the acme-platform organization.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "arguments": {
+                "org": "acme-platform",
+                "team_slug": "runtime"
+              },
+              "call": "mcp__github__get_team_members"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "failed-logs",
+      "kind": "single_call",
+      "q": "Return the actual content of only failed-job logs for workflow run 709 in acme-platform/widget. Show the last 25 lines.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "arguments": {
+                "failed_only": true,
+                "owner": "acme-platform",
+                "repo": "widget",
+                "return_content": true,
+                "run_id": 709,
+                "tail_lines": 25
+              },
+              "call": "mcp__github__get_job_logs"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "missing-repo",
+      "kind": "clarification",
+      "q": "Set PR #42 description to \"Ready\" in acme-platform. I have not specified which repository.",
+      "steps": [
+        {
+          "ask_any": [
+            "repo",
+            "repository"
+          ],
+          "reply": "The repository is widget."
+        },
+        {
+          "accept": [
+            {
+              "arguments": {
+                "body": "Ready",
+                "owner": "acme-platform",
+                "pullNumber": 42,
+                "repo": "widget"
+              },
+              "call": "mcp__github__update_pull_request_body"
+            },
+            {
+              "arguments": {
+                "body": "Ready",
+                "owner": "acme-platform",
+                "pullNumber": 42,
+                "repo": "widget"
+              },
+              "call": "mcp__github__update_pull_request"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "missing-pr",
+      "kind": "clarification",
+      "q": "Set a PR description in acme-platform/widget to \"Ready\". I have not provided its number.",
+      "steps": [
+        {
+          "ask_any": [
+            "number",
+            "which pr",
+            "which pull"
+          ],
+          "reply": "PR number 42."
+        },
+        {
+          "accept": [
+            {
+              "arguments": {
+                "body": "Ready",
+                "owner": "acme-platform",
+                "pullNumber": 42,
+                "repo": "widget"
+              },
+              "call": "mcp__github__update_pull_request_body"
+            },
+            {
+              "arguments": {
+                "body": "Ready",
+                "owner": "acme-platform",
+                "pullNumber": 42,
+                "repo": "widget"
+              },
+              "call": "mcp__github__update_pull_request"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "missing-gist",
+      "kind": "clarification",
+      "q": "Fetch a particular gist for me. I have not provided its ID.",
+      "steps": [
+        {
+          "ask_any": [
+            "id",
+            "which gist"
+          ],
+          "reply": "The gist ID is a91bc0."
+        },
+        {
+          "accept": [
+            {
+              "arguments": {
+                "gist_id": "a91bc0"
+              },
+              "call": "mcp__github__get_gist"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "missing-tag",
+      "kind": "clarification",
+      "q": "Fetch a specific git tag in acme-platform/widget. I have not specified which tag.",
+      "steps": [
+        {
+          "ask_any": [
+            "tag",
+            "version"
+          ],
+          "reply": "Use tag v2.7."
+        },
+        {
+          "accept": [
+            {
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "widget",
+                "tag": "v2.7"
+              },
+              "call": "mcp__github__get_tag"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "missing-comment",
+      "kind": "clarification",
+      "q": "Change a conversation comment in acme-platform/widget to \"Retested\". I have not supplied its identifier.",
+      "steps": [
+        {
+          "ask_any": [
+            "id",
+            "which comment"
+          ],
+          "reply": "Its comment ID is 882."
+        },
+        {
+          "accept": [
+            {
+              "arguments": {
+                "body": "Retested",
+                "comment_id": 882,
+                "owner": "acme-platform",
+                "repo": "widget"
+              },
+              "call": "mcp__github__update_issue_comment"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "missing-branch",
+      "kind": "clarification",
+      "q": "Create a branch from release in acme-platform/widget. I have not chosen the new name.",
+      "steps": [
+        {
+          "ask_any": [
+            "name",
+            "branch"
+          ],
+          "reply": "Name it fix/reconnect."
+        },
+        {
+          "accept": [
+            {
+              "arguments": {
+                "branch": "fix/reconnect",
+                "from_branch": "release",
+                "owner": "acme-platform",
+                "repo": "widget"
+              },
+              "call": "mcp__github__create_branch"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "missing-team",
+      "kind": "clarification",
+      "q": "List members of a specific team in acme-platform. I have not said which team.",
+      "steps": [
+        {
+          "ask_any": [
+            "team",
+            "slug"
+          ],
+          "reply": "The team slug is runtime."
+        },
+        {
+          "accept": [
+            {
+              "arguments": {
+                "org": "acme-platform",
+                "team_slug": "runtime"
+              },
+              "call": "mcp__github__get_team_members"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "missing-advisory",
+      "kind": "clarification",
+      "q": "Fetch a particular global security advisory. I have not given you its identifier.",
+      "steps": [
+        {
+          "ask_any": [
+            "id",
+            "ghsa",
+            "which advisory"
+          ],
+          "reply": "Use GHSA-abcd-2345-6789."
+        },
+        {
+          "accept": [
+            {
+              "arguments": {
+                "ghsaId": "GHSA-abcd-2345-6789"
+              },
+              "call": "mcp__github__get_global_security_advisory"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "file-update-0",
+      "kind": "two_step",
+      "q": "Update existing file config/a.txt on branch maintenance in acme-platform/widget to exactly \"enabled\\n\" (enabled followed by a newline), commit message \"chore: enable\". Retrieve its current SHA first.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "arguments": {
+                "owner": "acme-platform",
+                "path": "config/a.txt",
+                "ref": "maintenance",
+                "repo": "widget"
+              },
+              "call": "mcp__github__get_file_contents"
+            },
+            {
+              "arguments": {
+                "owner": "acme-platform",
+                "path": "config/a.txt",
+                "ref": "refs/heads/maintenance",
+                "repo": "widget"
+              },
+              "call": "mcp__github__get_file_contents"
+            }
+          ],
+          "reply": {
+            "content": "disabled\n",
+            "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        },
+        {
+          "accept": [
+            {
+              "arguments": {
+                "branch": "maintenance",
+                "content": "enabled\n",
+                "message": "chore: enable",
+                "owner": "acme-platform",
+                "path": "config/a.txt",
+                "repo": "widget",
+                "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+              },
+              "call": "mcp__github__create_or_update_file"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "file-update-1",
+      "kind": "two_step",
+      "q": "Update existing file config/b.txt on branch maintenance in acme-platform/widget to exactly \"enabled\\n\" (enabled followed by a newline), commit message \"chore: enable\". Retrieve its current SHA first.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "arguments": {
+                "owner": "acme-platform",
+                "path": "config/b.txt",
+                "ref": "maintenance",
+                "repo": "widget"
+              },
+              "call": "mcp__github__get_file_contents"
+            },
+            {
+              "arguments": {
+                "owner": "acme-platform",
+                "path": "config/b.txt",
+                "ref": "refs/heads/maintenance",
+                "repo": "widget"
+              },
+              "call": "mcp__github__get_file_contents"
+            }
+          ],
+          "reply": {
+            "content": "disabled\n",
+            "sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        {
+          "accept": [
+            {
+              "arguments": {
+                "branch": "maintenance",
+                "content": "enabled\n",
+                "message": "chore: enable",
+                "owner": "acme-platform",
+                "path": "config/b.txt",
+                "repo": "widget",
+                "sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+              },
+              "call": "mcp__github__create_or_update_file"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "file-update-2",
+      "kind": "two_step",
+      "q": "Update existing file docs/status.txt on branch maintenance in acme-platform/widget to exactly \"enabled\\n\" (enabled followed by a newline), commit message \"chore: enable\". Retrieve its current SHA first.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "arguments": {
+                "owner": "acme-platform",
+                "path": "docs/status.txt",
+                "ref": "maintenance",
+                "repo": "widget"
+              },
+              "call": "mcp__github__get_file_contents"
+            },
+            {
+              "arguments": {
+                "owner": "acme-platform",
+                "path": "docs/status.txt",
+                "ref": "refs/heads/maintenance",
+                "repo": "widget"
+              },
+              "call": "mcp__github__get_file_contents"
+            }
+          ],
+          "reply": {
+            "content": "disabled\n",
+            "sha": "cccccccccccccccccccccccccccccccccccccccc"
+          }
+        },
+        {
+          "accept": [
+            {
+              "arguments": {
+                "branch": "maintenance",
+                "content": "enabled\n",
+                "message": "chore: enable",
+                "owner": "acme-platform",
+                "path": "docs/status.txt",
+                "repo": "widget",
+                "sha": "cccccccccccccccccccccccccccccccccccccccc"
+              },
+              "call": "mcp__github__create_or_update_file"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "resolve-0",
+      "kind": "two_step",
+      "q": "In acme-platform/widget PR #41, retrieve review threads, then resolve the single thread returned. Do not post a comment.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "arguments": {
+                "method": "get_review_comments",
+                "owner": "acme-platform",
+                "pullNumber": 41,
+                "repo": "widget"
+              },
+              "call": "mcp__github__pull_request_read"
+            }
+          ],
+          "reply": {
+            "threads": [
+              {
+                "id": "PRRT_mock_0",
+                "isResolved": false
+              }
+            ]
+          }
+        },
+        {
+          "accept": [
+            {
+              "arguments": {
+                "threadID": "PRRT_mock_0"
+              },
+              "call": "mcp__github__resolve_review_thread"
+            },
+            {
+              "arguments": {
+                "method": "resolve_thread",
+                "owner": "acme-platform",
+                "pullNumber": 41,
+                "repo": "widget",
+                "threadId": "PRRT_mock_0"
+              },
+              "call": "mcp__github__pull_request_review_write"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "resolve-1",
+      "kind": "two_step",
+      "q": "In acme-platform/widget PR #52, retrieve review threads, then resolve the single thread returned. Do not post a comment.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "arguments": {
+                "method": "get_review_comments",
+                "owner": "acme-platform",
+                "pullNumber": 52,
+                "repo": "widget"
+              },
+              "call": "mcp__github__pull_request_read"
+            }
+          ],
+          "reply": {
+            "threads": [
+              {
+                "id": "PRRT_mock_1",
+                "isResolved": false
+              }
+            ]
+          }
+        },
+        {
+          "accept": [
+            {
+              "arguments": {
+                "threadID": "PRRT_mock_1"
+              },
+              "call": "mcp__github__resolve_review_thread"
+            },
+            {
+              "arguments": {
+                "method": "resolve_thread",
+                "owner": "acme-platform",
+                "pullNumber": 52,
+                "repo": "widget",
+                "threadId": "PRRT_mock_1"
+              },
+              "call": "mcp__github__pull_request_review_write"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "resolve-2",
+      "kind": "two_step",
+      "q": "In acme-platform/widget PR #63, retrieve review threads, then resolve the single thread returned. Do not post a comment.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "arguments": {
+                "method": "get_review_comments",
+                "owner": "acme-platform",
+                "pullNumber": 63,
+                "repo": "widget"
+              },
+              "call": "mcp__github__pull_request_read"
+            }
+          ],
+          "reply": {
+            "threads": [
+              {
+                "id": "PRRT_mock_2",
+                "isResolved": false
+              }
+            ]
+          }
+        },
+        {
+          "accept": [
+            {
+              "arguments": {
+                "threadID": "PRRT_mock_2"
+              },
+              "call": "mcp__github__resolve_review_thread"
+            },
+            {
+              "arguments": {
+                "method": "resolve_thread",
+                "owner": "acme-platform",
+                "pullNumber": 63,
+                "repo": "widget",
+                "threadId": "PRRT_mock_2"
+              },
+              "call": "mcp__github__pull_request_review_write"
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "node",
+      "kind": "policy_advice",
+      "q": "For a Node service here, give the package manager and the exact command to test only service billing. Do not run it.",
+      "steps": [
+        {
+          "answer_all": [
+            [
+              "pnpm"
+            ],
+            [
+              "pnpm --filter billing test"
+            ]
+          ],
+          "forbidden": [
+            "use npm",
+            "yarn "
+          ]
+        }
+      ]
+    },
+    {
+      "id": "python",
+      "kind": "policy_advice",
+      "q": "Which package manager should I use for Python services in this repository? Answer only, do not run anything.",
+      "steps": [
+        {
+          "answer_all": [
+            [
+              "uv"
+            ]
+          ],
+          "forbidden": [
+            "pip ",
+            "poetry"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "generated",
+      "kind": "policy_advice",
+      "q": "I need to change generated Terraform under infra/.gen/. What should you do under the repository rules? Advice only.",
+      "steps": [
+        {
+          "answer_all": [
+            [
+              "not edit",
+              "don't edit",
+              "do not edit",
+              "never edit",
+              "avoid editing"
+            ],
+            [
+              "generated",
+              "infra/.gen/"
+            ]
+          ],
+          "forbidden": []
+        }
+      ]
+    },
+    {
+      "id": "migration",
+      "kind": "policy_advice",
+      "q": "An old database migration needs changing. State the repository constraints before proceeding; do not edit anything.",
+      "steps": [
+        {
+          "answer_all": [
+            [
+              "append-only",
+              "append only",
+              "new migration"
+            ],
+            [
+              "reversible",
+              "rollback"
+            ]
+          ],
+          "forbidden": []
+        }
+      ]
+    },
+    {
+      "id": "unrelated-failure",
+      "kind": "policy_advice",
+      "q": "Tests failed in an untouched service. Under our repository rules, who owns this and should you quietly fix it? Advice only.",
+      "steps": [
+        {
+          "answer_all": [
+            [
+              "platform"
+            ],
+            [
+              "report",
+              "escalat"
+            ],
+            [
+              "not",
+              "don't",
+              "never",
+              "no,"
+            ]
+          ],
+          "forbidden": []
+        }
+      ]
+    },
+    {
+      "id": "lint",
+      "kind": "policy_advice",
+      "q": "Before committing a change spanning Node and Python services, which two lint commands are required? Advice only.",
+      "steps": [
+        {
+          "answer_all": [
+            [
+              "pnpm lint"
+            ],
+            [
+              "ruff check"
+            ]
+          ],
+          "forbidden": []
+        }
+      ]
+    }
+  ],
+  "transport": "\nThis is an offline simulation. Do not contact services. For your next action return one JSON object only:\n{\"call\":\"fully_qualified_tool_name\",\"arguments\":{...}} to use a connected tool;\n{\"ask\":\"question\"} if required information is missing;\n{\"answer\":\"text\"} for advice without a tool call.\nUse the connected tools and repository rules from your system instructions. Do not invent missing identifiers. Stop after the next action."
+}

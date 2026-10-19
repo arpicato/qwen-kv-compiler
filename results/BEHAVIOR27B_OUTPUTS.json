@@ -1,0 +1,1910 @@
+{
+  "config": {
+    "frozen_sha256": "79f700faffec42edc600bf55bc29243d2cc47b9cbb1bff203551157de859a399",
+    "split": "test",
+    "arms": [
+      "full",
+      "none",
+      "position8k",
+      "purpose4k",
+      "position4k"
+    ]
+  },
+  "complete": true,
+  "elapsed_s": 180.25638842582703,
+  "rows": {
+    "full": [
+      {
+        "id": "advice-vs-edit-0",
+        "pair": "advice-vs-edit",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"1dc1b7\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "advice-vs-edit-1",
+        "pair": "advice-vs-edit",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"d08575\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "generated-vs-source-0",
+        "pair": "generated-vs-source",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"cb3499\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "generated-vs-source-1",
+        "pair": "generated-vs-source",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"b59efb\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "migration-existing-vs-new-0",
+        "pair": "migration-existing-vs-new",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"d0a436\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "migration-existing-vs-new-1",
+        "pair": "migration-existing-vs-new",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"a6b862\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "unrelated-vs-owned-failure-0",
+        "pair": "unrelated-vs-owned-failure",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"70095d\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "unrelated-vs-owned-failure-1",
+        "pair": "unrelated-vs-owned-failure",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"720867\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "commit-permission-0",
+        "pair": "commit-permission",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"e39fec\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 8
+          }
+        ]
+      },
+      {
+        "id": "commit-permission-1",
+        "pair": "commit-permission",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"cb3b51\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "force-vs-normal-push-0",
+        "pair": "force-vs-normal-push",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"4a57fc\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "force-vs-normal-push-1",
+        "pair": "force-vs-normal-push",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"b26173\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "protected-vs-feature-0",
+        "pair": "protected-vs-feature",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"4f7fd8\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "protected-vs-feature-1",
+        "pair": "protected-vs-feature",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"0d50ca\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "ddl-vs-read-0",
+        "pair": "ddl-vs-read",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"322ef7\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "ddl-vs-read-1",
+        "pair": "ddl-vs-read",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"c971ad\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "explain-threshold-0",
+        "pair": "explain-threshold",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"847916\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "explain-threshold-1",
+        "pair": "explain-threshold",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"7c804d\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "comments-permission-0",
+        "pair": "comments-permission",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"6d1474\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "comments-permission-1",
+        "pair": "comments-permission",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"b30b9b\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "dependency-inspection-0",
+        "pair": "dependency-inspection",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"a32d56\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "dependency-inspection-1",
+        "pair": "dependency-inspection",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"dba2f1\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 8
+          }
+        ]
+      },
+      {
+        "id": "lint-gate-0",
+        "pair": "lint-gate",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"e74a26\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "lint-gate-1",
+        "pair": "lint-gate",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"43c9c5\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "run-lint-then-commit",
+        "pair": "lint-gate",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"e74a26\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          },
+          {
+            "pred": "{\"action\":\"21921b\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "explain-then-query",
+        "pair": "explain-threshold",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"847916\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          },
+          {
+            "pred": "{\"action\":\"24c646\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      }
+    ],
+    "none": [
+      {
+        "id": "advice-vs-edit-0",
+        "pair": "advice-vs-edit",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"action\":\"1f9521\"}",
+            "ok": false,
+            "reason": "wrong behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "advice-vs-edit-1",
+        "pair": "advice-vs-edit",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\": \"d08575\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 11
+          }
+        ]
+      },
+      {
+        "id": "generated-vs-source-0",
+        "pair": "generated-vs-source",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"cb3499\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "generated-vs-source-1",
+        "pair": "generated-vs-source",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"b59efb\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "migration-existing-vs-new-0",
+        "pair": "migration-existing-vs-new",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"d0a436\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "migration-existing-vs-new-1",
+        "pair": "migration-existing-vs-new",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"a6b862\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "unrelated-vs-owned-failure-0",
+        "pair": "unrelated-vs-owned-failure",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\": \"70095d\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 11
+          }
+        ]
+      },
+      {
+        "id": "unrelated-vs-owned-failure-1",
+        "pair": "unrelated-vs-owned-failure",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"720867\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "commit-permission-0",
+        "pair": "commit-permission",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"e39fec\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 8
+          }
+        ]
+      },
+      {
+        "id": "commit-permission-1",
+        "pair": "commit-permission",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"cb3b51\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "force-vs-normal-push-0",
+        "pair": "force-vs-normal-push",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"4a57fc\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "force-vs-normal-push-1",
+        "pair": "force-vs-normal-push",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"b26173\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "protected-vs-feature-0",
+        "pair": "protected-vs-feature",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"4f7fd8\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "protected-vs-feature-1",
+        "pair": "protected-vs-feature",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"0d50ca\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "ddl-vs-read-0",
+        "pair": "ddl-vs-read",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"action\":\"6489a3\"}",
+            "ok": false,
+            "reason": "wrong behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "ddl-vs-read-1",
+        "pair": "ddl-vs-read",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"c971ad\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "explain-threshold-0",
+        "pair": "explain-threshold",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"action\":\"46976e\"}",
+            "ok": false,
+            "reason": "wrong behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "explain-threshold-1",
+        "pair": "explain-threshold",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"39ee0c\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "comments-permission-0",
+        "pair": "comments-permission",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"6d1474\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "comments-permission-1",
+        "pair": "comments-permission",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"b30b9b\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "dependency-inspection-0",
+        "pair": "dependency-inspection",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"a32d56\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "dependency-inspection-1",
+        "pair": "dependency-inspection",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"dba2f1\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 8
+          }
+        ]
+      },
+      {
+        "id": "lint-gate-0",
+        "pair": "lint-gate",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"e74a26\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "lint-gate-1",
+        "pair": "lint-gate",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"43c9c5\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "run-lint-then-commit",
+        "pair": "lint-gate",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"e74a26\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          },
+          {
+            "pred": "{\"action\":\"21921b\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "explain-then-query",
+        "pair": "explain-threshold",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"action\":\"46976e\"}",
+            "ok": false,
+            "reason": "wrong behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      }
+    ],
+    "position8k": [
+      {
+        "id": "advice-vs-edit-0",
+        "pair": "advice-vs-edit",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"1dc1b7\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "advice-vs-edit-1",
+        "pair": "advice-vs-edit",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"d08575\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "generated-vs-source-0",
+        "pair": "generated-vs-source",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"cb3499\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "generated-vs-source-1",
+        "pair": "generated-vs-source",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"b59efb\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "migration-existing-vs-new-0",
+        "pair": "migration-existing-vs-new",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"d0a436\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "migration-existing-vs-new-1",
+        "pair": "migration-existing-vs-new",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"a6b862\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "unrelated-vs-owned-failure-0",
+        "pair": "unrelated-vs-owned-failure",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"70095d\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "unrelated-vs-owned-failure-1",
+        "pair": "unrelated-vs-owned-failure",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"720867\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "commit-permission-0",
+        "pair": "commit-permission",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"e39fec\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 8
+          }
+        ]
+      },
+      {
+        "id": "commit-permission-1",
+        "pair": "commit-permission",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"cb3b51\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "force-vs-normal-push-0",
+        "pair": "force-vs-normal-push",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"4a57fc\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "force-vs-normal-push-1",
+        "pair": "force-vs-normal-push",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"b26173\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "protected-vs-feature-0",
+        "pair": "protected-vs-feature",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"4f7fd8\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "protected-vs-feature-1",
+        "pair": "protected-vs-feature",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"0d50ca\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "ddl-vs-read-0",
+        "pair": "ddl-vs-read",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"322ef7\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "ddl-vs-read-1",
+        "pair": "ddl-vs-read",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"c971ad\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "explain-threshold-0",
+        "pair": "explain-threshold",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"847916\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "explain-threshold-1",
+        "pair": "explain-threshold",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"7c804d\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "comments-permission-0",
+        "pair": "comments-permission",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"6d1474\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "comments-permission-1",
+        "pair": "comments-permission",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"b30b9b\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "dependency-inspection-0",
+        "pair": "dependency-inspection",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"a32d56\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "dependency-inspection-1",
+        "pair": "dependency-inspection",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"dba2f1\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 8
+          }
+        ]
+      },
+      {
+        "id": "lint-gate-0",
+        "pair": "lint-gate",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"e74a26\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "lint-gate-1",
+        "pair": "lint-gate",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"43c9c5\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "run-lint-then-commit",
+        "pair": "lint-gate",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"e74a26\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          },
+          {
+            "pred": "{\"action\":\"21921b\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "explain-then-query",
+        "pair": "explain-threshold",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"847916\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          },
+          {
+            "pred": "{\"action\":\"24c646\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      }
+    ],
+    "purpose4k": [
+      {
+        "id": "advice-vs-edit-0",
+        "pair": "advice-vs-edit",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"1dc1b7\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "advice-vs-edit-1",
+        "pair": "advice-vs-edit",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"d08575\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "generated-vs-source-0",
+        "pair": "generated-vs-source",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"cb3499\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "generated-vs-source-1",
+        "pair": "generated-vs-source",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"b59efb\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "migration-existing-vs-new-0",
+        "pair": "migration-existing-vs-new",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"d0a436\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "migration-existing-vs-new-1",
+        "pair": "migration-existing-vs-new",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"a6b862\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "unrelated-vs-owned-failure-0",
+        "pair": "unrelated-vs-owned-failure",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"70095d\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "unrelated-vs-owned-failure-1",
+        "pair": "unrelated-vs-owned-failure",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"720867\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "commit-permission-0",
+        "pair": "commit-permission",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"e39fec\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 8
+          }
+        ]
+      },
+      {
+        "id": "commit-permission-1",
+        "pair": "commit-permission",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"cb3b51\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "force-vs-normal-push-0",
+        "pair": "force-vs-normal-push",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"4a57fc\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "force-vs-normal-push-1",
+        "pair": "force-vs-normal-push",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"b26173\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "protected-vs-feature-0",
+        "pair": "protected-vs-feature",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"4f7fd8\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "protected-vs-feature-1",
+        "pair": "protected-vs-feature",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"0d50ca\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "ddl-vs-read-0",
+        "pair": "ddl-vs-read",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"322ef7\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "ddl-vs-read-1",
+        "pair": "ddl-vs-read",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"c971ad\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "explain-threshold-0",
+        "pair": "explain-threshold",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"847916\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "explain-threshold-1",
+        "pair": "explain-threshold",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"7c804d\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "comments-permission-0",
+        "pair": "comments-permission",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"6d1474\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "comments-permission-1",
+        "pair": "comments-permission",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"b30b9b\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "dependency-inspection-0",
+        "pair": "dependency-inspection",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"a32d56\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "dependency-inspection-1",
+        "pair": "dependency-inspection",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"dba2f1\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 8
+          }
+        ]
+      },
+      {
+        "id": "lint-gate-0",
+        "pair": "lint-gate",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"e74a26\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "lint-gate-1",
+        "pair": "lint-gate",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"43c9c5\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "run-lint-then-commit",
+        "pair": "lint-gate",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"e74a26\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          },
+          {
+            "pred": "{\"action\":\"21921b\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "explain-then-query",
+        "pair": "explain-threshold",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"action\":\"847916\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          },
+          {
+            "pred": "{\"action\":\"5209d9\"}",
+            "ok": false,
+            "reason": "wrong behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      }
+    ],
+    "position4k": [
+      {
+        "id": "advice-vs-edit-0",
+        "pair": "advice-vs-edit",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"1dc1b7\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "advice-vs-edit-1",
+        "pair": "advice-vs-edit",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"d08575\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "generated-vs-source-0",
+        "pair": "generated-vs-source",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"cb3499\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "generated-vs-source-1",
+        "pair": "generated-vs-source",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"b59efb\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "migration-existing-vs-new-0",
+        "pair": "migration-existing-vs-new",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"d0a436\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "migration-existing-vs-new-1",
+        "pair": "migration-existing-vs-new",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"a6b862\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "unrelated-vs-owned-failure-0",
+        "pair": "unrelated-vs-owned-failure",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"70095d\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "unrelated-vs-owned-failure-1",
+        "pair": "unrelated-vs-owned-failure",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"720867\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "commit-permission-0",
+        "pair": "commit-permission",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"e39fec\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 8
+          }
+        ]
+      },
+      {
+        "id": "commit-permission-1",
+        "pair": "commit-permission",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"cb3b51\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "force-vs-normal-push-0",
+        "pair": "force-vs-normal-push",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"4a57fc\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "force-vs-normal-push-1",
+        "pair": "force-vs-normal-push",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"b26173\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "protected-vs-feature-0",
+        "pair": "protected-vs-feature",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"4f7fd8\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "protected-vs-feature-1",
+        "pair": "protected-vs-feature",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"0d50ca\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "ddl-vs-read-0",
+        "pair": "ddl-vs-read",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"322ef7\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "ddl-vs-read-1",
+        "pair": "ddl-vs-read",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"c971ad\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 9
+          }
+        ]
+      },
+      {
+        "id": "explain-threshold-0",
+        "pair": "explain-threshold",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"847916\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "explain-threshold-1",
+        "pair": "explain-threshold",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"7c804d\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "comments-permission-0",
+        "pair": "comments-permission",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"6d1474\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "comments-permission-1",
+        "pair": "comments-permission",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"b30b9b\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "dependency-inspection-0",
+        "pair": "dependency-inspection",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"a32d56\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "dependency-inspection-1",
+        "pair": "dependency-inspection",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"dba2f1\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 8
+          }
+        ]
+      },
+      {
+        "id": "lint-gate-0",
+        "pair": "lint-gate",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"e74a26\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "lint-gate-1",
+        "pair": "lint-gate",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"43c9c5\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "run-lint-then-commit",
+        "pair": "lint-gate",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"e74a26\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          },
+          {
+            "pred": "{\"action\":\"21921b\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      },
+      {
+        "id": "explain-then-query",
+        "pair": "explain-threshold",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"847916\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          },
+          {
+            "pred": "{\"action\":\"24c646\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      }
+    ]
+  }
+}

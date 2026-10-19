@@ -1,0 +1,29 @@
+{
+  "config": {
+    "frozen_sha256": "79f700faffec42edc600bf55bc29243d2cc47b9cbb1bff203551157de859a399",
+    "split": "debug",
+    "arms": [
+      "full"
+    ]
+  },
+  "complete": true,
+  "elapsed_s": 76.03695464134216,
+  "rows": {
+    "full": [
+      {
+        "id": "debug-read",
+        "pair": "debug",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"action\":\"9c2586\"}",
+            "ok": true,
+            "reason": "required behavior",
+            "stop": "eos",
+            "tokens": 10
+          }
+        ]
+      }
+    ]
+  }
+}

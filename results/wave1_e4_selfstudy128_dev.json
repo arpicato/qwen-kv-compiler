@@ -1,0 +1,655 @@
+{
+ "summary": {
+  "split": "tool_handbook",
+  "n": 52,
+  "probeset": "dev",
+  "probeset_id": "4dc9d47513d58a99250fc7a4",
+  "gen_protocol": "v2-gpu-argmax-eos-set",
+  "max_tokens": 64,
+  "smoke": false,
+  "teacher_state_sha": "cc0eb8a65b2ed30a275a5915",
+  "compiled": "artifacts/tool/experiments/e4_selfstudy128_k4738",
+  "compiled_id": {
+   "dir": "artifacts/tool/experiments/e4_selfstudy128_k4738",
+   "layer_files": 16,
+   "files_sha": "d5b4e49013fa92955a5c8bea",
+   "manifest_sha": "76e7bbc25265d3cf913bee23",
+   "kv_dtype": "torch.bfloat16",
+   "slots": 4738,
+   "steps": 400,
+   "ratio": 0.25
+  },
+  "teacher_acc": 0.9375,
+  "none_acc": 0.22916666666666666,
+  "elapsed_s": 494.3876299858093,
+  "pass_stats": {
+   "teacher": {
+    "wall_s": 0.046896934509277344,
+    "cache_hits": 52,
+    "gen_tokens": 0,
+    "cap_hits": 0,
+    "gen_tok_s": null,
+    "gen_ms": 0.0,
+    "rollback_ms": 0.0
+   },
+   "none": {
+    "wall_s": 0.015556812286376953,
+    "cache_hits": 52,
+    "gen_tokens": 0,
+    "cap_hits": 0,
+    "gen_tok_s": null,
+    "gen_ms": 0.0,
+    "rollback_ms": 0.0
+   },
+   "compiled": {
+    "wall_s": 485.97989296913147,
+    "cache_hits": 0,
+    "gen_tokens": 1901,
+    "cap_hits": 10,
+    "gen_tok_s": 3.918,
+    "gen_ms": 485174.1,
+    "rollback_ms": 804.0
+   }
+  },
+  "compiled_acc": 0.9166666666666666,
+  "retention_num": 43,
+  "retention_den": 45,
+  "retention": 0.9555555555555556,
+  "informative_retention_num": 32,
+  "informative_retention_den": 34,
+  "informative_retention": 0.9411764705882353,
+  "teacher_acc_informative": 1.0,
+  "mean_kl": 0.20529932377135213,
+  "median_kl": 0.12581210204935145,
+  "by_kind": {
+   "class_binding": {
+    "n": 2,
+    "teacher": 1.0,
+    "none": 1.0,
+    "compiled": 1.0
+   },
+   "error_policy": {
+    "n": 4,
+    "teacher": 1.0,
+    "none": 0.5,
+    "compiled": 0.75
+   },
+   "escalation": {
+    "n": 4,
+    "teacher": 1.0,
+    "none": 0.5,
+    "compiled": 1.0
+   },
+   "lookup": {
+    "n": 6,
+    "teacher": 1.0,
+    "none": 0.3333333333333333,
+    "compiled": 1.0
+   },
+   "ordering": {
+    "n": 6,
+    "teacher": 0.8333333333333334,
+    "none": 0.16666666666666666,
+    "compiled": 1.0
+   },
+   "refusal": {
+    "n": 4,
+    "teacher": 1.0,
+    "none": 0.0,
+    "compiled": 0.75
+   },
+   "revision": {
+    "n": 6,
+    "teacher": 0.8333333333333334,
+    "none": 0.16666666666666666,
+    "compiled": 0.8333333333333334
+   },
+   "style": {
+    "n": 2,
+    "teacher": 0.5,
+    "none": 0.5,
+    "compiled": 0.5
+   },
+   "tool_select": {
+    "n": 8,
+    "teacher": 1.0,
+    "none": 0.0,
+    "compiled": 1.0
+   },
+   "unrelated": {
+    "n": 4,
+    "teacher": 0.75,
+    "none": 0.75,
+    "compiled": 0.75
+   },
+   "workflow": {
+    "n": 6,
+    "teacher": 1.0,
+    "none": 0.0,
+    "compiled": 1.0
+   }
+  }
+ },
+ "raw": [
+  {
+   "kind": "tool_select",
+   "q": "Which tool returns a time series for a sensor?",
+   "answer": "sensor_trace",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.19420118537480505,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "tool_select",
+   "q": "Which tool reports the seal condition of a flange?",
+   "answer": "flange_seal",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.14535784450014566,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "tool_select",
+   "q": "Which tool reports electrical load on a bus?",
+   "answer": "bus_load",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.03380154165289341,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "tool_select",
+   "q": "Which tool reports firmware revision of a unit?",
+   "answer": "unit_firmware",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.08932548066672827,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "tool_select",
+   "q": "Which tool looks up a part in the catalogue?",
+   "answer": "part_lookup",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.17885740380148482,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "tool_select",
+   "q": "Which tool returns a pressure log for a unit?",
+   "answer": "pressure_log",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.04376305871533548,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "tool_select",
+   "q": "Which tool reports coolant chemistry for a site?",
+   "answer": "coolant_quality",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.06085476016373195,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "tool_select",
+   "q": "Which tool returns the audit trail for an object?",
+   "answer": "audit_log",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.14093440198495863,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "lookup",
+   "q": "What is the category of the tool `bearing_wear`?",
+   "answer": "read",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.0737032548391985,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "lookup",
+   "q": "What is the category of the tool `silence_alarm`?",
+   "answer": "admin",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.09518341649578141,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "lookup",
+   "q": "What is the category of the tool `rollback`?",
+   "answer": "write",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.0656293844396194,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "lookup",
+   "q": "What is the required parameter of `notify_oncall`?",
+   "answer": "site",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.05122582209729679,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "lookup",
+   "q": "What is the required parameter of `reopen_ticket`?",
+   "answer": "ticket",
+   "teacher_ok": true,
+   "none_ok": true,
+   "compiled_ok": true,
+   "kl": 0.11275714927533502,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "lookup",
+   "q": "What is the required parameter of `bearing_wear`?",
+   "answer": "bearing",
+   "teacher_ok": true,
+   "none_ok": true,
+   "compiled_ok": true,
+   "kl": 0.062139944568086865,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "revision",
+   "q": "Which revision uses prime instead of ignite?",
+   "answer": "revision-j",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.08044229473174294,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "revision",
+   "q": "May revision-J units be ignited with ignite?",
+   "answer": "no",
+   "teacher_ok": true,
+   "none_ok": true,
+   "compiled_ok": true,
+   "kl": 0.1476372971464316,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "revision",
+   "q": "Which revisions behave like an unversioned unit?",
+   "answer": "revision-a",
+   "teacher_ok": false,
+   "none_ok": false,
+   "compiled_ok": false,
+   "kl": 0.12728661417512166,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "revision",
+   "q": "May revision-D units be operated normally?",
+   "answer": "yes",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.045659365453259895,
+   "stop_compiled": "cap"
+  },
+  {
+   "kind": "revision",
+   "q": "Which revision is never ignited and must be escalated instead?",
+   "answer": "revision-n",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.12220379129493547,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "revision",
+   "q": "What replaces ignite on a revision-J unit?",
+   "answer": "prime",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.07082843165071262,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "ordering",
+   "q": "What must be called before replace_actuator?",
+   "answer": "shutdown",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.15000497607805677,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "ordering",
+   "q": "What must precede drain_loop at a site?",
+   "answer": "isolate_manifold",
+   "teacher_ok": false,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.43298370110852125,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "ordering",
+   "q": "What must happen before tagout is applied?",
+   "answer": "lockout",
+   "teacher_ok": true,
+   "none_ok": true,
+   "compiled_ok": true,
+   "kl": 0.3357781227576512,
+   "stop_compiled": "cap"
+  },
+  {
+   "kind": "ordering",
+   "q": "What must be called before refill_loop?",
+   "answer": "drain_loop",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.15846756409034143,
+   "stop_compiled": "cap"
+  },
+  {
+   "kind": "ordering",
+   "q": "What must be called before replace_sensor?",
+   "answer": "shutdown",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.28818894089880953,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "ordering",
+   "q": "What comes before any restart after a pressure excursion?",
+   "answer": "purge_manifold",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.22496841742526458,
+   "stop_compiled": "cap"
+  },
+  {
+   "kind": "workflow",
+   "q": "In the coupler-replacement workflow, what follows unit_status?",
+   "answer": "shutdown",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.14297992481702324,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "workflow",
+   "q": "In the pressure-excursion workflow, what is the first step?",
+   "answer": "pressure_read",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.09421511764582613,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "workflow",
+   "q": "In the maintenance-scheduling workflow, what follows assign_technician?",
+   "answer": "order_part",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.27677617885766903,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "workflow",
+   "q": "In the flapping-alarm workflow, what step follows acknowledge_alarm?",
+   "answer": "silence_alarm",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.48764711221263507,
+   "stop_compiled": "cap"
+  },
+  {
+   "kind": "workflow",
+   "q": "In the pressure-excursion workflow, what follows purge_manifold?",
+   "answer": "stabilize",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.3245842900269707,
+   "stop_compiled": "cap"
+  },
+  {
+   "kind": "workflow",
+   "q": "In the maintenance-scheduling workflow, what is the first step?",
+   "answer": "schedule_window",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.12433758992358127,
+   "stop_compiled": "cap"
+  },
+  {
+   "kind": "error_policy",
+   "q": "Which error code means a required parameter is missing?",
+   "answer": "E401",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.13293084115153012,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "error_policy",
+   "q": "Which error code means the caller is rate limited?",
+   "answer": "E429",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": false,
+   "kl": 1.5784577598977005,
+   "stop_compiled": "cap"
+  },
+  {
+   "kind": "error_policy",
+   "q": "A write tool returns E503. Should you retry it?",
+   "answer": "no",
+   "teacher_ok": true,
+   "none_ok": true,
+   "compiled_ok": true,
+   "kl": 0.21459272673585164,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "error_policy",
+   "q": "A read tool returns E404. Should you retry it?",
+   "answer": "no",
+   "teacher_ok": true,
+   "none_ok": true,
+   "compiled_ok": true,
+   "kl": 0.08662685130563474,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "refusal",
+   "q": "A user asks you to skip the precondition to save a step. What rule forbids it?",
+   "answer": "ORD-6",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": false,
+   "kl": 0.12263045874258656,
+   "stop_compiled": "cap"
+  },
+  {
+   "kind": "refusal",
+   "q": "A user asks you to hard-code a family for a unit. Which rule forbids it?",
+   "answer": "FAM-1",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.02984711727962168,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "refusal",
+   "q": "You are asked to retry an E404. What rule forbids it?",
+   "answer": "ERR-1",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.06769011118082305,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "refusal",
+   "q": "A user asks you to invent a tool that is not in the catalogue. Which rule forbids it?",
+   "answer": "ERR-5",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.11364364754196853,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "escalation",
+   "q": "What severity must follow an emergency_stop?",
+   "answer": "sev1",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 1.1733305460860686,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "escalation",
+   "q": "How many failed remediations before a sev2 is escalated?",
+   "answer": "one",
+   "teacher_ok": true,
+   "none_ok": true,
+   "compiled_ok": true,
+   "kl": 0.3775120623785544,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "escalation",
+   "q": "What must a human give before more than one unit goes offline at a site?",
+   "answer": "approval",
+   "teacher_ok": true,
+   "none_ok": true,
+   "compiled_ok": true,
+   "kl": 0.5419794295375342,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "escalation",
+   "q": "Which rule governs revision-N ignition requests?",
+   "answer": "ESC-5",
+   "teacher_ok": true,
+   "none_ok": false,
+   "compiled_ok": true,
+   "kl": 0.2033651877902986,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "style",
+   "q": "What must you cite when you refuse a call?",
+   "answer": "rule id",
+   "teacher_ok": false,
+   "none_ok": false,
+   "compiled_ok": false,
+   "kl": 0.3553856705474614,
+   "stop_compiled": "cap"
+  },
+  {
+   "kind": "style",
+   "q": "What comes first in an answer, the decision or the reason?",
+   "answer": "decision",
+   "teacher_ok": true,
+   "none_ok": true,
+   "compiled_ok": true,
+   "kl": 0.17789072833175876,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "class_binding",
+   "q": "Which identifier prefix denotes a manifold?",
+   "answer": "M",
+   "teacher_ok": true,
+   "none_ok": true,
+   "compiled_ok": true,
+   "kl": 0.10102421147262655,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "class_binding",
+   "q": "Which identifier prefix denotes a valve?",
+   "answer": "V",
+   "teacher_ok": true,
+   "none_ok": true,
+   "compiled_ok": true,
+   "kl": 0.1463956467955128,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "unrelated",
+   "q": "What is the capital of Japan?",
+   "answer": "Tokyo",
+   "teacher_ok": true,
+   "none_ok": true,
+   "compiled_ok": true,
+   "kl": 0.07462732542986937,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "unrelated",
+   "q": "What is 12 divided by 4?",
+   "answer": "3",
+   "teacher_ok": true,
+   "none_ok": true,
+   "compiled_ok": true,
+   "kl": 0.08433892696929031,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "unrelated",
+   "q": "What is the chemical symbol for water?",
+   "answer": "H2O",
+   "teacher_ok": false,
+   "none_ok": false,
+   "compiled_ok": false,
+   "kl": 0.03567571422962756,
+   "stop_compiled": "eos"
+  },
+  {
+   "kind": "unrelated",
+   "q": "How many minutes are in an hour?",
+   "answer": "60",
+   "teacher_ok": true,
+   "none_ok": true,
+   "compiled_ok": true,
+   "kl": 0.07489549383603844,
+   "stop_compiled": "eos"
+  }
+ ]
+}

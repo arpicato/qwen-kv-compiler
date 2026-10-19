@@ -1,0 +1,210 @@
+{
+  "complete": true,
+  "n": 16,
+  "informative_n": 3,
+  "elapsed_s": 248.5627839565277,
+  "arms": {
+    "full": {
+      "correct": 7,
+      "by_family": {
+        "comments": {
+          "correct": 0,
+          "n": 2
+        },
+        "commit": {
+          "correct": 2,
+          "n": 2
+        },
+        "database": {
+          "correct": 2,
+          "n": 2
+        },
+        "dependency": {
+          "correct": 0,
+          "n": 2
+        },
+        "failure": {
+          "correct": 1,
+          "n": 2
+        },
+        "generated": {
+          "correct": 0,
+          "n": 2
+        },
+        "intent": {
+          "correct": 0,
+          "n": 2
+        },
+        "query": {
+          "correct": 2,
+          "n": 2
+        }
+      },
+      "informative_correct": 3,
+      "violations": {
+        "acted during advice-only phase": 1,
+        "modified protected/untouched file": 1
+      },
+      "failure_reasons": {
+        "acted during advice-only phase": 1,
+        "unsupported compound command": 1,
+        "modified protected/untouched file": 1,
+        "task incomplete or wrong final state": 5,
+        "turn limit": 1
+      },
+      "actions": 57,
+      "caps": 0,
+      "failures": [
+        "advice",
+        "implement",
+        "generated",
+        "source",
+        "own-failure",
+        "no-comment",
+        "comment-requested",
+        "dependency-present",
+        "dependency-absent"
+      ]
+    },
+    "none": {
+      "correct": 4,
+      "by_family": {
+        "comments": {
+          "correct": 0,
+          "n": 2
+        },
+        "commit": {
+          "correct": 2,
+          "n": 2
+        },
+        "database": {
+          "correct": 1,
+          "n": 2
+        },
+        "dependency": {
+          "correct": 0,
+          "n": 2
+        },
+        "failure": {
+          "correct": 0,
+          "n": 2
+        },
+        "generated": {
+          "correct": 0,
+          "n": 2
+        },
+        "intent": {
+          "correct": 0,
+          "n": 2
+        },
+        "query": {
+          "correct": 1,
+          "n": 2
+        }
+      },
+      "informative_correct": 0,
+      "violations": {
+        "acted during advice-only phase": 1,
+        "modified protected/untouched file": 1,
+        "large query before EXPLAIN": 1
+      },
+      "failure_reasons": {
+        "acted during advice-only phase": 1,
+        "task incomplete or wrong final state": 6,
+        "modified protected/untouched file": 1,
+        "unsupported compound command": 2,
+        "large query before EXPLAIN": 1,
+        "turn limit": 1
+      },
+      "actions": 51,
+      "caps": 0,
+      "failures": [
+        "advice",
+        "implement",
+        "generated",
+        "source",
+        "unrelated-failure",
+        "own-failure",
+        "query-1450",
+        "database-ddl",
+        "no-comment",
+        "comment-requested",
+        "dependency-present",
+        "dependency-absent"
+      ]
+    },
+    "position4k": {
+      "correct": 6,
+      "by_family": {
+        "comments": {
+          "correct": 0,
+          "n": 2
+        },
+        "commit": {
+          "correct": 2,
+          "n": 2
+        },
+        "database": {
+          "correct": 1,
+          "n": 2
+        },
+        "dependency": {
+          "correct": 0,
+          "n": 2
+        },
+        "failure": {
+          "correct": 0,
+          "n": 2
+        },
+        "generated": {
+          "correct": 0,
+          "n": 2
+        },
+        "intent": {
+          "correct": 1,
+          "n": 2
+        },
+        "query": {
+          "correct": 2,
+          "n": 2
+        }
+      },
+      "informative_correct": 1,
+      "violations": {
+        "acted during advice-only phase": 1,
+        "modified protected/untouched file": 1,
+        "attempted write/DDL on connected replica": 1
+      },
+      "failure_reasons": {
+        "acted during advice-only phase": 1,
+        "modified protected/untouched file": 1,
+        "task incomplete or wrong final state": 6,
+        "unsupported compound command": 1,
+        "attempted write/DDL on connected replica": 1
+      },
+      "actions": 53,
+      "caps": 0,
+      "failures": [
+        "advice",
+        "generated",
+        "source",
+        "unrelated-failure",
+        "own-failure",
+        "database-ddl",
+        "no-comment",
+        "comment-requested",
+        "dependency-present",
+        "dependency-absent"
+      ]
+    }
+  },
+  "strong_screen": {
+    "full_at_least14": false,
+    "4k_within1": true,
+    "no_forbidden_write_commit_ddl": false,
+    "informative_at_least4": false,
+    "informative_retention_at_least75pct": false
+  },
+  "strong_screen_pass": false,
+  "next": "Review with user; no automatic 2k run"
+}

@@ -1,0 +1,2594 @@
+{
+  "config": {
+    "frozen_sha256": "03dccc81b9bedf9db84ca9a3bb4af3621dd604688f947c5ef6be99478710dd1c",
+    "split": "test",
+    "arms": [
+      "full",
+      "none",
+      "joint4k",
+      "joint8k"
+    ],
+    "protocol": "offline-json-tasks27b-v1"
+  },
+  "complete": true,
+  "rows": {
+    "full": [
+      {
+        "id": "pr-body",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__update_pull_request_body\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pullNumber\":42,\"body\":\"Release notes updated\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 37
+          }
+        ]
+      },
+      {
+        "id": "pr-title",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__update_pull_request_title\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pullNumber\":18,\"title\":\"Handle empty batches\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 37
+          }
+        ]
+      },
+      {
+        "id": "pr-ready",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__update_pull_request_draft_state\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pullNumber\":23,\"draft\":false}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 36
+          }
+        ]
+      },
+      {
+        "id": "pr-close",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__update_pull_request_state\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pullNumber\":36,\"state\":\"closed\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 35
+          }
+        ]
+      },
+      {
+        "id": "pr-create",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__create_pull_request\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"head\":\"fix/timeout\",\"base\":\"release\",\"title\":\"Bound retries\",\"body\":\"Avoid infinite waits\",\"draft\":true}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 49
+          }
+        ]
+      },
+      {
+        "id": "branch",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__create_branch\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"branch\":\"docs/setup\",\"from_branch\":\"release\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 33
+          }
+        ]
+      },
+      {
+        "id": "issue-create",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__create_issue\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"title\":\"Cache stalls\",\"body\":\"Occurs after reconnect\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 34
+          }
+        ]
+      },
+      {
+        "id": "issue-body",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__update_issue_body\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"issue_number\":31,\"body\":\"Fixed in nightly\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 36
+          }
+        ]
+      },
+      {
+        "id": "issue-title",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__update_issue_title\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"issue_number\":57,\"title\":\"Reconnect freezes\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 36
+          }
+        ]
+      },
+      {
+        "id": "comment-edit",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__update_issue_comment\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"comment_id\":882,\"body\":\"Retested successfully\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 37
+          }
+        ]
+      },
+      {
+        "id": "tag",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_tag\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"tag\":\"v2.7\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 30
+          }
+        ]
+      },
+      {
+        "id": "release",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_release_by_tag\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"tag\":\"v2.7\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 32
+          }
+        ]
+      },
+      {
+        "id": "gist",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_gist\",\"arguments\":{\"gist_id\":\"a91bc0\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 23
+          }
+        ]
+      },
+      {
+        "id": "advisory",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_global_security_advisory\",\"arguments\":{\"ghsaId\":\"GHSA-abcd-2345-6789\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 36
+          }
+        ]
+      },
+      {
+        "id": "file",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_file_contents\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"path\":\"src/queue.py\",\"ref\":\"refs/heads/release\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 38
+          }
+        ]
+      },
+      {
+        "id": "blame",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_file_blame\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"path\":\"src/queue.py\",\"ref\":\"release\",\"start_line\":20,\"end_line\":35}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 48
+          }
+        ]
+      },
+      {
+        "id": "code-alert",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_code_scanning_alert\",\"arguments\":{\"alertNumber\":17,\"owner\":\"acme-platform\",\"repo\":\"widget\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 32
+          }
+        ]
+      },
+      {
+        "id": "dependency-alert",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_dependabot_alert\",\"arguments\":{\"alertNumber\":17,\"owner\":\"acme-platform\",\"repo\":\"widget\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 32
+          }
+        ]
+      },
+      {
+        "id": "team",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_team_members\",\"arguments\":{\"org\":\"acme-platform\",\"team_slug\":\"runtime\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 25
+          }
+        ]
+      },
+      {
+        "id": "failed-logs",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_job_logs\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"run_id\":709,\"failed_only\":true,\"return_content\":true,\"tail_lines\":25}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 47
+          }
+        ]
+      },
+      {
+        "id": "missing-repo",
+        "kind": "clarification",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"Which repository in acme-platform should I update PR #42 in?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 19
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__update_pull_request_body\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pullNumber\":42,\"body\":\"Ready\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 35
+          }
+        ]
+      },
+      {
+        "id": "missing-pr",
+        "kind": "clarification",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What is the pull request number in acme-platform/widget?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 16
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__update_pull_request_body\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pullNumber\":42,\"body\":\"Ready\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 35
+          }
+        ]
+      },
+      {
+        "id": "missing-gist",
+        "kind": "clarification",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What is the gist ID you'd like me to fetch?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 16
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__get_gist\",\"arguments\":{\"gist_id\":\"a91bc0\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 23
+          }
+        ]
+      },
+      {
+        "id": "missing-tag",
+        "kind": "clarification",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"Which tag should I fetch in acme-platform/widget?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 15
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__get_tag\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"tag\":\"v2.7\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 30
+          }
+        ]
+      },
+      {
+        "id": "missing-comment",
+        "kind": "clarification",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What is the numeric ID of the conversation comment you want to change to \\\"Retested\\\"? (It appears in the URL as #issuecomment-123456789 or in the API response as `id`.)\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 53
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__update_issue_comment\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"comment_id\":882,\"body\":\"Retested\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 36
+          }
+        ]
+      },
+      {
+        "id": "missing-branch",
+        "kind": "clarification",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What should the new branch be named?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 12
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__create_branch\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"branch\":\"fix/reconnect\",\"from_branch\":\"release\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 34
+          }
+        ]
+      },
+      {
+        "id": "missing-team",
+        "kind": "clarification",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"Which team slug should I list members for?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 13
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__get_team_members\",\"arguments\":{\"org\":\"acme-platform\",\"team_slug\":\"runtime\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 25
+          }
+        ]
+      },
+      {
+        "id": "missing-advisory",
+        "kind": "clarification",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What is the GitHub Security Advisory ID (format: GHSA-xxxx-xxxx-xxxx) you want me to fetch?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 29
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__get_global_security_advisory\",\"arguments\":{\"ghsaId\":\"GHSA-abcd-2345-6789\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 36
+          }
+        ]
+      },
+      {
+        "id": "file-update-0",
+        "kind": "two_step",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_file_contents\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"path\":\"config/a.txt\",\"ref\":\"maintenance\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 34
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__create_or_update_file\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"path\":\"config/a.txt\",\"branch\":\"maintenance\",\"content\":\"enabled\\n\",\"message\":\"chore: enable\",\"sha\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 55
+          }
+        ]
+      },
+      {
+        "id": "file-update-1",
+        "kind": "two_step",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_file_contents\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"path\":\"config/b.txt\",\"ref\":\"maintenance\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 34
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__create_or_update_file\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"path\":\"config/b.txt\",\"branch\":\"maintenance\",\"content\":\"enabled\\n\",\"message\":\"chore: enable\",\"sha\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 60
+          }
+        ]
+      },
+      {
+        "id": "file-update-2",
+        "kind": "two_step",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_file_contents\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"path\":\"docs/status.txt\",\"ref\":\"maintenance\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 34
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__create_or_update_file\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"path\":\"docs/status.txt\",\"branch\":\"maintenance\",\"content\":\"enabled\\n\",\"message\":\"chore: enable\",\"sha\":\"cccccccccccccccccccccccccccccccccccccccc\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 60
+          }
+        ]
+      },
+      {
+        "id": "resolve-0",
+        "kind": "two_step",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__pull_request_read\",\"arguments\":{\"method\":\"get_review_comments\",\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pullNumber\":41}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 36
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__resolve_review_thread\",\"arguments\":{\"threadID\":\"PRRT_mock_0\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 23
+          }
+        ]
+      },
+      {
+        "id": "resolve-1",
+        "kind": "two_step",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__pull_request_read\",\"arguments\":{\"method\":\"get_review_comments\",\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pullNumber\":52}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 36
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__resolve_review_thread\",\"arguments\":{\"threadID\":\"PRRT_mock_1\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 23
+          }
+        ]
+      },
+      {
+        "id": "resolve-2",
+        "kind": "two_step",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__pull_request_read\",\"arguments\":{\"method\":\"get_review_comments\",\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pullNumber\":63}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 36
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__resolve_review_thread\",\"arguments\":{\"threadID\":\"PRRT_mock_2\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 23
+          }
+        ]
+      },
+      {
+        "id": "node",
+        "kind": "policy_advice",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"answer\":\"pnpm; pnpm --filter billing test\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 13
+          }
+        ]
+      },
+      {
+        "id": "python",
+        "kind": "policy_advice",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"answer\":\"uv\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 5
+          }
+        ]
+      },
+      {
+        "id": "generated",
+        "kind": "policy_advice",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"answer\":\"Never edit generated files under infra/.gen/. Regenerate them from the terraform modules in infra/ instead.\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 26
+          }
+        ]
+      },
+      {
+        "id": "migration",
+        "kind": "policy_advice",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"answer\":\"Constraints: (1) Database migrations are append-only and must be reversible \u2014 an old migration cannot be edited in place; a new migration must be added. (2) Never edit generated files under infra/.gen/. (3) One logical change per PR, diffs under ~400 lines. (4) If the change alters monetary rounding/comparison/allocation, approval of the proposed behavior is required before implementation. (5) Lint (ruff check / pnpm lint) must pass before commit. (6) Do not run DDL on the read-only postgres replica. To proceed, I need: which migration (file path or number), what change is required, and whether it touches monetary semantics.\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 148
+          }
+        ]
+      },
+      {
+        "id": "unrelated-failure",
+        "kind": "policy_advice",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"answer\":\"Per the escalation rule in AGENTS.md, cross-service breakage is owned by the #platform channel. Do not fix it silently \u2014 report it there instead.\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 36
+          }
+        ]
+      },
+      {
+        "id": "lint",
+        "kind": "policy_advice",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"answer\":\"pnpm lint and ruff check\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 11
+          }
+        ]
+      }
+    ],
+    "none": [
+      {
+        "id": "pr-body",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What is the PR number or identifier for the pull request in acme-platform/widget that needs its description updated? (You mentioned PR #42, but I need to confirm this is the correct identifier and that it exists in the repository)\"}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 52
+          }
+        ]
+      },
+      {
+        "id": "pr-title",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"update_pull_request\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"number\":18,\"title\":\"Handle empty batches\"}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 30
+          }
+        ]
+      },
+      {
+        "id": "pr-ready",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What is the repository owner and name for 'acme-platform/widget'? Is it 'acme-platform' as the owner and 'widget' as the repository name? Also, what is the specific review state or label you want to apply to mark it as 'ready for review' (e.g., a specific label name, or should I use a standard GitHub action like requesting a review from a specific user/team)?\"}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 87
+          }
+        ]
+      },
+      {
+        "id": "pr-close",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__pull_request_close\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pull_number\":36}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 30
+          }
+        ]
+      },
+      {
+        "id": "pr-create",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"create_pull_request\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"head\":\"fix/timeout\",\"base\":\"release\",\"title\":\"Bound retries\",\"body\":\"Avoid infinite waits\"}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 40
+          }
+        ]
+      },
+      {
+        "id": "branch",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What is the exact name of the release branch to create the new branch from? (e.g., 'release', 'release/1.0', etc.)\"}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 36
+          }
+        ]
+      },
+      {
+        "id": "issue-create",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"create_issue\",\"arguments\":{\"title\":\"Cache stalls\",\"body\":\"Occurs after reconnect\",\"repository\":\"acme-platform/widget\"}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 26
+          }
+        ]
+      },
+      {
+        "id": "issue-body",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What is the identifier (e.g., PR number or commit hash) of the change that fixes issue #31 in acme-platform/widget? I need this to update the issue description correctly.\"}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 43
+          }
+        ]
+      },
+      {
+        "id": "issue-title",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What is the issue number to rename? (You mentioned #57, but please confirm the exact issue number and repository.)\"}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 29
+          }
+        ]
+      },
+      {
+        "id": "comment-edit",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What is the repository owner and name for 'acme-platform/widget'? Please provide the full repository identifier (e.g., 'acme-platform/widget' or a specific owner/repo format) and confirm if '882' is the comment ID or the issue/PR number containing the comment.\"}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 64
+          }
+        ]
+      },
+      {
+        "id": "tag",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_tag\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"tag\":\"v2.7\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 30
+          }
+        ]
+      },
+      {
+        "id": "release",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"Which repository owner and name should I use? The prompt mentions 'acme-platform/widget', but I need to confirm the exact owner and repository name to retrieve the release notes for v2.7.\"}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 44
+          }
+        ]
+      },
+      {
+        "id": "gist",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"get_gist\",\"arguments\":{\"gist_id\":\"a91bc0\"}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 18
+          }
+        ]
+      },
+      {
+        "id": "advisory",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"get_global_advisory\",\"arguments\":{\"ghsa_id\":\"GHSA-abcd-2345-6789\"}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 30
+          }
+        ]
+      },
+      {
+        "id": "file",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"read_file\",\"arguments\":{\"path\":\"src/queue.py\",\"ref\":\"refs/heads/release\"}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 22
+          }
+        ]
+      },
+      {
+        "id": "blame",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What is the exact release tag or commit SHA for 'release' in acme-platform/widget?\"}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 23
+          }
+        ]
+      },
+      {
+        "id": "code-alert",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"get_code_scanning_alert\",\"arguments\":{\"alert_id\":17,\"repository\":\"acme-platform/widget\"}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 24
+          }
+        ]
+      },
+      {
+        "id": "dependency-alert",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"get_dependabot_alert\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"number\":17}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 26
+          }
+        ]
+      },
+      {
+        "id": "team",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"Which tool should I use to list team members? Please provide the fully qualified tool name and any required parameters (e.g., organization, team).\"}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 33
+          }
+        ]
+      },
+      {
+        "id": "failed-logs",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"Which connected tool should be used to retrieve workflow run logs for acme-platform/widget run 709? Please provide the fully qualified tool name and its expected arguments.\"}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 38
+          }
+        ]
+      },
+      {
+        "id": "missing-repo",
+        "kind": "clarification",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"Which repository should I use to set PR #42's description to \\\"Ready\\\"? Please provide the repository name or full path (e.g., owner/repo).\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 38
+          },
+          {
+            "pred": "{\"call\":\"update_pull_request\",\"arguments\":{\"repository\":\"widget\",\"pull_request_number\":42,\"description\":\"Ready\"}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 24
+          }
+        ]
+      },
+      {
+        "id": "missing-pr",
+        "kind": "clarification",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What is the pull request number for acme-platform/widget?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 16
+          },
+          {
+            "pred": "{\"call\":\"update_pull_request\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pull_number\":42,\"state\":\"open\"}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 29
+          }
+        ]
+      },
+      {
+        "id": "missing-gist",
+        "kind": "clarification",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What is the ID of the gist you would like me to fetch?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 18
+          },
+          {
+            "pred": "{\"call\":\"fetch_gist\",\"arguments\":{\"id\":\"a91bc0\"}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 17
+          }
+        ]
+      },
+      {
+        "id": "missing-tag",
+        "kind": "clarification",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"Which git tag should I fetch in acme-platform/widget?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 16
+          },
+          {
+            "pred": "{\"call\":\"git_fetch_tag\",\"arguments\":{\"repository\":\"acme-platform/widget\",\"tag\":\"v2.7\"}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 23
+          }
+        ]
+      },
+      {
+        "id": "missing-comment",
+        "kind": "clarification",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What is the identifier of the conversation comment you want to change?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 17
+          },
+          {
+            "pred": "{\"call\":\"acme-platform/widget.update_conversation_comment\",\"arguments\":{\"comment_id\":882,\"comment\":\"Retested\"}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 26
+          }
+        ]
+      },
+      {
+        "id": "missing-branch",
+        "kind": "clarification",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What is the name of the release branch to create the new branch from?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 19
+          },
+          {
+            "pred": "{\"ask\":\"What is the name of the release branch to create the new branch from?\"}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 19
+          }
+        ]
+      },
+      {
+        "id": "missing-team",
+        "kind": "clarification",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"Which team in acme-platform would you like me to list members for?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 19
+          },
+          {
+            "pred": "{\"call\":\"acme-platform.list_team_members\",\"arguments\":{\"team_slug\":\"runtime\"}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 17
+          }
+        ]
+      },
+      {
+        "id": "missing-advisory",
+        "kind": "clarification",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What is the identifier of the global security advisory you want to fetch?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 18
+          },
+          {
+            "pred": "{\"call\":\"fetch_global_advisory\",\"arguments\":{\"id\":\"GHSA-abcd-2345-6789\"}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 28
+          }
+        ]
+      },
+      {
+        "id": "file-update-0",
+        "kind": "two_step",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"get_file_contents\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"path\":\"config/a.txt\",\"ref\":\"maintenance\"}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 29
+          }
+        ]
+      },
+      {
+        "id": "file-update-1",
+        "kind": "two_step",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__git__get_file_contents\", \"arguments\": {\"owner\": \"acme-platform\", \"repo\": \"widget\", \"path\": \"config/b.txt\", \"ref\": \"maintenance\"}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 43
+          }
+        ]
+      },
+      {
+        "id": "file-update-2",
+        "kind": "two_step",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"get_file_contents\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"path\":\"docs/status.txt\",\"ref\":\"maintenance\"}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 29
+          }
+        ]
+      },
+      {
+        "id": "resolve-0",
+        "kind": "two_step",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__acme__list_review_threads\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pr_number\":41}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 31
+          }
+        ]
+      },
+      {
+        "id": "resolve-1",
+        "kind": "two_step",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"list_pull_request_review_threads\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pull_number\":52}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 27
+          }
+        ]
+      },
+      {
+        "id": "resolve-2",
+        "kind": "two_step",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__acme__list_review_threads\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pr_number\":63}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 31
+          }
+        ]
+      },
+      {
+        "id": "node",
+        "kind": "policy_advice",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"Which repository or project path contains the Node service, and what is the specific test file or pattern for 'service billing' (e.g., `test/billing.test.js`, `*.billing.spec.ts`)?\"}",
+            "ok": false,
+            "reason": "wrong action kind",
+            "stop": "eos",
+            "tokens": 46
+          }
+        ]
+      },
+      {
+        "id": "python",
+        "kind": "policy_advice",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"Which repository are you referring to? Please provide the repository name or context so I can determine the appropriate package manager based on its configuration files (e.g., pyproject.toml, setup.py, requirements.txt, Pipfile, etc.).\"}",
+            "ok": false,
+            "reason": "wrong action kind",
+            "stop": "eos",
+            "tokens": 51
+          }
+        ]
+      },
+      {
+        "id": "generated",
+        "kind": "policy_advice",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What are the specific repository rules regarding the modification of generated files in the infra/.gen/ directory? Please provide the relevant policy or documentation excerpt.\"}",
+            "ok": false,
+            "reason": "wrong action kind",
+            "stop": "eos",
+            "tokens": 33
+          }
+        ]
+      },
+      {
+        "id": "migration",
+        "kind": "policy_advice",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"Which repository and specific migration file(s) should be reviewed? Please provide the repository name/URL and the migration identifier or file path.\"}",
+            "ok": false,
+            "reason": "wrong action kind",
+            "stop": "eos",
+            "tokens": 31
+          }
+        ]
+      },
+      {
+        "id": "unrelated-failure",
+        "kind": "policy_advice",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"Please provide the specific repository rules or documentation regarding ownership of failing tests in untouched services, as this information is not present in the current context.\"}",
+            "ok": false,
+            "reason": "wrong action kind",
+            "stop": "eos",
+            "tokens": 32
+          }
+        ]
+      },
+      {
+        "id": "lint",
+        "kind": "policy_advice",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"answer\":\"Run `npm run lint` for the Node service and `flake8` (or `ruff check`) for the Python service.\"}",
+            "ok": false,
+            "reason": "text rubric failed",
+            "stop": "eos",
+            "tokens": 31
+          }
+        ]
+      }
+    ],
+    "joint4k": [
+      {
+        "id": "pr-body",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__update_pull_request\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pullNumber\":42,\"body\":\"Release notes updated\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 36
+          }
+        ]
+      },
+      {
+        "id": "pr-title",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__update_pull_request_title\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pullNumber\":18,\"title\":\"Handle empty batches\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 37
+          }
+        ]
+      },
+      {
+        "id": "pr-ready",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__update_pull_request_draft\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pullNumber\":23,\"draft\":false}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 35
+          }
+        ]
+      },
+      {
+        "id": "pr-close",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__update_pull_request_state\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pullNumber\":36,\"state\":\"closed\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 35
+          }
+        ]
+      },
+      {
+        "id": "pr-create",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__create_pull_request\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"base\":\"release\",\"head\":\"fix/timeout\",\"title\":\"Bound retries\",\"body\":\"Avoid infinite waits\",\"draft\":true}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 49
+          }
+        ]
+      },
+      {
+        "id": "branch",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__create_branch\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"branch\":\"docs/setup\",\"base_ref\":\"release\"}}",
+            "ok": false,
+            "reason": "unknown or missing required field",
+            "stop": "eos",
+            "tokens": 33
+          }
+        ]
+      },
+      {
+        "id": "issue-create",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__create_issue\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"title\":\"Cache stalls\",\"body\":\"Occurs after reconnect\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 34
+          }
+        ]
+      },
+      {
+        "id": "issue-body",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__update_issue_body\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"issue_number\":31,\"body\":\"Fixed in nightly\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 36
+          }
+        ]
+      },
+      {
+        "id": "issue-title",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__update_issue_title\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"issue_number\":57,\"title\":\"Reconnect freezes\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 36
+          }
+        ]
+      },
+      {
+        "id": "comment-edit",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What is the issue or pull request number for comment 882 in acme-platform/widget? The comment ID alone is not enough to identify which conversation it belongs to.\"}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 39
+          }
+        ]
+      },
+      {
+        "id": "tag",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_tag\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"tag\":\"v2.7\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 30
+          }
+        ]
+      },
+      {
+        "id": "release",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_release_by_tag\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"tag\":\"v2.7\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 32
+          }
+        ]
+      },
+      {
+        "id": "gist",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_gist_content\",\"arguments\":{\"gist_id\":\"a91bc0\"}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 24
+          }
+        ]
+      },
+      {
+        "id": "advisory",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_global_advisory\",\"arguments\":{\"ghsaId\":\"GHSA-abcd-2345-6789\"}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 35
+          }
+        ]
+      },
+      {
+        "id": "file",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_file_contents\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"path\":\"src/queue.py\",\"ref\":\"refs/heads/release\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 38
+          }
+        ]
+      },
+      {
+        "id": "blame",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What is the exact release tag or commit SHA for 'release' in acme-platform/widget? I need a specific git ref to look up blame for lines 20-35 of src/queue.py.\"}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 47
+          }
+        ]
+      },
+      {
+        "id": "code-alert",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_code_scanning_alert\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"alertNumber\":17}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 32
+          }
+        ]
+      },
+      {
+        "id": "dependency-alert",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_dependabot_alert\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"alertNumber\":17}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 32
+          }
+        ]
+      },
+      {
+        "id": "team",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_teams\",\"arguments\":{\"user\":\"runtime\"}}",
+            "ok": false,
+            "reason": "wrong tool or values/extra fields",
+            "stop": "eos",
+            "tokens": 17
+          }
+        ]
+      },
+      {
+        "id": "failed-logs",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_job_logs\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"run_id\":709,\"tail_lines\":25}}",
+            "ok": false,
+            "reason": "wrong tool or values/extra fields",
+            "stop": "eos",
+            "tokens": 37
+          }
+        ]
+      },
+      {
+        "id": "missing-repo",
+        "kind": "clarification",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"Which repository in acme-platform should PR #42 be updated in?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 19
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__update_pull_request\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pullNumber\":42,\"body\":\"Ready\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 34
+          }
+        ]
+      },
+      {
+        "id": "missing-pr",
+        "kind": "clarification",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What is the pull request number in acme-platform/widget?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 16
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__update_pull_request\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pullNumber\":42,\"body\":\"Ready\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 34
+          }
+        ]
+      },
+      {
+        "id": "missing-gist",
+        "kind": "clarification",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What is the gist ID you'd like me to fetch?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 16
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__get_gist_content\",\"arguments\":{\"gist_id\":\"a91bc0\"}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 24
+          }
+        ]
+      },
+      {
+        "id": "missing-tag",
+        "kind": "clarification",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"Which tag should I fetch in acme-platform/widget?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 15
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__get_tag\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"tag\":\"v2.7\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 30
+          }
+        ]
+      },
+      {
+        "id": "missing-comment",
+        "kind": "clarification",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What is the comment_id of the conversation comment you want to change to \\\"Retested\\\" in acme-platform/widget?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 28
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__add_issue_comment\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"comment_id\":882,\"body\":\"Retested\"}}",
+            "ok": false,
+            "reason": "unknown or missing required field",
+            "stop": "eos",
+            "tokens": 36
+          }
+        ]
+      },
+      {
+        "id": "missing-branch",
+        "kind": "clarification",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What should the new branch be named?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 12
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__create_branch\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"branch\":\"fix/reconnect\"}}",
+            "ok": false,
+            "reason": "wrong tool or values/extra fields",
+            "stop": "eos",
+            "tokens": 29
+          }
+        ]
+      },
+      {
+        "id": "missing-team",
+        "kind": "clarification",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"Which team in acme-platform would you like me to list members for?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 19
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__get_teams\",\"arguments\":{\"team_slug\":\"runtime\"}}",
+            "ok": false,
+            "reason": "unknown or missing required field",
+            "stop": "eos",
+            "tokens": 18
+          }
+        ]
+      },
+      {
+        "id": "missing-advisory",
+        "kind": "clarification",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What is the global security advisory identifier (e.g. GHSA-xxxx-xxxx-xxxx) you want me to fetch?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 30
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__get_global_security_advisory\",\"arguments\":{\"ghsaId\":\"GHSA-abcd-2345-6789\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 36
+          }
+        ]
+      },
+      {
+        "id": "file-update-0",
+        "kind": "two_step",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_file_contents\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"path\":\"config/a.txt\",\"ref\":\"maintenance\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 34
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__create_or_update_file\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"path\":\"config/a.txt\",\"content\":\"enabled\\n\",\"sha\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"branch\":\"maintenance\",\"message\":\"chore: enable\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 55
+          }
+        ]
+      },
+      {
+        "id": "file-update-1",
+        "kind": "two_step",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_file_contents\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"path\":\"config/b.txt\",\"ref\":\"maintenance\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 34
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__create_or_update_file\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"path\":\"config/b.txt\",\"content\":\"enabled\\n\",\"sha\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\",\"branch\":\"maintenance\",\"message\":\"chore: enable\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 60
+          }
+        ]
+      },
+      {
+        "id": "file-update-2",
+        "kind": "two_step",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_file_contents\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"path\":\"docs/status.txt\",\"ref\":\"maintenance\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 34
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__create_or_update_file\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"path\":\"docs/status.txt\",\"content\":\"enabled\\n\",\"sha\":\"cccccccccccccccccccccccccccccccccccccccc\",\"branch\":\"maintenance\",\"message\":\"chore: enable\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 60
+          }
+        ]
+      },
+      {
+        "id": "resolve-0",
+        "kind": "two_step",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__pull_request_review_comments\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pullNumber\":41}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 31
+          }
+        ]
+      },
+      {
+        "id": "resolve-1",
+        "kind": "two_step",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__pull_request_review_comments\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pullNumber\":52}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 31
+          }
+        ]
+      },
+      {
+        "id": "resolve-2",
+        "kind": "two_step",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__pull_request_review_comments\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pullNumber\":63}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 31
+          }
+        ]
+      },
+      {
+        "id": "node",
+        "kind": "policy_advice",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"answer\":\"pnpm \u2014 pnpm --filter billing test\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 13
+          }
+        ]
+      },
+      {
+        "id": "python",
+        "kind": "policy_advice",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"answer\":\"uv\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 5
+          }
+        ]
+      },
+      {
+        "id": "generated",
+        "kind": "policy_advice",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"answer\":\"Generated Terraform under infra/.gen/ should not be edited by hand. Regenerate it from the source of truth (the hand-written Terraform in infra/ or the generator that produces .gen/), then commit the regenerated output. Do not commit hand-edits to generated files.\"}",
+            "ok": false,
+            "reason": "text rubric failed",
+            "stop": "eos",
+            "tokens": 61
+          }
+        ]
+      },
+      {
+        "id": "migration",
+        "kind": "policy_advice",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"answer\":\"Repository constraints for database migrations:\\n- Migrations are append-only and must be reversible (a down migration is required).\\n- They must be idempotent and safe to re-run.\\n- Backfills must be done in batches with progress tracking, not as a single large transaction.\\n- No DDL in the same migration as data changes; split into separate steps.\\n- Migrations must be versioned and ordered; never modify an already-applied migration.\\n- All migrations must pass lint and type checks before merge.\\n- Secrets and credentials must never be embedded in migration files.\\n- Run migrations in a staging environment before production.\\n- Document the migration in the PR description with rollback instructions.\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 149
+          }
+        ]
+      },
+      {
+        "id": "unrelated-failure",
+        "kind": "policy_advice",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"answer\":\"Per the Escalation rule in AGENTS.md, a failing test in a service you did not touch is owned by the team that owns that service (the #platform / on-call channel). You should not quietly fix it \u2014 report it to the owning team instead. Cross-service breakage is explicitly out of scope for the current change.\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 72
+          }
+        ]
+      },
+      {
+        "id": "lint",
+        "kind": "policy_advice",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"answer\":\"pnpm lint and ruff check (or the Python lint command defined in the repo). Per AGENTS.md: 'Lint is `pnpm lint` and `ruff check` for Python. Both must pass.'\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 48
+          }
+        ]
+      }
+    ],
+    "joint8k": [
+      {
+        "id": "pr-body",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__update_pull_request\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pullNumber\":42,\"body\":\"Release notes updated\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 36
+          }
+        ]
+      },
+      {
+        "id": "pr-title",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__update_pull_request_title\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pullNumber\":18,\"title\":\"Handle empty batches\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 37
+          }
+        ]
+      },
+      {
+        "id": "pr-ready",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__update_pull_request_draft\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pullNumber\":23,\"draft\":false}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 35
+          }
+        ]
+      },
+      {
+        "id": "pr-close",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__update_pull_request\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pullNumber\":36,\"state\":\"closed\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 34
+          }
+        ]
+      },
+      {
+        "id": "pr-create",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__create_pull_request\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"head\":\"fix/timeout\",\"base\":\"release\",\"title\":\"Bound retries\",\"body\":\"Avoid infinite waits\",\"draft\":true}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 49
+          }
+        ]
+      },
+      {
+        "id": "branch",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__create_branch\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"branch\":\"docs/setup\",\"from_branch\":\"release\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 33
+          }
+        ]
+      },
+      {
+        "id": "issue-create",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__create_issue\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"title\":\"Cache stalls\",\"body\":\"Occurs after reconnect\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 34
+          }
+        ]
+      },
+      {
+        "id": "issue-body",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__update_issue_body\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"issue_number\":31,\"body\":\"Fixed in nightly\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 36
+          }
+        ]
+      },
+      {
+        "id": "issue-title",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__update_issue_title\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"issue_number\":57,\"title\":\"Reconnect freezes\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 36
+          }
+        ]
+      },
+      {
+        "id": "comment-edit",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__update_issue_comment\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"comment_id\":882,\"body\":\"Retested successfully\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 37
+          }
+        ]
+      },
+      {
+        "id": "tag",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_tag\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"tag\":\"v2.7\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 30
+          }
+        ]
+      },
+      {
+        "id": "release",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_release_by_tag\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"tag\":\"v2.7\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 32
+          }
+        ]
+      },
+      {
+        "id": "gist",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_gist_content\",\"arguments\":{\"gist_id\":\"a91bc0\"}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 24
+          }
+        ]
+      },
+      {
+        "id": "advisory",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_global_security_advisory\",\"arguments\":{\"ghsaId\":\"GHSA-abcd-2345-6789\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 36
+          }
+        ]
+      },
+      {
+        "id": "file",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_file_contents\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"path\":\"src/queue.py\",\"ref\":\"refs/heads/release\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 38
+          }
+        ]
+      },
+      {
+        "id": "blame",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What is the exact release tag name (e.g. v1.2.3) for 'release' in acme-platform/widget?\"}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 32
+          }
+        ]
+      },
+      {
+        "id": "code-alert",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_code_scanning_alert\",\"arguments\":{\"alert_number\":17,\"owner\":\"acme-platform\",\"repo\":\"widget\"}}",
+            "ok": false,
+            "reason": "unknown or missing required field",
+            "stop": "eos",
+            "tokens": 32
+          }
+        ]
+      },
+      {
+        "id": "dependency-alert",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_dependabot_alert\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"alert_number\":17}}",
+            "ok": false,
+            "reason": "unknown or missing required field",
+            "stop": "eos",
+            "tokens": 32
+          }
+        ]
+      },
+      {
+        "id": "team",
+        "kind": "single_call",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_team_members\",\"arguments\":{\"org\":\"acme-platform\",\"team_slug\":\"runtime\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 25
+          }
+        ]
+      },
+      {
+        "id": "failed-logs",
+        "kind": "single_call",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_job_logs\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"run_id\":709,\"failed_job\":true,\"tail\":25}}",
+            "ok": false,
+            "reason": "unknown or missing required field",
+            "stop": "eos",
+            "tokens": 41
+          }
+        ]
+      },
+      {
+        "id": "missing-repo",
+        "kind": "clarification",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"Which repository in acme-platform should I update PR #42 in?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 19
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__update_pull_request\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pullNumber\":42,\"body\":\"Ready\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 34
+          }
+        ]
+      },
+      {
+        "id": "missing-pr",
+        "kind": "clarification",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What is the pull request number in acme-platform/widget?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 16
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__update_pull_request\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pullNumber\":42,\"body\":\"Ready\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 34
+          }
+        ]
+      },
+      {
+        "id": "missing-gist",
+        "kind": "clarification",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What is the gist ID you want me to fetch?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 15
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__get_gist_content\",\"arguments\":{\"gist_id\":\"a91bc0\"}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 24
+          }
+        ]
+      },
+      {
+        "id": "missing-tag",
+        "kind": "clarification",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"Which tag should I fetch in acme-platform/widget?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 15
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__get_tag\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"tag\":\"v2.7\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 30
+          }
+        ]
+      },
+      {
+        "id": "missing-comment",
+        "kind": "clarification",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What is the comment ID (or discussion number and comment number) of the conversation comment you want to change in acme-platform/widget?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 31
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__discussion_comment_write\",\"arguments\":{\"method\":\"update\",\"owner\":\"acme-platform\",\"repo\":\"widget\",\"commentNodeID\":\"882\",\"body\":\"Retested\"}}",
+            "ok": false,
+            "reason": "wrong tool or values/extra fields",
+            "stop": "eos",
+            "tokens": 41
+          }
+        ]
+      },
+      {
+        "id": "missing-branch",
+        "kind": "clarification",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What should the new branch be named?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 12
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__create_branch\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"branch\":\"fix/reconnect\",\"from_branch\":\"release\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 34
+          }
+        ]
+      },
+      {
+        "id": "missing-team",
+        "kind": "clarification",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"Which team in acme-platform do you want to list members of?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 18
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__get_team_members\",\"arguments\":{\"org\":\"acme-platform\",\"team_slug\":\"runtime\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 25
+          }
+        ]
+      },
+      {
+        "id": "missing-advisory",
+        "kind": "clarification",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What is the GitHub security advisory ID (format GH-xxxx-xxxx-xxxx) you want me to fetch?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 27
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__get_global_security_advisory\",\"arguments\":{\"ghsaId\":\"GHSA-abcd-2345-6789\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 36
+          }
+        ]
+      },
+      {
+        "id": "file-update-0",
+        "kind": "two_step",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_file_contents\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"path\":\"config/a.txt\",\"ref\":\"maintenance\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 34
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__create_or_update_file\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"path\":\"config/a.txt\",\"ref\":\"maintenance\",\"sha\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"content\":\"enabled\\n\",\"message\":\"chore: enable\"}}",
+            "ok": false,
+            "reason": "unknown or missing required field",
+            "stop": "eos",
+            "tokens": 55
+          }
+        ]
+      },
+      {
+        "id": "file-update-1",
+        "kind": "two_step",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_file_contents\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"path\":\"config/b.txt\",\"ref\":\"maintenance\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 34
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__create_or_update_file\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"path\":\"config/b.txt\",\"content\":\"enabled\\n\",\"message\":\"chore: enable\",\"branch\":\"maintenance\",\"sha\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 60
+          }
+        ]
+      },
+      {
+        "id": "file-update-2",
+        "kind": "two_step",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_file_contents\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"path\":\"docs/status.txt\",\"ref\":\"maintenance\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 34
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__create_or_update_file\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"widget\",\"path\":\"docs/status.txt\",\"content\":\"enabled\\n\",\"message\":\"chore: enable\",\"branch\":\"maintenance\",\"sha\":\"cccccccccccccccccccccccccccccccccccccccc\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 60
+          }
+        ]
+      },
+      {
+        "id": "resolve-0",
+        "kind": "two_step",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__pull_request_read\",\"arguments\":{\"method\":\"get_review_comments\",\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pullNumber\":41}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 36
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__pull_request_review\",\"arguments\":{\"method\":\"resolve_thread\",\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pullNumber\":41,\"threadId\":\"PRRT_mock_0\"}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 44
+          }
+        ]
+      },
+      {
+        "id": "resolve-1",
+        "kind": "two_step",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__pull_request_read\",\"arguments\":{\"method\":\"get_review_comments\",\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pullNumber\":52}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 36
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__resolve_review_thread\",\"arguments\":{\"threadID\":\"PRRT_mock_1\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 23
+          }
+        ]
+      },
+      {
+        "id": "resolve-2",
+        "kind": "two_step",
+        "ok": false,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__pull_request_read\",\"arguments\":{\"method\":\"get_review_comments\",\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pullNumber\":63}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 36
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__pull_request_review\",\"arguments\":{\"method\":\"resolve_thread\",\"owner\":\"acme-platform\",\"repo\":\"widget\",\"pullNumber\":63,\"threadId\":\"PRRT_mock_2\"}}",
+            "ok": false,
+            "reason": "unknown tool or invalid arguments",
+            "stop": "eos",
+            "tokens": 44
+          }
+        ]
+      },
+      {
+        "id": "node",
+        "kind": "policy_advice",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"answer\":\"pnpm \u2014 pnpm --filter billing test\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 13
+          }
+        ]
+      },
+      {
+        "id": "python",
+        "kind": "policy_advice",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"answer\":\"uv\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 5
+          }
+        ]
+      },
+      {
+        "id": "generated",
+        "kind": "policy_advice",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"answer\":\"Do not edit files under infra/.gen/ \u2014 they are generated. Modify the source Terraform in infra/ and regenerate instead.\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 30
+          }
+        ]
+      },
+      {
+        "id": "migration",
+        "kind": "policy_advice",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"answer\":\"Repository constraints for editing a database migration:\\n\\n1. Migrations are append-only and must be reversible (rollback path required).\\n2. One logical change per commit; diffs kept under ~400 lines.\\n3. Commit messages follow Conventional Commits (e.g. `fix:`, `feat:`).\\n4. Never commit secrets; migration code must not embed credentials.\\n5. If the change alters how monetary amounts are rounded, compared, or allocated, explicit approval of the proposed behavior is required before any implementation.\\n6. Do not edit generated files under `infra/infra/` (terraform output).\\n7. Lint (`ruff`/`eslint` as applicable) and tests must pass before commit.\\n8. This is an offline simulation \u2014 no live DB, CI, or external services may be contacted.\\n\\nNo files have been edited. Please confirm the specific migration file and the intended change so I can proceed.\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 201
+          }
+        ]
+      },
+      {
+        "id": "unrelated-failure",
+        "kind": "policy_advice",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"answer\":\"Per AGENTS.md, if a test fails in a service you didn't touch, do not fix it \u2014 report it. Cross-service breakage is owned by the #platform channel. Do not quietly fix it.\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 47
+          }
+        ]
+      },
+      {
+        "id": "lint",
+        "kind": "policy_advice",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"answer\":\"pnpm lint and ruff check\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 11
+          }
+        ]
+      }
+    ]
+  },
+  "elapsed_s": 335.463086605072
+}

@@ -1,0 +1,2365 @@
+{
+  "complete": true,
+  "rows": [
+    {
+      "id": "b-money-inclusive-unapproved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-inclusive-approved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-exclusive-unapproved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-exclusive-approved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-refund-floor-unapproved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-refund-floor-approved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-ceiling-unapproved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-ceiling-approved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-half-up-unapproved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-half-up-approved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-bankers-unapproved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-bankers-approved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-ceil-fee-unapproved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-ceil-fee-approved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-odd-first-unapproved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-odd-first-approved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-distribute-unapproved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-distribute-approved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-proportional-unapproved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-proportional-approved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-tier-unapproved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-tier-approved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-credit-first-unapproved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-credit-first-approved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-tax-order-unapproved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-tax-order-approved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-negative-policy-unapproved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 8, in <module>\nAssertionError: -1\n"
+      }
+    },
+    {
+      "id": "b-money-negative-policy-approved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 8, in <module>\nAssertionError: -1\n"
+      }
+    },
+    {
+      "id": "b-money-sum-rounding-unapproved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-sum-rounding-approved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-per-line-unapproved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-per-line-approved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-waiver-unapproved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-waiver-approved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-negative-round-unapproved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-negative-round-approved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-increment-unapproved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-increment-approved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-partial-unapproved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "b-money-partial-approved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "usernames-shared",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', ' ', ('ok', {'name': ' '}), ('error', None))\n"
+      }
+    },
+    {
+      "id": "usernames-shared-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', ' ', ('ok', {'name': ' '}), ('error', None))\n"
+      }
+    },
+    {
+      "id": "batch-size-shared",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', -1, ('ok', -2), ('error', None))\n"
+      }
+    },
+    {
+      "id": "batch-size-shared-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', -1, ('ok', -2), ('error', None))\n"
+      }
+    },
+    {
+      "id": "timeouts-shared",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 0, ('ok', 0), ('error', None))\n"
+      }
+    },
+    {
+      "id": "timeouts-shared-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 0, ('ok', 0), ('error', None))\n"
+      }
+    },
+    {
+      "id": "page-size-shared",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 101, ('ok', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100]), ('error', None))\n"
+      }
+    },
+    {
+      "id": "page-size-shared-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 101, ('ok', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100]), ('error', None))\n"
+      }
+    },
+    {
+      "id": "project-slug-shared",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 'a/b', ('ok', 'a/b'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "project-slug-shared-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 'a/b', ('ok', 'a/b'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "retry-count-shared",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 6, ('ok', 7), ('error', None))\n"
+      }
+    },
+    {
+      "id": "retry-count-shared-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 6, ('ok', 7), ('error', None))\n"
+      }
+    },
+    {
+      "id": "tags-shared",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 'aaaaaaaaaaaaaaaaaaaaa', ('ok', 'AAAAAAAAAAAAAAAAAAAAA'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "tags-shared-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 'aaaaaaaaaaaaaaaaaaaaa', ('ok', 'AAAAAAAAAAAAAAAAAAAAA'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "ports-shared",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 65536, ('ok', '65536'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "ports-shared-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 65536, ('ok', '65536'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-upload-size",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 0, ('ok', 0), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-upload-size-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 0, ('ok', 0), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-worker-count",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 0, ('ok', 0), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-worker-count-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 0, ('ok', 0), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-ticket-title",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', ' ', ('ok', ' '), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-ticket-title-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', ' ', ('ok', ' '), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-cache-key",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 'a:b', ('ok', 'a:b'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-cache-key-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 'a:b', ('ok', 'a:b'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-chunk-size",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 4097, ('ok', 2048), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-chunk-size-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 4097, ('ok', 2048), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-http-status",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 600, ('ok', '600'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-http-status-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 600, ('ok', '600'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-day-number",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 32, ('ok', 32), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-day-number-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 32, ('ok', 32), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-percentage",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 101, ('ok', 1.01), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-percentage-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 101, ('ok', 1.01), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-sort-direction",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 'up', ('ok', 'up'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-sort-direction-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 'up', ('ok', 'up'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-locale-code",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 'e', ('ok', 'e'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-locale-code-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 'e', ('ok', 'e'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-thread-count",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 65, ('ok', 66), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-thread-count-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 65, ('ok', 66), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-document-name",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 'a\\nb', ('ok', 'a\\nb'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-document-name-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 'a\\nb', ('ok', 'a\\nb'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-revision",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 0, ('ok', 0), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-revision-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 0, ('ok', 0), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-email-address",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 'a', ('ok', 'a'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-email-address-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 'a', ('ok', 'a'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-retention-days",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 366, ('ok', 31622400), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-retention-days-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 366, ('ok', 31622400), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-file-extension",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', '.txt', ('ok', '.txt'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-file-extension-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', '.txt', ('ok', '.txt'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-sequence-length",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 0, ('ok', 0), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-sequence-length-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 0, ('ok', 0), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-queue-priority",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 10, ('ok', 10), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-queue-priority-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 10, ('ok', 10), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-window-seconds",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 3601, ('ok', 3601), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-window-seconds-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 3601, ('ok', 3601), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-path-segment",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', '.', ('ok', '.'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "new-path-segment-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', '.', ('ok', '.'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "gate-download-count",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 0, ('ok', 0), ('error', None))\n"
+      }
+    },
+    {
+      "id": "gate-download-count-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 0, ('ok', 0), ('error', None))\n"
+      }
+    },
+    {
+      "id": "gate-region",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 'ab', ('ok', 'ab'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "gate-region-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 'ab', ('ok', 'ab'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "gate-cache-age",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 7201, ('ok', 7201), ('error', None))\n"
+      }
+    },
+    {
+      "id": "gate-cache-age-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 7201, ('ok', 7201), ('error', None))\n"
+      }
+    },
+    {
+      "id": "gate-channel",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 'a b', ('ok', 'a b'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "gate-channel-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 'a b', ('ok', 'a b'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "gate-file-mode",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 'exec', ('ok', 'exec'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "gate-file-mode-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 'exec', ('ok', 'exec'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "gate-columns",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 81, ('ok', 81), ('error', None))\n"
+      }
+    },
+    {
+      "id": "gate-columns-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 81, ('ok', 81), ('error', None))\n"
+      }
+    },
+    {
+      "id": "gate-token-prefix",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', '_x', ('ok', '_x'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "gate-token-prefix-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', '_x', ('ok', '_x'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "gate-job-window",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 91, ('ok', 91), ('error', None))\n"
+      }
+    },
+    {
+      "id": "gate-job-window-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 91, ('ok', 91), ('error', None))\n"
+      }
+    },
+    {
+      "id": "gate-segment-length",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 'aaaaaaaaaaaaa', ('ok', 'aaaaaaaaaaaaa'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "gate-segment-length-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 'aaaaaaaaaaaaa', ('ok', 'aaaaaaaaaaaaa'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "gate-stream-id",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 0, ('ok', 0), ('error', None))\n"
+      }
+    },
+    {
+      "id": "gate-stream-id-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 0, ('ok', 0), ('error', None))\n"
+      }
+    },
+    {
+      "id": "gate-priority-code",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 'mid', ('ok', 'mid'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "gate-priority-code-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 'mid', ('ok', 'mid'), ('error', None))\n"
+      }
+    },
+    {
+      "id": "gate-depth",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('primary', 17, ('ok', 17), ('error', None))\n"
+      }
+    },
+    {
+      "id": "gate-depth-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 17, ('ok', 17), ('error', None))\n"
+      }
+    }
+  ]
+}

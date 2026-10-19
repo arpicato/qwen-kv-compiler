@@ -1,0 +1,352 @@
+{
+  "dev": {
+    "n": 194,
+    "informative_n": 89,
+    "arms": {
+      "teacher": {
+        "correct": 193,
+        "caps": 0,
+        "informative_correct": 89,
+        "by_kind": {
+          "lookup": {
+            "n": 132,
+            "correct": 132
+          },
+          "tool_select": {
+            "n": 62,
+            "correct": 61
+          }
+        }
+      },
+      "none": {
+        "correct": 104,
+        "caps": 151,
+        "informative_correct": 0,
+        "by_kind": {
+          "lookup": {
+            "n": 132,
+            "correct": 103
+          },
+          "tool_select": {
+            "n": 62,
+            "correct": 1
+          }
+        }
+      },
+      "warm": {
+        "correct": 182,
+        "caps": 1,
+        "informative_correct": 85,
+        "by_kind": {
+          "lookup": {
+            "n": 132,
+            "correct": 123
+          },
+          "tool_select": {
+            "n": 62,
+            "correct": 59
+          }
+        }
+      },
+      "own": {
+        "correct": 181,
+        "caps": 0,
+        "informative_correct": 82,
+        "by_kind": {
+          "lookup": {
+            "n": 132,
+            "correct": 121
+          },
+          "tool_select": {
+            "n": 62,
+            "correct": 60
+          }
+        }
+      }
+    },
+    "gains": [
+      "Which tool should be used to do the following: Add a sub-issue to a parent issue.",
+      "For the tool `actions_run_trigger`, which argument is described as: The workflow ID (numeric) or workflow file name (e.g., main.yml, ci.yaml). Required for 'run_workflow' method.",
+      "For the tool `assign_copilot_to_issue`, which argument is described as: Git reference (e.g., branch) that the agent will start its work from. If not specified, defaults to the repository's default branch",
+      "For the tool `create_pull_request_review`, which argument is described as: The SHA of the commit to review (optional, defaults to latest)",
+      "For the tool `fork_repository`, which argument is described as: Organization to fork to"
+    ],
+    "losses": [
+      "For the tool `assign_copilot_to_issue_with_intent`, which argument is described as: Git reference (e.g., branch) that the agent will start its work from. If not specified, defaults to the repository's default branch. Ignored when is_suggestion is true",
+      "For the tool `list_code_scanning_alerts`, which argument is described as: The name of the tool used for code scanning.",
+      "For the tool `list_discussions`, which argument is described as: Order discussions by field. If provided, the 'direction' also needs to be provided.",
+      "For the tool `list_secret_scanning_alerts`, which argument is described as: Filter by resolution",
+      "For the tool `projects_write`, which argument is described as: The name of the repository containing the issue or pull request. Required for 'add_project_item' method. Also accepted by 'update_project_item' when resolving the item by issue number.",
+      "For the tool `projects_write`, which argument is described as: The field/value to apply, using {\"id\": 123, \"value\": ...} or {\"name\": \"Status\", \"value\": ...}; null clears the field. Required for 'update_project_item' and 'update_project_items', where one top-level field/value applies to every item in a batch. For 'update_project_item' SINGLE_SELECT fields, the name form accepts option names; the ID form expects an option ID."
+    ],
+    "eval_s": 621.2945401668549
+  },
+  "agent78": {
+    "n": 78,
+    "informative_n": 45,
+    "arms": {
+      "teacher": {
+        "correct": 76,
+        "caps": 1,
+        "informative_correct": 45,
+        "by_kind": {
+          "lookup": {
+            "n": 28,
+            "correct": 27
+          },
+          "style": {
+            "n": 20,
+            "correct": 20
+          },
+          "tool_select": {
+            "n": 26,
+            "correct": 25
+          },
+          "unrelated": {
+            "n": 4,
+            "correct": 4
+          }
+        }
+      },
+      "none": {
+        "correct": 32,
+        "caps": 74,
+        "informative_correct": 0,
+        "by_kind": {
+          "lookup": {
+            "n": 28,
+            "correct": 11
+          },
+          "style": {
+            "n": 20,
+            "correct": 14
+          },
+          "tool_select": {
+            "n": 26,
+            "correct": 3
+          },
+          "unrelated": {
+            "n": 4,
+            "correct": 4
+          }
+        }
+      },
+      "warm": {
+        "correct": 74,
+        "caps": 2,
+        "informative_correct": 43,
+        "by_kind": {
+          "lookup": {
+            "n": 28,
+            "correct": 28
+          },
+          "style": {
+            "n": 20,
+            "correct": 18
+          },
+          "tool_select": {
+            "n": 26,
+            "correct": 24
+          },
+          "unrelated": {
+            "n": 4,
+            "correct": 4
+          }
+        }
+      },
+      "own": {
+        "correct": 75,
+        "caps": 2,
+        "informative_correct": 44,
+        "by_kind": {
+          "lookup": {
+            "n": 28,
+            "correct": 28
+          },
+          "style": {
+            "n": 20,
+            "correct": 18
+          },
+          "tool_select": {
+            "n": 26,
+            "correct": 25
+          },
+          "unrelated": {
+            "n": 4,
+            "correct": 4
+          }
+        }
+      }
+    },
+    "gains": [
+      "Which skill produces onboarding steps for a new engineer?"
+    ],
+    "losses": [],
+    "eval_s": 316.3558781147003
+  },
+  "stress197": {
+    "n": 197,
+    "informative_n": 107,
+    "arms": {
+      "teacher": {
+        "correct": 197,
+        "caps": 0,
+        "informative_correct": 107,
+        "by_kind": {
+          "lookup": {
+            "n": 135,
+            "correct": 135
+          },
+          "tool_select": {
+            "n": 62,
+            "correct": 62
+          }
+        }
+      },
+      "none": {
+        "correct": 90,
+        "caps": 159,
+        "informative_correct": 0,
+        "by_kind": {
+          "lookup": {
+            "n": 135,
+            "correct": 89
+          },
+          "tool_select": {
+            "n": 62,
+            "correct": 1
+          }
+        }
+      },
+      "warm": {
+        "correct": 175,
+        "caps": 2,
+        "informative_correct": 91,
+        "by_kind": {
+          "lookup": {
+            "n": 135,
+            "correct": 117
+          },
+          "tool_select": {
+            "n": 62,
+            "correct": 58
+          }
+        }
+      },
+      "own": {
+        "correct": 177,
+        "caps": 2,
+        "informative_correct": 91,
+        "by_kind": {
+          "lookup": {
+            "n": 135,
+            "correct": 120
+          },
+          "tool_select": {
+            "n": 62,
+            "correct": 57
+          }
+        }
+      }
+    },
+    "gains": [
+      "For the tool `create_repository`, which argument is described as: Organization to create the repository in (omit to create in your personal account)",
+      "For the tool `get_notification_details`, which argument is described as: The ID of the notification",
+      "For the tool `list_global_security_advisories`, which argument is described as: Filter by GitHub Security Advisory ID (format: GHSA-xxxx-xxxx-xxxx).",
+      "For the tool `mark_all_notifications_read`, which argument is described as: Describes the last point that notifications were checked (optional). Default: Now"
+    ],
+    "losses": [
+      "Which tool should be used to do the following: Find likely duplicate issues for an existing issue in a GitHub repository.",
+      "For the tool `create_or_update_file`, which argument is described as: Set true to update a symbolic link itself; content must be its new target path."
+    ],
+    "eval_s": 629.2988364696503
+  },
+  "diagnostic12": {
+    "n": 12,
+    "informative_n": 9,
+    "arms": {
+      "teacher": {
+        "correct": 12,
+        "caps": 0,
+        "informative_correct": 9,
+        "by_kind": {
+          "lookup": {
+            "n": 12,
+            "correct": 12
+          }
+        }
+      },
+      "none": {
+        "correct": 3,
+        "caps": 6,
+        "informative_correct": 0,
+        "by_kind": {
+          "lookup": {
+            "n": 12,
+            "correct": 3
+          }
+        }
+      },
+      "warm": {
+        "correct": 10,
+        "caps": 0,
+        "informative_correct": 8,
+        "by_kind": {
+          "lookup": {
+            "n": 12,
+            "correct": 10
+          }
+        }
+      },
+      "own": {
+        "correct": 10,
+        "caps": 1,
+        "informative_correct": 8,
+        "by_kind": {
+          "lookup": {
+            "n": 12,
+            "correct": 10
+          }
+        }
+      }
+    },
+    "gains": [],
+    "losses": [],
+    "eval_s": 114.53819632530212,
+    "splits": {
+      "dev": {
+        "n": 6,
+        "teacher": 6,
+        "warm": 5,
+        "own": 5
+      },
+      "test": {
+        "n": 6,
+        "teacher": 6,
+        "warm": 5,
+        "own": 5
+      }
+    }
+  },
+  "artifacts": {
+    "warm": {
+      "kv_bytes": 536870912,
+      "compile_s": 2502.4390642642975,
+      "manifest_sha256": "74db0a84561f93acc4576e042b34f126e5b12ae2df5af79de3b7084a12239a5d"
+    },
+    "own": {
+      "kv_bytes": 536870912,
+      "compile_s": 2860.0233945846558,
+      "manifest_sha256": "4d505869933165ddcc5b75a469165c6e3816143822b7427d8eb686fc8c9c7e56"
+    }
+  },
+  "timing": {
+    "gate_s": 517.0377466678619,
+    "capture_s": 813.5172021389008,
+    "eval_s": 1681.4874510765076,
+    "total_s": 8374.504858732224,
+    "new_candidate_eval_s": 335.14001965522766,
+    "incremental_s": 3195.1634142398834,
+    "total_s_includes_reused_gate_capture_warm": true
+  }
+}

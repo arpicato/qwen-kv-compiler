@@ -1,0 +1,915 @@
+{
+  "protocol": "agent512-repaired-no-thinking-v1",
+  "n": 512,
+  "source_sha256": "4cd423c83b657f1e35c28e1032fb86cde26c597da12a92a337a639b6dabb08d8",
+  "body_sha256": "5f060795c80b2f22af74038c5cad679ed8d2b00ba2c1b5ec61e5e9cc19549638",
+  "changes": [
+    {
+      "row": 3,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "a55686044d28eecf420fd2cc4b8b4321aea25dc79c84d51e7b02bce46b7908d8",
+      "new_sha256": "d20d37cccc22b18f20bbc9a275f453f3178b27133b1d381ec78925a90321591e"
+    },
+    {
+      "row": 9,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "c07ae567f06587a383461119499d4f02e08d16fd7539413abbf6ece35e58fa55",
+      "new_sha256": "133f1675cb87b0bba613f7785c81f6b3de38456d95b27aff643df8c51e1eeb6a"
+    },
+    {
+      "row": 10,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "179f5fff32d36dcda75be09aa84e9d0f1429c069c9765cecc5aa41162663ba08",
+      "new_sha256": "5ffd1ede63f49208ba952ea82377ddd21adfd409cc89341aa86840c4182737f9"
+    },
+    {
+      "row": 13,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "f32c6d6eeb14f63443cd6d4941dc4bc68a03b5c3eff342bf92b996e7de8f400a",
+      "new_sha256": "d1eeaf5615e1effbf1a23a3416af1180870073a14b1165f4839ae3b00f74ce03"
+    },
+    {
+      "row": 14,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "ca1f19be9f384a34289dacca18d167f898e6d25cd92714c96139138327224ffc",
+      "new_sha256": "700af810e298aaff3fc44fc2eccd70bb5e9deee549d788b0335d3f3cab4fe5ad"
+    },
+    {
+      "row": 15,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "bf035a6f310c3f9e43bf5f2d7110f680090ab2501dd04e57728be9e5e48eb97c",
+      "new_sha256": "b4b78f4966b345fa4fc58f860aa0b9344b6b43858a9bad44aa6d6afe4e60f88a"
+    },
+    {
+      "row": 24,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "2b2b1ce8e4f59df9be03d959b976ed84352cda89bd083ecc2af7950cf1699820",
+      "new_sha256": "f157556f108f3eb802d0d6420a909c180af29f731ed0b02c96a12cb1cc592499"
+    },
+    {
+      "row": 27,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "4cea0272722df88dcf853c3bddb632eecefa0be2b253b3667f6248a3301abaaa",
+      "new_sha256": "28f1430d08e4773e9018c346c8f2c8afb2b2461a080c63da3646580d301803c5"
+    },
+    {
+      "row": 28,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "8f0d4c62d49637cc69940fc0a2bf4167dcc7357c2e442c2dd51389e4c114cc51",
+      "new_sha256": "9b8cf3e3199af600cceb09ab089df4263f063d5a0f4ad048b2aa6570c7dd2a3b"
+    },
+    {
+      "row": 30,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "412e0f3095433d474b5a6f97525ff5187f8cdabb9d18301c9e7edbaf249bd6e1",
+      "new_sha256": "c1dea0019df136518fdf6b3ddad26426a7884225c3be02a6611d6b9b7e229bea"
+    },
+    {
+      "row": 31,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "6c9a04b5b97520c0f357f8963cb8222717229a2e1ce017dc95fdc13b5a946f7d",
+      "new_sha256": "b5e933a3d80a3d1024a7c7ef87f487d0f546e1599319db4b1e88dd4bcaffacb5"
+    },
+    {
+      "row": 32,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "30a58df820fd520211bbc9a1b8dab576bb905cd05e788f364c269d2120da96ac",
+      "new_sha256": "2a3e50eb59fa9c4a064382e75139944a31643f0e0a444bee68834bf483535f55"
+    },
+    {
+      "row": 40,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "85cf2cb0c6c2ea33a0e7e7f441c7ebfd97ff641f85ebd4e8d0189d365f64d774",
+      "new_sha256": "19680ee20d86078ec3e009f30942300371d58db8811fccd892bdb508cab48554"
+    },
+    {
+      "row": 46,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "777844ba8b7081576ae748c09be8387007744644ea5cf5d8f1a7aecc27191331",
+      "new_sha256": "ee7ca77340b7f5364dbdf4b53fe910640a0cc15d2b137882b8ca3e8e335f3a30"
+    },
+    {
+      "row": 48,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "cc6786738d30b2910c0c869679e1b3ccfbcfb24b6c704ef03927ba310ca98c6c",
+      "new_sha256": "9736f815b3bdae1894fe631517c83cee6a3df7cce8a12b6e24a3afe90f73a747"
+    },
+    {
+      "row": 51,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "046ba887f5ab837e140b357e4b299430642337b6b8e7e3babce9328339bcfe9d",
+      "new_sha256": "bac5411ed73ad910fcf1d07bdcaaa28e11d4a97fd17dff859708a35446ef4867"
+    },
+    {
+      "row": 52,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "d0bbc913be17107ba6fabaf7af1c1562eca4946061e795c909345eb47f65dae1",
+      "new_sha256": "cc293f627e98cb427624afaf860a4aaa6530519b3c32f33c1dcc5b25254e3fa5"
+    },
+    {
+      "row": 53,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "730d070b6a0309fc8ce241e1926977c7661a425f76f60bfc2c25638e8f990b3c",
+      "new_sha256": "0925a688272b6c112d06258d60db26cc29c8486ddc967ffcb8d0a89f937325ba"
+    },
+    {
+      "row": 57,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "dcc91224ead24baa446f9be3523266f4a21d6d5c5df2448513dd1a8a7f7f0b15",
+      "new_sha256": "d5f6a50a1f53f73b3d34843f8ec96a5091ef09f5261e826645abebb7a14e4f03"
+    },
+    {
+      "row": 90,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "c6656bd0114a0c8245c2a8ba01497b89fd7dbb6a34e29ed743ae71f65927c677",
+      "new_sha256": "70498b13c579f69f783ada571517314dcac825c6f558efd94f31e0d91b34d309"
+    },
+    {
+      "row": 94,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "abb6904ee817cfd20b5dfcc61b94da42fd29d3927146dcc6db1140a8697c7a53",
+      "new_sha256": "66516431689c2dce5941ff7710804c5fb5be219a29fb6394ca576c38e97b40f8"
+    },
+    {
+      "row": 96,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "da7d025c9ce28a08e291c8f677161bad56596dc4f2046f520d57a4d03c819c7c",
+      "new_sha256": "3e6cbc7c657f7ae498880038a37df8958cc57dcc42b7e7b8de7a8269b9d905d5"
+    },
+    {
+      "row": 99,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "15bf46662475f430860e342aac7766233c036349f8f65fc7ec820387cf183e05",
+      "new_sha256": "40137b0453ae1126910f43f64630fe649fbf5521182f9762d197211c17d4e44f"
+    },
+    {
+      "row": 102,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "3b7709485c32c49454ea21655f18b9d0ddf210b4660e9f8a6abf195cc9b0579a",
+      "new_sha256": "9c04e0cf42cc78aadf75a19ce4ca26dc94c8180e72479f0176761901f0abffb6"
+    },
+    {
+      "row": 105,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "bd7b965332840a4384d656e1b00ff4c62ed08f27b000583d819652f225a8ae14",
+      "new_sha256": "4aed8257bd8128d383409e5e6469ee1df90c34ff068aa4a5511b20d759077141"
+    },
+    {
+      "row": 107,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "2ef5d9b70f1c40c912031f97b220d5d84b886c28751d394875afb361f9ac8660",
+      "new_sha256": "07ce556638eb3be176d3c9d6914d679a7d32d5187531c40b1237a98c8f162c5e"
+    },
+    {
+      "row": 108,
+      "reasons": [
+        "manual_tool_or_preference"
+      ],
+      "old_sha256": "7c77a91fed6fd7341286ef515d48ca29b77e542745a00dcd1d39ef7d4fdbe6d0",
+      "new_sha256": "352582a04d52ca6611d26a8b2027730f868dc5265c7463849b3908ac3ff7e1dd"
+    },
+    {
+      "row": 114,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "2bdd51329cdfae100f7bdef53a401d551a28adcd7458cd0883e9208600f9f8fa",
+      "new_sha256": "0f49355a51cb57260e28281d5b67938ccfa9b54782e612c0b287b74cca95ae33"
+    },
+    {
+      "row": 127,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "4ad98336db78133be92a21258b58418aa1cfad6ff2744f10fefc943a770451ba",
+      "new_sha256": "cb4dcb6b4ce21b6b1318892cab05968b8fd41168c5625c3713e520d2d6c72860"
+    },
+    {
+      "row": 129,
+      "reasons": [
+        "incomplete_required_arguments"
+      ],
+      "old_sha256": "1020e0f93aa75be4ea11f75bc0a3fcc29eb38db1378ee8329930597391249d26",
+      "new_sha256": "99488529abf344a3642d4dda3de471666c811502980700d66a2a82db355b5c18"
+    },
+    {
+      "row": 136,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "d06cb7a259b6293443a269c8900d6d22873b58f32701c0ffcf134a29b45c4c1b",
+      "new_sha256": "5ed475bac8b1df9c89d1d8ca8b68f05bfa6240d97490b30a72856419cb1cfa1c"
+    },
+    {
+      "row": 139,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "49ed4259961e4761257e8db67db5b91c1c078992759a08a7a073d2db1e535e8a",
+      "new_sha256": "d9a4a0be0b7d37acd29d279206ac3ac24c029702c0eceb212705f88092f87626"
+    },
+    {
+      "row": 142,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "865ad9ede10e1bbcd29598b7ddc51f28d393af65a66047816b040b25d3cb2a12",
+      "new_sha256": "02e9a1afbba2cf648d946903992d6736be932046a2e5a2eb6e963c5d0d12cf53"
+    },
+    {
+      "row": 147,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "6cd5bdda4b2434cc6b8407ecbd1cf33a5a241c464ca3797409bf491a6c450cd8",
+      "new_sha256": "7b23061c6256a2e4b4cda3243d52afc878e9414659f61dea63b2e9fb3d480785"
+    },
+    {
+      "row": 148,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "b6dedf6fa94330bb57c028895da48ae2adfe051be2bf11ac289c9ec855563358",
+      "new_sha256": "d94769e87898ff9bd7deb54de990607ea9dd9d829701a101b87828495e8f35c2"
+    },
+    {
+      "row": 160,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "ba03fb2711a82d4c6e9bfc79f307d52bf4e4fb71f4cd9cf7d885cbc092d256ca",
+      "new_sha256": "7a2a60db15440fb79939e351833014eb63fb07a4ea1d48d31950d1b7cf56a4ec"
+    },
+    {
+      "row": 163,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "1749a856212a6768f19978e0af37b898b573046b817c86bcd7bca832abdb2f79",
+      "new_sha256": "8be06f291e3fc03a44dc8c18a8cd796021d7a74f9f78019be9222f70da5bee60"
+    },
+    {
+      "row": 165,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "c3e99959d00038162aad78f0b997c1d7cb871914e1a4149cec3547c6636fec5f",
+      "new_sha256": "09eb86464efdcb8d913f056a1195fd0c70abdf3d742d10056d4c4da147bc0260"
+    },
+    {
+      "row": 167,
+      "reasons": [
+        "incomplete_required_arguments"
+      ],
+      "old_sha256": "36576f8effc6953487baa39f1026fa9df6080c24a717adc156df5f72f9d2dd19",
+      "new_sha256": "43763140455e92b1fcf3e1fce1693895eed62d77e8aa60255cbd9b233e430b4f"
+    },
+    {
+      "row": 181,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "6430e942adce56df0e6d617b3cf7245293624f9860f38bc10b54001e4ddb6c73",
+      "new_sha256": "d92441a067b893fa60f6f3b64fb446dbf886eaf8e476b6cf212b07980553cd1a"
+    },
+    {
+      "row": 194,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "91311c28ab1d4ebae9b0f596b5d7afe298aaa522f8b2ba0339dd99eb1e668d53",
+      "new_sha256": "cba5848bc5f08b393e743ae574d49bb76a3424e41c2ff3240079fedf92bdbbd4"
+    },
+    {
+      "row": 195,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "31fa7573a8f9e3c24920c696540e1145cd38396eeea5be39407b9ed6ad0fcdfa",
+      "new_sha256": "1b0691bfad35a2c5a7e9cbed911f86b80cc42def60f4c3c9d46f18f1147eca55"
+    },
+    {
+      "row": 196,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "6620a21ccfff582dc519f99eb36ceaeeb0f01595f94abdc38c7e9b9a2a16ba25",
+      "new_sha256": "e2e80f440dc8c44ec1b3b0b5b6460139f85d348c10466bc83ed7ee883bda2139"
+    },
+    {
+      "row": 200,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "c425d46857368c71ef48a8606fffc1199e450e7c9ce75198d066dd1507609f83",
+      "new_sha256": "6a1623365bc77ba84f82f36d7634de688d9e5f6f93d9766284f8628059f043ad"
+    },
+    {
+      "row": 205,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "b6c9a857af61cf1a338de2a956aad8478d77c0b3e9fe63b6ea4ac5b8b64a77b4",
+      "new_sha256": "940c67c310feb605ef6d53c9c939aa2f106e52c76b9f5ea64b48973c7df56bc6"
+    },
+    {
+      "row": 208,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "bb37e88c66cd77ae6c2df915667fa9ca5e1189b88f29f05062bc191fb1c810d1",
+      "new_sha256": "7382f78a659840cbe50eee0ae5729bb9a42e6dc8a5f1d1ed72056f35d2251e93"
+    },
+    {
+      "row": 211,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "daeca004b83a9efaf8a21235e79a387bcb8fff6e9ae723a4b38883783bfb9a03",
+      "new_sha256": "e1c59ae7c1d098c103a573553337bb44cbf152bc9b5fb4ce92e7371f98a8c535"
+    },
+    {
+      "row": 235,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "d007f590ddc4b7e8dbcd34068898532328ee8d107b684846ceb1aff060d23d86",
+      "new_sha256": "e672c5bf1e185f399c34f685f4f1a9c61251634b1e67ed5aaf2ef3c67e28ecf0"
+    },
+    {
+      "row": 240,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "6210527f831a2d717556cc74df801284173e6c5c7bcd5b4b8458420c6b73fef6",
+      "new_sha256": "e50811036385aa1020f1f22ba123a34c918360fa79c643c7b4717ae24b98c281"
+    },
+    {
+      "row": 244,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "3605bd39e1216492df4a50ae706f8b6f3e56e7440a314e43db7a7a0366fc3781",
+      "new_sha256": "624e8ae9b359b4047502f11a7cc98d4c13f719b4a748731fa81fcecc699dcf58"
+    },
+    {
+      "row": 257,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "42a4a7dcebef8fbb18d7ccc82044388f2872b09395dde3c123b04ed6938117d7",
+      "new_sha256": "ba18d7aee2b71d4023b1504fdf150dd1e999335e8520edf413bed57c5d31e2dd"
+    },
+    {
+      "row": 264,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "5a9f2183cfe29b72adcb4c4ff40511a822aacf4f1cf1b61cb719f96a5b79ffff",
+      "new_sha256": "5333eee3e1da06ce7b743f5249f83390f0085e59e043c0d32e998495acccd440"
+    },
+    {
+      "row": 267,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "f7c6cc5b6caab92c16a7e2e30b3cf4203f3a8ed84a2feac37fad2720de711456",
+      "new_sha256": "79c93323c74425c20b59588f808acc01828dce012637400f5de73a962d87e168"
+    },
+    {
+      "row": 268,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "3def5fb3da28ac8fd0fe4a92fcd014409292c1ac69a49c8e58a55c405f787347",
+      "new_sha256": "07e14c1fda576807ffb428d9c7ca2c96ceae689c977357068551d835426c3749"
+    },
+    {
+      "row": 283,
+      "reasons": [
+        "manual_tool_or_preference"
+      ],
+      "old_sha256": "06ea56d904a2938695e03693245dc16a7cdd797d3499a1224eb631ed439152fe",
+      "new_sha256": "679f00bd3c07b2ec44b88544a25be9e8d5796ac9d8eadecbe6f8d204c5511767"
+    },
+    {
+      "row": 288,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "92bd09931e2165f64c7648c2b73a69f1b90eb4b9394b4b48447fa2eb3c867c69",
+      "new_sha256": "6d8a893cfed770c9bef35930dda038bebb4452e87375f6df1edc282113f1a4b0"
+    },
+    {
+      "row": 295,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "1f4499c0435c53b1568d14ee064a55735508d5c39d7a7894d8f2e9076b0d4bdc",
+      "new_sha256": "5d9dc0cc9f84783eb17dcf983fb79946cb88a580f8832f8a7d65da58328817fa"
+    },
+    {
+      "row": 297,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "30a8db6df011b041aed9359bd6217791d4a3ac40885737bbb887c1ec8499dee9",
+      "new_sha256": "24aac24b9d399ad927a6140f59d951fc97cef95de55a9e1e2811a5e47f3a043d"
+    },
+    {
+      "row": 299,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "e7df467244db97399a0471b8acd2ef1cc55d9656ea1d6772fa58733b6ee4a24e",
+      "new_sha256": "f81c4f0205bc9e80f5c7263155d5546bc3966b8ce486c0ff48d5ddb790d0aa17"
+    },
+    {
+      "row": 301,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "7ecb831c2f36239b49524a3294881a8a5dbf626b70627355253c68645ccd32f1",
+      "new_sha256": "713c7ef71114dcd7c9a2542acf85a0015650c01e49fce21a84e00f600891376c"
+    },
+    {
+      "row": 304,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "4e00b28d3a38591031c524450ab6b869cb17d6cf7ed2c4d0abbb5a8526a43675",
+      "new_sha256": "9dc6687319899459effc506e5b213b717a284f2adaccdc4210de2c131c37c68f"
+    },
+    {
+      "row": 307,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "3be1fb97562f376c1d7acdc7d7a3cdc70f5283ae9d8ddb233ef7537e1a09f3e9",
+      "new_sha256": "32dd53aceb4651451a7702184e74ac5429377920127893110f097684de62910b"
+    },
+    {
+      "row": 308,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "9a2b4851b81c3c926fe376a09f24cced974bfb74b73d86bda7adfbd0b5f1b57e",
+      "new_sha256": "2fcafe91926c7ae3a45d6348849c3687d25215e9c660e8cc4b09a90dcc598ba8"
+    },
+    {
+      "row": 315,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "70c04b7a5d7cfe1b6a574d705c72b9a2a5fef340741e561155bf594ac404aac9",
+      "new_sha256": "008cad42acaa736b017cd40a2ebca3de427596a7328166bbe5e301b01d005464"
+    },
+    {
+      "row": 318,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "0c723a2b597322f7a188d93639f4f617fdf63ef10aafad0c4bbdcd090e4eeb7d",
+      "new_sha256": "9d308b7ebe66758aa5f89c9d79f313250460444b46d2bc9fd94ca2d901facf1f"
+    },
+    {
+      "row": 320,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "31cfc124f8b827c223583cde7311b67af1a2e7485dad4733bf692a0f191b0dde",
+      "new_sha256": "315d94eb5e401c94a0df18aec286ec6f114292300a439afa6c83607e50e24d26"
+    },
+    {
+      "row": 323,
+      "reasons": [
+        "incomplete_required_arguments"
+      ],
+      "old_sha256": "8c76254c7c8acda966969a4084575788d5cf1a8cb4fddbe4f5202685ad86b54f",
+      "new_sha256": "99488529abf344a3642d4dda3de471666c811502980700d66a2a82db355b5c18"
+    },
+    {
+      "row": 337,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "c64bb113b69e21a2946c2798d6e79539b073fb93bf3f5900264ab3d482f507b2",
+      "new_sha256": "6afbabb5ae2ffb681581a191e8f7bc72d34da74f50a05fd937578bbeb2b0054d"
+    },
+    {
+      "row": 344,
+      "reasons": [
+        "manual_tool_or_preference"
+      ],
+      "old_sha256": "143c09f8d1f58cfdecfdedbf8065bfd625e9bc50f080b80610f4af0a4e275415",
+      "new_sha256": "352582a04d52ca6611d26a8b2027730f868dc5265c7463849b3908ac3ff7e1dd"
+    },
+    {
+      "row": 351,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "854e5d0754b3f0928f307d34d5ad938696a2056585b8fe373f208231686edd7f",
+      "new_sha256": "37c70b4cce250741d81b3d629b7925c024bb50f2473154f7e736801dd7da8441"
+    },
+    {
+      "row": 352,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "5471712223fed83669299b530089cf1261d9dc8d822fc19ae4fb56912ae93a24",
+      "new_sha256": "44c93b5fc8802f9ddf96918a6a9ac46273a4d2d20a924d30d4730b7f70ca282a"
+    },
+    {
+      "row": 364,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "420312f5b3c24ebf73be5dd8dcf1f4fc33cb4f4a90edbddcb5a4dc466c915dde",
+      "new_sha256": "7a2a60db15440fb79939e351833014eb63fb07a4ea1d48d31950d1b7cf56a4ec"
+    },
+    {
+      "row": 369,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "f3c1db2d3a1f8ff31fe8d332d3f3184ecd2b805d5bfdd96e8e7a325c78c7d99d",
+      "new_sha256": "d031ed70ec4738289f41f96b4ef43e882f999d5393462dca2f4eed0e0222d91a"
+    },
+    {
+      "row": 372,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "aadc6622525185dbc94fe080a952584486c4fe4a9656ad46acd26e845d24c028",
+      "new_sha256": "dd608a320b5b5f34f066c9d842579700b8157fec92db9ea8d7dfb0615f8ec54f"
+    },
+    {
+      "row": 376,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "ace1a48f0965ada2de65160331d38e64763eb14e1d150a579fe4cf3c96df3a24",
+      "new_sha256": "6d21b74534365417f9a313cc7c1516372d2830f9ff7e8a96bd979ff8fe473acc"
+    },
+    {
+      "row": 393,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "62f48726d7b622f1b844b6f85f8b0df6b8b822fb8fd0d7408b8eaa207253d217",
+      "new_sha256": "13fe73fc7c5d74e7bb72a449d7e712c15a5a9de3805d10bde76eea7789938410"
+    },
+    {
+      "row": 397,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "0f426c96452ba2aad4ef981bccdf144ab584139ce2c34e1e91337c676359d71f",
+      "new_sha256": "117cfc55e3788d4429e884e5ce1d5d110f78ad93233630119671a0712b8edacc"
+    },
+    {
+      "row": 399,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "44ab19a7a1d8e88676e331881d6f7f90191e5300f35dc62d8de53fd6a7e0126e",
+      "new_sha256": "636f9f1f991501aaf251dad21e76e65ab4528a14e6855391ef85432ba7a4ff9c"
+    },
+    {
+      "row": 400,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "7945c884e529867556008c9f7e754d0139ddbd2967f80c4577f35f00cde1dad2",
+      "new_sha256": "3986bbdf646c21e1f63a39761b71954170972524fddab20f2616823e5d6d99dd"
+    },
+    {
+      "row": 402,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "1641839f100e6fd8d2a10f29640fb682e529ac32afaae0b2d984ec833ad424ce",
+      "new_sha256": "8befe26f350b4b53143d03983082334b46ed6ba70fef96e189aa1251206ae63a"
+    },
+    {
+      "row": 404,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "6d817991bbbf0f8e6f06a86e819d94e2563186832cfbeb931a91959109f08faa",
+      "new_sha256": "acbb7c498ea5f71f9eb2b88e4e5d326790a1aa8643b451cdf3f5c4361c3ec4fd"
+    },
+    {
+      "row": 406,
+      "reasons": [
+        "incomplete_required_arguments"
+      ],
+      "old_sha256": "46752aeffbcf37a3cd36df789f8b525e0609888dea80333e35242f99c8410658",
+      "new_sha256": "43763140455e92b1fcf3e1fce1693895eed62d77e8aa60255cbd9b233e430b4f"
+    },
+    {
+      "row": 409,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "ed70c4960538604e1d7432c9f5896f9a09eef19f679e2ea7d08f8aba71663d79",
+      "new_sha256": "dab5b5b9643764757a3cd7e4c1ec213f26c80d770f5bdc637d76c22af0a0af7c"
+    },
+    {
+      "row": 410,
+      "reasons": [
+        "manual_tool_or_preference"
+      ],
+      "old_sha256": "0570264b44efa28b5270d8d945e7c623ed4a0a5b6356df488f4335e45bc98707",
+      "new_sha256": "352582a04d52ca6611d26a8b2027730f868dc5265c7463849b3908ac3ff7e1dd"
+    },
+    {
+      "row": 416,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "afd9674118f18a8a0c208b2087041db218fa62325e29d675e5515676d0a9b027",
+      "new_sha256": "afc7dec7a1bde54ba1587ae79abf42fe8f65c911bc217e2cdf3111c2829153e8"
+    },
+    {
+      "row": 420,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "88ffb8d8d364be026c0034a4f25995ca2c3feb321518952c10c9672890bbdd2b",
+      "new_sha256": "dc6fefc300e82fa104dec7772354077e7835e58334e82984c1d333aa91efe0e0"
+    },
+    {
+      "row": 421,
+      "reasons": [
+        "manual_tool_or_preference"
+      ],
+      "old_sha256": "f3aa58391d008154a08e60b0df73170a1cfddf19e274a8cfa3a293e69ebb380c",
+      "new_sha256": "352582a04d52ca6611d26a8b2027730f868dc5265c7463849b3908ac3ff7e1dd"
+    },
+    {
+      "row": 428,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "d07650c6ee22f5f0bea8f99b3184dabd2464225552f0221b41e5bf43d6407023",
+      "new_sha256": "5fdb41439531cca1c65da3a79672281f4a54724502fff161e2af1828f3dd23ee"
+    },
+    {
+      "row": 435,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "2d3f243eb6c3d7a24985bd39a11c5d92ba5f16ebfe382e2bf8139f4b2d192607",
+      "new_sha256": "8d35c994de6cdb805a05713c0cddf47f71b29ef55f74cd9de820d54aacbf0056"
+    },
+    {
+      "row": 437,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "d3dbf849301e8627306c28f17e9ff2d4de7fc82a1c9a39da127f5aadcf70135a",
+      "new_sha256": "bcf80027623e3f69536328b4327bf505a852580d9eca94615bed05bd37b2c4b5"
+    },
+    {
+      "row": 443,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "4407bc01195c1b6a3aa9281c14b4e1dce3ac205f6b6a99b771154cb81a104bd7",
+      "new_sha256": "2e833068ac0b91d389689f221c5510ad87cde5a0c427a6e401c7adc985f5e457"
+    },
+    {
+      "row": 444,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "664bd1e86611a7e31e66117b50a0d586d147b6a4a89990cc361d6ab431c58438",
+      "new_sha256": "041439d6141c47af2c0fccd2bc4455a28d3c1412c4188b99e5012b0207977fe9"
+    },
+    {
+      "row": 450,
+      "reasons": [
+        "manual_tool_or_preference"
+      ],
+      "old_sha256": "f3aa58391d008154a08e60b0df73170a1cfddf19e274a8cfa3a293e69ebb380c",
+      "new_sha256": "352582a04d52ca6611d26a8b2027730f868dc5265c7463849b3908ac3ff7e1dd"
+    },
+    {
+      "row": 455,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "e360cb626c463bc1e1dc805d524a4e4a89262392dc9f6419c409c46018704f55",
+      "new_sha256": "77f3b234dd3dc3354cfb7e59c229fafc3507ba618b25517b53fc857915bf3b5e"
+    },
+    {
+      "row": 478,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "c01fbc313bd52bd458bc4c7b0facd7113c480b2211e040a55b80dcc05105f52d",
+      "new_sha256": "27f66e970d85602863e03ed5d3717d445c612821c6a798f6370e7fa77b71b25e"
+    },
+    {
+      "row": 497,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "2f44f222e79b0e7ff20f1b2b8de1730a6790d6796aa207bedcf947a424b697c7",
+      "new_sha256": "11e92b526fe70cfe3e9dfb417c84f75c5cac9defafde6880108f4d79cff8429b"
+    },
+    {
+      "row": 498,
+      "reasons": [
+        "incomplete_required_arguments"
+      ],
+      "old_sha256": "f4b5f2be1c651473bae3bffb896a41ef2bfe02f4b83c3e3386ecf174a77fae04",
+      "new_sha256": "99488529abf344a3642d4dda3de471666c811502980700d66a2a82db355b5c18"
+    },
+    {
+      "row": 503,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol",
+        "incomplete_required_arguments"
+      ],
+      "old_sha256": "94dfd5c647accf2217dfbe336f30bde73380a563a15f7fc12816616ee6de317b",
+      "new_sha256": "88815b9658d748ca1083d0e1331a30e4d8be93e011014c840abab3c715b891f3"
+    },
+    {
+      "row": 504,
+      "reasons": [
+        "incomplete_required_arguments"
+      ],
+      "old_sha256": "b879c6f2c9b4c11c0086930cf89d116cba5b6c3f358fd585f92795250e4136f0",
+      "new_sha256": "99488529abf344a3642d4dda3de471666c811502980700d66a2a82db355b5c18"
+    },
+    {
+      "row": 508,
+      "reasons": [
+        "remove_closed_thinking_for_no_thinking_protocol"
+      ],
+      "old_sha256": "8debf70f5a3b4b7479e3368d05c0c6a5cb25cdbcc0cf7ff4b0fe6be3d8d80b66",
+      "new_sha256": "5c7eda94281a36acf52e7907a0a51ebae9338574ce4cc25b9571075851713e14"
+    }
+  ],
+  "teacher_targets_status": "absent; fresh full-manual capture required before training",
+  "split_counts": {
+    "train": 405,
+    "val": 107
+  },
+  "audit": {
+    "n": 512,
+    "counts": {
+      "argument_rows_checked": 168,
+      "selection_rows_checked": 344
+    },
+    "supervision_flags": [],
+    "heldout_proofs": [
+      {
+        "id": "dev-gist-select",
+        "tool": "mcp__github__get_gist",
+        "prompt_evidence": "Get gist content of a particular gist, by gist ID",
+        "training_message_mentions": [],
+        "training_description_questions": []
+      },
+      {
+        "id": "dev-gist-args",
+        "tool": "mcp__github__get_gist",
+        "prompt_evidence": "- `gist_id` [string] (required): The ID of the gist",
+        "training_message_mentions": [],
+        "training_description_questions": []
+      },
+      {
+        "id": "dev-tag-select",
+        "tool": "mcp__github__get_tag",
+        "prompt_evidence": "Get details about a specific git tag in a GitHub repository",
+        "training_message_mentions": [],
+        "training_description_questions": []
+      },
+      {
+        "id": "dev-tag-args",
+        "tool": "mcp__github__get_tag",
+        "prompt_evidence": "Get details about a specific git tag in a GitHub repository",
+        "training_message_mentions": [],
+        "training_description_questions": []
+      },
+      {
+        "id": "dev-discussions-select",
+        "tool": "mcp__github__list_discussions",
+        "prompt_evidence": "List discussions for a repository or organisation.",
+        "training_message_mentions": [],
+        "training_description_questions": []
+      },
+      {
+        "id": "dev-discussions-args",
+        "tool": "mcp__github__list_discussions",
+        "prompt_evidence": "- `owner` [string] (required): Repository owner",
+        "training_message_mentions": [],
+        "training_description_questions": []
+      },
+      {
+        "id": "test-advisory-select",
+        "tool": "mcp__github__get_global_security_advisory",
+        "prompt_evidence": "Get a global security advisory",
+        "training_message_mentions": [],
+        "training_description_questions": []
+      },
+      {
+        "id": "test-advisory-args",
+        "tool": "mcp__github__get_global_security_advisory",
+        "prompt_evidence": "- `ghsaId` [string] (required): GitHub Security Advisory ID (format: GHSA-xxxx-xxxx-xxxx).",
+        "training_message_mentions": [],
+        "training_description_questions": []
+      },
+      {
+        "id": "test-prbody-select",
+        "tool": "mcp__github__update_pull_request_body",
+        "prompt_evidence": "Update the body description of an existing pull request.",
+        "training_message_mentions": [],
+        "training_description_questions": []
+      },
+      {
+        "id": "test-prbody-args",
+        "tool": "mcp__github__update_pull_request_body",
+        "prompt_evidence": "Update the body description of an existing pull request.",
+        "training_message_mentions": [],
+        "training_description_questions": []
+      },
+      {
+        "id": "test-comment-select",
+        "tool": "mcp__github__discussion_comment_write",
+        "prompt_evidence": "Write operations for discussion comments.",
+        "training_message_mentions": [],
+        "training_description_questions": []
+      },
+      {
+        "id": "test-comment-operation",
+        "tool": "mcp__github__discussion_comment_write",
+        "prompt_evidence": "'mark_answer' - marks a discussion comment as the answer (Q&A only).",
+        "training_message_mentions": [],
+        "training_description_questions": []
+      }
+    ],
+    "limitations": [
+      "Required-field/name checks do not certify all prose or conditional arguments",
+      "Manual/source-chunk context may contain held-out tools; no supervised question/answer targets do",
+      "No absence-of-overfitting claim until free-generation results exist",
+      "Holdout tools chosen after historical dataset inspection; prospective test only"
+    ]
+  },
+  "output_sha256": "3ca7fe9e13b05b5483ca2dc70f6d2ee40a0bda6a235d8183ee7b78fc72f43d80"
+}

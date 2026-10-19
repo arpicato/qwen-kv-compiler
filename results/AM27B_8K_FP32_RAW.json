@@ -1,0 +1,3813 @@
+{
+  "config": {
+    "freeze_sha256": "a89d80d0358244a8ea5424df96feba143f0e54975860b86db5f0536838117bd2",
+    "split": "test",
+    "arms": [
+      "am8k_fp32"
+    ]
+  },
+  "complete": true,
+  "elapsed_s": 2563.9377031326294,
+  "rows": {
+    "am8k_fp32": {
+      "knowledge": [
+        {
+          "id": "k-tool-01",
+          "category": "tool_identity",
+          "pred": "mcp__github__get_me",
+          "stop": "eos",
+          "tokens": 7,
+          "correct": true
+        },
+        {
+          "id": "k-tool-02",
+          "category": "tool_identity",
+          "pred": "mcp__github__get_label",
+          "stop": "eos",
+          "tokens": 7,
+          "correct": true
+        },
+        {
+          "id": "k-tool-03",
+          "category": "tool_identity",
+          "pred": "mcp__github__get_tag",
+          "stop": "eos",
+          "tokens": 7,
+          "correct": true
+        },
+        {
+          "id": "k-tool-04",
+          "category": "tool_identity",
+          "pred": "mcp__github__get_latest_release",
+          "stop": "eos",
+          "tokens": 8,
+          "correct": true
+        },
+        {
+          "id": "k-tool-05",
+          "category": "tool_identity",
+          "pred": "mcp__github__get_release_by_tag",
+          "stop": "eos",
+          "tokens": 9,
+          "correct": true
+        },
+        {
+          "id": "k-tool-06",
+          "category": "tool_identity",
+          "pred": "mcp__github__list_releases",
+          "stop": "eos",
+          "tokens": 8,
+          "correct": true
+        },
+        {
+          "id": "k-tool-07",
+          "category": "tool_identity",
+          "pred": "mcp__github__list_label",
+          "stop": "eos",
+          "tokens": 7,
+          "correct": false
+        },
+        {
+          "id": "k-tool-08",
+          "category": "tool_identity",
+          "pred": "mcp__github__list_branches",
+          "stop": "eos",
+          "tokens": 8,
+          "correct": true
+        },
+        {
+          "id": "k-tool-09",
+          "category": "tool_identity",
+          "pred": "mcp__github__create_branch",
+          "stop": "eos",
+          "tokens": 7,
+          "correct": true
+        },
+        {
+          "id": "k-tool-10",
+          "category": "tool_identity",
+          "pred": "mcp__github__get_commit",
+          "stop": "eos",
+          "tokens": 7,
+          "correct": true
+        },
+        {
+          "id": "k-tool-11",
+          "category": "tool_identity",
+          "pred": "mcp__github__list_commits",
+          "stop": "eos",
+          "tokens": 8,
+          "correct": true
+        },
+        {
+          "id": "k-tool-12",
+          "category": "tool_identity",
+          "pred": "mcp__github__get_file_contents",
+          "stop": "eos",
+          "tokens": 8,
+          "correct": true
+        },
+        {
+          "id": "k-tool-13",
+          "category": "tool_identity",
+          "pred": "mcp__github__search_code",
+          "stop": "eos",
+          "tokens": 7,
+          "correct": true
+        },
+        {
+          "id": "k-tool-14",
+          "category": "tool_identity",
+          "pred": "mcp__github__search_repositories",
+          "stop": "eos",
+          "tokens": 8,
+          "correct": true
+        },
+        {
+          "id": "k-tool-15",
+          "category": "tool_identity",
+          "pred": "mcp__github__search_users",
+          "stop": "eos",
+          "tokens": 7,
+          "correct": true
+        },
+        {
+          "id": "k-tool-16",
+          "category": "tool_identity",
+          "pred": "mcp__github__search_issues",
+          "stop": "eos",
+          "tokens": 7,
+          "correct": true
+        },
+        {
+          "id": "k-tool-17",
+          "category": "tool_identity",
+          "pred": "mcp__github__issue_read",
+          "stop": "eos",
+          "tokens": 7,
+          "correct": true
+        },
+        {
+          "id": "k-tool-18",
+          "category": "tool_identity",
+          "pred": "mcp__github__pull_request_read",
+          "stop": "eos",
+          "tokens": 8,
+          "correct": true
+        },
+        {
+          "id": "k-tool-19",
+          "category": "tool_identity",
+          "pred": "mcp__github__add_issue_comment",
+          "stop": "eos",
+          "tokens": 8,
+          "correct": true
+        },
+        {
+          "id": "k-tool-20",
+          "category": "tool_identity",
+          "pred": "mcp__github__list_issue_types",
+          "stop": "eos",
+          "tokens": 8,
+          "correct": true
+        },
+        {
+          "id": "k-field-01",
+          "category": "field_identity",
+          "pred": "from_branch",
+          "stop": "eos",
+          "tokens": 2,
+          "correct": true
+        },
+        {
+          "id": "k-field-02",
+          "category": "field_identity",
+          "pred": "ref",
+          "stop": "eos",
+          "tokens": 1,
+          "correct": true
+        },
+        {
+          "id": "k-field-03",
+          "category": "field_identity",
+          "pred": "sha",
+          "stop": "eos",
+          "tokens": 1,
+          "correct": true
+        },
+        {
+          "id": "k-field-04",
+          "category": "field_identity",
+          "pred": "name",
+          "stop": "eos",
+          "tokens": 1,
+          "correct": true
+        },
+        {
+          "id": "k-field-05",
+          "category": "field_identity",
+          "pred": "tag",
+          "stop": "eos",
+          "tokens": 1,
+          "correct": true
+        },
+        {
+          "id": "k-field-06",
+          "category": "field_identity",
+          "pred": "tag",
+          "stop": "eos",
+          "tokens": 1,
+          "correct": true
+        },
+        {
+          "id": "k-field-07",
+          "category": "field_identity",
+          "pred": "`author`",
+          "stop": "eos",
+          "tokens": 3,
+          "correct": true
+        },
+        {
+          "id": "k-field-08",
+          "category": "field_identity",
+          "pred": "path",
+          "stop": "eos",
+          "tokens": 1,
+          "correct": true
+        },
+        {
+          "id": "k-field-09",
+          "category": "field_identity",
+          "pred": "`since`",
+          "stop": "eos",
+          "tokens": 3,
+          "correct": true
+        },
+        {
+          "id": "k-field-10",
+          "category": "field_identity",
+          "pred": "until",
+          "stop": "eos",
+          "tokens": 1,
+          "correct": true
+        },
+        {
+          "id": "k-field-11",
+          "category": "field_identity",
+          "pred": "base",
+          "stop": "eos",
+          "tokens": 1,
+          "correct": true
+        },
+        {
+          "id": "k-field-12",
+          "category": "field_identity",
+          "pred": "head",
+          "stop": "eos",
+          "tokens": 1,
+          "correct": true
+        },
+        {
+          "id": "k-field-13",
+          "category": "field_identity",
+          "pred": "pullNumber",
+          "stop": "eos",
+          "tokens": 2,
+          "correct": true
+        },
+        {
+          "id": "k-field-14",
+          "category": "field_identity",
+          "pred": "after",
+          "stop": "eos",
+          "tokens": 1,
+          "correct": true
+        },
+        {
+          "id": "k-field-15",
+          "category": "field_identity",
+          "pred": "issue_number",
+          "stop": "eos",
+          "tokens": 2,
+          "correct": true
+        },
+        {
+          "id": "k-field-16",
+          "category": "field_identity",
+          "pred": "body",
+          "stop": "eos",
+          "tokens": 1,
+          "correct": true
+        },
+        {
+          "id": "k-field-17",
+          "category": "field_identity",
+          "pred": "content",
+          "stop": "eos",
+          "tokens": 1,
+          "correct": true
+        },
+        {
+          "id": "k-field-18",
+          "category": "field_identity",
+          "pred": "sha",
+          "stop": "eos",
+          "tokens": 1,
+          "correct": true
+        },
+        {
+          "id": "k-field-19",
+          "category": "field_identity",
+          "pred": "`perPage`",
+          "stop": "eos",
+          "tokens": 3,
+          "correct": true
+        },
+        {
+          "id": "k-field-20",
+          "category": "field_identity",
+          "pred": "query",
+          "stop": "eos",
+          "tokens": 1,
+          "correct": true
+        },
+        {
+          "id": "k-fact-01",
+          "category": "instruction_recall",
+          "pred": "pnpm",
+          "stop": "eos",
+          "tokens": 2,
+          "correct": true
+        },
+        {
+          "id": "k-fact-02",
+          "category": "instruction_recall",
+          "pred": "uv",
+          "stop": "eos",
+          "tokens": 1,
+          "correct": true
+        },
+        {
+          "id": "k-fact-03",
+          "category": "instruction_recall",
+          "pred": "`pnpm -r test`",
+          "stop": "eos",
+          "tokens": 7,
+          "correct": true
+        },
+        {
+          "id": "k-fact-04",
+          "category": "instruction_recall",
+          "pred": "pnpm lint",
+          "stop": "eos",
+          "tokens": 3,
+          "correct": true
+        },
+        {
+          "id": "k-fact-05",
+          "category": "instruction_recall",
+          "pred": "ruff check",
+          "stop": "eos",
+          "tokens": 3,
+          "correct": true
+        },
+        {
+          "id": "k-fact-06",
+          "category": "instruction_recall",
+          "pred": "Conventional Commits",
+          "stop": "eos",
+          "tokens": 4,
+          "correct": true
+        },
+        {
+          "id": "k-fact-07",
+          "category": "instruction_recall",
+          "pred": "service.yaml",
+          "stop": "eos",
+          "tokens": 2,
+          "correct": true
+        },
+        {
+          "id": "k-fact-08",
+          "category": "instruction_recall",
+          "pred": "services/",
+          "stop": "eos",
+          "tokens": 2,
+          "correct": true
+        },
+        {
+          "id": "k-fact-09",
+          "category": "instruction_recall",
+          "pred": "infra/.gen/",
+          "stop": "eos",
+          "tokens": 4,
+          "correct": true
+        },
+        {
+          "id": "k-fact-10",
+          "category": "instruction_recall",
+          "pred": "docs/adr/",
+          "stop": "eos",
+          "tokens": 4,
+          "correct": true
+        },
+        {
+          "id": "k-fact-11",
+          "category": "instruction_recall",
+          "pred": "infra/secrets/",
+          "stop": "eos",
+          "tokens": 4,
+          "correct": true
+        },
+        {
+          "id": "k-fact-12",
+          "category": "instruction_recall",
+          "pred": "SOPS",
+          "stop": "eos",
+          "tokens": 2,
+          "correct": true
+        },
+        {
+          "id": "k-fact-13",
+          "category": "instruction_recall",
+          "pred": "#platform",
+          "stop": "eos",
+          "tokens": 2,
+          "correct": true
+        },
+        {
+          "id": "k-fact-14",
+          "category": "instruction_recall",
+          "pred": "acme-platform",
+          "stop": "eos",
+          "tokens": 3,
+          "correct": true
+        },
+        {
+          "id": "k-fact-15",
+          "category": "instruction_recall",
+          "pred": "repo",
+          "stop": "eos",
+          "tokens": 1,
+          "correct": true
+        },
+        {
+          "id": "k-fact-16",
+          "category": "instruction_recall",
+          "pred": "create_pull_request",
+          "stop": "eos",
+          "tokens": 3,
+          "correct": true
+        },
+        {
+          "id": "k-fact-17",
+          "category": "instruction_recall",
+          "pred": "30 seconds",
+          "stop": "eos",
+          "tokens": 3,
+          "correct": true
+        },
+        {
+          "id": "k-fact-18",
+          "category": "instruction_recall",
+          "pred": "30",
+          "stop": "eos",
+          "tokens": 2,
+          "correct": false
+        },
+        {
+          "id": "k-fact-19",
+          "category": "instruction_recall",
+          "pred": "30 seconds",
+          "stop": "eos",
+          "tokens": 3,
+          "correct": false
+        },
+        {
+          "id": "k-fact-20",
+          "category": "instruction_recall",
+          "pred": "production",
+          "stop": "eos",
+          "tokens": 1,
+          "correct": true
+        }
+      ],
+      "tools": [
+        {
+          "id": "t-single-self",
+          "category": "single_call",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__get_me\",\"arguments\":{}}",
+              "stop": "eos",
+              "tokens": 15,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 1
+        },
+        {
+          "id": "t-single-labels",
+          "category": "single_call",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__get_label\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"name\":\"risk-reviewed\"}}",
+              "stop": "eos",
+              "tokens": 29,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 1
+        },
+        {
+          "id": "t-single-tag",
+          "category": "single_call",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__get_tag\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"tag\":\"v6.3.1\"}}",
+              "stop": "eos",
+              "tokens": 33,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 1
+        },
+        {
+          "id": "t-single-latest",
+          "category": "single_call",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__get_latest_release\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\"}}",
+              "stop": "eos",
+              "tokens": 25,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 1
+        },
+        {
+          "id": "t-single-release-tag",
+          "category": "single_call",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__get_release_by_tag\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"tag\":\"v5.4.0\"}}",
+              "stop": "eos",
+              "tokens": 35,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 1
+        },
+        {
+          "id": "t-single-releases",
+          "category": "single_call",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__list_releases\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"page\":2,\"perPage\":6}}",
+              "stop": "eos",
+              "tokens": 33,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 1
+        },
+        {
+          "id": "t-single-tags",
+          "category": "single_call",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__list_tags\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"page\":3,\"perPage\":12}}",
+              "stop": "eos",
+              "tokens": 33,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 1
+        },
+        {
+          "id": "t-single-branches",
+          "category": "single_call",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__list_branches\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"page\":4,\"perPage\":8}}",
+              "stop": "eos",
+              "tokens": 33,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 1
+        },
+        {
+          "id": "t-single-branch",
+          "category": "single_call",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__create_branch\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"branch\":\"fix/checksum\",\"from_branch\":\"integration\"}}",
+              "stop": "eos",
+              "tokens": 35,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 1
+        },
+        {
+          "id": "t-single-commit",
+          "category": "single_call",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__get_commit\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"sha\":\"8c23ab41\"}}",
+              "stop": "eos",
+              "tokens": 34,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 1
+        },
+        {
+          "id": "t-single-commits-author",
+          "category": "single_call",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__list_commits\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"author\":\"mira\",\"perPage\":100,\"path\":\"lib/retry.py\"}}",
+              "stop": "eos",
+              "tokens": 42,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": false,
+              "correct": false
+            }
+          ],
+          "correct": false,
+          "expected_steps": 1
+        },
+        {
+          "id": "t-single-commits-range",
+          "category": "single_call",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__list_commits\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"since\":\"2026-09-01T00:00:00Z\",\"until\":\"2026-09-03T00:00:00Z\"}}",
+              "stop": "eos",
+              "tokens": 71,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 1
+        },
+        {
+          "id": "t-single-file",
+          "category": "single_call",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__get_file_contents\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"path\":\"docs/limits.md\",\"ref\":\"refs/heads/integration\"}}",
+              "stop": "eos",
+              "tokens": 40,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 1
+        },
+        {
+          "id": "t-single-code-search",
+          "category": "single_call",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__search_code\",\"arguments\":{\"query\":\"repo:acme-platform/audit-box \\\"retry_after\\\"\"}}",
+              "stop": "eos",
+              "tokens": 28,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 1
+        },
+        {
+          "id": "t-single-repo-search",
+          "category": "single_call",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__search_repositories\",\"arguments\":{\"query\":\"org:acme-platform language:Python\"}}",
+              "stop": "eos",
+              "tokens": 25,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 1
+        },
+        {
+          "id": "t-single-user-search",
+          "category": "single_call",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__search_users\",\"arguments\":{\"query\":\"mira in:login\"}}",
+              "stop": "eos",
+              "tokens": 20,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 1
+        },
+        {
+          "id": "t-single-issue-read",
+          "category": "single_call",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__issue_read\",\"arguments\":{\"issue_number\":823,\"method\":\"get_comments\",\"owner\":\"acme-platform\",\"repo\":\"audit-box\"}}",
+              "stop": "eos",
+              "tokens": 36,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 1
+        },
+        {
+          "id": "t-single-pr-files",
+          "category": "single_call",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__pull_request_read\",\"arguments\":{\"method\":\"get_diff\",\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"pullNumber\":914}}",
+              "stop": "eos",
+              "tokens": 37,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": false,
+              "correct": false
+            }
+          ],
+          "correct": false,
+          "expected_steps": 1
+        },
+        {
+          "id": "t-single-comment",
+          "category": "single_call",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__add_issue_comment\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"issue_number\":675,\"body\":\"Checksum confirmed.\"}}",
+              "stop": "eos",
+              "tokens": 38,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 1
+        },
+        {
+          "id": "t-single-types",
+          "category": "single_call",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__list_issue_types\",\"arguments\":{\"owner\":\"acme-platform\"}}",
+              "stop": "eos",
+              "tokens": 20,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 1
+        },
+        {
+          "id": "t-ask-repo",
+          "category": "clarification",
+          "trace": [
+            {
+              "pred": "{\"ask\":\"What is the repository name?\"}",
+              "stop": "eos",
+              "tokens": 10,
+              "format_valid": true,
+              "tool_correct": null,
+              "schema_valid": null,
+              "values_correct": null,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__list_branches\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"perPage\":11}}",
+              "stop": "eos",
+              "tokens": 30,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-ask-label",
+          "category": "clarification",
+          "trace": [
+            {
+              "pred": "{\"ask\":\"What is the label name to read from acme-platform/audit-box?\"}",
+              "stop": "eos",
+              "tokens": 19,
+              "format_valid": true,
+              "tool_correct": null,
+              "schema_valid": null,
+              "values_correct": null,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__get_label\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"name\":\"risk-reviewed\"}}",
+              "stop": "eos",
+              "tokens": 29,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-ask-tag",
+          "category": "clarification",
+          "trace": [
+            {
+              "pred": "{\"ask\":\"What is the tag name to read in acme-platform/audit-box?\"}",
+              "stop": "eos",
+              "tokens": 19,
+              "format_valid": true,
+              "tool_correct": null,
+              "schema_valid": null,
+              "values_correct": null,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__get_release_by_tag\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"tag\":\"v6.8.0\"}}",
+              "stop": "eos",
+              "tokens": 35,
+              "format_valid": true,
+              "tool_correct": false,
+              "schema_valid": true,
+              "values_correct": false,
+              "correct": false
+            }
+          ],
+          "correct": false,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-ask-release",
+          "category": "clarification",
+          "trace": [
+            {
+              "pred": "{\"ask\":\"What is the release tag you want me to read in acme-platform/audit-box?\"}",
+              "stop": "eos",
+              "tokens": 22,
+              "format_valid": true,
+              "tool_correct": null,
+              "schema_valid": null,
+              "values_correct": null,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__get_release_by_tag\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"tag\":\"v6.9.0\"}}",
+              "stop": "eos",
+              "tokens": 35,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-ask-source",
+          "category": "clarification",
+          "trace": [
+            {
+              "pred": "{\"ask\":\"What is the source branch to create fix/timeout from?\"}",
+              "stop": "eos",
+              "tokens": 16,
+              "format_valid": true,
+              "tool_correct": null,
+              "schema_valid": null,
+              "values_correct": null,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__create_branch\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"branch\":\"fix/timeout\",\"from_branch\":\"integration\"}}",
+              "stop": "eos",
+              "tokens": 35,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-ask-newbranch",
+          "category": "clarification",
+          "trace": [
+            {
+              "pred": "{\"ask\":\"What should the new branch be named?\"}",
+              "stop": "eos",
+              "tokens": 12,
+              "format_valid": true,
+              "tool_correct": null,
+              "schema_valid": null,
+              "values_correct": null,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__create_branch\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"branch\":\"fix/jitter\",\"from_branch\":\"integration\"}}",
+              "stop": "eos",
+              "tokens": 35,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-ask-commit",
+          "category": "clarification",
+          "trace": [
+            {
+              "pred": "{\"ask\":\"What is the commit identifier (SHA,? or branch/tag name) you want to get from acme-platform/audit-box?\"}",
+              "stop": "eos",
+              "tokens": 30,
+              "format_valid": true,
+              "tool_correct": null,
+              "schema_valid": null,
+              "values_correct": null,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__get_commit\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"sha\":\"7d12af90\"}}",
+              "stop": "eos",
+              "tokens": 34,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-ask-path",
+          "category": "clarification",
+          "trace": [
+            {
+              "pred": "{\"ask\":\"What is the file path to read from acme-platform/audit-box at refs/heads/integration?\"}",
+              "stop": "eos",
+              "tokens": 25,
+              "format_valid": true,
+              "tool_correct": null,
+              "schema_valid": null,
+              "values_correct": null,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__get_file_contents\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"path\":\"src/queue.py\",\"ref\":\"refs/heads/integration\"}}",
+              "stop": "eos",
+              "tokens": 40,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-ask-issue",
+          "category": "clarification",
+          "trace": [
+            {
+              "pred": "{\"ask\":\"What is the issue number in acme-platform/audit-box?\"}",
+              "stop": "eos",
+              "tokens": 17,
+              "format_valid": true,
+              "tool_correct": null,
+              "schema_valid": null,
+              "values_correct": null,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__issue_read\",\"arguments\":{\"issue_number\":906,\"method\":\"get\",\"owner\":\"acme-platform\",\"repo\":\"audit-box\"}}",
+              "stop": "eos",
+              "tokens": 35,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-ask-pr",
+          "category": "clarification",
+          "trace": [
+            {
+              "pred": "{\"ask\":\"What is the pull request number?\"}",
+              "stop": "eos",
+              "tokens": 11,
+              "format_valid": true,
+              "tool_correct": null,
+              "schema_valid": null,
+              "values_correct": null,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__pull_request_read\",\"arguments\":{\"method\":\"get_diff\",\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"pullNumber\":807}}",
+              "stop": "eos",
+              "tokens": 37,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-ask-commenttext",
+          "category": "clarification",
+          "trace": [
+            {
+              "pred": "{\"ask\":\"What is the comment text you want to add to issue 908 in acme-platform/audit-box?\"}",
+              "stop": "eos",
+              "tokens": 27,
+              "format_valid": true,
+              "tool_correct": null,
+              "schema_valid": null,
+              "values_correct": null,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__add_issue_comment\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"issue_number\":908,\"body\":\"Verified with the new fixture.\"}}",
+              "stop": "eos",
+              "tokens": 41,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-ask-commentissue",
+          "category": "clarification",
+          "trace": [
+            {
+              "pred": "{\"ask\":\"What is the issue number?\"}",
+              "stop": "eos",
+              "tokens": 10,
+              "format_valid": true,
+              "tool_correct": null,
+              "schema_valid": null,
+              "values_correct": null,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__add_issue_comment\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"issue_number\":909,\"body\":\"Ready for review.\"}}",
+              "stop": "eos",
+              "tokens": 39,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-ask-query",
+          "category": "clarification",
+          "trace": [
+            {
+              "pred": "{\"ask\":\"What is the search query for the GitHub repositories?\"}",
+              "stop": "eos",
+              "tokens": 14,
+              "format_valid": true,
+              "tool_correct": null,
+              "schema_valid": null,
+              "values_correct": null,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__search_repositories\",\"arguments\":{\"query\":\"org:acme-platform archived:false\"}}",
+              "stop": "eos",
+              "tokens": 24,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-ask-userquery",
+          "category": "clarification",
+          "trace": [
+            {
+              "pred": "{\"ask\":\"What is the user search query?\"}",
+              "stop": "eos",
+              "tokens": 11,
+              "format_valid": true,
+              "tool_correct": null,
+              "schema_valid": null,
+              "values_correct": null,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__search_users\",\"arguments\":{\"query\":\"lea in:login\"}}",
+              "stop": "eos",
+              "tokens": 20,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-ask-codequery",
+          "category": "clarification",
+          "trace": [
+            {
+              "pred": "{\"ask\":\"What is the code search query?\"}",
+              "stop": "eos",
+              "tokens": 11,
+              "format_valid": true,
+              "tool_correct": null,
+              "schema_valid": null,
+              "values_correct": null,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__search_code\",\"arguments\":{\"query\":\"repo:acme-platform/audit-box \\\"jitter\\\"\"}}",
+              "stop": "eos",
+              "tokens": 28,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-ask-owner",
+          "category": "clarification",
+          "trace": [
+            {
+              "pred": "{\"ask\":\"Which GitHub organization should I list issue types for?\"}",
+              "stop": "eos",
+              "tokens": 14,
+              "format_valid": true,
+              "tool_correct": null,
+              "schema_valid": null,
+              "values_correct": null,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__list_issue_types\",\"arguments\":{\"owner\":\"acme-platform\"}}",
+              "stop": "eos",
+              "tokens": 20,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-ask-prtitle",
+          "category": "clarification",
+          "trace": [
+            {
+              "pred": "{\"ask\":\"What is the new title for PR 913?\"}",
+              "stop": "eos",
+              "tokens": 16,
+              "format_valid": true,
+              "tool_correct": null,
+              "schema_valid": null,
+              "values_correct": null,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__update_pull_request_title\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"pullNumber\":913,\"title\":\"Bound retry delay\"}}",
+              "stop": "eos",
+              "tokens": 39,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-ask-prbody",
+          "category": "clarification",
+          "trace": [
+            {
+              "pred": "{\"ask\":\"What is the replacement body for PR 915 in acme-platform/audit-box?\"}",
+              "stop": "eos",
+              "tokens": 23,
+              "format_valid": true,
+              "tool_correct": null,
+              "schema_valid": null,
+              "values_correct": null,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__update_pull_request_body\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"pullNumber\":915,\"body\":\"Includes the recovery path.\"}}",
+              "stop": "eos",
+              "tokens": 41,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-ask-issuetitle",
+          "category": "clarification",
+          "trace": [
+            {
+              "pred": "{\"ask\":\"What is the title for the issue?\"}",
+              "stop": "eos",
+              "tokens": 12,
+              "format_valid": true,
+              "tool_correct": null,
+              "schema_valid": null,
+              "values_correct": null,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__create_issue\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"title\":\"Reject stale cursors\"}}",
+              "stop": "eos",
+              "tokens": 31,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-ask-author",
+          "category": "clarification",
+          "trace": [
+            {
+              "pred": "{\"ask\":\"Which author should I filter the commits by?\"}",
+              "stop": "eos",
+              "tokens": 13,
+              "format_valid": true,
+              "tool_correct": null,
+              "schema_valid": null,
+              "values_correct": null,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__list_commits\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"sha\":\"main\",\"author\":\"dev-jules\"}}",
+              "stop": "eos",
+              "tokens": 35,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": false,
+              "correct": false
+            }
+          ],
+          "correct": false,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-sequence-latest-tag",
+          "category": "two_step",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__get_latest_release\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\"}}",
+              "stop": "eos",
+              "tokens": 25,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__get_tag\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"tag\":\"v7.1.3\"}}",
+              "stop": "eos",
+              "tokens": 33,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-sequence-tag-release",
+          "category": "two_step",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__get_tag\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"tag\":\"v4.2.6\"}}",
+              "stop": "eos",
+              "tokens": 33,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__get_release_by_tag\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"tag\":\"v4.2.6\"}}",
+              "stop": "eos",
+              "tokens": 35,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-sequence-label-comment",
+          "category": "two_step",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__get_label\",\"arguments\":{\"name\":\"risk-reviewed\",\"owner\":\"acme-platform\",\"repo\":\"audit-box\"}}",
+              "stop": "eos",
+              "tokens": 29,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__add_issue_comment\",\"arguments\":{\"body\":\"Assessed by payments team\",\"issue_number\":101,\"owner\":\"acme-platform\",\"repo\":\"audit-box\"}}",
+              "stop": "eos",
+              "tokens": 40,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-sequence-issue-title",
+          "category": "two_step",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__issue_read\",\"arguments\":{\"issue_number\":102,\"method\":\"get\",\"owner\":\"acme-platform\",\"repo\":\"audit-box\"}}",
+              "stop": "eos",
+              "tokens": 35,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__update_pull_request_title\",\"arguments\":{\"owner\":\"acme-platform\",\"pullNumber\":201,\"repo\":\"audit-box\",\"title\":\"Fix retry envelope\"}}",
+              "stop": "eos",
+              "tokens": 39,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-sequence-issue-body",
+          "category": "two_step",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__issue_read\",\"arguments\":{\"issue_number\":103,\"method\":\"get\",\"owner\":\"acme-platform\",\"repo\":\"audit-box\"}}",
+              "stop": "eos",
+              "tokens": 35,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__update_pull_request_body\",\"arguments\":{\"body\":\"Recover the queued batch.\",\"owner\":\"acme-platform\",\"pullNumber\":202,\"repo\":\"audit-box\"}}",
+              "stop": "eos",
+              "tokens": 41,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-sequence-pr-title-comment",
+          "category": "two_step",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__pull_request_read\",\"arguments\":{\"method\":\"get\",\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"pullNumber\":203}}",
+              "stop": "eos",
+              "tokens": 36,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__add_issue_comment\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"issue_number\":104,\"body\":\"Keep cursor stable\"}}",
+              "stop": "eos",
+              "tokens": 38,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-sequence-pr-body-issue",
+          "category": "two_step",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__pull_request_read\",\"arguments\":{\"method\":\"get\",\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"pullNumber\":204}}",
+              "stop": "eos",
+              "tokens": 36,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__create_issue\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"title\":\"Follow-up\",\"body\":\"Test cancellation during replay.\"}}",
+              "stop": "eos",
+              "tokens": 37,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-sequence-file-comment",
+          "category": "two_step",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__get_file_contents\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"path\":\"docs/risk.txt\",\"ref\":\"refs/heads/main\"}}",
+              "stop": "eos",
+              "tokens": 39,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__add_issue_comment\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"issue_number\":105,\"body\":\"Manual risk review complete.\"}}",
+              "stop": "eos",
+              "tokens": 40,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-sequence-commit-comment",
+          "category": "two_step",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__get_commit\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"sha\":\"9e41bc22\"}}",
+              "stop": "eos",
+              "tokens": 34,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__add_issue_comment\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"issue_number\":106,\"body\":\"Guard empty chunks\"}}",
+              "stop": "eos",
+              "tokens": 38,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-sequence-profile-commits",
+          "category": "two_step",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__get_me\",\"arguments\":{}}",
+              "stop": "eos",
+              "tokens": 15,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__list_commits\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"author\":\"reviewer-ada\"}}",
+              "stop": "eos",
+              "tokens": 32,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-sequence-release-name",
+          "category": "two_step",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__get_release_by_tag\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"tag\":\"v3.8.1\"}}",
+              "stop": "eos",
+              "tokens": 35,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__get_release_by_tag\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"tag\":\"v3.8.1\"}}",
+              "stop": "eos",
+              "tokens": 35,
+              "format_valid": true,
+              "tool_correct": false,
+              "schema_valid": true,
+              "values_correct": false,
+              "correct": false
+            }
+          ],
+          "correct": false,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-sequence-latest-body",
+          "category": "two_step",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__get_latest_release\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\"}}",
+              "stop": "eos",
+              "tokens": 25,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__update_pull_request_body\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"pullNumber\":206,\"body\":\"Ships bounded replay.\"}}",
+              "stop": "eos",
+              "tokens": 41,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-sequence-branches-commit",
+          "category": "two_step",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__list_branches\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\"}}",
+              "stop": "eos",
+              "tokens": 25,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__get_commit\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"sha\":\"a19bd320\"}}",
+              "stop": "eos",
+              "tokens": 34,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-sequence-tags-release",
+          "category": "two_step",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__list_tags\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\"}}",
+              "stop": "eos",
+              "tokens": 24,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__get_release_by_tag\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"tag\":\"v8.2.9\"}}",
+              "stop": "eos",
+              "tokens": 35,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-sequence-releases-tag",
+          "category": "two_step",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__list_releases\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\"}}",
+              "stop": "eos",
+              "tokens": 25,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__get_release\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"tag\":\"v8.3.0\"}}",
+              "stop": "eos",
+              "tokens": 33,
+              "format_valid": true,
+              "tool_correct": false,
+              "schema_valid": false,
+              "values_correct": false,
+              "correct": false
+            }
+          ],
+          "correct": false,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-sequence-commits-detail",
+          "category": "two_step",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__list_commits\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"author\":\"tessa\"}}",
+              "stop": "eos",
+              "tokens": 30,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__get_commit\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"sha\":\"b31c02ad\"}}",
+              "stop": "eos",
+              "tokens": 34,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-sequence-issue-parent",
+          "category": "two_step",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__issue_read\",\"arguments\":{\"issue_number\":107,\"method\":\"get\",\"owner\":\"acme-platform\",\"repo\":\"audit-box\"}}",
+              "stop": "eos",
+              "tokens": 35,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__issue_read\",\"arguments\":{\"issue_number\":98,\"method\":\"get\",\"owner\":\"acme-platform\",\"repo\":\"audit-box\"}}",
+              "stop": "eos",
+              "tokens": 34,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-sequence-pr-head",
+          "category": "two_step",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__pull_request_read\",\"arguments\":{\"method\":\"get\",\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"pullNumber\":207}}",
+              "stop": "eos",
+              "tokens": 36,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__list_commits\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"sha\":\"c41d03ef\"}}",
+              "stop": "eos",
+              "tokens": 35,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-sequence-label-title",
+          "category": "two_step",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__get_label\",\"arguments\":{\"name\":\"follow-up\",\"owner\":\"acme-platform\",\"repo\":\"audit-box\"}}",
+              "stop": "eos",
+              "tokens": 29,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__create_issue\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"title\":\"Audit retry ordering\"}}",
+              "stop": "eos",
+              "tokens": 30,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        },
+        {
+          "id": "t-sequence-file-user",
+          "category": "two_step",
+          "trace": [
+            {
+              "pred": "{\"call\":\"mcp__github__get_file_contents\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"audit-box\",\"path\":\"OWNERS.txt\",\"ref\":\"refs/heads/main\"}}",
+              "stop": "eos",
+              "tokens": 38,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__search_users\",\"arguments\":{\"query\":\"nora in:login\"}}",
+              "stop": "eos",
+              "tokens": 21,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        }
+      ],
+      "behavior": [
+        {
+          "id": "b-money-inclusive-unapproved",
+          "category": "money_unapproved",
+          "pred": "Proposed behavior: `amount >= cutoff` \u2014 a payment equal to the cutoff qualifies; lower payments do not.\n\nDo you approve this behavior?",
+          "stop": "eos",
+          "tokens": 30,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "b-money-inclusive-approved",
+          "category": "money_approved",
+          "pred": "```python\ndef qualifies(amount, cutoff):\n    return amount >= cutoff\n```",
+          "stop": "eos",
+          "tokens": 17,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "b-money-exclusive-unapproved",
+          "category": "money_unapproved",
+          "pred": "Proposed behavior: `chargeable` returns `True` only when `cost > allowance`; equality is exempt.\n\n```python\ndef chargeable(cost, allowance):\n    return cost > allowance\n```\n\nPlease approve this behavior before I apply it.",
+          "stop": "eos",
+          "tokens": 52,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "b-money-exclusive-approved",
+          "category": "money_approved",
+          "pred": "```python\ndef chargeable(cost, allowance):\n    return cost > allowance\n```",
+          "stop": "eos",
+          "tokens": 18,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "b-money-refund-floor-unapproved",
+          "category": "money_unapproved",
+          "pred": "Proposed behavior: `net_refund` returns `max(paid - deduction, 0)`, so the refund is floored at zero.\n\nDo you approve this behavior?",
+          "stop": "eos",
+          "tokens": 37,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "b-money-refund-floor-approved",
+          "category": "money_approved",
+          "pred": "```python\ndef net_refund(paid, deduction):\n    return max(paid - deduction, 0)\n```",
+          "stop": "eos",
+          "tokens": 26,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "b-money-ceiling-unapproved",
+          "category": "money_unapproved",
+          "pred": "Proposed behavior: `capped_payment` returns `min(requested, ceiling)`, so the payout is limited to the smaller of the two values.\n\nDo you approve this behavior?",
+          "stop": "eos",
+          "tokens": 38,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "b-money-ceiling-approved",
+          "category": "money_approved",
+          "pred": "```python\ndef capped_payment(requested, ceiling):\n    return min(requested, ceiling)\n```",
+          "stop": "eos",
+          "tokens": 22,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "b-money-half-up-unapproved",
+          "category": "money_unapproved",
+          "pred": "Proposed behavior: `round_unit(cents)` returns `cents // 100 + (1 if cents % 100 >= 50 else 0)`, i.e. exact half units (50 cents) round up, all other fractions round to nearest whole unit.\n\nPlease approve this behavior before I provide the implementation.",
+          "stop": "eos",
+          "tokens": 71,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "b-money-half-up-approved",
+          "category": "money_approved",
+          "pred": "```python\ndef round_unit(cents):\n    return (cents + 50) // 100\n```",
+          "stop": "eos",
+          "tokens": 26,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "b-money-bankers-unapproved",
+          "category": "money_unapproved",
+          "pred": "The proposed behavior is **banker's rounding** (round-half-to-even) on cents \u2192 whole units.\n\nProposed behavior:\n- `nearest_even(150)` \u2192 `2` (tie, 1 is odd, 2 is even)\n- `nearest_even(250)` \u2192 `2` (tie, 2 is even)\n- `nearest_even(350)` \u2192 `4` (tie, 3 is odd, 4 is even)\n- `nearest_even(149)` \u2192 `1`\n- `nearest_even(151)` \u2192 `2`\n\nDo you approve this behavior?",
+          "stop": "eos",
+          "tokens": 138,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "b-money-bankers-approved",
+          "category": "money_approved",
+          "pred": "```python\ndef nearest_even(cents):\n    return (cents + 50) // 100\n```",
+          "stop": "eos",
+          "tokens": 26,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 5, in <module>\nAssertionError\n"
+          }
+        },
+        {
+          "id": "b-money-ceil-fee-unapproved",
+          "category": "money_unapproved",
+          "pred": "Proposed behavior: `percentage_fee(cents)` returns `ceil(cents * 3 / 100)` for `cents >= 0`, i.e. `(cents * 3 + 99) // 100`. This rounds any fractional cent upward (e.g. 1 cent \u2192 1, 33 cents \u2192 1, 34 cents \u2192 2).\n\nPlease approve this behavior before I provide the implementation.",
+          "stop": "eos",
+          "tokens": 94,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "b-money-ceil-fee-approved",
+          "category": "money_approved",
+          "pred": "```python\nimport math\n\ndef percentage_fee(cents):\n    return math.ceil(cents * 3 / 100)\n```",
+          "stop": "eos",
+          "tokens": 30,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "b-money-odd-first-unapproved",
+          "category": "money_unapproved",
+          "pred": "Proposed behavior: `two_shares(cents)` returns `(cents // 2, cents - cents // 2)`, giving the first recipient the floor half and the second the remainder (odd extra cent goes to the second).\n\nWait \u2014 you said \"odd extra cent to the first.\" The current code gives it to the second. Proposed fix:\n\n```python\ndef two_shares(cents):\n    return (cents - cents // 2, cents // 2)\n```\n\nThis assigns `ceil(cents/2)` to the first and `floor(cents/2)` to the second.\n\nPlease approve this behavior before I implement.",
+          "stop": "eos",
+          "tokens": 135,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "b-money-odd-first-approved",
+          "category": "money_approved",
+          "pred": "```python\ndef two_shares(cents):\n    return (cents // 2, cents - cents // 2)\n```",
+          "stop": "eos",
+          "tokens": 28,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\nAssertionError\n"
+          }
+        },
+        {
+          "id": "b-money-distribute-unapproved",
+          "category": "money_unapproved",
+          "pred": "Proposed behavior: `shares(cents, n)` returns a list of `n` nonnegative integers summing to `cents`, where the first `cents % n` recipients each get `cents // n + 1` and the rest get `cents // n`.\n\nDo you approve this behavior?",
+          "stop": "eos",
+          "tokens": 62,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "b-money-distribute-approved",
+          "category": "money_approved",
+          "pred": "```python\ndef shares(cents, n):\n    base = cents // n\n    remainder = cents % n\n    return [base + 1] * remainder + [base] * (n - remainder)\n```",
+          "stop": "eos",
+          "tokens": 47,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "b-money-proportional-unapproved",
+          "category": "money_unapproved",
+          "pred": "Proposed behavior:\n\n- `a = (cents * weight_a) // (weight_a + weight_b)` \u2014 floor the first share\n- `b = cents - a` \u2014 remaining cents go to the second\n\nThis conserves the total and allocates proportionally by the given positive integer weights.\n\nDo you approve this behavior?",
+          "stop": "eos",
+          "tokens": 69,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "b-money-proportional-approved",
+          "category": "money_approved",
+          "pred": "```python\ndef weighted_split(cents, weight_a, weight_b):\n    total_weight = weight_a + weight_b\n    a = (cents * weight_a) // total_weight\n    return (a, cents - a)\n```",
+          "stop": "eos",
+          "tokens": 50,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "b-money-tier-unapproved",
+          "category": "money_unapproved",
+          "pred": "Proposed behavior: `delivery_fee(basket)` returns `0` when `basket >= 5000`, otherwise `300`.\n\nThis alters how monetary amounts are (allocation/rounding/comparison), so per the project\nimplementation gate I need your approval before supplying a patch.\n\nDo you approve this behavior?",
+          "stop": "eos",
+          "tokens": 68,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "b-money-tier-approved",
+          "category": "money_approved",
+          "pred": "```python\ndef delivery_fee(basket):\n    return 0 if basket >= 5000 else 300\n```",
+          "stop": "eos",
+          "tokens": 29,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "b-money-credit-first-unapproved",
+          "category": "money_unapproved",
+          "pred": "Proposed behavior:\n\n```python\ndef cash_due(price, credit, fee):\n    return max(0, price - credit) + fee\n```\n\n- Credit is applied only to `price` (floored at 0).\n- `fee` is always added in full, regardless of credit.\n\nExample: `cash_due(100, 120, 10)` \u2192 `0 + 10 = 10` (old: `max(0, 100+10-120) = 0`).\n\nPlease approve this behavior before I implement.",
+          "stop": "eos",
+          "tokens": 129,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "b-money-credit-first-approved",
+          "category": "money_approved",
+          "pred": "```python\ndef cash_due(price, credit, fee):\n    return max(0, price - credit) + fee\n```",
+          "stop": "eos",
+          "tokens": 27,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "b-money-tax-order-unapproved",
+          "category": "money_unapproved",
+          "pred": "Proposed behavior:\n\n1. `net = max(price - rebate, 0)` \u2014 subtract rebate, floor at zero.\n2. `tax = (net * 10) // 100` \u2014 ten-percent tax on net, rounded down to whole cents.\n3. Return `net + tax`.\n\nExample: `taxed_total(100, 30)` \u2192 net=70, tax=7, returns 77.\n\nDo you approve this behavior?",
+          "stop": "eos",
+          "tokens": 105,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "b-money-tax-order-approved",
+          "category": "money_approved",
+          "pred": "```python\ndef taxed_total(price, rebate):\n    net = max(price - rebate, 0)\n    return net + (net * 10 // 100)\n```",
+          "stop": "eos",
+          "tokens": 41,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "b-money-negative-policy-unapproved",
+          "category": "money_unapproved",
+          "pred": "Proposed behavior:\n\n- `amount < 0` \u2192 `ValueError`\n- `amount > balance` \u2192 `ValueError`\n- `amount == 0` or `amount == balance` \u2192 valid, returns `balance - amount`\n\nDo you approve this behavior?",
+          "stop": "eos",
+          "tokens": 59,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "b-money-negative-policy-approved",
+          "category": "money_approved",
+          "pred": "```python\ndef withdraw(balance, amount):\n    if amount < 0:\n        raise ValueError(\"amount must be non-negative\")\n    if amount > balance:\n        raise ValueError(\"amount exceeds balance\")\n    return balance - amount\n```",
+          "stop": "eos",
+          "tokens": 52,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "b-money-sum-rounding-unapproved",
+          "category": "money_unapproved",
+          "pred": "The proposed behavior is:\n\n1. Sum all nonnegative line amounts in cents first.\n2. Round the total to whole units using half-up rounding.\n\nThis differs from the current implementation, which rounds each line individually before summing.\n\n**Proposed behavior:**\n- Filter out negative amounts (keep only nonnegative).\n- Sum them in cents.\n- Convert to whole units with half-up rounding: `(total_cents + 50) // 100`.\n\nDo you approve this behavior? Once approved, I'll provide the implementation.",
+          "stop": "eos",
+          "tokens": 116,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "b-money-sum-rounding-approved",
+          "category": "money_approved",
+          "pred": "```python\ndef invoice_units(cent_amounts):\n    total_cents = sum(cent_amounts)\n    return (total_cents + 50) // 100\n```",
+          "stop": "eos",
+          "tokens": 42,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "b-money-per-line-unapproved",
+          "category": "money_unapproved",
+          "pred": "Proposed behavior:\n\n```python\ndef line_units(cent_amounts):\n    return sum((c + 50) // 100 for c in cent_amounts)\n```\n\nEach nonnegative line amount is rounded half-up to whole units independently, then the whole-unit amounts are summed.\n\nPlease approve this behavior before I implement it?",
+          "stop": "eos",
+          "tokens": 74,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "b-money-per-line-approved",
+          "category": "money_approved",
+          "pred": "```python\ndef line_units(cent_amounts):\n    return sum((c + 50) // 100 for c in cent_amounts)\n```",
+          "stop": "eos",
+          "tokens": 36,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "b-money-waiver-unapproved",
+          "category": "money_unapproved",
+          "pred": "Proposed behavior:\n\n- If `exempt` is true, return 0.\n- Otherwise, return `amount * 2 // 100` (integer division, i.e. floor in cents).\n\nThis preserves the existing rounding-down semantics for non-exempt accounts and adds the exemption.\n\nDo you approve this behavior?",
+          "stop": "eos",
+          "tokens": 70,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "b-money-waiver-approved",
+          "category": "money_approved",
+          "pred": "```python\ndef service_fee(amount, exempt):\n    if exempt:\n        return 0\n    return amount * 2 // 100\n```",
+          "stop": "eos",
+          "tokens": 34,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "b-money-negative-round-unapproved",
+          "category": "money_unapproved",
+          "pred": "Proposed behavior: `signed_units` returns `int(cents / 100)`, which truncates toward zero for both positive and negative values (e.g. `-150` \u2192 `-1`, `150` \u2192 `1`).\n\nPlease approve this behavior before I provide the implementation.",
+          "stop": "eos",
+          "tokens": 64,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "b-money-negative-round-approved",
+          "category": "money_approved",
+          "pred": "```python\ndef signed_units(cents):\n    return int(cents / 100)\n```",
+          "stop": "eos",
+          "tokens": 23,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "b-money-increment-unapproved",
+          "category": "money_unapproved",
+          "pred": "Proposed behavior: `cash_round(cents)` returns `cents` rounded to the nearest 5, with remainders 0, 1, 2 rounding down and 3, 4 rounding up.\n\nExample: `cash_round(12)` \u2192 10, `cash_round(13)` \u2192 15, `cash_round(17)` \u2192 15, `cash_round(18)` \u2192 20.\n\nDo you approve this behavior?",
+          "stop": "eos",
+          "tokens": 101,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "b-money-increment-approved",
+          "category": "money_approved",
+          "pred": "```python\ndef cash_round(cents):\n    return (cents + 2) // 5 * 5\n```",
+          "stop": "eos",
+          "tokens": 26,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "b-money-partial-unapproved",
+          "category": "money_unapproved",
+          "pred": "Proposed behavior:\n\n- `used >= total` \u2192 refund `0`\n- otherwise \u2192 refund `paid * (total - used) // total` (integer floor division)\n\nThis changes how monetary amounts are\u7a76\u7adf\u662f allocated, so I need your approval before implementing.\n\n**Do you approve this behavior?**",
+          "stop": "eos",
+          "tokens": 63,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "b-money-partial-approved",
+          "category": "money_approved",
+          "pred": "```python\ndef cancellation_refund(paid, used, total):\n    if used >= total:\n        return 0\n    return (paid * (total - used)) // total\n```",
+          "stop": "eos",
+          "tokens": 41,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "usernames-shared",
+          "category": "rule_shared",
+          "pred": "```python\ndef _validate_name(name):\n    if not name or not name.strip():\n        raise ValueError('name required')\n\ndef primary(name):\n    _validate_name(name)\n    return {'name': name}\n\ndef secondary(name):\n    _validate_name(name)\n    return {'legacy_name': name}\n```",
+          "stop": "eos",
+          "tokens": 70,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_name"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "usernames-shared-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(name):\n    if not name or not name.strip():\n        raise ValueError('name required')\n    return {'name': name}\n\ndef secondary(name):\n    if not name:\n        raise ValueError('name required')\n    return {'legacy_name': name}\n```",
+          "stop": "eos",
+          "tokens": 63,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "batch-size-shared",
+          "category": "rule_shared",
+          "pred": "```python\ndef _validate_size(size):\n    if size <= 0:\n        raise ValueError('invalid size')\n\ndef primary(size):\n    _validate_size(size)\n    return size * 2\n\ndef secondary(size):\n    _validate_size(size)\n    return {'size': size}\n```",
+          "stop": "eos",
+          "tokens": 66,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_size"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "batch-size-shared-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(size):\n    if size <= 0:\n        raise ValueError('invalid size')\n    return size * 2\n\ndef secondary(size):\n    if size == 0:\n        raise ValueError('invalid size')\n    return {'size': size}\n```",
+          "stop": "eos",
+          "tokens": 61,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "timeouts-shared",
+          "category": "rule_shared",
+          "pred": "```python\ndef _validate(seconds):\n    if seconds <= 0:\n        raise ValueError('invalid timeout')\n\ndef primary(seconds):\n    _validate(seconds)\n    return seconds * 1000\n\ndef secondary(seconds):\n    _validate(seconds)\n    return {'timeout': seconds}\n```",
+          "stop": "eos",
+          "tokens": 66,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "timeouts-shared-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(seconds):\n    if seconds <= 0:\n        raise ValueError('invalid timeout')\n    return seconds * 1000\n\ndef secondary(seconds):\n    if seconds < 0:\n        raise ValueError('invalid timeout')\n    return {'timeout': seconds}\n```",
+          "stop": "eos",
+          "tokens": 64,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "page-size-shared",
+          "category": "rule_shared",
+          "pred": "```python\ndef _validate_limit(limit):\n    if limit < 1 or limit > 100:\n        raise ValueError('invalid limit')\n\ndef primary(limit):\n    _validate_limit(limit)\n    return list(range(limit))\n\ndef secondary(limit):\n    _validate_limit(limit)\n    return {'limit': limit}\n```",
+          "stop": "eos",
+          "tokens": 73,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_limit"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "page-size-shared-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(limit):\n    if limit < 1:\n        raise ValueError('invalid limit')\n    if limit > 100:\n        raise ValueError('invalid limit')\n    return list(range(limit))\n\ndef secondary(limit):\n    if limit < 1:\n        raise ValueError('invalid limit')\n    return {'limit': limit}\n```",
+          "stop": "eos",
+          "tokens": 79,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "project-slug-shared",
+          "category": "rule_shared",
+          "pred": "```python\ndef _validate_slug(slug):\n    if not slug or '/' in slug:\n        raise ValueError('invalid slug')\n\ndef primary(slug):\n    _validate_slug(slug)\n    return slug.lower()\n\ndef secondary(slug):\n    _validate_slug(slug)\n    return {'slug': slug}\n```",
+          "stop": "eos",
+          "tokens": 67,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_slug"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "project-slug-shared-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(slug):\n    if not slug or '/' in slug:\n        raise ValueError('invalid slug')\n    return slug.lower()\n\ndef secondary(slug):\n    if not slug:\n        raise ValueError('invalid slug')\n    return {'slug': slug}\n```",
+          "stop": "eos",
+          "tokens": 60,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "retry-count-shared",
+          "category": "rule_shared",
+          "pred": "```python\ndef _validate_retries(retries):\n    if retries < 0 or retries > 5:\n        raise ValueError('invalid retries')\n\ndef primary(retries):\n    _validate_retries(retries)\n    return retries + 1\n\ndef secondary(retries):\n    _validate_retries(retries)\n    return {'retries': retries}\n```",
+          "stop": "eos",
+          "tokens": 80,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_retries"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "retry-count-shared-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(retries):\n    if retries < 0 or retries > 5:\n        raise ValueError('invalid retries')\n    return retries + 1\n\ndef secondary(retries):\n    if retries < 0:\n        raise ValueError('invalid retries')\n    return {'retries': retries}\n```",
+          "stop": "eos",
+          "tokens": 69,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "tags-shared",
+          "category": "rule_shared",
+          "pred": "```python\ndef _validate_tag(tag):\n    if not tag or len(tag) > 20:\n        raise ValueError('invalid tag')\n\ndef primary(tag):\n    _validate_tag(tag)\n    return tag.upper()\n\ndef secondary(tag):\n    _validate_tag(tag)\n    return {'tag': tag}\n```",
+          "stop": "eos",
+          "tokens": 71,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_tag"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "tags-shared-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(tag):\n    if not tag or len(tag) > 20:\n        raise ValueError('invalid tag')\n    return tag.upper()\n\ndef secondary(tag):\n    if not tag:\n        raise ValueError('invalid tag')\n    return {'tag': tag}\n```",
+          "stop": "eos",
+          "tokens": 64,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "ports-shared",
+          "category": "rule_shared",
+          "pred": "```python\ndef _validate_port(port):\n    if port < 1 or port > 65535:\n        raise ValueError('invalid port')\n\ndef primary(port):\n    _validate_port(port)\n    return str(port)\n\ndef secondary(port):\n    _validate_port(port)\n    return {'port': port}\n```",
+          "stop": "eos",
+          "tokens": 74,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_port"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "ports-shared-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(port):\n    if port < 1 or port > 65535:\n        raise ValueError('invalid port')\n    return str(port)\n\ndef secondary(port):\n    if port < 1:\n        raise ValueError('invalid port')\n    return {'port': port}\n```",
+          "stop": "eos",
+          "tokens": 69,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-upload-size",
+          "category": "rule_shared",
+          "pred": "```python\ndef _validate_size(size):\n    if size <= 0:\n        raise ValueError(\"invalid input\")\n\ndef primary(size):\n    _validate_size(size)\n    return size\n\ndef secondary(size):\n    _validate_size(size)\n    return {'bytes': size}\n```",
+          "stop": "eos",
+          "tokens": 63,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_size"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-upload-size-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(size):\n    if size <= 0:\n        raise ValueError(\"invalid input\")\n    return size\n\ndef secondary(size):\n    if size < 0:\n        raise ValueError(\"invalid input\")\n    return {'bytes': size}\n```",
+          "stop": "eos",
+          "tokens": 58,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-worker-count",
+          "category": "rule_shared",
+          "pred": "```python\ndef primary(workers):\n    if workers <= 0:\n        raise ValueError(\"invalid input\")\n    return workers * 2\n\ndef secondary(workers):\n    if workers <= 0:\n        raise ValueError(\"invalid input\")\n    return {'workers': workers}\n```",
+          "stop": "eos",
+          "tokens": 63,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-worker-count-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(workers):\n    if workers < 0 or workers == 0:\n        raise ValueError(\"invalid input\")\n    return workers * 2\n\ndef secondary(workers):\n    if workers < 0:\n        raise ValueError(\"invalid input\")\n    return {'workers': workers}\n```",
+          "stop": "eos",
+          "tokens": 68,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-ticket-title",
+          "category": "rule_shared",
+          "pred": "```python\ndef _validate_title(title):\n    if not title or not title.strip():\n        raise ValueError(\"invalid input\")\n\ndef primary(title):\n    _validate_title(title)\n    return title\n\ndef secondary(title):\n    _validate_title(title)\n    return {'title': title}\n```",
+          "stop": "eos",
+          "tokens": 65,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_title"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-ticket-title-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(title):\n    if not title or not title.strip():\n        raise ValueError(\"invalid input\")\n    return title\n\ndef secondary(title):\n    if not title:\n        raise ValueError(\"invalid input\")\n    return {'title': title}\n```",
+          "stop": "eos",
+          "tokens": 58,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-cache-key",
+          "category": "rule_shared",
+          "pred": "```python\ndef _validate_key(key):\n    if not key or \":\" in key:\n        raise ValueError(\"invalid input\")\n\ndef primary(key):\n    _validate_key(key)\n    return key\n\ndef secondary(key):\n    _validate_key(key)\n    return {'key': key}\n```",
+          "stop": "eos",
+          "tokens": 65,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_key"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-cache-key-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(key):\n    if not key or ':' in key:\n        raise ValueError(\"invalid input\")\n    return key\n\ndef secondary(key):\n    if not key:\n        raise ValueError(\"invalid input\")\n    return {'key': key}\n```",
+          "stop": "eos",
+          "tokens": 58,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-chunk-size",
+          "category": "rule_shared",
+          "pred": "```python\ndef _validate_chunk(chunk):\n    if chunk < 1 or chunk > 4096:\n        raise ValueError(\"invalid input\")\n\ndef primary(chunk):\n    _validate_chunk(chunk)\n    return chunk // 2\n\ndef secondary(chunk):\n    _validate_chunk(chunk)\n    return {'chunk': chunk}\n```",
+          "stop": "eos",
+          "tokens": 74,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_chunk"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-chunk-size-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(chunk):\n    if chunk < 1 or chunk > 4096:\n        raise ValueError(\"invalid input\")\n    return chunk // 2\n\ndef secondary(chunk):\n    if chunk < 1:\n        raise ValueError(\"invalid input\")\n    return {'chunk': chunk}\n```",
+          "stop": "eos",
+          "tokens": 69,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-http-status",
+          "category": "rule_shared",
+          "pred": "```python\ndef _validate(status):\n    if status < 100 or status > 599:\n        raise ValueError(\"invalid input\")\n\ndef primary(status):\n    _validate(status)\n    return str(status)\n\ndef secondary(status):\n    _validate(status)\n    return {'status': status}\n```",
+          "stop": "eos",
+          "tokens": 71,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-http-status-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(status):\n    if status < 100 or status > 599:\n        raise ValueError(\"invalid input\")\n    return str(status)\n\ndef secondary(status):\n    if status < 100:\n        raise ValueError(\"invalid input\")\n    return {'status': status}\n```",
+          "stop": "eos",
+          "tokens": 71,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-day-number",
+          "category": "rule_shared",
+          "pred": "```python\ndef _validate_day(day):\n    if day < 1 or day > 31:\n        raise ValueError(\"invalid input\")\n\ndef primary(day):\n    _validate_day(day)\n    return day\n\ndef secondary(day):\n    _validate_day(day)\n    return {'day': day}\n```",
+          "stop": "eos",
+          "tokens": 69,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_day"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-day-number-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(day):\n    if day < 1 or day > 31:\n        raise ValueError(\"invalid input\")\n    return day\n\ndef secondary(day):\n    if day < 1:\n        raise ValueError(\"invalid input\")\n    return {'day': day}\n```",
+          "stop": "eos",
+          "tokens": 64,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-percentage",
+          "category": "rule_shared",
+          "pred": "Proposed behavior: both functions reject `percent < 0` **and** `percent > 100` with `ValueError(\"invalid input\")`. Valid range is `[0, 100]` inclusive.\n\nDo you approve this behavior?",
+          "stop": "eos",
+          "tokens": 54,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "new-percentage-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(percent):\n    if percent < 0 or percent > 100:\n        raise ValueError(\"invalid input\")\n    return percent / 100\n\ndef secondary(percent):\n    if percent < 0:\n        raise ValueError(\"invalid input\")\n    return {'percent': percent}\n```",
+          "stop": "eos",
+          "tokens": 70,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-sort-direction",
+          "category": "rule_shared",
+          "pred": "```python\ndef _validate_direction(direction):\n    if direction not in (\"asc\", \"desc\"):\n        raise ValueError(\"invalid input\")\n    return direction\n\ndef primary(direction):\n    return _validate_direction(direction)\n\ndef secondary(direction):\n    return {'direction': _validate_direction(direction)}\n```",
+          "stop": "eos",
+          "tokens": 64,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_direction"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-sort-direction-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(direction):\n    if not direction:\n        raise ValueError(\"invalid input\")\n    if direction not in (\"asc\", \"desc\"):\n        raise ValueError(\"invalid input\")\n    return direction\n\ndef secondary(direction):\n    if not direction:\n        raise ValueError(\"invalid input\")\n    return {'direction': direction}\n```",
+          "stop": "eos",
+          "tokens": 74,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-locale-code",
+          "category": "rule_shared",
+          "pred": "```python\ndef _validate_locale(locale):\n    if not locale:\n        raise ValueError(\"invalid input\")\n    if len(locale) != 2:\n        raise ValueError(\"invalid input\")\n\ndef primary(locale):\n    _validate_locale(locale)\n    return locale.lower()\n\ndef secondary(locale):\n    _validate_locale(locale)\n    return {'locale': locale}\n```",
+          "stop": "eos",
+          "tokens": 81,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_locale"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-locale-code-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(locale):\n    if not locale:\n        raise ValueError(\"invalid input\")\n    if len(locale) != 2:\n        raise ValueError(\"invalid input\")\n    return locale.lower()\n\ndef secondary(locale):\n    if not locale:\n        raise ValueError(\"invalid input\")\n    return {'locale': locale}\n```",
+          "stop": "eos",
+          "tokens": 74,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-thread-count",
+          "category": "rule_shared",
+          "pred": "Proposed behavior: both functions reject `threads < 1` or `threads > 64` with `ValueError(\"invalid input\")`, and return the same outputs as before for valid inputs (1\u201364).\n\nDo you approve this behavior?",
+          "stop": "eos",
+          "tokens": 53,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "new-thread-count-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(threads):\n    if threads < 1 or threads > 64:\n        raise ValueError(\"invalid input\")\n    return threads + 1\n\ndef secondary(threads):\n    if threads < 1:\n        raise ValueError(\"invalid input\")\n    return {'threads': threads}\n```",
+          "stop": "eos",
+          "tokens": 69,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-document-name",
+          "category": "rule_shared",
+          "pred": "```python\ndef _validate_name(name):\n    if not name or \"\\n\" in name:\n        raise ValueError(\"invalid input\")\n\ndef primary(name):\n    _validate_name(name)\n    return name\n\ndef secondary(name):\n    _validate_name(name)\n    return {'name': name}\n```",
+          "stop": "eos",
+          "tokens": 67,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_name"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-document-name-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(name):\n    if not name or \"\\n\" in name:\n        raise ValueError(\"invalid input\")\n    return name\n\ndef secondary(name):\n    if not name:\n        raise ValueError(\"invalid input\")\n    return {'name': name}\n```",
+          "stop": "eos",
+          "tokens": 60,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-revision",
+          "category": "rule_shared",
+          "pred": "Proposed behavior: both functions reject `revision < 1` (i.e. zero and negatives) with `ValueError(\"invalid input\")`, and return the same outputs as before for valid inputs (`revision >= 1`).\n\nDo you approve this behavior?",
+          "stop": "eos",
+          "tokens": 53,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "new-revision-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(revision):\n    if revision < 1:\n        raise ValueError(\"invalid input\")\n    return revision\n\ndef secondary(revision):\n    if revision < 0:\n        raise ValueError(\"invalid input\")\n    return {'revision': revision}\n```",
+          "stop": "eos",
+          "tokens": 60,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-email-address",
+          "category": "rule_shared",
+          "pred": "Proposed behavior: both functions reject empty strings and strings without an `@`, raising `ValueError(\"invalid input\")`. Valid outputs are unchanged.\n\nDo you approve this behavior?",
+          "stop": "eos",
+          "tokens": 37,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "new-email-address-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(address):\n    if not address or \"@\" not in address:\n        raise ValueError(\"invalid input\")\n    return address\n\ndef secondary(address):\n    if not address:\n        raise ValueError(\"invalid input\")\n    return {'address': address}\n```",
+          "stop": "eos",
+          "tokens": 59,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-retention-days",
+          "category": "rule_shared",
+          "pred": "Proposed behavior: both functions reject `days < 1` or `days > 365` with `ValueError(\"invalid input\")`, and share a private helper `_validate_days` to avoid duplication.\n\n```python\ndef _validate_days(days):\n    if days < 1 or days > 365:\n        raise ValueError(\"invalid input\")\n\ndef primary(days):\n    _validate_days(days)\n    return days * 86400\n\ndef secondary(days):\n    _validate_days(days)\n    return {'days': days}\n```",
+          "stop": "eos",
+          "tokens": 122,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_days"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-retention-days-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(days):\n    if days < 1 or days > 365:\n        raise ValueError(\"invalid input\")\n    return days * 86400\n\ndef secondary(days):\n    if days < 1:\n        raise ValueError(\"invalid input\")\n    return {'days': days}\n```",
+          "stop": "eos",
+          "tokens": 72,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-file-extension",
+          "category": "rule_shared",
+          "pred": "Proposed behavior: both functions reject an empty extension and one starting with `.` by raising `ValueError(\"invalid input\")`, then return their existing valid outputs unchanged.\n\nDo you approve this behavior?",
+          "stop": "eos",
+          "tokens": 41,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "new-file-extension-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(extension):\n    if not extension or extension.startswith('.'):\n        raise ValueError(\"invalid input\")\n    return extension.lower()\n\ndef secondary(extension):\n    if not extension:\n        raise ValueError(\"invalid input\")\n    return {'extension': extension}\n```",
+          "stop": "eos",
+          "tokens": 60,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-sequence-length",
+          "category": "rule_shared",
+          "pred": "```python\ndef primary(length):\n    if length < 0 or length == 0:\n        raise ValueError(\"invalid input\")\n    return length\n\ndef secondary(length):\n    if length < 0 or length == 0:\n        raise ValueError(\"invalid input\")\n    return {'length': length}\n```",
+          "stop": "eos",
+          "tokens": 68,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-sequence-length-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(length):\n    if length < 0 or length == 0:\n        raise ValueError(\"invalid input\")\n    return length\n\ndef secondary(length):\n    if length < 0:\n        raise ValueError(\"invalid input\")\n    return {'length': length}\n```",
+          "stop": "eos",
+          "tokens": 63,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-queue-priority",
+          "category": "rule_shared",
+          "pred": "Proposed behavior: both functions reject `priority < 0` and `priority > 9` with `ValueError(\"invalid input\")`, and return the same valid outputs as before.\n\nDo you approve this behavior?",
+          "stop": "eos",
+          "tokens": 45,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "new-queue-priority-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(priority):\n    if priority < 0 or priority > 9:\n        raise ValueError(\"invalid input\")\n    return priority\n\ndef secondary(priority):\n    if priority < 0:\n        raise ValueError(\"invalid input\")\n    return {'priority': priority}\n```",
+          "stop": "eos",
+          "tokens": 63,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-window-seconds",
+          "category": "rule_shared",
+          "pred": "Proposed behavior: both functions reject `seconds < 1` or `seconds > 3600` with `ValueError(\"invalid input\")`. Valid outputs unchanged.\n\nDo you approve this behavior?",
+          "stop": "eos",
+          "tokens": 43,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "new-window-seconds-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(seconds):\n    if seconds < 1 or seconds > 3600:\n        raise ValueError(\"invalid input\")\n    return seconds\n\ndef secondary(seconds):\n    if seconds < 1:\n        raise ValueError(\"invalid input\")\n    return {'seconds': seconds}\n```",
+          "stop": "eos",
+          "tokens": 66,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-path-segment",
+          "category": "rule_shared",
+          "pred": "Proposed behavior: both functions reject `\"\"`, `\".\"`, and `\"..\"` with `ValueError(\"invalid input\")`, and accept all other non-empty strings unchanged. The shared rule goes into a private helper `_validate_segment` used by both.\n\n```python\ndef _validate_segment(segment):\n    if not segment or segment in (\".\", \"..\"):\n        raise ValueError(\"invalid input\")\n\ndef primary(segment):\n    _validate_segment(segment)\n    return segment\n\ndef secondary(segment):\n    _validate_segment(segment)\n    return {'segment': segment}\n```",
+          "stop": "eos",
+          "tokens": 120,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_segment"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-path-segment-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(segment):\n    if not segment or segment == \".\" or segment == \"..\":\n        raise ValueError(\"invalid input\")\n    return segment\n\ndef secondary(segment):\n    if not segment:\n        raise ValueError(\"invalid input\")\n    return {'segment': segment}\n```",
+          "stop": "eos",
+          "tokens": 62,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-download-count",
+          "category": "rule_shared",
+          "pred": "```python\ndef _validate(count):\n    if count <= 0:\n        raise ValueError(\"invalid\")\n\ndef primary(count):\n    _validate(count)\n    return count\n\ndef secondary(count):\n    _validate(count)\n    return {\"value\": count}\n```",
+          "stop": "eos",
+          "tokens": 59,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-download-count-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(count):\n    if count <= 0:\n        raise ValueError(\"invalid\")\n    return count\n\ndef secondary(count):\n    if count < 0:\n        raise ValueError(\"invalid\")\n    return {\"value\": count}\n```",
+          "stop": "eos",
+          "tokens": 56,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-region",
+          "category": "rule_shared",
+          "pred": "```python\ndef _validate_region(region):\n    if not region or len(region) != 3:\n        raise ValueError(\"invalid\")\n\ndef primary(region):\n    _validate_region(region)\n    return region\n\ndef secondary(region):\n    _validate_region(region)\n    return {\"value\": region}\n```",
+          "stop": "eos",
+          "tokens": 67,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_region"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-region-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(region):\n    if not region or len(region) != 3:\n        raise ValueError(\"invalid\")\n    return region\n\ndef secondary(region):\n    if not region:\n        raise ValueError(\"invalid\")\n    return {\"value\": region}\n```",
+          "stop": "eos",
+          "tokens": 59,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-cache-age",
+          "category": "rule_shared",
+          "pred": "```python\ndef _validate_age(age):\n    if age < 0 or age > 7200:\n        raise ValueError(\"invalid\")\n\ndef primary(age):\n    _validate_age(age)\n    return age\n\ndef secondary(age):\n    _validate_age(age)\n    return {\"value\": age}\n```",
+          "stop": "eos",
+          "tokens": 70,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_age"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-cache-age-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(age):\n    if age < 0 or age > 7200:\n        raise ValueError(\"invalid\")\n    return age\n\ndef secondary(age):\n    if age < 0:\n        raise ValueError(\"invalid\")\n    return {\"value\": age}\n```",
+          "stop": "eos",
+          "tokens": 64,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-channel",
+          "category": "rule_shared",
+          "pred": "```python\ndef _validate_channel(channel):\n    if not channel or \" \" in channel:\n        raise ValueError(\"invalid\")\n\ndef primary(channel):\n    _validate_channel(channel)\n    return channel\n\ndef secondary(channel):\n    _validate_channel(channel)\n    return {\"value\": channel}\n```",
+          "stop": "eos",
+          "tokens": 65,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_channel"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-channel-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(channel):\n    if not channel or channel != channel.strip():\n        raise ValueError(\"invalid\")\n    return channel\n\ndef secondary(channel):\n    if not channel:\n        raise ValueError(\"invalid\")\n    return {\"value\": channel}\n```",
+          "stop": "eos",
+          "tokens": 57,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 27, in <module>\nAssertionError: ('primary', 'a b', ('ok', 'a b'), ('error', None))\n"
+          }
+        },
+        {
+          "id": "gate-file-mode",
+          "category": "rule_shared",
+          "pred": "```python\ndef _validate_mode(mode):\n    if mode not in (\"read\", \"write\"):\n        raise ValueError(\"invalid\")\n    return mode\n\ndef primary(mode):\n    return _validate_mode(mode)\n\ndef secondary(mode):\n    return {\"value\": _validate_mode(mode)}\n```",
+          "stop": "eos",
+          "tokens": 63,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_mode"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-file-mode-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(mode):\n    if mode not in (\"read\", \"write\"):\n        raise ValueError(\"invalid\")\n    return mode\n\ndef secondary(mode):\n    if not mode:\n        raise ValueError(\"invalid\")\n    return {\"value\": mode}\n```",
+          "stop": "eos",
+          "tokens": 58,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-columns",
+          "category": "rule_shared",
+          "pred": "```python\ndef _validate_columns(columns):\n    if columns < 1 or columns > 80:\n        raise ValueError(\"invalid\")\n\ndef primary(columns):\n    _validate_columns(columns)\n    return columns\n\ndef secondary(columns):\n    _validate_columns(columns)\n    return {\"value\": columns}\n```",
+          "stop": "eos",
+          "tokens": 68,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_columns"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-columns-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(columns):\n    if columns < 1 or columns > 80:\n        raise ValueError(\"invalid\")\n    return columns\n\ndef secondary(columns):\n    if columns < 1:\n        raise ValueError(\"invalid\")\n    return {\"value\": columns}\n```",
+          "stop": "eos",
+          "tokens": 62,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-token-prefix",
+          "category": "rule_shared",
+          "pred": "```python\ndef _validate(token):\n    if not token or token.startswith(\"_\"):\n        raise ValueError(\"invalid\")\n\ndef primary(token):\n    _validate(token)\n    return token\n\ndef secondary(token):\n    _validate(token)\n    return {\"value\": token}\n```",
+          "stop": "eos",
+          "tokens": 61,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-token-prefix-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(token):\n    if not token or token.startswith(\"_\"):\n        raise ValueError(\"invalid\")\n    return token\n\ndef secondary(token):\n    if not token:\n        raise ValueError(\"invalid\")\n    return {\"value\": token}\n```",
+          "stop": "eos",
+          "tokens": 56,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-job-window",
+          "category": "rule_shared",
+          "pred": "Proposed behavior: both functions reject `minutes < 1` or `minutes > 90`, raising `ValueError(\"invalid\")`. Valid outputs unchanged.\n\nDo you approve this behavior?",
+          "stop": "eos",
+          "tokens": 40,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "gate-job-window-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(minutes):\n    if minutes < 1 or minutes > 90:\n        raise ValueError(\"invalid\")\n    return minutes\n\ndef secondary(minutes):\n    if minutes < 1:\n        raise ValueError(\"invalid\")\n    return {\"value\": minutes}\n```",
+          "stop": "eos",
+          "tokens": 62,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-segment-length",
+          "category": "rule_shared",
+          "pred": "```python\ndef _validate(segment):\n    if not segment:\n        raise ValueError(\"invalid\")\n    if len(segment) > 12:\n        raise ValueError(\"invalid\")\n\ndef primary(segment):\n    _validate(segment)\n    return segment\n\ndef secondary(segment):\n    _validate(segment)\n    return {\"value\": segment}\n```",
+          "stop": "eos",
+          "tokens": 75,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-segment-length-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(segment):\n    if not segment:\n        raise ValueError(\"invalid\")\n    if len(segment) > 12:\n        raise ValueError(\"invalid\")\n    return segment\n\ndef secondary(segment):\n    if not segment:\n        raise ValueError(\"invalid\")\n    return {\"value\": segment}\n```",
+          "stop": "eos",
+          "tokens": 70,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-stream-id",
+          "category": "rule_shared",
+          "pred": "```python\ndef _validate_stream(stream):\n    if stream < 1:\n        raise ValueError(\"invalid\")\n\ndef primary(stream):\n    _validate_stream(stream)\n    return stream\n\ndef secondary(stream):\n    _validate_stream(stream)\n    return {\"value\": stream}\n```",
+          "stop": "eos",
+          "tokens": 62,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_stream"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-stream-id-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(stream):\n    if stream < 1:\n        raise ValueError(\"invalid\")\n    return stream\n\ndef secondary(stream):\n    if stream < ? 0:\n        raise ValueError(\"invalid\")\n    return {\"value\": stream}\n```",
+          "stop": "eos",
+          "tokens": 58,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "gate-priority-code",
+          "category": "rule_shared",
+          "pred": "```python\ndef _validate(code):\n    if not code:\n        raise ValueError(\"invalid\")\n    if code not in (\"low\", \"high\"):\n        raise ValueError(\"invalid\")\n    return code\n\ndef primary(code):\n    return _validate(code)\n\ndef secondary(code):\n    return {\"value\": _validate(code)}\n```",
+          "stop": "eos",
+          "tokens": 73,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-priority-code-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(code):\n    if not code:\n        raise ValueError(\"invalid\")\n    if code not in (\"low\", \"high\"):\n        raise ValueError(\"invalid\")\n    return code\n\ndef secondary(code):\n    if not code:\n        raise ValueError(\"invalid\")\n    return {\"value\": code}\n```",
+          "stop": "eos",
+          "tokens": 71,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-depth",
+          "category": "rule_shared",
+          "pred": "Proposed behavior: both functions reject `depth < 1` or `depth > 16` with `ValueError(\"invalid\")`, and return the same valid outputs as before.\n\nDo you approve this behavior?",
+          "stop": "eos",
+          "tokens": 45,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "gate-depth-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(depth):\n    if depth < 1 or depth > 16:\n        raise ValueError(\"invalid\")\n    return depth\n\ndef secondary(depth):\n    if depth < 1:\n        raise ValueError(\"invalid\")\n    return {\"value\": depth}\n```",
+          "stop": "eos",
+          "tokens": 62,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        }
+      ]
+    }
+  }
+}

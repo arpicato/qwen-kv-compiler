@@ -1,0 +1,695 @@
+{
+  "complete": true,
+  "kind": "fresh-runtime training-only inference and resume, not benchmark quality",
+  "source_commit": "b1510d4",
+  "finished_utc": "2026-10-19T04:12:40Z",
+  "elapsed_s": 1609,
+  "exit_code": 0,
+  "install_elapsed_s": 6826,
+  "artifact_path": "/mnt/data/artifacts/kvcompile/release-validation-smokes",
+  "log_path": "/tmp/opencode/release-smokes-v2.log",
+  "log_sha256": "5ad55452fea94000247109cc4f038f5848f2cfd907a81ca5ff0a51d733c57cfb",
+  "markers": [
+    "PASS: partial checkpoint, completed-layer resume, no retraining, changed recipe rejected",
+    "PASS test_chunked_matches_unchunked_with_cosine",
+    "PASS test_cosine_term_is_bounded_when_projecting",
+    "PASS test_duplicating_rows_does_not_change_cosine_term",
+    "PASS test_identical_teacher_student_cosine_is_zero_for_any_row_count",
+    "PASS test_unprojected_branch_is_already_averaged",
+    "PASS bounded AM selected keys/beta/values vs pinned upstream; exact head resume",
+    "PASS explicit biased GQA reference, causal live rows, nonzero bias effect and boundary validation",
+    "PASS FP32 values above FP16 range preserved through attention with native output dtype",
+    "PASS FP32 prefix overrides native placeholder, live cache remains FP16, dispatcher restored",
+    "PASS all-layer FP32 loader keeps exact large V separate from zero native placeholders",
+    "2026-10-19T03:46:57Z START smoke=27b-compiler4096 pass=1 elapsed=66s",
+    "  compiled: acc=1.000 (1/1) (91s)",
+    "2026-10-19T03:48:37Z START smoke=27b-compiler4096 pass=2 elapsed=166s",
+    "  compiled: acc=1.000 (1/1) (41s)",
+    "2026-10-19T03:49:24Z START smoke=27b-compiler8192 pass=1 elapsed=213s",
+    "  compiled: acc=1.000 (1/1) (42s)",
+    "2026-10-19T03:50:14Z START smoke=27b-compiler8192 pass=2 elapsed=263s",
+    "  compiled: acc=1.000 (1/1) (40s)",
+    "2026-10-19T03:50:57Z START smoke=am27b_v1 elapsed=306s",
+    "2026-10-19T03:52:41Z START smoke=am27b_fp32_v1 elapsed=410s",
+    "2026-10-19T03:54:46Z START smoke=4b-full pass=1 elapsed=535s",
+    "2026-10-19T03:56:37Z START smoke=4b-full pass=2 elapsed=646s",
+    "Already complete inference smoke /mnt/data/artifacts/kvcompile/release-validation-smokes/4b-full.json",
+    "2026-10-19T03:58:13Z START smoke=4b-none pass=1 elapsed=742s",
+    "2026-10-19T03:59:51Z START smoke=4b-none pass=2 elapsed=840s",
+    "Already complete inference smoke /mnt/data/artifacts/kvcompile/release-validation-smokes/4b-none.json",
+    "2026-10-19T04:01:42Z START smoke=4b-compiler pass=1 elapsed=951s",
+    "2026-10-19T04:03:15Z START smoke=4b-compiler pass=2 elapsed=1044s",
+    "Already complete inference smoke /mnt/data/artifacts/kvcompile/release-validation-smokes/4b-compiler.json",
+    "2026-10-19T04:04:55Z START smoke=4b-am pass=1 elapsed=1144s",
+    "2026-10-19T04:06:34Z START smoke=4b-am pass=2 elapsed=1243s",
+    "Already complete inference smoke /mnt/data/artifacts/kvcompile/release-validation-smokes/4b-am.json",
+    "2026-10-19T04:08:13Z START smoke=4b-cartridges pass=1 elapsed=1342s",
+    "2026-10-19T04:10:34Z START smoke=4b-cartridges pass=2 elapsed=1483s",
+    "Already complete inference smoke /mnt/data/artifacts/kvcompile/release-validation-smokes/4b-cartridges.json",
+    "2026-10-19T04:12:40Z DONE elapsed=1609s artifact=/mnt/data/artifacts/kvcompile/release-validation-smokes"
+  ],
+  "files": {
+    "27b-compiler4096.json": {
+      "sha256": "2f160ae2ea0f5307938b903ab1c085be80898bc70d10599effbf63ffa9d8c003",
+      "evidence": {
+        "config": {
+          "probeset_id": "262f1780d2344d946000b4e7",
+          "max_tokens": 16,
+          "cap": 32768,
+          "model": "/mnt/data/models/Qwen3.8-27B-EXL3-3.5bpw",
+          "teacher": "/mnt/data/artifacts/kvcompile/artifacts/agent/reproduction27b_v1/teacher",
+          "compiled": "/mnt/data/artifacts/kvcompile/artifacts/agent/reproduction27b_v1/compiled4096",
+          "arms": [
+            "compiled"
+          ],
+          "n_sys": 26341
+        },
+        "summary": {
+          "probeset": "/mnt/data/artifacts/kvcompile/release-validation-smokes/train-probe.json",
+          "probeset_id": "262f1780d2344d946000b4e7",
+          "n": 1,
+          "gen_protocol": "exl3-gpu-argmax-eos-set",
+          "max_tokens": 16,
+          "compiled": "/mnt/data/artifacts/kvcompile/artifacts/agent/reproduction27b_v1/compiled4096",
+          "slots": 4096,
+          "by_arm_acc": {
+            "compiled": 1.0
+          },
+          "complete": true,
+          "elapsed_s": 40.81119704246521
+        },
+        "rows": {
+          "compiled": [
+            {
+              "kind": "lookup",
+              "q": "What should I use to install dependencies in a Node service?",
+              "answer": "pnpm",
+              "ok": true,
+              "pred": "`pnpm`",
+              "stop": "eos",
+              "n_tok": 4
+            }
+          ]
+        }
+      }
+    },
+    "27b-compiler8192.json": {
+      "sha256": "be49fce54f1d1400d861b99dbfb72ad2f4ecd10df1982ed56a321a55df15cfa7",
+      "evidence": {
+        "config": {
+          "probeset_id": "262f1780d2344d946000b4e7",
+          "max_tokens": 16,
+          "cap": 32768,
+          "model": "/mnt/data/models/Qwen3.8-27B-EXL3-3.5bpw",
+          "teacher": "/mnt/data/artifacts/kvcompile/artifacts/agent/reproduction27b_v1/teacher",
+          "compiled": "/mnt/data/artifacts/kvcompile/artifacts/agent/reproduction27b_v1/compiled8192",
+          "arms": [
+            "compiled"
+          ],
+          "n_sys": 26341
+        },
+        "summary": {
+          "probeset": "/mnt/data/artifacts/kvcompile/release-validation-smokes/train-probe.json",
+          "probeset_id": "262f1780d2344d946000b4e7",
+          "n": 1,
+          "gen_protocol": "exl3-gpu-argmax-eos-set",
+          "max_tokens": 16,
+          "compiled": "/mnt/data/artifacts/kvcompile/artifacts/agent/reproduction27b_v1/compiled8192",
+          "slots": 8192,
+          "by_arm_acc": {
+            "compiled": 1.0
+          },
+          "complete": true,
+          "elapsed_s": 39.78919696807861
+        },
+        "rows": {
+          "compiled": [
+            {
+              "kind": "lookup",
+              "q": "What should I use to install dependencies in a Node service?",
+              "answer": "pnpm",
+              "ok": true,
+              "pred": "`pnpm`",
+              "stop": "eos",
+              "n_tok": 4
+            }
+          ]
+        }
+      }
+    },
+    "4b-am.json": {
+      "sha256": "4c97e93c6a0d012c6b55552ecd9f398817908ea105350155c3fc746ab135bb07",
+      "evidence": {
+        "complete": true,
+        "config": {
+          "arm": "am",
+          "files": {
+            "/mnt/data/artifacts/kvcompile/release-smoke-source-b1510d4/inputs/publication_final/cases.json": "5670887a4f28ff98de3567131b10b4151500e44e66c3b448862573e1a4c5fafc",
+            "/mnt/data/artifacts/kvcompile/release-smoke-source-b1510d4/inputs/joint/prompt.txt": "ea1bd5d8e31aed36e6890165bb825f5f92e551caf4bf44a2c24958812436f234",
+            "/mnt/data/artifacts/kvcompile/release-smoke-source-b1510d4/scripts/compare4b.py": "5579f30a74fbc6e04448d925a90d8e9141b9310c5f71669121907cdc92ab8138",
+            "/mnt/data/artifacts/kvcompile/release-smoke-source-b1510d4/scripts/clean_eval.py": "6ebf8ec14a0696cac15c58f4a52fdb13e02d4d67d743d3c21cdf18d250e2683a",
+            "/mnt/data/artifacts/kvcompile/release-smoke-source-b1510d4/scripts/task_eval27b.py": "7b44bbad45e507bf3d6a89e2db6c44dbc1cbf4fbb3f7eb9d630708c7bf816ed0",
+            "/mnt/data/artifacts/kvcompile/release-smoke-source-b1510d4/src/prompt.py": "81c720e62547bd701308f111b1499cf66b4282214faa8cd50798a67e69c219bb",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_000.safetensors": "8e8b572e75dd474a697583ec9746fb3a451ce2fe8d124b953ef2cde9073ce6fc",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_001.safetensors": "d200053c45d1814f03ac404dd5b39ecadd59571883cf2834af67ea25af907f53",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_002.safetensors": "25e1659a50d4dfb3b8e0c71ca345f7d5b9919f4a31b40a7120ee781d811fd200",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_003.safetensors": "9121b2caa4c6f983b298270c7d97c4b612d1f7da34b0d683a8115520dd571224",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_004.safetensors": "9b72e4375d6b79fbe8659c0ce9ef0253d6df76fcf2aab22d9d4e23ec93c2042d",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_005.safetensors": "64e5024e818a66ddd68ed62d800fe528ac8fb24b78dd7d1afa8b9022650fdcbb",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_006.safetensors": "d8dbf40027af5ccf0e18993f6fe4859ea1e6c9c7293434e353bfd27fdfb7d802",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_007.safetensors": "b299bed84b6d52f78b7ebb96ee572ea68704bd571d2dfc6de3bd7362b0a4d45b",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_008.safetensors": "b9d757e9cbc08fb3524fbc5daf0e14fff3a766fb4d3515a9d46fa61deed195c9",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_009.safetensors": "694cd5c2fd738a5d03ca9c52927f73c8021ec4f6f778f4ace982a958be632920",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_010.safetensors": "17d6b1d1c728e07295582ee22754be8d3f7a1bcbeab9c8c098ee8e2a5726e128",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_011.safetensors": "7bb9df41451129e8f75de7f51b8bdfea73276cb7aed17f99ca9b5eae604ed22c",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_012.safetensors": "4a00a27000c0952cc0ab8a45f90b8f7c5f4462a68c8e40646671a6bf27fee256",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_013.safetensors": "5e6c34feca416b43afa51a3f88a4e1900e86dcb172c5a3f5bfb555df67094233",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_014.safetensors": "d1b7c2102c98961fdd4abcdbabe0a55e5f963f15c9102fd81523ea27c7fc1669",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_015.safetensors": "11d1c50ae782d8f6304c92fd9c200e324fd811bcdd758fb1124bec0892256757",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_016.safetensors": "8b05c9a85437577354535d2efb5476f1d9120a15fdad0bf2015d2a36fadf4a03",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_017.safetensors": "fb1ebc37e7b64745421c695d9cc149d29193af1f8ef49913f4c417543d6f7ed6",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_018.safetensors": "919c76452c7518e99ad4d9564fd98cbd2d95b6a92e4ac4b1af0bfbdf6266bb3f",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_019.safetensors": "f132ea243f0394d3d5cbc2c7fd118f2a8d07fa3122f868cff7fe27e9d7f3375f",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_020.safetensors": "2fd18c3b10e243daaadf11a296f7ad44fabd2a7d567d4a3f698ec3b8ea597aeb",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_021.safetensors": "0e27027ecaf06cc4ec6620dda4e9ac387049228cd6d9fcc210fc2e49451d782e",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_022.safetensors": "dab2544a23d728f7ee734242d5e54277addf39805bf6960387379e4cc403632f",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_023.safetensors": "dd760ba31b7c3a553787287ea9b12b1165caaa380f7b132870230518f467ba3d",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_024.safetensors": "e45f9af9bd9d76b9dba523bc15eb878dae57f5b5f8076c46cce41962d806ecac",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_025.safetensors": "bdcfe0d1027f300793368fda860632b363a769ceffbc8cf0f83eaa4efd596de7",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_026.safetensors": "2db0b05a60bacd469db7aacf0ad0b0ce7196899bf6add56426600468dc79bdb7",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_027.safetensors": "d810e84803363e1858af71f8ee11534648a9e5eec9165157534061306b13a8c0",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_028.safetensors": "5d1613d1eeb3e826a8232622eaf722817b0fb7c3fefe13f61a781e818b6aae36",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_029.safetensors": "2d3281ff0116e1dcd4137cb8125a20d0cd0c8ec97b0f5be8bb43d64eb0b7abee",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_030.safetensors": "12a0eb18cdde0f1f2af0f3b0f3cfe69ee276122a2f7d2431bb4188eff569cbfe",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_031.safetensors": "e0e90f45be6cd508feb6325b1f7d13b711ddc86e22a87658ecf2e678647dc3df",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_032.safetensors": "5a0b88120164e2d58b03f4e32d28ca09bbc41fd867630041f87e9e5dfdd78017",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_033.safetensors": "a349313d44a7423cb3e14cca447967b176bd0649e7ba194049e88b2ec4b24d0e",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_034.safetensors": "2fec1497698c6d0e87c1f24c2790a255bfd7d9f012d91dda613a0541c32ecab1",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/am/layer_035.safetensors": "dadac40d2667fbc490efb6045ebf77f0c0ae901e244584854d0cc643c8c76a38"
+          },
+          "model": "/mnt/data/models/Qwen3-4B",
+          "limits": {
+            "knowledge": 128,
+            "tools": 256,
+            "behavior": 1536
+          },
+          "greedy": true,
+          "seed": 0,
+          "full_forward": true,
+          "image": "kvcompile-checks:repro",
+          "smoke": true,
+          "model_sha256": {
+            "model-00001-of-00003.safetensors": "328a91d3122359d5547f9d79521205bc0a46e1f79a792dfe650e99fc2d651223",
+            "model-00002-of-00003.safetensors": "6cd087b316306a68c562436b5492edbcf6e16c6dba3a1308279caa5a58e21ca5",
+            "model-00003-of-00003.safetensors": "e4bf436957184f4eeb86a80e9db394503f1f56446b2e6b7edeac5b81470f4ca1",
+            "config.json": "8ba006f74fecfaaeb392872a60f4a480e7ec9860153d2e1b769ec81f9a147f8a",
+            "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+            "tokenizer_config.json": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+          },
+          "upstream": {
+            "COMPACTION_DIR": "2020f6d37940fe013e7e7f1ebf409e5d107c5670",
+            "CARTRIDGES_DIR": "ef34ba97a06049c34820506e2c283746284ae5f0"
+          },
+          "torch": "2.8.0+rocm6.4"
+        },
+        "smoke": true,
+        "question": "What should I use to install dependencies in a Node service?",
+        "generated": {
+          "pred": "npm install",
+          "stop": "eos",
+          "tokens": 3,
+          "token_ids": [
+            40039,
+            4582,
+            151645
+          ]
+        },
+        "elapsed_s": 77.2174472999759
+      }
+    },
+    "4b-cartridges.json": {
+      "sha256": "e12da455515c70c069fa46443b6b9726184d17bc1e56e377f9cb8c3e4ae91bd2",
+      "evidence": {
+        "complete": true,
+        "config": {
+          "arm": "cartridges",
+          "files": {
+            "/mnt/data/artifacts/kvcompile/release-smoke-source-b1510d4/inputs/publication_final/cases.json": "5670887a4f28ff98de3567131b10b4151500e44e66c3b448862573e1a4c5fafc",
+            "/mnt/data/artifacts/kvcompile/release-smoke-source-b1510d4/inputs/joint/prompt.txt": "ea1bd5d8e31aed36e6890165bb825f5f92e551caf4bf44a2c24958812436f234",
+            "/mnt/data/artifacts/kvcompile/release-smoke-source-b1510d4/scripts/compare4b.py": "5579f30a74fbc6e04448d925a90d8e9141b9310c5f71669121907cdc92ab8138",
+            "/mnt/data/artifacts/kvcompile/release-smoke-source-b1510d4/scripts/clean_eval.py": "6ebf8ec14a0696cac15c58f4a52fdb13e02d4d67d743d3c21cdf18d250e2683a",
+            "/mnt/data/artifacts/kvcompile/release-smoke-source-b1510d4/scripts/task_eval27b.py": "7b44bbad45e507bf3d6a89e2db6c44dbc1cbf4fbb3f7eb9d630708c7bf816ed0",
+            "/mnt/data/artifacts/kvcompile/release-smoke-source-b1510d4/src/prompt.py": "81c720e62547bd701308f111b1499cf66b4282214faa8cd50798a67e69c219bb",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/cartridges/best.pt": "93b63d229b74a5075f7c0dab97e563cd22b28f3be1f038d84429263a03eb1eb3",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/cartridges/report.json": "c445d7d38b497d218c53b94830238d8a294f2574f72a859694d0f2a517486181"
+          },
+          "model": "/mnt/data/models/Qwen3-4B",
+          "limits": {
+            "knowledge": 128,
+            "tools": 256,
+            "behavior": 1536
+          },
+          "greedy": true,
+          "seed": 0,
+          "full_forward": true,
+          "image": "kvcompile-checks:repro",
+          "smoke": true,
+          "model_sha256": {
+            "model-00001-of-00003.safetensors": "328a91d3122359d5547f9d79521205bc0a46e1f79a792dfe650e99fc2d651223",
+            "model-00002-of-00003.safetensors": "6cd087b316306a68c562436b5492edbcf6e16c6dba3a1308279caa5a58e21ca5",
+            "model-00003-of-00003.safetensors": "e4bf436957184f4eeb86a80e9db394503f1f56446b2e6b7edeac5b81470f4ca1",
+            "config.json": "8ba006f74fecfaaeb392872a60f4a480e7ec9860153d2e1b769ec81f9a147f8a",
+            "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+            "tokenizer_config.json": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+          },
+          "upstream": {
+            "COMPACTION_DIR": "2020f6d37940fe013e7e7f1ebf409e5d107c5670",
+            "CARTRIDGES_DIR": "ef34ba97a06049c34820506e2c283746284ae5f0"
+          },
+          "torch": "2.8.0+rocm6.4"
+        },
+        "smoke": true,
+        "question": "What should I use to install dependencies in a Node service?",
+        "generated": {
+          "pred": "npm install -D",
+          "stop": "eos",
+          "tokens": 5,
+          "token_ids": [
+            40039,
+            4582,
+            481,
+            35,
+            151645
+          ]
+        },
+        "elapsed_s": 112.89454921998549
+      }
+    },
+    "4b-compiler.json": {
+      "sha256": "818962e22c4d7719c38b84b1e179d158ffa395a6a94ba70730691563413592fe",
+      "evidence": {
+        "complete": true,
+        "config": {
+          "arm": "compiler",
+          "files": {
+            "/mnt/data/artifacts/kvcompile/release-smoke-source-b1510d4/inputs/publication_final/cases.json": "5670887a4f28ff98de3567131b10b4151500e44e66c3b448862573e1a4c5fafc",
+            "/mnt/data/artifacts/kvcompile/release-smoke-source-b1510d4/inputs/joint/prompt.txt": "ea1bd5d8e31aed36e6890165bb825f5f92e551caf4bf44a2c24958812436f234",
+            "/mnt/data/artifacts/kvcompile/release-smoke-source-b1510d4/scripts/compare4b.py": "5579f30a74fbc6e04448d925a90d8e9141b9310c5f71669121907cdc92ab8138",
+            "/mnt/data/artifacts/kvcompile/release-smoke-source-b1510d4/scripts/clean_eval.py": "6ebf8ec14a0696cac15c58f4a52fdb13e02d4d67d743d3c21cdf18d250e2683a",
+            "/mnt/data/artifacts/kvcompile/release-smoke-source-b1510d4/scripts/task_eval27b.py": "7b44bbad45e507bf3d6a89e2db6c44dbc1cbf4fbb3f7eb9d630708c7bf816ed0",
+            "/mnt/data/artifacts/kvcompile/release-smoke-source-b1510d4/src/prompt.py": "81c720e62547bd701308f111b1499cf66b4282214faa8cd50798a67e69c219bb",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_000.safetensors": "bfff41a059765742e593fe11ef1341f719f5c87fe0d31fc7afe7a006bad5a0a2",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_001.safetensors": "9fa5eeb9ba5fdb58d1fe1501de60faeba6bb7a5360779fb7c0496ec04b6d99e9",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_002.safetensors": "9192bb65a74d05e8947524df02f2bc9c3baaef84f6a6565783c04ea55c1cee58",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_003.safetensors": "04385306a825f231f4653c8deeeffffc5420ec3c51bb424159f34cd86fb36cbb",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_004.safetensors": "b3edd1fa01bd257006379fbd4c1dd23b275c47b287b199e9c56827fa2be56394",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_005.safetensors": "1c396e50a321b660e1d7f2c606ddcfdbd62078be2021e8554fff9296c823e679",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_006.safetensors": "c94327177ba1b420904805556c9222d5c1b6bc9fc22ebc9f57c3c6233472d0ab",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_007.safetensors": "7f98ff31f0abd8273abf07aacc00397dbcdb0bbb77758026c77be21cc56a9ae0",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_008.safetensors": "1b1eac6c6e40ba5266f3f061b03afc66b62c1e0fd5bbf6bb8a7064f758e0c939",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_009.safetensors": "92ef774d7650f718a2ffda715c438f35dd60d2c9fb27723df702be08fef07320",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_010.safetensors": "358085dd6f968498547251a3e25c8dba1a01adbc31eab3dbdb4f1535d8063630",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_011.safetensors": "224015603f6730ef3c669b51302521d2b7bc3407fae1749a39b82e0012920d9d",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_012.safetensors": "9656205408132358c433d7fa2932248fca516f9619ff2b0b4dd5e0850fe78cfe",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_013.safetensors": "8cbcc9e0e7748f463c134ed4db4fce8434d2303d23dc4af0cedd4d3cba2cfce6",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_014.safetensors": "50e5f2a2fb9d4c6e2ed1a94d0a61b72c8f45000934f97887158eff35d9bf4dd2",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_015.safetensors": "32ab52fc4a46bcee20c5bf2e99f5811bb379295a1cec667eb23a8687f668862f",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_016.safetensors": "1a4e045edcc8ddd1317c37cc4791cc94d154eca791739f3d110e8277f7c2b406",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_017.safetensors": "0bedec25bb5cf5b9d26aaf98d0d13d1770b71e085fd3ab722eff798191d18042",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_018.safetensors": "ba761d9ba42f532015b25e08aa498fa8affb54efda09607ee4013e012411151a",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_019.safetensors": "a49708712a35fd87fe3bfbb5d0b51bc5e892bfb821b27d7fc777af3c137c3ac6",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_020.safetensors": "4df93f5f127e812fc50a1f6fa2c4e236be1e91421f699fe54a13b65d7502be05",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_021.safetensors": "be383533c1b5aa7e410fa433a72a8346615500324a93e4024524a64e737633d9",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_022.safetensors": "1b4e85373c7bd97e64377cabb9d857850a60c8781c73f230dd8ce6b2f412aa5c",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_023.safetensors": "d3c95d786cc1c7df8473e943af3e078d1cd2fc127a412155a000c69251e12a59",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_024.safetensors": "00c3cf39b38ee0a0ba7e79099b82f0a1145a55a6189e351bcd51b00586d8ab6c",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_025.safetensors": "1928147cf181a8615d5e178583a78eb998fded7abc31421f37d31bc142319743",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_026.safetensors": "975a7b1cecc6b5c69dc92b606b8d5017029e2e575fae269d0cb3d67b356fa40f",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_027.safetensors": "557769f2609460ecdfde321697ec109b2669a8576ea632af8d4cc571c585c3fc",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_028.safetensors": "417a21d042c4a6c611e4e91f5959320b034d8cd4750f23d2911664ad77ee06ff",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_029.safetensors": "8c6c8ff720bd6181339ebcf62f72aaf3ea175babb4d3f0153dae41fa975d1be8",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_030.safetensors": "dcbc0eca785415dbb37c72feff2468a8b044ad44502d39962bd7508c8c3eb129",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_031.safetensors": "7860da393eef6bbc28d5ddcd43d07b4828be4ca81cfdf38188ecb1e33cb8c7b6",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_032.safetensors": "6627f8548b25c31999411adbb7547ec52318ee8f6d1f59654c4be5735d4637be",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_033.safetensors": "6d938952408ec2df874d20fb57237ee71a62304af8784742854a5f6c556f286e",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_034.safetensors": "6fa12f489315a0d2b58c5c4738b965473c505ee10aaea52af7a362bdffe8b5d3",
+            "/mnt/data/artifacts/kvcompile/artifacts/agent/controlled4b_v1/compiler/layer_035.safetensors": "cb7c310a01d1056770a580480285ba517eb68ee82687cfc527bb7fcdd6d1b78d"
+          },
+          "model": "/mnt/data/models/Qwen3-4B",
+          "limits": {
+            "knowledge": 128,
+            "tools": 256,
+            "behavior": 1536
+          },
+          "greedy": true,
+          "seed": 0,
+          "full_forward": true,
+          "image": "kvcompile-checks:repro",
+          "smoke": true,
+          "model_sha256": {
+            "model-00001-of-00003.safetensors": "328a91d3122359d5547f9d79521205bc0a46e1f79a792dfe650e99fc2d651223",
+            "model-00002-of-00003.safetensors": "6cd087b316306a68c562436b5492edbcf6e16c6dba3a1308279caa5a58e21ca5",
+            "model-00003-of-00003.safetensors": "e4bf436957184f4eeb86a80e9db394503f1f56446b2e6b7edeac5b81470f4ca1",
+            "config.json": "8ba006f74fecfaaeb392872a60f4a480e7ec9860153d2e1b769ec81f9a147f8a",
+            "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+            "tokenizer_config.json": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+          },
+          "upstream": {
+            "COMPACTION_DIR": "2020f6d37940fe013e7e7f1ebf409e5d107c5670",
+            "CARTRIDGES_DIR": "ef34ba97a06049c34820506e2c283746284ae5f0"
+          },
+          "torch": "2.8.0+rocm6.4"
+        },
+        "smoke": true,
+        "question": "What should I use to install dependencies in a Node service?",
+        "generated": {
+          "pred": "npm install",
+          "stop": "eos",
+          "tokens": 3,
+          "token_ids": [
+            40039,
+            4582,
+            151645
+          ]
+        },
+        "elapsed_s": 71.53164548205677
+      }
+    },
+    "4b-full.json": {
+      "sha256": "2ab41708a10db51aed1b8d13f407211af4db92075b8463b154df1a522c8a85a1",
+      "evidence": {
+        "complete": true,
+        "config": {
+          "arm": "full",
+          "files": {
+            "/mnt/data/artifacts/kvcompile/release-smoke-source-b1510d4/inputs/publication_final/cases.json": "5670887a4f28ff98de3567131b10b4151500e44e66c3b448862573e1a4c5fafc",
+            "/mnt/data/artifacts/kvcompile/release-smoke-source-b1510d4/inputs/joint/prompt.txt": "ea1bd5d8e31aed36e6890165bb825f5f92e551caf4bf44a2c24958812436f234",
+            "/mnt/data/artifacts/kvcompile/release-smoke-source-b1510d4/scripts/compare4b.py": "5579f30a74fbc6e04448d925a90d8e9141b9310c5f71669121907cdc92ab8138",
+            "/mnt/data/artifacts/kvcompile/release-smoke-source-b1510d4/scripts/clean_eval.py": "6ebf8ec14a0696cac15c58f4a52fdb13e02d4d67d743d3c21cdf18d250e2683a",
+            "/mnt/data/artifacts/kvcompile/release-smoke-source-b1510d4/scripts/task_eval27b.py": "7b44bbad45e507bf3d6a89e2db6c44dbc1cbf4fbb3f7eb9d630708c7bf816ed0",
+            "/mnt/data/artifacts/kvcompile/release-smoke-source-b1510d4/src/prompt.py": "81c720e62547bd701308f111b1499cf66b4282214faa8cd50798a67e69c219bb"
+          },
+          "model": "/mnt/data/models/Qwen3-4B",
+          "limits": {
+            "knowledge": 128,
+            "tools": 256,
+            "behavior": 1536
+          },
+          "greedy": true,
+          "seed": 0,
+          "full_forward": true,
+          "image": "kvcompile-checks:repro",
+          "smoke": true,
+          "model_sha256": {
+            "model-00001-of-00003.safetensors": "328a91d3122359d5547f9d79521205bc0a46e1f79a792dfe650e99fc2d651223",
+            "model-00002-of-00003.safetensors": "6cd087b316306a68c562436b5492edbcf6e16c6dba3a1308279caa5a58e21ca5",
+            "model-00003-of-00003.safetensors": "e4bf436957184f4eeb86a80e9db394503f1f56446b2e6b7edeac5b81470f4ca1",
+            "config.json": "8ba006f74fecfaaeb392872a60f4a480e7ec9860153d2e1b769ec81f9a147f8a",
+            "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+            "tokenizer_config.json": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+          },
+          "upstream": {
+            "COMPACTION_DIR": "2020f6d37940fe013e7e7f1ebf409e5d107c5670",
+            "CARTRIDGES_DIR": "ef34ba97a06049c34820506e2c283746284ae5f0"
+          },
+          "torch": "2.8.0+rocm6.4"
+        },
+        "smoke": true,
+        "question": "What should I use to install dependencies in a Node service?",
+        "generated": {
+          "pred": "npm install",
+          "stop": "eos",
+          "tokens": 3,
+          "token_ids": [
+            40039,
+            4582,
+            151645
+          ]
+        },
+        "elapsed_s": 88.16235686698928
+      }
+    },
+    "4b-none.json": {
+      "sha256": "baf869bad474fe9b10ab4494282d68f4262a644248ecbc36318d9d626954ceb8",
+      "evidence": {
+        "complete": true,
+        "config": {
+          "arm": "none",
+          "files": {
+            "/mnt/data/artifacts/kvcompile/release-smoke-source-b1510d4/inputs/publication_final/cases.json": "5670887a4f28ff98de3567131b10b4151500e44e66c3b448862573e1a4c5fafc",
+            "/mnt/data/artifacts/kvcompile/release-smoke-source-b1510d4/inputs/joint/prompt.txt": "ea1bd5d8e31aed36e6890165bb825f5f92e551caf4bf44a2c24958812436f234",
+            "/mnt/data/artifacts/kvcompile/release-smoke-source-b1510d4/scripts/compare4b.py": "5579f30a74fbc6e04448d925a90d8e9141b9310c5f71669121907cdc92ab8138",
+            "/mnt/data/artifacts/kvcompile/release-smoke-source-b1510d4/scripts/clean_eval.py": "6ebf8ec14a0696cac15c58f4a52fdb13e02d4d67d743d3c21cdf18d250e2683a",
+            "/mnt/data/artifacts/kvcompile/release-smoke-source-b1510d4/scripts/task_eval27b.py": "7b44bbad45e507bf3d6a89e2db6c44dbc1cbf4fbb3f7eb9d630708c7bf816ed0",
+            "/mnt/data/artifacts/kvcompile/release-smoke-source-b1510d4/src/prompt.py": "81c720e62547bd701308f111b1499cf66b4282214faa8cd50798a67e69c219bb"
+          },
+          "model": "/mnt/data/models/Qwen3-4B",
+          "limits": {
+            "knowledge": 128,
+            "tools": 256,
+            "behavior": 1536
+          },
+          "greedy": true,
+          "seed": 0,
+          "full_forward": true,
+          "image": "kvcompile-checks:repro",
+          "smoke": true,
+          "model_sha256": {
+            "model-00001-of-00003.safetensors": "328a91d3122359d5547f9d79521205bc0a46e1f79a792dfe650e99fc2d651223",
+            "model-00002-of-00003.safetensors": "6cd087b316306a68c562436b5492edbcf6e16c6dba3a1308279caa5a58e21ca5",
+            "model-00003-of-00003.safetensors": "e4bf436957184f4eeb86a80e9db394503f1f56446b2e6b7edeac5b81470f4ca1",
+            "config.json": "8ba006f74fecfaaeb392872a60f4a480e7ec9860153d2e1b769ec81f9a147f8a",
+            "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+            "tokenizer_config.json": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+          },
+          "upstream": {
+            "COMPACTION_DIR": "2020f6d37940fe013e7e7f1ebf409e5d107c5670",
+            "CARTRIDGES_DIR": "ef34ba97a06049c34820506e2c283746284ae5f0"
+          },
+          "torch": "2.8.0+rocm6.4"
+        },
+        "smoke": true,
+        "question": "What should I use to install dependencies in a Node service?",
+        "generated": {
+          "pred": "When installing dependencies for a Node.js service, you typically use **npm** (",
+          "stop": "cap",
+          "tokens": 16,
+          "token_ids": [
+            4498,
+            26632,
+            19543,
+            369,
+            264,
+            6018,
+            2857,
+            2473,
+            11,
+            498,
+            11136,
+            990,
+            3070,
+            40039,
+            334,
+            320
+          ]
+        },
+        "elapsed_s": 76.62023139593657
+      }
+    },
+    "am27b_fp32_v1.json": {
+      "sha256": "0eab67e4f9d94ca262f6bf826f2b7b3c208ecdc20347d962b49075d3a201a246",
+      "evidence": {
+        "complete": true,
+        "rows": [
+          {
+            "slots": 8192,
+            "manifest_sha256": "e704064af5b27ec77b68016099d1ca9a1a7e75c6f1961fa5671f8fba768735e3",
+            "roundtrip_exact": true,
+            "ids": [
+              63,
+              19349,
+              5022,
+              63
+            ],
+            "stop": "eos"
+          }
+        ],
+        "elapsed_s": 110.00344727304764,
+        "recurrent_injection_exact": true,
+        "wrapper_sha256": "4f073e7b0e4292ca780c5f2d293bc7d037bb80edc410758293a1001a29ef1ef7",
+        "peak_gib": 14.564812183380127
+      }
+    },
+    "am27b_v1.json": {
+      "sha256": "bf1be3ca099c5ba2619fd66138a4f2f661b2d77f781f187a1b624da8217a6630",
+      "evidence": {
+        "complete": true,
+        "rows": [
+          {
+            "slots": 4096,
+            "manifest_sha256": "8ea28b698f3567ba0ba99610bc9c2a5ae9db9f4bded36ae0344b54555191910d",
+            "roundtrip_exact": true,
+            "ids": [
+              63,
+              19349,
+              5022,
+              63
+            ],
+            "stop": "eos"
+          }
+        ],
+        "elapsed_s": 97.04957829602063,
+        "recurrent_injection_exact": true,
+        "wrapper_sha256": "4f073e7b0e4292ca780c5f2d293bc7d037bb80edc410758293a1001a29ef1ef7",
+        "peak_gib": 13.692565441131592
+      }
+    },
+    "exl-freeze.txt": {
+      "sha256": "30b0db74082ebcad237082e601f548a71461162e8ce9aef7c0f7fd77707fb9fc",
+      "evidence": [
+        "annotated-types==0.8.0",
+        "anyio==4.15.1",
+        "certifi==2026.10.18",
+        "click==8.5.0",
+        "-e file:///mnt/data/artifacts/kvcompile/release-validation-20261019/exllamav3",
+        "filelock==3.32.3",
+        "fsspec==2026.7.0",
+        "h11==0.16.0",
+        "hf-xet==1.7.0",
+        "httpcore==1.0.9",
+        "httpx==0.28.1",
+        "huggingface-hub==1.33.0",
+        "idna==3.20",
+        "jinja2==3.1.6",
+        "llguidance==1.9.1",
+        "marisa-trie==1.4.1",
+        "markdown-it-py==4.2.0",
+        "markupsafe==3.0.3",
+        "mdurl==0.1.2",
+        "mpmath==1.3.0",
+        "networkx==3.6.1",
+        "ninja==1.13.2",
+        "numpy==2.5.2",
+        "packaging==26.3",
+        "pillow==13.0.0",
+        "pydantic==2.14.1",
+        "pydantic-core==2.50.1",
+        "pygments==2.21.0",
+        "pyyaml==6.0.3",
+        "rich==15.0.0",
+        "safetensors==0.8.0",
+        "setuptools==78.1.0",
+        "sympy==1.14.0",
+        "tokenizers==0.23.2",
+        "torch==2.13.0+rocm7.2",
+        "tqdm==4.70.1",
+        "triton-rocm==3.7.1",
+        "typing-extensions==4.16.0",
+        "typing-inspection==0.4.4",
+        "wheel==0.48.0"
+      ]
+    },
+    "hf-freeze.txt": {
+      "sha256": "2d16fde42cf4029a0955dc1d23eaf4c5716b2d23d9889cd541311ff7590d20b4",
+      "evidence": [
+        "accelerate==1.12.0",
+        "aiohappyeyeballs==2.7.1",
+        "aiohttp==3.14.5",
+        "aiosignal==1.4.0",
+        "annotated-types==0.8.0",
+        "anyio==4.15.1",
+        "attrs==26.1.0",
+        "certifi==2026.10.18",
+        "charset-normalizer==3.5.2",
+        "click==8.5.0",
+        "contourpy==1.4.0",
+        "cwevals==0.0.1b1",
+        "cycler==0.12.1",
+        "datasets==5.0.1",
+        "dill==0.3.9",
+        "distro==1.9.0",
+        "einops==0.8.2",
+        "evaluate==0.4.6",
+        "filelock==3.32.3",
+        "fonttools==4.67.0",
+        "frozenlist==1.8.0",
+        "fsspec==2026.6.0",
+        "googleapis-common-protos==1.75.5",
+        "h11==0.16.0",
+        "hf-xet==1.7.0",
+        "httpcore==1.0.9",
+        "httpx==0.28.1",
+        "huggingface-hub==0.36.2",
+        "idna==3.20",
+        "jinja2==3.1.6",
+        "kiwisolver==1.5.1",
+        "markdown==3.11.1",
+        "markupsafe==3.0.3",
+        "matplotlib==3.11.2",
+        "mpmath==1.3.0",
+        "multidict==7.1.0",
+        "multiprocess==0.70.17",
+        "networkx==3.6.1",
+        "numpy==2.5.4",
+        "opentelemetry-api==1.45.1",
+        "opentelemetry-exporter-http-transport==0.66b1",
+        "opentelemetry-exporter-otlp-common==0.66b1",
+        "opentelemetry-exporter-otlp-proto-common==1.45.1",
+        "opentelemetry-exporter-otlp-proto-http==1.45.1",
+        "opentelemetry-proto==1.45.1",
+        "opentelemetry-sdk==1.45.1",
+        "opentelemetry-semantic-conventions==0.66b1",
+        "packaging==26.3",
+        "pandas==3.0.6",
+        "peft==0.21.2",
+        "pillow==13.0.0",
+        "platformdirs==4.13.4",
+        "propcache==0.5.4",
+        "protobuf==7.36.2",
+        "psutil==7.2.2",
+        "pyarrow==26.0.0",
+        "pydantic==2.14.1",
+        "pydantic-core==2.50.1",
+        "pydrantic==0.0.3",
+        "pyparsing==3.3.3",
+        "python-dateutil==2.9.0.post0",
+        "pytorch-triton-rocm==3.4.0",
+        "pyyaml==6.0.3",
+        "regex==2026.9.29",
+        "requests==2.34.2",
+        "safetensors==0.8.0",
+        "setuptools==78.1.0",
+        "six==1.17.0",
+        "sniffio==1.3.1",
+        "sympy==1.14.0",
+        "tiktoken==0.14.0",
+        "tokenizers==0.22.2",
+        "torch==2.8.0+rocm6.4",
+        "tqdm==4.70.1",
+        "transformers==4.57.1",
+        "typing-extensions==4.16.0",
+        "typing-inspection==0.4.4",
+        "urllib3==2.8.0",
+        "wandb==0.31.0",
+        "xxhash==4.0.1",
+        "yarl==1.25.1"
+      ]
+    },
+    "train-probe.json": {
+      "sha256": "c31b41c0cb11399458519734131065fa0d77ef4bcbbf3d93991cc50991a065ad",
+      "evidence": [
+        {
+          "q": "What should I use to install dependencies in a Node service?",
+          "answer": "pnpm",
+          "kind": "lookup"
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Existing model weights and fitted artifacts reused read-only; no fresh fit or benchmark reproduction.",
+    "4B none hit the deliberate 16-token cap; four other 4B arms ended at EOS.",
+    "Successful execution is not semantic correctness: 4B answers used npm, training reference says pnpm.",
+    "CARTRIDGES Triton compilation warned about _POSIX_C_SOURCE redefinition; execution and resume passed."
+  ]
+}

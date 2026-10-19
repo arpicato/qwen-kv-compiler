@@ -1,0 +1,24 @@
+{
+  "probes": [
+    {
+      "q": "The payments service is ready to ship. Start the release process: changelog, version bump, verification, then staged rollout. What do you do first?",
+      "answer": "release-checklist",
+      "kind": "lookup"
+    },
+    {
+      "q": "I fixed the billing rounding bug. Billing tests pass, but the unchanged search service fails on main too. Wrap up the work; don't expand the fix into search.",
+      "answer": "platform",
+      "kind": "lookup"
+    },
+    {
+      "q": "Set up the Python worker's declared dependencies and run its tests. pyproject.toml and tests/ have already been inspected. Give the commands you would actually use from its service directory, without installing additional tools.",
+      "answer": "uv",
+      "kind": "lookup"
+    },
+    {
+      "q": "The database owner approved removing the obsolete audit_archive table. Use our connected Postgres service to remove it now; no application code changes are needed.",
+      "answer": "read-only",
+      "kind": "lookup"
+    }
+  ]
+}

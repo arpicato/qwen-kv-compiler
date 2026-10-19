@@ -1,0 +1,45 @@
+{
+  "complete": true,
+  "layer": 23,
+  "kv_head": 3,
+  "slots": 8192,
+  "lstsq": [
+    {
+      "matrix_shape": [
+        39630,
+        8192
+      ],
+      "solution_shape": [
+        8192,
+        1
+      ],
+      "dtype": "torch.float32",
+      "fp32_finite": true,
+      "fp16_finite": true,
+      "max_abs": 226.8701934814453,
+      "nonfinite_fp16": 0
+    },
+    {
+      "matrix_shape": [
+        39630,
+        8192
+      ],
+      "solution_shape": [
+        8192,
+        256
+      ],
+      "dtype": "torch.float32",
+      "fp32_finite": true,
+      "fp16_finite": false,
+      "max_abs": 67691.234375,
+      "nonfinite_fp16": 1
+    }
+  ],
+  "output_finite": {
+    "k": true,
+    "beta": true,
+    "v": false
+  },
+  "elapsed_s": 17.967856533941813,
+  "torch": "2.8.0+rocm6.4"
+}

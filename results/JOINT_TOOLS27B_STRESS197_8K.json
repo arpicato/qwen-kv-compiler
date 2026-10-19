@@ -1,0 +1,1805 @@
+{
+  "config": {
+    "probeset_id": "3fcf62d0930a433f755723db",
+    "max_tokens": 64,
+    "cap": 32768,
+    "model": "/home/arpin/exllamav3-rocm/models/Qwen3.8-27B-EXL3-3.5bpw",
+    "teacher": "/mnt/data/artifacts/kvcompile/artifacts/agent/long_policy4k27b_v1/teacher",
+    "compiled": "/mnt/data/artifacts/kvcompile/artifacts/agent/long_policy8k27b_v1/compiled",
+    "arms": [
+      "compiled"
+    ],
+    "n_sys": 26341
+  },
+  "summary": {
+    "probeset": "/mnt/data/artifacts/kvcompile/artifacts/agent/joint_tools27b_v1/stress197.json",
+    "probeset_id": "3fcf62d0930a433f755723db",
+    "n": 197,
+    "gen_protocol": "exl3-gpu-argmax-eos-set",
+    "max_tokens": 64,
+    "compiled": "/mnt/data/artifacts/kvcompile/artifacts/agent/long_policy8k27b_v1/compiled",
+    "slots": 8192,
+    "by_arm_acc": {
+      "compiled": 0.9187817258883249
+    },
+    "complete": true,
+    "elapsed_s": 107.66338872909546
+  },
+  "rows": {
+    "compiled": [
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Tools for listing GitHub Actions resources.",
+        "answer": "actions_list",
+        "ok": true,
+        "pred": "`mcp__github__actions_list`",
+        "stop": "eos",
+        "n_tok": 9
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Add review comment to the requester's latest pending pull request review.",
+        "answer": "add_comment_to_pending_review",
+        "ok": true,
+        "pred": "`mcp__github__add_comment_to_pending_review`",
+        "stop": "eos",
+        "n_tok": 12
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Add a reaction to an issue or pull request comment.",
+        "answer": "add_issue_comment_reaction",
+        "ok": true,
+        "pred": "`mcp__github__add_issue_comment_reaction`",
+        "stop": "eos",
+        "n_tok": 11
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Add a review comment to the current user's pending pull request review.",
+        "answer": "add_pull_request_review_comment",
+        "ok": true,
+        "pred": "`mcp__github__add_pull_request_review_comment`",
+        "stop": "eos",
+        "n_tok": 12
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Add a reply and/or reaction to an existing pull request comment.",
+        "answer": "add_reply_to_pull_request_comment",
+        "ok": false,
+        "pred": "`mcp__github__add_reply_pull_request_comment`",
+        "stop": "eos",
+        "n_tok": 12
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Create a new branch in a GitHub repository",
+        "answer": "create_branch",
+        "ok": true,
+        "pred": "`mcp__github__create_branch`",
+        "stop": "eos",
+        "n_tok": 9
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Create or update a single file in a GitHub repository.",
+        "answer": "create_or_update_file",
+        "ok": true,
+        "pred": "`mcp__github__create_or_update_file`",
+        "stop": "eos",
+        "n_tok": 11
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Create a review on a pull request.",
+        "answer": "create_pull_request_review",
+        "ok": false,
+        "pred": "`mcp__github__pull_request_review` with `method: \"create\"`.",
+        "stop": "eos",
+        "n_tok": 18
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Create a new ruleset at the repository, organization, or enterprise level",
+        "answer": "create_repository_ruleset",
+        "ok": true,
+        "pred": "`mcp__github__create_repository_ruleset`",
+        "stop": "eos",
+        "n_tok": 11
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Create or update custom properties at the repository, organization, or enterprise level.",
+        "answer": "custom_properties_write",
+        "ok": true,
+        "pred": "`mcp__github__custom_properties_write`",
+        "stop": "eos",
+        "n_tok": 10
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Delete a pending pull request review.",
+        "answer": "delete_pending_pull_request_review",
+        "ok": true,
+        "pred": "`mcp__github__delete_pending_pull_request_review`",
+        "stop": "eos",
+        "n_tok": 12
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Write operations for discussion comments.",
+        "answer": "discussion_comment_write",
+        "ok": true,
+        "pred": "`mcp__github__discussion_comment_write`",
+        "stop": "eos",
+        "n_tok": 10
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Find likely duplicate issues for an existing issue in a GitHub repository.",
+        "answer": "find_duplicate",
+        "ok": false,
+        "pred": "`mcp__github__find_duplicate_issues`",
+        "stop": "eos",
+        "n_tok": 10
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Get details of a specific code quality finding in a GitHub repository.",
+        "answer": "get_code_quality_finding",
+        "ok": true,
+        "pred": "`mcp__github__get_code_quality_finding`",
+        "stop": "eos",
+        "n_tok": 12
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Get details for a commit from a GitHub repository",
+        "answer": "get_commit",
+        "ok": true,
+        "pred": "`mcp__github__get_commit`",
+        "stop": "eos",
+        "n_tok": 9
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Get a specific discussion by ID",
+        "answer": "get_discussion",
+        "ok": true,
+        "pred": "`mcp__github__get_discussion`",
+        "stop": "eos",
+        "n_tok": 10
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Get git blame information for a file, showing the commit that last modified each line.",
+        "answer": "get_file_blame",
+        "ok": true,
+        "pred": "`mcp__github__get_file_blame`",
+        "stop": "eos",
+        "n_tok": 11
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Get gist content of a particular gist, by gist ID",
+        "answer": "get_gist",
+        "ok": false,
+        "pred": "`mcp__github__get_gist_content`",
+        "stop": "eos",
+        "n_tok": 11
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Download logs for a specific workflow job or efficiently get all failed job logs for a workflow run",
+        "answer": "get_job_logs",
+        "ok": true,
+        "pred": "`mcp__github__get_job_logs`",
+        "stop": "eos",
+        "n_tok": 10
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Get a specific label from a repository.",
+        "answer": "get_label",
+        "ok": true,
+        "pred": "`mcp__github__get_label`",
+        "stop": "eos",
+        "n_tok": 9
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Get details of the authenticated GitHub user.",
+        "answer": "get_me",
+        "ok": true,
+        "pred": "`mcp__github__get_me`",
+        "stop": "eos",
+        "n_tok": 9
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Get a specific release by its tag name in a GitHub repository",
+        "answer": "get_release_by_tag",
+        "ok": true,
+        "pred": "`mcp__github__get_release_by_tag`",
+        "stop": "eos",
+        "n_tok": 11
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Get details of a specific secret scanning alert in a GitHub repository.",
+        "answer": "get_secret_scanning_alert",
+        "ok": true,
+        "pred": "`mcp__github__get_secret_scanning_alert`",
+        "stop": "eos",
+        "n_tok": 12
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Get member usernames of a specific team in an organization.",
+        "answer": "get_team_members",
+        "ok": true,
+        "pred": "`mcp__github__get_team_members`",
+        "stop": "eos",
+        "n_tok": 10
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Hide (minimize) a comment on an issue, or a conversation comment on a pull request.",
+        "answer": "hide_issue_comment",
+        "ok": true,
+        "pred": "`mcp__github__hide_issue_comment`",
+        "stop": "eos",
+        "n_tok": 10
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Hide (minimize) an inline review comment on a pull request diff.",
+        "answer": "hide_pull_request_review_comment",
+        "ok": true,
+        "pred": "`mcp__github__hide_pull_request_review_comment`",
+        "stop": "eos",
+        "n_tok": 12
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Add or remove an issue dependency relationship in a GitHub repository.",
+        "answer": "issue_dependency_write",
+        "ok": true,
+        "pred": "`mcp__github__issue_dependency_write`",
+        "stop": "eos",
+        "n_tok": 10
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Create a new or update an existing issue in a GitHub repository.",
+        "answer": "issue_write",
+        "ok": true,
+        "pred": "`mcp__github__issue_write`",
+        "stop": "eos",
+        "n_tok": 9
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: List branches in a GitHub repository",
+        "answer": "list_branches",
+        "ok": true,
+        "pred": "`mcp__github__list_branches`",
+        "stop": "eos",
+        "n_tok": 10
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Get list of commits of a branch in a GitHub repository.",
+        "answer": "list_commits",
+        "ok": true,
+        "pred": "`mcp__github__list_commits`",
+        "stop": "eos",
+        "n_tok": 10
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: List discussion categories with their id and name, for a repository or organisation.",
+        "answer": "list_discussion_categories",
+        "ok": true,
+        "pred": "`mcp__github__list_discussion_categories`",
+        "stop": "eos",
+        "n_tok": 11
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: List global security advisories from GitHub.",
+        "answer": "list_global_security_advisories",
+        "ok": true,
+        "pred": "`mcp__github__list_global_security_advisories`",
+        "stop": "eos",
+        "n_tok": 13
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: List supported issue types for a repository or its owner organization.",
+        "answer": "list_issue_types",
+        "ok": true,
+        "pred": "`mcp__github__list_issue_types`",
+        "stop": "eos",
+        "n_tok": 10
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: List labels from a repository, ordered by issue count (descending) so the most-used labels are returned first",
+        "answer": "list_label",
+        "ok": true,
+        "pred": "`mcp__github__list_label`",
+        "stop": "eos",
+        "n_tok": 9
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: List repository security advisories for a GitHub organization.",
+        "answer": "list_org_repository_security_advisories",
+        "ok": false,
+        "pred": "`mcp__github__list_repository_security_advisories`",
+        "stop": "eos",
+        "n_tok": 13
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: List releases in a GitHub repository",
+        "answer": "list_releases",
+        "ok": true,
+        "pred": "`mcp__github__list_releases`",
+        "stop": "eos",
+        "n_tok": 10
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: List repository security advisories for a GitHub repository.",
+        "answer": "list_repository_security_advisories",
+        "ok": true,
+        "pred": "`mcp__github__list_repository_security_advisories`",
+        "stop": "eos",
+        "n_tok": 13
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: List starred repositories",
+        "answer": "list_starred_repositories",
+        "ok": true,
+        "pred": "`mcp__github__list_starred_repositories`",
+        "stop": "eos",
+        "n_tok": 12
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Manage a notification subscription: ignore, watch, or delete a notification thread subscription.",
+        "answer": "manage_notification_subscription",
+        "ok": true,
+        "pred": "`mcp__github__manage_notification_subscription`",
+        "stop": "eos",
+        "n_tok": 10
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Mark all notifications as read",
+        "answer": "mark_all_notifications_read",
+        "ok": true,
+        "pred": "`mcp__github__mark_all_notifications_read`",
+        "stop": "eos",
+        "n_tok": 11
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Get details about specific GitHub Projects resources.",
+        "answer": "projects_get",
+        "ok": true,
+        "pred": "`mcp__github__projects_get`",
+        "stop": "eos",
+        "n_tok": 9
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Create and manage GitHub Projects: create projects, add/update/delete items, bulk-update many items at once, manage views, create status updates, and add iteration fields.",
+        "answer": "projects_write",
+        "ok": true,
+        "pred": "`mcp__github__projects_write`",
+        "stop": "eos",
+        "n_tok": 9
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Push multiple files to a GitHub repository in a single commit",
+        "answer": "push_files",
+        "ok": true,
+        "pred": "`mcp__github__push_files`",
+        "stop": "eos",
+        "n_tok": 9
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Remove a reaction from an issue or pull request.",
+        "answer": "remove_issue_reaction",
+        "ok": true,
+        "pred": "`mcp__github__remove_issue_reaction`",
+        "stop": "eos",
+        "n_tok": 10
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Remove a sub-issue from a parent issue.",
+        "answer": "remove_sub_issue",
+        "ok": true,
+        "pred": "`mcp__github__remove_sub_issue`",
+        "stop": "eos",
+        "n_tok": 10
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Reprioritize (reorder) a sub-issue relative to other sub-issues.",
+        "answer": "reprioritize_sub_issue",
+        "ok": true,
+        "pred": "`mcp__github__reprioritize_sub_issue`",
+        "stop": "eos",
+        "n_tok": 12
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Request reviewers for a pull request.",
+        "answer": "request_pull_request_reviewers",
+        "ok": true,
+        "pred": "`mcp__github__request_pull_request_reviewers`",
+        "stop": "eos",
+        "n_tok": 12
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Search for commits across GitHub repositories using GitHub's commit search syntax.",
+        "answer": "search_commits",
+        "ok": true,
+        "pred": "`mcp__github__search_commits`",
+        "stop": "eos",
+        "n_tok": 10
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Find GitHub organizations by name, location, or other organization metadata.",
+        "answer": "search_orgs",
+        "ok": true,
+        "pred": "`mcp__github__search_orgs`",
+        "stop": "eos",
+        "n_tok": 10
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Find GitHub repositories by name, description, readme, topics, or other metadata.",
+        "answer": "search_repositories",
+        "ok": true,
+        "pred": "`mcp__github__search_repositories`",
+        "stop": "eos",
+        "n_tok": 10
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Set issue field values for an issue.",
+        "answer": "set_issue_fields",
+        "ok": true,
+        "pred": "`mcp__github__set_issue_fields`",
+        "stop": "eos",
+        "n_tok": 10
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Submit a pending pull request review.",
+        "answer": "submit_pending_pull_request_review",
+        "ok": false,
+        "pred": "`mcp__github__submit_pull_request_review`",
+        "stop": "eos",
+        "n_tok": 11
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Unhide (unminimize) a previously hidden comment on an issue, or conversation comment on a pull request.",
+        "answer": "unhide_issue_comment",
+        "ok": true,
+        "pred": "`mcp__github__unhide_issue_comment`",
+        "stop": "eos",
+        "n_tok": 11
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Unhide (unminimize) a previously hidden inline review comment on a pull request diff.",
+        "answer": "unhide_pull_request_review_comment",
+        "ok": true,
+        "pred": "`mcp__github__unhide_pull_request_review_comment`",
+        "stop": "eos",
+        "n_tok": 13
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Unstar a GitHub repository",
+        "answer": "unstar_repository",
+        "ok": true,
+        "pred": "`mcp__github__unstar_repository`",
+        "stop": "eos",
+        "n_tok": 10
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Update the body content of an existing issue.",
+        "answer": "update_issue_body",
+        "ok": true,
+        "pred": "`mcp__github__update_issue_body`",
+        "stop": "eos",
+        "n_tok": 10
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Update the labels of an existing issue.",
+        "answer": "update_issue_labels",
+        "ok": true,
+        "pred": "`mcp__github__update_issue_labels`",
+        "stop": "eos",
+        "n_tok": 10
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Update the state of an existing issue (open or closed), with an optional state reason.",
+        "answer": "update_issue_state",
+        "ok": true,
+        "pred": "`mcp__github__update_issue_state`",
+        "stop": "eos",
+        "n_tok": 10
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Set or remove the type of an existing issue.",
+        "answer": "update_issue_type",
+        "ok": true,
+        "pred": "`mcp__github__update_issue_type`",
+        "stop": "eos",
+        "n_tok": 10
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Update the body description of an existing pull request.",
+        "answer": "update_pull_request_body",
+        "ok": true,
+        "pred": "`mcp__github__update_pull_request_body`",
+        "stop": "eos",
+        "n_tok": 11
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Mark a pull request as draft or ready for review.",
+        "answer": "update_pull_request_draft_state",
+        "ok": false,
+        "pred": "`mcp__github__update_pull_request_draft`",
+        "stop": "eos",
+        "n_tok": 11
+      },
+      {
+        "kind": "tool_select",
+        "q": "Which tool should be used to do the following: Update the title of an existing pull request.",
+        "answer": "update_pull_request_title",
+        "ok": true,
+        "pred": "`mcp__github__update_pull_request_title`",
+        "stop": "eos",
+        "n_tok": 11
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `actions_list`, which argument is described as: The unique identifier of the resource. This will vary based on the \"method\" provided, so ensure you provide the correct ID:",
+        "answer": "resource_id",
+        "ok": true,
+        "pred": "`resource_id`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `actions_list`, which argument is described as: Filters for workflow runs. **ONLY** used when method is 'list_workflow_runs'",
+        "answer": "workflow_runs_filter",
+        "ok": true,
+        "pred": "`workflow_runs_filter`",
+        "stop": "eos",
+        "n_tok": 5
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `actions_run_trigger`, which argument is described as: The ID of the workflow run. Required for all methods except 'run_workflow'.",
+        "answer": "run_id",
+        "ok": true,
+        "pred": "`run_id`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `add_comment_to_pending_review`, which argument is described as: The line of the blob in the pull request diff that the comment applies to. For multi-line comments, the last line of the range",
+        "answer": "line",
+        "ok": true,
+        "pred": "`line`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `add_comment_to_pending_review`, which argument is described as: For multi-line comments, the first line of the range that the comment applies to",
+        "answer": "startLine",
+        "ok": true,
+        "pred": "`startLine`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `add_comment_to_pending_review`, which argument is described as: The level at which the comment is targeted",
+        "answer": "subjectType",
+        "ok": true,
+        "pred": "`subjectType`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `add_issue_comment`, which argument is described as: Issue or pull request number to comment on or react to.",
+        "answer": "issue_number",
+        "ok": true,
+        "pred": "`issue_number`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `add_issue_comment_reaction`, which argument is described as: The issue or pull request comment ID",
+        "answer": "comment_id",
+        "ok": true,
+        "pred": "`comment_id`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `add_issue_reaction`, which argument is described as: The emoji reaction type",
+        "answer": "content",
+        "ok": true,
+        "pred": "`content`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `add_pull_request_review_comment`, which argument is described as: The pull request number",
+        "answer": "pullNumber",
+        "ok": true,
+        "pred": "`pullNumber`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `add_pull_request_review_comment`, which argument is described as: The start line of a multi-line comment (optional)",
+        "answer": "startLine",
+        "ok": true,
+        "pred": "`startLine`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `add_pull_request_review_comment`, which argument is described as: The subject type of the comment",
+        "answer": "subjectType",
+        "ok": true,
+        "pred": "`subjectType`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `add_pull_request_review_comment_reaction`, which argument is described as: The emoji reaction type",
+        "answer": "content",
+        "ok": true,
+        "pred": "`content`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `add_reply_to_pull_request_comment`, which argument is described as: Pull request number. Required when body is provided.",
+        "answer": "pullNumber",
+        "ok": true,
+        "pred": "`pullNumber`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `add_sub_issue`, which argument is described as: The parent issue number",
+        "answer": "issue_number",
+        "ok": true,
+        "pred": "`issue_number`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `add_sub_issue`, which argument is described as: The ID of the sub-issue to add. ID is not the same as issue number",
+        "answer": "sub_issue_id",
+        "ok": true,
+        "pred": "`sub_issue_id`",
+        "stop": "eos",
+        "n_tok": 5
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `assign_copilot_to_issue`, which argument is described as: Optional custom instructions to guide the agent beyond the issue body. Use this to provide additional context, constraints, or guidance that is not captured in the issue description",
+        "answer": "custom_instructions",
+        "ok": true,
+        "pred": "`custom_instructions`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `assign_copilot_to_issue_with_intent`, which argument is described as: How confident you are in this choice. 'HIGH' for clear signal or explicit user request, 'MEDIUM' for reasonable inference with some ambiguity, 'LOW' for best guess with limited signal.",
+        "answer": "confidence",
+        "ok": true,
+        "pred": "`confidence`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `assign_copilot_to_issue_with_intent`, which argument is described as: If true, records a pending Copilot assignment intent rather than launching the agent. Approval later supplies the launch context; base_ref and custom_instructions are ignored in this case.",
+        "answer": "is_suggestion",
+        "ok": true,
+        "pred": "`is_suggestion`",
+        "stop": "eos",
+        "n_tok": 5
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `create_branch`, which argument is described as: Source branch (defaults to repo default)",
+        "answer": "from_branch",
+        "ok": true,
+        "pred": "`from_branch`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `create_gist`, which argument is described as: Description of the gist",
+        "answer": "description",
+        "ok": true,
+        "pred": "`description`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `create_gist`, which argument is described as: Whether the gist is public",
+        "answer": "public",
+        "ok": true,
+        "pred": "`public`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `create_issue`, which argument is described as: Repository owner of the parent issue. Must be provided with parent_repo. Omit both to use owner and repo. Only used when parent_issue_number is provided.",
+        "answer": "parent_owner",
+        "ok": true,
+        "pred": "`parent_owner`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `create_or_update_file`, which argument is described as: Set true to update a symbolic link itself; content must be its new target path.",
+        "answer": "allow_symlink_write",
+        "ok": false,
+        "pred": "`symbolic_link`",
+        "stop": "eos",
+        "n_tok": 5
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `create_or_update_file`, which argument is described as: Content of the file, exactly as it should appear once written. Do not base64-encode it; this server does that before calling the REST API.",
+        "answer": "content",
+        "ok": true,
+        "pred": "`content`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `create_pull_request`, which argument is described as: GitHub usernames or ORG/team-slug team reviewers to request reviews from",
+        "answer": "reviewers",
+        "ok": true,
+        "pred": "`reviewers`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `create_pull_request_review`, which argument is described as: The review action to perform. If omitted, creates a pending review.",
+        "answer": "event",
+        "ok": true,
+        "pred": "`event`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `create_repository`, which argument is described as: Initialize with README",
+        "answer": "autoInit",
+        "ok": true,
+        "pred": "`autoInit`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `create_repository`, which argument is described as: Organization to create the repository in (omit to create in your personal account)",
+        "answer": "organization",
+        "ok": true,
+        "pred": "`organization`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `create_repository_ruleset`, which argument is described as: The actors that can bypass the rules in this ruleset",
+        "answer": "bypass_actors",
+        "ok": true,
+        "pred": "`bypass_actors`",
+        "stop": "eos",
+        "n_tok": 6
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `create_repository_ruleset`, which argument is described as: The enforcement level of the ruleset. 'evaluate' allows admins to test rules before enforcing them",
+        "answer": "enforcement",
+        "ok": true,
+        "pred": "The argument is `enforcement`.",
+        "stop": "eos",
+        "n_tok": 7
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `create_repository_ruleset`, which argument is described as: The level at which the ruleset is configured:",
+        "answer": "level",
+        "ok": true,
+        "pred": "`level`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `create_repository_ruleset`, which argument is described as: The target of the ruleset. Defaults to 'branch'. 'repository' is only valid for 'organization' and 'enterprise' level rulesets.",
+        "answer": "target",
+        "ok": true,
+        "pred": "`target`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `custom_properties_read`, which argument is described as: The level at which custom properties are managed:",
+        "answer": "level",
+        "ok": true,
+        "pred": "`level`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `custom_properties_write`, which argument is described as: The level at which custom properties are managed:",
+        "answer": "level",
+        "ok": true,
+        "pred": "`level`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `delete_file`, which argument is described as: Branch to delete the file from",
+        "answer": "branch",
+        "ok": true,
+        "pred": "`branch`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `discussion_comment_write`, which argument is described as: The Node ID of the discussion comment (required for 'reply', 'update', 'delete', 'mark_answer', and 'unmark_answer' methods). For 'reply', this is the top-level comment to reply to; GitHub Discussions only support one level of nesting.",
+        "answer": "commentNodeID",
+        "ok": true,
+        "pred": "`commentNodeID`",
+        "stop": "eos",
+        "n_tok": 5
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `dismiss_notification`, which argument is described as: The ID of the notification thread",
+        "answer": "threadID",
+        "ok": true,
+        "pred": "`threadID`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `find_duplicate`, which argument is described as: The number of the existing issue to find duplicates for",
+        "answer": "issue_number",
+        "ok": true,
+        "pred": "`issue_number`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `get_code_quality_finding`, which argument is described as: The number of the finding.",
+        "answer": "findingNumber",
+        "ok": false,
+        "pred": "`finding_id`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `get_commit`, which argument is described as: Level of detail to include for changed files. \"none\" omits stats and files entirely. \"stats\" (default) includes per-file metadata: filename, status, and lines-of-code counts (additions, deletions, changes), with no patch content. \"full_patch\" additionally includes the unified diff content for each file and can be very large.",
+        "answer": "detail",
+        "ok": false,
+        "pred": "The argument is `level`.",
+        "stop": "eos",
+        "n_tok": 6
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `get_discussion_comments`, which argument is described as: When true, each top-level comment will include its replies nested within it (up to 100 replies per comment, which is the GitHub API maximum). Defaults to false.",
+        "answer": "includeReplies",
+        "ok": true,
+        "pred": "`includeReplies`",
+        "stop": "eos",
+        "n_tok": 5
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `get_file_blame`, which argument is described as: Optional 1-based starting line of the window of interest. Only ranges overlapping [start_line, end_line] are returned, clamped to the window.",
+        "answer": "start_line",
+        "ok": true,
+        "pred": "`start_line`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `get_job_logs`, which argument is described as: When true, gets logs for all failed jobs in run_id",
+        "answer": "failed_only",
+        "ok": false,
+        "pred": "`failed_jobs`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `get_job_logs`, which argument is described as: Returns actual log content instead of URLs",
+        "answer": "return_content",
+        "ok": true,
+        "pred": "`return_content`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `get_job_logs`, which argument is described as: Number of lines to return from the end of the log",
+        "answer": "tail_lines",
+        "ok": true,
+        "pred": "`tail_lines`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `get_job_logs`, which argument is described as: The unique identifier of the workflow job. Required when getting logs for a single job.",
+        "answer": "job_id",
+        "ok": true,
+        "pred": "`job_id`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `get_job_logs`, which argument is described as: The unique identifier of the workflow run. Required when failed_only is true to get logs for all failed jobs in the run.",
+        "answer": "run_id",
+        "ok": true,
+        "pred": "`run_id`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `get_notification_details`, which argument is described as: The ID of the notification",
+        "answer": "notificationID",
+        "ok": true,
+        "pred": "`notificationID`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `get_repository_tree`, which argument is described as: Optional path prefix to filter the tree results (e.g., 'src/' to only show files in the src directory)",
+        "answer": "path_filter",
+        "ok": false,
+        "pred": "`path_prefix`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `get_repository_tree`, which argument is described as: The SHA1 value or ref (branch or tag) name of the tree. Defaults to the repository's default branch",
+        "answer": "tree_sha",
+        "ok": true,
+        "pred": "`tree_sha`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `get_teams`, which argument is described as: Username to get teams for. If not provided, uses the authenticated user.",
+        "answer": "user",
+        "ok": true,
+        "pred": "The `user` argument.",
+        "stop": "eos",
+        "n_tok": 6
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `hide_issue_comment`, which argument is described as: The numeric ID of the issue or pull request conversation comment",
+        "answer": "comment_id",
+        "ok": true,
+        "pred": "`comment_id`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `hide_pull_request_review`, which argument is described as: The pull request number",
+        "answer": "pullNumber",
+        "ok": true,
+        "pred": "`pullNumber`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `hide_pull_request_review_comment`, which argument is described as: The reason for hiding the comment",
+        "answer": "classifier",
+        "ok": true,
+        "pred": "`classifier`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `issue_dependency_read`, which argument is described as: The number of the issue",
+        "answer": "issue_number",
+        "ok": true,
+        "pred": "`issue_number`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `issue_dependency_write`, which argument is described as: The number of the related issue to link or unlink",
+        "answer": "related_issue_number",
+        "ok": true,
+        "pred": "`related_issue_number`",
+        "stop": "eos",
+        "n_tok": 5
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `issue_dependency_write`, which argument is described as: The name of the related issue's repository. Defaults to 'repo' when omitted.",
+        "answer": "related_repo",
+        "ok": true,
+        "pred": "`related_repo`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `issue_write`, which argument is described as: Usernames to assign to this issue",
+        "answer": "assignees",
+        "ok": true,
+        "pred": "`assignees`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `issue_write`, which argument is described as: Issue field values to set or clear. Each item requires 'field_name' and exactly one of 'value', 'field_option_name', or 'delete: true'.",
+        "answer": "issue_fields",
+        "ok": false,
+        "pred": "`fields`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `issue_write`, which argument is described as: Labels to apply to this issue",
+        "answer": "labels",
+        "ok": true,
+        "pred": "`labels`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `issue_write`, which argument is described as: Repository owner of the parent issue. Must be provided with parent_repo. Omit both to use owner and repo. Only used when method is 'create' and parent_issue_number is provided.",
+        "answer": "parent_owner",
+        "ok": true,
+        "pred": "`parent_owner`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `issue_write`, which argument is described as: Reason for the state change. Ignored unless state is changed.",
+        "answer": "state_reason",
+        "ok": true,
+        "pred": "`state_reason`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `label_write`, which argument is described as: Label description text. Optional for 'create' and 'update'.",
+        "answer": "description",
+        "ok": true,
+        "pred": "`description`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `list_code_scanning_alerts`, which argument is described as: Filter code scanning alerts by severity",
+        "answer": "severity",
+        "ok": true,
+        "pred": "`severity`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `list_commits`, which argument is described as: Author username or email address to filter commits by",
+        "answer": "author",
+        "ok": true,
+        "pred": "`author`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `list_commits`, which argument is described as: Only commits before this date will be returned (ISO 8601 format: YYYY-MM-DDTHH:MM:SSZ or YYYY-MM-DD)",
+        "answer": "until",
+        "ok": true,
+        "pred": "`until`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `list_discussions`, which argument is described as: Optional filter by discussion category ID. If provided, only discussions with this category are listed.",
+        "answer": "category",
+        "ok": true,
+        "pred": "The `category` argument.",
+        "stop": "eos",
+        "n_tok": 6
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `list_gists`, which argument is described as: Only gists updated after this time (ISO 8601 timestamp)",
+        "answer": "since",
+        "ok": true,
+        "pred": "`since`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `list_global_security_advisories`, which argument is described as: Filter by Common Weakness Enumeration IDs (e.g. [\"79\", \"284\", \"22\"]).",
+        "answer": "cwes",
+        "ok": true,
+        "pred": "`cwes`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `list_global_security_advisories`, which argument is described as: Filter by GitHub Security Advisory ID (format: GHSA-xxxx-xxxx-xxxx).",
+        "answer": "ghsaId",
+        "ok": true,
+        "pred": "`ghsaId`",
+        "stop": "eos",
+        "n_tok": 5
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `list_global_security_advisories`, which argument is described as: Filter by publish or update date or date range (ISO 8601 date or range).",
+        "answer": "modified",
+        "ok": false,
+        "pred": "`published`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `list_global_security_advisories`, which argument is described as: Filter by update date or date range (ISO 8601 date or range).",
+        "answer": "updated",
+        "ok": true,
+        "pred": "`updated`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `list_issues`, which argument is described as: Order issues by field. If provided, the 'direction' also needs to be provided.",
+        "answer": "orderBy",
+        "ok": true,
+        "pred": "`orderBy`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `list_notifications`, which argument is described as: Filter notifications to, use default unless specified. Read notifications are ones that have already been acknowledged by the user. Participating notifications are those that the user is directly involved in, such as issues or pull requests they have commented on or created.",
+        "answer": "filter",
+        "ok": true,
+        "pred": "The argument is `filter`.",
+        "stop": "eos",
+        "n_tok": 6
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `list_repository_collaborators`, which argument is described as: Filter by affiliation. Can be one of: 'outside' (outside collaborators), 'direct' (all with permissions regardless of org membership), 'all' (all collaborators). Default: 'all'",
+        "answer": "affiliation",
+        "ok": true,
+        "pred": "`affiliation`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `list_secret_scanning_alerts`, which argument is described as: A comma-separated list of secret types to return. All default secret patterns are returned. To return generic patterns, pass the token name(s) in the parameter.",
+        "answer": "secret_type",
+        "ok": true,
+        "pred": "The argument is `secret_type`.",
+        "stop": "eos",
+        "n_tok": 7
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `manage_notification_subscription`, which argument is described as: The ID of the notification thread.",
+        "answer": "notificationID",
+        "ok": true,
+        "pred": "`notificationID`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `mark_all_notifications_read`, which argument is described as: Describes the last point that notifications were checked (optional). Default: Now",
+        "answer": "lastReadAt",
+        "ok": true,
+        "pred": "`lastReadAt`",
+        "stop": "eos",
+        "n_tok": 5
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `merge_pull_request`, which argument is described as: Title for merge commit",
+        "answer": "commit_title",
+        "ok": true,
+        "pred": "`commit_title`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `projects_get`, which argument is described as: The field's ID. Required for 'get_project_field' method.",
+        "answer": "field_id",
+        "ok": true,
+        "pred": "`field_id`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `projects_get`, which argument is described as: The item's ID. Required for 'get_project_item' method.",
+        "answer": "item_id",
+        "ok": true,
+        "pred": "`item_id`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `projects_get`, which argument is described as: The project's number.",
+        "answer": "project_number",
+        "ok": true,
+        "pred": "`project_number`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `projects_get`, which argument is described as: The node ID of the project view. Required for 'get_project_view' method.",
+        "answer": "view_id",
+        "ok": true,
+        "pred": "`view_id`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `projects_list`, which argument is described as: Owner type (user or org). If not provided, will automatically try both.",
+        "answer": "owner_type",
+        "ok": true,
+        "pred": "`owner_type`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `projects_write`, which argument is described as: The name of the iteration field (e.g. 'Sprint'). Required for 'create_iteration_field' method.",
+        "answer": "field_name",
+        "ok": true,
+        "pred": "`field_name`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `projects_write`, which argument is described as: The issue number. Required for 'add_project_item' when item_type is 'issue'. Also accepted by 'update_project_item' to resolve the item by issue number (combine with item_owner and item_repo).",
+        "answer": "issue_number",
+        "ok": true,
+        "pred": "`issue_number`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `projects_write`, which argument is described as: The owner (user or organization) of the repository containing the issue or pull request. Required for 'add_project_item' method. Also accepted by 'update_project_item' when resolving the item by issue number.",
+        "answer": "item_owner",
+        "ok": true,
+        "pred": "`item_owner`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `projects_write`, which argument is described as: The item's type, either issue or pull_request. Required for 'add_project_item' method.",
+        "answer": "item_type",
+        "ok": true,
+        "pred": "`item_type`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `projects_write`, which argument is described as: Duration in days for iterations of the field (e.g. 7 for weekly, 14 for bi-weekly). Required for 'create_iteration_field' method.",
+        "answer": "iteration_duration",
+        "ok": true,
+        "pred": "`iteration_duration`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `projects_write`, which argument is described as: View layout; required when creating a view.",
+        "answer": "layout",
+        "ok": true,
+        "pred": "`layout`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `projects_write`, which argument is described as: The project's number. Required for all methods except 'create_project'.",
+        "answer": "project_number",
+        "ok": true,
+        "pred": "`project_number`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `projects_write`, which argument is described as: Start date in YYYY-MM-DD format. Used for 'create_project_status_update' and 'create_iteration_field' methods.",
+        "answer": "start_date",
+        "ok": true,
+        "pred": "`start_date`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `projects_write`, which argument is described as: The target date of the status update in YYYY-MM-DD format. Used for 'create_project_status_update' method.",
+        "answer": "target_date",
+        "ok": true,
+        "pred": "`target_date`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `projects_write`, which argument is described as: Project view node ID for update or delete; must belong to owner/project_number.",
+        "answer": "view_id",
+        "ok": true,
+        "pred": "`view_id`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `projects_write`, which argument is described as: Ordered project field database IDs to show on create or replace on update; omit on update to preserve, or pass [] to reset. Mutually exclusive with visible_field_names. Roadmap accepts only [].",
+        "answer": "visible_fields",
+        "ok": true,
+        "pred": "`visible_fields`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `pull_request_review_write`, which argument is described as: Review action to perform.",
+        "answer": "event",
+        "ok": true,
+        "pred": "`event`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `pull_request_review_write`, which argument is described as: SHA of commit to review",
+        "answer": "commitID",
+        "ok": true,
+        "pred": "`commitID`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `push_files`, which argument is described as: Array of file objects to push, each object with path (string) and content (string)",
+        "answer": "files",
+        "ok": true,
+        "pred": "`files`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `remove_issue_comment_reaction`, which argument is described as: The reaction ID to remove",
+        "answer": "reaction_id",
+        "ok": true,
+        "pred": "`reaction_id`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `remove_pull_request_review_comment_reaction`, which argument is described as: The numeric pull request review comment ID. Use the number from a #discussion_r... anchor, not the GraphQL thread node ID (PRRT_...).",
+        "answer": "comment_id",
+        "ok": true,
+        "pred": "`comment_id`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `remove_sub_issue`, which argument is described as: The parent issue number",
+        "answer": "issue_number",
+        "ok": true,
+        "pred": "`issue_number`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `repository_ruleset_read`, which argument is described as: The handle for the GitHub user account to filter rule suites on. Used by the 'list_rule_suites' method.",
+        "answer": "actor_name",
+        "ok": true,
+        "pred": "`actor_name`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `repository_ruleset_read`, which argument is described as: Enterprise slug. Required when level is 'enterprise'.",
+        "answer": "enterprise",
+        "ok": true,
+        "pred": "`enterprise`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `repository_ruleset_read`, which argument is described as: Include rulesets configured at higher levels that also apply. Defaults to true. Used by the 'get' and 'list' methods at the repository level.",
+        "answer": "includes_parents",
+        "ok": true,
+        "pred": "`includes_parents`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `repository_ruleset_read`, which argument is described as: Repository name to filter rule suites by. Used by the 'list_rule_suites' method at the organization level.",
+        "answer": "repository_name",
+        "ok": false,
+        "pred": "`ref`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `repository_ruleset_read`, which argument is described as: The rule suite result to filter by. Used by the 'list_rule_suites' method.",
+        "answer": "rule_suite_result",
+        "ok": true,
+        "pred": "`rule_suite_result`",
+        "stop": "eos",
+        "n_tok": 5
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `repository_ruleset_read`, which argument is described as: The time period to filter rule suites by. Used by the 'list_rule_suites' method.",
+        "answer": "time_period",
+        "ok": false,
+        "pred": "`time`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `reprioritize_sub_issue`, which argument is described as: The ID of the sub-issue to place this before (either after_id OR before_id should be specified)",
+        "answer": "before_id",
+        "ok": true,
+        "pred": "`before_id`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `reprioritize_sub_issue`, which argument is described as: The ID of the sub-issue to reorder. ID is not the same as issue number",
+        "answer": "sub_issue_id",
+        "ok": true,
+        "pred": "`sub_issue_id`",
+        "stop": "eos",
+        "n_tok": 5
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `request_pull_request_reviewers`, which argument is described as: GitHub usernames or ORG/team-slug team reviewers to request reviews from",
+        "answer": "reviewers",
+        "ok": true,
+        "pred": "`reviewers`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `search_repositories`, which argument is described as: Return minimal repository information (default: true). When false, modern clients receive additional curated repository details, not the complete GitHub API object. Legacy clients retain full GitHub API repository objects.",
+        "answer": "minimal_output",
+        "ok": true,
+        "pred": "The argument is `minimal_output`.",
+        "stop": "eos",
+        "n_tok": 7
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `sub_issue_write`, which argument is described as: The ID of the sub-issue to be prioritized after (either after_id OR before_id should be specified)",
+        "answer": "after_id",
+        "ok": true,
+        "pred": "`after_id`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `sub_issue_write`, which argument is described as: The number of the parent issue",
+        "answer": "issue_number",
+        "ok": true,
+        "pred": "`issue_number`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `sub_issue_write`, which argument is described as: The ID of the sub-issue to add. ID is not the same as issue number",
+        "answer": "sub_issue_id",
+        "ok": true,
+        "pred": "`sub_issue_id`",
+        "stop": "eos",
+        "n_tok": 5
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `submit_pending_pull_request_review`, which argument is described as: The pull request number",
+        "answer": "pullNumber",
+        "ok": true,
+        "pred": "`pullNumber`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `unhide_pull_request_review`, which argument is described as: The pull request number",
+        "answer": "pullNumber",
+        "ok": true,
+        "pred": "`pullNumber`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `unhide_pull_request_review_comment`, which argument is described as: The numeric pull request review comment ID. Use the number from a #discussion_r... anchor, not the GraphQL thread node ID (PRRT_...).",
+        "answer": "comment_id",
+        "ok": true,
+        "pred": "`comment_id`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `update_gist`, which argument is described as: Content for the file",
+        "answer": "content",
+        "ok": true,
+        "pred": "`content`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `update_gist`, which argument is described as: Filename to update or create",
+        "answer": "filename",
+        "ok": true,
+        "pred": "`filename`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `update_issue_assignees`, which argument is described as: GitHub usernames to assign to this issue.",
+        "answer": "assignees",
+        "ok": true,
+        "pred": "`assignees`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `update_issue_body`, which argument is described as: The issue number to update",
+        "answer": "issue_number",
+        "ok": true,
+        "pred": "`issue_number`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `update_issue_labels`, which argument is described as: The issue number to update",
+        "answer": "issue_number",
+        "ok": true,
+        "pred": "`issue_number`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `update_issue_milestone`, which argument is described as: The issue number to update",
+        "answer": "issue_number",
+        "ok": true,
+        "pred": "`issue_number`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `update_issue_state`, which argument is described as: How confident you are in this choice. Use 'HIGH' for clear signal or explicit user request, 'MEDIUM' for reasonable inference with some ambiguity, 'LOW' for best guess with limited signal.",
+        "answer": "confidence",
+        "ok": true,
+        "pred": "`confidence`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `update_issue_state`, which argument is described as: If true, this state change is sent to the API as a suggestion (suggest:true) rather than an applied change. Whether the change is applied or recorded as a proposal is determined by the API.",
+        "answer": "is_suggestion",
+        "ok": true,
+        "pred": "`is_suggestion`",
+        "stop": "eos",
+        "n_tok": 5
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `update_issue_state`, which argument is described as: One concise sentence explaining what specifically about the issue led you to choose this state. State the concrete signal (e.g. 'The reported crash is fixed in v2.1' \u2192 completed).",
+        "answer": "rationale",
+        "ok": true,
+        "pred": "`rationale`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `update_issue_title`, which argument is described as: The issue number to update",
+        "answer": "issue_number",
+        "ok": true,
+        "pred": "`issue_number`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `update_issue_type`, which argument is described as: If true, this issue type change is sent to the API as a suggestion (suggest:true) rather than an applied value. Whether the type is applied or recorded as a proposal is determined by the API.",
+        "answer": "is_suggestion",
+        "ok": true,
+        "pred": "`is_suggestion`",
+        "stop": "eos",
+        "n_tok": 5
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `update_issue_type`, which argument is described as: The issue type to set, or null to remove the current type",
+        "answer": "issue_type",
+        "ok": true,
+        "pred": "`issue_type`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `update_pull_request`, which argument is described as: Mark pull request as draft (true) or ready for review (false)",
+        "answer": "draft",
+        "ok": true,
+        "pred": "`draft`",
+        "stop": "eos",
+        "n_tok": 3
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `update_pull_request`, which argument is described as: Pull request number to update",
+        "answer": "pullNumber",
+        "ok": true,
+        "pred": "`pullNumber`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `update_pull_request_body`, which argument is described as: The pull request number",
+        "answer": "pullNumber",
+        "ok": true,
+        "pred": "`pullNumber`",
+        "stop": "eos",
+        "n_tok": 4
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `update_pull_request_draft_state`, which argument is described as: Set to true to convert to draft, false to mark as ready for review",
+        "answer": "draft",
+        "ok": true,
+        "pred": "The `draft` argument.",
+        "stop": "eos",
+        "n_tok": 6
+      },
+      {
+        "kind": "lookup",
+        "q": "For the tool `update_pull_request_state`, which argument is described as: The pull request number",
+        "answer": "pullNumber",
+        "ok": true,
+        "pred": "`pullNumber`",
+        "stop": "eos",
+        "n_tok": 4
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "inputs/natural_refactors_v3/cases.json": "1456ccb9b4af9db091514523b1d214cc04e53c9d86451042d4125349eaa0ef24",
+  "inputs/natural_refactors_v3/README.md": "4057633bb247b319c468587eef2e2db52bf75df88b42f52579a233c0c2c0b4d4",
+  "scripts/prepare_natural_refactors.py": "817dc73621f7f5e022846220a28d879b8b26e6cef323a0a560f3444eb34d1457",
+  "tests/test_natural_refactors.py": "d2e33dc8b1837fc108feabc97b72f42033a662bf15ff76d25639100a78939d8f",
+  "tests/test_natural_refactors_code.py": "09661dafe611193ef55eef855a53a402a45011292da9e2134d87609c2f4af049",
+  "scripts/clean_eval.py": "6ebf8ec14a0696cac15c58f4a52fdb13e02d4d67d743d3c21cdf18d250e2683a",
+  "results/NATURAL_REFACTORS_V3_PREFLIGHT.json": "dfe33a777fabf872f65697fd28f14a42cf752d750146feeb07bfea7783ff0b13",
+  "inputs/joint/prompt.txt": "ea1bd5d8e31aed36e6890165bb825f5f92e551caf4bf44a2c24958812436f234",
+  "scripts/run_clean_eval.py": "d8840560f5d97bc81b16b3423203e3f3cd4186c8b5114bcc5147c024a1d17ef9"
+}

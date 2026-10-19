@@ -1,0 +1,6 @@
+# Preserve frozen source-prompt bytes, including upstream trailing whitespace.
+inputs/joint/prompt.txt -whitespace
+# Operational workstation notes are not part of the public source archive.
+AGENTS.md export-ignore
+EXPERIMENT_LOG.md export-ignore
+EXPERIMENT_PLAN.md export-ignore

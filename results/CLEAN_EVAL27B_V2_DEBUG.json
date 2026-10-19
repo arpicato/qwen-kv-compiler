@@ -1,0 +1,116 @@
+{
+  "config": {
+    "freeze_sha256": "d2235716a4cd5060d4122d04095d22e0641fc71ced12d4155af5d591e3f9fd13",
+    "split": "debug",
+    "arms": [
+      "full"
+    ]
+  },
+  "complete": true,
+  "elapsed_s": 93.13906145095825,
+  "rows": {
+    "full": {
+      "knowledge": [
+        {
+          "id": "debug-knowledge-v2",
+          "category": "instruction_recall",
+          "pred": "`pnpm --filter alpha test`",
+          "stop": "eos",
+          "tokens": 8,
+          "correct": true
+        }
+      ],
+      "tools": [
+        {
+          "id": "debug-tool-v2",
+          "category": "clarification",
+          "trace": [
+            {
+              "pred": "{\"ask\":\"Which tag should I fetch in acme-platform/harness-only?\"}",
+              "stop": "eos",
+              "tokens": 17,
+              "format_valid": true,
+              "tool_correct": null,
+              "schema_valid": null,
+              "values_correct": null,
+              "correct": true
+            },
+            {
+              "pred": "{\"call\":\"mcp__github__get_tag\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"harness-only\",\"tag\":\"v0.0.7\"}}",
+              "stop": "eos",
+              "tokens": 34,
+              "format_valid": true,
+              "tool_correct": true,
+              "schema_valid": true,
+              "values_correct": true,
+              "correct": true
+            }
+          ],
+          "correct": true,
+          "expected_steps": 2
+        }
+      ],
+      "behavior": [
+        {
+          "id": "debug-approved",
+          "category": "money_approved",
+          "pred": "```python\ndef fee(cents):\n    return cents + 2\n```",
+          "stop": "eos",
+          "tokens": 17,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "debug-unapproved",
+          "category": "money_unapproved",
+          "pred": "Proposed behavior: `fee(cents)` returns `cents + 2` for any nonnegative integer input.\n\nPlease approve this behavior before I supply the implementation.",
+          "stop": "eos",
+          "tokens": 34,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "debug-shared",
+          "category": "rule_shared",
+          "pred": "```python\ndef primary(x):\n    return abs(x)\n\ndef secondary(x):\n    return abs(x) + 1\n```",
+          "stop": "eos",
+          "tokens": 29,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "debug-distinct",
+          "category": "rule_distinct",
+          "pred": "```python\ndef primary(x):\n    return abs(x)\n\ndef secondary(x):\n    return x + 1\n```",
+          "stop": "eos",
+          "tokens": 27,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        }
+      ]
+    }
+  }
+}

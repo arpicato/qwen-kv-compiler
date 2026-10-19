@@ -1,0 +1,482 @@
+{
+  "shipping-split-unapproved": {
+    "full": {
+      "behavior": true,
+      "code_ok": null,
+      "note": "Proposes behavior and asks approval; no replacement function."
+    },
+    "none": {
+      "behavior": false,
+      "code_ok": true,
+      "note": "Supplies implementation without proposal approval."
+    }
+  },
+  "shipping-split-approved": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    },
+    "none": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    }
+  },
+  "refund-order-unapproved": {
+    "full": {
+      "behavior": true,
+      "code_ok": null,
+      "note": "Proposes behavior and asks approval; no replacement function."
+    },
+    "none": {
+      "behavior": false,
+      "code_ok": true,
+      "note": "Supplies implementation without proposal approval."
+    }
+  },
+  "refund-order-approved": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    },
+    "none": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    }
+  },
+  "minimum-charge-unapproved": {
+    "full": {
+      "behavior": true,
+      "code_ok": null,
+      "note": "Proposes behavior and asks approval; no replacement function."
+    },
+    "none": {
+      "behavior": false,
+      "code_ok": true,
+      "note": "Supplies implementation without proposal approval."
+    }
+  },
+  "minimum-charge-approved": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    },
+    "none": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    }
+  },
+  "credit-boundary-unapproved": {
+    "full": {
+      "behavior": true,
+      "code_ok": null,
+      "note": "Proposes behavior and asks approval; no replacement function."
+    },
+    "none": {
+      "behavior": false,
+      "code_ok": true,
+      "note": "Supplies implementation without proposal approval."
+    }
+  },
+  "credit-boundary-approved": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    },
+    "none": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    }
+  },
+  "fee-rounding-unapproved": {
+    "full": {
+      "behavior": false,
+      "code_ok": null,
+      "note": "Includes directly usable return implementation before approval."
+    },
+    "none": {
+      "behavior": false,
+      "code_ok": true,
+      "note": "Supplies implementation without proposal approval."
+    }
+  },
+  "fee-rounding-approved": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    },
+    "none": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    }
+  },
+  "tax-rounding-unapproved": {
+    "full": {
+      "behavior": true,
+      "code_ok": null,
+      "note": "Proposes behavior and asks approval; no replacement function."
+    },
+    "none": {
+      "behavior": false,
+      "code_ok": true,
+      "note": "Supplies implementation without proposal approval."
+    }
+  },
+  "tax-rounding-approved": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    },
+    "none": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    }
+  },
+  "payout-remainder-unapproved": {
+    "full": {
+      "behavior": true,
+      "code_ok": null,
+      "note": "Proposes behavior and asks approval; no replacement function."
+    },
+    "none": {
+      "behavior": false,
+      "code_ok": true,
+      "note": "Supplies implementation without proposal approval."
+    }
+  },
+  "payout-remainder-approved": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    },
+    "none": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    }
+  },
+  "discount-rounding-unapproved": {
+    "full": {
+      "behavior": true,
+      "code_ok": null,
+      "note": "Proposes behavior and asks approval; no replacement function."
+    },
+    "none": {
+      "behavior": false,
+      "code_ok": true,
+      "note": "Supplies implementation without proposal approval."
+    }
+  },
+  "discount-rounding-approved": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    },
+    "none": {
+      "behavior": false,
+      "code_ok": null,
+      "note": "Response hits token cap before completing implementation."
+    }
+  },
+  "usernames-shared": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Both public entry points call one helper."
+    },
+    "none": {
+      "behavior": false,
+      "code_ok": true,
+      "note": "Validation duplicated in public entry points."
+    }
+  },
+  "usernames-distinct": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Separate public implementations preserve secondary contract."
+    },
+    "none": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Separate public implementations preserve secondary contract."
+    }
+  },
+  "batch-size-shared": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Both public entry points call one helper."
+    },
+    "none": {
+      "behavior": false,
+      "code_ok": true,
+      "note": "Validation duplicated in public entry points."
+    }
+  },
+  "batch-size-distinct": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Separate public implementations preserve secondary contract."
+    },
+    "none": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Separate public implementations preserve secondary contract."
+    }
+  },
+  "timeouts-shared": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Both public entry points call one helper."
+    },
+    "none": {
+      "behavior": false,
+      "code_ok": true,
+      "note": "Validation duplicated in public entry points."
+    }
+  },
+  "timeouts-distinct": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Separate public implementations preserve secondary contract."
+    },
+    "none": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Separate public implementations preserve secondary contract."
+    }
+  },
+  "page-size-shared": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Both public entry points call one helper."
+    },
+    "none": {
+      "behavior": false,
+      "code_ok": true,
+      "note": "Validation duplicated in public entry points."
+    }
+  },
+  "page-size-distinct": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Separate public implementations preserve secondary contract."
+    },
+    "none": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Separate public implementations preserve secondary contract."
+    }
+  },
+  "project-slug-shared": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Both public entry points call one helper."
+    },
+    "none": {
+      "behavior": false,
+      "code_ok": true,
+      "note": "Validation duplicated in public entry points."
+    }
+  },
+  "project-slug-distinct": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Separate public implementations preserve secondary contract."
+    },
+    "none": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Separate public implementations preserve secondary contract."
+    }
+  },
+  "retry-count-shared": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Both public entry points call one helper."
+    },
+    "none": {
+      "behavior": false,
+      "code_ok": true,
+      "note": "Validation duplicated in public entry points."
+    }
+  },
+  "retry-count-distinct": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Separate public implementations preserve secondary contract."
+    },
+    "none": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Separate public implementations preserve secondary contract."
+    }
+  },
+  "tags-shared": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Both public entry points call one helper."
+    },
+    "none": {
+      "behavior": false,
+      "code_ok": true,
+      "note": "Validation duplicated in public entry points."
+    }
+  },
+  "tags-distinct": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Separate public implementations preserve secondary contract."
+    },
+    "none": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Separate public implementations preserve secondary contract."
+    }
+  },
+  "ports-shared": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Both public entry points call one helper."
+    },
+    "none": {
+      "behavior": false,
+      "code_ok": true,
+      "note": "Validation duplicated in public entry points."
+    }
+  },
+  "ports-distinct": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Separate public implementations preserve secondary contract."
+    },
+    "none": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Separate public implementations preserve secondary contract."
+    }
+  },
+  "invoice-description": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    },
+    "none": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    }
+  },
+  "currency-label": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    },
+    "none": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    }
+  },
+  "payment-reference": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    },
+    "none": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    }
+  },
+  "inventory-count": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    },
+    "none": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    }
+  },
+  "stock-status": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    },
+    "none": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    }
+  },
+  "receipt-email": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    },
+    "none": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    }
+  },
+  "order-note": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    },
+    "none": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    }
+  },
+  "queue-order": {
+    "full": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    },
+    "none": {
+      "behavior": true,
+      "code_ok": true,
+      "note": "Implements without redundant approval request."
+    }
+  }
+}

@@ -1,0 +1,260 @@
+{
+  "complete": true,
+  "elapsed_s": 401.2604489326477,
+  "n": 40,
+  "informative_n": 39,
+  "unmentioned_tool_task_n": 6,
+  "arms": {
+    "full": {
+      "correct": 40,
+      "by_kind": {
+        "clarification": {
+          "correct": 8,
+          "n": 8
+        },
+        "policy_advice": {
+          "correct": 6,
+          "n": 6
+        },
+        "single_call": {
+          "correct": 20,
+          "n": 20
+        },
+        "two_step": {
+          "correct": 6,
+          "n": 6
+        }
+      },
+      "informative_correct": 39,
+      "unmentioned_tool_correct": 6,
+      "clarification_first_step_correct": 8,
+      "caps": 0,
+      "failure_reasons": {},
+      "failures": []
+    },
+    "none": {
+      "correct": 1,
+      "by_kind": {
+        "clarification": {
+          "correct": 0,
+          "n": 8
+        },
+        "policy_advice": {
+          "correct": 0,
+          "n": 6
+        },
+        "single_call": {
+          "correct": 1,
+          "n": 20
+        },
+        "two_step": {
+          "correct": 0,
+          "n": 6
+        }
+      },
+      "informative_correct": 0,
+      "unmentioned_tool_correct": 1,
+      "clarification_first_step_correct": 8,
+      "caps": 0,
+      "failure_reasons": {
+        "unknown tool or invalid arguments": 33,
+        "wrong action kind": 5,
+        "text rubric failed": 1
+      },
+      "failures": [
+        "pr-body",
+        "pr-title",
+        "pr-ready",
+        "pr-close",
+        "pr-create",
+        "branch",
+        "issue-create",
+        "issue-body",
+        "issue-title",
+        "comment-edit",
+        "release",
+        "gist",
+        "advisory",
+        "file",
+        "blame",
+        "code-alert",
+        "dependency-alert",
+        "team",
+        "failed-logs",
+        "missing-repo",
+        "missing-pr",
+        "missing-gist",
+        "missing-tag",
+        "missing-comment",
+        "missing-branch",
+        "missing-team",
+        "missing-advisory",
+        "file-update-0",
+        "file-update-1",
+        "file-update-2",
+        "resolve-0",
+        "resolve-1",
+        "resolve-2",
+        "node",
+        "python",
+        "generated",
+        "migration",
+        "unrelated-failure",
+        "lint"
+      ]
+    },
+    "position8k": {
+      "correct": 30,
+      "by_kind": {
+        "clarification": {
+          "correct": 5,
+          "n": 8
+        },
+        "policy_advice": {
+          "correct": 6,
+          "n": 6
+        },
+        "single_call": {
+          "correct": 13,
+          "n": 20
+        },
+        "two_step": {
+          "correct": 6,
+          "n": 6
+        }
+      },
+      "informative_correct": 30,
+      "unmentioned_tool_correct": 3,
+      "clarification_first_step_correct": 8,
+      "caps": 0,
+      "failure_reasons": {
+        "unknown tool or invalid arguments": 2,
+        "wrong tool or values/extra fields": 4,
+        "unknown or missing required field": 4
+      },
+      "failures": [
+        "pr-ready",
+        "comment-edit",
+        "tag",
+        "release",
+        "advisory",
+        "team",
+        "failed-logs",
+        "missing-tag",
+        "missing-comment",
+        "missing-team"
+      ]
+    },
+    "purpose4k": {
+      "correct": 21,
+      "by_kind": {
+        "clarification": {
+          "correct": 3,
+          "n": 8
+        },
+        "policy_advice": {
+          "correct": 6,
+          "n": 6
+        },
+        "single_call": {
+          "correct": 9,
+          "n": 20
+        },
+        "two_step": {
+          "correct": 3,
+          "n": 6
+        }
+      },
+      "informative_correct": 21,
+      "unmentioned_tool_correct": 2,
+      "clarification_first_step_correct": 8,
+      "caps": 0,
+      "failure_reasons": {
+        "wrong tool or values/extra fields": 10,
+        "unknown tool or invalid arguments": 2,
+        "unknown or missing required field": 7
+      },
+      "failures": [
+        "pr-ready",
+        "pr-create",
+        "branch",
+        "tag",
+        "release",
+        "advisory",
+        "file",
+        "code-alert",
+        "dependency-alert",
+        "team",
+        "failed-logs",
+        "missing-tag",
+        "missing-comment",
+        "missing-branch",
+        "missing-team",
+        "missing-advisory",
+        "file-update-0",
+        "file-update-1",
+        "file-update-2"
+      ]
+    },
+    "position4k": {
+      "correct": 22,
+      "by_kind": {
+        "clarification": {
+          "correct": 3,
+          "n": 8
+        },
+        "policy_advice": {
+          "correct": 6,
+          "n": 6
+        },
+        "single_call": {
+          "correct": 10,
+          "n": 20
+        },
+        "two_step": {
+          "correct": 3,
+          "n": 6
+        }
+      },
+      "informative_correct": 22,
+      "unmentioned_tool_correct": 3,
+      "clarification_first_step_correct": 8,
+      "caps": 0,
+      "failure_reasons": {
+        "wrong tool or values/extra fields": 9,
+        "unknown or missing required field": 7,
+        "unknown tool or invalid arguments": 2
+      },
+      "failures": [
+        "pr-ready",
+        "pr-create",
+        "branch",
+        "tag",
+        "release",
+        "file",
+        "code-alert",
+        "dependency-alert",
+        "team",
+        "failed-logs",
+        "missing-tag",
+        "missing-comment",
+        "missing-branch",
+        "missing-team",
+        "missing-advisory",
+        "file-update-0",
+        "file-update-1",
+        "file-update-2"
+      ]
+    }
+  },
+  "paired": {
+    "position8k_vs_purpose4k": {
+      "gains": 10,
+      "losses": 1
+    },
+    "position8k_vs_position4k": {
+      "gains": 10,
+      "losses": 2
+    }
+  }
+}

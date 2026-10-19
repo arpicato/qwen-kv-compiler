@@ -1,0 +1,438 @@
+{
+  "dev": {
+    "old_correct": 175,
+    "new_correct": 179,
+    "gains": 5,
+    "losses": 1,
+    "old_caps": 1,
+    "new_caps": 0,
+    "fresh_informative_n": 89,
+    "old_informative": 76,
+    "new_informative": 79,
+    "slices": {},
+    "changes": [
+      {
+        "q": "Which tool should be used to do the following: Add a reaction to an issue or pull request.",
+        "answer": "add_issue_reaction",
+        "old": {
+          "kind": "tool_select",
+          "q": "Which tool should be used to do the following: Add a reaction to an issue or pull request.",
+          "answer": "add_issue_reaction",
+          "ok": false,
+          "pred": "`mcp__github__add_issue_comment` (with the `reaction` parameter) or `mcp__github__add_issue_comment` with `reaction` set.\n\nActually, the dedicated tool is: **`mcp__github__add_issue_comment`** \u2014 it accepts a `reaction` parameter to",
+          "stop": "cap",
+          "n_tok": 64
+        },
+        "new": {
+          "kind": "tool_select",
+          "q": "Which tool should be used to do the following: Add a reaction to an issue or pull request.",
+          "answer": "add_issue_reaction",
+          "ok": true,
+          "pred": "`mcp__github__add_issue_comment` (with the `reaction` parameter) or `mcp__github__add_issue_reaction` \u2014 the latter is the dedicated tool for adding a reaction to an issue or pull request.",
+          "stop": "eos",
+          "n_tok": 47
+        }
+      },
+      {
+        "q": "Which tool should be used to do the following: Get a global security advisory",
+        "answer": "get_global_security_advisory",
+        "old": {
+          "kind": "tool_select",
+          "q": "Which tool should be used to do the following: Get a global security advisory",
+          "answer": "get_global_security_advisory",
+          "ok": false,
+          "pred": "`mcp__github__get_code_scanning_alert`",
+          "stop": "eos",
+          "n_tok": 12
+        },
+        "new": {
+          "kind": "tool_select",
+          "q": "Which tool should be used to do the following: Get a global security advisory",
+          "answer": "get_global_security_advisory",
+          "ok": true,
+          "pred": "`mcp__github__get_global_security_advisory`",
+          "stop": "eos",
+          "n_tok": 13
+        }
+      },
+      {
+        "q": "Which tool should be used to do the following: Get detailed information for a specific GitHub notification, always call this tool when the user asks for details about a specific notification, if you don't know the ID list notifications first.",
+        "answer": "get_notification_details",
+        "old": {
+          "kind": "tool_select",
+          "q": "Which tool should be used to do the following: Get detailed information for a specific GitHub notification, always call this tool when the user asks for details about a specific notification, if you don't know the ID list notifications first.",
+          "answer": "get_notification_details",
+          "ok": false,
+          "pred": "`mcp__github__get_notification`",
+          "stop": "eos",
+          "n_tok": 9
+        },
+        "new": {
+          "kind": "tool_select",
+          "q": "Which tool should be used to do the following: Get detailed information for a specific GitHub notification, always call this tool when the user asks for details about a specific notification, if you don't know the ID list notifications first.",
+          "answer": "get_notification_details",
+          "ok": true,
+          "pred": "`mcp__github__get_notification_details`",
+          "stop": "eos",
+          "n_tok": 10
+        }
+      },
+      {
+        "q": "Which tool should be used to do the following: Get details about a specific git tag in a GitHub repository",
+        "answer": "get_tag",
+        "old": {
+          "kind": "tool_select",
+          "q": "Which tool should be used to do the following: Get details about a specific git tag in a GitHub repository",
+          "answer": "get_tag",
+          "ok": false,
+          "pred": "`mcp__github__get_commit`",
+          "stop": "eos",
+          "n_tok": 9
+        },
+        "new": {
+          "kind": "tool_select",
+          "q": "Which tool should be used to do the following: Get details about a specific git tag in a GitHub repository",
+          "answer": "get_tag",
+          "ok": true,
+          "pred": "`mcp__github__get_tag`",
+          "stop": "eos",
+          "n_tok": 9
+        }
+      },
+      {
+        "q": "Which tool should be used to do the following: Request a GitHub Copilot code review for a pull request.",
+        "answer": "request_copilot_review",
+        "old": {
+          "kind": "tool_select",
+          "q": "Which tool should be used to do the following: Request a GitHub Copilot code review for a pull request.",
+          "answer": "request_copilot_review",
+          "ok": false,
+          "pred": "`mcp__github__request_copilot_code_review`",
+          "stop": "eos",
+          "n_tok": 13
+        },
+        "new": {
+          "kind": "tool_select",
+          "q": "Which tool should be used to do the following: Request a GitHub Copilot code review for a pull request.",
+          "answer": "request_copilot_review",
+          "ok": true,
+          "pred": "`mcp__github__request_copilot_review`",
+          "stop": "eos",
+          "n_tok": 12
+        }
+      },
+      {
+        "q": "For the tool `get_global_security_advisory`, which argument is described as: GitHub Security Advisory ID (format: GHSA-xxxx-xxxx-xxxx).",
+        "answer": "ghsaId",
+        "old": {
+          "kind": "lookup",
+          "q": "For the tool `get_global_security_advisory`, which argument is described as: GitHub Security Advisory ID (format: GHSA-xxxx-xxxx-xxxx).",
+          "answer": "ghsaId",
+          "ok": true,
+          "pred": "`ghsa_id`",
+          "stop": "eos",
+          "n_tok": 5
+        },
+        "new": {
+          "kind": "lookup",
+          "q": "For the tool `get_global_security_advisory`, which argument is described as: GitHub Security Advisory ID (format: GHSA-xxxx-xxxx-xxxx).",
+          "answer": "ghsaId",
+          "ok": false,
+          "pred": "`ghsa`",
+          "stop": "eos",
+          "n_tok": 4
+        }
+      }
+    ]
+  },
+  "agent78": {
+    "old_correct": 69,
+    "new_correct": 71,
+    "gains": 2,
+    "losses": 0,
+    "old_caps": 3,
+    "new_caps": 2,
+    "fresh_informative_n": 45,
+    "old_informative": 40,
+    "new_informative": 41,
+    "slices": {},
+    "changes": [
+      {
+        "q": "Which projects does the sentry MCP server cover?",
+        "answer": "production",
+        "old": {
+          "kind": "lookup",
+          "q": "Which projects does the sentry MCP server cover?",
+          "answer": "production",
+          "ok": false,
+          "pred": "The available MCP servers are `github`, `postgres`, and `sentry` \u2014 but there is no `sentry` server in the connected tools list. The only MCP servers actually connected are:\n\n- **github** \u2014 scoped to the `acme-platform` org\n- **postgres** \u2014 read-only replica",
+          "stop": "cap",
+          "n_tok": 64
+        },
+        "new": {
+          "kind": "lookup",
+          "q": "Which projects does the sentry MCP server cover?",
+          "answer": "production",
+          "ok": true,
+          "pred": "The available MCP servers are `github`, `postgres`, and `sentry` \u2014 there is no `sentry` server in this environment.\n\nThe `sentry` server (if it existed) would cover production projects only, per the MCP instructions. But it's not listed among the connected servers here.",
+          "stop": "eos",
+          "n_tok": 63
+        }
+      },
+      {
+        "q": "For the tool `create_pull_request`, which argument names the source branch?",
+        "answer": "head",
+        "old": {
+          "kind": "lookup",
+          "q": "For the tool `create_pull_request`, which argument names the source branch?",
+          "answer": "head",
+          "ok": false,
+          "pred": "`base`",
+          "stop": "eos",
+          "n_tok": 3
+        },
+        "new": {
+          "kind": "lookup",
+          "q": "For the tool `create_pull_request`, which argument names the source branch?",
+          "answer": "head",
+          "ok": true,
+          "pred": "`head`",
+          "stop": "eos",
+          "n_tok": 3
+        }
+      }
+    ]
+  },
+  "stress197": {
+    "old_correct": 164,
+    "new_correct": 163,
+    "gains": 3,
+    "losses": 4,
+    "old_caps": 0,
+    "new_caps": 0,
+    "fresh_informative_n": 107,
+    "old_informative": 79,
+    "new_informative": 79,
+    "slices": {},
+    "changes": [
+      {
+        "q": "Which tool should be used to do the following: Add a reaction to an issue or pull request comment.",
+        "answer": "add_issue_comment_reaction",
+        "old": {
+          "kind": "tool_select",
+          "q": "Which tool should be used to do the following: Add a reaction to an issue or pull request comment.",
+          "answer": "add_issue_comment_reaction",
+          "ok": false,
+          "pred": "`mcp__github__add_issue_comment`",
+          "stop": "eos",
+          "n_tok": 10
+        },
+        "new": {
+          "kind": "tool_select",
+          "q": "Which tool should be used to do the following: Add a reaction to an issue or pull request comment.",
+          "answer": "add_issue_comment_reaction",
+          "ok": true,
+          "pred": "`mcp__github__add_issue_comment_reaction`",
+          "stop": "eos",
+          "n_tok": 11
+        }
+      },
+      {
+        "q": "Which tool should be used to do the following: Create or update custom properties at the repository, organization, or enterprise level.",
+        "answer": "custom_properties_write",
+        "old": {
+          "kind": "tool_select",
+          "q": "Which tool should be used to do the following: Create or update custom properties at the repository, organization, or enterprise level.",
+          "answer": "custom_properties_write",
+          "ok": false,
+          "pred": "`mcp__github__custom_property_write`",
+          "stop": "eos",
+          "n_tok": 10
+        },
+        "new": {
+          "kind": "tool_select",
+          "q": "Which tool should be used to do the following: Create or update custom properties at the repository, organization, or enterprise level.",
+          "answer": "custom_properties_write",
+          "ok": true,
+          "pred": "`mcp__github__custom_properties_write`",
+          "stop": "eos",
+          "n_tok": 10
+        }
+      },
+      {
+        "q": "Which tool should be used to do the following: Unstar a GitHub repository",
+        "answer": "unstar_repository",
+        "old": {
+          "kind": "tool_select",
+          "q": "Which tool should be used to do the following: Unstar a GitHub repository",
+          "answer": "unstar_repository",
+          "ok": true,
+          "pred": "`mcp__github__unstar_repository`",
+          "stop": "eos",
+          "n_tok": 10
+        },
+        "new": {
+          "kind": "tool_select",
+          "q": "Which tool should be used to do the following: Unstar a GitHub repository",
+          "answer": "unstar_repository",
+          "ok": false,
+          "pred": "There is no \"unstar\" tool available. The closest is `mcp__github__list_stars` (read-only, lists starred repos) \u2014 starring/unstarring is not supported by the current toolset.",
+          "stop": "eos",
+          "n_tok": 45
+        }
+      },
+      {
+        "q": "Which tool should be used to do the following: Update the body content of an existing issue.",
+        "answer": "update_issue_body",
+        "old": {
+          "kind": "tool_select",
+          "q": "Which tool should be used to do the following: Update the body content of an existing issue.",
+          "answer": "update_issue_body",
+          "ok": false,
+          "pred": "`mcp__github__update_issue_comment`",
+          "stop": "eos",
+          "n_tok": 10
+        },
+        "new": {
+          "kind": "tool_select",
+          "q": "Which tool should be used to do the following: Update the body content of an existing issue.",
+          "answer": "update_issue_body",
+          "ok": true,
+          "pred": "`mcp__github__update_issue_body`",
+          "stop": "eos",
+          "n_tok": 10
+        }
+      },
+      {
+        "q": "For the tool `add_comment_to_pending_review`, which argument is described as: The level at which the comment is targeted",
+        "answer": "subjectType",
+        "old": {
+          "kind": "lookup",
+          "q": "For the tool `add_comment_to_pending_review`, which argument is described as: The level at which the comment is targeted",
+          "answer": "subjectType",
+          "ok": true,
+          "pred": "`subjectType`",
+          "stop": "eos",
+          "n_tok": 4
+        },
+        "new": {
+          "kind": "lookup",
+          "q": "For the tool `add_comment_to_pending_review`, which argument is described as: The level at which the comment is targeted",
+          "answer": "subjectType",
+          "ok": false,
+          "pred": "`side`",
+          "stop": "eos",
+          "n_tok": 3
+        }
+      },
+      {
+        "q": "For the tool `get_job_logs`, which argument is described as: Number of lines to return from the end of the log",
+        "answer": "tail_lines",
+        "old": {
+          "kind": "lookup",
+          "q": "For the tool `get_job_logs`, which argument is described as: Number of lines to return from the end of the log",
+          "answer": "tail_lines",
+          "ok": true,
+          "pred": "`tail_lines`",
+          "stop": "eos",
+          "n_tok": 4
+        },
+        "new": {
+          "kind": "lookup",
+          "q": "For the tool `get_job_logs`, which argument is described as: Number of lines to return from the end of the log",
+          "answer": "tail_lines",
+          "ok": false,
+          "pred": "`tail`",
+          "stop": "eos",
+          "n_tok": 3
+        }
+      },
+      {
+        "q": "For the tool `get_repository_tree`, which argument is described as: The SHA1 value or ref (branch or tag) name of the tree. Defaults to the repository's default branch",
+        "answer": "tree_sha",
+        "old": {
+          "kind": "lookup",
+          "q": "For the tool `get_repository_tree`, which argument is described as: The SHA1 value or ref (branch or tag) name of the tree. Defaults to the repository's default branch",
+          "answer": "tree_sha",
+          "ok": true,
+          "pred": "`tree_sha`",
+          "stop": "eos",
+          "n_tok": 4
+        },
+        "new": {
+          "kind": "lookup",
+          "q": "For the tool `get_repository_tree`, which argument is described as: The SHA1 value or ref (branch or tag) name of the tree. Defaults to the repository's default branch",
+          "answer": "tree_sha",
+          "ok": false,
+          "pred": "`ref`",
+          "stop": "eos",
+          "n_tok": 3
+        }
+      }
+    ]
+  },
+  "diagnostic12": {
+    "old_correct": 8,
+    "new_correct": 7,
+    "gains": 0,
+    "losses": 1,
+    "old_caps": 2,
+    "new_caps": 2,
+    "fresh_informative_n": 9,
+    "old_informative": 5,
+    "new_informative": 4,
+    "slices": {
+      "dev": {
+        "n": 6,
+        "old": 5,
+        "new": 5,
+        "caps": 1
+      },
+      "test": {
+        "n": 6,
+        "old": 3,
+        "new": 2,
+        "caps": 1
+      }
+    },
+    "changes": [
+      {
+        "q": "For mcp__github__update_pull_request_body, list the mandatory argument names only.",
+        "answer": "body, owner, pullNumber, repo",
+        "old": {
+          "kind": "lookup",
+          "q": "For mcp__github__update_pull_request_body, list the mandatory argument names only.",
+          "answer": "body, owner, pullNumber, repo",
+          "ok": true,
+          "pred": "owner, pullNumber, repo, body",
+          "stop": "eos",
+          "n_tok": 8
+        },
+        "new": {
+          "kind": "lookup",
+          "q": "For mcp__github__update_pull_request_body, list the mandatory argument names only.",
+          "answer": "body, owner, pullNumber, repo",
+          "ok": false,
+          "pred": "There is no tool named `mcp__github__update_pull_request_body`. The closest is `mcp__github__update_pull_request`, whose mandatory arguments are: `owner`, `pullNumber`, `repo`.",
+          "stop": "eos",
+          "n_tok": 44
+        }
+      }
+    ]
+  },
+  "verification": {
+    "compiler_config_equal_except_traj_results_timing": true,
+    "qa_equal": true,
+    "sampling_equal": true,
+    "questions_sha256": "c3d42cfc23e3f8bd70bcfa86772e3ad1509689d0a88f9d9c19a1a8db86e5cc62",
+    "position_plan_sha256": "ac937e1bb3305cc3b9a8ef5727ecba2abc1efbedff7966d76be1c648e457c437",
+    "manifest_sha256": "54fb4a37199de5f68b3ce48c9e0401dab307681f79f19bdf794c1466a3dd9ae8"
+  },
+  "timing": {
+    "capture_s": 5769.056876182556,
+    "audit_s": 51.92502236366272,
+    "compile_s": 6167.127895593643,
+    "eval_s": 1657.384006023407,
+    "total_s": 13645.493800163269
+  }
+}

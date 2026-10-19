@@ -1,0 +1,507 @@
+{
+  "complete": true,
+  "elapsed_s": 1248.4609520435333,
+  "arms": {
+    "full": {
+      "knowledge": {
+        "tool_identity": {
+          "correct": 20,
+          "n": 20,
+          "caps": 0
+        },
+        "field_identity": {
+          "correct": 20,
+          "n": 20,
+          "caps": 0
+        },
+        "instruction_recall": {
+          "correct": 20,
+          "n": 20,
+          "caps": 0
+        }
+      },
+      "tools": {
+        "single_call": {
+          "completed": 20,
+          "n": 20
+        },
+        "clarification": {
+          "completed": 20,
+          "n": 20
+        },
+        "two_step": {
+          "completed": 19,
+          "n": 20
+        },
+        "attempted_calls": {
+          "n": 80,
+          "format_valid": 80,
+          "tool_correct": 79,
+          "schema_valid": 80,
+          "values_correct": 79,
+          "correct": 79
+        },
+        "unattempted_expected_calls": 0,
+        "clarification_first_action": {
+          "correct": 20,
+          "n": 20
+        },
+        "caps": 0
+      },
+      "behavior": {
+        "money_unapproved": {
+          "n": 20,
+          "process_or_structure_pass": 18,
+          "functional_pass": 2,
+          "both": 0,
+          "proposal_content_incorrect": 0
+        },
+        "money_approved": {
+          "n": 20,
+          "process_or_structure_pass": 20,
+          "functional_pass": 17,
+          "both": 17,
+          "proposal_content_incorrect": 0
+        },
+        "rule_shared": {
+          "n": 20,
+          "process_or_structure_pass": 20,
+          "functional_pass": 20,
+          "both": 20,
+          "proposal_content_incorrect": 0
+        },
+        "rule_distinct": {
+          "n": 20,
+          "process_or_structure_pass": 20,
+          "functional_pass": 20,
+          "both": 20,
+          "proposal_content_incorrect": 0
+        },
+        "caps": 0
+      }
+    },
+    "none": {
+      "knowledge": {
+        "tool_identity": {
+          "correct": 7,
+          "n": 20,
+          "caps": 0
+        },
+        "field_identity": {
+          "correct": 15,
+          "n": 20,
+          "caps": 0
+        },
+        "instruction_recall": {
+          "correct": 6,
+          "n": 20,
+          "caps": 0
+        }
+      },
+      "tools": {
+        "single_call": {
+          "completed": 2,
+          "n": 20
+        },
+        "clarification": {
+          "completed": 0,
+          "n": 20
+        },
+        "two_step": {
+          "completed": 0,
+          "n": 20
+        },
+        "attempted_calls": {
+          "n": 61,
+          "format_valid": 61,
+          "tool_correct": 26,
+          "schema_valid": 5,
+          "values_correct": 4,
+          "correct": 4
+        },
+        "unattempted_expected_calls": 19,
+        "clarification_first_action": {
+          "correct": 19,
+          "n": 20
+        },
+        "caps": 0
+      },
+      "behavior": {
+        "money_unapproved": {
+          "n": 20,
+          "process_or_structure_pass": 0,
+          "functional_pass": 19,
+          "both": 0,
+          "proposal_content_incorrect": 0
+        },
+        "money_approved": {
+          "n": 20,
+          "process_or_structure_pass": 20,
+          "functional_pass": 19,
+          "both": 19,
+          "proposal_content_incorrect": 0
+        },
+        "rule_shared": {
+          "n": 20,
+          "process_or_structure_pass": 0,
+          "functional_pass": 20,
+          "both": 0,
+          "proposal_content_incorrect": 0
+        },
+        "rule_distinct": {
+          "n": 20,
+          "process_or_structure_pass": 20,
+          "functional_pass": 20,
+          "both": 20,
+          "proposal_content_incorrect": 0
+        },
+        "caps": 0
+      }
+    },
+    "joint4k": {
+      "knowledge": {
+        "tool_identity": {
+          "correct": 18,
+          "n": 20,
+          "caps": 0
+        },
+        "field_identity": {
+          "correct": 18,
+          "n": 20,
+          "caps": 0
+        },
+        "instruction_recall": {
+          "correct": 10,
+          "n": 20,
+          "caps": 0
+        }
+      },
+      "tools": {
+        "single_call": {
+          "completed": 16,
+          "n": 20
+        },
+        "clarification": {
+          "completed": 16,
+          "n": 20
+        },
+        "two_step": {
+          "completed": 19,
+          "n": 20
+        },
+        "attempted_calls": {
+          "n": 80,
+          "format_valid": 80,
+          "tool_correct": 75,
+          "schema_valid": 75,
+          "values_correct": 71,
+          "correct": 71
+        },
+        "unattempted_expected_calls": 0,
+        "clarification_first_action": {
+          "correct": 20,
+          "n": 20
+        },
+        "caps": 0
+      },
+      "behavior": {
+        "money_unapproved": {
+          "n": 20,
+          "process_or_structure_pass": 20,
+          "functional_pass": 0,
+          "both": 0,
+          "proposal_content_incorrect": 3
+        },
+        "money_approved": {
+          "n": 20,
+          "process_or_structure_pass": 20,
+          "functional_pass": 17,
+          "both": 17,
+          "proposal_content_incorrect": 0
+        },
+        "rule_shared": {
+          "n": 20,
+          "process_or_structure_pass": 15,
+          "functional_pass": 20,
+          "both": 15,
+          "proposal_content_incorrect": 0
+        },
+        "rule_distinct": {
+          "n": 20,
+          "process_or_structure_pass": 20,
+          "functional_pass": 20,
+          "both": 20,
+          "proposal_content_incorrect": 0
+        },
+        "caps": 0
+      }
+    },
+    "joint8k": {
+      "knowledge": {
+        "tool_identity": {
+          "correct": 20,
+          "n": 20,
+          "caps": 0
+        },
+        "field_identity": {
+          "correct": 19,
+          "n": 20,
+          "caps": 0
+        },
+        "instruction_recall": {
+          "correct": 16,
+          "n": 20,
+          "caps": 0
+        }
+      },
+      "tools": {
+        "single_call": {
+          "completed": 20,
+          "n": 20
+        },
+        "clarification": {
+          "completed": 19,
+          "n": 20
+        },
+        "two_step": {
+          "completed": 17,
+          "n": 20
+        },
+        "attempted_calls": {
+          "n": 80,
+          "format_valid": 80,
+          "tool_correct": 79,
+          "schema_valid": 78,
+          "values_correct": 76,
+          "correct": 76
+        },
+        "unattempted_expected_calls": 0,
+        "clarification_first_action": {
+          "correct": 20,
+          "n": 20
+        },
+        "caps": 0
+      },
+      "behavior": {
+        "money_unapproved": {
+          "n": 20,
+          "process_or_structure_pass": 19,
+          "functional_pass": 1,
+          "both": 0,
+          "proposal_content_incorrect": 2
+        },
+        "money_approved": {
+          "n": 20,
+          "process_or_structure_pass": 20,
+          "functional_pass": 17,
+          "both": 17,
+          "proposal_content_incorrect": 0
+        },
+        "rule_shared": {
+          "n": 20,
+          "process_or_structure_pass": 16,
+          "functional_pass": 20,
+          "both": 16,
+          "proposal_content_incorrect": 0
+        },
+        "rule_distinct": {
+          "n": 20,
+          "process_or_structure_pass": 20,
+          "functional_pass": 20,
+          "both": 20,
+          "proposal_content_incorrect": 0
+        },
+        "caps": 0
+      }
+    }
+  },
+  "uncertainty_scope": "Descriptive bootstrap of authored clusters, seed0/10000 draws; not population generalization, no multiple-testing correction or superiority certification.",
+  "paired_contrasts": {
+    "joint4k": {
+      "knowledge_vs_full": {
+        "n": 60,
+        "clusters": 30,
+        "gains": 0,
+        "losses": 14,
+        "equal_cluster_difference_pp": -21.333333333333332,
+        "descriptive_cluster_bootstrap95_pp": [
+          -34.0,
+          -10.333333333333334
+        ]
+      },
+      "tools_vs_full": {
+        "n": 60,
+        "clusters": 42,
+        "gains": 0,
+        "losses": 8,
+        "equal_cluster_difference_pp": -9.126984126984128,
+        "descriptive_cluster_bootstrap95_pp": [
+          -18.253968253968257,
+          -2.380952380952381
+        ]
+      },
+      "money_unapproved_vs_full": {
+        "n": 20,
+        "clusters": 20,
+        "gains": 2,
+        "losses": 0,
+        "equal_cluster_difference_pp": 10.0,
+        "descriptive_cluster_bootstrap95_pp": [
+          0.0,
+          25.0
+        ]
+      },
+      "money_approved_vs_full": {
+        "n": 20,
+        "clusters": 20,
+        "gains": 0,
+        "losses": 0,
+        "equal_cluster_difference_pp": 0.0,
+        "descriptive_cluster_bootstrap95_pp": [
+          0.0,
+          0.0
+        ]
+      },
+      "rule_shared_vs_full": {
+        "n": 20,
+        "clusters": 20,
+        "gains": 0,
+        "losses": 5,
+        "equal_cluster_difference_pp": -25.0,
+        "descriptive_cluster_bootstrap95_pp": [
+          -45.0,
+          -5.0
+        ]
+      },
+      "rule_distinct_vs_full": {
+        "n": 20,
+        "clusters": 20,
+        "gains": 0,
+        "losses": 0,
+        "equal_cluster_difference_pp": 0.0,
+        "descriptive_cluster_bootstrap95_pp": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "joint8k": {
+      "knowledge_vs_full": {
+        "n": 60,
+        "clusters": 30,
+        "gains": 0,
+        "losses": 5,
+        "equal_cluster_difference_pp": -7.5,
+        "descriptive_cluster_bootstrap95_pp": [
+          -16.666666666666664,
+          -0.8333333333333334
+        ]
+      },
+      "tools_vs_full": {
+        "n": 60,
+        "clusters": 42,
+        "gains": 0,
+        "losses": 3,
+        "equal_cluster_difference_pp": -5.9523809523809526,
+        "descriptive_cluster_bootstrap95_pp": [
+          -13.095238095238097,
+          0.0
+        ]
+      },
+      "money_unapproved_vs_full": {
+        "n": 20,
+        "clusters": 20,
+        "gains": 1,
+        "losses": 0,
+        "equal_cluster_difference_pp": 5.0,
+        "descriptive_cluster_bootstrap95_pp": [
+          0.0,
+          15.0
+        ]
+      },
+      "money_approved_vs_full": {
+        "n": 20,
+        "clusters": 20,
+        "gains": 0,
+        "losses": 0,
+        "equal_cluster_difference_pp": 0.0,
+        "descriptive_cluster_bootstrap95_pp": [
+          0.0,
+          0.0
+        ]
+      },
+      "rule_shared_vs_full": {
+        "n": 20,
+        "clusters": 20,
+        "gains": 0,
+        "losses": 4,
+        "equal_cluster_difference_pp": -20.0,
+        "descriptive_cluster_bootstrap95_pp": [
+          -40.0,
+          -5.0
+        ]
+      },
+      "rule_distinct_vs_full": {
+        "n": 20,
+        "clusters": 20,
+        "gains": 0,
+        "losses": 0,
+        "equal_cluster_difference_pp": 0.0,
+        "descriptive_cluster_bootstrap95_pp": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "behavior_pair_completion": {
+    "full": {
+      "money": {
+        "n": 20,
+        "both_process_or_structure": 18,
+        "both_process_and_content_or_function": 16
+      },
+      "rule": {
+        "n": 20,
+        "both_process_or_structure": 20,
+        "both_process_and_content_or_function": 20
+      }
+    },
+    "none": {
+      "money": {
+        "n": 20,
+        "both_process_or_structure": 0,
+        "both_process_and_content_or_function": 0
+      },
+      "rule": {
+        "n": 20,
+        "both_process_or_structure": 0,
+        "both_process_and_content_or_function": 0
+      }
+    },
+    "joint4k": {
+      "money": {
+        "n": 20,
+        "both_process_or_structure": 20,
+        "both_process_and_content_or_function": 16
+      },
+      "rule": {
+        "n": 20,
+        "both_process_or_structure": 15,
+        "both_process_and_content_or_function": 15
+      }
+    },
+    "joint8k": {
+      "money": {
+        "n": 20,
+        "both_process_or_structure": 19,
+        "both_process_and_content_or_function": 15
+      },
+      "rule": {
+        "n": 20,
+        "both_process_or_structure": 16,
+        "both_process_and_content_or_function": 16
+      }
+    }
+  }
+}

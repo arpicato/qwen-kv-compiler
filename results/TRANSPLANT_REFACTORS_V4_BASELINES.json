@@ -1,0 +1,1291 @@
+{
+  "config": {
+    "freeze_sha256": "fb7d103b03b738f803e5628baabe5f9bbb7074305128c7ed8b9ba38a435db479",
+    "split": "test",
+    "arms": [
+      "full",
+      "none"
+    ]
+  },
+  "complete": true,
+  "elapsed_s": 348.17709493637085,
+  "rows": {
+    "full": {
+      "knowledge": [],
+      "tools": [],
+      "behavior": [
+        {
+          "id": "usernames-shared",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate_name(name):\n    if not name or not name.strip():\n        raise ValueError('name required')\n\ndef primary(name):\n    _validate_name(name)\n    return {'name': name}\n\ndef secondary(name):\n    _validate_name(name)\n    return {'legacy_name': name}\n```",
+          "stop": "eos",
+          "tokens": 70,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_name"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "batch-size-shared",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate_size(size):\n    if size <= 0:\n        raise ValueError('invalid size')\n\ndef primary(size):\n    _validate_size(size)\n    return size * 2\n\ndef secondary(size):\n    _validate_size(size)\n    return {'size': size}\n```",
+          "stop": "eos",
+          "tokens": 66,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_size"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "timeouts-shared",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate(seconds):\n    if seconds < 0:\n        raise ValueError('invalid timeout')\n\ndef primary(seconds):\n    _validate(seconds)\n    return seconds * 1000\n\ndef secondary(seconds):\n    _validate(seconds)\n    return {'timeout': seconds}\n```",
+          "stop": "eos",
+          "tokens": 66,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": false,
+            "common_private_helpers": [
+              "_validate"
+            ],
+            "manual_behavior_required": true,
+            "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 24, in <module>\nAssertionError: ('primary', 0, ('ok', 0), ('error', None))\n"
+          }
+        },
+        {
+          "id": "page-size-shared",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate_limit(limit):\n    if limit < 1:\n        raise ValueError('invalid limit')\n    if limit > 100:\n        raise ValueError('invalid limit')\n    return limit\n\ndef primary(limit):\n    _validate_limit(limit)\n    return list(range(limit))\n\ndef secondary(limit):\n    _validate_limit(limit)\n    return {'limit': limit}\n```",
+          "stop": "eos",
+          "tokens": 88,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_limit"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "project-slug-shared",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate_slug(slug):\n    if not slug or '/' in slug:\n        raise ValueError('invalid slug')\n\ndef primary(slug):\n    _validate_slug(slug)\n    return slug.lower()\n\ndef secondary(slug):\n    _validate_slug(slug)\n    return {'slug': slug}\n```",
+          "stop": "eos",
+          "tokens": 67,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_slug"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "retry-count-shared",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate_retries(retries):\n    if retries < 0 or retries > 5:\n        raise ValueError('invalid retries')\n\ndef primary(retries):\n    _validate_retries(retries)\n    return retries + 1\n\ndef secondary(retries):\n    _validate_retries(retries)\n    return {'retries': retries}\n```",
+          "stop": "eos",
+          "tokens": 80,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_retries"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "tags-shared",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate_tag(tag):\n    if not tag or len(tag) > 20:\n        raise ValueError('invalid tag')\n\ndef primary(tag):\n    _validate_tag(tag)\n    return tag.upper()\n\ndef secondary(tag):\n    _validate_tag(tag)\n    return {'tag': tag}\n```",
+          "stop": "eos",
+          "tokens": 71,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_tag"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "ports-shared",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate_port(port):\n    if port < 1 or port > 65535:\n        raise ValueError('invalid port')\n\ndef primary(port):\n    _validate_port(port)\n    return str(port)\n\ndef secondary(port):\n    _validate_port(port)\n    return {'port': port}\n```",
+          "stop": "eos",
+          "tokens": 74,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_port"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-upload-size",
+          "category": "recovered_refactor",
+          "pred": "Proposed behavior: both functions reject `size <= 0` (zero and negative) with `ValueError(\"invalid input\")`, and return the same valid outputs as before for positive sizes.\n\nDo you approve this behavior?",
+          "stop": "eos",
+          "tokens": 46,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "new-worker-count",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate_workers(workers):\n    if workers < 0 or workers == 0:\n        raise ValueError(\"invalid input\")\n\ndef primary(workers):\n    _validate_workers(workers)\n    return workers * 2\n\ndef secondary(workers):\n    _validate_workers(workers)\n    return {'workers': workers}\n```",
+          "stop": "eos",
+          "tokens": 76,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_workers"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-ticket-title",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate_title(title):\n    if not title or not title.strip():\n        raise ValueError(\"invalid input\")\n\ndef primary(title):\n    _validate_title(title)\n    return title\n\ndef secondary(title):\n    _validate_title(title)\n    return {'title': title}\n```",
+          "stop": "eos",
+          "tokens": 65,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_title"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-cache-key",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate_key(key):\n    if not key or \":\" in key:\n        raise ValueError(\"invalid input\")\n\ndef primary(key):\n    _validate_key(key)\n    return key\n\ndef secondary(key):\n    _validate_key(key)\n    return {'key': key}\n```",
+          "stop": "eos",
+          "tokens": 65,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_key"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-chunk-size",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate_chunk(chunk):\n    if chunk < 1 or chunk > 4096:\n        raise ValueError(\"invalid input\")\n\ndef primary(chunk):\n    _validate_chunk(chunk)\n    return chunk // 2\n\ndef secondary(chunk):\n    _validate_chunk(chunk)\n    return {'chunk': chunk}\n```",
+          "stop": "eos",
+          "tokens": 74,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_chunk"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-http-status",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate_status(status):\n    if status < 100 or status > 599:\n        raise ValueError(\"invalid input\")\n\ndef primary(status):\n    _validate_status(status)\n    return str(status)\n\ndef secondary(status):\n    _validate_status(status)\n    return {'status': status}\n```",
+          "stop": "eos",
+          "tokens": 74,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_status"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-day-number",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate_day(day):\n    if day < 1 or day > 31:\n        raise ValueError(\"invalid input\")\n\ndef primary(day):\n    _validate_day(day)\n    return day\n\ndef secondary(day):\n    _validate_day(day)\n    return {'day': day}\n```",
+          "stop": "eos",
+          "tokens": 69,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_day"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-percentage",
+          "category": "recovered_refactor",
+          "pred": "Proposed behavior: both functions reject `percent < 0` and `percent > 100` with `ValueError(\"invalid input\")`, and share a private `_validate_percent` helper. Valid outputs unchanged.\n\nDo you approve this behavior?",
+          "stop": "eos",
+          "tokens": 52,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "new-sort-direction",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate_direction(direction):\n    if direction not in (\"asc\", \"desc\"):\n        raise ValueError(\"invalid input\")\n    return direction\n\ndef primary(direction):\n    return _validate_direction(direction)\n\ndef secondary(direction):\n    return {'direction': _validate_direction(direction)}\n```",
+          "stop": "eos",
+          "tokens": 64,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_direction"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-locale-code",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate_locale(locale):\n    if not locale:\n        raise ValueError(\"invalid input\")\n    if len(locale) != 2:\n        raise ValueError(\"invalid input\")\n\ndef primary(locale):\n    _validate_locale(locale)\n    return locale.lower()\n\ndef secondary(locale):\n    _validate_locale(locale)\n    return {'locale': locale}\n```",
+          "stop": "eos",
+          "tokens": 81,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_locale"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-thread-count",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate(threads):\n    if threads < 1 or threads > 64:\n        raise ValueError(\"invalid input\")\n\ndef primary(threads):\n    _validate(threads)\n    return threads + 1\n\ndef secondary(threads):\n    _validate(threads)\n    return {'threads': threads}\n```",
+          "stop": "eos",
+          "tokens": 74,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-document-name",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate_name(name):\n    if not name or \"\\n\" in name:\n        raise ValueError(\"invalid input\")\n\ndef primary(name):\n    _validate_name(name)\n    return name\n\ndef secondary(name):\n    _validate_name(name)\n    return {'name': name}\n```",
+          "stop": "eos",
+          "tokens": 67,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_name"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-revision",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate_revision(revision):\n    if revision < 1:\n        raise ValueError(\"invalid input\")\n    return revision\n\ndef primary(revision):\n    return _validate_revision(revision)\n\ndef secondary(revision):\n    return {'revision': _validate_revision(revision)}\n```",
+          "stop": "eos",
+          "tokens": 65,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_revision"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-email-address",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate(address):\n    if not address or \"@\" not in address:\n        raise ValueError(\"invalid input\")\n\ndef primary(address):\n    _validate(address)\n    return address\n\ndef secondary(address):\n    _validate(address)\n    return {'address': address}\n```",
+          "stop": "eos",
+          "tokens": 63,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-retention-days",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate_days(days):\n    if days < 1 or days > 365:\n        raise ValueError(\"invalid input\")\n\ndef primary(days):\n    _validate_days(days)\n    return days * 86400\n\ndef secondary(days):\n    _validate_days(days)\n    return {'days': days}\n```",
+          "stop": "eos",
+          "tokens": 77,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_days"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-file-extension",
+          "category": "recovered_refactor",
+          "pred": "Proposed behavior: both functions reject an empty extension and an extension whose first character is `.` (e.g. `\".txt\"`), raising `ValueError(\"invalid input\")`. Valid inputs are unchanged: `primary` returns the lowercased string, `secondary` returns `{'extension': <original>}`.\n\nDo you approve this behavior?",
+          "stop": "eos",
+          "tokens": 71,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "new-sequence-length",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate_length(length):\n    if length < 0 or length == 0:\n        raise ValueError(\"invalid input\")\n    return length\n\ndef primary(length):\n    return _validate_length(length)\n\ndef secondary(length):\n    return {'length': _validate_length(length)}\n```",
+          "stop": "eos",
+          "tokens": 65,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_length"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-queue-priority",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate_priority(priority):\n    if priority < 0 or priority > 9:\n        raise ValueError(\"invalid input\")\n\ndef primary(priority):\n    _validate_priority(priority)\n    return priority\n\ndef secondary(priority):\n    _validate_priority(priority)\n    return {'priority': priority}\n```",
+          "stop": "eos",
+          "tokens": 68,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_priority"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-window-seconds",
+          "category": "recovered_refactor",
+          "pred": "Proposed behavior: both functions reject `seconds < 1` or `seconds > 3600` with `ValueError(\"invalid input\")`, and share the rule via a private helper. Valid outputs unchanged.\n\nDo you approve this behavior?",
+          "stop": "eos",
+          "tokens": 52,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "new-path-segment",
+          "category": "recovered_refactor",
+          "pred": "Proposed behavior: both functions reject `\"\"`, `\".\"`, and `\"..\"` with `ValueError(\"invalid input\")`, and accept all other non-empty strings unchanged. The shared rule lives in one private helper.\n\n```python\ndef _validate_segment(segment):\n    if not segment or segment in (\".\", \"..\"):\n        raise ValueError(\"invalid input\")\n    return segment\n\ndef primary(segment):\n    return _validate_segment(segment)\n\ndef secondary(segment):\n    return {'segment': _validate_segment(segment)}\n```",
+          "stop": "eos",
+          "tokens": 110,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_segment"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-download-count",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate(count):\n    if count < 0:\n        raise ValueError(\"invalid\")\n\ndef primary(count):\n    _validate(count)\n    return count\n\ndef secondary(count):\n    _validate(count)\n    return {\"value\": count}\n```",
+          "stop": "eos",
+          "tokens": 59,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": false,
+            "common_private_helpers": [
+              "_validate"
+            ],
+            "manual_behavior_required": true,
+            "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 24, in <module>\nAssertionError: ('primary', 0, ('ok', 0), ('error', None))\n"
+          }
+        },
+        {
+          "id": "gate-region",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate_region(region):\n    if not region or len(region) != 3:\n        raise ValueError(\"invalid\")\n\ndef primary(region):\n    _validate_region(region)\n    return region\n\ndef secondary(region):\n    _validate_region(region)\n    return {\"value\": region}\n```",
+          "stop": "eos",
+          "tokens": 67,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_region"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-cache-age",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate_age(age):\n    if age < 0 or age > 7200:\n        raise ValueError(\"invalid\")\n\ndef primary(age):\n    _validate_age(age)\n    return age\n\ndef secondary(age):\n    _validate_age(age)\n    return {\"value\": age}\n```",
+          "stop": "eos",
+          "tokens": 70,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_age"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-channel",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate_channel(channel):\n    if not channel or \" \" in channel:\n        raise ValueError(\"invalid\")\n\ndef primary(channel):\n    _validate_channel(channel)\n    return channel\n\ndef secondary(channel):\n    _validate_channel(channel)\n    return {\"value\": channel}\n```",
+          "stop": "eos",
+          "tokens": 65,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_channel"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-file-mode",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate_mode(mode):\n    if mode not in (\"read\", \"write\"):\n        raise ValueError(\"invalid\")\n    return mode\n\ndef primary(mode):\n    return _validate_mode(mode)\n\ndef secondary(mode):\n    return {\"value\": _validate_mode(mode)}\n```",
+          "stop": "eos",
+          "tokens": 63,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_mode"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-columns",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate_columns(columns):\n    if columns < 1 or columns > 80:\n        raise ValueError(\"invalid\")\n\ndef primary(columns):\n    _validate_columns(columns)\n    return columns\n\ndef secondary(columns):\n    _validate_columns(columns)\n    return {\"value\": columns}\n```",
+          "stop": "eos",
+          "tokens": 68,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_columns"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-token-prefix",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate(token):\n    if not token or token.startswith(\"_\"):\n        raise ValueError(\"invalid\")\n\ndef primary(token):\n    _validate(token)\n    return token\n\ndef secondary(token):\n    _validate(token)\n    return {\"value\": token}\n```",
+          "stop": "eos",
+          "tokens": 61,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-job-window",
+          "category": "recovered_refactor",
+          "pred": "Proposed behavior: both functions reject `minutes < 1` or `minutes > 90` with `ValueError(\"invalid\")`, and accept `1 <= minutes <= 90` unchanged.\n\nDo you approve this behavior?",
+          "stop": "eos",
+          "tokens": 49,
+          "code_check": {
+            "code_extracted": false,
+            "signatures_preserved": false,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true
+          }
+        },
+        {
+          "id": "gate-segment-length",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate_segment(segment):\n    if not segment:\n        raise ValueError(\"invalid\")\n    if len(segment) > 12:\n        raise ValueError(\"invalid\")\n    return segment\n\ndef primary(segment):\n    return _validate_segment(segment)\n\ndef secondary(segment):\n    return {\"value\": _validate_segment(segment)}\n```",
+          "stop": "eos",
+          "tokens": 75,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_segment"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-stream-id",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate_stream(stream):\n    if stream < 1:\n        raise ValueError(\"invalid\")\n\ndef primary(stream):\n    _validate_stream(stream)\n    return stream\n\ndef secondary(stream):\n    _validate_stream(stream)\n    return {\"value\": stream}\n```",
+          "stop": "eos",
+          "tokens": 62,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_stream"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-priority-code",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate(code):\n    if not code:\n        raise ValueError(\"invalid\")\n    if code not in (\"low\", \"high\"):\n        raise ValueError(\"invalid\")\n    return code\n\ndef primary(code):\n    return _validate(code)\n\ndef secondary(code):\n    return {\"value\": _validate(code)}\n```",
+          "stop": "eos",
+          "tokens": 73,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-depth",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef _validate_depth(depth):\n    if depth < 1 or depth > 16:\n        raise ValueError(\"invalid\")\n\ndef primary(depth):\n    _validate_depth(depth)\n    return depth\n\ndef secondary(depth):\n    _validate_depth(depth)\n    return {\"value\": depth}\n```",
+          "stop": "eos",
+          "tokens": 68,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_depth"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        }
+      ]
+    },
+    "none": {
+      "knowledge": [],
+      "tools": [],
+      "behavior": [
+        {
+          "id": "usernames-shared",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(name):\n    if not name or not name.strip():\n        raise ValueError('name required')\n    return {'name': name}\n\ndef secondary(name):\n    if not name or not name.strip():\n        raise ValueError('name required')\n    return {'legacy_name': name}\n```",
+          "stop": "eos",
+          "tokens": 67,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "batch-size-shared",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(size):\n    if size <= 0:\n        raise ValueError('invalid size')\n    return size * 2\n\ndef secondary(size):\n    if size <= 0:\n        raise ValueError('invalid size')\n    return {'size': size}\n```",
+          "stop": "eos",
+          "tokens": 61,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "timeouts-shared",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(seconds):\n    if seconds <= 0:\n        raise ValueError('invalid timeout')\n    return seconds * 1000\n\ndef secondary(seconds):\n    if seconds <= 0:\n        raise ValueError('invalid timeout')\n    return {'timeout': seconds}\n```",
+          "stop": "eos",
+          "tokens": 64,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "page-size-shared",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(limit):\n    if limit < 1:\n        raise ValueError('invalid limit')\n    if limit > 100:\n        limit = 100\n    return list(range(limit))\n\ndef secondary(limit):\n    if limit < 1:\n        raise ValueError('invalid limit')\n    if limit > 100:\n        limit = 100\n    return {'limit': limit}\n```",
+          "stop": "eos",
+          "tokens": 97,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('primary', 101, ('ok', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99]), ('error', None))\n"
+          }
+        },
+        {
+          "id": "project-slug-shared",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(slug):\n    if not slug or '/' in slug:\n        raise ValueError('invalid slug')\n    return slug.lower()\n\ndef secondary(slug):\n    if not slug or '/' in slug:\n        raise ValueError('invalid slug')\n    return {'slug': slug}\n```",
+          "stop": "eos",
+          "tokens": 64,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "retry-count-shared",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(retries):\n    if retries < 0 or retries > 5:\n        raise ValueError('invalid retries')\n    return retries + 1\n\ndef secondary(retries):\n    if retries < 0 or retries > 5:\n        raise ValueError('invalid retries')\n    return {'retries': retries}\n```",
+          "stop": "eos",
+          "tokens": 74,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "tags-shared",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(tag):\n    if not tag or len(tag) > 20:\n        raise ValueError('invalid tag')\n    return tag.upper()\n\ndef secondary(tag):\n    if not tag or len(tag) > 20:\n        raise ValueError('invalid tag')\n    return {'tag': tag}\n```",
+          "stop": "eos",
+          "tokens": 72,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "ports-shared",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(port):\n    if port < 1 or port > 65535:\n        raise ValueError('invalid port')\n    return str(port)\n\ndef secondary(port):\n    if port < 1 or port > 65535:\n        raise ValueError('invalid port')\n    return {'port': port}\n```",
+          "stop": "eos",
+          "tokens": 78,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-upload-size",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(size):\n    if size <= 0:\n        raise ValueError(\"invalid input\")\n    return size\n\ndef secondary(size):\n    if size <= 0:\n        raise ValueError(\"invalid input\")\n    return {'bytes': size}\n```",
+          "stop": "eos",
+          "tokens": 58,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-worker-count",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(workers):\n    if workers <= 0:\n        raise ValueError(\"invalid input\")\n    return workers * 2\n\ndef secondary(workers):\n    if workers <= 0:\n        raise ValueError(\"invalid input\")\n    return {'workers': workers}\n```",
+          "stop": "eos",
+          "tokens": 63,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-ticket-title",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(title):\n    if not title or not title.strip():\n        raise ValueError(\"invalid input\")\n    return title\n\ndef secondary(title):\n    if not title or not title.strip():\n        raise ValueError(\"invalid input\")\n    return {'title': title}\n```",
+          "stop": "eos",
+          "tokens": 62,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-cache-key",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(key):\n    if not key or ':' in key:\n        raise ValueError(\"invalid input\")\n    return key\n\ndef secondary(key):\n    if not key or ':' in key:\n        raise ValueError(\"invalid input\")\n    return {'key': key}\n```",
+          "stop": "eos",
+          "tokens": 62,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-chunk-size",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(chunk):\n    if chunk < 1 or chunk > 4096:\n        raise ValueError(\"invalid input\")\n    return chunk // 2\n\ndef secondary(chunk):\n    if chunk < 1 or chunk > 4096:\n        raise ValueError(\"invalid input\")\n    return {'chunk': chunk}\n```",
+          "stop": "eos",
+          "tokens": 77,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-http-status",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(status):\n    if status < 100 or status > 599:\n        raise ValueError(\"invalid input\")\n    return str(status)\n\ndef secondary(status):\n    if status < 100 or status > 599:\n        raise ValueError(\"invalid input\")\n    return {'status': status}\n```",
+          "stop": "eos",
+          "tokens": 78,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-day-number",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(day):\n    if day < 1 or day > 31:\n        raise ValueError(\"invalid input\")\n    return day\n\ndef secondary(day):\n    if day < 1 or day > 31:\n        raise ValueError(\"invalid input\")\n    return {'day': day}\n```",
+          "stop": "eos",
+          "tokens": 70,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-percentage",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(percent):\n    if percent < 0 or percent > 100:\n        raise ValueError(\"invalid input\")\n    return percent / 100\n\ndef secondary(percent):\n    if percent < 0 or percent > 100:\n        raise ValueError(\"invalid input\")\n    return {'percent': percent}\n```",
+          "stop": "eos",
+          "tokens": 77,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-sort-direction",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(direction):\n    if direction not in ('asc', 'desc'):\n        raise ValueError(\"invalid input\")\n    return direction\n\ndef secondary(direction):\n    if direction not in ('asc', 'desc'):\n        raise ValueError(\"invalid input\")\n    return {'direction': direction}\n```",
+          "stop": "eos",
+          "tokens": 66,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-locale-code",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(locale):\n    if not locale or len(locale) != 2:\n        raise ValueError(\"invalid input\")\n    return locale.lower()\n\ndef secondary(locale):\n    if not locale or len(locale) != 2:\n        raise ValueError(\"invalid input\")\n    return {'locale': locale}\n```",
+          "stop": "eos",
+          "tokens": 70,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-thread-count",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(threads):\n    if threads < 1 or threads > 64:\n        raise ValueError(\"invalid input\")\n    return threads + 1\n\ndef secondary(threads):\n    if threads < 1 or threads > 64:\n        raise ValueError(\"invalid input\")\n    return {'threads': threads}\n```",
+          "stop": "eos",
+          "tokens": 75,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-document-name",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(name):\n    if not name or '\\n' in name:\n        raise ValueError(\"invalid input\")\n    return name\n\ndef secondary(name):\n    if not name or '\\n' in name:\n        raise ValueError(\"invalid input\")\n    return {'name': name}\n```",
+          "stop": "eos",
+          "tokens": 66,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-revision",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(revision):\n    if revision < 1:\n        raise ValueError(\"invalid input\")\n    return revision\n\ndef secondary(revision):\n    if revision < 1:\n        raise ValueError(\"invalid input\")\n    return {'revision': revision}\n```",
+          "stop": "eos",
+          "tokens": 60,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-email-address",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(address):\n    if not address or not isinstance(address, str) or not address or '@' not in address:\n        raise ValueError(\"invalid input\")\n    return address\n\ndef secondary(address):\n    if not address or not isinstance(address, str) or not address or '@' not in address:\n        raise ValueError(\"invalid input\")\n    return {'address': address}\n```",
+          "stop": "eos",
+          "tokens": 86,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-retention-days",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(days):\n    if days < 1 or days > 365:\n        raise ValueError(\"invalid input\")\n    return days * 86400\n\ndef secondary(days):\n    if days < 1 or days > 365:\n        raise ValueError(\"invalid input\")\n    return {'days': days}\n```",
+          "stop": "eos",
+          "tokens": 79,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-file-extension",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(extension):\n    if not extension or extension.startswith('.'):\n        raise ValueError(\"invalid input\")\n    return extension.lower()\n\ndef secondary(extension):\n    if not extension or extension.startswith('.'):\n        raise ValueError(\"invalid input\")\n    return {'extension': extension}\n```",
+          "stop": "eos",
+          "tokens": 64,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-sequence-length",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(length):\n    if length < 0 or length == 0:\n        raise ValueError(\"invalid input\")\n    return length\n\ndef secondary(length):\n    if length < 0 or length == 0:\n        raise ValueError(\"invalid input\")\n    return {'length': length}\n```",
+          "stop": "eos",
+          "tokens": 68,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-queue-priority",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(priority):\n    if priority < 0 or priority > 9:\n        raise ValueError(\"invalid input\")\n    return priority\n\ndef secondary(priority):\n    if priority < 0 or priority > 9:\n        raise ValueError(\"invalid input\")\n    return {'priority': priority}\n```",
+          "stop": "eos",
+          "tokens": 68,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-window-seconds",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(seconds):\n    if seconds < 1 or seconds > 3600:\n        raise ValueError(\"invalid input\")\n    return seconds\n\ndef secondary(seconds):\n    if seconds < 1 or seconds > 3600:\n        raise ValueError(\"invalid input\")\n    return {'seconds': seconds}\n```",
+          "stop": "eos",
+          "tokens": 74,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "new-path-segment",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(segment):\n    if not segment or segment == '.' or segment == '..':\n        raise ValueError(\"invalid input\")\n    return segment\n\ndef secondary(segment):\n    if not segment or segment == '.' or segment == '..':\n        raise ValueError(\"invalid input\")\n    return {'segment': segment}\n```",
+          "stop": "eos",
+          "tokens": 70,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-download-count",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(count):\n    if count <= 0:\n        raise ValueError(\"invalid\")\n    return count\n\ndef secondary(count):\n    if count <= 0:\n        raise ValueError(\"invalid\")\n    return {\"value\": count}\n```",
+          "stop": "eos",
+          "tokens": 56,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-region",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(region):\n    if not region or len(region) != 3:\n        raise ValueError(\"invalid\")\n    return region\n\ndef secondary(region):\n    if not region or len(region) != 3:\n        raise ValueError(\"invalid\")\n    return {\"value\": region}\n```",
+          "stop": "eos",
+          "tokens": 66,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-cache-age",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(age):\n    if age < 0 or age > 7200:\n        raise ValueError(\"invalid\")\n    return age\n\ndef secondary(age):\n    if age < 0 or age > 7200:\n        raise ValueError(\"invalid\")\n    return {\"value\": age}\n```",
+          "stop": "eos",
+          "tokens": 72,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-channel",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(channel):\n    if not channel or \" \" in channel:\n        raise ValueError(\"invalid\")\n    return channel\n\ndef secondary(channel):\n    if not channel or \" \" in channel:\n        raise ValueError(\"invalid\")\n    return {\"value\": channel}\n```",
+          "stop": "eos",
+          "tokens": 62,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-file-mode",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(mode):\n    if mode not in (\"read\", \"write\"):\n        raise ValueError(\"invalid\")\n    return mode\n\ndef secondary(mode):\n    if mode not in (\"read\", \"write\"):\n        raise ValueError(\"invalid\")\n    return {\"value\": mode}\n```",
+          "stop": "eos",
+          "tokens": 64,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-columns",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(columns):\n    if columns < 1 or columns > 80:\n        raise ValueError(\"invalid\")\n    return columns\n\ndef secondary(columns):\n    if columns < 1 or columns > 80:\n        raise ValueError(\"invalid\")\n    return {\"value\": columns}\n```",
+          "stop": "eos",
+          "tokens": 68,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-token-prefix",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(token):\n    if not token or token.startswith(\"_\"):\n        raise ValueError(\"invalid\")\n    return token\n\ndef secondary(token):\n    if not token or token.startswith(\"_\"):\n        raise ValueError(\"invalid\")\n    return {\"value\": token}\n```",
+          "stop": "eos",
+          "tokens": 60,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-job-window",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(minutes):\n    if minutes < 1 or minutes > 90:\n        raise ValueError(\"invalid\")\n    return minutes\n\ndef secondary(minutes):\n    if minutes < 1 or minutes > 90:\n        raise ValueError(\"invalid\")\n    return {\"value\": minutes}\n```",
+          "stop": "eos",
+          "tokens": 68,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-segment-length",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(segment):\n    if not segment:\n        raise ValueError(\"invalid\")\n    if len(segment) > 12:\n        raise ValueError(\"invalid\")\n    return segment\n\ndef secondary(segment):\n    if not segment:\n        raise ValueError(\"invalid\")\n    if len(segment) > 12:\n        raise ValueError(\"invalid\")\n    return {\"value\": segment}\n```",
+          "stop": "eos",
+          "tokens": 88,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-stream-id",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(stream):\n    if stream < 1:\n        raise ValueError(\"invalid\")\n    return stream\n\ndef secondary(stream):\n    if stream < 1:\n        raise ValueError(\"invalid\")\n    return {\"value\": stream}\n```",
+          "stop": "eos",
+          "tokens": 56,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-priority-code",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(code):\n    if code not in (\"low\", \"high\"):\n        raise ValueError(\"invalid\")\n    return code\n\ndef secondary(code):\n    if code not in (\"low\", \"high\"):\n        raise ValueError(\"invalid\")\n    return {\"value\": code}\n```",
+          "stop": "eos",
+          "tokens": 64,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "gate-depth",
+          "category": "recovered_refactor",
+          "pred": "```python\ndef primary(depth):\n    if depth < 1 or depth > 16:\n        raise ValueError(\"invalid\")\n    return depth\n\ndef secondary(depth):\n    if depth < 1 or depth > 16:\n        raise ValueError(\"invalid\")\n    return {\"value\": depth}\n```",
+          "stop": "eos",
+          "tokens": 68,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        }
+      ]
+    }
+  }
+}

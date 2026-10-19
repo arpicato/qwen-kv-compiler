@@ -1,0 +1,14 @@
+{
+  "complete": true,
+  "max_abs": 67690.875,
+  "previous_max_abs": 67691.234375,
+  "same_run_lsq_exact": true,
+  "fp16_nonfinite": 1,
+  "head_sha256": "c82231c6687ba7b600942fff561d7605fe5d768ab5af878e2a18775bd44b3963",
+  "rng_sha256": "1a0317a0b55c30e40d71db9350f00c0245dc2378edd5115c89a21392b19cf1a3",
+  "capture_sha256": "eab0e457fa2c155e75e3f289f2f5e3e301c52e3a2419b8a233a2ce561b6c959c",
+  "source_sha256": "ced793a9ab789c8309be2b61404ef3cfbd6585c4d9b6f87e0973977b7839a400",
+  "block_sha256": "971a52ec6909685dfdc07130d63b5dfaa74378e6772e6a3348d65f95a2a8a680",
+  "torch": "2.8.0+rocm6.4",
+  "elapsed_s": 18.61603976599872
+}

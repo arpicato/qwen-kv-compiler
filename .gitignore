@@ -1,0 +1,24 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Large binary artifacts (teacher state, compiled KV, captures).
+# Rebuild with the scripts in scripts/; do not version.
+artifacts/
+data/
+
+# NOTE: results/ is intentionally *not* ignored. It holds the small JSON
+# summaries (grades, metrics, per-probe text) that back the claims in
+# EXPERIMENT_LOG.md / README. Keep it tracked; do not add results/ here.
+
+# Misc
+.DS_Store
+nohup.out
+*.log

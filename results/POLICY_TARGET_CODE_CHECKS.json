@@ -1,0 +1,486 @@
+{
+  "full": {
+    "new-refund-cap": {
+      "stop": "eos",
+      "complete_python_blocks": 0,
+      "code_ok": null,
+      "shared_helper": null
+    },
+    "new-free-shipping": {
+      "stop": "eos",
+      "complete_python_blocks": 0,
+      "code_ok": null,
+      "shared_helper": null
+    },
+    "new-waive-small-fee": {
+      "stop": "eos",
+      "complete_python_blocks": 0,
+      "code_ok": null,
+      "shared_helper": null
+    },
+    "new-deposit-minimum": {
+      "stop": "eos",
+      "complete_python_blocks": 0,
+      "code_ok": null,
+      "shared_helper": null
+    },
+    "new-cash-rounding": {
+      "stop": "eos",
+      "complete_python_blocks": 0,
+      "code_ok": null,
+      "shared_helper": null
+    },
+    "new-commission-ceiling": {
+      "stop": "eos",
+      "complete_python_blocks": 0,
+      "code_ok": null,
+      "shared_helper": null
+    },
+    "new-rebate-nearest": {
+      "stop": "eos",
+      "complete_python_blocks": 0,
+      "code_ok": null,
+      "shared_helper": null
+    },
+    "new-platform-share": {
+      "stop": "eos",
+      "complete_python_blocks": 0,
+      "code_ok": null,
+      "shared_helper": null
+    },
+    "new-tip-remainder": {
+      "stop": "eos",
+      "complete_python_blocks": 0,
+      "code_ok": null,
+      "shared_helper": null
+    },
+    "new-revenue-split": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": null
+    },
+    "new-credit-expiry": {
+      "stop": "eos",
+      "complete_python_blocks": 0,
+      "code_ok": null,
+      "shared_helper": null
+    },
+    "new-overpayment": {
+      "stop": "eos",
+      "complete_python_blocks": 0,
+      "code_ok": null,
+      "shared_helper": null
+    },
+    "new-discount-ceiling": {
+      "stop": "eos",
+      "complete_python_blocks": 0,
+      "code_ok": null,
+      "shared_helper": null
+    },
+    "new-withholding": {
+      "stop": "eos",
+      "complete_python_blocks": 0,
+      "code_ok": null,
+      "shared_helper": null
+    },
+    "new-equal-installments": {
+      "stop": "eos",
+      "complete_python_blocks": 0,
+      "code_ok": null,
+      "shared_helper": null
+    },
+    "new-transfer-minimum": {
+      "stop": "eos",
+      "complete_python_blocks": 0,
+      "code_ok": null,
+      "shared_helper": null
+    },
+    "new-balance-overdraft": {
+      "stop": "eos",
+      "complete_python_blocks": 0,
+      "code_ok": null,
+      "shared_helper": null
+    },
+    "new-reward-ceiling": {
+      "stop": "eos",
+      "complete_python_blocks": 0,
+      "code_ok": null,
+      "shared_helper": null
+    },
+    "new-tax-surcharge": {
+      "stop": "cap",
+      "complete_python_blocks": 0,
+      "code_ok": null,
+      "shared_helper": null
+    },
+    "new-grant-allocation": {
+      "stop": "eos",
+      "complete_python_blocks": 0,
+      "code_ok": null,
+      "shared_helper": null
+    },
+    "new-upload-size": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": true
+    },
+    "new-worker-count": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": true
+    },
+    "new-ticket-title": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": true
+    },
+    "new-cache-key": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": true
+    },
+    "new-chunk-size": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": true
+    },
+    "new-http-status": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": true
+    },
+    "new-day-number": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": true
+    },
+    "new-percentage": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": true
+    },
+    "new-sort-direction": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": true
+    },
+    "new-locale-code": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": true
+    },
+    "new-thread-count": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": true
+    },
+    "new-document-name": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": true
+    },
+    "new-revision": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": true
+    },
+    "new-email-address": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": true
+    },
+    "new-retention-days": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": true
+    },
+    "new-file-extension": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": true
+    },
+    "new-sequence-length": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": true
+    },
+    "new-queue-priority": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": true
+    },
+    "new-window-seconds": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": true
+    },
+    "new-path-segment": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": true
+    }
+  },
+  "none": {
+    "new-refund-cap": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": null
+    },
+    "new-free-shipping": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": null
+    },
+    "new-waive-small-fee": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": null
+    },
+    "new-deposit-minimum": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": null
+    },
+    "new-cash-rounding": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": null
+    },
+    "new-commission-ceiling": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": null
+    },
+    "new-rebate-nearest": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": null
+    },
+    "new-platform-share": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": null
+    },
+    "new-tip-remainder": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": null
+    },
+    "new-revenue-split": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": null
+    },
+    "new-credit-expiry": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": null
+    },
+    "new-overpayment": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": null
+    },
+    "new-discount-ceiling": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": null
+    },
+    "new-withholding": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": null
+    },
+    "new-equal-installments": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": null
+    },
+    "new-transfer-minimum": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": null
+    },
+    "new-balance-overdraft": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": null
+    },
+    "new-reward-ceiling": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": null
+    },
+    "new-tax-surcharge": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": null
+    },
+    "new-grant-allocation": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": null
+    },
+    "new-upload-size": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": false
+    },
+    "new-worker-count": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": false
+    },
+    "new-ticket-title": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": false
+    },
+    "new-cache-key": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": false
+    },
+    "new-chunk-size": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": false
+    },
+    "new-http-status": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": false
+    },
+    "new-day-number": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": false
+    },
+    "new-percentage": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": false
+    },
+    "new-sort-direction": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": false
+    },
+    "new-locale-code": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": false
+    },
+    "new-thread-count": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": false
+    },
+    "new-document-name": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": false
+    },
+    "new-revision": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": false
+    },
+    "new-email-address": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": false
+    },
+    "new-retention-days": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": false
+    },
+    "new-file-extension": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": false
+    },
+    "new-sequence-length": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": false
+    },
+    "new-queue-priority": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": false
+    },
+    "new-window-seconds": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": false
+    },
+    "new-path-segment": {
+      "stop": "eos",
+      "complete_python_blocks": 1,
+      "code_ok": true,
+      "shared_helper": false
+    }
+  }
+}

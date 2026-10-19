@@ -1,0 +1,205 @@
+{
+  "config": {
+    "probeset_id": "facb113ea50184c735d5ab00",
+    "max_tokens": 256,
+    "cap": 32768,
+    "model": "/home/arpin/exllamav3-rocm/models/Qwen3.8-27B-EXL3-3.5bpw",
+    "teacher": "/mnt/data/artifacts/kvcompile/artifacts/agent/mixed27b_v1/teacher",
+    "compiled": "/mnt/data/artifacts/kvcompile/artifacts/agent/position4k27b_v1/compiled",
+    "arms": [
+      "teacher",
+      "none",
+      "compiled"
+    ],
+    "n_sys": 26033
+  },
+  "summary": {
+    "probeset": "/tmp/opencode/GUIDANCE_FORMAT27B_CHECK.json",
+    "probeset_id": "facb113ea50184c735d5ab00",
+    "n": 6,
+    "gen_protocol": "exl3-gpu-argmax-eos-set",
+    "max_tokens": 256,
+    "compiled": "/mnt/data/artifacts/kvcompile/artifacts/agent/position4k27b_v1/compiled",
+    "slots": 4096,
+    "by_arm_acc": {
+      "teacher": 1.0,
+      "none": 0.0,
+      "compiled": 0.6666666666666666
+    },
+    "informative_retention_num": 4,
+    "informative_retention_den": 6,
+    "informative_retention": 0.6666666666666666,
+    "complete": true,
+    "elapsed_s": 100.79379296302795
+  },
+  "rows": {
+    "teacher": [
+      {
+        "kind": "lookup",
+        "q": "We're shipping the notification service tomorrow. Begin the pre-release checks and staged deployment preparation.",
+        "answer": "release-checklist",
+        "ok": true,
+        "pred": "<tool_call>\n<function=skill>\n<parameter=name>\nrelease-checklist\n</parameter>\n</function>\n</tool_call>",
+        "stop": "eos",
+        "n_tok": 26
+      },
+      {
+        "kind": "lookup",
+        "q": "Checkout error rates have spiked in production and customers cannot pay. Take the lead on triage and mitigation, then help us prepare the postmortem.",
+        "answer": "incident-response",
+        "ok": true,
+        "pred": "I'll load the incident-response skill to guide this properly.\n\n<tool_call>\n<function=skill>\n<parameter=skill>\nincident-response\n</parameter>\n</function>\n</tool_call>",
+        "stop": "eos",
+        "n_tok": 39
+      },
+      {
+        "kind": "lookup",
+        "q": "We're replacing a public REST response field and changing its type. Review the compatibility and versioning implications before we implement it.",
+        "answer": "api-review",
+        "ok": true,
+        "pred": "I'll load the API review skill to guide this compatibility and versioning review.\n\n<tool_call>\n<function=skill>\n<parameter=skill>\napi-review\n</parameter>\n</function>\n</tool_call>",
+        "stop": "eos",
+        "n_tok": 43
+      },
+      {
+        "kind": "lookup",
+        "q": "Our cloud bill doubled for the analytics service. Start an audit and propose reductions with estimated savings.",
+        "answer": "cost-audit",
+        "ok": true,
+        "pred": "<tool_call>\n<function=skill>\n<parameter=skill>\ncost-audit\n</parameter>\n</function>\n</tool_call>",
+        "stop": "eos",
+        "n_tok": 27
+      },
+      {
+        "kind": "lookup",
+        "q": "The retention cleanup is approved. Remove the obsolete events_backup table through our connected Postgres service. There is no separate administrator connection available.",
+        "answer": "read-only",
+        "ok": true,
+        "pred": "I can't do that. The connected Postgres service is read-only and explicitly prohibits DDL \u2014 `DROP TABLE` is DDL. There's no write path available through the tools I have.\n\nYou'll need to run the migration through your normal write connection (e.g., a psql session with admin credentials, or a migration tool like Alembic/Flyway) and then I can verify the table is gone via the read-only replica.",
+        "stop": "eos",
+        "n_tok": 92
+      },
+      {
+        "kind": "lookup",
+        "q": "Prepare the Python ingestion service's dependencies and run its tests. You are already in its directory; pyproject.toml and the pytest tests have been inspected. Provide the commands you would use, without adding tooling.",
+        "answer": "uv",
+        "ok": true,
+        "pred": "```bash\nuv sync\nuv run pytest\n```",
+        "stop": "eos",
+        "n_tok": 11
+      }
+    ],
+    "none": [
+      {
+        "kind": "lookup",
+        "q": "We're shipping the notification service tomorrow. Begin the pre-release checks and staged deployment preparation.",
+        "answer": "release-checklist",
+        "ok": false,
+        "pred": "Understood. Since we are shipping the notification service tomorrow, I will outline the **pre-release checks** and **staged deployment preparation** plan. Please review and confirm if this aligns with your infrastructure and processes.\n\n---\n\n### \u2705 Pre-Release Checks\n\n#### 1. Code & Build Verification\n- [ ] **Final Code Freeze**: Confirm no new commits are merged into the release branch.\n- [ ] **Build Integrity**: Verify the latest build artifact (Docker image, JAR, etc.) is tagged with the correct version (e.g., `v1.0.0-rc1`).\n- [ ] **Dependency Audit**: Ensure all dependencies are pinned and no critical vulnerabilities (CVEs) are present.\n- [ ] **Unit & Integration Tests**: Confirm 100% pass rate on the CI pipeline for the release branch.\n\n#### 2. Configuration & Secrets\n- [ ] **Environment Variables**: Validate all required env vars are set in the target environment (e.g., `DB_URL`, `REDIS_HOST`, `API_KEYS`).\n- [ ] **Secrets Management**: Confirm secrets are injected via a secure vault (e.g., HashiCorp Vault, AWS Secrets Manager) and not hardcoded.\n-",
+        "stop": "cap",
+        "n_tok": 256
+      },
+      {
+        "kind": "lookup",
+        "q": "Checkout error rates have spiked in production and customers cannot pay. Take the lead on triage and mitigation, then help us prepare the postmortem.",
+        "answer": "incident-response",
+        "ok": false,
+        "pred": "I am ready to lead this incident. Given the severity (customers cannot pay), we are treating this as a **SEV-1 (Critical)** incident.\n\nHere is the immediate action plan, divided into **Triage/Mitigation** (now) and **Postmortem Preparation** (later).\n\n---\n\n### Phase 1: Immediate Triage & Mitigation (Next 30\u201360 Minutes)\n\n**Goal:** Restore service or implement a workaround to allow payments to process.\n\n#### 1. Establish Incident Command\n*   **Declare SEV-1:** Notify the on-call engineering lead, product manager, and customer support lead.\n*   **Open Incident Channel:** Create a dedicated Slack/Teams channel (e.g., `#incident-checkout-spike`).\n*   **Assign Roles:**\n    *   **Incident Commander (IC):** Me (coordinating, communicating status).\n    *   **Triage Lead:** Senior Backend Engineer (investigating root cause).\n    *   **Mitigation Lead:** Senior Frontend/Full-stack Engineer (implementing fixes/workarounds).\n    *   **Comms Lead:** Product/Support Lead (updating customers and internal stakeholders).\n\n#### 2",
+        "stop": "cap",
+        "n_tok": 256
+      },
+      {
+        "kind": "lookup",
+        "q": "We're replacing a public REST response field and changing its type. Review the compatibility and versioning implications before we implement it.",
+        "answer": "api-review",
+        "ok": false,
+        "pred": "# Compatibility & Versioning Review: Changing a Public REST Response Field\n\n## 1. Clarify the Change\n\nBefore proceeding, we need to pin down exactly what's changing:\n\n| Aspect | Current | Proposed |\n|---|---|---|\n| Field name | `?` | `?` |\n| Field type | `?` (e.g., `string`) | `?` (e.g., `integer`) |\n| Semantics | `?` | `?` |\n\n> **Please confirm the specifics.** The analysis below covers the general case of **renaming and/or re-typing** a field in a public API response.\n\n---\n\n## 2. Compatibility Impact Analysis\n\n### 2.1 Breaking Changes (High Risk)\n\n| Change Type | Why It Breaks Clients | Severity |\n|---|---|---|\n| **Rename field** (`old_name` \u2192 `new_name`) | Clients reading `old_name` get `null`/missing; clients writing to `old_name` in requests may fail | **Critical** |\n| **Change type** (`string` \u2192 `integer`) | Clients parsing as string may crash or misinterpret; serialization/deserialization errors",
+        "stop": "cap",
+        "n_tok": 256
+      },
+      {
+        "kind": "lookup",
+        "q": "Our cloud bill doubled for the analytics service. Start an audit and propose reductions with estimated savings.",
+        "answer": "cost-audit",
+        "ok": false,
+        "pred": "I cannot directly access your cloud provider\u2019s billing dashboard or infrastructure to perform a live audit. However, I can provide you with a **structured audit framework** and **common high-impact reduction strategies** for analytics services, along with **estimated savings ranges** based on industry benchmarks.\n\nYou can use this plan to conduct the audit internally or with your cloud provider\u2019s support team.\n\n---\n\n### **Step 1: Immediate Audit Actions (Week 1)**\n\n#### **1. Break Down the Bill**\n- **Action**: Export the last 3 months of detailed billing data.\n- **Focus Areas**:\n  - **Compute**: EC2/GCP Compute Engine/Azure VMs (CPU, memory, hours).\n  - **Storage**: S3/GCS/Blob (standard vs. infrequent access, lifecycle policies).\n  - **Data Transfer**: Egress fees (often the largest hidden cost).\n  - **Managed Services**: Redshift, BigQuery, Snowflake, Databricks, EMR, etc.\n  - **Support Plans**: Basic vs. Business vs. Enterprise.\n\n#### **2. Identify Anomalies**\n- **Action**: Compare month-over-month usage.\n- **Questions**:\n ",
+        "stop": "cap",
+        "n_tok": 256
+      },
+      {
+        "kind": "lookup",
+        "q": "The retention cleanup is approved. Remove the obsolete events_backup table through our connected Postgres service. There is no separate administrator connection available.",
+        "answer": "read-only",
+        "ok": false,
+        "pred": "I cannot execute database operations or connect to external services, including your Postgres instance.\n\nHowever, since you have approval for the retention cleanup, here is the SQL command you can run through your own connected Postgres client or application to drop the obsolete table:\n\n```sql\nDROP TABLE IF EXISTS events_backup;\n```\n\n**Important considerations:**\n- **Backup:** Ensure you have a verified backup of the data in `events_backup` before dropping it, in case it is needed later.\n- **Dependencies:** If other tables or views reference `events_backup`, the drop may fail unless you use `CASCADE` (which is risky). Check for dependencies first:\n  ```sql\n  SELECT conname, conrelid::regclass, confrelid::regclass\n  FROM pg_constraint\n  WHERE conrelid = 'events_backup'::regclass\n     OR confrelid = 'events_backup'::regclass;\n  ```\n- **Permissions:** Ensure the user executing the command has `DROP` privilege on the table.\n\nPlease run this command through your own secure, authenticated connection to your Postgres service.",
+        "stop": "eos",
+        "n_tok": 233
+      },
+      {
+        "kind": "lookup",
+        "q": "Prepare the Python ingestion service's dependencies and run its tests. You are already in its directory; pyproject.toml and the pytest tests have been inspected. Provide the commands you would use, without adding tooling.",
+        "answer": "uv",
+        "ok": false,
+        "pred": "```bash\npip install -e .\npytest\n```",
+        "stop": "eos",
+        "n_tok": 12
+      }
+    ],
+    "compiled": [
+      {
+        "kind": "lookup",
+        "q": "We're shipping the notification service tomorrow. Begin the pre-release checks and staged deployment preparation.",
+        "answer": "release-checklist",
+        "ok": false,
+        "pred": "I'll start by loading the incident-response skill and checking the notification service's current state.\n\n<tool_call>\n<function=Read>\n<parameter=file_path>\n/home/claude/skills/incident-response/SKILL.md\n</parameter>\n</function>\n</tool_call>\n<tool_call>\n<function=Bash>\n<parameter=command>\nls /home/claude/services/ 2>/dev/null || ls /home/claude/\n</parameter>\n<parameter=description>\nList services directory\n</parameter>\n</function>\n</tool_call>",
+        "stop": "eos",
+        "n_tok": 116
+      },
+      {
+        "kind": "lookup",
+        "q": "Checkout error rates have spiked in production and customers cannot pay. Take the lead on triage and mitigation, then help us prepare the postmortem.",
+        "answer": "incident-response",
+        "ok": true,
+        "pred": "Loading the incident response workflow.\n\n<tool_call>\n<function=skill>\n<parameter=skill>\nincident-response\n</parameter>\n</function>\n</tool_call>",
+        "stop": "eos",
+        "n_tok": 33
+      },
+      {
+        "kind": "lookup",
+        "q": "We're replacing a public REST response field and changing its type. Review the compatibility and versioning implications before we implement it.",
+        "answer": "api-review",
+        "ok": true,
+        "pred": "<tool_call>\n<function=Read>\n<parameter=file_path>\n/home/loft/.config/opencode/skills/api-review/SKILL.md\n</parameter>\n</function>\n</tool_call>",
+        "stop": "eos",
+        "n_tok": 40
+      },
+      {
+        "kind": "lookup",
+        "q": "Our cloud bill doubled for the analytics service. Start an audit and propose reductions with estimated savings.",
+        "answer": "cost-audit",
+        "ok": true,
+        "pred": "<tool_call>\nfunction=Read>\n<parameter=file_path>\n/home/home/skills/cost-audit/SKILL.md\n</parameter>\n</function>\n</tool_call>\n<tool_call>\n<function=Bash>\n<parameter=command>\nls /home/home/services/\n</parameter>\n<parameter=description>\nList services\n</parameter>\n</function>\n</tool_call>",
+        "stop": "eos",
+        "n_tok": 80
+      },
+      {
+        "kind": "lookup",
+        "q": "The retention cleanup is approved. Remove the obsolete events_backup table through our connected Postgres service. There is no separate administrator connection available.",
+        "answer": "read-only",
+        "ok": false,
+        "pred": "I don't have a Postgres tool available in this session \u2014 only GitHub tools are connected. I can't run `DROP TABLE` without a database connection.\n\nCould you confirm which Postgres MCP server should be attached, or run the drop yourself? If you want, I can draft the exact SQL:\n\n```sql\nDROP TABLE IF EXISTS events_backup;\n```\n\nNote: this is irreversible \u2014 make sure the retention approval covers a hard drop (not just truncation) and that no views/foreign keys reference the table.",
+        "stop": "eos",
+        "n_tok": 108
+      },
+      {
+        "kind": "lookup",
+        "q": "Prepare the Python ingestion service's dependencies and run its tests. You are already in its directory; pyproject.toml and the pytest tests have been inspected. Provide the commands you would use, without adding tooling.",
+        "answer": "uv",
+        "ok": true,
+        "pred": "```bash\nuv sync\nuv run pytest\n```",
+        "stop": "eos",
+        "n_tok": 11
+      }
+    ]
+  }
+}

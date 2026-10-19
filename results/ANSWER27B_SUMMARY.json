@@ -1,0 +1,1333 @@
+{
+  "complete": true,
+  "n": 194,
+  "elapsed_s": 708.3740537166595,
+  "arms": {
+    "teacher": {
+      "correct": 193,
+      "teacher_correct_n": 193,
+      "teacher_correct_failures": 0,
+      "exact_replays": 194,
+      "mean_question_nll": 0.05609553951755611,
+      "shared_prefix_failures": 0,
+      "divergence_rank_counts": {},
+      "failures_by_kind": {},
+      "failures": []
+    },
+    "original71": {
+      "correct": 168,
+      "teacher_correct_n": 193,
+      "teacher_correct_failures": 26,
+      "exact_replays": 145,
+      "mean_question_nll": 0.23151666786558048,
+      "shared_prefix_failures": 24,
+      "divergence_rank_counts": {
+        "2": 19,
+        "5": 3,
+        "7": 1,
+        "3": 2,
+        "6": 1
+      },
+      "failures_by_kind": {
+        "tool_select": 10,
+        "lookup": 16
+      },
+      "failures": [
+        {
+          "q": "Which tool should be used to do the following: Trigger GitHub Actions workflow operations, including running, re-running, cancelling workflow runs, and deleting workflow run logs.",
+          "answer": "actions_run_trigger",
+          "kind": "tool_select",
+          "teacher": "`mcp__github__actions_run_trigger`",
+          "candidate": "`mcp__github__actions_trigger`",
+          "first_divergence": 7,
+          "reference_token": [
+            "_run"
+          ],
+          "forced_at_divergence": {
+            "target": 13605,
+            "argmax": 31833,
+            "logp": -2.1519699096679688,
+            "rank": 2,
+            "margin": -1.90625
+          },
+          "later_reference_argmax": 2,
+          "later_n": 3,
+          "reference_nll": 0.5375499725341797,
+          "teacher_nll": 0.0186446796764027
+        },
+        {
+          "q": "Which tool should be used to do the following: Add a reaction to an issue or pull request.",
+          "answer": "add_issue_reaction",
+          "kind": "tool_select",
+          "teacher": "`mcp__github__add_issue_reaction`",
+          "candidate": "`mcp__github__add_issue_comment_reaction`",
+          "first_divergence": 8,
+          "reference_token": [
+            "_reaction"
+          ],
+          "forced_at_divergence": {
+            "target": 93293,
+            "argmax": 17112,
+            "logp": -2.4513072967529297,
+            "rank": 2,
+            "margin": -2.359375
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 0.2678605859929865,
+          "teacher_nll": 0.01605900851162997
+        },
+        {
+          "q": "Which tool should be used to do the following: Add a reaction to a pull request review comment.",
+          "answer": "add_pull_request_review_comment_reaction",
+          "kind": "tool_select",
+          "teacher": "`mcp__github__add_pull_request_review_comment_reaction`",
+          "candidate": "`mcp__github__add_issue_comment_reaction`",
+          "first_divergence": 7,
+          "reference_token": [
+            "_pull"
+          ],
+          "forced_at_divergence": {
+            "target": 63478,
+            "argmax": 51550,
+            "logp": -3.506380081176758,
+            "rank": 2,
+            "margin": -3.46875
+          },
+          "later_reference_argmax": 6,
+          "later_n": 6,
+          "reference_nll": 0.2724557604108538,
+          "teacher_nll": 0.013732092721121652
+        },
+        {
+          "q": "Which tool should be used to do the following: Get comments from a discussion",
+          "answer": "get_discussion_comments",
+          "kind": "tool_select",
+          "teacher": "`mcp__github__get_discussion_comments`",
+          "candidate": "`mcp__github__get_discussion`",
+          "first_divergence": 9,
+          "reference_token": [
+            "_comments"
+          ],
+          "forced_at_divergence": {
+            "target": 29370,
+            "argmax": 63,
+            "logp": -2.2387828826904297,
+            "rank": 2,
+            "margin": -2.046875
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 0.27308114369710285,
+          "teacher_nll": 0.009200414021809896
+        },
+        {
+          "q": "Which tool should be used to do the following: Get a global security advisory",
+          "answer": "get_global_security_advisory",
+          "kind": "tool_select",
+          "teacher": "`mcp__github__get_global_security_advisory`",
+          "candidate": "`mcp__github__get_global_security_advisor`",
+          "first_divergence": 10,
+          "reference_token": [
+            "vis"
+          ],
+          "forced_at_divergence": {
+            "target": 2595,
+            "argmax": 36756,
+            "logp": -2.872650146484375,
+            "rank": 5,
+            "margin": -1.4140625
+          },
+          "later_reference_argmax": 3,
+          "later_n": 3,
+          "reference_nll": 0.22745622907366073,
+          "teacher_nll": 0.016463279724121094
+        },
+        {
+          "q": "Which tool should be used to do the following: Get details about a specific git tag in a GitHub repository",
+          "answer": "get_tag",
+          "kind": "tool_select",
+          "teacher": "`mcp__github__get_tag`",
+          "candidate": "`mcp__github__get_commit` \u2014 pass the tag name as the `sha` parameter.",
+          "first_divergence": 7,
+          "reference_token": [
+            "_tag"
+          ],
+          "forced_at_divergence": {
+            "target": 9093,
+            "argmax": 35145,
+            "logp": -3.7775726318359375,
+            "rank": 5,
+            "margin": -3.390625
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 0.4993715286254883,
+          "teacher_nll": 0.01645526885986328
+        },
+        {
+          "q": "Which tool should be used to do the following: Read an issue's dependency relationships in a GitHub repository: the issues that block it (blocked_by) or the issues it blocks (blocking).",
+          "answer": "issue_dependency_read",
+          "kind": "tool_select",
+          "teacher": "`mcp__github__issue_dependency_read`",
+          "candidate": "`mcp__github__issue_read`",
+          "first_divergence": 7,
+          "reference_token": [
+            "_dependency"
+          ],
+          "forced_at_divergence": {
+            "target": 60285,
+            "argmax": 6241,
+            "logp": -6.581220626831055,
+            "rank": 2,
+            "margin": -6.578125
+          },
+          "later_reference_argmax": 3,
+          "later_n": 3,
+          "reference_nll": 0.6388346932151101,
+          "teacher_nll": 0.019040367820046165
+        },
+        {
+          "q": "Which tool should be used to do the following: Search for pull requests in GitHub repositories using issues search syntax already scoped to is:pr",
+          "answer": "search_pull_requests",
+          "kind": "tool_select",
+          "teacher": "`mcp__github__search_pull_requests`",
+          "candidate": "`mcp__github__search_pull_request`",
+          "first_divergence": 8,
+          "reference_token": [
+            "_requests"
+          ],
+          "forced_at_divergence": {
+            "target": 35985,
+            "argmax": 7644,
+            "logp": -2.8271961212158203,
+            "rank": 2,
+            "margin": -2.765625
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 0.2821334492076527,
+          "teacher_nll": 0.01921896501020952
+        },
+        {
+          "q": "Which tool should be used to do the following: Add a sub-issue to a parent issue in a GitHub repository.",
+          "answer": "sub_issue_write",
+          "kind": "tool_select",
+          "teacher": "`mcp__github__sub_issue_write`",
+          "candidate": "`mcp__github__add_sub_issue`",
+          "first_divergence": 6,
+          "reference_token": [
+            "sub"
+          ],
+          "forced_at_divergence": {
+            "target": 1899,
+            "argmax": 698,
+            "logp": -2.8141555786132812,
+            "rank": 2,
+            "margin": -2.71875
+          },
+          "later_reference_argmax": 4,
+          "later_n": 4,
+          "reference_nll": 0.34878314625133167,
+          "teacher_nll": 0.0951659462668679
+        },
+        {
+          "q": "Which tool should be used to do the following: Unresolve a previously resolved review thread on a pull request.",
+          "answer": "unresolve_review_thread",
+          "kind": "tool_select",
+          "teacher": "`mcp__github__unresolve_review_thread`",
+          "candidate": "`mcp__github__unhide_issue_comment`",
+          "first_divergence": 7,
+          "reference_token": [
+            "resolve"
+          ],
+          "forced_at_divergence": {
+            "target": 16815,
+            "argmax": 8297,
+            "logp": -1.2793769836425781,
+            "rank": 2,
+            "margin": -0.953125
+          },
+          "later_reference_argmax": 3,
+          "later_n": 4,
+          "reference_nll": 0.5968054135640463,
+          "teacher_nll": 0.019302845001220703
+        },
+        {
+          "q": "For the tool `actions_get`, which argument is described as: The unique identifier of the resource. This will vary based on the \"method\" provided, so ensure you provide the correct ID:",
+          "answer": "resource_id",
+          "kind": "lookup",
+          "teacher": "`resource_id`",
+          "candidate": "`resource`",
+          "first_divergence": 2,
+          "reference_token": [
+            "_id"
+          ],
+          "forced_at_divergence": {
+            "target": 816,
+            "argmax": 63,
+            "logp": -1.9002876281738281,
+            "rank": 2,
+            "margin": -1.734375
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 0.5519432067871094,
+          "teacher_nll": 0.090545654296875
+        },
+        {
+          "q": "For the tool `assign_copilot_to_issue`, which argument is described as: Git reference (e.g., branch) that the agent will start its work from. If not specified, defaults to the repository's default branch",
+          "answer": "base_ref",
+          "kind": "lookup",
+          "teacher": "`base_ref`",
+          "candidate": "`base_branch`",
+          "first_divergence": 2,
+          "reference_token": [
+            "_ref"
+          ],
+          "forced_at_divergence": {
+            "target": 7547,
+            "argmax": 27124,
+            "logp": -1.3436870574951172,
+            "rank": 2,
+            "margin": -0.984375
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 0.3936164855957031,
+          "teacher_nll": 0.059438323974609374
+        },
+        {
+          "q": "For the tool `assign_copilot_to_issue_with_intent`, which argument is described as: Git reference (e.g., branch) that the agent will start its work from. If not specified, defaults to the repository's default branch. Ignored when is_suggestion is true",
+          "answer": "base_ref",
+          "kind": "lookup",
+          "teacher": "`base_ref`",
+          "candidate": "`base_branch`",
+          "first_divergence": 2,
+          "reference_token": [
+            "_ref"
+          ],
+          "forced_at_divergence": {
+            "target": 7547,
+            "argmax": 27124,
+            "logp": -0.754852294921875,
+            "rank": 2,
+            "margin": -0.03125
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 0.2726287841796875,
+          "teacher_nll": 0.055997467041015624
+        },
+        {
+          "q": "For the tool `create_pull_request`, which argument is described as: Allow maintainer edits",
+          "answer": "maintainer_can_modify",
+          "kind": "lookup",
+          "teacher": "`maintainer_can_modify`",
+          "candidate": "`maintainer_can_edit`",
+          "first_divergence": 4,
+          "reference_token": [
+            "_modify"
+          ],
+          "forced_at_divergence": {
+            "target": 55790,
+            "argmax": 12774,
+            "logp": -0.8316135406494141,
+            "rank": 2,
+            "margin": -0.15625
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 0.2921194349016462,
+          "teacher_nll": 0.04111644199916294
+        },
+        {
+          "q": "For the tool `create_pull_request_review`, which argument is described as: The SHA of the commit to review (optional, defaults to latest)",
+          "answer": "commitID",
+          "kind": "lookup",
+          "teacher": "`commitID`",
+          "candidate": "`commit_title`",
+          "first_divergence": 2,
+          "reference_token": [
+            "ID"
+          ],
+          "forced_at_divergence": {
+            "target": 887,
+            "argmax": 5921,
+            "logp": -6.183919906616211,
+            "rank": 7,
+            "margin": -5.9921875
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 1.3092090606689453,
+          "teacher_nll": 0.06365089416503907
+        },
+        {
+          "q": "For the tool `create_pull_request_review`, which argument is described as: The pull request number",
+          "answer": "pullNumber",
+          "kind": "lookup",
+          "teacher": "`pullNumber`",
+          "candidate": "`pull_request_number`",
+          "first_divergence": 2,
+          "reference_token": [
+            "Number"
+          ],
+          "forced_at_divergence": {
+            "target": 2742,
+            "argmax": 7644,
+            "logp": -1.6190242767333984,
+            "rank": 2,
+            "margin": -1.140625
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 0.4133174896240234,
+          "teacher_nll": 0.04989471435546875
+        },
+        {
+          "q": "For the tool `find_duplicate`, which argument is described as: Minimum similarity threshold a candidate must meet to be returned; higher values are stricter. When omitted, the API's high-precision default is used. The scale is defined by the API, so no client-side bounds are enforced.",
+          "answer": "confidence_threshold",
+          "kind": "lookup",
+          "teacher": "`confidence_threshold`",
+          "candidate": "`similarity_threshold`",
+          "first_divergence": 1,
+          "reference_token": [
+            "confidence"
+          ],
+          "forced_at_divergence": {
+            "target": 79103,
+            "argmax": 14352,
+            "logp": -1.2064018249511719,
+            "rank": 2,
+            "margin": -0.640625
+          },
+          "later_reference_argmax": 3,
+          "later_n": 3,
+          "reference_nll": 0.4280551910400391,
+          "teacher_nll": 0.07908706665039063
+        },
+        {
+          "q": "For the tool `fork_repository`, which argument is described as: Organization to fork to",
+          "answer": "organization",
+          "kind": "lookup",
+          "teacher": "`organization`",
+          "candidate": "The argument is `org`.",
+          "first_divergence": 0,
+          "reference_token": [
+            "`"
+          ],
+          "forced_at_divergence": {
+            "target": 63,
+            "argmax": 760,
+            "logp": -0.8499259948730469,
+            "rank": 2,
+            "margin": -0.09375
+          },
+          "later_reference_argmax": 2,
+          "later_n": 3,
+          "reference_nll": 1.4756512641906738,
+          "teacher_nll": 0.1454024314880371
+        },
+        {
+          "q": "For the tool `get_global_security_advisory`, which argument is described as: GitHub Security Advisory ID (format: GHSA-xxxx-xxxx-xxxx).",
+          "answer": "ghsaId",
+          "kind": "lookup",
+          "teacher": "`ghsaId`",
+          "candidate": "`ghsa`",
+          "first_divergence": 3,
+          "reference_token": [
+            "Id"
+          ],
+          "forced_at_divergence": {
+            "target": 739,
+            "argmax": 63,
+            "logp": -4.972740173339844,
+            "rank": 3,
+            "margin": -4.625
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 0.9430586496988932,
+          "teacher_nll": 0.05348523457845052
+        },
+        {
+          "q": "For the tool `get_job_logs`, which argument is described as: When true, gets logs for all failed jobs in the workflow run specified by run_id. Requires run_id to be provided.",
+          "answer": "failed_only",
+          "kind": "lookup",
+          "teacher": "`failed_only`",
+          "candidate": "`failed_jobs`",
+          "first_divergence": 2,
+          "reference_token": [
+            "_only"
+          ],
+          "forced_at_divergence": {
+            "target": 17861,
+            "argmax": 36015,
+            "logp": -7.737924575805664,
+            "rank": 6,
+            "margin": -7.6953125
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 1.716094970703125,
+          "teacher_nll": 0.07515830993652343
+        },
+        {
+          "q": "For the tool `list_global_security_advisories`, which argument is described as: Filter advisories by affected package or version (e.g. \"package1,package2@1.0.0\").",
+          "answer": "affects",
+          "kind": "lookup",
+          "teacher": "`affects`",
+          "candidate": "`packages`",
+          "first_divergence": 1,
+          "reference_token": [
+            "a"
+          ],
+          "forced_at_divergence": {
+            "target": 64,
+            "argmax": 41718,
+            "logp": -4.611536026000977,
+            "rank": 5,
+            "margin": -3.953125
+          },
+          "later_reference_argmax": 3,
+          "later_n": 3,
+          "reference_nll": 1.0999813079833984,
+          "teacher_nll": 0.09699172973632812
+        },
+        {
+          "q": "For the tool `list_issues`, which argument is described as: Filter by custom issue field values. Each entry takes a field_name and a value; the server looks up the field and coerces the value to its type (single-select option name, text, number, or YYYY-MM-DD date).",
+          "answer": "field_filters",
+          "kind": "lookup",
+          "teacher": "`field_filters`",
+          "candidate": "`field_values`",
+          "first_divergence": 2,
+          "reference_token": [
+            "_filters"
+          ],
+          "forced_at_divergence": {
+            "target": 21782,
+            "argmax": 8873,
+            "logp": -4.462654113769531,
+            "rank": 2,
+            "margin": -4.4375
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 1.088021469116211,
+          "teacher_nll": 0.12099685668945312
+        },
+        {
+          "q": "For the tool `merge_pull_request`, which argument is described as: Extra detail for merge commit",
+          "answer": "commit_message",
+          "kind": "lookup",
+          "teacher": "`commit_message`",
+          "candidate": "`commit_title`",
+          "first_divergence": 2,
+          "reference_token": [
+            "_message"
+          ],
+          "forced_at_divergence": {
+            "target": 6260,
+            "argmax": 5921,
+            "logp": -6.643123626708984,
+            "rank": 2,
+            "margin": -6.640625
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 1.4676021575927733,
+          "teacher_nll": 0.06520729064941407
+        },
+        {
+          "q": "For the tool `projects_write`, which argument is described as: The field/value to apply, using {\"id\": 123, \"value\": ...} or {\"name\": \"Status\", \"value\": ...}; null clears the field. Required for 'update_project_item' and 'update_project_items', where one top-level field/value applies to every item in a batch. For 'update_project_item' SINGLE_SELECT fields, the name form accepts option names; the ID form expects an option ID.",
+          "answer": "updated_field",
+          "kind": "lookup",
+          "teacher": "`updated_field`",
+          "candidate": "The argument is `field_value`.",
+          "first_divergence": 0,
+          "reference_token": [
+            "`"
+          ],
+          "forced_at_divergence": {
+            "target": 63,
+            "argmax": 760,
+            "logp": -1.0572700500488281,
+            "rank": 2,
+            "margin": -0.484375
+          },
+          "later_reference_argmax": 3,
+          "later_n": 4,
+          "reference_nll": 0.5301094055175781,
+          "teacher_nll": 0.09245872497558594
+        },
+        {
+          "q": "For the tool `request_pull_request_reviewers`, which argument is described as: The pull request number",
+          "answer": "pullNumber",
+          "kind": "lookup",
+          "teacher": "`pullNumber`",
+          "candidate": "`pull_request_number`",
+          "first_divergence": 2,
+          "reference_token": [
+            "Number"
+          ],
+          "forced_at_divergence": {
+            "target": 2742,
+            "argmax": 7644,
+            "logp": -5.509700775146484,
+            "rank": 3,
+            "margin": -5.421875
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 1.2225109100341798,
+          "teacher_nll": 0.06413345336914063
+        },
+        {
+          "q": "For the tool `update_pull_request_draft_state`, which argument is described as: The pull request number",
+          "answer": "pullNumber",
+          "kind": "lookup",
+          "teacher": "`pullNumber`",
+          "candidate": "`pull_request_number`",
+          "first_divergence": 2,
+          "reference_token": [
+            "Number"
+          ],
+          "forced_at_divergence": {
+            "target": 2742,
+            "argmax": 7644,
+            "logp": -1.3670787811279297,
+            "rank": 2,
+            "margin": -0.65625
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 0.4104335784912109,
+          "teacher_nll": 0.05022926330566406
+        }
+      ]
+    },
+    "coverage476": {
+      "correct": 179,
+      "teacher_correct_n": 193,
+      "teacher_correct_failures": 14,
+      "exact_replays": 163,
+      "mean_question_nll": 0.16491704406115754,
+      "shared_prefix_failures": 13,
+      "divergence_rank_counts": {
+        "2": 11,
+        "3": 1,
+        "5": 1,
+        "6": 1
+      },
+      "failures_by_kind": {
+        "tool_select": 4,
+        "lookup": 10
+      },
+      "failures": [
+        {
+          "q": "Which tool should be used to do the following: Trigger GitHub Actions workflow operations, including running, re-running, cancelling workflow runs, and deleting workflow run logs.",
+          "answer": "actions_run_trigger",
+          "kind": "tool_select",
+          "teacher": "`mcp__github__actions_run_trigger`",
+          "candidate": "`mcp__github__actions_trigger`",
+          "first_divergence": 7,
+          "reference_token": [
+            "_run"
+          ],
+          "forced_at_divergence": {
+            "target": 13605,
+            "argmax": 31833,
+            "logp": -1.0719623565673828,
+            "rank": 2,
+            "margin": -0.640625
+          },
+          "later_reference_argmax": 3,
+          "later_n": 3,
+          "reference_nll": 0.12501196427778763,
+          "teacher_nll": 0.0186446796764027
+        },
+        {
+          "q": "Which tool should be used to do the following: Add a comment and/or reaction to a specific issue or issue comment in a GitHub repository.",
+          "answer": "add_issue_comment",
+          "kind": "tool_select",
+          "teacher": "`mcp__github__add_issue_comment`",
+          "candidate": "`mcp__github__add_comment_to_issue`",
+          "first_divergence": 7,
+          "reference_token": [
+            "_issue"
+          ],
+          "forced_at_divergence": {
+            "target": 51550,
+            "argmax": 17112,
+            "logp": -0.8088779449462891,
+            "rank": 2,
+            "margin": -0.21875
+          },
+          "later_reference_argmax": 3,
+          "later_n": 3,
+          "reference_nll": 0.10692076249556108,
+          "teacher_nll": 0.03690164739435369
+        },
+        {
+          "q": "Which tool should be used to do the following: Get comments from a discussion",
+          "answer": "get_discussion_comments",
+          "kind": "tool_select",
+          "teacher": "`mcp__github__get_discussion_comments`",
+          "candidate": "`mcp__github__get_discussion_comment`",
+          "first_divergence": 9,
+          "reference_token": [
+            "_comments"
+          ],
+          "forced_at_divergence": {
+            "target": 29370,
+            "argmax": 17112,
+            "logp": -2.1347732543945312,
+            "rank": 2,
+            "margin": -1.984375
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 0.20111989974975586,
+          "teacher_nll": 0.009200414021809896
+        },
+        {
+          "q": "Which tool should be used to do the following: Get details of the teams the user is a member of.",
+          "answer": "get_teams",
+          "kind": "tool_select",
+          "teacher": "`mcp__github__get_teams`",
+          "candidate": "`mcp__github__get_teams_members`",
+          "first_divergence": 8,
+          "reference_token": [
+            "`"
+          ],
+          "forced_at_divergence": {
+            "target": 63,
+            "argmax": 29407,
+            "logp": -3.1091995239257812,
+            "rank": 2,
+            "margin": -3.0625
+          },
+          "later_reference_argmax": 1,
+          "later_n": 1,
+          "reference_nll": 0.3697723388671875,
+          "teacher_nll": 0.01057281494140625
+        },
+        {
+          "q": "For the tool `actions_run_trigger`, which argument is described as: The workflow ID (numeric) or workflow file name (e.g., main.yml, ci.yaml). Required for 'run_workflow' method.",
+          "answer": "workflow_id",
+          "kind": "lookup",
+          "teacher": "`workflow_id`",
+          "candidate": "`run_id`",
+          "first_divergence": 1,
+          "reference_token": [
+            "workflow"
+          ],
+          "forced_at_divergence": {
+            "target": 54359,
+            "argmax": 5917,
+            "logp": -2.832080841064453,
+            "rank": 2,
+            "margin": -2.765625
+          },
+          "later_reference_argmax": 3,
+          "later_n": 3,
+          "reference_nll": 0.698333740234375,
+          "teacher_nll": 0.06265373229980468
+        },
+        {
+          "q": "For the tool `assign_copilot_to_issue`, which argument is described as: Git reference (e.g., branch) that the agent will start its work from. If not specified, defaults to the repository's default branch",
+          "answer": "base_ref",
+          "kind": "lookup",
+          "teacher": "`base_ref`",
+          "candidate": "`base_branch`",
+          "first_divergence": 2,
+          "reference_token": [
+            "_ref"
+          ],
+          "forced_at_divergence": {
+            "target": 7547,
+            "argmax": 27124,
+            "logp": -1.8920211791992188,
+            "rank": 2,
+            "margin": -1.703125
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 0.5004177093505859,
+          "teacher_nll": 0.059438323974609374
+        },
+        {
+          "q": "For the tool `assign_copilot_to_issue_with_intent`, which argument is described as: Git reference (e.g., branch) that the agent will start its work from. If not specified, defaults to the repository's default branch. Ignored when is_suggestion is true",
+          "answer": "base_ref",
+          "kind": "lookup",
+          "teacher": "`base_ref`",
+          "candidate": "`base_branch`",
+          "first_divergence": 2,
+          "reference_token": [
+            "_ref"
+          ],
+          "forced_at_divergence": {
+            "target": 7547,
+            "argmax": 27124,
+            "logp": -1.0862808227539062,
+            "rank": 2,
+            "margin": -0.640625
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 0.33516082763671873,
+          "teacher_nll": 0.055997467041015624
+        },
+        {
+          "q": "For the tool `create_pull_request_review`, which argument is described as: The SHA of the commit to review (optional, defaults to latest)",
+          "answer": "commitID",
+          "kind": "lookup",
+          "teacher": "`commitID`",
+          "candidate": "`commitTitle`",
+          "first_divergence": 2,
+          "reference_token": [
+            "ID"
+          ],
+          "forced_at_divergence": {
+            "target": 887,
+            "argmax": 3723,
+            "logp": -2.3675575256347656,
+            "rank": 3,
+            "margin": -1.859375
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 0.5531623840332032,
+          "teacher_nll": 0.06365089416503907
+        },
+        {
+          "q": "For the tool `fork_repository`, which argument is described as: Organization to fork to",
+          "answer": "organization",
+          "kind": "lookup",
+          "teacher": "`organization`",
+          "candidate": "The argument is `org`.",
+          "first_divergence": 0,
+          "reference_token": [
+            "`"
+          ],
+          "forced_at_divergence": {
+            "target": 63,
+            "argmax": 760,
+            "logp": -0.8392562866210938,
+            "rank": 2,
+            "margin": -0.1875
+          },
+          "later_reference_argmax": 2,
+          "later_n": 3,
+          "reference_nll": 1.05891752243042,
+          "teacher_nll": 0.1454024314880371
+        },
+        {
+          "q": "For the tool `get_job_logs`, which argument is described as: When true, gets logs for all failed jobs in the workflow run specified by run_id. Requires run_id to be provided.",
+          "answer": "failed_only",
+          "kind": "lookup",
+          "teacher": "`failed_only`",
+          "candidate": "`failed_jobs`",
+          "first_divergence": 2,
+          "reference_token": [
+            "_only"
+          ],
+          "forced_at_divergence": {
+            "target": 17861,
+            "argmax": 36015,
+            "logp": -4.818906784057617,
+            "rank": 5,
+            "margin": -4.65625
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 1.1344917297363282,
+          "teacher_nll": 0.07515830993652343
+        },
+        {
+          "q": "For the tool `label_write`, which argument is described as: New name for the label (used only with 'update' method to rename)",
+          "answer": "new_name",
+          "kind": "lookup",
+          "teacher": "`new_name`",
+          "candidate": "`name`",
+          "first_divergence": 1,
+          "reference_token": [
+            "new"
+          ],
+          "forced_at_divergence": {
+            "target": 902,
+            "argmax": 591,
+            "logp": -1.4141273498535156,
+            "rank": 2,
+            "margin": -1.109375
+          },
+          "later_reference_argmax": 3,
+          "later_n": 3,
+          "reference_nll": 0.4674079895019531,
+          "teacher_nll": 0.0500732421875
+        },
+        {
+          "q": "For the tool `list_global_security_advisories`, which argument is described as: Filter advisories by affected package or version (e.g. \"package1,package2@1.0.0\").",
+          "answer": "affects",
+          "kind": "lookup",
+          "teacher": "`affects`",
+          "candidate": "`cwe`",
+          "first_divergence": 1,
+          "reference_token": [
+            "a"
+          ],
+          "forced_at_divergence": {
+            "target": 64,
+            "argmax": 66,
+            "logp": -3.279541015625,
+            "rank": 6,
+            "margin": -2.046875
+          },
+          "later_reference_argmax": 3,
+          "later_n": 3,
+          "reference_nll": 0.8478649139404297,
+          "teacher_nll": 0.09699172973632812
+        },
+        {
+          "q": "For the tool `list_issues`, which argument is described as: Filter by custom issue field values. Each entry takes a field_name and a value; the server looks up the field and coerces the value to its type (single-select option name, text, number, or YYYY-MM-DD date).",
+          "answer": "field_filters",
+          "kind": "lookup",
+          "teacher": "`field_filters`",
+          "candidate": "`field_values`",
+          "first_divergence": 2,
+          "reference_token": [
+            "_filters"
+          ],
+          "forced_at_divergence": {
+            "target": 21782,
+            "argmax": 8873,
+            "logp": -3.487710952758789,
+            "rank": 2,
+            "margin": -3.4375
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 0.9029487609863281,
+          "teacher_nll": 0.12099685668945312
+        },
+        {
+          "q": "For the tool `merge_pull_request`, which argument is described as: Extra detail for merge commit",
+          "answer": "commit_message",
+          "kind": "lookup",
+          "teacher": "`commit_message`",
+          "candidate": "`commit_title`",
+          "first_divergence": 2,
+          "reference_token": [
+            "_message"
+          ],
+          "forced_at_divergence": {
+            "target": 6260,
+            "argmax": 5921,
+            "logp": -3.7824878692626953,
+            "rank": 2,
+            "margin": -3.75
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 0.8990116119384766,
+          "teacher_nll": 0.06520729064941407
+        }
+      ]
+    },
+    "bindings780": {
+      "correct": 176,
+      "teacher_correct_n": 193,
+      "teacher_correct_failures": 17,
+      "exact_replays": 152,
+      "mean_question_nll": 0.17249723155384042,
+      "shared_prefix_failures": 13,
+      "divergence_rank_counts": {
+        "2": 14,
+        "3": 1,
+        "6": 1,
+        "5": 1
+      },
+      "failures_by_kind": {
+        "tool_select": 4,
+        "lookup": 13
+      },
+      "failures": [
+        {
+          "q": "Which tool should be used to do the following: Trigger GitHub Actions workflow operations, including running, re-running, cancelling workflow runs, and deleting workflow run logs.",
+          "answer": "actions_run_trigger",
+          "kind": "tool_select",
+          "teacher": "`mcp__github__actions_run_trigger`",
+          "candidate": "`mcp__github__actions_trigger`",
+          "first_divergence": 7,
+          "reference_token": [
+            "_run"
+          ],
+          "forced_at_divergence": {
+            "target": 13605,
+            "argmax": 31833,
+            "logp": -1.774169921875,
+            "rank": 2,
+            "margin": -1.578125
+          },
+          "later_reference_argmax": 3,
+          "later_n": 3,
+          "reference_nll": 0.20813421769575638,
+          "teacher_nll": 0.0186446796764027
+        },
+        {
+          "q": "Which tool should be used to do the following: Get comments from a discussion",
+          "answer": "get_discussion_comments",
+          "kind": "tool_select",
+          "teacher": "`mcp__github__get_discussion_comments`",
+          "candidate": "`mcp__github__get_discussion_comment`",
+          "first_divergence": 9,
+          "reference_token": [
+            "_comments"
+          ],
+          "forced_at_divergence": {
+            "target": 29370,
+            "argmax": 17112,
+            "logp": -2.0013370513916016,
+            "rank": 2,
+            "margin": -1.828125
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 0.1917862892150879,
+          "teacher_nll": 0.009200414021809896
+        },
+        {
+          "q": "Which tool should be used to do the following: Get a global security advisory",
+          "answer": "get_global_security_advisory",
+          "kind": "tool_select",
+          "teacher": "`mcp__github__get_global_security_advisory`",
+          "candidate": "`mcp__github__get_global_security_advisor`",
+          "first_divergence": 10,
+          "reference_token": [
+            "vis"
+          ],
+          "forced_at_divergence": {
+            "target": 2595,
+            "argmax": 36756,
+            "logp": -2.049114227294922,
+            "rank": 2,
+            "margin": -0.7890625
+          },
+          "later_reference_argmax": 3,
+          "later_n": 3,
+          "reference_nll": 0.17064339773995535,
+          "teacher_nll": 0.016463279724121094
+        },
+        {
+          "q": "Which tool should be used to do the following: Remove a reaction from an issue or pull request comment.",
+          "answer": "remove_issue_comment_reaction",
+          "kind": "tool_select",
+          "teacher": "`mcp__github__remove_issue_comment_reaction`",
+          "candidate": "`mcp__github__remove_pull_request_review_comment_reaction`",
+          "first_divergence": 7,
+          "reference_token": [
+            "_issue"
+          ],
+          "forced_at_divergence": {
+            "target": 51550,
+            "argmax": 63478,
+            "logp": -1.4225521087646484,
+            "rank": 2,
+            "margin": -1.140625
+          },
+          "later_reference_argmax": 4,
+          "later_n": 4,
+          "reference_nll": 0.1432785987854004,
+          "teacher_nll": 0.015570640563964844
+        },
+        {
+          "q": "For the tool `actions_get`, which argument is described as: The unique identifier of the resource. This will vary based on the \"method\" provided, so ensure you provide the correct ID:",
+          "answer": "resource_id",
+          "kind": "lookup",
+          "teacher": "`resource_id`",
+          "candidate": "The argument is `resource`.",
+          "first_divergence": 0,
+          "reference_token": [
+            "`"
+          ],
+          "forced_at_divergence": {
+            "target": 63,
+            "argmax": 760,
+            "logp": -0.9884681701660156,
+            "rank": 2,
+            "margin": -0.328125
+          },
+          "later_reference_argmax": 3,
+          "later_n": 4,
+          "reference_nll": 1.026565933227539,
+          "teacher_nll": 0.090545654296875
+        },
+        {
+          "q": "For the tool `assign_copilot_to_issue`, which argument is described as: Git reference (e.g., branch) that the agent will start its work from. If not specified, defaults to the repository's default branch",
+          "answer": "base_ref",
+          "kind": "lookup",
+          "teacher": "`base_ref`",
+          "candidate": "`base_branch`",
+          "first_divergence": 2,
+          "reference_token": [
+            "_ref"
+          ],
+          "forced_at_divergence": {
+            "target": 7547,
+            "argmax": 27124,
+            "logp": -1.421255111694336,
+            "rank": 2,
+            "margin": -1.078125
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 0.41915435791015626,
+          "teacher_nll": 0.059438323974609374
+        },
+        {
+          "q": "For the tool `assign_copilot_to_issue_with_intent`, which argument is described as: Git reference (e.g., branch) that the agent will start its work from. If not specified, defaults to the repository's default branch. Ignored when is_suggestion is true",
+          "answer": "base_ref",
+          "kind": "lookup",
+          "teacher": "`base_ref`",
+          "candidate": "`base_branch`",
+          "first_divergence": 2,
+          "reference_token": [
+            "_ref"
+          ],
+          "forced_at_divergence": {
+            "target": 7547,
+            "argmax": 27124,
+            "logp": -0.7324504852294922,
+            "rank": 2,
+            "margin": -0.03125
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 0.2787761688232422,
+          "teacher_nll": 0.055997467041015624
+        },
+        {
+          "q": "For the tool `create_pull_request`, which argument is described as: Allow maintainer edits",
+          "answer": "maintainer_can_modify",
+          "kind": "lookup",
+          "teacher": "`maintainer_can_modify`",
+          "candidate": "`maintainer_modify`",
+          "first_divergence": 3,
+          "reference_token": [
+            "_can"
+          ],
+          "forced_at_divergence": {
+            "target": 26534,
+            "argmax": 55790,
+            "logp": -1.2904834747314453,
+            "rank": 2,
+            "margin": -0.671875
+          },
+          "later_reference_argmax": 3,
+          "later_n": 3,
+          "reference_nll": 0.24360929216657365,
+          "teacher_nll": 0.04111644199916294
+        },
+        {
+          "q": "For the tool `create_pull_request_review`, which argument is described as: The SHA of the commit to review (optional, defaults to latest)",
+          "answer": "commitID",
+          "kind": "lookup",
+          "teacher": "`commitID`",
+          "candidate": "`commitSHA`",
+          "first_divergence": 2,
+          "reference_token": [
+            "ID"
+          ],
+          "forced_at_divergence": {
+            "target": 887,
+            "argmax": 32045,
+            "logp": -1.3832969665527344,
+            "rank": 2,
+            "margin": -0.125
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 0.3890331268310547,
+          "teacher_nll": 0.06365089416503907
+        },
+        {
+          "q": "For the tool `fork_repository`, which argument is described as: Organization to fork to",
+          "answer": "organization",
+          "kind": "lookup",
+          "teacher": "`organization`",
+          "candidate": "The argument is `org`.",
+          "first_divergence": 0,
+          "reference_token": [
+            "`"
+          ],
+          "forced_at_divergence": {
+            "target": 63,
+            "argmax": 760,
+            "logp": -0.9541740417480469,
+            "rank": 2,
+            "margin": -0.390625
+          },
+          "later_reference_argmax": 2,
+          "later_n": 3,
+          "reference_nll": 1.8366270065307617,
+          "teacher_nll": 0.1454024314880371
+        },
+        {
+          "q": "For the tool `get_global_security_advisory`, which argument is described as: GitHub Security Advisory ID (format: GHSA-xxxx-xxxx-xxxx).",
+          "answer": "ghsaId",
+          "kind": "lookup",
+          "teacher": "`ghsaId`",
+          "candidate": "`ghsa`",
+          "first_divergence": 3,
+          "reference_token": [
+            "Id"
+          ],
+          "forced_at_divergence": {
+            "target": 739,
+            "argmax": 63,
+            "logp": -3.5275135040283203,
+            "rank": 3,
+            "margin": -3.109375
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 0.7213163375854492,
+          "teacher_nll": 0.05348523457845052
+        },
+        {
+          "q": "For the tool `get_job_logs`, which argument is described as: When true, gets logs for all failed jobs in the workflow run specified by run_id. Requires run_id to be provided.",
+          "answer": "failed_only",
+          "kind": "lookup",
+          "teacher": "`failed_only`",
+          "candidate": "`failed_jobs`",
+          "first_divergence": 2,
+          "reference_token": [
+            "_only"
+          ],
+          "forced_at_divergence": {
+            "target": 17861,
+            "argmax": 36015,
+            "logp": -5.097043991088867,
+            "rank": 6,
+            "margin": -4.9765625
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 1.129511260986328,
+          "teacher_nll": 0.07515830993652343
+        },
+        {
+          "q": "For the tool `list_code_scanning_alerts`, which argument is described as: The name of the tool used for code scanning.",
+          "answer": "tool_name",
+          "kind": "lookup",
+          "teacher": "`tool_name`",
+          "candidate": "`tool`",
+          "first_divergence": 2,
+          "reference_token": [
+            "_name"
+          ],
+          "forced_at_divergence": {
+            "target": 1224,
+            "argmax": 63,
+            "logp": -0.7629222869873047,
+            "rank": 2,
+            "margin": -0.125
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 0.2891689300537109,
+          "teacher_nll": 0.07520027160644531
+        },
+        {
+          "q": "For the tool `list_global_security_advisories`, which argument is described as: Filter advisories by affected package or version (e.g. \"package1,package2@1.0.0\").",
+          "answer": "affects",
+          "kind": "lookup",
+          "teacher": "`affects`",
+          "candidate": "The argument is `ecosystem`.",
+          "first_divergence": 0,
+          "reference_token": [
+            "`"
+          ],
+          "forced_at_divergence": {
+            "target": 63,
+            "argmax": 760,
+            "logp": -1.04400634765625,
+            "rank": 2,
+            "margin": -0.53125
+          },
+          "later_reference_argmax": 3,
+          "later_n": 4,
+          "reference_nll": 1.3968345642089843,
+          "teacher_nll": 0.09699172973632812
+        },
+        {
+          "q": "For the tool `list_issues`, which argument is described as: Filter by custom issue field values. Each entry takes a field_name and a value; the server looks up the field and coerces the value to its type (single-select option name, text, number, or YYYY-MM-DD date).",
+          "answer": "field_filters",
+          "kind": "lookup",
+          "teacher": "`field_filters`",
+          "candidate": "The argument is `field_values`.",
+          "first_divergence": 0,
+          "reference_token": [
+            "`"
+          ],
+          "forced_at_divergence": {
+            "target": 63,
+            "argmax": 760,
+            "logp": -0.7964458465576172,
+            "rank": 2,
+            "margin": -0.015625
+          },
+          "later_reference_argmax": 3,
+          "later_n": 4,
+          "reference_nll": 1.2103107452392579,
+          "teacher_nll": 0.12099685668945312
+        },
+        {
+          "q": "For the tool `merge_pull_request`, which argument is described as: Extra detail for merge commit",
+          "answer": "commit_message",
+          "kind": "lookup",
+          "teacher": "`commit_message`",
+          "candidate": "`commit_title`",
+          "first_divergence": 2,
+          "reference_token": [
+            "_message"
+          ],
+          "forced_at_divergence": {
+            "target": 6260,
+            "argmax": 5921,
+            "logp": -3.233715057373047,
+            "rank": 2,
+            "margin": -3.1875
+          },
+          "later_reference_argmax": 2,
+          "later_n": 2,
+          "reference_nll": 0.7613677978515625,
+          "teacher_nll": 0.06520729064941407
+        },
+        {
+          "q": "For the tool `update_pull_request`, which argument is described as: Allow maintainer edits",
+          "answer": "maintainer_can_modify",
+          "kind": "lookup",
+          "teacher": "`maintainer_can_modify`",
+          "candidate": "`maintainer_allow_modify`",
+          "first_divergence": 3,
+          "reference_token": [
+            "_can"
+          ],
+          "forced_at_divergence": {
+            "target": 26534,
+            "argmax": 53861,
+            "logp": -4.028728485107422,
+            "rank": 5,
+            "margin": -3.71875
+          },
+          "later_reference_argmax": 3,
+          "later_n": 3,
+          "reference_nll": 0.633000237601144,
+          "teacher_nll": 0.03716768537248884
+        }
+      ]
+    }
+  }
+}

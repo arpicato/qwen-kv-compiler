@@ -1,0 +1,1659 @@
+{
+  "complete": true,
+  "raw_sha256": "91be08f154662278d32185c31da205dada73230d6a0a0af03b6ead6e03cb1714",
+  "reviewer": "Authoring assistant manual inspection of all160responses, unblinded; not independent human adjudication",
+  "arms": {
+    "full": [
+      {
+        "id": "natural-count-zero",
+        "family": "numeric",
+        "pred_sha256": "1774892b647348c766ad934969aaa6eee6c4b518561ab7985984dfb27a652726",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-retry-limit",
+        "family": "numeric",
+        "pred_sha256": "e74b203e198ae3b20761131c641d2355b19dbad2e6edc0b0ad5eb5d8d64acaf5",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-batch-multiple",
+        "family": "numeric",
+        "pred_sha256": "40fc210dbf361e6102861bcec61166c572bfc26cba29343af338399fa77f44dd",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-integer-bool",
+        "family": "numeric",
+        "pred_sha256": "a4f72cb8fb31eed65b2bc4fb7e63fc19837a01322a34f357b3afdd5fe507f60a",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-finite-number",
+        "family": "numeric",
+        "pred_sha256": "19601aa703edab2458a069c1c190add04740e81a2d79adaf613f7f17d08c7fdf",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-name-empty",
+        "family": "text",
+        "pred_sha256": "b546dd08917e3cf0e35ba8cad5994cd90120815d41e9c82a3e022137f4d74c8b",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-unicode-space",
+        "family": "text",
+        "pred_sha256": "1e9a337d8db5efa7355eb3064f684dca542ff444b46dda151d0dcfa8e3966715",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-ascii-digits",
+        "family": "text",
+        "pred_sha256": "119623f6cf3bef7b2c2a20275b9a26a1734a6c5c774f05e3a013d91fd7adf76a",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-case-sensitive-prefix",
+        "family": "text",
+        "pred_sha256": "0b41ed09de98d0f188a96cc7bc7688ea591e2cc66c3669030f8b662c07551135",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-control-chars",
+        "family": "text",
+        "pred_sha256": "aa5fd0e719330d5d002797683df6bb24ead15d3a94ab379f0a875898f6c84e9b",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-relative-path",
+        "family": "path",
+        "pred_sha256": "fbb980e0e752a226d536f013b83a940d0ed539074882e419a2ccc8799d06ba36",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-file-extension",
+        "family": "path",
+        "pred_sha256": "5ce3aa98c2303934cba24ec6a3c73eace7446cad382c6549b0d0108e56428050",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-hidden-component",
+        "family": "path",
+        "pred_sha256": "56a897bd18584ca5f074b8693159a8f0096db625245a3c6176c172e64a0443c2",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-empty-segment",
+        "family": "path",
+        "pred_sha256": "926eea5e3713a3e274e134927ccf2f900eb25c11c79a6d92023c18fc25b52564",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-backslash",
+        "family": "path",
+        "pred_sha256": "d4ccfe94b5f3c2744f34071689fb48dfcb9e3ec353cebf431e7b8acafbffb32a",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-unique-items",
+        "family": "collection",
+        "pred_sha256": "bce3647ae6f1dafcfda1da29b0308ee235a79e566563fefa0007309667d0fca3",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-all-positive",
+        "family": "collection",
+        "pred_sha256": "7bbabd82b51f0fe12519ac71487791a1dcb11d0f1ce9a1bcce4d864e78817b78",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-sorted-input",
+        "family": "collection",
+        "pred_sha256": "e112124a6683a2d0a84a028e7ee2c7f10b23788aa74afa6806ca6551fefd612b",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-maximum-items",
+        "family": "collection",
+        "pred_sha256": "6153e5e4d939db47acf0c92b3687c8fbf55e62562f924d830448f6a23c97441f",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-pair-width",
+        "family": "collection",
+        "pred_sha256": "e11af6b90cef667c4ea3d4865c24b9cdaecb44488146f15ac04c1cdad3e043fd",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-required-keys",
+        "family": "mapping",
+        "pred_sha256": "da81c5f9a6a8cdadd86cbb46e8ec542de25f08665b4cb2ed5b4298347182db3b",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-unknown-keys",
+        "family": "mapping",
+        "pred_sha256": "ba76c978832f457eb9abee28241ae0b405bc14d46fdd13295794ffbf87393712",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-duplicate-values",
+        "family": "mapping",
+        "pred_sha256": "9bb5f0f9e36f22bd3cea64d4e0fc3c929140d3115dc0dff850ddd7d549b0865a",
+        "structure_pass": true,
+        "functional_pass": false,
+        "both": false,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": [
+          "Iterates dict keys as (name,destination) pairs rather than aliases.items()/values(); valid mappings fail. Structure and functionality are separate."
+        ]
+      },
+      {
+        "id": "natural-exclusive-options",
+        "family": "mapping",
+        "pred_sha256": "0d83bac1357711680f204ebe2b919fbb10212dfba162ba9f3c659a19fde6bd05",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": [
+          "Uses value-is-not-None rather than key presence; supplied boundaries cover empty cursor/zero offset but not present None."
+        ]
+      },
+      {
+        "id": "natural-nested-config",
+        "family": "mapping",
+        "pred_sha256": "cbc4f294f2a4ffe8e6d14ecf4d475422dd0ed404088bf5725fdd1441d33680a3",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": [
+          "Adds worker-type/nonnegative restrictions beyond the requested mapping/key shape. Finite acceptance fixtures do not cover all originally accepted worker values."
+        ]
+      },
+      {
+        "id": "natural-interval",
+        "family": "compound",
+        "pred_sha256": "56145678fa1ba23f544a61d5caf19446a74336a0080b6dd743feadb90649405f",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-page-size",
+        "family": "compound",
+        "pred_sha256": "76b1b69955737f4a5cc89656d39802e04748c250e9903506cc3cca1695074a9b",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-offset-alignment",
+        "family": "compound",
+        "pred_sha256": "d74254b6d4d4959f10655566e95069e2e4a74c8dc8f7d997a4945aac39af752b",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-dimensions",
+        "family": "compound",
+        "pred_sha256": "5ac5a06dc2c75838e811aafb1471ae44a0846e447caad570d6b8e15d840c46d0",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-bounded-window",
+        "family": "compound",
+        "pred_sha256": "0c14ae1005612f7252e6a05baa7e5c4fc1a1b1d9b955c699c1f4420dbf53faee",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-date-validity",
+        "family": "stdlib",
+        "pred_sha256": "c0eca70c1041b7d0eddebe5921149e4ae147b8b29d5f86bd425eed5138e2c493",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-ipv4",
+        "family": "stdlib",
+        "pred_sha256": "0f616d44d54fc4af1779025faade30f69d486467005d92b9c012b5a55e4edd11",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-json-object",
+        "family": "stdlib",
+        "pred_sha256": "5d6a7db756848739e24db6afd15f0e7528988a5fd120fbb501b9aee7124b1432",
+        "structure_pass": false,
+        "functional_pass": false,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": [
+          "Parses JSON but changes return contracts to decoded object/decoded length, violating supplied unchanged-return requirement."
+        ]
+      },
+      {
+        "id": "natural-hex-bytes",
+        "family": "stdlib",
+        "pred_sha256": "4bceb0269c9b254614f0a2d6a15b39a6b673820785f94ac9b6bdb5187e392cfe",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": [
+          "Regex $ anchoring can accept a final newline; finite fixtures omit that boundary. Functional pass is not a full correctness certificate."
+        ]
+      },
+      {
+        "id": "natural-utf8-length",
+        "family": "stdlib",
+        "pred_sha256": "1139f50e05f201f96af34dcbfb085b94bb9e63f4500a1d66e0e6690c7866886e",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-reserved-names",
+        "family": "protocol",
+        "pred_sha256": "6db1cc1ff6fa90f6dee0e2a0d29dcfdcf1b0e3a7ea095762dc6f912371cbc0d5",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-newline-header",
+        "family": "protocol",
+        "pred_sha256": "44f3859aaed6e6de86e54a798477e6ad9a5479fdfbc7920198fbfde0e5f3474f",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-delimiter",
+        "family": "protocol",
+        "pred_sha256": "fc9a504839d32b00e25e5b849a4dfb7ba4cc205dd8828cf6b6c857d54efb403b",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-version-parts",
+        "family": "protocol",
+        "pred_sha256": "12a3f51f5ff3455208591320356703736b98b3b038509cd0dd92cefd72c073a6",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-token-alphabet",
+        "family": "protocol",
+        "pred_sha256": "e7f5b80f45a11e73f15642f1dd40018602ce3f22fdaa64f0b0753f9221f8bac9",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": [
+          "Regex $ anchoring can accept a final newline; finite fixtures omit that boundary. Do not treat finite pass as proof of exact alphabet enforcement."
+        ]
+      }
+    ],
+    "none": [
+      {
+        "id": "natural-count-zero",
+        "family": "numeric",
+        "pred_sha256": "9ace810b4d1641ff3ac19435028a413eb3ad032bebf62b0312c21553351bfdc1",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-retry-limit",
+        "family": "numeric",
+        "pred_sha256": "1528eeb6c99294ef1771886be6be920656c0ac6e80cd1a4f819561735ecd5366",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-batch-multiple",
+        "family": "numeric",
+        "pred_sha256": "67044a07fc9712cdca0f7ba72f8cf92431613aea2391d4f73fbf87597626c2fd",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-integer-bool",
+        "family": "numeric",
+        "pred_sha256": "a4f72cb8fb31eed65b2bc4fb7e63fc19837a01322a34f357b3afdd5fe507f60a",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-finite-number",
+        "family": "numeric",
+        "pred_sha256": "845845f307f11ae3f2c52aabacc5eee108c71190234cc4241acd5e34f5a767d6",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-name-empty",
+        "family": "text",
+        "pred_sha256": "089b2c8f5140e060031dd2ba17463d11deb8cec130dccf4525d0db5a2ab295cd",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-unicode-space",
+        "family": "text",
+        "pred_sha256": "61e75fe254795b90f35deb7d38e5e623ad329798911a69e68f2b0267d295c9bb",
+        "structure_pass": false,
+        "functional_pass": false,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-ascii-digits",
+        "family": "text",
+        "pred_sha256": "4896169fac18a06f4fd50ef5db9b2a2ced5611fd8c1dc8b229d385e739a089f7",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-case-sensitive-prefix",
+        "family": "text",
+        "pred_sha256": "0b41ed09de98d0f188a96cc7bc7688ea591e2cc66c3669030f8b662c07551135",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-control-chars",
+        "family": "text",
+        "pred_sha256": "fd3d957fbfbfdb41fe01bfb0014ba6961033d45a2171b40f7f560c097adfc219",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-relative-path",
+        "family": "path",
+        "pred_sha256": "b3b2d311f1d94e422785cf1436af37ae82f4573a6c15b96d667f83ac17f8da6b",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-file-extension",
+        "family": "path",
+        "pred_sha256": "5ce3aa98c2303934cba24ec6a3c73eace7446cad382c6549b0d0108e56428050",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-hidden-component",
+        "family": "path",
+        "pred_sha256": "ca2a633796ed9ad8d5c8e98ca8013602ec2273bef36b6422ccb46087a954796f",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-empty-segment",
+        "family": "path",
+        "pred_sha256": "500830839f79336d18cba01eae572f07a4c9d066905dd0827eff4a2cbeea8059",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-backslash",
+        "family": "path",
+        "pred_sha256": "714448cc81e9b9dddb4678e9c59051c9b1305a164c52c7b340aa86b6dd61469a",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-unique-items",
+        "family": "collection",
+        "pred_sha256": "2834112f4974aeaf6844eaf70e6e71085b004e36b97967db740d124c532c9929",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-all-positive",
+        "family": "collection",
+        "pred_sha256": "6b5153322fa253e37019a50e83df61da1f1f8d8263dbb9aa79fc3aa43240c95e",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-sorted-input",
+        "family": "collection",
+        "pred_sha256": "93213618a2e7cc87bb6bb13a8f7553b912f1c3ed17376bf8b4357ad5cc052e5e",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-maximum-items",
+        "family": "collection",
+        "pred_sha256": "2ee477ba8dc3425ceae9c7af41e0d8dcdbfc62382f999dcd16c8583b7a94cd41",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-pair-width",
+        "family": "collection",
+        "pred_sha256": "e11af6b90cef667c4ea3d4865c24b9cdaecb44488146f15ac04c1cdad3e043fd",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-required-keys",
+        "family": "mapping",
+        "pred_sha256": "da81c5f9a6a8cdadd86cbb46e8ec542de25f08665b4cb2ed5b4298347182db3b",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-unknown-keys",
+        "family": "mapping",
+        "pred_sha256": "ea54ee01c97b1a836d2539062027b914da350ff3638bfaa060465999e9f329b6",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-duplicate-values",
+        "family": "mapping",
+        "pred_sha256": "31d194c3dd0a7e5eca6d7d17b4da15e6b0d2ff02f7fe43f6c6fd618a80229b04",
+        "structure_pass": false,
+        "functional_pass": false,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": [
+          "Iterates dict keys as (name,destination) pairs rather than aliases.items()/values(); valid mappings fail. Structure and functionality are separate."
+        ]
+      },
+      {
+        "id": "natural-exclusive-options",
+        "family": "mapping",
+        "pred_sha256": "ad06249490a181a72141984ecabbd4c61f58a7e887bfad7a5239ab49ebe441a2",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-nested-config",
+        "family": "mapping",
+        "pred_sha256": "174bc13c482a97210a9b5b923af2cffbb92fb2fe9fb27af6eaa4bbf1b4699c7a",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": [
+          "Adds worker-type/nonnegative restrictions beyond the requested mapping/key shape. Finite acceptance fixtures do not cover all originally accepted worker values."
+        ]
+      },
+      {
+        "id": "natural-interval",
+        "family": "compound",
+        "pred_sha256": "489dbe4a5bdf9710ee921a53201cd23ca61113d33792df3241df7f363e161217",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-page-size",
+        "family": "compound",
+        "pred_sha256": "49db5243e565de585567c8835698f45962d7f2b77dd9f7482fb62f3655971bd0",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-offset-alignment",
+        "family": "compound",
+        "pred_sha256": "903181f901d9b9e919fce8e9a0be5dd13f38938d28efcf96783fdad16e63c7d9",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-dimensions",
+        "family": "compound",
+        "pred_sha256": "f8e7c86474adecad5f4d6a9b3710902eb67e3de5393eb9df3444db9757126d93",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-bounded-window",
+        "family": "compound",
+        "pred_sha256": "0c14ae1005612f7252e6a05baa7e5c4fc1a1b1d9b955c699c1f4420dbf53faee",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-date-validity",
+        "family": "stdlib",
+        "pred_sha256": "db64686cdb96efb8bb160e57ee6a7bcf8ce255efcaeeecd90fb148c08971e921",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-ipv4",
+        "family": "stdlib",
+        "pred_sha256": "9970d41211b32a1c71fc131b20cbfb593bdf0835c1bab21b33fa3d544de73c73",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-json-object",
+        "family": "stdlib",
+        "pred_sha256": "ed1e72226a95b4d5539f4b9222bce9055ff57bd5168b76811e149885a099166b",
+        "structure_pass": false,
+        "functional_pass": false,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": [
+          "Parses JSON but changes return contracts to decoded object/decoded length, violating supplied unchanged-return requirement."
+        ]
+      },
+      {
+        "id": "natural-hex-bytes",
+        "family": "stdlib",
+        "pred_sha256": "fa576f4a4350febcc59be6212ce74d52a3345aaee5c306cf12a937183dc31959",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": [
+          "Regex $ anchoring can accept a final newline; finite fixtures omit that boundary. Functional pass is not a full correctness certificate."
+        ]
+      },
+      {
+        "id": "natural-utf8-length",
+        "family": "stdlib",
+        "pred_sha256": "a50d3ac874d411756af8118aebbe92174e411a8c72e43880667eda11221d3cbe",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-reserved-names",
+        "family": "protocol",
+        "pred_sha256": "ca7bec76a38351e161de2f999cd94b6881584a3987dda6002c635b5b94ec216c",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-newline-header",
+        "family": "protocol",
+        "pred_sha256": "44f3859aaed6e6de86e54a798477e6ad9a5479fdfbc7920198fbfde0e5f3474f",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-delimiter",
+        "family": "protocol",
+        "pred_sha256": "ad42742698fbb08edb61e4fc496986a14be27301924dfec8632660a11314a532",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-version-parts",
+        "family": "protocol",
+        "pred_sha256": "9a2362130924835342c1ae86e662bd7c1aca92e6cec5634763dae5a2e00cdf76",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-token-alphabet",
+        "family": "protocol",
+        "pred_sha256": "9ad7d98d22f456a80d5ea1d071e96da7ed6dc56cf6a612b4bccad201b77cd2c4",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": [
+          "Regex $ anchoring can accept a final newline; finite fixtures omit that boundary. Do not treat finite pass as proof of exact alphabet enforcement."
+        ]
+      }
+    ],
+    "joint4k": [
+      {
+        "id": "natural-count-zero",
+        "family": "numeric",
+        "pred_sha256": "9ace810b4d1641ff3ac19435028a413eb3ad032bebf62b0312c21553351bfdc1",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-retry-limit",
+        "family": "numeric",
+        "pred_sha256": "74a1114b49061aab6bb29a3afad064c1c31cd9abc0c494421585224afa581768",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-batch-multiple",
+        "family": "numeric",
+        "pred_sha256": "40fc210dbf361e6102861bcec61166c572bfc26cba29343af338399fa77f44dd",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-integer-bool",
+        "family": "numeric",
+        "pred_sha256": "a4f72cb8fb31eed65b2bc4fb7e63fc19837a01322a34f357b3afdd5fe507f60a",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-finite-number",
+        "family": "numeric",
+        "pred_sha256": "19601aa703edab2458a069c1c190add04740e81a2d79adaf613f7f17d08c7fdf",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-name-empty",
+        "family": "text",
+        "pred_sha256": "b546dd08917e3cf0e35ba8cad5994cd90120815d41e9c82a3e022137f4d74c8b",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-unicode-space",
+        "family": "text",
+        "pred_sha256": "b5e9409606d4c238968de9825173e283949a836cf9544d03b460914a2e2a0ef2",
+        "structure_pass": false,
+        "functional_pass": false,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-ascii-digits",
+        "family": "text",
+        "pred_sha256": "cbdfffde86a62b984491c4687501981f9e391cf409ba1142c09d2666a52e36fc",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "One private predicate contains the complete changed ASCII-digit rule; both callers use it and retain local ValueError plumbing. The rule itself is not duplicated.",
+        "notes": []
+      },
+      {
+        "id": "natural-case-sensitive-prefix",
+        "family": "text",
+        "pred_sha256": "0b41ed09de98d0f188a96cc7bc7688ea591e2cc66c3669030f8b662c07551135",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-control-chars",
+        "family": "text",
+        "pred_sha256": "aa5fd0e719330d5d002797683df6bb24ead15d3a94ab379f0a875898f6c84e9b",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-relative-path",
+        "family": "path",
+        "pred_sha256": "f82bc4418393ee8a2af2dfb3a286aec7d03e104035155102dbf9bd86e9313774",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both call one private helper for the changed parent-segment rejection; the unchanged absolute-path check remains in callers. Counts as centralizing the changed rule, not all existing validation.",
+        "notes": []
+      },
+      {
+        "id": "natural-file-extension",
+        "family": "path",
+        "pred_sha256": "5ce3aa98c2303934cba24ec6a3c73eace7446cad382c6549b0d0108e56428050",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-hidden-component",
+        "family": "path",
+        "pred_sha256": "56a897bd18584ca5f074b8693159a8f0096db625245a3c6176c172e64a0443c2",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-empty-segment",
+        "family": "path",
+        "pred_sha256": "926eea5e3713a3e274e134927ccf2f900eb25c11c79a6d92023c18fc25b52564",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-backslash",
+        "family": "path",
+        "pred_sha256": "d4ccfe94b5f3c2744f34071689fb48dfcb9e3ec353cebf431e7b8acafbffb32a",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-unique-items",
+        "family": "collection",
+        "pred_sha256": "bce3647ae6f1dafcfda1da29b0308ee235a79e566563fefa0007309667d0fca3",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-all-positive",
+        "family": "collection",
+        "pred_sha256": "7bbabd82b51f0fe12519ac71487791a1dcb11d0f1ce9a1bcce4d864e78817b78",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-sorted-input",
+        "family": "collection",
+        "pred_sha256": "e112124a6683a2d0a84a028e7ee2c7f10b23788aa74afa6806ca6551fefd612b",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-maximum-items",
+        "family": "collection",
+        "pred_sha256": "2ee477ba8dc3425ceae9c7af41e0d8dcdbfc62382f999dcd16c8583b7a94cd41",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-pair-width",
+        "family": "collection",
+        "pred_sha256": "e11af6b90cef667c4ea3d4865c24b9cdaecb44488146f15ac04c1cdad3e043fd",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-required-keys",
+        "family": "mapping",
+        "pred_sha256": "da81c5f9a6a8cdadd86cbb46e8ec542de25f08665b4cb2ed5b4298347182db3b",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-unknown-keys",
+        "family": "mapping",
+        "pred_sha256": "d10319a1d88ef899a3d73051af26c79814edb3b5a45c7c10716eaaf553006814",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-duplicate-values",
+        "family": "mapping",
+        "pred_sha256": "2ff0159883798791dea3364e0115081b20786761495d56b8e3dc5a47dacf953a",
+        "structure_pass": false,
+        "functional_pass": false,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": [
+          "Iterates dict keys as (name,destination) pairs rather than aliases.items()/values(); valid mappings fail. Structure and functionality are separate."
+        ]
+      },
+      {
+        "id": "natural-exclusive-options",
+        "family": "mapping",
+        "pred_sha256": "02a5db960b175d5803f0cec537162f7f5b2ee0d72a9c265fbf0b753042143723",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-nested-config",
+        "family": "mapping",
+        "pred_sha256": "905df0c55dbe1bb4302a4f06380421840204f90ff7e97e598da89809fe5e2933",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": [
+          "Adds worker-type/nonnegative restrictions beyond the requested mapping/key shape. Finite acceptance fixtures do not cover all originally accepted worker values."
+        ]
+      },
+      {
+        "id": "natural-interval",
+        "family": "compound",
+        "pred_sha256": "489dbe4a5bdf9710ee921a53201cd23ca61113d33792df3241df7f363e161217",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-page-size",
+        "family": "compound",
+        "pred_sha256": "76b1b69955737f4a5cc89656d39802e04748c250e9903506cc3cca1695074a9b",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-offset-alignment",
+        "family": "compound",
+        "pred_sha256": "c864d165c6c0a353e612c4dfaae4cdab74f4cf56a30c89d38e2d7aacf84580b8",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-dimensions",
+        "family": "compound",
+        "pred_sha256": "5ac5a06dc2c75838e811aafb1471ae44a0846e447caad570d6b8e15d840c46d0",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-bounded-window",
+        "family": "compound",
+        "pred_sha256": "0c14ae1005612f7252e6a05baa7e5c4fc1a1b1d9b955c699c1f4420dbf53faee",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-date-validity",
+        "family": "stdlib",
+        "pred_sha256": "ba7f4d5e2835ea554035e73e80445c574e8d9a93ca5d3d941c7ba0adc0c8c74e",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-ipv4",
+        "family": "stdlib",
+        "pred_sha256": "884671249e3f782f4d8fabaf017a3f2f879a4f2ce10d93542e765b962e95f6de",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-json-object",
+        "family": "stdlib",
+        "pred_sha256": "5d6a7db756848739e24db6afd15f0e7528988a5fd120fbb501b9aee7124b1432",
+        "structure_pass": false,
+        "functional_pass": false,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": [
+          "Parses JSON but changes return contracts to decoded object/decoded length, violating supplied unchanged-return requirement."
+        ]
+      },
+      {
+        "id": "natural-hex-bytes",
+        "family": "stdlib",
+        "pred_sha256": "25c2e73aadde0f149be51f6eed2a5fbdacca85e1afa6fd55687929eaa55480cb",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": [
+          "Regex $ anchoring can accept a final newline; finite fixtures omit that boundary. Functional pass is not a full correctness certificate."
+        ]
+      },
+      {
+        "id": "natural-utf8-length",
+        "family": "stdlib",
+        "pred_sha256": "fc30b3bf4599728600b151b7a4dd55aaa995dd83eb190474bf1295c49c99ae89",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-reserved-names",
+        "family": "protocol",
+        "pred_sha256": "6db1cc1ff6fa90f6dee0e2a0d29dcfdcf1b0e3a7ea095762dc6f912371cbc0d5",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-newline-header",
+        "family": "protocol",
+        "pred_sha256": "44f3859aaed6e6de86e54a798477e6ad9a5479fdfbc7920198fbfde0e5f3474f",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-delimiter",
+        "family": "protocol",
+        "pred_sha256": "561191a92104302d279eeceadbfc500825c001e3ca5ea03a792fdda21614dab7",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-version-parts",
+        "family": "protocol",
+        "pred_sha256": "12a3f51f5ff3455208591320356703736b98b3b038509cd0dd92cefd72c073a6",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-token-alphabet",
+        "family": "protocol",
+        "pred_sha256": "e7f5b80f45a11e73f15642f1dd40018602ce3f22fdaa64f0b0753f9221f8bac9",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": [
+          "Regex $ anchoring can accept a final newline; finite fixtures omit that boundary. Do not treat finite pass as proof of exact alphabet enforcement."
+        ]
+      }
+    ],
+    "joint8k": [
+      {
+        "id": "natural-count-zero",
+        "family": "numeric",
+        "pred_sha256": "1774892b647348c766ad934969aaa6eee6c4b518561ab7985984dfb27a652726",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-retry-limit",
+        "family": "numeric",
+        "pred_sha256": "e74b203e198ae3b20761131c641d2355b19dbad2e6edc0b0ad5eb5d8d64acaf5",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-batch-multiple",
+        "family": "numeric",
+        "pred_sha256": "67044a07fc9712cdca0f7ba72f8cf92431613aea2391d4f73fbf87597626c2fd",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-integer-bool",
+        "family": "numeric",
+        "pred_sha256": "a4f72cb8fb31eed65b2bc4fb7e63fc19837a01322a34f357b3afdd5fe507f60a",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-finite-number",
+        "family": "numeric",
+        "pred_sha256": "7dc80b4a86cd1627e449eb71af7e5514a533f6a4b0571db6f26ffdf8b9024ac0",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-name-empty",
+        "family": "text",
+        "pred_sha256": "b546dd08917e3cf0e35ba8cad5994cd90120815d41e9c82a3e022137f4d74c8b",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-unicode-space",
+        "family": "text",
+        "pred_sha256": "b5e9409606d4c238968de9825173e283949a836cf9544d03b460914a2e2a0ef2",
+        "structure_pass": false,
+        "functional_pass": false,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-ascii-digits",
+        "family": "text",
+        "pred_sha256": "119623f6cf3bef7b2c2a20275b9a26a1734a6c5c774f05e3a013d91fd7adf76a",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-case-sensitive-prefix",
+        "family": "text",
+        "pred_sha256": "0b41ed09de98d0f188a96cc7bc7688ea591e2cc66c3669030f8b662c07551135",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-control-chars",
+        "family": "text",
+        "pred_sha256": "aa5fd0e719330d5d002797683df6bb24ead15d3a94ab379f0a875898f6c84e9b",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-relative-path",
+        "family": "path",
+        "pred_sha256": "fbb980e0e752a226d536f013b83a940d0ed539074882e419a2ccc8799d06ba36",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-file-extension",
+        "family": "path",
+        "pred_sha256": "5ce3aa98c2303934cba24ec6a3c73eace7446cad382c6549b0d0108e56428050",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-hidden-component",
+        "family": "path",
+        "pred_sha256": "56a897bd18584ca5f074b8693159a8f0096db625245a3c6176c172e64a0443c2",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-empty-segment",
+        "family": "path",
+        "pred_sha256": "926eea5e3713a3e274e134927ccf2f900eb25c11c79a6d92023c18fc25b52564",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-backslash",
+        "family": "path",
+        "pred_sha256": "d4ccfe94b5f3c2744f34071689fb48dfcb9e3ec353cebf431e7b8acafbffb32a",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-unique-items",
+        "family": "collection",
+        "pred_sha256": "bce3647ae6f1dafcfda1da29b0308ee235a79e566563fefa0007309667d0fca3",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-all-positive",
+        "family": "collection",
+        "pred_sha256": "7bbabd82b51f0fe12519ac71487791a1dcb11d0f1ce9a1bcce4d864e78817b78",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-sorted-input",
+        "family": "collection",
+        "pred_sha256": "e112124a6683a2d0a84a028e7ee2c7f10b23788aa74afa6806ca6551fefd612b",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-maximum-items",
+        "family": "collection",
+        "pred_sha256": "6153e5e4d939db47acf0c92b3687c8fbf55e62562f924d830448f6a23c97441f",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-pair-width",
+        "family": "collection",
+        "pred_sha256": "e11af6b90cef667c4ea3d4865c24b9cdaecb44488146f15ac04c1cdad3e043fd",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-required-keys",
+        "family": "mapping",
+        "pred_sha256": "da81c5f9a6a8cdadd86cbb46e8ec542de25f08665b4cb2ed5b4298347182db3b",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-unknown-keys",
+        "family": "mapping",
+        "pred_sha256": "d10319a1d88ef899a3d73051af26c79814edb3b5a45c7c10716eaaf553006814",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-duplicate-values",
+        "family": "mapping",
+        "pred_sha256": "1462c48c0de850f8f2967d42eae273827fbeedbf2ee962a8f92584f46f1c0b34",
+        "structure_pass": false,
+        "functional_pass": false,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": [
+          "Iterates dict keys as (name,destination) pairs rather than aliases.items()/values(); valid mappings fail. Structure and functionality are separate."
+        ]
+      },
+      {
+        "id": "natural-exclusive-options",
+        "family": "mapping",
+        "pred_sha256": "0d83bac1357711680f204ebe2b919fbb10212dfba162ba9f3c659a19fde6bd05",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": [
+          "Uses value-is-not-None rather than key presence; supplied boundaries cover empty cursor/zero offset but not present None."
+        ]
+      },
+      {
+        "id": "natural-nested-config",
+        "family": "mapping",
+        "pred_sha256": "cbc4f294f2a4ffe8e6d14ecf4d475422dd0ed404088bf5725fdd1441d33680a3",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": [
+          "Adds worker-type/nonnegative restrictions beyond the requested mapping/key shape. Finite acceptance fixtures do not cover all originally accepted worker values."
+        ]
+      },
+      {
+        "id": "natural-interval",
+        "family": "compound",
+        "pred_sha256": "489dbe4a5bdf9710ee921a53201cd23ca61113d33792df3241df7f363e161217",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-page-size",
+        "family": "compound",
+        "pred_sha256": "6c4e468cc4534ac6c045f7615926fa08b88c6165410a66b961b57d280df6b5e2",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-offset-alignment",
+        "family": "compound",
+        "pred_sha256": "d74254b6d4d4959f10655566e95069e2e4a74c8dc8f7d997a4945aac39af752b",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-dimensions",
+        "family": "compound",
+        "pred_sha256": "5ac5a06dc2c75838e811aafb1471ae44a0846e447caad570d6b8e15d840c46d0",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-bounded-window",
+        "family": "compound",
+        "pred_sha256": "0c14ae1005612f7252e6a05baa7e5c4fc1a1b1d9b955c699c1f4420dbf53faee",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-date-validity",
+        "family": "stdlib",
+        "pred_sha256": "ba7f4d5e2835ea554035e73e80445c574e8d9a93ca5d3d941c7ba0adc0c8c74e",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-ipv4",
+        "family": "stdlib",
+        "pred_sha256": "884671249e3f782f4d8fabaf017a3f2f879a4f2ce10d93542e765b962e95f6de",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-json-object",
+        "family": "stdlib",
+        "pred_sha256": "5d6a7db756848739e24db6afd15f0e7528988a5fd120fbb501b9aee7124b1432",
+        "structure_pass": false,
+        "functional_pass": false,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": [
+          "Parses JSON but changes return contracts to decoded object/decoded length, violating supplied unchanged-return requirement."
+        ]
+      },
+      {
+        "id": "natural-hex-bytes",
+        "family": "stdlib",
+        "pred_sha256": "25c2e73aadde0f149be51f6eed2a5fbdacca85e1afa6fd55687929eaa55480cb",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": [
+          "Regex $ anchoring can accept a final newline; finite fixtures omit that boundary. Functional pass is not a full correctness certificate."
+        ]
+      },
+      {
+        "id": "natural-utf8-length",
+        "family": "stdlib",
+        "pred_sha256": "fc30b3bf4599728600b151b7a4dd55aaa995dd83eb190474bf1295c49c99ae89",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-reserved-names",
+        "family": "protocol",
+        "pred_sha256": "6db1cc1ff6fa90f6dee0e2a0d29dcfdcf1b0e3a7ea095762dc6f912371cbc0d5",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-newline-header",
+        "family": "protocol",
+        "pred_sha256": "44f3859aaed6e6de86e54a798477e6ad9a5479fdfbc7920198fbfde0e5f3474f",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-delimiter",
+        "family": "protocol",
+        "pred_sha256": "fc9a504839d32b00e25e5b849a4dfb7ba4cc205dd8828cf6b6c857d54efb403b",
+        "structure_pass": true,
+        "functional_pass": true,
+        "both": true,
+        "rationale": "Both public entry points call one private helper that executes the changed common validation; entry-point returns remain outside the helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-version-parts",
+        "family": "protocol",
+        "pred_sha256": "12a3f51f5ff3455208591320356703736b98b3b038509cd0dd92cefd72c073a6",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": []
+      },
+      {
+        "id": "natural-token-alphabet",
+        "family": "protocol",
+        "pred_sha256": "e7f5b80f45a11e73f15642f1dd40018602ce3f22fdaa64f0b0753f9221f8bac9",
+        "structure_pass": false,
+        "functional_pass": true,
+        "both": false,
+        "rationale": "Changed validation remains duplicated in the public entry points; a shared constant/regex or stdlib call alone is not the required private helper.",
+        "notes": [
+          "Regex $ anchoring can accept a final newline; finite fixtures omit that boundary. Do not treat finite pass as proof of exact alphabet enforcement."
+        ]
+      }
+    ]
+  }
+}

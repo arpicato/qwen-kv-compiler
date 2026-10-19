@@ -1,0 +1,3432 @@
+{
+  "version": "publication-eval-v1",
+  "knowledge": [
+    {
+      "id": "k-tool-01",
+      "category": "tool_identity",
+      "cluster": "get_me",
+      "q": "Within the configured GitHub MCP catalog, which tool serves this purpose? Retrieve the authenticated account, rather than a user named in the question. Return only one tool identifier, bare or fully qualified; no explanation.",
+      "answers": [
+        "get_me",
+        "mcp__github__get_me"
+      ],
+      "evidence": "### `mcp__github__get_me`"
+    },
+    {
+      "id": "k-tool-02",
+      "category": "tool_identity",
+      "cluster": "get_label",
+      "q": "Within the configured GitHub MCP catalog, which tool serves this purpose? Get one repository label by its name. Return only one tool identifier, bare or fully qualified; no explanation.",
+      "answers": [
+        "get_label",
+        "mcp__github__get_label"
+      ],
+      "evidence": "### `mcp__github__get_label`"
+    },
+    {
+      "id": "k-tool-03",
+      "category": "tool_identity",
+      "cluster": "get_tag",
+      "q": "Within the configured GitHub MCP catalog, which tool serves this purpose? Retrieve one repository tag by its name. Return only one tool identifier, bare or fully qualified; no explanation.",
+      "answers": [
+        "get_tag",
+        "mcp__github__get_tag"
+      ],
+      "evidence": "### `mcp__github__get_tag`"
+    },
+    {
+      "id": "k-tool-04",
+      "category": "tool_identity",
+      "cluster": "get_latest_release",
+      "q": "Within the configured GitHub MCP catalog, which tool serves this purpose? Retrieve the most recent published release in a repository. Return only one tool identifier, bare or fully qualified; no explanation.",
+      "answers": [
+        "get_latest_release",
+        "mcp__github__get_latest_release"
+      ],
+      "evidence": "### `mcp__github__get_latest_release`"
+    },
+    {
+      "id": "k-tool-05",
+      "category": "tool_identity",
+      "cluster": "get_release_by_tag",
+      "q": "Within the configured GitHub MCP catalog, which tool serves this purpose? Retrieve the release attached to a given tag. Return only one tool identifier, bare or fully qualified; no explanation.",
+      "answers": [
+        "get_release_by_tag",
+        "mcp__github__get_release_by_tag"
+      ],
+      "evidence": "### `mcp__github__get_release_by_tag`"
+    },
+    {
+      "id": "k-tool-06",
+      "category": "tool_identity",
+      "cluster": "list_releases",
+      "q": "Within the configured GitHub MCP catalog, which tool serves this purpose? List the releases in a repository. Return only one tool identifier, bare or fully qualified; no explanation.",
+      "answers": [
+        "list_releases",
+        "mcp__github__list_releases"
+      ],
+      "evidence": "### `mcp__github__list_releases`"
+    },
+    {
+      "id": "k-tool-07",
+      "category": "tool_identity",
+      "cluster": "list_tags",
+      "q": "Within the configured GitHub MCP catalog, which tool serves this purpose? List the tags in a repository. Return only one tool identifier, bare or fully qualified; no explanation.",
+      "answers": [
+        "list_tags",
+        "mcp__github__list_tags"
+      ],
+      "evidence": "### `mcp__github__list_tags`"
+    },
+    {
+      "id": "k-tool-08",
+      "category": "tool_identity",
+      "cluster": "list_branches",
+      "q": "Within the configured GitHub MCP catalog, which tool serves this purpose? List repository branches with pagination. Return only one tool identifier, bare or fully qualified; no explanation.",
+      "answers": [
+        "list_branches",
+        "mcp__github__list_branches"
+      ],
+      "evidence": "### `mcp__github__list_branches`"
+    },
+    {
+      "id": "k-tool-09",
+      "category": "tool_identity",
+      "cluster": "create_branch",
+      "q": "Within the configured GitHub MCP catalog, which tool serves this purpose? Create a new repository branch from a specified source branch. Return only one tool identifier, bare or fully qualified; no explanation.",
+      "answers": [
+        "create_branch",
+        "mcp__github__create_branch"
+      ],
+      "evidence": "### `mcp__github__create_branch`"
+    },
+    {
+      "id": "k-tool-10",
+      "category": "tool_identity",
+      "cluster": "get_commit",
+      "q": "Within the configured GitHub MCP catalog, which tool serves this purpose? Get details of one commit identified by SHA. Return only one tool identifier, bare or fully qualified; no explanation.",
+      "answers": [
+        "get_commit",
+        "mcp__github__get_commit"
+      ],
+      "evidence": "### `mcp__github__get_commit`"
+    },
+    {
+      "id": "k-tool-11",
+      "category": "tool_identity",
+      "cluster": "list_commits",
+      "q": "Within the configured GitHub MCP catalog, which tool serves this purpose? List commits with an author and date-range filter. Return only one tool identifier, bare or fully qualified; no explanation.",
+      "answers": [
+        "list_commits",
+        "mcp__github__list_commits"
+      ],
+      "evidence": "### `mcp__github__list_commits`"
+    },
+    {
+      "id": "k-tool-12",
+      "category": "tool_identity",
+      "cluster": "get_file_contents",
+      "q": "Within the configured GitHub MCP catalog, which tool serves this purpose? Read a file or directory from a repository. Return only one tool identifier, bare or fully qualified; no explanation.",
+      "answers": [
+        "get_file_contents",
+        "mcp__github__get_file_contents"
+      ],
+      "evidence": "### `mcp__github__get_file_contents`"
+    },
+    {
+      "id": "k-tool-13",
+      "category": "tool_identity",
+      "cluster": "search_code",
+      "q": "Within the configured GitHub MCP catalog, which tool serves this purpose? Search for source code matching a query. Return only one tool identifier, bare or fully qualified; no explanation.",
+      "answers": [
+        "search_code",
+        "mcp__github__search_code"
+      ],
+      "evidence": "### `mcp__github__search_code`"
+    },
+    {
+      "id": "k-tool-14",
+      "category": "tool_identity",
+      "cluster": "search_repositories",
+      "q": "Within the configured GitHub MCP catalog, which tool serves this purpose? Search for repositories matching a query. Return only one tool identifier, bare or fully qualified; no explanation.",
+      "answers": [
+        "search_repositories",
+        "mcp__github__search_repositories"
+      ],
+      "evidence": "### `mcp__github__search_repositories`"
+    },
+    {
+      "id": "k-tool-15",
+      "category": "tool_identity",
+      "cluster": "search_users",
+      "q": "Within the configured GitHub MCP catalog, which tool serves this purpose? Search for GitHub users matching a query. Return only one tool identifier, bare or fully qualified; no explanation.",
+      "answers": [
+        "search_users",
+        "mcp__github__search_users"
+      ],
+      "evidence": "### `mcp__github__search_users`"
+    },
+    {
+      "id": "k-tool-16",
+      "category": "tool_identity",
+      "cluster": "search_issues",
+      "q": "Within the configured GitHub MCP catalog, which tool serves this purpose? Search for issues matching a query. Return only one tool identifier, bare or fully qualified; no explanation.",
+      "answers": [
+        "search_issues",
+        "mcp__github__search_issues"
+      ],
+      "evidence": "### `mcp__github__search_issues`"
+    },
+    {
+      "id": "k-tool-17",
+      "category": "tool_identity",
+      "cluster": "issue_read",
+      "q": "Within the configured GitHub MCP catalog, which tool serves this purpose? Read details or comments of a specific issue. Return only one tool identifier, bare or fully qualified; no explanation.",
+      "answers": [
+        "issue_read",
+        "mcp__github__issue_read"
+      ],
+      "evidence": "### `mcp__github__issue_read`"
+    },
+    {
+      "id": "k-tool-18",
+      "category": "tool_identity",
+      "cluster": "pull_request_read",
+      "q": "Within the configured GitHub MCP catalog, which tool serves this purpose? Read details, files or review comments of a specific pull request. Return only one tool identifier, bare or fully qualified; no explanation.",
+      "answers": [
+        "pull_request_read",
+        "mcp__github__pull_request_read"
+      ],
+      "evidence": "### `mcp__github__pull_request_read`"
+    },
+    {
+      "id": "k-tool-19",
+      "category": "tool_identity",
+      "cluster": "add_issue_comment",
+      "q": "Within the configured GitHub MCP catalog, which tool serves this purpose? Add a new text comment to an issue. Return only one tool identifier, bare or fully qualified; no explanation.",
+      "answers": [
+        "add_issue_comment",
+        "mcp__github__add_issue_comment"
+      ],
+      "evidence": "### `mcp__github__add_issue_comment`"
+    },
+    {
+      "id": "k-tool-20",
+      "category": "tool_identity",
+      "cluster": "list_issue_types",
+      "q": "Within the configured GitHub MCP catalog, which tool serves this purpose? Get the issue types supported by an organization. Return only one tool identifier, bare or fully qualified; no explanation.",
+      "answers": [
+        "list_issue_types",
+        "mcp__github__list_issue_types"
+      ],
+      "evidence": "### `mcp__github__list_issue_types`"
+    },
+    {
+      "id": "k-field-01",
+      "category": "field_identity",
+      "cluster": "create_branch",
+      "q": "In the configured GitHub MCP tool `create_branch`, which argument represents the optional source branch, rather than the new branch name? Return only the exact field identifier; no explanation.",
+      "answers": [
+        "from_branch"
+      ],
+      "evidence": "### `mcp__github__create_branch`"
+    },
+    {
+      "id": "k-field-02",
+      "category": "field_identity",
+      "cluster": "get_file_contents",
+      "q": "In the configured GitHub MCP tool `get_file_contents`, which argument represents the symbolic reference such as refs/heads/main? Return only the exact field identifier; no explanation.",
+      "answers": [
+        "ref"
+      ],
+      "evidence": "### `mcp__github__get_file_contents`"
+    },
+    {
+      "id": "k-field-03",
+      "category": "field_identity",
+      "cluster": "get_file_contents",
+      "q": "In the configured GitHub MCP tool `get_file_contents`, which argument represents the optional commit SHA that takes precedence over ref? Return only the exact field identifier; no explanation.",
+      "answers": [
+        "sha"
+      ],
+      "evidence": "### `mcp__github__get_file_contents`"
+    },
+    {
+      "id": "k-field-04",
+      "category": "field_identity",
+      "cluster": "get_label",
+      "q": "In the configured GitHub MCP tool `get_label`, which argument represents the label identifier? Return only the exact field identifier; no explanation.",
+      "answers": [
+        "name"
+      ],
+      "evidence": "### `mcp__github__get_label`"
+    },
+    {
+      "id": "k-field-05",
+      "category": "field_identity",
+      "cluster": "get_tag",
+      "q": "In the configured GitHub MCP tool `get_tag`, which argument represents the tag identifier? Return only the exact field identifier; no explanation.",
+      "answers": [
+        "tag"
+      ],
+      "evidence": "### `mcp__github__get_tag`"
+    },
+    {
+      "id": "k-field-06",
+      "category": "field_identity",
+      "cluster": "get_release_by_tag",
+      "q": "In the configured GitHub MCP tool `get_release_by_tag`, which argument represents the tag identifying the release? Return only the exact field identifier; no explanation.",
+      "answers": [
+        "tag"
+      ],
+      "evidence": "### `mcp__github__get_release_by_tag`"
+    },
+    {
+      "id": "k-field-07",
+      "category": "field_identity",
+      "cluster": "list_commits",
+      "q": "In the configured GitHub MCP tool `list_commits`, which argument represents the filter by author? Return only the exact field identifier; no explanation.",
+      "answers": [
+        "author"
+      ],
+      "evidence": "### `mcp__github__list_commits`"
+    },
+    {
+      "id": "k-field-08",
+      "category": "field_identity",
+      "cluster": "list_commits",
+      "q": "In the configured GitHub MCP tool `list_commits`, which argument represents the filter for one file path? Return only the exact field identifier; no explanation.",
+      "answers": [
+        "path"
+      ],
+      "evidence": "### `mcp__github__list_commits`"
+    },
+    {
+      "id": "k-field-09",
+      "category": "field_identity",
+      "cluster": "list_commits",
+      "q": "In the configured GitHub MCP tool `list_commits`, which argument represents the start of the timestamp range? Return only the exact field identifier; no explanation.",
+      "answers": [
+        "since"
+      ],
+      "evidence": "### `mcp__github__list_commits`"
+    },
+    {
+      "id": "k-field-10",
+      "category": "field_identity",
+      "cluster": "list_commits",
+      "q": "In the configured GitHub MCP tool `list_commits`, which argument represents the end of the timestamp range? Return only the exact field identifier; no explanation.",
+      "answers": [
+        "until"
+      ],
+      "evidence": "### `mcp__github__list_commits`"
+    },
+    {
+      "id": "k-field-11",
+      "category": "field_identity",
+      "cluster": "list_pull_requests",
+      "q": "In the configured GitHub MCP tool `list_pull_requests`, which argument represents the target branch filter? Return only the exact field identifier; no explanation.",
+      "answers": [
+        "base"
+      ],
+      "evidence": "### `mcp__github__list_pull_requests`"
+    },
+    {
+      "id": "k-field-12",
+      "category": "field_identity",
+      "cluster": "list_pull_requests",
+      "q": "In the configured GitHub MCP tool `list_pull_requests`, which argument represents the source branch filter? Return only the exact field identifier; no explanation.",
+      "answers": [
+        "head"
+      ],
+      "evidence": "### `mcp__github__list_pull_requests`"
+    },
+    {
+      "id": "k-field-13",
+      "category": "field_identity",
+      "cluster": "pull_request_read",
+      "q": "In the configured GitHub MCP tool `pull_request_read`, which argument represents the pull request number? Return only the exact field identifier; no explanation.",
+      "answers": [
+        "pullNumber"
+      ],
+      "evidence": "### `mcp__github__pull_request_read`"
+    },
+    {
+      "id": "k-field-14",
+      "category": "field_identity",
+      "cluster": "pull_request_read",
+      "q": "In the configured GitHub MCP tool `pull_request_read`, which argument represents the cursor after which to fetch review-comment threads? Return only the exact field identifier; no explanation.",
+      "answers": [
+        "after"
+      ],
+      "evidence": "### `mcp__github__pull_request_read`"
+    },
+    {
+      "id": "k-field-15",
+      "category": "field_identity",
+      "cluster": "issue_read",
+      "q": "In the configured GitHub MCP tool `issue_read`, which argument represents the issue number? Return only the exact field identifier; no explanation.",
+      "answers": [
+        "issue_number"
+      ],
+      "evidence": "### `mcp__github__issue_read`"
+    },
+    {
+      "id": "k-field-16",
+      "category": "field_identity",
+      "cluster": "add_issue_comment",
+      "q": "In the configured GitHub MCP tool `add_issue_comment`, which argument represents the text of the new comment? Return only the exact field identifier; no explanation.",
+      "answers": [
+        "body"
+      ],
+      "evidence": "### `mcp__github__add_issue_comment`"
+    },
+    {
+      "id": "k-field-17",
+      "category": "field_identity",
+      "cluster": "create_or_update_file",
+      "q": "In the configured GitHub MCP tool `create_or_update_file`, which argument represents the literal file contents? Return only the exact field identifier; no explanation.",
+      "answers": [
+        "content"
+      ],
+      "evidence": "### `mcp__github__create_or_update_file`"
+    },
+    {
+      "id": "k-field-18",
+      "category": "field_identity",
+      "cluster": "create_or_update_file",
+      "q": "In the configured GitHub MCP tool `create_or_update_file`, which argument represents the blob SHA of the file being replaced? Return only the exact field identifier; no explanation.",
+      "answers": [
+        "sha"
+      ],
+      "evidence": "### `mcp__github__create_or_update_file`"
+    },
+    {
+      "id": "k-field-19",
+      "category": "field_identity",
+      "cluster": "actions_list",
+      "q": "In the configured GitHub MCP tool `actions_list`, which argument represents the number of returned results per page? Return only the exact field identifier; no explanation.",
+      "answers": [
+        "perPage"
+      ],
+      "evidence": "### `mcp__github__actions_list`"
+    },
+    {
+      "id": "k-field-20",
+      "category": "field_identity",
+      "cluster": "search_repositories",
+      "q": "In the configured GitHub MCP tool `search_repositories`, which argument represents the repository search expression? Return only the exact field identifier; no explanation.",
+      "answers": [
+        "query"
+      ],
+      "evidence": "### `mcp__github__search_repositories`"
+    },
+    {
+      "id": "k-fact-01",
+      "category": "instruction_recall",
+      "cluster": "Build and test",
+      "q": "According to this project's instructions: Package manager for Node services? Return only the requested name, path, command, number or short value; no explanation.",
+      "answers": [
+        "pnpm"
+      ],
+      "evidence": "Build and test"
+    },
+    {
+      "id": "k-fact-02",
+      "category": "instruction_recall",
+      "cluster": "Build and test",
+      "q": "According to this project's instructions: Package manager for Python services? Return only the requested name, path, command, number or short value; no explanation.",
+      "answers": [
+        "uv"
+      ],
+      "evidence": "Build and test"
+    },
+    {
+      "id": "k-fact-03",
+      "category": "instruction_recall",
+      "cluster": "Build and test",
+      "q": "According to this project's instructions: Full recursive test command for Node services? Return only the requested name, path, command, number or short value; no explanation.",
+      "answers": [
+        "pnpm -r test"
+      ],
+      "evidence": "Build and test"
+    },
+    {
+      "id": "k-fact-04",
+      "category": "instruction_recall",
+      "cluster": "Build and test",
+      "q": "According to this project's instructions: Lint command for the Node workspace? Return only the requested name, path, command, number or short value; no explanation.",
+      "answers": [
+        "pnpm lint"
+      ],
+      "evidence": "Build and test"
+    },
+    {
+      "id": "k-fact-05",
+      "category": "instruction_recall",
+      "cluster": "Build and test",
+      "q": "According to this project's instructions: Python lint command? Return only the requested name, path, command, number or short value; no explanation.",
+      "answers": [
+        "ruff check"
+      ],
+      "evidence": "Build and test"
+    },
+    {
+      "id": "k-fact-06",
+      "category": "instruction_recall",
+      "cluster": "Conventions",
+      "q": "According to this project's instructions: Required commit-message convention? Return only the requested name, path, command, number or short value; no explanation.",
+      "answers": [
+        "Conventional Commits"
+      ],
+      "evidence": "Conventions"
+    },
+    {
+      "id": "k-fact-07",
+      "category": "instruction_recall",
+      "cluster": "Repository layout",
+      "q": "According to this project's instructions: Per-service configuration file name? Return only the requested name, path, command, number or short value; no explanation.",
+      "answers": [
+        "service.yaml"
+      ],
+      "evidence": "Repository layout"
+    },
+    {
+      "id": "k-fact-08",
+      "category": "instruction_recall",
+      "cluster": "Repository layout",
+      "q": "According to this project's instructions: Root directory containing deployable services? Return only the requested name, path, command, number or short value; no explanation.",
+      "answers": [
+        "services/",
+        "services"
+      ],
+      "evidence": "Repository layout"
+    },
+    {
+      "id": "k-fact-09",
+      "category": "instruction_recall",
+      "cluster": "Repository layout",
+      "q": "According to this project's instructions: Directory containing generated infrastructure files that must not be edited? Return only the requested name, path, command, number or short value; no explanation.",
+      "answers": [
+        "infra/.gen/",
+        "infra/.gen"
+      ],
+      "evidence": "Repository layout"
+    },
+    {
+      "id": "k-fact-10",
+      "category": "instruction_recall",
+      "cluster": "Repository layout",
+      "q": "According to this project's instructions: Directory containing architecture decision records? Return only the requested name, path, command, number or short value; no explanation.",
+      "answers": [
+        "docs/adr/",
+        "docs/adr"
+      ],
+      "evidence": "Repository layout"
+    },
+    {
+      "id": "k-fact-11",
+      "category": "instruction_recall",
+      "cluster": "Conventions",
+      "q": "According to this project's instructions: Gitignored directory for encrypted secrets? Return only the requested name, path, command, number or short value; no explanation.",
+      "answers": [
+        "infra/secrets/",
+        "infra/secrets"
+      ],
+      "evidence": "Conventions"
+    },
+    {
+      "id": "k-fact-12",
+      "category": "instruction_recall",
+      "cluster": "Conventions",
+      "q": "According to this project's instructions: Secrets encryption system named by the project? Return only the requested name, path, command, number or short value; no explanation.",
+      "answers": [
+        "SOPS"
+      ],
+      "evidence": "Conventions"
+    },
+    {
+      "id": "k-fact-13",
+      "category": "instruction_recall",
+      "cluster": "Escalation",
+      "q": "According to this project's instructions: Channel owning cross-service test breakage? Return only the requested name, path, command, number or short value; no explanation.",
+      "answers": [
+        "#platform",
+        "platform"
+      ],
+      "evidence": "Escalation"
+    },
+    {
+      "id": "k-fact-14",
+      "category": "instruction_recall",
+      "cluster": "MCP github",
+      "q": "According to this project's instructions: Organization to which the GitHub server is scoped? Return only the requested name, path, command, number or short value; no explanation.",
+      "answers": [
+        "acme-platform"
+      ],
+      "evidence": "MCP github"
+    },
+    {
+      "id": "k-fact-15",
+      "category": "instruction_recall",
+      "cluster": "MCP github",
+      "q": "According to this project's instructions: OAuth scope required for GitHub write tools? Return only the requested name, path, command, number or short value; no explanation.",
+      "answers": [
+        "repo"
+      ],
+      "evidence": "MCP github"
+    },
+    {
+      "id": "k-fact-16",
+      "category": "instruction_recall",
+      "cluster": "MCP github",
+      "q": "According to this project's instructions: Tool to use rather than pushing to a protected branch? Return only the requested name, path, command, number or short value; no explanation.",
+      "answers": [
+        "create_pull_request",
+        "mcp__github__create_pull_request"
+      ],
+      "evidence": "MCP github"
+    },
+    {
+      "id": "k-fact-17",
+      "category": "instruction_recall",
+      "cluster": "MCP postgres",
+      "q": "According to this project's instructions: Time limit for PostgreSQL queries? Return only the requested name, path, command, number or short value; no explanation.",
+      "answers": [
+        "30 seconds",
+        "30s",
+        "30 sec"
+      ],
+      "evidence": "MCP postgres"
+    },
+    {
+      "id": "k-fact-18",
+      "category": "instruction_recall",
+      "cluster": "MCP postgres",
+      "q": "According to this project's instructions: Row-count threshold above which a PostgreSQL query needs explain first? Return only the requested name, path, command, number or short value; no explanation.",
+      "answers": [
+        "1000",
+        "1,000"
+      ],
+      "evidence": "MCP postgres"
+    },
+    {
+      "id": "k-fact-19",
+      "category": "instruction_recall",
+      "cluster": "MCP sentry",
+      "q": "According to this project's instructions: Sentry issue-lookup rate limit? Return only the requested name, path, command, number or short value; no explanation.",
+      "answers": [
+        "100/minute",
+        "100 per minute",
+        "100/min",
+        "100 requests per minute"
+      ],
+      "evidence": "MCP sentry"
+    },
+    {
+      "id": "k-fact-20",
+      "category": "instruction_recall",
+      "cluster": "MCP sentry",
+      "q": "According to this project's instructions: Project environment accessible through Sentry? Return only the requested name, path, command, number or short value; no explanation.",
+      "answers": [
+        "production",
+        "production projects",
+        "production projects only"
+      ],
+      "evidence": "MCP sentry"
+    }
+  ],
+  "tools": [
+    {
+      "id": "t-single-self",
+      "kind": "single_call",
+      "cluster": "get_me",
+      "q": "Fetch my authenticated GitHub account.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_me",
+              "arguments": {}
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-single-labels",
+      "kind": "single_call",
+      "cluster": "get_label",
+      "q": "Retrieve label \"risk-reviewed\" in acme-platform/audit-box.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_label",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "name": "risk-reviewed"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-single-tag",
+      "kind": "single_call",
+      "cluster": "get_tag",
+      "q": "Fetch tag v6.3.1 in acme-platform/audit-box.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_tag",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "tag": "v6.3.1"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-single-latest",
+      "kind": "single_call",
+      "cluster": "get_latest_release",
+      "q": "Get the latest published release in acme-platform/audit-box.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_latest_release",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-single-release-tag",
+      "kind": "single_call",
+      "cluster": "get_release_by_tag",
+      "q": "Get the release for tag v5.4.0 in acme-platform/audit-box.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_release_by_tag",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "tag": "v5.4.0"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-single-releases",
+      "kind": "single_call",
+      "cluster": "list_releases",
+      "q": "List page 2 of releases in acme-platform/audit-box, 6 results per page.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__list_releases",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "page": 2,
+                "perPage": 6
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-single-tags",
+      "kind": "single_call",
+      "cluster": "list_tags",
+      "q": "List page 3 of tags in acme-platform/audit-box, 12 per page.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__list_tags",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "page": 3,
+                "perPage": 12
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-single-branches",
+      "kind": "single_call",
+      "cluster": "list_branches",
+      "q": "List page 4 of branches in acme-platform/audit-box, 8 per page.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__list_branches",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "page": 4,
+                "perPage": 8
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-single-branch",
+      "kind": "single_call",
+      "cluster": "create_branch",
+      "q": "Create branch fix/checksum from integration in acme-platform/audit-box.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__create_branch",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "branch": "fix/checksum",
+                "from_branch": "integration"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-single-commit",
+      "kind": "single_call",
+      "cluster": "get_commit",
+      "q": "Fetch commit 8c23ab41 in acme-platform/audit-box.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_commit",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "sha": "8c23ab41"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-single-commits-author",
+      "kind": "single_call",
+      "cluster": "list_commits",
+      "q": "List commits by mira in acme-platform/audit-box, limited to path lib/retry.py.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__list_commits",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "author": "mira",
+                "path": "lib/retry.py"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-single-commits-range",
+      "kind": "single_call",
+      "cluster": "list_commits",
+      "q": "List commits in acme-platform/audit-box since 2026-09-01T00:00:00Z until 2026-09-03T00:00:00Z.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__list_commits",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "since": "2026-09-01T00:00:00Z",
+                "until": "2026-09-03T00:00:00Z"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-single-file",
+      "kind": "single_call",
+      "cluster": "get_file_contents",
+      "q": "Read docs/limits.md in acme-platform/audit-box at refs/heads/integration.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_file_contents",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "path": "docs/limits.md",
+                "ref": "refs/heads/integration"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-single-code-search",
+      "kind": "single_call",
+      "cluster": "search_code",
+      "q": "Search GitHub code using exactly this query: repo:acme-platform/audit-box \"retry_after\". No optional filters.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__search_code",
+              "arguments": {
+                "query": "repo:acme-platform/audit-box \"retry_after\""
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-single-repo-search",
+      "kind": "single_call",
+      "cluster": "search_repositories",
+      "q": "Search repositories using exactly this query: org:acme-platform language:Python. No optional filters.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__search_repositories",
+              "arguments": {
+                "query": "org:acme-platform language:Python"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-single-user-search",
+      "kind": "single_call",
+      "cluster": "search_users",
+      "q": "Search GitHub users with exactly this query: mira in:login. No optional filters.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__search_users",
+              "arguments": {
+                "query": "mira in:login"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-single-issue-read",
+      "kind": "single_call",
+      "cluster": "issue_read",
+      "q": "Read the comments on issue 823 in acme-platform/audit-box.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__issue_read",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "issue_number": 823,
+                "method": "get_comments"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-single-pr-files",
+      "kind": "single_call",
+      "cluster": "pull_request_read",
+      "q": "Read the changed files of pull request 914 in acme-platform/audit-box.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__pull_request_read",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "pullNumber": 914,
+                "method": "get_files"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-single-comment",
+      "kind": "single_call",
+      "cluster": "add_issue_comment",
+      "q": "Add \"Checksum confirmed.\" as a new comment on issue 675 in acme-platform/audit-box.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__add_issue_comment",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "issue_number": 675,
+                "body": "Checksum confirmed."
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-single-types",
+      "kind": "single_call",
+      "cluster": "list_issue_types",
+      "q": "List the issue types for organization acme-platform, without a repository-specific filter.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__list_issue_types",
+              "arguments": {
+                "owner": "acme-platform"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-ask-repo",
+      "kind": "clarification",
+      "cluster": "list_branches",
+      "q": "List branches in an unspecified repository in acme-platform, 11 per page. First ask me for the repository name; do not list/search resources or guess it. After my reply, perform only the requested operation.",
+      "steps": [
+        {
+          "ask_any": [
+            "repo",
+            "repository"
+          ],
+          "reply": "audit-box"
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__list_branches",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "perPage": 11
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-ask-label",
+      "kind": "clarification",
+      "cluster": "get_label",
+      "q": "Read a label from acme-platform/audit-box, but its name has not been supplied. First ask me for the label name; do not list/search resources or guess it. After my reply, perform only the requested operation.",
+      "steps": [
+        {
+          "ask_any": [
+            "label",
+            "name"
+          ],
+          "reply": "risk-reviewed"
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_label",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "name": "risk-reviewed"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-ask-tag",
+      "kind": "clarification",
+      "cluster": "get_tag",
+      "q": "Read a tag in acme-platform/audit-box, but the tag has not been supplied. First ask me for the tag; do not list/search resources or guess it. After my reply, perform only the requested operation.",
+      "steps": [
+        {
+          "ask_any": [
+            "tag"
+          ],
+          "reply": "v6.8.0"
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_tag",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "tag": "v6.8.0"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-ask-release",
+      "kind": "clarification",
+      "cluster": "get_release_by_tag",
+      "q": "Read the release for an unspecified tag in acme-platform/audit-box. First ask me for the release tag; do not list/search resources or guess it. After my reply, perform only the requested operation.",
+      "steps": [
+        {
+          "ask_any": [
+            "tag",
+            "release"
+          ],
+          "reply": "v6.9.0"
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_release_by_tag",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "tag": "v6.9.0"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-ask-source",
+      "kind": "clarification",
+      "cluster": "create_branch",
+      "q": "Create branch fix/timeout in acme-platform/audit-box from a particular source I have not named. First ask me for the source branch; do not list/search resources or guess it. After my reply, perform only the requested operation.",
+      "steps": [
+        {
+          "ask_any": [
+            "source",
+            "branch",
+            "base"
+          ],
+          "reply": "integration"
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__create_branch",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "branch": "fix/timeout",
+                "from_branch": "integration"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-ask-newbranch",
+      "kind": "clarification",
+      "cluster": "create_branch",
+      "q": "Create a branch from integration in acme-platform/audit-box, but I have not named the new branch. First ask me for the new branch name; do not list/search resources or guess it. After my reply, perform only the requested operation.",
+      "steps": [
+        {
+          "ask_any": [
+            "branch",
+            "name"
+          ],
+          "reply": "fix/jitter"
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__create_branch",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "branch": "fix/jitter",
+                "from_branch": "integration"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-ask-commit",
+      "kind": "clarification",
+      "cluster": "get_commit",
+      "q": "Get one commit from acme-platform/audit-box, but I have not identified the commit. First ask me for the commit identifier; do not list/search resources or guess it. After my reply, perform only the requested operation.",
+      "steps": [
+        {
+          "ask_any": [
+            "commit",
+            "sha"
+          ],
+          "reply": "7d12af90"
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_commit",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "sha": "7d12af90"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-ask-path",
+      "kind": "clarification",
+      "cluster": "get_file_contents",
+      "q": "Read one file from acme-platform/audit-box at refs/heads/integration. Its path is missing. First ask me for the file path; do not list/search resources or guess it. After my reply, perform only the requested operation.",
+      "steps": [
+        {
+          "ask_any": [
+            "file",
+            "path"
+          ],
+          "reply": "src/queue.py"
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_file_contents",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "path": "src/queue.py",
+                "ref": "refs/heads/integration"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-ask-issue",
+      "kind": "clarification",
+      "cluster": "issue_read",
+      "q": "Read one issue in acme-platform/audit-box, but its number is missing. First ask me for the issue number; do not list/search resources or guess it. After my reply, perform only the requested operation.",
+      "steps": [
+        {
+          "ask_any": [
+            "issue",
+            "number"
+          ],
+          "reply": "906"
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__issue_read",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "method": "get",
+                "issue_number": 906
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-ask-pr",
+      "kind": "clarification",
+      "cluster": "pull_request_read",
+      "q": "Read the diff for a pull request in acme-platform/audit-box, but its number is missing. First ask me for the pull request number; do not list/search resources or guess it. After my reply, perform only the requested operation.",
+      "steps": [
+        {
+          "ask_any": [
+            "pull",
+            "pr",
+            "number"
+          ],
+          "reply": "807"
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__pull_request_read",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "method": "get_diff",
+                "pullNumber": 807
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-ask-commenttext",
+      "kind": "clarification",
+      "cluster": "add_issue_comment",
+      "q": "Add a new comment to issue 908 in acme-platform/audit-box. I have not supplied the comment text. First ask me for the comment text; do not list/search resources or guess it. After my reply, perform only the requested operation.",
+      "steps": [
+        {
+          "ask_any": [
+            "text",
+            "comment",
+            "body"
+          ],
+          "reply": "Verified with the new fixture."
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__add_issue_comment",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "issue_number": 908,
+                "body": "Verified with the new fixture."
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-ask-commentissue",
+      "kind": "clarification",
+      "cluster": "add_issue_comment",
+      "q": "Add comment \"Ready for review.\" to an unidentified issue in acme-platform/audit-box. First ask me for the issue number; do not list/search resources or guess it. After my reply, perform only the requested operation.",
+      "steps": [
+        {
+          "ask_any": [
+            "issue",
+            "number"
+          ],
+          "reply": "909"
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__add_issue_comment",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "issue_number": 909,
+                "body": "Ready for review."
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-ask-query",
+      "kind": "clarification",
+      "cluster": "search_repositories",
+      "q": "Search GitHub repositories, but the search expression has not been provided. Use no optional filters. First ask me for the search query; do not list/search resources or guess it. After my reply, perform only the requested operation.",
+      "steps": [
+        {
+          "ask_any": [
+            "query",
+            "search",
+            "expression"
+          ],
+          "reply": "org:acme-platform archived:false"
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__search_repositories",
+              "arguments": {
+                "query": "org:acme-platform archived:false"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-ask-userquery",
+      "kind": "clarification",
+      "cluster": "search_users",
+      "q": "Search GitHub users, but the search expression is missing. Use no optional filters. First ask me for the user search query; do not list/search resources or guess it. After my reply, perform only the requested operation.",
+      "steps": [
+        {
+          "ask_any": [
+            "query",
+            "search",
+            "expression"
+          ],
+          "reply": "lea in:login"
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__search_users",
+              "arguments": {
+                "query": "lea in:login"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-ask-codequery",
+      "kind": "clarification",
+      "cluster": "search_code",
+      "q": "Search GitHub code, but I have not supplied a query. Use no optional filters. First ask me for the code search query; do not list/search resources or guess it. After my reply, perform only the requested operation.",
+      "steps": [
+        {
+          "ask_any": [
+            "query",
+            "search",
+            "expression"
+          ],
+          "reply": "repo:acme-platform/audit-box \"jitter\""
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__search_code",
+              "arguments": {
+                "query": "repo:acme-platform/audit-box \"jitter\""
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-ask-owner",
+      "kind": "clarification",
+      "cluster": "list_issue_types",
+      "q": "List issue types for a GitHub organization I have not named. No repository filter. First ask me for the organization; do not list/search resources or guess it. After my reply, perform only the requested operation.",
+      "steps": [
+        {
+          "ask_any": [
+            "owner",
+            "org",
+            "organization"
+          ],
+          "reply": "acme-platform"
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__list_issue_types",
+              "arguments": {
+                "owner": "acme-platform"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-ask-prtitle",
+      "kind": "clarification",
+      "cluster": "update_pull_request_title",
+      "q": "Change only the title of PR 913 in acme-platform/audit-box, but I have not supplied the new title. First ask me for the new title; do not list/search resources or guess it. After my reply, perform only the requested operation.",
+      "steps": [
+        {
+          "ask_any": [
+            "title"
+          ],
+          "reply": "Bound retry delay"
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__update_pull_request_title",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "pullNumber": 913,
+                "title": "Bound retry delay"
+              }
+            },
+            {
+              "call": "mcp__github__update_pull_request",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "pullNumber": 913,
+                "title": "Bound retry delay"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-ask-prbody",
+      "kind": "clarification",
+      "cluster": "update_pull_request_body",
+      "q": "Replace only the body of PR 915 in acme-platform/audit-box, but its replacement text is missing. First ask me for the replacement body; do not list/search resources or guess it. After my reply, perform only the requested operation.",
+      "steps": [
+        {
+          "ask_any": [
+            "body",
+            "text",
+            "description"
+          ],
+          "reply": "Includes the recovery path."
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__update_pull_request_body",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "pullNumber": 915,
+                "body": "Includes the recovery path."
+              }
+            },
+            {
+              "call": "mcp__github__update_pull_request",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "pullNumber": 915,
+                "body": "Includes the recovery path."
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-ask-issuetitle",
+      "kind": "clarification",
+      "cluster": "create_issue",
+      "q": "Create an issue in acme-platform/audit-box, with no body. I have not given the title. First ask me for the issue title; do not list/search resources or guess it. After my reply, perform only the requested operation.",
+      "steps": [
+        {
+          "ask_any": [
+            "title"
+          ],
+          "reply": "Reject stale cursors"
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__create_issue",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "title": "Reject stale cursors"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-ask-author",
+      "kind": "clarification",
+      "cluster": "list_commits",
+      "q": "List commits in acme-platform/audit-box filtered to a particular author that I have not identified. First ask me for the author; do not list/search resources or guess it. After my reply, perform only the requested operation.",
+      "steps": [
+        {
+          "ask_any": [
+            "author",
+            "user",
+            "login"
+          ],
+          "reply": "dev-jules"
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__list_commits",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "author": "dev-jules"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-sequence-latest-tag",
+      "kind": "two_step",
+      "cluster": "mcp__github__get_latest_release->mcp__github__get_tag",
+      "q": "In repository acme-platform/audit-box: Read the latest release, then fetch its tag_name with the tag-detail tool. Perform exactly those two tool calls, in that order, using the reply rather than guessing. Stop after the second call.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_latest_release",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box"
+              }
+            }
+          ],
+          "reply": {
+            "tag_name": "v7.1.3"
+          }
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_tag",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "tag": "v7.1.3"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-sequence-tag-release",
+      "kind": "two_step",
+      "cluster": "mcp__github__get_tag->mcp__github__get_release_by_tag",
+      "q": "In repository acme-platform/audit-box: Read tag v4.2.6, then fetch the release for the returned tag name. Perform exactly those two tool calls, in that order, using the reply rather than guessing. Stop after the second call.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_tag",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "tag": "v4.2.6"
+              }
+            }
+          ],
+          "reply": {
+            "name": "v4.2.6"
+          }
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_release_by_tag",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "tag": "v4.2.6"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-sequence-label-comment",
+      "kind": "two_step",
+      "cluster": "mcp__github__get_label->mcp__github__add_issue_comment",
+      "q": "In repository acme-platform/audit-box: Get label risk-reviewed, then comment on issue 101 with exactly its description. Perform exactly those two tool calls, in that order, using the reply rather than guessing. Stop after the second call.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_label",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "name": "risk-reviewed"
+              }
+            }
+          ],
+          "reply": {
+            "description": "Assessed by payments team"
+          }
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__add_issue_comment",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "issue_number": 101,
+                "body": "Assessed by payments team"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-sequence-issue-title",
+      "kind": "two_step",
+      "cluster": "mcp__github__issue_read->mcp__github__update_pull_request_title",
+      "q": "In repository acme-platform/audit-box: Read issue 102, then replace only PR 201 title with that issue title. Perform exactly those two tool calls, in that order, using the reply rather than guessing. Stop after the second call.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__issue_read",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "method": "get",
+                "issue_number": 102
+              }
+            }
+          ],
+          "reply": {
+            "title": "Fix retry envelope"
+          }
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__update_pull_request_title",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "pullNumber": 201,
+                "title": "Fix retry envelope"
+              }
+            },
+            {
+              "call": "mcp__github__update_pull_request",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "pullNumber": 201,
+                "title": "Fix retry envelope"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-sequence-issue-body",
+      "kind": "two_step",
+      "cluster": "mcp__github__issue_read->mcp__github__update_pull_request_body",
+      "q": "In repository acme-platform/audit-box: Read issue 103, then replace only PR 202 body with that issue body. Perform exactly those two tool calls, in that order, using the reply rather than guessing. Stop after the second call.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__issue_read",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "method": "get",
+                "issue_number": 103
+              }
+            }
+          ],
+          "reply": {
+            "body": "Recover the queued batch."
+          }
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__update_pull_request_body",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "pullNumber": 202,
+                "body": "Recover the queued batch."
+              }
+            },
+            {
+              "call": "mcp__github__update_pull_request",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "pullNumber": 202,
+                "body": "Recover the queued batch."
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-sequence-pr-title-comment",
+      "kind": "two_step",
+      "cluster": "mcp__github__pull_request_read->mcp__github__add_issue_comment",
+      "q": "In repository acme-platform/audit-box: Read PR 203, then comment on issue 104 with exactly the PR title. Perform exactly those two tool calls, in that order, using the reply rather than guessing. Stop after the second call.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__pull_request_read",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "method": "get",
+                "pullNumber": 203
+              }
+            }
+          ],
+          "reply": {
+            "title": "Keep cursor stable"
+          }
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__add_issue_comment",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "issue_number": 104,
+                "body": "Keep cursor stable"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-sequence-pr-body-issue",
+      "kind": "two_step",
+      "cluster": "mcp__github__pull_request_read->mcp__github__create_issue",
+      "q": "In repository acme-platform/audit-box: Read PR 204, then create an issue titled Follow-up with exactly that PR body as its body. Perform exactly those two tool calls, in that order, using the reply rather than guessing. Stop after the second call.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__pull_request_read",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "method": "get",
+                "pullNumber": 204
+              }
+            }
+          ],
+          "reply": {
+            "body": "Test cancellation during replay."
+          }
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__create_issue",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "title": "Follow-up",
+                "body": "Test cancellation during replay."
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-sequence-file-comment",
+      "kind": "two_step",
+      "cluster": "mcp__github__get_file_contents->mcp__github__add_issue_comment",
+      "q": "In repository acme-platform/audit-box: Read docs/risk.txt at refs/heads/main, then comment on issue 105 with exactly its returned decoded text field. Perform exactly those two tool calls, in that order, using the reply rather than guessing. Stop after the second call.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_file_contents",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "path": "docs/risk.txt",
+                "ref": "refs/heads/main"
+              }
+            }
+          ],
+          "reply": {
+            "text": "Manual risk review complete."
+          }
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__add_issue_comment",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "issue_number": 105,
+                "body": "Manual risk review complete."
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-sequence-commit-comment",
+      "kind": "two_step",
+      "cluster": "mcp__github__get_commit->mcp__github__add_issue_comment",
+      "q": "In repository acme-platform/audit-box: Get commit 9e41bc22, then comment on issue 106 with exactly its commit.message. Perform exactly those two tool calls, in that order, using the reply rather than guessing. Stop after the second call.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_commit",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "sha": "9e41bc22"
+              }
+            }
+          ],
+          "reply": {
+            "commit": {
+              "message": "Guard empty chunks"
+            }
+          }
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__add_issue_comment",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "issue_number": 106,
+                "body": "Guard empty chunks"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-sequence-profile-commits",
+      "kind": "two_step",
+      "cluster": "mcp__github__get_me->mcp__github__list_commits",
+      "q": "In repository acme-platform/audit-box: Get my authenticated profile, then list commits filtered by its returned login. Perform exactly those two tool calls, in that order, using the reply rather than guessing. Stop after the second call.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_me",
+              "arguments": {}
+            }
+          ],
+          "reply": {
+            "login": "reviewer-ada"
+          }
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__list_commits",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "author": "reviewer-ada"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-sequence-release-name",
+      "kind": "two_step",
+      "cluster": "mcp__github__get_release_by_tag->mcp__github__update_pull_request_title",
+      "q": "In repository acme-platform/audit-box: Get the release for v3.8.1, then replace only PR 205 title with its name. Perform exactly those two tool calls, in that order, using the reply rather than guessing. Stop after the second call.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_release_by_tag",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "tag": "v3.8.1"
+              }
+            }
+          ],
+          "reply": {
+            "name": "Recovery checkpoint"
+          }
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__update_pull_request_title",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "pullNumber": 205,
+                "title": "Recovery checkpoint"
+              }
+            },
+            {
+              "call": "mcp__github__update_pull_request",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "pullNumber": 205,
+                "title": "Recovery checkpoint"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-sequence-latest-body",
+      "kind": "two_step",
+      "cluster": "mcp__github__get_latest_release->mcp__github__update_pull_request_body",
+      "q": "In repository acme-platform/audit-box: Get the latest release, then replace only PR 206 body with its body. Perform exactly those two tool calls, in that order, using the reply rather than guessing. Stop after the second call.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_latest_release",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box"
+              }
+            }
+          ],
+          "reply": {
+            "body": "Ships bounded replay."
+          }
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__update_pull_request_body",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "pullNumber": 206,
+                "body": "Ships bounded replay."
+              }
+            },
+            {
+              "call": "mcp__github__update_pull_request",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "pullNumber": 206,
+                "body": "Ships bounded replay."
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-sequence-branches-commit",
+      "kind": "two_step",
+      "cluster": "mcp__github__list_branches->mcp__github__get_commit",
+      "q": "In repository acme-platform/audit-box: List branches, then get the commit identified by the first branch commit.sha. Perform exactly those two tool calls, in that order, using the reply rather than guessing. Stop after the second call.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__list_branches",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box"
+              }
+            }
+          ],
+          "reply": [
+            {
+              "name": "main",
+              "commit": {
+                "sha": "a19bd320"
+              }
+            }
+          ]
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_commit",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "sha": "a19bd320"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-sequence-tags-release",
+      "kind": "two_step",
+      "cluster": "mcp__github__list_tags->mcp__github__get_release_by_tag",
+      "q": "In repository acme-platform/audit-box: List tags, then get the release identified by the first tag name. Perform exactly those two tool calls, in that order, using the reply rather than guessing. Stop after the second call.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__list_tags",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box"
+              }
+            }
+          ],
+          "reply": [
+            {
+              "name": "v8.2.9"
+            }
+          ]
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_release_by_tag",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "tag": "v8.2.9"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-sequence-releases-tag",
+      "kind": "two_step",
+      "cluster": "mcp__github__list_releases->mcp__github__get_tag",
+      "q": "In repository acme-platform/audit-box: List releases, then get the tag identified by the first release tag_name. Perform exactly those two tool calls, in that order, using the reply rather than guessing. Stop after the second call.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__list_releases",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box"
+              }
+            }
+          ],
+          "reply": [
+            {
+              "tag_name": "v8.3.0"
+            }
+          ]
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_tag",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "tag": "v8.3.0"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-sequence-commits-detail",
+      "kind": "two_step",
+      "cluster": "mcp__github__list_commits->mcp__github__get_commit",
+      "q": "In repository acme-platform/audit-box: List commits filtered to author tessa, then get details for the first returned SHA. Perform exactly those two tool calls, in that order, using the reply rather than guessing. Stop after the second call.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__list_commits",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "author": "tessa"
+              }
+            }
+          ],
+          "reply": [
+            {
+              "sha": "b31c02ad"
+            }
+          ]
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_commit",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "sha": "b31c02ad"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-sequence-issue-parent",
+      "kind": "two_step",
+      "cluster": "mcp__github__issue_read->mcp__github__issue_read",
+      "q": "In repository acme-platform/audit-box: Read issue 107, then get the issue identified by parent.number in that result. Perform exactly those two tool calls, in that order, using the reply rather than guessing. Stop after the second call.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__issue_read",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "method": "get",
+                "issue_number": 107
+              }
+            }
+          ],
+          "reply": {
+            "parent": {
+              "number": 98
+            }
+          }
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__issue_read",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "method": "get",
+                "issue_number": 98
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-sequence-pr-head",
+      "kind": "two_step",
+      "cluster": "mcp__github__pull_request_read->mcp__github__list_commits",
+      "q": "In repository acme-platform/audit-box: Read PR 207, then list commits with sha set to its returned head.sha. Perform exactly those two tool calls, in that order, using the reply rather than guessing. Stop after the second call.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__pull_request_read",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "method": "get",
+                "pullNumber": 207
+              }
+            }
+          ],
+          "reply": {
+            "head": {
+              "sha": "c41d03ef"
+            }
+          }
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__list_commits",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "sha": "c41d03ef"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-sequence-label-title",
+      "kind": "two_step",
+      "cluster": "mcp__github__get_label->mcp__github__create_issue",
+      "q": "In repository acme-platform/audit-box: Get label follow-up, then create an issue whose title is exactly its description and has no body. Perform exactly those two tool calls, in that order, using the reply rather than guessing. Stop after the second call.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_label",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "name": "follow-up"
+              }
+            }
+          ],
+          "reply": {
+            "description": "Audit retry ordering"
+          }
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__create_issue",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "title": "Audit retry ordering"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "t-sequence-file-user",
+      "kind": "two_step",
+      "cluster": "mcp__github__get_file_contents->mcp__github__search_users",
+      "q": "In repository acme-platform/audit-box: Read OWNERS.txt at refs/heads/main, then search users with query equal to its returned decoded text field. No optional search filters. Perform exactly those two tool calls, in that order, using the reply rather than guessing. Stop after the second call.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_file_contents",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "audit-box",
+                "path": "OWNERS.txt",
+                "ref": "refs/heads/main"
+              }
+            }
+          ],
+          "reply": {
+            "text": "nora in:login"
+          }
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__search_users",
+              "arguments": {
+                "query": "nora in:login"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    }
+  ],
+  "behavior": [
+    {
+      "id": "usernames-shared",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "usernames",
+      "q": "Update both entry points to reject whitespace-only usernames as well as empty names. Both intentionally enforce the same validation rule. Keep both public names and signatures and preserve valid outputs. Supply the complete replacement code.\n\ndef primary(name):\n    if not name:\n        raise ValueError('name required')\n    return {'name': name}\n\ndef secondary(name):\n    if not name:\n        raise ValueError('name required')\n    return {'legacy_name': name}\n",
+      "code": "def primary(name):\n    if not name:\n        raise ValueError('name required')\n    return {'name': name}\n\ndef secondary(name):\n    if not name:\n        raise ValueError('name required')\n    return {'legacy_name': name}\n",
+      "reference": "def _validate(name):\n    if not name or not name.strip():\n        raise ValueError(\"invalid\")\n\ndef primary(name):\n    _validate(name)\n    return {'name': name}\n\ndef secondary(name):\n    _validate(name)\n    return {'legacy_name': name}\n",
+      "checks": "original = {}\nexec(\"def primary(name):\\n    if not name:\\n        raise ValueError('name required')\\n    return {'name': name}\\n\\ndef secondary(name):\\n    if not name:\\n        raise ValueError('name required')\\n    return {'legacy_name': name}\\n\", original)\nfor value in ['', ' ', 'a']:\n    name = value\n    invalid = bool(not name or not name.strip())\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "usernames-shared",
+      "new_condition": "not name or not name.strip()",
+      "old_condition": "not name",
+      "values": [
+        "",
+        " ",
+        "a"
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "batch-size-shared",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "batch-size",
+      "q": "Update both entry points to reject negative batch sizes as well as zero. Both intentionally enforce the same validation rule. Keep both public names and signatures and preserve valid outputs. Supply the complete replacement code.\n\ndef primary(size):\n    if size == 0:\n        raise ValueError('invalid size')\n    return size * 2\n\ndef secondary(size):\n    if size == 0:\n        raise ValueError('invalid size')\n    return {'size': size}\n",
+      "code": "def primary(size):\n    if size == 0:\n        raise ValueError('invalid size')\n    return size * 2\n\ndef secondary(size):\n    if size == 0:\n        raise ValueError('invalid size')\n    return {'size': size}\n",
+      "reference": "def _validate(size):\n    if size <= 0:\n        raise ValueError(\"invalid\")\n\ndef primary(size):\n    _validate(size)\n    return size * 2\n\ndef secondary(size):\n    _validate(size)\n    return {'size': size}\n",
+      "checks": "original = {}\nexec(\"def primary(size):\\n    if size == 0:\\n        raise ValueError('invalid size')\\n    return size * 2\\n\\ndef secondary(size):\\n    if size == 0:\\n        raise ValueError('invalid size')\\n    return {'size': size}\\n\", original)\nfor value in [-1, 0, 1]:\n    size = value\n    invalid = bool(size <= 0)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "batch-size-shared",
+      "new_condition": "size <= 0",
+      "old_condition": "size == 0",
+      "values": [
+        -1,
+        0,
+        1
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "timeouts-shared",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "timeouts",
+      "q": "Update both entry points to reject a zero timeout as well as negative values. Both intentionally enforce the same validation rule. Keep both public names and signatures and preserve valid outputs. Supply the complete replacement code.\n\ndef primary(seconds):\n    if seconds < 0:\n        raise ValueError('invalid timeout')\n    return seconds * 1000\n\ndef secondary(seconds):\n    if seconds < 0:\n        raise ValueError('invalid timeout')\n    return {'timeout': seconds}\n",
+      "code": "def primary(seconds):\n    if seconds < 0:\n        raise ValueError('invalid timeout')\n    return seconds * 1000\n\ndef secondary(seconds):\n    if seconds < 0:\n        raise ValueError('invalid timeout')\n    return {'timeout': seconds}\n",
+      "reference": "def _validate(seconds):\n    if seconds <= 0:\n        raise ValueError(\"invalid\")\n\ndef primary(seconds):\n    _validate(seconds)\n    return seconds * 1000\n\ndef secondary(seconds):\n    _validate(seconds)\n    return {'timeout': seconds}\n",
+      "checks": "original = {}\nexec(\"def primary(seconds):\\n    if seconds < 0:\\n        raise ValueError('invalid timeout')\\n    return seconds * 1000\\n\\ndef secondary(seconds):\\n    if seconds < 0:\\n        raise ValueError('invalid timeout')\\n    return {'timeout': seconds}\\n\", original)\nfor value in [-1, 0, 1]:\n    seconds = value\n    invalid = bool(seconds <= 0)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "timeouts-shared",
+      "new_condition": "seconds <= 0",
+      "old_condition": "seconds < 0",
+      "values": [
+        -1,
+        0,
+        1
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "page-size-shared",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "page-size",
+      "q": "Update both entry points to cap page size at 100, retaining the existing positive minimum. Both intentionally enforce the same validation rule. Keep both public names and signatures and preserve valid outputs. Supply the complete replacement code.\n\ndef primary(limit):\n    if limit < 1:\n        raise ValueError('invalid limit')\n    return list(range(limit))\n\ndef secondary(limit):\n    if limit < 1:\n        raise ValueError('invalid limit')\n    return {'limit': limit}\n",
+      "code": "def primary(limit):\n    if limit < 1:\n        raise ValueError('invalid limit')\n    return list(range(limit))\n\ndef secondary(limit):\n    if limit < 1:\n        raise ValueError('invalid limit')\n    return {'limit': limit}\n",
+      "reference": "def _validate(limit):\n    if limit < 1 or limit > 100:\n        raise ValueError(\"invalid\")\n\ndef primary(limit):\n    _validate(limit)\n    return list(range(limit))\n\ndef secondary(limit):\n    _validate(limit)\n    return {'limit': limit}\n",
+      "checks": "original = {}\nexec(\"def primary(limit):\\n    if limit < 1:\\n        raise ValueError('invalid limit')\\n    return list(range(limit))\\n\\ndef secondary(limit):\\n    if limit < 1:\\n        raise ValueError('invalid limit')\\n    return {'limit': limit}\\n\", original)\nfor value in [0, 1, 100, 101]:\n    limit = value\n    invalid = bool(limit < 1 or limit > 100)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "page-size-shared",
+      "new_condition": "limit < 1 or limit > 100",
+      "old_condition": "limit < 1",
+      "values": [
+        0,
+        1,
+        100,
+        101
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "project-slug-shared",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "project-slug",
+      "q": "Update both entry points to reject slugs containing a slash as well as empty slugs. Both intentionally enforce the same validation rule. Keep both public names and signatures and preserve valid outputs. Supply the complete replacement code.\n\ndef primary(slug):\n    if not slug:\n        raise ValueError('invalid slug')\n    return slug.lower()\n\ndef secondary(slug):\n    if not slug:\n        raise ValueError('invalid slug')\n    return {'slug': slug}\n",
+      "code": "def primary(slug):\n    if not slug:\n        raise ValueError('invalid slug')\n    return slug.lower()\n\ndef secondary(slug):\n    if not slug:\n        raise ValueError('invalid slug')\n    return {'slug': slug}\n",
+      "reference": "def _validate(slug):\n    if not slug or '/' in slug:\n        raise ValueError(\"invalid\")\n\ndef primary(slug):\n    _validate(slug)\n    return slug.lower()\n\ndef secondary(slug):\n    _validate(slug)\n    return {'slug': slug}\n",
+      "checks": "original = {}\nexec(\"def primary(slug):\\n    if not slug:\\n        raise ValueError('invalid slug')\\n    return slug.lower()\\n\\ndef secondary(slug):\\n    if not slug:\\n        raise ValueError('invalid slug')\\n    return {'slug': slug}\\n\", original)\nfor value in ['', 'a', 'a/b']:\n    slug = value\n    invalid = bool(not slug or '/' in slug)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "project-slug-shared",
+      "new_condition": "not slug or '/' in slug",
+      "old_condition": "not slug",
+      "values": [
+        "",
+        "a",
+        "a/b"
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "retry-count-shared",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "retry-count",
+      "q": "Update both entry points to reject retry counts above five while preserving zero retries. Both intentionally enforce the same validation rule. Keep both public names and signatures and preserve valid outputs. Supply the complete replacement code.\n\ndef primary(retries):\n    if retries < 0:\n        raise ValueError('invalid retries')\n    return retries + 1\n\ndef secondary(retries):\n    if retries < 0:\n        raise ValueError('invalid retries')\n    return {'retries': retries}\n",
+      "code": "def primary(retries):\n    if retries < 0:\n        raise ValueError('invalid retries')\n    return retries + 1\n\ndef secondary(retries):\n    if retries < 0:\n        raise ValueError('invalid retries')\n    return {'retries': retries}\n",
+      "reference": "def _validate(retries):\n    if retries < 0 or retries > 5:\n        raise ValueError(\"invalid\")\n\ndef primary(retries):\n    _validate(retries)\n    return retries + 1\n\ndef secondary(retries):\n    _validate(retries)\n    return {'retries': retries}\n",
+      "checks": "original = {}\nexec(\"def primary(retries):\\n    if retries < 0:\\n        raise ValueError('invalid retries')\\n    return retries + 1\\n\\ndef secondary(retries):\\n    if retries < 0:\\n        raise ValueError('invalid retries')\\n    return {'retries': retries}\\n\", original)\nfor value in [-1, 0, 5, 6]:\n    retries = value\n    invalid = bool(retries < 0 or retries > 5)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "retry-count-shared",
+      "new_condition": "retries < 0 or retries > 5",
+      "old_condition": "retries < 0",
+      "values": [
+        -1,
+        0,
+        5,
+        6
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "tags-shared",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "tags",
+      "q": "Update both entry points to reject tags longer than twenty characters as well as empty tags. Both intentionally enforce the same validation rule. Keep both public names and signatures and preserve valid outputs. Supply the complete replacement code.\n\ndef primary(tag):\n    if not tag:\n        raise ValueError('invalid tag')\n    return tag.upper()\n\ndef secondary(tag):\n    if not tag:\n        raise ValueError('invalid tag')\n    return {'tag': tag}\n",
+      "code": "def primary(tag):\n    if not tag:\n        raise ValueError('invalid tag')\n    return tag.upper()\n\ndef secondary(tag):\n    if not tag:\n        raise ValueError('invalid tag')\n    return {'tag': tag}\n",
+      "reference": "def _validate(tag):\n    if not tag or len(tag) > 20:\n        raise ValueError(\"invalid\")\n\ndef primary(tag):\n    _validate(tag)\n    return tag.upper()\n\ndef secondary(tag):\n    _validate(tag)\n    return {'tag': tag}\n",
+      "checks": "original = {}\nexec(\"def primary(tag):\\n    if not tag:\\n        raise ValueError('invalid tag')\\n    return tag.upper()\\n\\ndef secondary(tag):\\n    if not tag:\\n        raise ValueError('invalid tag')\\n    return {'tag': tag}\\n\", original)\nfor value in ['', 'a', 'aaaaaaaaaaaaaaaaaaaa', 'aaaaaaaaaaaaaaaaaaaaa']:\n    tag = value\n    invalid = bool(not tag or len(tag) > 20)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "tags-shared",
+      "new_condition": "not tag or len(tag) > 20",
+      "old_condition": "not tag",
+      "values": [
+        "",
+        "a",
+        "aaaaaaaaaaaaaaaaaaaa",
+        "aaaaaaaaaaaaaaaaaaaaa"
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "ports-shared",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "ports",
+      "q": "Update both entry points to reject ports above 65535 as well as nonpositive ports. Both intentionally enforce the same validation rule. Keep both public names and signatures and preserve valid outputs. Supply the complete replacement code.\n\ndef primary(port):\n    if port < 1:\n        raise ValueError('invalid port')\n    return str(port)\n\ndef secondary(port):\n    if port < 1:\n        raise ValueError('invalid port')\n    return {'port': port}\n",
+      "code": "def primary(port):\n    if port < 1:\n        raise ValueError('invalid port')\n    return str(port)\n\ndef secondary(port):\n    if port < 1:\n        raise ValueError('invalid port')\n    return {'port': port}\n",
+      "reference": "def _validate(port):\n    if port < 1 or port > 65535:\n        raise ValueError(\"invalid\")\n\ndef primary(port):\n    _validate(port)\n    return str(port)\n\ndef secondary(port):\n    _validate(port)\n    return {'port': port}\n",
+      "checks": "original = {}\nexec(\"def primary(port):\\n    if port < 1:\\n        raise ValueError('invalid port')\\n    return str(port)\\n\\ndef secondary(port):\\n    if port < 1:\\n        raise ValueError('invalid port')\\n    return {'port': port}\\n\", original)\nfor value in [0, 1, 65535, 65536]:\n    port = value\n    invalid = bool(port < 1 or port > 65535)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "ports-shared",
+      "new_condition": "port < 1 or port > 65535",
+      "old_condition": "port < 1",
+      "values": [
+        0,
+        1,
+        65535,
+        65536
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "new-upload-size",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "upload-size",
+      "q": "Update both entry points to reject zero upload sizes as well as negative sizes. Both intentionally implement the same rule. Preserve the public functions, signatures and valid outputs. Supply complete replacement code.\n\ndef primary(size):\n    if size < 0:\n        raise ValueError(\"invalid input\")\n    return size\n\ndef secondary(size):\n    if size < 0:\n        raise ValueError(\"invalid input\")\n    return {'bytes': size}\n",
+      "code": "def primary(size):\n    if size < 0:\n        raise ValueError(\"invalid input\")\n    return size\n\ndef secondary(size):\n    if size < 0:\n        raise ValueError(\"invalid input\")\n    return {'bytes': size}\n",
+      "reference": "def _validate(size):\n    if size <= 0:\n        raise ValueError(\"invalid\")\n\ndef primary(size):\n    _validate(size)\n    return size\n\ndef secondary(size):\n    _validate(size)\n    return {'bytes': size}\n",
+      "checks": "original = {}\nexec('def primary(size):\\n    if size < 0:\\n        raise ValueError(\"invalid input\")\\n    return size\\n\\ndef secondary(size):\\n    if size < 0:\\n        raise ValueError(\"invalid input\")\\n    return {\\'bytes\\': size}\\n', original)\nfor value in [-1, 0, 1, 100]:\n    size = value\n    invalid = bool(size <= 0)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-upload-size",
+      "new_condition": "size <= 0",
+      "old_condition": "size < 0",
+      "values": [
+        -1,
+        0,
+        1,
+        100
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "new-worker-count",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "worker-count",
+      "q": "Update both entry points to reject zero workers as well as negative worker counts. Both intentionally implement the same rule. Preserve the public functions, signatures and valid outputs. Supply complete replacement code.\n\ndef primary(workers):\n    if workers < 0:\n        raise ValueError(\"invalid input\")\n    return workers * 2\n\ndef secondary(workers):\n    if workers < 0:\n        raise ValueError(\"invalid input\")\n    return {'workers': workers}\n",
+      "code": "def primary(workers):\n    if workers < 0:\n        raise ValueError(\"invalid input\")\n    return workers * 2\n\ndef secondary(workers):\n    if workers < 0:\n        raise ValueError(\"invalid input\")\n    return {'workers': workers}\n",
+      "reference": "def _validate(workers):\n    if workers <= 0:\n        raise ValueError(\"invalid\")\n\ndef primary(workers):\n    _validate(workers)\n    return workers * 2\n\ndef secondary(workers):\n    _validate(workers)\n    return {'workers': workers}\n",
+      "checks": "original = {}\nexec('def primary(workers):\\n    if workers < 0:\\n        raise ValueError(\"invalid input\")\\n    return workers * 2\\n\\ndef secondary(workers):\\n    if workers < 0:\\n        raise ValueError(\"invalid input\")\\n    return {\\'workers\\': workers}\\n', original)\nfor value in [-1, 0, 1, 4]:\n    workers = value\n    invalid = bool(workers <= 0)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-worker-count",
+      "new_condition": "workers <= 0",
+      "old_condition": "workers < 0",
+      "values": [
+        -1,
+        0,
+        1,
+        4
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "new-ticket-title",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "ticket-title",
+      "q": "Update both entry points to reject whitespace-only ticket titles as well as empty titles. Both intentionally implement the same rule. Preserve the public functions, signatures and valid outputs. Supply complete replacement code.\n\ndef primary(title):\n    if not title:\n        raise ValueError(\"invalid input\")\n    return title\n\ndef secondary(title):\n    if not title:\n        raise ValueError(\"invalid input\")\n    return {'title': title}\n",
+      "code": "def primary(title):\n    if not title:\n        raise ValueError(\"invalid input\")\n    return title\n\ndef secondary(title):\n    if not title:\n        raise ValueError(\"invalid input\")\n    return {'title': title}\n",
+      "reference": "def _validate(title):\n    if not title or not title.strip():\n        raise ValueError(\"invalid\")\n\ndef primary(title):\n    _validate(title)\n    return title\n\ndef secondary(title):\n    _validate(title)\n    return {'title': title}\n",
+      "checks": "original = {}\nexec('def primary(title):\\n    if not title:\\n        raise ValueError(\"invalid input\")\\n    return title\\n\\ndef secondary(title):\\n    if not title:\\n        raise ValueError(\"invalid input\")\\n    return {\\'title\\': title}\\n', original)\nfor value in ['', ' ', ' x ', 'title']:\n    title = value\n    invalid = bool(not title or not title.strip())\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-ticket-title",
+      "new_condition": "not title or not title.strip()",
+      "old_condition": "not title",
+      "values": [
+        "",
+        " ",
+        " x ",
+        "title"
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "new-cache-key",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "cache-key",
+      "q": "Update both entry points to reject keys containing a colon as well as empty keys. Both intentionally implement the same rule. Preserve the public functions, signatures and valid outputs. Supply complete replacement code.\n\ndef primary(key):\n    if not key:\n        raise ValueError(\"invalid input\")\n    return key\n\ndef secondary(key):\n    if not key:\n        raise ValueError(\"invalid input\")\n    return {'key': key}\n",
+      "code": "def primary(key):\n    if not key:\n        raise ValueError(\"invalid input\")\n    return key\n\ndef secondary(key):\n    if not key:\n        raise ValueError(\"invalid input\")\n    return {'key': key}\n",
+      "reference": "def _validate(key):\n    if not key or ':' in key:\n        raise ValueError(\"invalid\")\n\ndef primary(key):\n    _validate(key)\n    return key\n\ndef secondary(key):\n    _validate(key)\n    return {'key': key}\n",
+      "checks": "original = {}\nexec('def primary(key):\\n    if not key:\\n        raise ValueError(\"invalid input\")\\n    return key\\n\\ndef secondary(key):\\n    if not key:\\n        raise ValueError(\"invalid input\")\\n    return {\\'key\\': key}\\n', original)\nfor value in ['', 'a', 'a:b']:\n    key = value\n    invalid = bool(not key or ':' in key)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-cache-key",
+      "new_condition": "not key or ':' in key",
+      "old_condition": "not key",
+      "values": [
+        "",
+        "a",
+        "a:b"
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "new-chunk-size",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "chunk-size",
+      "q": "Update both entry points to reject chunks above 4096 in addition to the positive minimum. Both intentionally implement the same rule. Preserve the public functions, signatures and valid outputs. Supply complete replacement code.\n\ndef primary(chunk):\n    if chunk < 1:\n        raise ValueError(\"invalid input\")\n    return chunk // 2\n\ndef secondary(chunk):\n    if chunk < 1:\n        raise ValueError(\"invalid input\")\n    return {'chunk': chunk}\n",
+      "code": "def primary(chunk):\n    if chunk < 1:\n        raise ValueError(\"invalid input\")\n    return chunk // 2\n\ndef secondary(chunk):\n    if chunk < 1:\n        raise ValueError(\"invalid input\")\n    return {'chunk': chunk}\n",
+      "reference": "def _validate(chunk):\n    if chunk < 1 or chunk > 4096:\n        raise ValueError(\"invalid\")\n\ndef primary(chunk):\n    _validate(chunk)\n    return chunk // 2\n\ndef secondary(chunk):\n    _validate(chunk)\n    return {'chunk': chunk}\n",
+      "checks": "original = {}\nexec('def primary(chunk):\\n    if chunk < 1:\\n        raise ValueError(\"invalid input\")\\n    return chunk // 2\\n\\ndef secondary(chunk):\\n    if chunk < 1:\\n        raise ValueError(\"invalid input\")\\n    return {\\'chunk\\': chunk}\\n', original)\nfor value in [-1, 0, 1, 4096, 4097]:\n    chunk = value\n    invalid = bool(chunk < 1 or chunk > 4096)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-chunk-size",
+      "new_condition": "chunk < 1 or chunk > 4096",
+      "old_condition": "chunk < 1",
+      "values": [
+        -1,
+        0,
+        1,
+        4096,
+        4097
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "new-http-status",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "http-status",
+      "q": "Update both entry points to reject status codes above 599 as well as those below 100. Both intentionally implement the same rule. Preserve the public functions, signatures and valid outputs. Supply complete replacement code.\n\ndef primary(status):\n    if status < 100:\n        raise ValueError(\"invalid input\")\n    return str(status)\n\ndef secondary(status):\n    if status < 100:\n        raise ValueError(\"invalid input\")\n    return {'status': status}\n",
+      "code": "def primary(status):\n    if status < 100:\n        raise ValueError(\"invalid input\")\n    return str(status)\n\ndef secondary(status):\n    if status < 100:\n        raise ValueError(\"invalid input\")\n    return {'status': status}\n",
+      "reference": "def _validate(status):\n    if status < 100 or status > 599:\n        raise ValueError(\"invalid\")\n\ndef primary(status):\n    _validate(status)\n    return str(status)\n\ndef secondary(status):\n    _validate(status)\n    return {'status': status}\n",
+      "checks": "original = {}\nexec('def primary(status):\\n    if status < 100:\\n        raise ValueError(\"invalid input\")\\n    return str(status)\\n\\ndef secondary(status):\\n    if status < 100:\\n        raise ValueError(\"invalid input\")\\n    return {\\'status\\': status}\\n', original)\nfor value in [99, 100, 200, 599, 600]:\n    status = value\n    invalid = bool(status < 100 or status > 599)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-http-status",
+      "new_condition": "status < 100 or status > 599",
+      "old_condition": "status < 100",
+      "values": [
+        99,
+        100,
+        200,
+        599,
+        600
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "new-day-number",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "day-number",
+      "q": "Update both entry points to reject day numbers above 31 in addition to those below one. Both intentionally implement the same rule. Preserve the public functions, signatures and valid outputs. Supply complete replacement code.\n\ndef primary(day):\n    if day < 1:\n        raise ValueError(\"invalid input\")\n    return day\n\ndef secondary(day):\n    if day < 1:\n        raise ValueError(\"invalid input\")\n    return {'day': day}\n",
+      "code": "def primary(day):\n    if day < 1:\n        raise ValueError(\"invalid input\")\n    return day\n\ndef secondary(day):\n    if day < 1:\n        raise ValueError(\"invalid input\")\n    return {'day': day}\n",
+      "reference": "def _validate(day):\n    if day < 1 or day > 31:\n        raise ValueError(\"invalid\")\n\ndef primary(day):\n    _validate(day)\n    return day\n\ndef secondary(day):\n    _validate(day)\n    return {'day': day}\n",
+      "checks": "original = {}\nexec('def primary(day):\\n    if day < 1:\\n        raise ValueError(\"invalid input\")\\n    return day\\n\\ndef secondary(day):\\n    if day < 1:\\n        raise ValueError(\"invalid input\")\\n    return {\\'day\\': day}\\n', original)\nfor value in [0, 1, 15, 31, 32]:\n    day = value\n    invalid = bool(day < 1 or day > 31)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-day-number",
+      "new_condition": "day < 1 or day > 31",
+      "old_condition": "day < 1",
+      "values": [
+        0,
+        1,
+        15,
+        31,
+        32
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "new-percentage",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "percentage",
+      "q": "Update both entry points to reject percentages above 100 as well as negative values. Both intentionally implement the same rule. Preserve the public functions, signatures and valid outputs. Supply complete replacement code.\n\ndef primary(percent):\n    if percent < 0:\n        raise ValueError(\"invalid input\")\n    return percent / 100\n\ndef secondary(percent):\n    if percent < 0:\n        raise ValueError(\"invalid input\")\n    return {'percent': percent}\n",
+      "code": "def primary(percent):\n    if percent < 0:\n        raise ValueError(\"invalid input\")\n    return percent / 100\n\ndef secondary(percent):\n    if percent < 0:\n        raise ValueError(\"invalid input\")\n    return {'percent': percent}\n",
+      "reference": "def _validate(percent):\n    if percent < 0 or percent > 100:\n        raise ValueError(\"invalid\")\n\ndef primary(percent):\n    _validate(percent)\n    return percent / 100\n\ndef secondary(percent):\n    _validate(percent)\n    return {'percent': percent}\n",
+      "checks": "original = {}\nexec('def primary(percent):\\n    if percent < 0:\\n        raise ValueError(\"invalid input\")\\n    return percent / 100\\n\\ndef secondary(percent):\\n    if percent < 0:\\n        raise ValueError(\"invalid input\")\\n    return {\\'percent\\': percent}\\n', original)\nfor value in [-1, 0, 50, 100, 101]:\n    percent = value\n    invalid = bool(percent < 0 or percent > 100)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-percentage",
+      "new_condition": "percent < 0 or percent > 100",
+      "old_condition": "percent < 0",
+      "values": [
+        -1,
+        0,
+        50,
+        100,
+        101
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "new-sort-direction",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "sort-direction",
+      "q": "Update both entry points to accept only asc or desc, rejecting all other sort directions. Both intentionally implement the same rule. Preserve the public functions, signatures and valid outputs. Supply complete replacement code.\n\ndef primary(direction):\n    if not direction:\n        raise ValueError(\"invalid input\")\n    return direction\n\ndef secondary(direction):\n    if not direction:\n        raise ValueError(\"invalid input\")\n    return {'direction': direction}\n",
+      "code": "def primary(direction):\n    if not direction:\n        raise ValueError(\"invalid input\")\n    return direction\n\ndef secondary(direction):\n    if not direction:\n        raise ValueError(\"invalid input\")\n    return {'direction': direction}\n",
+      "reference": "def _validate(direction):\n    if direction not in ('asc', 'desc'):\n        raise ValueError(\"invalid\")\n\ndef primary(direction):\n    _validate(direction)\n    return direction\n\ndef secondary(direction):\n    _validate(direction)\n    return {'direction': direction}\n",
+      "checks": "original = {}\nexec('def primary(direction):\\n    if not direction:\\n        raise ValueError(\"invalid input\")\\n    return direction\\n\\ndef secondary(direction):\\n    if not direction:\\n        raise ValueError(\"invalid input\")\\n    return {\\'direction\\': direction}\\n', original)\nfor value in ['', 'asc', 'desc', 'up']:\n    direction = value\n    invalid = bool(direction not in ('asc', 'desc'))\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-sort-direction",
+      "new_condition": "direction not in ('asc', 'desc')",
+      "old_condition": "not direction",
+      "values": [
+        "",
+        "asc",
+        "desc",
+        "up"
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "new-locale-code",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "locale-code",
+      "q": "Update both entry points to require exactly two characters in the locale code. Both intentionally implement the same rule. Preserve the public functions, signatures and valid outputs. Supply complete replacement code.\n\ndef primary(locale):\n    if not locale:\n        raise ValueError(\"invalid input\")\n    return locale.lower()\n\ndef secondary(locale):\n    if not locale:\n        raise ValueError(\"invalid input\")\n    return {'locale': locale}\n",
+      "code": "def primary(locale):\n    if not locale:\n        raise ValueError(\"invalid input\")\n    return locale.lower()\n\ndef secondary(locale):\n    if not locale:\n        raise ValueError(\"invalid input\")\n    return {'locale': locale}\n",
+      "reference": "def _validate(locale):\n    if not locale or len(locale) != 2:\n        raise ValueError(\"invalid\")\n\ndef primary(locale):\n    _validate(locale)\n    return locale.lower()\n\ndef secondary(locale):\n    _validate(locale)\n    return {'locale': locale}\n",
+      "checks": "original = {}\nexec('def primary(locale):\\n    if not locale:\\n        raise ValueError(\"invalid input\")\\n    return locale.lower()\\n\\ndef secondary(locale):\\n    if not locale:\\n        raise ValueError(\"invalid input\")\\n    return {\\'locale\\': locale}\\n', original)\nfor value in ['', 'e', 'en', 'fr', 'eng']:\n    locale = value\n    invalid = bool(not locale or len(locale) != 2)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-locale-code",
+      "new_condition": "not locale or len(locale) != 2",
+      "old_condition": "not locale",
+      "values": [
+        "",
+        "e",
+        "en",
+        "fr",
+        "eng"
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "new-thread-count",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "thread-count",
+      "q": "Update both entry points to reject more than 64 threads as well as nonpositive counts. Both intentionally implement the same rule. Preserve the public functions, signatures and valid outputs. Supply complete replacement code.\n\ndef primary(threads):\n    if threads < 1:\n        raise ValueError(\"invalid input\")\n    return threads + 1\n\ndef secondary(threads):\n    if threads < 1:\n        raise ValueError(\"invalid input\")\n    return {'threads': threads}\n",
+      "code": "def primary(threads):\n    if threads < 1:\n        raise ValueError(\"invalid input\")\n    return threads + 1\n\ndef secondary(threads):\n    if threads < 1:\n        raise ValueError(\"invalid input\")\n    return {'threads': threads}\n",
+      "reference": "def _validate(threads):\n    if threads < 1 or threads > 64:\n        raise ValueError(\"invalid\")\n\ndef primary(threads):\n    _validate(threads)\n    return threads + 1\n\ndef secondary(threads):\n    _validate(threads)\n    return {'threads': threads}\n",
+      "checks": "original = {}\nexec('def primary(threads):\\n    if threads < 1:\\n        raise ValueError(\"invalid input\")\\n    return threads + 1\\n\\ndef secondary(threads):\\n    if threads < 1:\\n        raise ValueError(\"invalid input\")\\n    return {\\'threads\\': threads}\\n', original)\nfor value in [0, 1, 8, 64, 65]:\n    threads = value\n    invalid = bool(threads < 1 or threads > 64)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-thread-count",
+      "new_condition": "threads < 1 or threads > 64",
+      "old_condition": "threads < 1",
+      "values": [
+        0,
+        1,
+        8,
+        64,
+        65
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "new-document-name",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "document-name",
+      "q": "Update both entry points to reject names containing a newline as well as empty names. Both intentionally implement the same rule. Preserve the public functions, signatures and valid outputs. Supply complete replacement code.\n\ndef primary(name):\n    if not name:\n        raise ValueError(\"invalid input\")\n    return name\n\ndef secondary(name):\n    if not name:\n        raise ValueError(\"invalid input\")\n    return {'name': name}\n",
+      "code": "def primary(name):\n    if not name:\n        raise ValueError(\"invalid input\")\n    return name\n\ndef secondary(name):\n    if not name:\n        raise ValueError(\"invalid input\")\n    return {'name': name}\n",
+      "reference": "def _validate(name):\n    if not name or '\\n' in name:\n        raise ValueError(\"invalid\")\n\ndef primary(name):\n    _validate(name)\n    return name\n\ndef secondary(name):\n    _validate(name)\n    return {'name': name}\n",
+      "checks": "original = {}\nexec('def primary(name):\\n    if not name:\\n        raise ValueError(\"invalid input\")\\n    return name\\n\\ndef secondary(name):\\n    if not name:\\n        raise ValueError(\"invalid input\")\\n    return {\\'name\\': name}\\n', original)\nfor value in ['', 'a', 'a\\nb']:\n    name = value\n    invalid = bool(not name or '\\n' in name)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-document-name",
+      "new_condition": "not name or '\\n' in name",
+      "old_condition": "not name",
+      "values": [
+        "",
+        "a",
+        "a\nb"
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "new-revision",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "revision",
+      "q": "Update both entry points to require revisions to start at one rather than zero. Both intentionally implement the same rule. Preserve the public functions, signatures and valid outputs. Supply complete replacement code.\n\ndef primary(revision):\n    if revision < 0:\n        raise ValueError(\"invalid input\")\n    return revision\n\ndef secondary(revision):\n    if revision < 0:\n        raise ValueError(\"invalid input\")\n    return {'revision': revision}\n",
+      "code": "def primary(revision):\n    if revision < 0:\n        raise ValueError(\"invalid input\")\n    return revision\n\ndef secondary(revision):\n    if revision < 0:\n        raise ValueError(\"invalid input\")\n    return {'revision': revision}\n",
+      "reference": "def _validate(revision):\n    if revision <= 0:\n        raise ValueError(\"invalid\")\n\ndef primary(revision):\n    _validate(revision)\n    return revision\n\ndef secondary(revision):\n    _validate(revision)\n    return {'revision': revision}\n",
+      "checks": "original = {}\nexec('def primary(revision):\\n    if revision < 0:\\n        raise ValueError(\"invalid input\")\\n    return revision\\n\\ndef secondary(revision):\\n    if revision < 0:\\n        raise ValueError(\"invalid input\")\\n    return {\\'revision\\': revision}\\n', original)\nfor value in [-1, 0, 1, 7]:\n    revision = value\n    invalid = bool(revision <= 0)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-revision",
+      "new_condition": "revision <= 0",
+      "old_condition": "revision < 0",
+      "values": [
+        -1,
+        0,
+        1,
+        7
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "new-email-address",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "email-address",
+      "q": "Update both entry points to require an at-sign in addition to a nonempty email address. Both intentionally implement the same rule. Preserve the public functions, signatures and valid outputs. Supply complete replacement code.\n\ndef primary(address):\n    if not address:\n        raise ValueError(\"invalid input\")\n    return address\n\ndef secondary(address):\n    if not address:\n        raise ValueError(\"invalid input\")\n    return {'address': address}\n",
+      "code": "def primary(address):\n    if not address:\n        raise ValueError(\"invalid input\")\n    return address\n\ndef secondary(address):\n    if not address:\n        raise ValueError(\"invalid input\")\n    return {'address': address}\n",
+      "reference": "def _validate(address):\n    if not address or '@' not in address:\n        raise ValueError(\"invalid\")\n\ndef primary(address):\n    _validate(address)\n    return address\n\ndef secondary(address):\n    _validate(address)\n    return {'address': address}\n",
+      "checks": "original = {}\nexec('def primary(address):\\n    if not address:\\n        raise ValueError(\"invalid input\")\\n    return address\\n\\ndef secondary(address):\\n    if not address:\\n        raise ValueError(\"invalid input\")\\n    return {\\'address\\': address}\\n', original)\nfor value in ['', 'a', 'a@b']:\n    address = value\n    invalid = bool(not address or '@' not in address)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-email-address",
+      "new_condition": "not address or '@' not in address",
+      "old_condition": "not address",
+      "values": [
+        "",
+        "a",
+        "a@b"
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "new-retention-days",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "retention-days",
+      "q": "Update both entry points to reject retention periods over 365 days as well as nonpositive periods. Both intentionally implement the same rule. Preserve the public functions, signatures and valid outputs. Supply complete replacement code.\n\ndef primary(days):\n    if days < 1:\n        raise ValueError(\"invalid input\")\n    return days * 86400\n\ndef secondary(days):\n    if days < 1:\n        raise ValueError(\"invalid input\")\n    return {'days': days}\n",
+      "code": "def primary(days):\n    if days < 1:\n        raise ValueError(\"invalid input\")\n    return days * 86400\n\ndef secondary(days):\n    if days < 1:\n        raise ValueError(\"invalid input\")\n    return {'days': days}\n",
+      "reference": "def _validate(days):\n    if days < 1 or days > 365:\n        raise ValueError(\"invalid\")\n\ndef primary(days):\n    _validate(days)\n    return days * 86400\n\ndef secondary(days):\n    _validate(days)\n    return {'days': days}\n",
+      "checks": "original = {}\nexec('def primary(days):\\n    if days < 1:\\n        raise ValueError(\"invalid input\")\\n    return days * 86400\\n\\ndef secondary(days):\\n    if days < 1:\\n        raise ValueError(\"invalid input\")\\n    return {\\'days\\': days}\\n', original)\nfor value in [0, 1, 30, 365, 366]:\n    days = value\n    invalid = bool(days < 1 or days > 365)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-retention-days",
+      "new_condition": "days < 1 or days > 365",
+      "old_condition": "days < 1",
+      "values": [
+        0,
+        1,
+        30,
+        365,
+        366
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "new-file-extension",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "file-extension",
+      "q": "Update both entry points to reject a leading dot in the stored extension as well as an empty extension. Both intentionally implement the same rule. Preserve the public functions, signatures and valid outputs. Supply complete replacement code.\n\ndef primary(extension):\n    if not extension:\n        raise ValueError(\"invalid input\")\n    return extension.lower()\n\ndef secondary(extension):\n    if not extension:\n        raise ValueError(\"invalid input\")\n    return {'extension': extension}\n",
+      "code": "def primary(extension):\n    if not extension:\n        raise ValueError(\"invalid input\")\n    return extension.lower()\n\ndef secondary(extension):\n    if not extension:\n        raise ValueError(\"invalid input\")\n    return {'extension': extension}\n",
+      "reference": "def _validate(extension):\n    if not extension or extension.startswith('.'):\n        raise ValueError(\"invalid\")\n\ndef primary(extension):\n    _validate(extension)\n    return extension.lower()\n\ndef secondary(extension):\n    _validate(extension)\n    return {'extension': extension}\n",
+      "checks": "original = {}\nexec('def primary(extension):\\n    if not extension:\\n        raise ValueError(\"invalid input\")\\n    return extension.lower()\\n\\ndef secondary(extension):\\n    if not extension:\\n        raise ValueError(\"invalid input\")\\n    return {\\'extension\\': extension}\\n', original)\nfor value in ['', 'txt', '.txt']:\n    extension = value\n    invalid = bool(not extension or extension.startswith('.'))\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-file-extension",
+      "new_condition": "not extension or extension.startswith('.')",
+      "old_condition": "not extension",
+      "values": [
+        "",
+        "txt",
+        ".txt"
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "new-sequence-length",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "sequence-length",
+      "q": "Update both entry points to reject empty sequence lengths as well as negative lengths. Both intentionally implement the same rule. Preserve the public functions, signatures and valid outputs. Supply complete replacement code.\n\ndef primary(length):\n    if length < 0:\n        raise ValueError(\"invalid input\")\n    return length\n\ndef secondary(length):\n    if length < 0:\n        raise ValueError(\"invalid input\")\n    return {'length': length}\n",
+      "code": "def primary(length):\n    if length < 0:\n        raise ValueError(\"invalid input\")\n    return length\n\ndef secondary(length):\n    if length < 0:\n        raise ValueError(\"invalid input\")\n    return {'length': length}\n",
+      "reference": "def _validate(length):\n    if length <= 0:\n        raise ValueError(\"invalid\")\n\ndef primary(length):\n    _validate(length)\n    return length\n\ndef secondary(length):\n    _validate(length)\n    return {'length': length}\n",
+      "checks": "original = {}\nexec('def primary(length):\\n    if length < 0:\\n        raise ValueError(\"invalid input\")\\n    return length\\n\\ndef secondary(length):\\n    if length < 0:\\n        raise ValueError(\"invalid input\")\\n    return {\\'length\\': length}\\n', original)\nfor value in [-1, 0, 1, 20]:\n    length = value\n    invalid = bool(length <= 0)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-sequence-length",
+      "new_condition": "length <= 0",
+      "old_condition": "length < 0",
+      "values": [
+        -1,
+        0,
+        1,
+        20
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "new-queue-priority",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "queue-priority",
+      "q": "Update both entry points to reject priorities above nine as well as negative priorities. Both intentionally implement the same rule. Preserve the public functions, signatures and valid outputs. Supply complete replacement code.\n\ndef primary(priority):\n    if priority < 0:\n        raise ValueError(\"invalid input\")\n    return priority\n\ndef secondary(priority):\n    if priority < 0:\n        raise ValueError(\"invalid input\")\n    return {'priority': priority}\n",
+      "code": "def primary(priority):\n    if priority < 0:\n        raise ValueError(\"invalid input\")\n    return priority\n\ndef secondary(priority):\n    if priority < 0:\n        raise ValueError(\"invalid input\")\n    return {'priority': priority}\n",
+      "reference": "def _validate(priority):\n    if priority < 0 or priority > 9:\n        raise ValueError(\"invalid\")\n\ndef primary(priority):\n    _validate(priority)\n    return priority\n\ndef secondary(priority):\n    _validate(priority)\n    return {'priority': priority}\n",
+      "checks": "original = {}\nexec('def primary(priority):\\n    if priority < 0:\\n        raise ValueError(\"invalid input\")\\n    return priority\\n\\ndef secondary(priority):\\n    if priority < 0:\\n        raise ValueError(\"invalid input\")\\n    return {\\'priority\\': priority}\\n', original)\nfor value in [-1, 0, 4, 9, 10]:\n    priority = value\n    invalid = bool(priority < 0 or priority > 9)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-queue-priority",
+      "new_condition": "priority < 0 or priority > 9",
+      "old_condition": "priority < 0",
+      "values": [
+        -1,
+        0,
+        4,
+        9,
+        10
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "new-window-seconds",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "window-seconds",
+      "q": "Update both entry points to reject windows over an hour as well as nonpositive windows. Both intentionally implement the same rule. Preserve the public functions, signatures and valid outputs. Supply complete replacement code.\n\ndef primary(seconds):\n    if seconds < 1:\n        raise ValueError(\"invalid input\")\n    return seconds\n\ndef secondary(seconds):\n    if seconds < 1:\n        raise ValueError(\"invalid input\")\n    return {'seconds': seconds}\n",
+      "code": "def primary(seconds):\n    if seconds < 1:\n        raise ValueError(\"invalid input\")\n    return seconds\n\ndef secondary(seconds):\n    if seconds < 1:\n        raise ValueError(\"invalid input\")\n    return {'seconds': seconds}\n",
+      "reference": "def _validate(seconds):\n    if seconds < 1 or seconds > 3600:\n        raise ValueError(\"invalid\")\n\ndef primary(seconds):\n    _validate(seconds)\n    return seconds\n\ndef secondary(seconds):\n    _validate(seconds)\n    return {'seconds': seconds}\n",
+      "checks": "original = {}\nexec('def primary(seconds):\\n    if seconds < 1:\\n        raise ValueError(\"invalid input\")\\n    return seconds\\n\\ndef secondary(seconds):\\n    if seconds < 1:\\n        raise ValueError(\"invalid input\")\\n    return {\\'seconds\\': seconds}\\n', original)\nfor value in [0, 1, 60, 3600, 3601]:\n    seconds = value\n    invalid = bool(seconds < 1 or seconds > 3600)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-window-seconds",
+      "new_condition": "seconds < 1 or seconds > 3600",
+      "old_condition": "seconds < 1",
+      "values": [
+        0,
+        1,
+        60,
+        3600,
+        3601
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "new-path-segment",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "path-segment",
+      "q": "Update both entry points to reject dot and dot-dot segments as well as empty segments. Both intentionally implement the same rule. Preserve the public functions, signatures and valid outputs. Supply complete replacement code.\n\ndef primary(segment):\n    if not segment:\n        raise ValueError(\"invalid input\")\n    return segment\n\ndef secondary(segment):\n    if not segment:\n        raise ValueError(\"invalid input\")\n    return {'segment': segment}\n",
+      "code": "def primary(segment):\n    if not segment:\n        raise ValueError(\"invalid input\")\n    return segment\n\ndef secondary(segment):\n    if not segment:\n        raise ValueError(\"invalid input\")\n    return {'segment': segment}\n",
+      "reference": "def _validate(segment):\n    if not segment or segment in ('.', '..'):\n        raise ValueError(\"invalid\")\n\ndef primary(segment):\n    _validate(segment)\n    return segment\n\ndef secondary(segment):\n    _validate(segment)\n    return {'segment': segment}\n",
+      "checks": "original = {}\nexec('def primary(segment):\\n    if not segment:\\n        raise ValueError(\"invalid input\")\\n    return segment\\n\\ndef secondary(segment):\\n    if not segment:\\n        raise ValueError(\"invalid input\")\\n    return {\\'segment\\': segment}\\n', original)\nfor value in ['', '.', '..', 'docs']:\n    segment = value\n    invalid = bool(not segment or segment in ('.', '..'))\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "results/POLICY_TARGET_CASES.json",
+      "source_id": "new-path-segment",
+      "new_condition": "not segment or segment in ('.', '..')",
+      "old_condition": "not segment",
+      "values": [
+        "",
+        ".",
+        "..",
+        "docs"
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "gate-download-count",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "gate-download-count",
+      "q": "Update both entry points to reject zero download counts as well as negatives. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(count):\n    if count < 0:\n        raise ValueError(\"invalid\")\n    return count\n\ndef secondary(count):\n    if count < 0:\n        raise ValueError(\"invalid\")\n    return {\"value\": count}\n",
+      "code": "def primary(count):\n    if count < 0:\n        raise ValueError(\"invalid\")\n    return count\n\ndef secondary(count):\n    if count < 0:\n        raise ValueError(\"invalid\")\n    return {\"value\": count}\n",
+      "reference": "def _validate(count):\n    if count <= 0:\n        raise ValueError(\"invalid\")\n\ndef primary(count):\n    _validate(count)\n    return count\n\ndef secondary(count):\n    _validate(count)\n    return {'value': count}\n",
+      "checks": "original = {}\nexec('def primary(count):\\n    if count < 0:\\n        raise ValueError(\"invalid\")\\n    return count\\n\\ndef secondary(count):\\n    if count < 0:\\n        raise ValueError(\"invalid\")\\n    return {\"value\": count}\\n', original)\nfor value in [-1, 0, 1, 9]:\n    count = value\n    invalid = bool(count <= 0)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-download-count",
+      "new_condition": "count <= 0",
+      "old_condition": "count < 0",
+      "values": [
+        -1,
+        0,
+        1,
+        9
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "gate-region",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "gate-region",
+      "q": "Update both entry points to require region codes to have exactly three characters. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(region):\n    if not region:\n        raise ValueError(\"invalid\")\n    return region\n\ndef secondary(region):\n    if not region:\n        raise ValueError(\"invalid\")\n    return {\"value\": region}\n",
+      "code": "def primary(region):\n    if not region:\n        raise ValueError(\"invalid\")\n    return region\n\ndef secondary(region):\n    if not region:\n        raise ValueError(\"invalid\")\n    return {\"value\": region}\n",
+      "reference": "def _validate(region):\n    if not region or len(region) != 3:\n        raise ValueError(\"invalid\")\n\ndef primary(region):\n    _validate(region)\n    return region\n\ndef secondary(region):\n    _validate(region)\n    return {'value': region}\n",
+      "checks": "original = {}\nexec('def primary(region):\\n    if not region:\\n        raise ValueError(\"invalid\")\\n    return region\\n\\ndef secondary(region):\\n    if not region:\\n        raise ValueError(\"invalid\")\\n    return {\"value\": region}\\n', original)\nfor value in ['', 'ab', 'usa', 'abcd']:\n    region = value\n    invalid = bool(not region or len(region) != 3)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-region",
+      "new_condition": "not region or len(region) != 3",
+      "old_condition": "not region",
+      "values": [
+        "",
+        "ab",
+        "usa",
+        "abcd"
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "gate-cache-age",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "gate-cache-age",
+      "q": "Update both entry points to reject cache ages above 7200 as well as negative ages. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(age):\n    if age < 0:\n        raise ValueError(\"invalid\")\n    return age\n\ndef secondary(age):\n    if age < 0:\n        raise ValueError(\"invalid\")\n    return {\"value\": age}\n",
+      "code": "def primary(age):\n    if age < 0:\n        raise ValueError(\"invalid\")\n    return age\n\ndef secondary(age):\n    if age < 0:\n        raise ValueError(\"invalid\")\n    return {\"value\": age}\n",
+      "reference": "def _validate(age):\n    if age < 0 or age > 7200:\n        raise ValueError(\"invalid\")\n\ndef primary(age):\n    _validate(age)\n    return age\n\ndef secondary(age):\n    _validate(age)\n    return {'value': age}\n",
+      "checks": "original = {}\nexec('def primary(age):\\n    if age < 0:\\n        raise ValueError(\"invalid\")\\n    return age\\n\\ndef secondary(age):\\n    if age < 0:\\n        raise ValueError(\"invalid\")\\n    return {\"value\": age}\\n', original)\nfor value in [-1, 0, 7200, 7201]:\n    age = value\n    invalid = bool(age < 0 or age > 7200)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-cache-age",
+      "new_condition": "age < 0 or age > 7200",
+      "old_condition": "age < 0",
+      "values": [
+        -1,
+        0,
+        7200,
+        7201
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "gate-channel",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "gate-channel",
+      "q": "Update both entry points to reject spaces in channel identifiers as well as empty identifiers. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(channel):\n    if not channel:\n        raise ValueError(\"invalid\")\n    return channel\n\ndef secondary(channel):\n    if not channel:\n        raise ValueError(\"invalid\")\n    return {\"value\": channel}\n",
+      "code": "def primary(channel):\n    if not channel:\n        raise ValueError(\"invalid\")\n    return channel\n\ndef secondary(channel):\n    if not channel:\n        raise ValueError(\"invalid\")\n    return {\"value\": channel}\n",
+      "reference": "def _validate(channel):\n    if not channel or ' ' in channel:\n        raise ValueError(\"invalid\")\n\ndef primary(channel):\n    _validate(channel)\n    return channel\n\ndef secondary(channel):\n    _validate(channel)\n    return {'value': channel}\n",
+      "checks": "original = {}\nexec('def primary(channel):\\n    if not channel:\\n        raise ValueError(\"invalid\")\\n    return channel\\n\\ndef secondary(channel):\\n    if not channel:\\n        raise ValueError(\"invalid\")\\n    return {\"value\": channel}\\n', original)\nfor value in ['', 'a', 'a b']:\n    channel = value\n    invalid = bool(not channel or ' ' in channel)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-channel",
+      "new_condition": "not channel or ' ' in channel",
+      "old_condition": "not channel",
+      "values": [
+        "",
+        "a",
+        "a b"
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "gate-file-mode",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "gate-file-mode",
+      "q": "Update both entry points to accept only read and write modes. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(mode):\n    if not mode:\n        raise ValueError(\"invalid\")\n    return mode\n\ndef secondary(mode):\n    if not mode:\n        raise ValueError(\"invalid\")\n    return {\"value\": mode}\n",
+      "code": "def primary(mode):\n    if not mode:\n        raise ValueError(\"invalid\")\n    return mode\n\ndef secondary(mode):\n    if not mode:\n        raise ValueError(\"invalid\")\n    return {\"value\": mode}\n",
+      "reference": "def _validate(mode):\n    if mode not in ('read', 'write'):\n        raise ValueError(\"invalid\")\n\ndef primary(mode):\n    _validate(mode)\n    return mode\n\ndef secondary(mode):\n    _validate(mode)\n    return {'value': mode}\n",
+      "checks": "original = {}\nexec('def primary(mode):\\n    if not mode:\\n        raise ValueError(\"invalid\")\\n    return mode\\n\\ndef secondary(mode):\\n    if not mode:\\n        raise ValueError(\"invalid\")\\n    return {\"value\": mode}\\n', original)\nfor value in ['', 'read', 'write', 'exec']:\n    mode = value\n    invalid = bool(mode not in ('read', 'write'))\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-file-mode",
+      "new_condition": "mode not in ('read', 'write')",
+      "old_condition": "not mode",
+      "values": [
+        "",
+        "read",
+        "write",
+        "exec"
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "gate-columns",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "gate-columns",
+      "q": "Update both entry points to reject more than eighty columns as well as nonpositive widths. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(columns):\n    if columns < 1:\n        raise ValueError(\"invalid\")\n    return columns\n\ndef secondary(columns):\n    if columns < 1:\n        raise ValueError(\"invalid\")\n    return {\"value\": columns}\n",
+      "code": "def primary(columns):\n    if columns < 1:\n        raise ValueError(\"invalid\")\n    return columns\n\ndef secondary(columns):\n    if columns < 1:\n        raise ValueError(\"invalid\")\n    return {\"value\": columns}\n",
+      "reference": "def _validate(columns):\n    if columns < 1 or columns > 80:\n        raise ValueError(\"invalid\")\n\ndef primary(columns):\n    _validate(columns)\n    return columns\n\ndef secondary(columns):\n    _validate(columns)\n    return {'value': columns}\n",
+      "checks": "original = {}\nexec('def primary(columns):\\n    if columns < 1:\\n        raise ValueError(\"invalid\")\\n    return columns\\n\\ndef secondary(columns):\\n    if columns < 1:\\n        raise ValueError(\"invalid\")\\n    return {\"value\": columns}\\n', original)\nfor value in [0, 1, 80, 81]:\n    columns = value\n    invalid = bool(columns < 1 or columns > 80)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-columns",
+      "new_condition": "columns < 1 or columns > 80",
+      "old_condition": "columns < 1",
+      "values": [
+        0,
+        1,
+        80,
+        81
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "gate-token-prefix",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "gate-token-prefix",
+      "q": "Update both entry points to reject identifiers beginning with an underscore in addition to empty identifiers. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(token):\n    if not token:\n        raise ValueError(\"invalid\")\n    return token\n\ndef secondary(token):\n    if not token:\n        raise ValueError(\"invalid\")\n    return {\"value\": token}\n",
+      "code": "def primary(token):\n    if not token:\n        raise ValueError(\"invalid\")\n    return token\n\ndef secondary(token):\n    if not token:\n        raise ValueError(\"invalid\")\n    return {\"value\": token}\n",
+      "reference": "def _validate(token):\n    if not token or token.startswith('_'):\n        raise ValueError(\"invalid\")\n\ndef primary(token):\n    _validate(token)\n    return token\n\ndef secondary(token):\n    _validate(token)\n    return {'value': token}\n",
+      "checks": "original = {}\nexec('def primary(token):\\n    if not token:\\n        raise ValueError(\"invalid\")\\n    return token\\n\\ndef secondary(token):\\n    if not token:\\n        raise ValueError(\"invalid\")\\n    return {\"value\": token}\\n', original)\nfor value in ['', 'x', '_x']:\n    token = value\n    invalid = bool(not token or token.startswith('_'))\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-token-prefix",
+      "new_condition": "not token or token.startswith('_')",
+      "old_condition": "not token",
+      "values": [
+        "",
+        "x",
+        "_x"
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "gate-job-window",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "gate-job-window",
+      "q": "Update both entry points to reject job windows over ninety minutes as well as nonpositive windows. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(minutes):\n    if minutes < 1:\n        raise ValueError(\"invalid\")\n    return minutes\n\ndef secondary(minutes):\n    if minutes < 1:\n        raise ValueError(\"invalid\")\n    return {\"value\": minutes}\n",
+      "code": "def primary(minutes):\n    if minutes < 1:\n        raise ValueError(\"invalid\")\n    return minutes\n\ndef secondary(minutes):\n    if minutes < 1:\n        raise ValueError(\"invalid\")\n    return {\"value\": minutes}\n",
+      "reference": "def _validate(minutes):\n    if minutes < 1 or minutes > 90:\n        raise ValueError(\"invalid\")\n\ndef primary(minutes):\n    _validate(minutes)\n    return minutes\n\ndef secondary(minutes):\n    _validate(minutes)\n    return {'value': minutes}\n",
+      "checks": "original = {}\nexec('def primary(minutes):\\n    if minutes < 1:\\n        raise ValueError(\"invalid\")\\n    return minutes\\n\\ndef secondary(minutes):\\n    if minutes < 1:\\n        raise ValueError(\"invalid\")\\n    return {\"value\": minutes}\\n', original)\nfor value in [0, 1, 90, 91]:\n    minutes = value\n    invalid = bool(minutes < 1 or minutes > 90)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-job-window",
+      "new_condition": "minutes < 1 or minutes > 90",
+      "old_condition": "minutes < 1",
+      "values": [
+        0,
+        1,
+        90,
+        91
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "gate-segment-length",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "gate-segment-length",
+      "q": "Update both entry points to reject segments longer than twelve characters. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(segment):\n    if not segment:\n        raise ValueError(\"invalid\")\n    return segment\n\ndef secondary(segment):\n    if not segment:\n        raise ValueError(\"invalid\")\n    return {\"value\": segment}\n",
+      "code": "def primary(segment):\n    if not segment:\n        raise ValueError(\"invalid\")\n    return segment\n\ndef secondary(segment):\n    if not segment:\n        raise ValueError(\"invalid\")\n    return {\"value\": segment}\n",
+      "reference": "def _validate(segment):\n    if not segment or len(segment) > 12:\n        raise ValueError(\"invalid\")\n\ndef primary(segment):\n    _validate(segment)\n    return segment\n\ndef secondary(segment):\n    _validate(segment)\n    return {'value': segment}\n",
+      "checks": "original = {}\nexec('def primary(segment):\\n    if not segment:\\n        raise ValueError(\"invalid\")\\n    return segment\\n\\ndef secondary(segment):\\n    if not segment:\\n        raise ValueError(\"invalid\")\\n    return {\"value\": segment}\\n', original)\nfor value in ['', 'a', 'aaaaaaaaaaaa', 'aaaaaaaaaaaaa']:\n    segment = value\n    invalid = bool(not segment or len(segment) > 12)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-segment-length",
+      "new_condition": "not segment or len(segment) > 12",
+      "old_condition": "not segment",
+      "values": [
+        "",
+        "a",
+        "aaaaaaaaaaaa",
+        "aaaaaaaaaaaaa"
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "gate-stream-id",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "gate-stream-id",
+      "q": "Update both entry points to require stream identifiers to begin at one rather than zero. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(stream):\n    if stream < 0:\n        raise ValueError(\"invalid\")\n    return stream\n\ndef secondary(stream):\n    if stream < 0:\n        raise ValueError(\"invalid\")\n    return {\"value\": stream}\n",
+      "code": "def primary(stream):\n    if stream < 0:\n        raise ValueError(\"invalid\")\n    return stream\n\ndef secondary(stream):\n    if stream < 0:\n        raise ValueError(\"invalid\")\n    return {\"value\": stream}\n",
+      "reference": "def _validate(stream):\n    if stream <= 0:\n        raise ValueError(\"invalid\")\n\ndef primary(stream):\n    _validate(stream)\n    return stream\n\ndef secondary(stream):\n    _validate(stream)\n    return {'value': stream}\n",
+      "checks": "original = {}\nexec('def primary(stream):\\n    if stream < 0:\\n        raise ValueError(\"invalid\")\\n    return stream\\n\\ndef secondary(stream):\\n    if stream < 0:\\n        raise ValueError(\"invalid\")\\n    return {\"value\": stream}\\n', original)\nfor value in [-1, 0, 1, 22]:\n    stream = value\n    invalid = bool(stream <= 0)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-stream-id",
+      "new_condition": "stream <= 0",
+      "old_condition": "stream < 0",
+      "values": [
+        -1,
+        0,
+        1,
+        22
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "gate-priority-code",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "gate-priority-code",
+      "q": "Update both entry points to accept only low and high priority codes. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(code):\n    if not code:\n        raise ValueError(\"invalid\")\n    return code\n\ndef secondary(code):\n    if not code:\n        raise ValueError(\"invalid\")\n    return {\"value\": code}\n",
+      "code": "def primary(code):\n    if not code:\n        raise ValueError(\"invalid\")\n    return code\n\ndef secondary(code):\n    if not code:\n        raise ValueError(\"invalid\")\n    return {\"value\": code}\n",
+      "reference": "def _validate(code):\n    if code not in ('low', 'high'):\n        raise ValueError(\"invalid\")\n\ndef primary(code):\n    _validate(code)\n    return code\n\ndef secondary(code):\n    _validate(code)\n    return {'value': code}\n",
+      "checks": "original = {}\nexec('def primary(code):\\n    if not code:\\n        raise ValueError(\"invalid\")\\n    return code\\n\\ndef secondary(code):\\n    if not code:\\n        raise ValueError(\"invalid\")\\n    return {\"value\": code}\\n', original)\nfor value in ['', 'low', 'high', 'mid']:\n    code = value\n    invalid = bool(code not in ('low', 'high'))\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-priority-code",
+      "new_condition": "code not in ('low', 'high')",
+      "old_condition": "not code",
+      "values": [
+        "",
+        "low",
+        "high",
+        "mid"
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    },
+    {
+      "id": "gate-depth",
+      "category": "recovered_refactor",
+      "family": "refactor",
+      "cluster": "gate-depth",
+      "q": "Update both entry points to reject nesting depths above sixteen as well as nonpositive depths. They intentionally enforce the same rule. Keep public names, signatures, and valid outputs. Supply complete replacement code.\n\ndef primary(depth):\n    if depth < 1:\n        raise ValueError(\"invalid\")\n    return depth\n\ndef secondary(depth):\n    if depth < 1:\n        raise ValueError(\"invalid\")\n    return {\"value\": depth}\n",
+      "code": "def primary(depth):\n    if depth < 1:\n        raise ValueError(\"invalid\")\n    return depth\n\ndef secondary(depth):\n    if depth < 1:\n        raise ValueError(\"invalid\")\n    return {\"value\": depth}\n",
+      "reference": "def _validate(depth):\n    if depth < 1 or depth > 16:\n        raise ValueError(\"invalid\")\n\ndef primary(depth):\n    _validate(depth)\n    return depth\n\ndef secondary(depth):\n    _validate(depth)\n    return {'value': depth}\n",
+      "checks": "original = {}\nexec('def primary(depth):\\n    if depth < 1:\\n        raise ValueError(\"invalid\")\\n    return depth\\n\\ndef secondary(depth):\\n    if depth < 1:\\n        raise ValueError(\"invalid\")\\n    return {\"value\": depth}\\n', original)\nfor value in [0, 1, 16, 17]:\n    depth = value\n    invalid = bool(depth < 1 or depth > 16)\n    for name in (\"primary\", \"secondary\"):\n        try:\n            got = (\"ok\", globals()[name](value))\n        except ValueError:\n            got = (\"error\", None)\n        want = (\"error\", None) if invalid else (\"ok\", original[name](value))\n        assert got == want, (name, value, got, want)\n",
+      "functions": [
+        "primary",
+        "secondary"
+      ],
+      "source": "inputs/joint/gate.json",
+      "source_id": "gate-depth",
+      "new_condition": "depth < 1 or depth > 16",
+      "old_condition": "depth < 1",
+      "values": [
+        0,
+        1,
+        16,
+        17
+      ],
+      "rubric": "One private helper executes the changed common rule in both callers; preserve public signatures and valid outputs. Functional assertions and structure judged separately and jointly."
+    }
+  ],
+  "cap": 32768,
+  "n_sys": 26341,
+  "transport": "\n\nOffline transport: respond with exactly one JSON object: {\"call\":\"tool_identifier\",\"arguments\":{...}} or {\"ask\":\"question\"}. No surrounding prose. User clarifications and mock tool replies arrive before your next response. Use only arguments requested or needed; do not add pagination or optional filters unless requested. Stop after the final requested tool action.",
+  "limits": {
+    "knowledge": 128,
+    "tools": 256,
+    "behavior": 768
+  }
+}

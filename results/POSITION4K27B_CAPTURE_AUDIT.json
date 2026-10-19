@@ -1,0 +1,135 @@
+{
+  "complete": true,
+  "elapsed_s": 51.92502236366272,
+  "summary": {
+    "original": {
+      "n": 71,
+      "query_rows": 284,
+      "next_token_counts": {
+        "other_text": 136,
+        "eos": 66,
+        "punctuation_or_whitespace": 82
+      },
+      "within_group_loss_row_weight": {
+        "other_text": 0.4516431924882629,
+        "eos": 0.24589201877934272,
+        "punctuation_or_whitespace": 0.3024647887323944
+      },
+      "name_tokens": 0,
+      "name_tokens_preceded_by_query": 0,
+      "name_start_tokens": 0,
+      "name_starts_preceded_by_query": 0,
+      "eos_preceded_by_query": 66,
+      "eos_query_captured": 71,
+      "tool_leaf_start_tokens": 0,
+      "tool_leaf_starts_preceded_by_query": 0,
+      "examples_no_tool_leaf_start_covered": 0,
+      "examples_missing_name_start": 0
+    },
+    "added": {
+      "n": 405,
+      "query_rows": 4272,
+      "next_token_counts": {
+        "other_text": 1272,
+        "exact_name": 2470,
+        "eos": 405,
+        "punctuation_or_whitespace": 125
+      },
+      "within_group_loss_row_weight": {
+        "other_text": 0.28627010849233087,
+        "exact_name": 0.5874668198742291,
+        "eos": 0.09638082767712425,
+        "punctuation_or_whitespace": 0.029882243956318066
+      },
+      "name_tokens": 4724,
+      "name_tokens_preceded_by_query": 2470,
+      "name_start_tokens": 1510,
+      "name_starts_preceded_by_query": 935,
+      "eos_preceded_by_query": 405,
+      "eos_query_captured": 1,
+      "tool_leaf_start_tokens": 404,
+      "tool_leaf_starts_preceded_by_query": 399,
+      "examples_no_tool_leaf_start_covered": 0,
+      "examples_missing_name_start": 330
+    },
+    "binding": {
+      "n": 304,
+      "query_rows": 1697,
+      "next_token_counts": {
+        "punctuation_or_whitespace": 912,
+        "exact_name": 481,
+        "eos": 304
+      },
+      "within_group_loss_row_weight": {
+        "punctuation_or_whitespace": 0.5446781015037587,
+        "exact_name": 0.2737625313283209,
+        "eos": 0.18155936716791962
+      },
+      "name_tokens": 482,
+      "name_tokens_preceded_by_query": 481,
+      "name_start_tokens": 304,
+      "name_starts_preceded_by_query": 304,
+      "eos_preceded_by_query": 304,
+      "eos_query_captured": 304,
+      "tool_leaf_start_tokens": 0,
+      "tool_leaf_starts_preceded_by_query": 0,
+      "examples_no_tool_leaf_start_covered": 0,
+      "examples_missing_name_start": 0
+    },
+    "added_lookup": {
+      "n": 137,
+      "query_rows": 1481,
+      "next_token_counts": {
+        "other_text": 148,
+        "exact_name": 1159,
+        "eos": 137,
+        "punctuation_or_whitespace": 37
+      },
+      "within_group_loss_row_weight": {
+        "other_text": 0.09820836098208344,
+        "exact_name": 0.7808828640945433,
+        "eos": 0.09363288779347155,
+        "punctuation_or_whitespace": 0.027275887129901727
+      },
+      "name_tokens": 2309,
+      "name_tokens_preceded_by_query": 1159,
+      "name_start_tokens": 1078,
+      "name_starts_preceded_by_query": 715,
+      "eos_preceded_by_query": 137,
+      "eos_query_captured": 0,
+      "tool_leaf_start_tokens": 136,
+      "tool_leaf_starts_preceded_by_query": 131,
+      "examples_no_tool_leaf_start_covered": 0,
+      "examples_missing_name_start": 123
+    },
+    "added_tool_select": {
+      "n": 268,
+      "query_rows": 2791,
+      "next_token_counts": {
+        "other_text": 1124,
+        "exact_name": 1311,
+        "eos": 268,
+        "punctuation_or_whitespace": 88
+      },
+      "within_group_loss_row_weight": {
+        "other_text": 0.3824061510628674,
+        "exact_name": 0.48859369279145454,
+        "eos": 0.09778555814003544,
+        "punctuation_or_whitespace": 0.03121459800564274
+      },
+      "name_tokens": 2415,
+      "name_tokens_preceded_by_query": 1311,
+      "name_start_tokens": 432,
+      "name_starts_preceded_by_query": 220,
+      "eos_preceded_by_query": 268,
+      "eos_query_captured": 1,
+      "tool_leaf_start_tokens": 268,
+      "tool_leaf_starts_preceded_by_query": 268,
+      "examples_no_tool_leaf_start_covered": 0,
+      "examples_missing_name_start": 207
+    }
+  },
+  "reference_trajectory_equal": true,
+  "manifest_sha256": "c3d42cfc23e3f8bd70bcfa86772e3ad1509689d0a88f9d9c19a1a8db86e5cc62",
+  "semantics": "attention row at consumed token j precedes next token j+1; not CE supervision"
+}

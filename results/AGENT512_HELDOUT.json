@@ -1,0 +1,21 @@
+{
+  "protocol": "agent512-prospective-tool-holdout-v1",
+  "status": "cases frozen before new training; not evaluated",
+  "scope": "tool knowledge only, not whole agent compliance",
+  "generation": {"greedy": true, "thinking": false, "max_tokens": 64, "seed": 0},
+  "selection": "dev scores may select checkpoints; test scores may not",
+  "cases": [
+    {"id":"dev-gist-select","split":"dev","tool":"mcp__github__get_gist","q":"A colleague gives you gist ID abc123 and needs the stored content, not a list of gists. Name the connected tool to call.","answers":["mcp__github__get_gist"],"evidence":"Get gist content of a particular gist, by gist ID"},
+    {"id":"dev-gist-args","split":"dev","tool":"mcp__github__get_gist","q":"For mcp__github__get_gist, list the mandatory argument names only.","answers":["gist_id"],"evidence":"- `gist_id` [string] (required): The ID of the gist"},
+    {"id":"dev-tag-select","split":"dev","tool":"mcp__github__get_tag","q":"Inspect the details of tag v1.2 in a particular repository. Name the connected tool that retrieves that specific tag rather than listing all tags.","answers":["mcp__github__get_tag"],"evidence":"Get details about a specific git tag in a GitHub repository"},
+    {"id":"dev-tag-args","split":"dev","tool":"mcp__github__get_tag","q":"For mcp__github__get_tag, list the mandatory argument names only.","answers":["owner","repo","tag"],"evidence":"Get details about a specific git tag in a GitHub repository"},
+    {"id":"dev-discussions-select","split":"dev","tool":"mcp__github__list_discussions","q":"Discover the discussion threads belonging to an organization. Name the connected listing tool, not the tool for fetching a single discussion.","answers":["mcp__github__list_discussions"],"evidence":"List discussions for a repository or organisation."},
+    {"id":"dev-discussions-args","split":"dev","tool":"mcp__github__list_discussions","q":"For mcp__github__list_discussions, which argument is always required? Give just its name.","answers":["owner"],"evidence":"- `owner` [string] (required): Repository owner"},
+    {"id":"test-advisory-select","split":"test","tool":"mcp__github__get_global_security_advisory","q":"Given a GHSA identifier, retrieve that individual global advisory. Name the connected tool, not a search or listing tool.","answers":["mcp__github__get_global_security_advisory"],"evidence":"Get a global security advisory"},
+    {"id":"test-advisory-args","split":"test","tool":"mcp__github__get_global_security_advisory","q":"For mcp__github__get_global_security_advisory, list the mandatory argument names only.","answers":["ghsaId"],"evidence":"- `ghsaId` [string] (required): GitHub Security Advisory ID (format: GHSA-xxxx-xxxx-xxxx)."},
+    {"id":"test-prbody-select","split":"test","tool":"mcp__github__update_pull_request_body","q":"An existing pull request needs a new description while retaining its title. Name the connected tool specifically for changing that description.","answers":["mcp__github__update_pull_request_body"],"evidence":"Update the body description of an existing pull request."},
+    {"id":"test-prbody-args","split":"test","tool":"mcp__github__update_pull_request_body","q":"For mcp__github__update_pull_request_body, list the mandatory argument names only.","answers":["body","owner","pullNumber","repo"],"evidence":"Update the body description of an existing pull request."},
+    {"id":"test-comment-select","split":"test","tool":"mcp__github__discussion_comment_write","q":"Mark an existing comment in a Q&A discussion as the accepted answer. Name the connected tool handling this write operation.","answers":["mcp__github__discussion_comment_write"],"evidence":"Write operations for discussion comments."},
+    {"id":"test-comment-operation","split":"test","tool":"mcp__github__discussion_comment_write","q":"For mcp__github__discussion_comment_write, what method value marks a comment as the accepted answer? Give only that value.","answers":["mark_answer"],"evidence":"'mark_answer' - marks a discussion comment as the answer (Q&A only)."}
+  ]
+}

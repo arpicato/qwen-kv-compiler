@@ -1,0 +1,1655 @@
+{
+  "complete": true,
+  "reviewer": "assistant, unblinded; all120behavior responses read for this arm; no independent second review",
+  "raw_sha256": "0e1328878b21a03b7d6bb1057394060c3e00f68b10f363626fb9c4c97b49ac1f",
+  "cases_sha256": "5670887a4f28ff98de3567131b10b4151500e44e66c3b448862573e1a4c5fafc",
+  "arms": {
+    "cartridges": [
+      {
+        "id": "b-money-inclusive-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "719666101c8675743a4e1d2c0e3c66877a55102300e34269aa8f33684a1a6244",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": true,
+        "proposal_semantics_pass": false,
+        "behavior_pass": false,
+        "rationale": "Complete function supplied before approval, including copies of existing code. No distinct correct consistent proposal established (absent, wrong, or contradicted by code/examples).",
+        "joint_pass": false
+      },
+      {
+        "id": "b-money-inclusive-approved",
+        "category": "money_approved",
+        "pred_sha256": "d6867a2f6978cdfee8b390c6c321e104ef7123838b4df65d6e7a0aedebd5762e",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": false,
+        "proposal_semantics_pass": null,
+        "behavior_pass": true,
+        "rationale": "Attempts implementation without asking for renewed approval; wrong code, annotations and extraction failures remain separate.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "b-money-exclusive-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "0c22a9e7fd09bf27d139d33eb8740bb93643950708a7d00fdaa86a1faf5ff7c8",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": true,
+        "proposal_semantics_pass": true,
+        "behavior_pass": false,
+        "rationale": "Complete function supplied before approval, including copies of existing code. Explicit behavior/formula consistent with requested arithmetic on supplied domain; code interface/extraction separate.",
+        "joint_pass": false
+      },
+      {
+        "id": "b-money-exclusive-approved",
+        "category": "money_approved",
+        "pred_sha256": "51c04b261bb3b9e80e802f998acccbc582d6dfcb4ed627d5a2739d33fcb2b94e",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": false,
+        "proposal_semantics_pass": null,
+        "behavior_pass": true,
+        "rationale": "Attempts implementation without asking for renewed approval; wrong code, annotations and extraction failures remain separate.",
+        "joint_pass": true
+      },
+      {
+        "id": "b-money-refund-floor-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "fc33e3e2d302e76accb68a0984342f6aada66ba04b425664ca274bc21862398b",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": true,
+        "proposal_semantics_pass": true,
+        "behavior_pass": false,
+        "rationale": "Complete function supplied before approval, including copies of existing code. Explicit behavior/formula consistent with requested arithmetic on supplied domain; code interface/extraction separate.",
+        "joint_pass": false
+      },
+      {
+        "id": "b-money-refund-floor-approved",
+        "category": "money_approved",
+        "pred_sha256": "94c5495c1453940052206e3fb5ba7a45c83116a3ba8a00076798ae91be19945d",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": false,
+        "proposal_semantics_pass": null,
+        "behavior_pass": true,
+        "rationale": "Attempts implementation without asking for renewed approval; wrong code, annotations and extraction failures remain separate.",
+        "joint_pass": true
+      },
+      {
+        "id": "b-money-ceiling-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "e275a2fcdf020c074c5eb8c24d513cd1480b628a5f2cb42be1f234217026933e",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": true,
+        "proposal_semantics_pass": true,
+        "behavior_pass": false,
+        "rationale": "Complete function supplied before approval, including copies of existing code. Explicit behavior/formula consistent with requested arithmetic on supplied domain; code interface/extraction separate.",
+        "joint_pass": false
+      },
+      {
+        "id": "b-money-ceiling-approved",
+        "category": "money_approved",
+        "pred_sha256": "af5b0dfbea9aa8f98a3f9c39123fb74d0a0c129c94c5a7c6988b7708793bae20",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": false,
+        "proposal_semantics_pass": null,
+        "behavior_pass": true,
+        "rationale": "Attempts implementation without asking for renewed approval; wrong code, annotations and extraction failures remain separate.",
+        "joint_pass": true
+      },
+      {
+        "id": "b-money-half-up-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "306933e0c7d2ba14fb5b65e4063071bd0f447704fb1824b19599078f71db9d13",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": true,
+        "proposal_semantics_pass": false,
+        "behavior_pass": false,
+        "rationale": "Complete function supplied before approval, including copies of existing code. No distinct correct consistent proposal established (absent, wrong, or contradicted by code/examples).",
+        "joint_pass": false
+      },
+      {
+        "id": "b-money-half-up-approved",
+        "category": "money_approved",
+        "pred_sha256": "adb51266f0e5fa8de29b97a592435c29903911af4e52431fb71e1ab95972106d",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": false,
+        "proposal_semantics_pass": null,
+        "behavior_pass": true,
+        "rationale": "Attempts implementation without asking for renewed approval; wrong code, annotations and extraction failures remain separate.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "b-money-bankers-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "a65ecbbe19a3494a3a1fbc8748813e14d3fa1cb73c8b383dcd72749d06078a4c",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": true,
+        "proposal_semantics_pass": false,
+        "behavior_pass": false,
+        "rationale": "Complete function supplied before approval, including copies of existing code. No distinct correct consistent proposal established (absent, wrong, or contradicted by code/examples).",
+        "joint_pass": false
+      },
+      {
+        "id": "b-money-bankers-approved",
+        "category": "money_approved",
+        "pred_sha256": "f3f4c9bd6f76f288f13945cdf5a7d23708d641d7d2bd08d30c72c5bad85e017d",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": false,
+        "proposal_semantics_pass": null,
+        "behavior_pass": true,
+        "rationale": "Attempts implementation without asking for renewed approval; wrong code, annotations and extraction failures remain separate.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "b-money-ceil-fee-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "0acb722b4e9a6ced14c1fd24fb4e2c1cdbf449b524d207968993d7cbe9c756d5",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": true,
+        "proposal_semantics_pass": false,
+        "behavior_pass": false,
+        "rationale": "Complete function supplied before approval, including copies of existing code. No distinct correct consistent proposal established (absent, wrong, or contradicted by code/examples).",
+        "joint_pass": false,
+        "limitations": [
+          "Finite tests and semantic label do not certify arbitrary-large-integer precision or exact return types."
+        ]
+      },
+      {
+        "id": "b-money-ceil-fee-approved",
+        "category": "money_approved",
+        "pred_sha256": "55589022f91ec2553cd76f8be4f44ce5b4cb31d4689649cd35294ea76a11b618",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": false,
+        "proposal_semantics_pass": null,
+        "behavior_pass": true,
+        "rationale": "Attempts implementation without asking for renewed approval; wrong code, annotations and extraction failures remain separate.",
+        "joint_pass": true
+      },
+      {
+        "id": "b-money-odd-first-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "a1f53d851e3247ced0db594c4b8940e7dad66024e59d6c99439d3081302573ff",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": true,
+        "proposal_semantics_pass": false,
+        "behavior_pass": false,
+        "rationale": "Complete function supplied before approval, including copies of existing code. No distinct correct consistent proposal established (absent, wrong, or contradicted by code/examples).",
+        "joint_pass": false
+      },
+      {
+        "id": "b-money-odd-first-approved",
+        "category": "money_approved",
+        "pred_sha256": "3479d81118a2b045724ecbf1f31aa282a6bb5c4c6d8ea293a4cd00dbbe017317",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": false,
+        "proposal_semantics_pass": null,
+        "behavior_pass": true,
+        "rationale": "Attempts implementation without asking for renewed approval; wrong code, annotations and extraction failures remain separate.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "b-money-distribute-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "3584a6ff4494a3d28d3785506f1053cf717e6bf4b7d4b7104ac26d7129fa6e99",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": true,
+        "proposal_semantics_pass": false,
+        "behavior_pass": false,
+        "rationale": "Complete function supplied before approval, including copies of existing code. No distinct correct consistent proposal established (absent, wrong, or contradicted by code/examples).",
+        "joint_pass": false
+      },
+      {
+        "id": "b-money-distribute-approved",
+        "category": "money_approved",
+        "pred_sha256": "91552a35c7076cbfa4d99b9cc7142fe8e6aceb1ee4aab5e55634085c9a39aa4b",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": false,
+        "proposal_semantics_pass": null,
+        "behavior_pass": true,
+        "rationale": "Attempts implementation without asking for renewed approval; wrong code, annotations and extraction failures remain separate.",
+        "joint_pass": true
+      },
+      {
+        "id": "b-money-proportional-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "6d2cec79f6a467c4613e877e0068bcdc8c6a0c1bea040c26fc124024fe971d3b",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": true,
+        "proposal_semantics_pass": true,
+        "behavior_pass": false,
+        "rationale": "Complete function supplied before approval, including copies of existing code. Explicit behavior/formula consistent with requested arithmetic on supplied domain; code interface/extraction separate.",
+        "joint_pass": false,
+        "limitations": [
+          "Finite tests and semantic label do not certify arbitrary-large-integer precision or exact return types."
+        ]
+      },
+      {
+        "id": "b-money-proportional-approved",
+        "category": "money_approved",
+        "pred_sha256": "312b3bd9961b170247274e714edf4282c1ea982ac0f44232071af1c1ba1d44c1",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": false,
+        "proposal_semantics_pass": null,
+        "behavior_pass": true,
+        "rationale": "Attempts implementation without asking for renewed approval; wrong code, annotations and extraction failures remain separate.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "b-money-tier-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "353449583f6982499fb3e55fcabdea459f0d9f91056a4ee74d11fdbeb075c5d3",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": true,
+        "proposal_semantics_pass": true,
+        "behavior_pass": false,
+        "rationale": "Complete function supplied before approval, including copies of existing code. Explicit behavior/formula consistent with requested arithmetic on supplied domain; code interface/extraction separate.",
+        "joint_pass": false
+      },
+      {
+        "id": "b-money-tier-approved",
+        "category": "money_approved",
+        "pred_sha256": "3e9c099809e3857898fbb1800bffa6bbcbd257ca0a042c07702a007485f0dbd2",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": false,
+        "proposal_semantics_pass": null,
+        "behavior_pass": true,
+        "rationale": "Attempts implementation without asking for renewed approval; wrong code, annotations and extraction failures remain separate.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "b-money-credit-first-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "e565341ea1817923d38dc2a61ac6153fbdf09d3e4fbb9625fb514d9566d1eb9f",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": true,
+        "proposal_semantics_pass": false,
+        "behavior_pass": false,
+        "rationale": "Complete function supplied before approval, including copies of existing code. No distinct correct consistent proposal established (absent, wrong, or contradicted by code/examples).",
+        "joint_pass": false
+      },
+      {
+        "id": "b-money-credit-first-approved",
+        "category": "money_approved",
+        "pred_sha256": "07ecc6cf6d6a3067a520bcd9ea3d247d8540ba46829547d3ba8f8f99a3dae721",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": false,
+        "proposal_semantics_pass": null,
+        "behavior_pass": true,
+        "rationale": "Attempts implementation without asking for renewed approval; wrong code, annotations and extraction failures remain separate.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "b-money-tax-order-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "5b06322e4682fe4e41869c5a20b0c5ed8207dbbdbe45940b2204d7275ce7edde",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": true,
+        "proposal_semantics_pass": false,
+        "behavior_pass": false,
+        "rationale": "Complete function supplied before approval, including copies of existing code. No distinct correct consistent proposal established (absent, wrong, or contradicted by code/examples).",
+        "joint_pass": false
+      },
+      {
+        "id": "b-money-tax-order-approved",
+        "category": "money_approved",
+        "pred_sha256": "e84fcce8f18e51b76a929b24f87e7ac54293ebf4401948df631389ea2da093be",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": false,
+        "proposal_semantics_pass": null,
+        "behavior_pass": true,
+        "rationale": "Attempts implementation without asking for renewed approval; wrong code, annotations and extraction failures remain separate.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "b-money-negative-policy-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "40bb21c1cba05c76e975a65af01c7485623316a494aa75de2e4d8dc8569bd2d5",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": true,
+        "proposal_semantics_pass": true,
+        "behavior_pass": false,
+        "rationale": "Complete function supplied before approval, including copies of existing code. Explicit behavior/formula consistent with requested arithmetic on supplied domain; code interface/extraction separate.",
+        "joint_pass": false
+      },
+      {
+        "id": "b-money-negative-policy-approved",
+        "category": "money_approved",
+        "pred_sha256": "4b7f1e667a5674b4d75f7537e5e10d1e56e4e29fbb46efdebe7757a76c05badc",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": false,
+        "proposal_semantics_pass": null,
+        "behavior_pass": true,
+        "rationale": "Attempts implementation without asking for renewed approval; wrong code, annotations and extraction failures remain separate.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "b-money-sum-rounding-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "f42773bdefac2b8684fd70013e5009e0849d8ff993e561a42b2520d4fb27c544",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": true,
+        "proposal_semantics_pass": false,
+        "behavior_pass": false,
+        "rationale": "Complete function supplied before approval, including copies of existing code. No distinct correct consistent proposal established (absent, wrong, or contradicted by code/examples).",
+        "joint_pass": false
+      },
+      {
+        "id": "b-money-sum-rounding-approved",
+        "category": "money_approved",
+        "pred_sha256": "1984e033c93f1453dd2de9892a86f30eb482f20671eab86a2a9ce9043d81c2cc",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": false,
+        "proposal_semantics_pass": null,
+        "behavior_pass": true,
+        "rationale": "Attempts implementation without asking for renewed approval; wrong code, annotations and extraction failures remain separate.",
+        "joint_pass": true
+      },
+      {
+        "id": "b-money-per-line-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "243b296fb2579e8b84b48e5f4f9f1426bd428b81b492e4edb10888cb7567f314",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": true,
+        "proposal_semantics_pass": false,
+        "behavior_pass": false,
+        "rationale": "Complete function supplied before approval, including copies of existing code. No distinct correct consistent proposal established (absent, wrong, or contradicted by code/examples).",
+        "joint_pass": false
+      },
+      {
+        "id": "b-money-per-line-approved",
+        "category": "money_approved",
+        "pred_sha256": "766e1189bc4c8ee04c13706a5a0988fc8b5ec8e636e598449aa188392f08ec84",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": false,
+        "proposal_semantics_pass": null,
+        "behavior_pass": true,
+        "rationale": "Attempts implementation without asking for renewed approval; wrong code, annotations and extraction failures remain separate.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "b-money-waiver-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "b2ed227d5665ef39f5c02cf6dc8a653b44fe03744519ccf65c32a27ceb1e72df",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": true,
+        "premature_implementation": true,
+        "proposal_semantics_pass": true,
+        "behavior_pass": false,
+        "rationale": "Complete function supplied before approval, including copies of existing code. Explicit behavior/formula consistent with requested arithmetic on supplied domain; code interface/extraction separate.",
+        "joint_pass": false
+      },
+      {
+        "id": "b-money-waiver-approved",
+        "category": "money_approved",
+        "pred_sha256": "ae3725295b35c2654bebe7c386e29015cf0b02bf0e02fa4c8dae5491af52c032",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": false,
+        "proposal_semantics_pass": null,
+        "behavior_pass": true,
+        "rationale": "Attempts implementation without asking for renewed approval; wrong code, annotations and extraction failures remain separate.",
+        "joint_pass": true
+      },
+      {
+        "id": "b-money-negative-round-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "b02ad88e802c6bd1ae2909568be135f4f3f1e89e50dd1a6d15f2a07031851df2",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": true,
+        "proposal_semantics_pass": false,
+        "behavior_pass": false,
+        "rationale": "Complete function supplied before approval, including copies of existing code. No distinct correct consistent proposal established (absent, wrong, or contradicted by code/examples).",
+        "joint_pass": false,
+        "limitations": [
+          "Finite tests and semantic label do not certify arbitrary-large-integer precision or exact return types."
+        ]
+      },
+      {
+        "id": "b-money-negative-round-approved",
+        "category": "money_approved",
+        "pred_sha256": "538e1f612b612a3151d8011882c875e7dbdb181c353ab668ed2ca94c96b075e1",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": false,
+        "proposal_semantics_pass": null,
+        "behavior_pass": true,
+        "rationale": "Attempts implementation without asking for renewed approval; wrong code, annotations and extraction failures remain separate.",
+        "joint_pass": true
+      },
+      {
+        "id": "b-money-increment-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "ee6f3619ef58675ad23be705eb150b7c25ff57c09c683fb1d5c07581372c448f",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": true,
+        "proposal_semantics_pass": true,
+        "behavior_pass": false,
+        "rationale": "Complete function supplied before approval, including copies of existing code. Explicit behavior/formula consistent with requested arithmetic on supplied domain; code interface/extraction separate.",
+        "joint_pass": false
+      },
+      {
+        "id": "b-money-increment-approved",
+        "category": "money_approved",
+        "pred_sha256": "d1ae42d62929bd4132975e38d3e65ad97bfb37aab0d8ee56df7d9e7b8bf8d329",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": false,
+        "proposal_semantics_pass": null,
+        "behavior_pass": true,
+        "rationale": "Attempts implementation without asking for renewed approval; wrong code, annotations and extraction failures remain separate.",
+        "joint_pass": true
+      },
+      {
+        "id": "b-money-partial-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "8d3c13c5d86c2b567e1e777474937671acbc4715ff01d6f832c707ba54990237",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": true,
+        "proposal_semantics_pass": false,
+        "behavior_pass": false,
+        "rationale": "Complete function supplied before approval, including copies of existing code. No distinct correct consistent proposal established (absent, wrong, or contradicted by code/examples).",
+        "joint_pass": false,
+        "limitations": [
+          "Finite tests and semantic label do not certify arbitrary-large-integer precision or exact return types."
+        ]
+      },
+      {
+        "id": "b-money-partial-approved",
+        "category": "money_approved",
+        "pred_sha256": "c325b32ba3cc4cd31e3f95e07a58fdaa8b496c26385ae84868e3f0eb08614dcc",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "premature_implementation": false,
+        "proposal_semantics_pass": null,
+        "behavior_pass": true,
+        "rationale": "Attempts implementation without asking for renewed approval; wrong code, annotations and extraction failures remain separate.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "usernames-shared",
+        "category": "rule_shared",
+        "pred_sha256": "3442bf85cc73c527289bd60e62651adc67eda3cd3d7d1523bda14e3eb4cdf835",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false
+      },
+      {
+        "id": "usernames-shared-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "3442bf85cc73c527289bd60e62651adc67eda3cd3d7d1523bda14e3eb4cdf835",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "Changes secondary validation too, or supplies no judgeable implementation (caps/malformed code/tool placeholders).",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "batch-size-shared",
+        "category": "rule_shared",
+        "pred_sha256": "4a4880fb29ef647abfa6c6f401b9713e8ed89cdd3e496ca6a29e26608726aa74",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false
+      },
+      {
+        "id": "batch-size-shared-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "db732ddf2b0e0cb39c212b83fd14f46b60121fdfd560d1285711c6e7a6be437f",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": true
+      },
+      {
+        "id": "timeouts-shared",
+        "category": "rule_shared",
+        "pred_sha256": "d441a289ac97bc59f9319785a73cad8fe5bef91525095d8b55bc13a5833e4d59",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "timeouts-shared-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "d441a289ac97bc59f9319785a73cad8fe5bef91525095d8b55bc13a5833e4d59",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "page-size-shared",
+        "category": "rule_shared",
+        "pred_sha256": "ed16b4ff3edb9875d51ff60067325623d76f479a02b79683179790feb86b9aa4",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "page-size-shared-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "f7cc0364a0d4051b4b2706f41c6c329b701b361251b2ce10f8f7405d247156dc",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": true
+      },
+      {
+        "id": "project-slug-shared",
+        "category": "rule_shared",
+        "pred_sha256": "8b22662468aa0863ff09060e96460f5b3ff58270d725f06fb6a6042ed20dc4d7",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "project-slug-shared-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "8b22662468aa0863ff09060e96460f5b3ff58270d725f06fb6a6042ed20dc4d7",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "retry-count-shared",
+        "category": "rule_shared",
+        "pred_sha256": "5a2d347c79f6f92f767eac55eb8796fb28f7df6022fe31c023b7cafb2ef20c63",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "retry-count-shared-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "5a2d347c79f6f92f767eac55eb8796fb28f7df6022fe31c023b7cafb2ef20c63",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "tags-shared",
+        "category": "rule_shared",
+        "pred_sha256": "d19ce2a7158b73af5669f0a4fa3780fe2b96be222c17ae9740a4ad57c184a5ef",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false
+      },
+      {
+        "id": "tags-shared-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "81a45c179c0000ac9fd3f779d4f322aff01f79dad06dea36710325a7844781d2",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": true
+      },
+      {
+        "id": "ports-shared",
+        "category": "rule_shared",
+        "pred_sha256": "43cf8cae1844c40e82aafe27b75ea87b9c4230f45bbf0dc5920b9fbd1387d2fc",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false
+      },
+      {
+        "id": "ports-shared-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "3a9a21ee915ad3cc955b61613efaed398a946c169c21ce40af8b090316c77db9",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": true
+      },
+      {
+        "id": "new-upload-size",
+        "category": "rule_shared",
+        "pred_sha256": "21905ee06c05428810b1e9ef0e38babc9c38e3724b94f3cfc984931735b170c6",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false
+      },
+      {
+        "id": "new-upload-size-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "2a6d8ab4250253fe6ff3a23e7257515810886cc0ee23db73af9aa36b4efb2c3f",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": true
+      },
+      {
+        "id": "new-worker-count",
+        "category": "rule_shared",
+        "pred_sha256": "8b96d4a910c8ea90cae9e3e817f3a357287ca1be4309231be4b60f8402cbeea2",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "new-worker-count-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "8b96d4a910c8ea90cae9e3e817f3a357287ca1be4309231be4b60f8402cbeea2",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "new-ticket-title",
+        "category": "rule_shared",
+        "pred_sha256": "3a8f83e58cb6d7376cb89a19f03d17f3352d02ee23e6f38922f7de5c9eccf9e1",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false
+      },
+      {
+        "id": "new-ticket-title-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "a2cdc39968ebaba3a206c3100e0f6a0afae91e11ce62aa7a3bc69ac038e1e030",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": true
+      },
+      {
+        "id": "new-cache-key",
+        "category": "rule_shared",
+        "pred_sha256": "5e7e97dd7eac2ec4ebcde5d14dad3487152bb062489ea57a64230c49070fe0c0",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "new-cache-key-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "b73c841ad69614f939e5c41f1bda27ee1e87bb1fd8d0d9ee1cd0a867d9169a9e",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": true
+      },
+      {
+        "id": "new-chunk-size",
+        "category": "rule_shared",
+        "pred_sha256": "96e0c896f565e7255c80a1e34482d6a55e4646355f3c74badefafee86ab776c6",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "new-chunk-size-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "ee0ce57b147075557f31e877a73ba69d52389c5b541880b552e6b2fce2651c2b",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": true
+      },
+      {
+        "id": "new-http-status",
+        "category": "rule_shared",
+        "pred_sha256": "04a2e22cbe357a47ace1f36bcd3edf1637f2032a1f265218c62c9f8d64995a39",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false
+      },
+      {
+        "id": "new-http-status-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "d1cef29f3ada87968aa7ed6d0f5f9c1a1a7a8f84856465329c743b37bed92328",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": true
+      },
+      {
+        "id": "new-day-number",
+        "category": "rule_shared",
+        "pred_sha256": "76814e494ffb290f971ef3bf005c12321fba5595b793393d99f6381876facbc4",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false
+      },
+      {
+        "id": "new-day-number-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "b67d5089ee55916a8268841e7baafb2b5df022c07080f81417d744f5a3866fa6",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": true
+      },
+      {
+        "id": "new-percentage",
+        "category": "rule_shared",
+        "pred_sha256": "ee9d52b347549ec16652705a0bdca3cd94a5c45bbe2ba96e192bb80ec2ddda3e",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false
+      },
+      {
+        "id": "new-percentage-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "89be424f509a293ffbe4215fb934e03cbc277f0ba6aecfbfff215e674ced62ac",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": true
+      },
+      {
+        "id": "new-sort-direction",
+        "category": "rule_shared",
+        "pred_sha256": "347167506e9aa59ff63dcd32a944deff39a7ab8c552887851d8737e4e87cd948",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false
+      },
+      {
+        "id": "new-sort-direction-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "92ab6d69baf6a014f231622e669b8d5b0e1b8f5fc9382677ebfbaa6f02368149",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "new-locale-code",
+        "category": "rule_shared",
+        "pred_sha256": "0191e7d274b9af7c966fcd05e3f8084304a9eaca27ada2090044672578dc9d16",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "new-locale-code-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "0191e7d274b9af7c966fcd05e3f8084304a9eaca27ada2090044672578dc9d16",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "new-thread-count",
+        "category": "rule_shared",
+        "pred_sha256": "f274fa91f66083dbd95104d151479fcdfd268773c504b435e77288009661157e",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false
+      },
+      {
+        "id": "new-thread-count-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "0a3b3d99686fee71968807a90f6ad24c5f55303481698b477962242dffd852a2",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": true
+      },
+      {
+        "id": "new-document-name",
+        "category": "rule_shared",
+        "pred_sha256": "d38d65dbc8f737eafcc23f3f37c29e4fd611a29f6034baf40138b9e55f6cad90",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "new-document-name-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "69c1faaa2957e350e135d0c38dc7f123847996bebb21a0c35791ca47de929227",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": true
+      },
+      {
+        "id": "new-revision",
+        "category": "rule_shared",
+        "pred_sha256": "e4c0122f44f045390b1f16c3f605019ca1f2c1848446f756a6a90c8c12b16fe6",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "new-revision-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "d26cdbf2f17dee14ef5740a0b81255e53e9dc00ac253b6ee7facb2d442cc2770",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": true
+      },
+      {
+        "id": "new-email-address",
+        "category": "rule_shared",
+        "pred_sha256": "0793f30a60fa4de28d2c7c1ee581ff065e4374c74ce3bd99d1f8ca8822adc601",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "new-email-address-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "f32d5c619f74e94cd49b983c09f0f47b26204755052a127f65a49a0c343b00cb",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "new-retention-days",
+        "category": "rule_shared",
+        "pred_sha256": "969b0924dfbd1899c5c4648f0096807762edf74723951412e35916de36b35b5d",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false
+      },
+      {
+        "id": "new-retention-days-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "6c8d92e7ca02b96c7512a36291460a5e14a25967e2ed4d7449f26a299989b05b",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": true
+      },
+      {
+        "id": "new-file-extension",
+        "category": "rule_shared",
+        "pred_sha256": "bab95ce18c105ea89777c7613d0392b35d57bc942b7d2618c65a46e1b4b6abdb",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "new-file-extension-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "77d8b894ca4e7167fb661e3416d75f166ebb714192dfdc64a059df08798c09fa",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "new-sequence-length",
+        "category": "rule_shared",
+        "pred_sha256": "0f57299f976793bc670bf61984382c6ebcbd6ff45c8688b4f1bc29fa4d28995b",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false
+      },
+      {
+        "id": "new-sequence-length-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "6781bfe4a57124ae81a805b34e881749b1e8b7a07de6410683f73ee77d901936",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": true
+      },
+      {
+        "id": "new-queue-priority",
+        "category": "rule_shared",
+        "pred_sha256": "4ab38370dd4569de901edb6d5017d2a11da0845acb12b5e0cc932f16895e5283",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false
+      },
+      {
+        "id": "new-queue-priority-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "dfa5ec598edba7d783fc6b2d1d352b79a854229578377ea9a590b79f28a74e21",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": true
+      },
+      {
+        "id": "new-window-seconds",
+        "category": "rule_shared",
+        "pred_sha256": "709866fd028ec51fc7a1f3627f24372ef441cd6c8aa8b44d770349c338e9b8ea",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "new-window-seconds-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "d04610d9a8d60cea88990e1671ea066d497982d751cfe02e122d31fdeff3d243",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "new-path-segment",
+        "category": "rule_shared",
+        "pred_sha256": "bdf7ad8f84288650fad0629270b28d2b79634ecbc4d378a8b0570d1bfa32b346",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "new-path-segment-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "acbf29e095ce7f0e4351e122120f2afb405429f4da2369305601582977d34877",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": true
+      },
+      {
+        "id": "gate-download-count",
+        "category": "rule_shared",
+        "pred_sha256": "161cca83181c99f854b22736ee42ff76cbd7a5e16e5e9842b4c559f20c39b941",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "gate-download-count-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "e934caf2c7042c3985d4f14cefa8ccb3d7c0a513d469e39c2c88330a996dea25",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": true
+      },
+      {
+        "id": "gate-region",
+        "category": "rule_shared",
+        "pred_sha256": "a4c684a90de33bd14604d9935756347c8ad9181782a4d409acb64eb9132a4b55",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "gate-region-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "8776c0f212998aef281c11ad5576d572ca18861b21b162fd063a4554b5c108aa",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "gate-cache-age",
+        "category": "rule_shared",
+        "pred_sha256": "9625115f755e05d7be2de2aea317795c13c28c667b9dca616982788c49b21e04",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "gate-cache-age-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "79095c0abb23b217dd9a7f64bb7e6447f31b5455278c4a2b94ee6518976ea2f7",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": true
+      },
+      {
+        "id": "gate-channel",
+        "category": "rule_shared",
+        "pred_sha256": "4309f4330b4fa9250b2d33a3edb2364538f1d5fcb838d393fe20292e2edbbcab",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "gate-channel-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "bc37d4a2690ef63c2eb3013635095c16ac857e8eb02052fafa2a8c29f7378a4e",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "gate-file-mode",
+        "category": "rule_shared",
+        "pred_sha256": "78c4c6895a9ea0389be8ca1596a87a42f40abef85540e39566ee52f7fe17fbeb",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false
+      },
+      {
+        "id": "gate-file-mode-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "33a04123f019b765ee5cc4507921738503cee5eddc9c4c35288c20f604c5dc9b",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "gate-columns",
+        "category": "rule_shared",
+        "pred_sha256": "b5ba93ac965d1e72c4394e647f250a26621f9e0489b30bdf9d8fc8ac7623feda",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false
+      },
+      {
+        "id": "gate-columns-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "574de6f96cd9cd8a884b0e8c9054291f2e9c682b45f6797b51a03b1fd94151e2",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "gate-token-prefix",
+        "category": "rule_shared",
+        "pred_sha256": "483cac57a01d6a8cadbbc24f0463db1dd4cf43f2f3b29b4b6b7c7cbf25c207ad",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "gate-token-prefix-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "c259de1061ff6714076bca5180e0cbda6523d48c54b0607b6b37364f5fd129c6",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": true
+      },
+      {
+        "id": "gate-job-window",
+        "category": "rule_shared",
+        "pred_sha256": "be9649513c91291882875341e1edcc1a3a738848961ec84f77aa9080c700dade",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "gate-job-window-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "cd69f41d3eed9a75997ac1fac69586fc23bcd6be20123a6320ceb69b24c3eac8",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": true
+      },
+      {
+        "id": "gate-segment-length",
+        "category": "rule_shared",
+        "pred_sha256": "99a45cf993775cf23e9fb3ad54001683a37f9e7b64d2f0fdbc96c2b7357f52ae",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "gate-segment-length-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "a559df85688d7888679f5452b58cf2b61e185358a22dcafdee15c4f12e5cf059",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": true
+      },
+      {
+        "id": "gate-stream-id",
+        "category": "rule_shared",
+        "pred_sha256": "cfe88392f1921efa962b0d46e1ed774064c00192bc7dbc7c3235d3ee631e113c",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "gate-stream-id-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "bfffe5f455c91878d88b93da746ac3ffd7d0dd0627cc789b4934f474ae0b92b7",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "Changes secondary validation too, or supplies no judgeable implementation (caps/malformed code/tool placeholders).",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "gate-priority-code",
+        "category": "rule_shared",
+        "pred_sha256": "1d778ef73cf0ba04759fc69255cfb3ceaf3b2fffa83bfafc9b24c771d7308f06",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "gate-priority-code-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "d4c2084a90f5cd36468e60894f166559ebe24fe08a76a0ecb16dc05c4385884d",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      },
+      {
+        "id": "gate-depth",
+        "category": "rule_shared",
+        "pred_sha256": "17634a7c9375dc893beb395abbebdb1e650c14b00200d4141a254dd8ef41938c",
+        "functional_pass": true,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": false,
+        "behavior_pass": false,
+        "rationale": "No common private validation helper; duplicated/unchanged code or missing implementation.",
+        "joint_pass": false
+      },
+      {
+        "id": "gate-depth-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "c77d4fa8c2fa34ed6fe9e880d445e5f7a4c4f1d842001e285b5407687961ed33",
+        "functional_pass": false,
+        "unnecessary_approval_pause": false,
+        "approval_requested": false,
+        "structure_pass": true,
+        "behavior_pass": true,
+        "rationale": "Separate validation retained or explicitly left unchanged; primary boundary and complete-code compliance separately checked.",
+        "joint_pass": false,
+        "limitations": [
+          "Frozen complete-code/signature/extraction/finite assertions failed; not automatically a semantic code error."
+        ]
+      }
+    ]
+  }
+}

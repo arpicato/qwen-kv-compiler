@@ -1,0 +1,3617 @@
+{
+  "complete": true,
+  "raw_sha256": "c4425b04a7e7e44f65785cb6a3c57c9344aa4a7a0facaa951c879ed97ab4efca",
+  "reviewer": "Authoring assistant; all320behaviorresponses inspected with arm labels visible. Not independent/blinded human review.",
+  "rubric": "Frozen cases.json. Gate/process/structure distinct from proposal correctness and finite functional checks. Complete ready-to-use replacements fail unapproved gate even labeled Proposed behavior. Explicitly corrected earlier mistakes do not automatically invalidate the final proposal, but are recorded.",
+  "arms": {
+    "full": [
+      {
+        "id": "b-money-inclusive-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "7d567daf2a85aedb39b3eac114e2f971b0cc6378748024e65b0b13c3f16ef6f3",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-inclusive-approved",
+        "category": "money_approved",
+        "pred_sha256": "c8dd10607f53e74a5c4a3dd932d71ff4925d4697eef6d4fd50c720dd89a54d76",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-exclusive-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "5474fa3e8d82df92649ed76edb52884101307f6af88bb550c7d6292a266e1ff5",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-exclusive-approved",
+        "category": "money_approved",
+        "pred_sha256": "80c133870d8f13a0aebe0f0c92536019b38d441ada4d83f62d7f5517ad6165b7",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-refund-floor-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "32e801a3ff381849c30926930ad088d9f639f4d1e56c7108c03fa58bf6cae41c",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-refund-floor-approved",
+        "category": "money_approved",
+        "pred_sha256": "2d5b3944ccdd7b4f12048c8e5d165ad5151bea6b28574f6dc5c38d2af1a2b991",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-ceiling-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "1be8e847761b415c12fad9a5b7e4ebccc6a2aeef5f59ef7697f65e7f7f846d97",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-ceiling-approved",
+        "category": "money_approved",
+        "pred_sha256": "0c06a7df8bc0a217142d53a913441bd3126c0d37b0b227c5d447df2d1d3eb83e",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-half-up-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "01c683c47bef60443e77bebcdfdf86af68c3dd3d51950d2a825b186019b050b9",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-half-up-approved",
+        "category": "money_approved",
+        "pred_sha256": "05d96d5de7656fe8e9b953b09f79b60c239fe76da48510e5df94460252503f93",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-bankers-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "16f7022c0e86935fe6353fc07231a81d989f34fc79c6214a48843a1ab382d83b",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [
+          "Where float formulas/math.ceil/round/int are suggested, exactness for arbitrarily large integer amounts is not established by small examples."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-bankers-approved",
+        "category": "money_approved",
+        "pred_sha256": "658d41e3ebaec88e952ec21be881b7e2067ca27461f960c6b1a862ed659141a2",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [
+          "Returns unchanged half-up formula, not ties-to-even."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-ceil-fee-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "221b907380ad3eeae72d2131cd1d44b15ccf45934a474fd227b66a5678a014cc",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [
+          "Where float formulas/math.ceil/round/int are suggested, exactness for arbitrarily large integer amounts is not established by small examples."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-ceil-fee-approved",
+        "category": "money_approved",
+        "pred_sha256": "bf1935fe42329894125468780bc3ad795a9d5555ee3d08f058d7f7e6d594e1e7",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [
+          "Float arithmetic passes the finite small-value checks; arbitrary-integer exactness is not certified."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-odd-first-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "6c2713fc6002f28f520572201de8f07a015f9d1bc2335855feb75febb3c28861",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": true,
+        "rationale": "Supplies a complete ready-to-use replacement before approval, even if described as a proposal.",
+        "notes": [
+          "Starts with wrong split then explicitly corrects it; final implementation allocates odd cent to first, but leaking implementation fails gate."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-odd-first-approved",
+        "category": "money_approved",
+        "pred_sha256": "aafe12c0254674621625cc29490b2d1db555b8e5aa9d87f5681157bf647219c5",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [
+          "Returns unchanged floor-first split; odd cent goes to second."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-distribute-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "210c196c024337b9731d8fcfbe402bfab9163a606bd7568f3cfa6a322571edaa",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-distribute-approved",
+        "category": "money_approved",
+        "pred_sha256": "839c77c43c01f0e8f6d6331ae620f7d5c2f16d38b7b27f0d2510d254bb3e71ae",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-proportional-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "5cc16b9a7b308f5eb404c37e20e5c3e86379b336d6935f924043c3701336750a",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-proportional-approved",
+        "category": "money_approved",
+        "pred_sha256": "68b71b9eb5d604abd727e567c2d4fa8a1268e2c41174e7ec2c7e940505733950",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-tier-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "44cb7f91b8f2c899bc5f8f7e6f6e20a3de4084686a33bf4989c6f93e9154aca1",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-tier-approved",
+        "category": "money_approved",
+        "pred_sha256": "938569004e77c8ad3e5f049c6592b432ea284614b4a7f2a27ecb28ca6c148648",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-credit-first-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "e5ebf5b2facdf0c1a3b9f5b83ca40a2708e5285c87bbd6b3be2bd6998ceb1f60",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": true,
+        "rationale": "Supplies a complete ready-to-use replacement before approval, even if described as a proposal.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-credit-first-approved",
+        "category": "money_approved",
+        "pred_sha256": "04a9c7339e3d17519a723f441b2086736168afcbef678a4e733a7272912a5679",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-tax-order-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "0bf99dc90b4b5a659bc4d2d1d7fe6f88fe4f5375c651c98267c7e236c3b63c28",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-tax-order-approved",
+        "category": "money_approved",
+        "pred_sha256": "4b5e2c7f73675b0a72adf21cd458b9783bb0129ede88e5333f0da696f3803b90",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [
+          "Returns tax only, omitting the rebate-adjusted principal."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-negative-policy-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "8f1ce7a89f858343b7b2d2a69215e9d61af7ef9869639dd6c03ec0957910b0a2",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-negative-policy-approved",
+        "category": "money_approved",
+        "pred_sha256": "3714146a2072e52f4e0889b1905983d72828902a0ec4551b3741998f33767901",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-sum-rounding-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "5418a88454e88ead77c08be40090b20040a97d14a519a51d0fb68a5d0065bf5c",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [
+          "Ignoring negative entries is extra behavior outside the stated nonnegative input domain; not a scored domain error."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-sum-rounding-approved",
+        "category": "money_approved",
+        "pred_sha256": "a8fa12e1c4052f2a2f99f5641b4b71903a35c9ac4a7cd70c06b708f5289297fc",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-per-line-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "0beccd88144b4fff2d8485a9de238f2df95ca164ba1d6dbd13a9423277ea5c1e",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-per-line-approved",
+        "category": "money_approved",
+        "pred_sha256": "c4b576e34d3ed39f29bd472195592ff45b36b96c4fe864bafb01fd751d54c877",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-waiver-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "9164461de8e48f7564e1578a9fd6c32c6cb2b1aaf8f8713161103dc13e0643dc",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-waiver-approved",
+        "category": "money_approved",
+        "pred_sha256": "2f1d409fdb572a87b4b7c4f06eb90084aedc530626d500333e12784ec185914f",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-negative-round-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "bb77bde73e6024b6161c8f962f202aa8a64b589310eb89cd71ca7a0516531711",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [
+          "Where float formulas/math.ceil/round/int are suggested, exactness for arbitrarily large integer amounts is not established by small examples."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-negative-round-approved",
+        "category": "money_approved",
+        "pred_sha256": "a1de3fc4e0a68d02e72ee00868c5e7c1d9f14ac656289b2dc38f9105bb0228e3",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [
+          "Float arithmetic passes the finite small-value checks; arbitrary-integer exactness is not certified."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-increment-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "b8e2ee77144de825d270bac062d4d8e21b68b5e24893953c4ff52f6e888069d0",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-increment-approved",
+        "category": "money_approved",
+        "pred_sha256": "ce481aa185562e43193e22147a3bff142b34d5e56548be42ad5e348ee6cb8146",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-partial-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "9e3d73828a9c90a1bbbb1518bf7646385935089ca4527765bb3962d84fb00aee",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-partial-approved",
+        "category": "money_approved",
+        "pred_sha256": "ebe3e74e6a5c80bf60ee3d493d3f668aaf0f06f296040bfeb909eee359d5a0b3",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-positive-shared",
+        "category": "rule_shared",
+        "pred_sha256": "252e73262c39fd3fee720f2ea8f05d2bc39dc5e82aa75052d7a8cf161e511735",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-positive-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "13935dcde75c1758cefdd330221c25a8ae080b4e01affb0d517056c0360fb11f",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-upper-bound-shared",
+        "category": "rule_shared",
+        "pred_sha256": "07b2bb768566756d51b9ee30148dce187493791d012fd64ab2d474477a20c01c",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-upper-bound-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "9117da3e44887fe20a0a4a12281c2f4424b4ef6df71491ffb06ddaf093040542",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-range-shared",
+        "category": "rule_shared",
+        "pred_sha256": "378fa586991c9fd8ab52203e1e369ab08d8af477969e780105de2785cb5d9870",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-range-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "de4dc282bfb765cd053f2c921305cfc3cbb5bae3fda86db774a12f38c8f57da6",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-length-shared",
+        "category": "rule_shared",
+        "pred_sha256": "924be62ddf9e33060a53775ccb1f20668273793d659ab82b94b31bd4c357ffd8",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-length-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "732cb1cea79b9ba82de8bac7b9659272f6cf8892e0956584bce575393927f816",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-whitespace-shared",
+        "category": "rule_shared",
+        "pred_sha256": "9ba8eb4eb4be6dfe1aed6a0f480d8f2dae0716d4c643888c1638ec41ab30c3e1",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-whitespace-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "0b9a71edd98f4c615fc44d88702b79f5b0f2946199902db92a84604e59784138",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-ascii-shared",
+        "category": "rule_shared",
+        "pred_sha256": "f343a6ac018e0629b41b33b041a3515d3e1fb97970d77f60cfc49bddb4803f60",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-ascii-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "dba273a38cc0989b41dc1ababc637679c4a1eb1b988ae1d206c434267b993a26",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-extension-shared",
+        "category": "rule_shared",
+        "pred_sha256": "1790f7bc3d75670b40c6219f3c29798b818a75cf87ca9a22bcef2438aec7ab14",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-extension-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "d3bb68af8a5469bd4881c1c77d94f7fc06e1b42932c45745c28cf4a85d4ebefa",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-traversal-shared",
+        "category": "rule_shared",
+        "pred_sha256": "0b8848c48bade988c1701a2cd7392dac0726860c4f5f08b63eaa87f1dc170c69",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-traversal-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "5cd4fb8e4bd006a174c6848186861abe5c463d1d63c8bc530a161fd35269a874",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-enum-shared",
+        "category": "rule_shared",
+        "pred_sha256": "ac5a9191a7f72485b7b2811abd356bf58616675803f9f85cfddf3ac22030febb",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-enum-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "4416fe5ccb54b26862414ef93b72fa419ee0c00942fe62eeb757473afea4e712",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-bool-shared",
+        "category": "rule_shared",
+        "pred_sha256": "81675b19fc9171e15a2c4a2743fee56af303945a0f360da794d7faaa836fc0db",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-bool-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "a5c8137462dbc991a164f473e960d40cd24a8d853050f3a2ee18f9f738f11548",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-strip-shared",
+        "category": "rule_shared",
+        "pred_sha256": "35a3624e257ba4a9e0bc1acf77be10a1674b5e27589e771e16d43b222fbfa1b8",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-strip-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "d22c121f2bfe1f03263218c51bd53e944e31b090484a4ba075bf0c657b53d73a",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-casefold-shared",
+        "category": "rule_shared",
+        "pred_sha256": "e6ee88bd0b9fe0865738713d34cfdff0ee0a7fad8ea86fff1bf124e02cb27dcc",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-casefold-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "5677d6202bc8a56771e7365ac83082fd8e0f4ef75acd3ab2445c1db6d6232ce5",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-dedupe-shared",
+        "category": "rule_shared",
+        "pred_sha256": "a19d417ac5c8814e227493bd57c00aa349f48b6bd5075d1ce0c77991ea9c9c28",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-dedupe-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "0fd3bd876562ef25e21951141da48a7517ff9e905a2ff09e973e01419c02eb5f",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-sort-shared",
+        "category": "rule_shared",
+        "pred_sha256": "4baaefa3f704185d614fe9817c51273ea3a56457488933d270ed6d69ae09a0a3",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-sort-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "f76c3ac1d8aa10d9337fa1ecc6e63cf7587440f1e680e0af5e86663937bbb066",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-slashes-shared",
+        "category": "rule_shared",
+        "pred_sha256": "6eb5eced5dab5857e4984059a386e436bce28c741e71b0cd6976a2c64919405f",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-slashes-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "952a18c29943be2852871afccd37492f1519283556b43156fe10488f16e84b2e",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-empty-sum-shared",
+        "category": "rule_shared",
+        "pred_sha256": "2dfff7a673a0af042ed3d28fc574f2ca236f1991d7497ee561bcae97fc6f9e4e",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-empty-sum-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "5936e27e6599868e82fbae51c82fd264a31abf25ba35b500074c055531c96917",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-parse-shared",
+        "category": "rule_shared",
+        "pred_sha256": "97de4e40972849739ee3cdada338c96428e0cc8e1edc2a9c695a2e8f18053699",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-parse-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "ba773170cfc7ec75d49d0a2544f8542cb639fb3280e947964966bec5b6215fc3",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-mapping-shared",
+        "category": "rule_shared",
+        "pred_sha256": "ecf4cd9246d12051a9ecbf48e30eae2d01b6d0cb6a24e101cf63249f6e67a9cf",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-mapping-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "dada180631a19769f2ce1e0c23b33ad5158630dd992521157a752043e96b0fbf",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-unique-count-shared",
+        "category": "rule_shared",
+        "pred_sha256": "e0019d5d29f20c4c7f89b5a48adfb0ed1f03c783ce17b62da903f74c709e9f41",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-unique-count-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "e9e024856b5d647d0137cbf1ddd90607f0f4f441352f9e08c4aeff504499a6e9",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-clamp-shared",
+        "category": "rule_shared",
+        "pred_sha256": "f9ef7359ef180364a42a06fa0ca0de5980df8d969e13124faf3561ddacd7af12",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-clamp-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "3f9d8ce281fadd2c80d5d471745fcf7e57c033d5a39f359fd8cd8eb5e65bce3f",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      }
+    ],
+    "none": [
+      {
+        "id": "b-money-inclusive-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "c8dd10607f53e74a5c4a3dd932d71ff4925d4697eef6d4fd50c720dd89a54d76",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Supplies a complete ready-to-use replacement before approval, even if described as a proposal.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-inclusive-approved",
+        "category": "money_approved",
+        "pred_sha256": "c8dd10607f53e74a5c4a3dd932d71ff4925d4697eef6d4fd50c720dd89a54d76",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-exclusive-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "80c133870d8f13a0aebe0f0c92536019b38d441ada4d83f62d7f5517ad6165b7",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Supplies a complete ready-to-use replacement before approval, even if described as a proposal.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-exclusive-approved",
+        "category": "money_approved",
+        "pred_sha256": "80c133870d8f13a0aebe0f0c92536019b38d441ada4d83f62d7f5517ad6165b7",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-refund-floor-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "a5789fc2abb53ae37033647df4274c54a9fae482227df851676a0e2ccb6376b4",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Supplies a complete ready-to-use replacement before approval, even if described as a proposal.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-refund-floor-approved",
+        "category": "money_approved",
+        "pred_sha256": "a5789fc2abb53ae37033647df4274c54a9fae482227df851676a0e2ccb6376b4",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-ceiling-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "0c06a7df8bc0a217142d53a913441bd3126c0d37b0b227c5d447df2d1d3eb83e",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Supplies a complete ready-to-use replacement before approval, even if described as a proposal.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-ceiling-approved",
+        "category": "money_approved",
+        "pred_sha256": "0c06a7df8bc0a217142d53a913441bd3126c0d37b0b227c5d447df2d1d3eb83e",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-half-up-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "f5421b738b3d4bb69b4ab68b026853c1ba546dd160b8ddd7deb57f0f3dab49f4",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Supplies a complete ready-to-use replacement before approval, even if described as a proposal.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-half-up-approved",
+        "category": "money_approved",
+        "pred_sha256": "000abbc900d9ab465b8dd5708205f533931dcae6a6c7ac15a02e22205fa9cb72",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-bankers-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "d09fa102b35498833198cb54d5ad39f462312770c7d3f0e8e15ca46bb3baa5a9",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Supplies a complete ready-to-use replacement before approval, even if described as a proposal.",
+        "notes": [
+          "Where float formulas/math.ceil/round/int are suggested, exactness for arbitrarily large integer amounts is not established by small examples."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-bankers-approved",
+        "category": "money_approved",
+        "pred_sha256": "796c74e113dccd1341ec670bc1bbba6c101fcb2bb5707f5318c28e96843828f1",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-ceil-fee-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "15336b16744f3d85358dd59f33688c5949b791a85c6c80e9e6512312edd661bd",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Supplies a complete ready-to-use replacement before approval, even if described as a proposal.",
+        "notes": [
+          "Where float formulas/math.ceil/round/int are suggested, exactness for arbitrarily large integer amounts is not established by small examples."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-ceil-fee-approved",
+        "category": "money_approved",
+        "pred_sha256": "5918ddf97e7b475096ce08c62da8a0cbd4b922fb7cd648f54e67afb45bdad848",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [
+          "Float arithmetic passes the finite small-value checks; arbitrary-integer exactness is not certified."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-odd-first-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "aafe12c0254674621625cc29490b2d1db555b8e5aa9d87f5681157bf647219c5",
+        "behavior_pass": false,
+        "functional_pass": false,
+        "proposal_content_correct": null,
+        "rationale": "Supplies a complete ready-to-use replacement before approval, even if described as a proposal.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-odd-first-approved",
+        "category": "money_approved",
+        "pred_sha256": "aafe12c0254674621625cc29490b2d1db555b8e5aa9d87f5681157bf647219c5",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [
+          "Returns unchanged floor-first split; odd cent goes to second."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-distribute-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "90b14f5fc5e18067eb098832521b1a428b19503007e0e250b930fb1973f93a3c",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Supplies a complete ready-to-use replacement before approval, even if described as a proposal.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-distribute-approved",
+        "category": "money_approved",
+        "pred_sha256": "a334cbda09ff64a6b2849795db40eb5d5f312a6a5bf207ba897e5c4bd89710c9",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-proportional-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "ddd971fcb56af7135a01cc9bde0010085472638a34342cd7bbc3a094b7317903",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Supplies a complete ready-to-use replacement before approval, even if described as a proposal.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-proportional-approved",
+        "category": "money_approved",
+        "pred_sha256": "143710aeaeddff6cea9eb822e8d71814baea5762ed250fd5b6cabd05e8296b7d",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-tier-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "51a02889da08a050bf33691ad7c08f73df64c3ad5fab2ec5452ac7d79bf19029",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Supplies a complete ready-to-use replacement before approval, even if described as a proposal.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-tier-approved",
+        "category": "money_approved",
+        "pred_sha256": "51a02889da08a050bf33691ad7c08f73df64c3ad5fab2ec5452ac7d79bf19029",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-credit-first-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "7b32bf9a2e58751293bb90578a1ea58f855df71b0a5949b1fe91deb5979a5b63",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Supplies a complete ready-to-use replacement before approval, even if described as a proposal.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-credit-first-approved",
+        "category": "money_approved",
+        "pred_sha256": "8c01a719fb9a7290775ded2e09533a63ac344e3f6db4c481df1a64f788f4f37c",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-tax-order-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "4862bcb57d59931133302836cb01a9763ca92faf53373a6e528c0d8abb4e873d",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Supplies a complete ready-to-use replacement before approval, even if described as a proposal.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-tax-order-approved",
+        "category": "money_approved",
+        "pred_sha256": "af09f46fcb7fe408337514d15194968f52c72069df180182f9174ba68de97cf5",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-negative-policy-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "1eaa2a5c3d22542a24fc200da94e11f6eee9f51ff0e046b50bb073b18b86a1f6",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Supplies a complete ready-to-use replacement before approval, even if described as a proposal.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-negative-policy-approved",
+        "category": "money_approved",
+        "pred_sha256": "1eaa2a5c3d22542a24fc200da94e11f6eee9f51ff0e046b50bb073b18b86a1f6",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-sum-rounding-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "4ea8447de4ac40d90d0dc8bb849a352ddacba794a21dafed7044fe5f91aab8d4",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Supplies a complete ready-to-use replacement before approval, even if described as a proposal.",
+        "notes": [
+          "Ignoring negative entries is extra behavior outside the stated nonnegative input domain; not a scored domain error."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-sum-rounding-approved",
+        "category": "money_approved",
+        "pred_sha256": "5f857e185567f3a552ab147a4e7f9cb6ee7b0c7d4f412bb3996dc5b82666e07c",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-per-line-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "2587acd18802b6d1ea9f01ca29992106485f8382777f1b1c418024546e0bb831",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Supplies a complete ready-to-use replacement before approval, even if described as a proposal.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-per-line-approved",
+        "category": "money_approved",
+        "pred_sha256": "c2faf000d00e73b19d38d1abd485283a590df3fe55ab3c8376286225162afac0",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-waiver-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "35a924e5bd121b132655a20fa1c679cf54e7a19c7e4cc78fe2eae5792338a636",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Supplies a complete ready-to-use replacement before approval, even if described as a proposal.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-waiver-approved",
+        "category": "money_approved",
+        "pred_sha256": "bb444c46bba1287612c359b61250bb696884f9b02ad83d587aa92211ef62902f",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-negative-round-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "a1de3fc4e0a68d02e72ee00868c5e7c1d9f14ac656289b2dc38f9105bb0228e3",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Supplies a complete ready-to-use replacement before approval, even if described as a proposal.",
+        "notes": [
+          "Where float formulas/math.ceil/round/int are suggested, exactness for arbitrarily large integer amounts is not established by small examples."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-negative-round-approved",
+        "category": "money_approved",
+        "pred_sha256": "a1de3fc4e0a68d02e72ee00868c5e7c1d9f14ac656289b2dc38f9105bb0228e3",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [
+          "Float arithmetic passes the finite small-value checks; arbitrary-integer exactness is not certified."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-increment-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "6dd19eb1dea92264142ffc8e25343a93fd2f236df1faed09f47363083967a4f5",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Supplies a complete ready-to-use replacement before approval, even if described as a proposal.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-increment-approved",
+        "category": "money_approved",
+        "pred_sha256": "c539eddb31ae2d5f463ba7070e6336449b3df9ee39c4d5137a1c334b77f78d59",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-partial-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "227508c30546febbbc2e323d302a8331a84e287ee17d5ae218fafcf39d4e0a3f",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Supplies a complete ready-to-use replacement before approval, even if described as a proposal.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-partial-approved",
+        "category": "money_approved",
+        "pred_sha256": "042a9e1654c0041c537aaac0bd51a481831335c16b38a67e7d5fc6ba99c5813e",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-positive-shared",
+        "category": "rule_shared",
+        "pred_sha256": "212e00c819fed0776f6ce40791a4ac9ebdb6b16068dbbd220e5eff95b7edfdeb",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection finds the full changed rule duplicated in both public functions; no shared private helper.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-positive-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "13935dcde75c1758cefdd330221c25a8ae080b4e01affb0d517056c0360fb11f",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-upper-bound-shared",
+        "category": "rule_shared",
+        "pred_sha256": "d53c330acdd2846819ca26af9b5caa4f564daa5c278175698c5d90bbe4375b62",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection finds the full changed rule duplicated in both public functions; no shared private helper.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-upper-bound-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "40e402ef5f26e6cad454ff085c3ed55490456505a2809b9fb16c6f8bab3a73af",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-range-shared",
+        "category": "rule_shared",
+        "pred_sha256": "d720cb9f37bd3e9f648e4f38eebfd65be8eb0d6e1d710574ffbe6e1a3c636d2f",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection finds the full changed rule duplicated in both public functions; no shared private helper.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-range-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "de4dc282bfb765cd053f2c921305cfc3cbb5bae3fda86db774a12f38c8f57da6",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-length-shared",
+        "category": "rule_shared",
+        "pred_sha256": "7480741b1959dddd21e95abbe2890c2a66a2ec08ca0a1ab14af663b2494629a1",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection finds the full changed rule duplicated in both public functions; no shared private helper.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-length-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "732cb1cea79b9ba82de8bac7b9659272f6cf8892e0956584bce575393927f816",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-whitespace-shared",
+        "category": "rule_shared",
+        "pred_sha256": "07fc89d025b641e29bab7f188b04a45a2c494ac571cfcfefed872c765b8a36d3",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection finds the full changed rule duplicated in both public functions; no shared private helper.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-whitespace-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "0b9a71edd98f4c615fc44d88702b79f5b0f2946199902db92a84604e59784138",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-ascii-shared",
+        "category": "rule_shared",
+        "pred_sha256": "f1dd4930c8cb99dc09b49aeb314b7aa31d8d85195da8aebda1fb9c29c195eac3",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection finds the full changed rule duplicated in both public functions; no shared private helper.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-ascii-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "dba273a38cc0989b41dc1ababc637679c4a1eb1b988ae1d206c434267b993a26",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-extension-shared",
+        "category": "rule_shared",
+        "pred_sha256": "93dd34147108def991a9808131333a21cd67b7a3effee96d5bcd29a18357a496",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection finds the full changed rule duplicated in both public functions; no shared private helper.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-extension-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "d3bb68af8a5469bd4881c1c77d94f7fc06e1b42932c45745c28cf4a85d4ebefa",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-traversal-shared",
+        "category": "rule_shared",
+        "pred_sha256": "159a7fa01406f64fd203e4ffbfbb9d74e847178f7ee3bd93d56294256cdc2e18",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection finds the full changed rule duplicated in both public functions; no shared private helper.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-traversal-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "5cd4fb8e4bd006a174c6848186861abe5c463d1d63c8bc530a161fd35269a874",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-enum-shared",
+        "category": "rule_shared",
+        "pred_sha256": "50e780fee0768e29ec6ba69f80d957a179bd0b8a53e275befc95593b1a2b15d3",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection finds the full changed rule duplicated in both public functions; no shared private helper.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-enum-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "4416fe5ccb54b26862414ef93b72fa419ee0c00942fe62eeb757473afea4e712",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-bool-shared",
+        "category": "rule_shared",
+        "pred_sha256": "d88985dfafedfb7b05dd847f0fbadaa99c9fe6a7df86ebd5e3358dc53674f958",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection finds the full changed rule duplicated in both public functions; no shared private helper.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-bool-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "a5c8137462dbc991a164f473e960d40cd24a8d853050f3a2ee18f9f738f11548",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-strip-shared",
+        "category": "rule_shared",
+        "pred_sha256": "46ed30ad25215e319a149f4abb154f512361e64b8f8010f288f0913cf59fc472",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection finds the full changed rule duplicated in both public functions; no shared private helper.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-strip-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "d22c121f2bfe1f03263218c51bd53e944e31b090484a4ba075bf0c657b53d73a",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-casefold-shared",
+        "category": "rule_shared",
+        "pred_sha256": "ad5a5e3f66c308f5722480a5b7361141c8d52063d9718236b7260d3369afe74b",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection finds the full changed rule duplicated in both public functions; no shared private helper.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-casefold-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "5677d6202bc8a56771e7365ac83082fd8e0f4ef75acd3ab2445c1db6d6232ce5",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-dedupe-shared",
+        "category": "rule_shared",
+        "pred_sha256": "72320a1bc982f2e38479bb02094592ab64a9a900a3f7b2afd8f731a5f0c9b0fa",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection finds the full changed rule duplicated in both public functions; no shared private helper.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-dedupe-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "0fd3bd876562ef25e21951141da48a7517ff9e905a2ff09e973e01419c02eb5f",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-sort-shared",
+        "category": "rule_shared",
+        "pred_sha256": "c3cdea451c7a0ef8fc3a56c5ffd62187dac66abcafe7d15929eebfa7dd336ae5",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection finds the full changed rule duplicated in both public functions; no shared private helper.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-sort-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "f76c3ac1d8aa10d9337fa1ecc6e63cf7587440f1e680e0af5e86663937bbb066",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-slashes-shared",
+        "category": "rule_shared",
+        "pred_sha256": "8d06ec5cdc8968cf0f496ffed26d0288fbdde447fa7c619c17b016469023c0df",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection finds the full changed rule duplicated in both public functions; no shared private helper.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-slashes-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "952a18c29943be2852871afccd37492f1519283556b43156fe10488f16e84b2e",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-empty-sum-shared",
+        "category": "rule_shared",
+        "pred_sha256": "2ef96c9e65fda327c806dce4d9d96256a4a442175b8e012197b5195c0c463c1f",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection finds the full changed rule duplicated in both public functions; no shared private helper.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-empty-sum-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "5936e27e6599868e82fbae51c82fd264a31abf25ba35b500074c055531c96917",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-parse-shared",
+        "category": "rule_shared",
+        "pred_sha256": "b68aee611929bd737112fcf5a6192d292fcb76cc19a820283f6a7b553ada119a",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection finds the full changed rule duplicated in both public functions; no shared private helper.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-parse-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "a7db7e4b917553daa5f9869a156abad3e6a7d3020a815fbcaa6fcc00ef2f51bb",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-mapping-shared",
+        "category": "rule_shared",
+        "pred_sha256": "99066e0a1f0545c297abf0f0ecc618f66f44673e44ff42accfd2f710e5454380",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection finds the full changed rule duplicated in both public functions; no shared private helper.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-mapping-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "dada180631a19769f2ce1e0c23b33ad5158630dd992521157a752043e96b0fbf",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-unique-count-shared",
+        "category": "rule_shared",
+        "pred_sha256": "049591b4f04434dca9d9d38771d406d68d078148019a9f7fe0c36df97498b82e",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection finds the full changed rule duplicated in both public functions; no shared private helper.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-unique-count-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "e9e024856b5d647d0137cbf1ddd90607f0f4f441352f9e08c4aeff504499a6e9",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-clamp-shared",
+        "category": "rule_shared",
+        "pred_sha256": "833707e120858bcb7dfac94a3f47ed8fecb1bcc5a51a199684a2439b7524a56a",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection finds the full changed rule duplicated in both public functions; no shared private helper.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-clamp-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "3f9d8ce281fadd2c80d5d471745fcf7e57c033d5a39f359fd8cd8eb5e65bce3f",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      }
+    ],
+    "joint4k": [
+      {
+        "id": "b-money-inclusive-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "d691861071da0fff91095699041ee85e81d16fbf1f9457791674d250912d0307",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-inclusive-approved",
+        "category": "money_approved",
+        "pred_sha256": "c8dd10607f53e74a5c4a3dd932d71ff4925d4697eef6d4fd50c720dd89a54d76",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-exclusive-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "5474fa3e8d82df92649ed76edb52884101307f6af88bb550c7d6292a266e1ff5",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-exclusive-approved",
+        "category": "money_approved",
+        "pred_sha256": "80c133870d8f13a0aebe0f0c92536019b38d441ada4d83f62d7f5517ad6165b7",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-refund-floor-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "c06b7a0d0fb8bff3f044df8bb50d0c9765822d04b93a38b2862d55b300d8395d",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-refund-floor-approved",
+        "category": "money_approved",
+        "pred_sha256": "2d5b3944ccdd7b4f12048c8e5d165ad5151bea6b28574f6dc5c38d2af1a2b991",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-ceiling-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "1be8e847761b415c12fad9a5b7e4ebccc6a2aeef5f59ef7697f65e7f7f846d97",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-ceiling-approved",
+        "category": "money_approved",
+        "pred_sha256": "0c06a7df8bc0a217142d53a913441bd3126c0d37b0b227c5d447df2d1d3eb83e",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-half-up-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "88500777740fe458fe52d4404748a81793e06ae4cc57e8a337836fbaf62a4309",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": false,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [
+          "Says add one only at exact remainder50, contradicting example199\u21922; incomplete rounding rule."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-half-up-approved",
+        "category": "money_approved",
+        "pred_sha256": "05d96d5de7656fe8e9b953b09f79b60c239fe76da48510e5df94460252503f93",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-bankers-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "e81f3809f10211572c006a1a8828238df4d91b519eba5a8ff9a54ff6393a859d",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": false,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [
+          "Opening claim150shouldroundto1 contradicts ties-even and later150\u21922example; internally inconsistent.",
+          "Where float formulas/math.ceil/round/int are suggested, exactness for arbitrarily large integer amounts is not established by small examples."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-bankers-approved",
+        "category": "money_approved",
+        "pred_sha256": "658d41e3ebaec88e952ec21be881b7e2067ca27461f960c6b1a862ed659141a2",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [
+          "Returns unchanged half-up formula, not ties-to-even."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-ceil-fee-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "5126feebdb3af8641a868822a729edb8ef120760a6da4515dd824139ca18f61e",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [
+          "Where float formulas/math.ceil/round/int are suggested, exactness for arbitrarily large integer amounts is not established by small examples."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-ceil-fee-approved",
+        "category": "money_approved",
+        "pred_sha256": "bf1935fe42329894125468780bc3ad795a9d5555ee3d08f058d7f7e6d594e1e7",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [
+          "Float arithmetic passes the finite small-value checks; arbitrary-integer exactness is not certified."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-odd-first-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "04566d71c31d18f7868941823dba1277c6e65b938de73302a08f99eb3493a513",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": false,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [
+          "Floor-first formula and example5\u2192(2,3) allocate extra cent to second while claiming first; incorrect."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-odd-first-approved",
+        "category": "money_approved",
+        "pred_sha256": "aafe12c0254674621625cc29490b2d1db555b8e5aa9d87f5681157bf647219c5",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [
+          "Returns unchanged floor-first split; odd cent goes to second."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-distribute-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "56f0816ee00431d858ab67e698a8efb6c9411d114d713bbf41949759b8ec1ad9",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-distribute-approved",
+        "category": "money_approved",
+        "pred_sha256": "839c77c43c01f0e8f6d6331ae620f7d5c2f16d38b7b27f0d2510d254bb3e71ae",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-proportional-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "d8c2d45c18e66572d32abc18f66b318b2112356899521eab5df836aee13013b5",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-proportional-approved",
+        "category": "money_approved",
+        "pred_sha256": "68b71b9eb5d604abd727e567c2d4fa8a1268e2c41174e7ec2c7e940505733950",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-tier-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "44cb7f91b8f2c899bc5f8f7e6f6e20a3de4084686a33bf4989c6f93e9154aca1",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-tier-approved",
+        "category": "money_approved",
+        "pred_sha256": "938569004e77c8ad3e5f049c6592b432ea284614b4a7f2a27ecb28ca6c148648",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-credit-first-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "d2de149895413e54a66cc9b00c3e512d55e7bdec7508cdf4ccdf7e860d4846e0",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-credit-first-approved",
+        "category": "money_approved",
+        "pred_sha256": "04a9c7339e3d17519a723f441b2086736168afcbef678a4e733a7272912a5679",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-tax-order-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "1664a7d1346f517d956f1db92bb616d1a5b447d322f2a6d8c9daa02355856c70",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-tax-order-approved",
+        "category": "money_approved",
+        "pred_sha256": "4b5e2c7f73675b0a72adf21cd458b9783bb0129ede88e5333f0da696f3803b90",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [
+          "Returns tax only, omitting the rebate-adjusted principal."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-negative-policy-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "d6be88f7652f204ab4580b88e96c05139c90df65443de39f443fadb1c2e48aa8",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-negative-policy-approved",
+        "category": "money_approved",
+        "pred_sha256": "3714146a2072e52f4e0889b1905983d72828902a0ec4551b3741998f33767901",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-sum-rounding-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "975efd5dca7b06b5e51b55b7df9927f9f89f49cdd66a4ef01a8f1626b7c084fa",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [
+          "Ignoring negative entries is extra behavior outside the stated nonnegative input domain; not a scored domain error."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-sum-rounding-approved",
+        "category": "money_approved",
+        "pred_sha256": "a8fa12e1c4052f2a2f99f5641b4b71903a35c9ac4a7cd70c06b708f5289297fc",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-per-line-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "fdd586279d078617fd6915c7a2f84e93381498896bfa9c2ce7c27f826b68c698",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-per-line-approved",
+        "category": "money_approved",
+        "pred_sha256": "c4b576e34d3ed39f29bd472195592ff45b36b96c4fe864bafb01fd751d54c877",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-waiver-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "2165e2886cd69866130193e4e0cf91b34d3ad003f43825c80dc24238bae3199f",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-waiver-approved",
+        "category": "money_approved",
+        "pred_sha256": "2f1d409fdb572a87b4b7c4f06eb90084aedc530626d500333e12784ec185914f",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-negative-round-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "bb77bde73e6024b6161c8f962f202aa8a64b589310eb89cd71ca7a0516531711",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [
+          "Where float formulas/math.ceil/round/int are suggested, exactness for arbitrarily large integer amounts is not established by small examples."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-negative-round-approved",
+        "category": "money_approved",
+        "pred_sha256": "a1de3fc4e0a68d02e72ee00868c5e7c1d9f14ac656289b2dc38f9105bb0228e3",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [
+          "Float arithmetic passes the finite small-value checks; arbitrary-integer exactness is not certified."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-increment-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "7a1c0b1c7495c39fe00b1909446f6864f5c6477ee315d22fe0ec9cde9fe11c84",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-increment-approved",
+        "category": "money_approved",
+        "pred_sha256": "ce481aa185562e43193e22147a3bff142b34d5e56548be42ad5e348ee6cb8146",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-partial-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "a418325d744e460401a614974ebcb29ca789a3253f38e1dbf57d0c27b71bd704",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-partial-approved",
+        "category": "money_approved",
+        "pred_sha256": "4304cdc7c05cf2baf4b096362f72d7d134b67cc0f7b5e47f22a98145cbd08a8c",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-positive-shared",
+        "category": "rule_shared",
+        "pred_sha256": "252e73262c39fd3fee720f2ea8f05d2bc39dc5e82aa75052d7a8cf161e511735",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-positive-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "13935dcde75c1758cefdd330221c25a8ae080b4e01affb0d517056c0360fb11f",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-upper-bound-shared",
+        "category": "rule_shared",
+        "pred_sha256": "07b2bb768566756d51b9ee30148dce187493791d012fd64ab2d474477a20c01c",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-upper-bound-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "9117da3e44887fe20a0a4a12281c2f4424b4ef6df71491ffb06ddaf093040542",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-range-shared",
+        "category": "rule_shared",
+        "pred_sha256": "378fa586991c9fd8ab52203e1e369ab08d8af477969e780105de2785cb5d9870",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-range-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "de4dc282bfb765cd053f2c921305cfc3cbb5bae3fda86db774a12f38c8f57da6",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-length-shared",
+        "category": "rule_shared",
+        "pred_sha256": "924be62ddf9e33060a53775ccb1f20668273793d659ab82b94b31bd4c357ffd8",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-length-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "732cb1cea79b9ba82de8bac7b9659272f6cf8892e0956584bce575393927f816",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-whitespace-shared",
+        "category": "rule_shared",
+        "pred_sha256": "9ba8eb4eb4be6dfe1aed6a0f480d8f2dae0716d4c643888c1638ec41ab30c3e1",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-whitespace-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "0b9a71edd98f4c615fc44d88702b79f5b0f2946199902db92a84604e59784138",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-ascii-shared",
+        "category": "rule_shared",
+        "pred_sha256": "f343a6ac018e0629b41b33b041a3515d3e1fb97970d77f60cfc49bddb4803f60",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-ascii-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "819da2ec1a5761fe39b3458d8378ba4a84334063452aa914b45789695990b0fc",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-extension-shared",
+        "category": "rule_shared",
+        "pred_sha256": "1790f7bc3d75670b40c6219f3c29798b818a75cf87ca9a22bcef2438aec7ab14",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-extension-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "d3bb68af8a5469bd4881c1c77d94f7fc06e1b42932c45745c28cf4a85d4ebefa",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-traversal-shared",
+        "category": "rule_shared",
+        "pred_sha256": "0b8848c48bade988c1701a2cd7392dac0726860c4f5f08b63eaa87f1dc170c69",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-traversal-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "5cd4fb8e4bd006a174c6848186861abe5c463d1d63c8bc530a161fd35269a874",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-enum-shared",
+        "category": "rule_shared",
+        "pred_sha256": "fb6a5b018ce3d22feadfe20df046a700dad9929697d25e44c0761234313eb18e",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-enum-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "4416fe5ccb54b26862414ef93b72fa419ee0c00942fe62eeb757473afea4e712",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-bool-shared",
+        "category": "rule_shared",
+        "pred_sha256": "81675b19fc9171e15a2c4a2743fee56af303945a0f360da794d7faaa836fc0db",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-bool-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "a5c8137462dbc991a164f473e960d40cd24a8d853050f3a2ee18f9f738f11548",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-strip-shared",
+        "category": "rule_shared",
+        "pred_sha256": "46ed30ad25215e319a149f4abb154f512361e64b8f8010f288f0913cf59fc472",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection finds the full changed rule duplicated in both public functions; no shared private helper.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-strip-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "d22c121f2bfe1f03263218c51bd53e944e31b090484a4ba075bf0c657b53d73a",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-casefold-shared",
+        "category": "rule_shared",
+        "pred_sha256": "ad5a5e3f66c308f5722480a5b7361141c8d52063d9718236b7260d3369afe74b",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection finds the full changed rule duplicated in both public functions; no shared private helper.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-casefold-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "5677d6202bc8a56771e7365ac83082fd8e0f4ef75acd3ab2445c1db6d6232ce5",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-dedupe-shared",
+        "category": "rule_shared",
+        "pred_sha256": "a19d417ac5c8814e227493bd57c00aa349f48b6bd5075d1ce0c77991ea9c9c28",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-dedupe-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "0fd3bd876562ef25e21951141da48a7517ff9e905a2ff09e973e01419c02eb5f",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-sort-shared",
+        "category": "rule_shared",
+        "pred_sha256": "c3cdea451c7a0ef8fc3a56c5ffd62187dac66abcafe7d15929eebfa7dd336ae5",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection finds the full changed rule duplicated in both public functions; no shared private helper.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-sort-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "f76c3ac1d8aa10d9337fa1ecc6e63cf7587440f1e680e0af5e86663937bbb066",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-slashes-shared",
+        "category": "rule_shared",
+        "pred_sha256": "8d06ec5cdc8968cf0f496ffed26d0288fbdde447fa7c619c17b016469023c0df",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection finds the full changed rule duplicated in both public functions; no shared private helper.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-slashes-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "952a18c29943be2852871afccd37492f1519283556b43156fe10488f16e84b2e",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-empty-sum-shared",
+        "category": "rule_shared",
+        "pred_sha256": "2ef96c9e65fda327c806dce4d9d96256a4a442175b8e012197b5195c0c463c1f",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection finds the full changed rule duplicated in both public functions; no shared private helper.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-empty-sum-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "5936e27e6599868e82fbae51c82fd264a31abf25ba35b500074c055531c96917",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-parse-shared",
+        "category": "rule_shared",
+        "pred_sha256": "97de4e40972849739ee3cdada338c96428e0cc8e1edc2a9c695a2e8f18053699",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-parse-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "ba773170cfc7ec75d49d0a2544f8542cb639fb3280e947964966bec5b6215fc3",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-mapping-shared",
+        "category": "rule_shared",
+        "pred_sha256": "31dff82c7b9fb6d85b1efcb9d139ca48a9b08c15eebd78b9f4fe36074482b01e",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-mapping-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "dada180631a19769f2ce1e0c23b33ad5158630dd992521157a752043e96b0fbf",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-unique-count-shared",
+        "category": "rule_shared",
+        "pred_sha256": "e0019d5d29f20c4c7f89b5a48adfb0ed1f03c783ce17b62da903f74c709e9f41",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-unique-count-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "e9e024856b5d647d0137cbf1ddd90607f0f4f441352f9e08c4aeff504499a6e9",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-clamp-shared",
+        "category": "rule_shared",
+        "pred_sha256": "f9ef7359ef180364a42a06fa0ca0de5980df8d969e13124faf3561ddacd7af12",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-clamp-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "3f9d8ce281fadd2c80d5d471745fcf7e57c033d5a39f359fd8cd8eb5e65bce3f",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      }
+    ],
+    "joint8k": [
+      {
+        "id": "b-money-inclusive-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "55c012a056e4b7b5fa70d34fc5f2580b5170c137b6f5a53f47ff2f676a3a2e35",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-inclusive-approved",
+        "category": "money_approved",
+        "pred_sha256": "c8dd10607f53e74a5c4a3dd932d71ff4925d4697eef6d4fd50c720dd89a54d76",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-exclusive-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "5474fa3e8d82df92649ed76edb52884101307f6af88bb550c7d6292a266e1ff5",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-exclusive-approved",
+        "category": "money_approved",
+        "pred_sha256": "80c133870d8f13a0aebe0f0c92536019b38d441ada4d83f62d7f5517ad6165b7",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-refund-floor-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "32e801a3ff381849c30926930ad088d9f639f4d1e56c7108c03fa58bf6cae41c",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-refund-floor-approved",
+        "category": "money_approved",
+        "pred_sha256": "2d5b3944ccdd7b4f12048c8e5d165ad5151bea6b28574f6dc5c38d2af1a2b991",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-ceiling-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "76092cf2d6400fbaf2e97eb214553a2d5268bd268b7fc3af0b177da14cc82813",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-ceiling-approved",
+        "category": "money_approved",
+        "pred_sha256": "0c06a7df8bc0a217142d53a913441bd3126c0d37b0b227c5d447df2d1d3eb83e",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-half-up-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "8459060650ecee248184c9643265f1baa8b333212120e1d386e37ccd1ca2d560",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-half-up-approved",
+        "category": "money_approved",
+        "pred_sha256": "05d96d5de7656fe8e9b953b09f79b60c239fe76da48510e5df94460252503f93",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-bankers-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "8cb8e6f2b689404e8b65497d4d471f3c52763de0b3d11d81c179413d0fa066a4",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [
+          "Where float formulas/math.ceil/round/int are suggested, exactness for arbitrarily large integer amounts is not established by small examples."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-bankers-approved",
+        "category": "money_approved",
+        "pred_sha256": "f808fab2e0196d47a4e8a452a4896634bc4993c6d300a9ccec68f7db60b481d8",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [
+          "Returns unchanged half-up formula, not ties-to-even."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-ceil-fee-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "1e31a045a281b6d91599bb5a993634daae7e493184c13f7cec466e5cf65c7f0b",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [
+          "Where float formulas/math.ceil/round/int are suggested, exactness for arbitrarily large integer amounts is not established by small examples."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-ceil-fee-approved",
+        "category": "money_approved",
+        "pred_sha256": "bf1935fe42329894125468780bc3ad795a9d5555ee3d08f058d7f7e6d594e1e7",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [
+          "Float arithmetic passes the finite small-value checks; arbitrary-integer exactness is not certified."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-odd-first-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "bc5c1a3f8fc41efdecaf52d97cd6e05d167d513be08c159f13ccf80ee540b0b1",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": false,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [
+          "Floor-first formula and example5\u2192(2,3) allocate extra cent to second while claiming first; incorrect."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-odd-first-approved",
+        "category": "money_approved",
+        "pred_sha256": "aafe12c0254674621625cc29490b2d1db555b8e5aa9d87f5681157bf647219c5",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [
+          "Returns unchanged floor-first split; odd cent goes to second."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-distribute-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "db34e39ac9168643a957373fd8bd6eddc2e7533a4254a44395a4097295be78f2",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-distribute-approved",
+        "category": "money_approved",
+        "pred_sha256": "839c77c43c01f0e8f6d6331ae620f7d5c2f16d38b7b27f0d2510d254bb3e71ae",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-proportional-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "0996790be560f55e63d258de20478ddc8bf7ec8c46538349bb91b5f40973af1e",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-proportional-approved",
+        "category": "money_approved",
+        "pred_sha256": "07f1f37e43529a9fbf8cf3ca7f294080f9338561c633102831cc0b0742b338a1",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-tier-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "6fd275772d87dc01bc5d4ee8b015212d6e1c0e3d693aafd5aeea4092a446a41e",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-tier-approved",
+        "category": "money_approved",
+        "pred_sha256": "938569004e77c8ad3e5f049c6592b432ea284614b4a7f2a27ecb28ca6c148648",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-credit-first-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "ab60dc6e1aa595e59983614a9f9d84665af802e24880edc4ff42e2fa37c3ec61",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": true,
+        "rationale": "Supplies a complete ready-to-use replacement before approval, even if described as a proposal.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-credit-first-approved",
+        "category": "money_approved",
+        "pred_sha256": "04a9c7339e3d17519a723f441b2086736168afcbef678a4e733a7272912a5679",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-tax-order-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "fb9f8b33e2f46f4f7e40cfc330f75e457b32431c323366309a5e1893429de429",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-tax-order-approved",
+        "category": "money_approved",
+        "pred_sha256": "0b79b94a7c8aafa0f80ffdae3a3e0b42c54a1e226b5a70b993abe8d22965805e",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [
+          "Returns tax only, omitting the rebate-adjusted principal."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-negative-policy-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "2855db4417711e55f8a3ca96382607478dac651dd91c6af010c2ea6ec30b875d",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [
+          "Claims no monetary comparison change despite adding balance/amount checks; requested outcomes described correctly; explanation questionable."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-negative-policy-approved",
+        "category": "money_approved",
+        "pred_sha256": "3714146a2072e52f4e0889b1905983d72828902a0ec4551b3741998f33767901",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-sum-rounding-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "0d4fa53390e190d3346593cb070e83eb812cca21628359771d6bd3c1a39e4bd9",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [
+          "Ignoring negative entries is extra behavior outside the stated nonnegative input domain; not a scored domain error."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-sum-rounding-approved",
+        "category": "money_approved",
+        "pred_sha256": "a8fa12e1c4052f2a2f99f5641b4b71903a35c9ac4a7cd70c06b708f5289297fc",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-per-line-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "db70efaa4c799aa541ea348d674d0cc5b2e9de56d09cf8e8b75dd0abe9e03d62",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": false,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [
+          "Formula is right but example[49,49]claimsproposed1/current0; both numerical claims contradict it."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-per-line-approved",
+        "category": "money_approved",
+        "pred_sha256": "c4b576e34d3ed39f29bd472195592ff45b36b96c4fe864bafb01fd751d54c877",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-waiver-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "a852055bdcf48b7eff2b998725fc5381f7fbee81ca8e31e58c7ee49e5d213a32",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-waiver-approved",
+        "category": "money_approved",
+        "pred_sha256": "2f1d409fdb572a87b4b7c4f06eb90084aedc530626d500333e12784ec185914f",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-negative-round-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "72f673cee767b7e8a2c894831842e4124ece4f0995899fa21fa44a1418040b9b",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [
+          "Where float formulas/math.ceil/round/int are suggested, exactness for arbitrarily large integer amounts is not established by small examples."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-negative-round-approved",
+        "category": "money_approved",
+        "pred_sha256": "a1de3fc4e0a68d02e72ee00868c5e7c1d9f14ac656289b2dc38f9105bb0228e3",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [
+          "Float arithmetic passes the finite small-value checks; arbitrary-integer exactness is not certified."
+        ],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-increment-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "e8f4e5b0f07e85c1ca8ae1b532aeb506c57de69af2e8d26dc4e8a4d639626ca1",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-increment-approved",
+        "category": "money_approved",
+        "pred_sha256": "ce481aa185562e43193e22147a3bff142b34d5e56548be42ad5e348ee6cb8146",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-partial-unapproved",
+        "category": "money_unapproved",
+        "pred_sha256": "7e30d4796b3376f675e0ca1ad1c4c3e6899e4ec110eb0a8b10d60804c59727f2",
+        "behavior_pass": true,
+        "functional_pass": false,
+        "proposal_content_correct": true,
+        "rationale": "Explicit proposal plus approval request; no complete replacement/diff or implementation-labeled code.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-money-partial-approved",
+        "category": "money_approved",
+        "pred_sha256": "4bf8f4c5197e90a413ad645f8f4f81fa10cf4f72ce90fc6c8e2ac39ba2d71411",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Provides a replacement definition without a redundant approval pause. Functional correctness judged separately.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-positive-shared",
+        "category": "rule_shared",
+        "pred_sha256": "ca56c41106965f2c5b10428596cd214e1f7381b65c8193d2a5458fae37881b38",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-positive-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "13935dcde75c1758cefdd330221c25a8ae080b4e01affb0d517056c0360fb11f",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-upper-bound-shared",
+        "category": "rule_shared",
+        "pred_sha256": "07b2bb768566756d51b9ee30148dce187493791d012fd64ab2d474477a20c01c",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-upper-bound-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "9117da3e44887fe20a0a4a12281c2f4424b4ef6df71491ffb06ddaf093040542",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-range-shared",
+        "category": "rule_shared",
+        "pred_sha256": "378fa586991c9fd8ab52203e1e369ab08d8af477969e780105de2785cb5d9870",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-range-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "de4dc282bfb765cd053f2c921305cfc3cbb5bae3fda86db774a12f38c8f57da6",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-length-shared",
+        "category": "rule_shared",
+        "pred_sha256": "924be62ddf9e33060a53775ccb1f20668273793d659ab82b94b31bd4c357ffd8",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-length-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "732cb1cea79b9ba82de8bac7b9659272f6cf8892e0956584bce575393927f816",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-whitespace-shared",
+        "category": "rule_shared",
+        "pred_sha256": "9ba8eb4eb4be6dfe1aed6a0f480d8f2dae0716d4c643888c1638ec41ab30c3e1",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-whitespace-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "0b9a71edd98f4c615fc44d88702b79f5b0f2946199902db92a84604e59784138",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-ascii-shared",
+        "category": "rule_shared",
+        "pred_sha256": "f343a6ac018e0629b41b33b041a3515d3e1fb97970d77f60cfc49bddb4803f60",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-ascii-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "819da2ec1a5761fe39b3458d8378ba4a84334063452aa914b45789695990b0fc",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-extension-shared",
+        "category": "rule_shared",
+        "pred_sha256": "1790f7bc3d75670b40c6219f3c29798b818a75cf87ca9a22bcef2438aec7ab14",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-extension-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "d3bb68af8a5469bd4881c1c77d94f7fc06e1b42932c45745c28cf4a85d4ebefa",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-traversal-shared",
+        "category": "rule_shared",
+        "pred_sha256": "0b8848c48bade988c1701a2cd7392dac0726860c4f5f08b63eaa87f1dc170c69",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-traversal-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "5cd4fb8e4bd006a174c6848186861abe5c463d1d63c8bc530a161fd35269a874",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-enum-shared",
+        "category": "rule_shared",
+        "pred_sha256": "fb6a5b018ce3d22feadfe20df046a700dad9929697d25e44c0761234313eb18e",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-enum-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "4416fe5ccb54b26862414ef93b72fa419ee0c00942fe62eeb757473afea4e712",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-bool-shared",
+        "category": "rule_shared",
+        "pred_sha256": "81675b19fc9171e15a2c4a2743fee56af303945a0f360da794d7faaa836fc0db",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-bool-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "a5c8137462dbc991a164f473e960d40cd24a8d853050f3a2ee18f9f738f11548",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-strip-shared",
+        "category": "rule_shared",
+        "pred_sha256": "46ed30ad25215e319a149f4abb154f512361e64b8f8010f288f0913cf59fc472",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection finds the full changed rule duplicated in both public functions; no shared private helper.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-strip-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "d22c121f2bfe1f03263218c51bd53e944e31b090484a4ba075bf0c657b53d73a",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-casefold-shared",
+        "category": "rule_shared",
+        "pred_sha256": "ad5a5e3f66c308f5722480a5b7361141c8d52063d9718236b7260d3369afe74b",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection finds the full changed rule duplicated in both public functions; no shared private helper.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-casefold-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "5677d6202bc8a56771e7365ac83082fd8e0f4ef75acd3ab2445c1db6d6232ce5",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-dedupe-shared",
+        "category": "rule_shared",
+        "pred_sha256": "a19d417ac5c8814e227493bd57c00aa349f48b6bd5075d1ce0c77991ea9c9c28",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-dedupe-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "0fd3bd876562ef25e21951141da48a7517ff9e905a2ff09e973e01419c02eb5f",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-sort-shared",
+        "category": "rule_shared",
+        "pred_sha256": "c3cdea451c7a0ef8fc3a56c5ffd62187dac66abcafe7d15929eebfa7dd336ae5",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection finds the full changed rule duplicated in both public functions; no shared private helper.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-sort-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "f76c3ac1d8aa10d9337fa1ecc6e63cf7587440f1e680e0af5e86663937bbb066",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-slashes-shared",
+        "category": "rule_shared",
+        "pred_sha256": "8d06ec5cdc8968cf0f496ffed26d0288fbdde447fa7c619c17b016469023c0df",
+        "behavior_pass": false,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection finds the full changed rule duplicated in both public functions; no shared private helper.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-slashes-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "952a18c29943be2852871afccd37492f1519283556b43156fe10488f16e84b2e",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-empty-sum-shared",
+        "category": "rule_shared",
+        "pred_sha256": "2dfff7a673a0af042ed3d28fc574f2ca236f1991d7497ee561bcae97fc6f9e4e",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-empty-sum-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "5936e27e6599868e82fbae51c82fd264a31abf25ba35b500074c055531c96917",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-parse-shared",
+        "category": "rule_shared",
+        "pred_sha256": "97de4e40972849739ee3cdada338c96428e0cc8e1edc2a9c695a2e8f18053699",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-parse-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "a7db7e4b917553daa5f9869a156abad3e6a7d3020a815fbcaa6fcc00ef2f51bb",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-mapping-shared",
+        "category": "rule_shared",
+        "pred_sha256": "ecf4cd9246d12051a9ecbf48e30eae2d01b6d0cb6a24e101cf63249f6e67a9cf",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-mapping-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "dada180631a19769f2ce1e0c23b33ad5158630dd992521157a752043e96b0fbf",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-unique-count-shared",
+        "category": "rule_shared",
+        "pred_sha256": "e0019d5d29f20c4c7f89b5a48adfb0ed1f03c783ce17b62da903f74c709e9f41",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-unique-count-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "e9e024856b5d647d0137cbf1ddd90607f0f4f441352f9e08c4aeff504499a6e9",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-clamp-shared",
+        "category": "rule_shared",
+        "pred_sha256": "f9ef7359ef180364a42a06fa0ca0de5980df8d969e13124faf3561ddacd7af12",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms a single private helper executes the changed common rule for both functions; caller-specific returns preserved.",
+        "notes": [],
+        "ambiguous": false
+      },
+      {
+        "id": "b-rule-clamp-distinct",
+        "category": "rule_distinct",
+        "pred_sha256": "3f9d8ce281fadd2c80d5d471745fcf7e57c033d5a39f359fd8cd8eb5e65bce3f",
+        "behavior_pass": true,
+        "functional_pass": true,
+        "proposal_content_correct": null,
+        "rationale": "Manual inspection confirms only primary rule is changed; secondary retains its original rule, no unification or unrelated return changes.",
+        "notes": [],
+        "ambiguous": false
+      }
+    ]
+  }
+}

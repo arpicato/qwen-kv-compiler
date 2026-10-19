@@ -1,0 +1,130 @@
+{
+  "schema": "v2-causal-occupied",
+  "slots": 8192,
+  "steps": 400,
+  "lr": 0.001,
+  "ratio": null,
+  "cosine_weight": 1.0,
+  "traj": "/mnt/sandisk/kvcompile/artifacts/agent/traj",
+  "device": "cuda",
+  "kv_dtype": "torch.bfloat16",
+  "gate_weight": true,
+  "freeze_sink": true,
+  "oproj_dir": "/mnt/sandisk/kvcompile/artifacts/agent/oproj",
+  "examples_per_update": 24,
+  "layers": [
+    {
+      "layer": 3,
+      "slots": 8192,
+      "init_loss": -3.252622425556183,
+      "final_loss": -2.832817643880844,
+      "path": "layer_003.safetensors"
+    },
+    {
+      "layer": 7,
+      "slots": 8192,
+      "init_loss": -3.0418583750724792,
+      "final_loss": -2.8312762081623077,
+      "path": "layer_007.safetensors"
+    },
+    {
+      "layer": 11,
+      "slots": 8192,
+      "init_loss": -3.0762739777565002,
+      "final_loss": -2.8299791514873505,
+      "path": "layer_011.safetensors"
+    },
+    {
+      "layer": 15,
+      "slots": 8192,
+      "init_loss": -2.9711296558380127,
+      "final_loss": -2.828762859106064,
+      "path": "layer_015.safetensors"
+    },
+    {
+      "layer": 19,
+      "slots": 8192,
+      "init_loss": -2.98789644241333,
+      "final_loss": -2.8260629177093506,
+      "path": "layer_019.safetensors"
+    },
+    {
+      "layer": 23,
+      "slots": 8192,
+      "init_loss": -2.8310102820396423,
+      "final_loss": -2.822082906961441,
+      "path": "layer_023.safetensors"
+    },
+    {
+      "layer": 27,
+      "slots": 8192,
+      "init_loss": -2.5862464904785156,
+      "final_loss": -2.817496657371521,
+      "path": "layer_027.safetensors"
+    },
+    {
+      "layer": 31,
+      "slots": 8192,
+      "init_loss": -2.7034332752227783,
+      "final_loss": -2.8161836564540863,
+      "path": "layer_031.safetensors"
+    },
+    {
+      "layer": 35,
+      "slots": 8192,
+      "init_loss": -2.883049488067627,
+      "final_loss": -2.8168452382087708,
+      "path": "layer_035.safetensors"
+    },
+    {
+      "layer": 39,
+      "slots": 8192,
+      "init_loss": -2.7819348573684692,
+      "final_loss": -2.8190204799175262,
+      "path": "layer_039.safetensors"
+    },
+    {
+      "layer": 43,
+      "slots": 8192,
+      "init_loss": -2.7448479533195496,
+      "final_loss": -2.809497743844986,
+      "path": "layer_043.safetensors"
+    },
+    {
+      "layer": 47,
+      "slots": 8192,
+      "init_loss": -2.523756682872772,
+      "final_loss": -2.795945882797241,
+      "path": "layer_047.safetensors"
+    },
+    {
+      "layer": 51,
+      "slots": 8192,
+      "init_loss": -2.271760195493698,
+      "final_loss": -2.751790851354599,
+      "path": "layer_051.safetensors"
+    },
+    {
+      "layer": 55,
+      "slots": 8192,
+      "init_loss": -2.140806496143341,
+      "final_loss": -2.7695101499557495,
+      "path": "layer_055.safetensors"
+    },
+    {
+      "layer": 59,
+      "slots": 8192,
+      "init_loss": 0.3449336886405945,
+      "final_loss": -2.6078687012195587,
+      "path": "layer_059.safetensors"
+    },
+    {
+      "layer": 63,
+      "slots": 8192,
+      "init_loss": 1.0121201872825623,
+      "final_loss": -2.6325435042381287,
+      "path": "layer_063.safetensors"
+    }
+  ],
+  "elapsed_s": 2106.570859193802
+}

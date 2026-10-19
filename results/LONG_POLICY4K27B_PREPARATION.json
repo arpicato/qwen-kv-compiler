@@ -1,0 +1,10 @@
+{
+  "source_prompt_sha256": "0ba38930d86e54e73fc6d63ec1553be3d7e2d1b39f60091ea2e670fb318e20ef",
+  "policy_sha256": "aa90b2347a078817776b2a2456a8de9ba4c34e362a60dbce79b777db125f47b2",
+  "combined_sha256": "ea1bd5d8e31aed36e6890165bb825f5f92e551caf4bf44a2c24958812436f234",
+  "calibration": 812,
+  "original": 780,
+  "new_policy": 32,
+  "gate": 24,
+  "exact_overlap": 0
+}

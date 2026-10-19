@@ -1,0 +1,19 @@
+{
+  "complete": true,
+  "promotion_ids_equal": true,
+  "max_logit_diff": 0.03125,
+  "solver_sha256": "b9a06cb34269c011e826e2c39cbb4d4f416590a3730a28089c8aae620fd18402",
+  "wrapper_sha256": "9c1b468bc5be0629ac2578ac6e686872fd2f365118fb5f525b4a4ac5156077d7",
+  "nonzero_roundtrip_exact": true,
+  "recurrent_injection_exact": true,
+  "ids": [
+    63,
+    19349,
+    5022,
+    63
+  ],
+  "stop": "eos",
+  "fp32_max_abs": 67690.875,
+  "elapsed_s": 95.19954568298999,
+  "peak_gib": 14.096132755279541
+}

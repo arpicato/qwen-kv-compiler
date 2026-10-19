@@ -1,0 +1,261 @@
+{
+  "n": 512,
+  "counts": {
+    "argument_rows_checked": 168,
+    "selection_rows_checked": 331
+  },
+  "supervision_flags": [
+    {
+      "row": 25,
+      "type": "ambiguous_or_unmapped_question",
+      "targets": [
+        "mcp__github__add_sub_issue",
+        "mcp__github__sub_issue_write"
+      ]
+    },
+    {
+      "row": 45,
+      "type": "ambiguous_or_unmapped_question",
+      "targets": [
+        "mcp__github__remove_issue_comment_reaction",
+        "mcp__github__remove_issue_reaction"
+      ]
+    },
+    {
+      "row": 61,
+      "type": "ambiguous_or_unmapped_question",
+      "targets": [
+        "mcp__github__remove_issue_comment_reaction",
+        "mcp__github__remove_issue_reaction"
+      ]
+    },
+    {
+      "row": 108,
+      "type": "ambiguous_or_unmapped_question",
+      "targets": [
+        "mcp__github__assign_copilot_to_issue",
+        "mcp__github__assign_copilot_to_issue_with_intent"
+      ]
+    },
+    {
+      "row": 129,
+      "type": "missing_unconditionally_required_field",
+      "tool": "mcp__github__create_pull_request_review",
+      "missing": [
+        "repo"
+      ]
+    },
+    {
+      "row": 142,
+      "type": "ambiguous_or_unmapped_question",
+      "targets": [
+        "mcp__github__add_issue_comment_reaction",
+        "mcp__github__add_issue_reaction"
+      ]
+    },
+    {
+      "row": 167,
+      "type": "missing_unconditionally_required_field",
+      "tool": "mcp__github__add_pull_request_review_comment",
+      "missing": [
+        "repo"
+      ]
+    },
+    {
+      "row": 181,
+      "type": "ambiguous_or_unmapped_question",
+      "targets": [
+        "mcp__github__add_sub_issue",
+        "mcp__github__sub_issue_write"
+      ]
+    },
+    {
+      "row": 251,
+      "type": "ambiguous_or_unmapped_question",
+      "targets": [
+        "mcp__github__add_issue_comment_reaction",
+        "mcp__github__add_issue_reaction"
+      ]
+    },
+    {
+      "row": 254,
+      "type": "ambiguous_or_unmapped_question",
+      "targets": [
+        "mcp__github__add_sub_issue",
+        "mcp__github__sub_issue_write"
+      ]
+    },
+    {
+      "row": 283,
+      "type": "intended_tool_not_in_answer",
+      "tool": "mcp__github__projects_write",
+      "answer": "The tool that handles the request described in the manual is the **GitHub Projects API**. This API allows users to:\n\n- **Create and manage GitHub Projects**\n- **Create projects**\n- **Add, update, and delete items**\n- **Bulk-update many items at once**\n- **Manage views**\n- **Create status updates**\n- **Add iteration fields**\n\nThis API is designed to provide comprehensive control over GitHub Projects, enabling users to organize, track, and manage their work efficiently."
+    },
+    {
+      "row": 323,
+      "type": "missing_unconditionally_required_field",
+      "tool": "mcp__github__create_pull_request_review",
+      "missing": [
+        "repo"
+      ]
+    },
+    {
+      "row": 344,
+      "type": "ambiguous_or_unmapped_question",
+      "targets": [
+        "mcp__github__assign_copilot_to_issue",
+        "mcp__github__assign_copilot_to_issue_with_intent"
+      ]
+    },
+    {
+      "row": 387,
+      "type": "ambiguous_or_unmapped_question",
+      "targets": [
+        "mcp__github__add_sub_issue",
+        "mcp__github__sub_issue_write"
+      ]
+    },
+    {
+      "row": 406,
+      "type": "missing_unconditionally_required_field",
+      "tool": "mcp__github__add_pull_request_review_comment",
+      "missing": [
+        "repo"
+      ]
+    },
+    {
+      "row": 410,
+      "type": "ambiguous_or_unmapped_question",
+      "targets": [
+        "mcp__github__assign_copilot_to_issue",
+        "mcp__github__assign_copilot_to_issue_with_intent"
+      ]
+    },
+    {
+      "row": 421,
+      "type": "ambiguous_or_unmapped_question",
+      "targets": [
+        "mcp__github__assign_copilot_to_issue",
+        "mcp__github__assign_copilot_to_issue_with_intent"
+      ]
+    },
+    {
+      "row": 450,
+      "type": "ambiguous_or_unmapped_question",
+      "targets": [
+        "mcp__github__assign_copilot_to_issue",
+        "mcp__github__assign_copilot_to_issue_with_intent"
+      ]
+    },
+    {
+      "row": 498,
+      "type": "missing_unconditionally_required_field",
+      "tool": "mcp__github__create_pull_request_review",
+      "missing": [
+        "repo"
+      ]
+    },
+    {
+      "row": 504,
+      "type": "missing_unconditionally_required_field",
+      "tool": "mcp__github__create_pull_request_review",
+      "missing": [
+        "repo"
+      ]
+    }
+  ],
+  "heldout_proofs": [
+    {
+      "id": "dev-gist-select",
+      "tool": "mcp__github__get_gist",
+      "prompt_evidence": "Get gist content of a particular gist, by gist ID",
+      "training_message_mentions": [],
+      "training_description_questions": []
+    },
+    {
+      "id": "dev-gist-args",
+      "tool": "mcp__github__get_gist",
+      "prompt_evidence": "- `gist_id` [string] (required): The ID of the gist",
+      "training_message_mentions": [],
+      "training_description_questions": []
+    },
+    {
+      "id": "dev-tag-select",
+      "tool": "mcp__github__get_tag",
+      "prompt_evidence": "Get details about a specific git tag in a GitHub repository",
+      "training_message_mentions": [],
+      "training_description_questions": []
+    },
+    {
+      "id": "dev-tag-args",
+      "tool": "mcp__github__get_tag",
+      "prompt_evidence": "Get details about a specific git tag in a GitHub repository",
+      "training_message_mentions": [],
+      "training_description_questions": []
+    },
+    {
+      "id": "dev-discussions-select",
+      "tool": "mcp__github__list_discussions",
+      "prompt_evidence": "List discussions for a repository or organisation.",
+      "training_message_mentions": [],
+      "training_description_questions": []
+    },
+    {
+      "id": "dev-discussions-args",
+      "tool": "mcp__github__list_discussions",
+      "prompt_evidence": "- `owner` [string] (required): Repository owner",
+      "training_message_mentions": [],
+      "training_description_questions": []
+    },
+    {
+      "id": "test-advisory-select",
+      "tool": "mcp__github__get_global_security_advisory",
+      "prompt_evidence": "Get a global security advisory",
+      "training_message_mentions": [],
+      "training_description_questions": []
+    },
+    {
+      "id": "test-advisory-args",
+      "tool": "mcp__github__get_global_security_advisory",
+      "prompt_evidence": "- `ghsaId` [string] (required): GitHub Security Advisory ID (format: GHSA-xxxx-xxxx-xxxx).",
+      "training_message_mentions": [],
+      "training_description_questions": []
+    },
+    {
+      "id": "test-prbody-select",
+      "tool": "mcp__github__update_pull_request_body",
+      "prompt_evidence": "Update the body description of an existing pull request.",
+      "training_message_mentions": [],
+      "training_description_questions": []
+    },
+    {
+      "id": "test-prbody-args",
+      "tool": "mcp__github__update_pull_request_body",
+      "prompt_evidence": "Update the body description of an existing pull request.",
+      "training_message_mentions": [],
+      "training_description_questions": []
+    },
+    {
+      "id": "test-comment-select",
+      "tool": "mcp__github__discussion_comment_write",
+      "prompt_evidence": "Write operations for discussion comments.",
+      "training_message_mentions": [],
+      "training_description_questions": []
+    },
+    {
+      "id": "test-comment-operation",
+      "tool": "mcp__github__discussion_comment_write",
+      "prompt_evidence": "'mark_answer' - marks a discussion comment as the answer (Q&A only).",
+      "training_message_mentions": [],
+      "training_description_questions": []
+    }
+  ],
+  "limitations": [
+    "Required-field/name checks do not certify all prose or conditional arguments",
+    "Manual/source-chunk context may contain held-out tools; no supervised question/answer targets do",
+    "No absence-of-overfitting claim until free-generation results exist",
+    "Holdout tools chosen after historical dataset inspection; prospective test only"
+  ],
+  "data_sha256": "4cd423c83b657f1e35c28e1032fb86cde26c597da12a92a337a639b6dabb08d8",
+  "cases_sha256": "ae311e38214cd5b33f15f844aeb51a2fa4c0d86542b1a954b0dfa40c12bab0a4"
+}

@@ -1,0 +1,80 @@
+{
+  "overall": {
+    "n": 40,
+    "full": 39,
+    "none": 23,
+    "gains": 16,
+    "losses": 0,
+    "nominal_case_exact_two_sided_p": 3.0517578125e-05,
+    "full_nominal_wilson95": [
+      0.8711834051199223,
+      0.9955732825922052
+    ],
+    "none_nominal_wilson95": [
+      0.42194800436059987,
+      0.7149083147518411
+    ]
+  },
+  "by_family": {
+    "money": {
+      "n": 16,
+      "full": 15,
+      "none": 7,
+      "gains": 8,
+      "losses": 0,
+      "nominal_case_exact_two_sided_p": 0.0078125,
+      "full_nominal_wilson95": [
+        0.7167073163197013,
+        0.9888809426916687
+      ],
+      "none_nominal_wilson95": [
+        0.2309836333518552,
+        0.6682180439322347
+      ]
+    },
+    "refactor": {
+      "n": 16,
+      "full": 16,
+      "none": 8,
+      "gains": 8,
+      "losses": 0,
+      "nominal_case_exact_two_sided_p": 0.0078125,
+      "full_nominal_wilson95": [
+        0.8063865817272802,
+        1.0
+      ],
+      "none_nominal_wilson95": [
+        0.2799923761135083,
+        0.7200076238864916
+      ]
+    },
+    "ordinary": {
+      "n": 8,
+      "full": 8,
+      "none": 8,
+      "gains": 0,
+      "losses": 0,
+      "nominal_case_exact_two_sided_p": 1,
+      "full_nominal_wilson95": [
+        0.6755843804891231,
+        1.0
+      ],
+      "none_nominal_wilson95": [
+        0.6755843804891231,
+        1.0
+      ]
+    }
+  },
+  "cluster_analysis": {
+    "n_clusters": 24,
+    "mean_within_cluster_difference": 0.3333333333333333,
+    "exact_signflip_two_sided_p": 6.103515625e-05,
+    "bootstrap95_difference": [
+      0.22916666666666666,
+      0.4375
+    ],
+    "bootstrap_draws": 20000,
+    "seed": 0
+  },
+  "limits": "Authored correlated cases, two policy families, not representative random sampling; nominal p-values do not certify generalization."
+}

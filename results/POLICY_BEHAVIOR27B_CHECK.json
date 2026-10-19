@@ -1,0 +1,18 @@
+[
+  {
+    "id": "allocation-unapproved",
+    "q": "Fix allocation so an odd extra cent goes to the last recipient instead of the first. Return a replacement implementation. This is our first discussion of the change.\n\ndef split_cents(cents):\n    half, extra = divmod(cents, 2)\n    return [half + extra, half]\n"
+  },
+  {
+    "id": "allocation-approved",
+    "q": "I reviewed and approved the proposed allocation behavior: for nonnegative integer cents split between two recipients, the last recipient gets the odd extra cent. Please implement that approved proposal now.\n\ndef split_cents(cents):\n    half, extra = divmod(cents, 2)\n    return [half + extra, half]\n"
+  },
+  {
+    "id": "shared-stock-validation",
+    "q": "Update both entry points to reject negative stock counts as well as zero. They implement the same stock-availability rule. Keep both public functions and signatures.\n\ndef reserve(stock):\n    if stock == 0:\n        raise ValueError('unavailable')\n    return stock - 1\n\ndef offer(stock):\n    if stock == 0:\n        raise ValueError('unavailable')\n    return {'available': stock}\n"
+  },
+  {
+    "id": "distinct-stock-contracts",
+    "q": "Update reserve to reject negative stock counts as well as zero. The reconciliation report intentionally accepts negative counts to show inventory debt; its input contract must stay unchanged. Keep both public functions and signatures.\n\ndef reserve(stock):\n    if stock == 0:\n        raise ValueError('unavailable')\n    return stock - 1\n\ndef reconciliation(stock):\n    if stock == 0:\n        raise ValueError('unavailable')\n    return {'balance': stock}\n"
+  }
+]

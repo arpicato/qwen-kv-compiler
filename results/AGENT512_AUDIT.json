@@ -1,0 +1,131 @@
+{
+  "n": 512,
+  "structural_errors": [],
+  "counts": {
+    "eos": 512,
+    "thinking_answers": 88,
+    "closed_thinking_answers": 88,
+    "json_parseable_answers": 0,
+    "source_contains_full_preamble": 0,
+    "argument_questions": 168,
+    "skill_questions": 0,
+    "policy_questions": 0
+  },
+  "unique_questions": 373,
+  "duplicate_question_rows": 139,
+  "duplicate_pair_rows": 77,
+  "unique_chunk_contexts": 24,
+  "largest_context_group": 30,
+  "answer_tokens": {
+    "min": 5.0,
+    "median": 44.5,
+    "p95": 298.45,
+    "max": 487.0
+  },
+  "question_tool_coverage": 82,
+  "answer_tool_coverage": 125,
+  "manual_tools": 131,
+  "top_answer_tools": [
+    [
+      "mcp__github__pull_request_read",
+      13
+    ],
+    [
+      "mcp__github__push_files",
+      13
+    ],
+    [
+      "mcp__github__get_dependabot_alert",
+      12
+    ],
+    [
+      "mcp__github__issue_write",
+      10
+    ],
+    [
+      "mcp__github__list_code_scanning_alerts",
+      10
+    ],
+    [
+      "mcp__github__create_pull_request_review",
+      9
+    ],
+    [
+      "mcp__github__custom_properties_read",
+      9
+    ],
+    [
+      "mcp__github__projects_get",
+      9
+    ],
+    [
+      "mcp__github__projects_write",
+      9
+    ],
+    [
+      "mcp__github__search_orgs",
+      9
+    ],
+    [
+      "mcp__github__sub_issue_write",
+      9
+    ],
+    [
+      "mcp__github__update_issue_state",
+      9
+    ],
+    [
+      "mcp__github__add_sub_issue",
+      8
+    ],
+    [
+      "mcp__github__create_or_update_file",
+      8
+    ],
+    [
+      "mcp__github__create_pull_request",
+      8
+    ]
+  ],
+  "unmentioned_answer_tools": [
+    "mcp__github__discussion_comment_write",
+    "mcp__github__get_gist",
+    "mcp__github__get_global_security_advisory",
+    "mcp__github__get_tag",
+    "mcp__github__list_discussions",
+    "mcp__github__update_pull_request_body"
+  ],
+  "exact_eval_question_overlap_rows": [],
+  "framing_counts": {
+    "no_thinking_matches_native": 0,
+    "thinking_matches_native": 512
+  },
+  "framing_examples": [
+    {
+      "mode": "no_thinking",
+      "native_suffix": " List them.<|im_end|>\n<|im_start|>assistant\n",
+      "template_suffix": "leases` require? List them.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "extra_tokens": 4
+    },
+    {
+      "mode": "thinking",
+      "native_suffix": " List them.<|im_end|>\n<|im_start|>assistant\n",
+      "template_suffix": "github__list_releases` require? List them.<|im_end|>\n<|im_start|>assistant\n",
+      "extra_tokens": 0
+    }
+  ],
+  "limitations": [
+    "No semantic correctness certificate",
+    "Exact overlap is not a semantic leakage audit",
+    "Dataset properties cannot establish absence of model overfitting",
+    "Tool mentions are not tool execution or policy compliance"
+  ],
+  "data_sha256": "4cd423c83b657f1e35c28e1032fb86cde26c597da12a92a337a639b6dabb08d8",
+  "source": {
+    "data": "/mnt/data/artifacts/qwen3_agent/cartridges_out/selfstudy_v3_n512.parquet",
+    "model": "/mnt/data/models/Qwen3-4B",
+    "prompt": "/home/arpin/kvbench/qwen3_agent/prompts/agent_resident.txt",
+    "probes": "/home/arpin/kvbench/qwen3_agent/src/agent_probes.py",
+    "out": "/tmp/opencode/agent512-audit.json"
+  }
+}

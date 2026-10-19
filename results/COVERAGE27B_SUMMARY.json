@@ -1,0 +1,360 @@
+{
+  "dev": {
+    "n": 194,
+    "informative_n": 89,
+    "arms": {
+      "control": {
+        "correct": 167,
+        "cap": 1,
+        "informative_correct": 69,
+        "by_kind": {
+          "lookup": {
+            "correct": 116,
+            "n": 132
+          },
+          "tool_select": {
+            "correct": 51,
+            "n": 62
+          }
+        }
+      },
+      "teacher": {
+        "correct": 193,
+        "cap": 0,
+        "informative_correct": 89,
+        "by_kind": {
+          "lookup": {
+            "correct": 132,
+            "n": 132
+          },
+          "tool_select": {
+            "correct": 61,
+            "n": 62
+          }
+        }
+      },
+      "none": {
+        "correct": 104,
+        "cap": 151,
+        "informative_correct": 0,
+        "by_kind": {
+          "lookup": {
+            "correct": 103,
+            "n": 132
+          },
+          "tool_select": {
+            "correct": 1,
+            "n": 62
+          }
+        }
+      },
+      "expanded": {
+        "correct": 179,
+        "cap": 1,
+        "informative_correct": 83,
+        "by_kind": {
+          "lookup": {
+            "correct": 122,
+            "n": 132
+          },
+          "tool_select": {
+            "correct": 57,
+            "n": 62
+          }
+        }
+      }
+    },
+    "gains": [
+      "Which tool should be used to do the following: Add a reaction to an issue or pull request.",
+      "Which tool should be used to do the following: Add a reaction to a pull request review comment.",
+      "Which tool should be used to do the following: Get a global security advisory",
+      "Which tool should be used to do the following: Get details about a specific git tag in a GitHub repository",
+      "Which tool should be used to do the following: Read an issue's dependency relationships in a GitHub repository: the issues that block it (blocked_by) or the issues it blocks (blocking).",
+      "Which tool should be used to do the following: Search for pull requests in GitHub repositories using issues search syntax already scoped to is:pr",
+      "Which tool should be used to do the following: Add a sub-issue to a parent issue in a GitHub repository.",
+      "Which tool should be used to do the following: Unresolve a previously resolved review thread on a pull request.",
+      "For the tool `actions_get`, which argument is described as: The unique identifier of the resource. This will vary based on the \"method\" provided, so ensure you provide the correct ID:",
+      "For the tool `create_pull_request`, which argument is described as: Allow maintainer edits",
+      "For the tool `create_pull_request_review`, which argument is described as: The pull request number",
+      "For the tool `find_duplicate`, which argument is described as: Minimum similarity threshold a candidate must meet to be returned; higher values are stricter. When omitted, the API's high-precision default is used. The scale is defined by the API, so no client-side bounds are enforced.",
+      "For the tool `get_global_security_advisory`, which argument is described as: GitHub Security Advisory ID (format: GHSA-xxxx-xxxx-xxxx).",
+      "For the tool `projects_write`, which argument is described as: The field/value to apply, using {\"id\": 123, \"value\": ...} or {\"name\": \"Status\", \"value\": ...}; null clears the field. Required for 'update_project_item' and 'update_project_items', where one top-level field/value applies to every item in a batch. For 'update_project_item' SINGLE_SELECT fields, the name form accepts option names; the ID form expects an option ID.",
+      "For the tool `request_pull_request_reviewers`, which argument is described as: The pull request number",
+      "For the tool `update_pull_request_draft_state`, which argument is described as: The pull request number"
+    ],
+    "losses": [
+      "Which tool should be used to do the following: Add a sub-issue to a parent issue.",
+      "Which tool should be used to do the following: Get details of the teams the user is a member of.",
+      "For the tool `actions_run_trigger`, which argument is described as: The workflow ID (numeric) or workflow file name (e.g., main.yml, ci.yaml). Required for 'run_workflow' method.",
+      "For the tool `label_write`, which argument is described as: New name for the label (used only with 'update' method to rename)"
+    ]
+  },
+  "agent78": {
+    "n": 78,
+    "informative_n": 45,
+    "arms": {
+      "control": {
+        "correct": 75,
+        "cap": 1,
+        "informative_correct": 44,
+        "by_kind": {
+          "lookup": {
+            "correct": 27,
+            "n": 28
+          },
+          "style": {
+            "correct": 18,
+            "n": 20
+          },
+          "tool_select": {
+            "correct": 26,
+            "n": 26
+          },
+          "unrelated": {
+            "correct": 4,
+            "n": 4
+          }
+        }
+      },
+      "teacher": {
+        "correct": 76,
+        "cap": 1,
+        "informative_correct": 45,
+        "by_kind": {
+          "lookup": {
+            "correct": 27,
+            "n": 28
+          },
+          "style": {
+            "correct": 20,
+            "n": 20
+          },
+          "tool_select": {
+            "correct": 25,
+            "n": 26
+          },
+          "unrelated": {
+            "correct": 4,
+            "n": 4
+          }
+        }
+      },
+      "none": {
+        "correct": 32,
+        "cap": 74,
+        "informative_correct": 0,
+        "by_kind": {
+          "lookup": {
+            "correct": 11,
+            "n": 28
+          },
+          "style": {
+            "correct": 14,
+            "n": 20
+          },
+          "tool_select": {
+            "correct": 3,
+            "n": 26
+          },
+          "unrelated": {
+            "correct": 4,
+            "n": 4
+          }
+        }
+      },
+      "expanded": {
+        "correct": 73,
+        "cap": 3,
+        "informative_correct": 42,
+        "by_kind": {
+          "lookup": {
+            "correct": 27,
+            "n": 28
+          },
+          "style": {
+            "correct": 17,
+            "n": 20
+          },
+          "tool_select": {
+            "correct": 25,
+            "n": 26
+          },
+          "unrelated": {
+            "correct": 4,
+            "n": 4
+          }
+        }
+      }
+    },
+    "gains": [
+      "For the tool `create_issue`, name one required argument."
+    ],
+    "losses": [
+      "Which package manager do Python services use?",
+      "Which skill guides triage and postmortem for a production incident?",
+      "How long should a normal answer be, in lines?"
+    ]
+  },
+  "stress197": {
+    "n": 197,
+    "informative_n": 107,
+    "arms": {
+      "control": {
+        "correct": 165,
+        "cap": 1,
+        "informative_correct": 80,
+        "by_kind": {
+          "lookup": {
+            "correct": 118,
+            "n": 135
+          },
+          "tool_select": {
+            "correct": 47,
+            "n": 62
+          }
+        }
+      },
+      "teacher": {
+        "correct": 197,
+        "cap": 0,
+        "informative_correct": 107,
+        "by_kind": {
+          "lookup": {
+            "correct": 135,
+            "n": 135
+          },
+          "tool_select": {
+            "correct": 62,
+            "n": 62
+          }
+        }
+      },
+      "none": {
+        "correct": 90,
+        "cap": 159,
+        "informative_correct": 0,
+        "by_kind": {
+          "lookup": {
+            "correct": 89,
+            "n": 135
+          },
+          "tool_select": {
+            "correct": 1,
+            "n": 62
+          }
+        }
+      },
+      "expanded": {
+        "correct": 173,
+        "cap": 1,
+        "informative_correct": 89,
+        "by_kind": {
+          "lookup": {
+            "correct": 116,
+            "n": 135
+          },
+          "tool_select": {
+            "correct": 57,
+            "n": 62
+          }
+        }
+      }
+    },
+    "gains": [
+      "Which tool should be used to do the following: Write operations for discussion comments.",
+      "Which tool should be used to do the following: Get details of a specific code quality finding in a GitHub repository.",
+      "Which tool should be used to do the following: Get details of the authenticated GitHub user.",
+      "Which tool should be used to do the following: Get a specific release by its tag name in a GitHub repository",
+      "Which tool should be used to do the following: Hide (minimize) an inline review comment on a pull request diff.",
+      "Which tool should be used to do the following: Add or remove an issue dependency relationship in a GitHub repository.",
+      "Which tool should be used to do the following: List repository security advisories for a GitHub organization.",
+      "Which tool should be used to do the following: Manage a notification subscription: ignore, watch, or delete a notification thread subscription.",
+      "Which tool should be used to do the following: Remove a reaction from an issue or pull request.",
+      "Which tool should be used to do the following: Submit a pending pull request review.",
+      "Which tool should be used to do the following: Update the body description of an existing pull request.",
+      "For the tool `add_pull_request_review_comment`, which argument is described as: The pull request number",
+      "For the tool `add_reply_to_pull_request_comment`, which argument is described as: Pull request number. Required when body is provided."
+    ],
+    "losses": [
+      "Which tool should be used to do the following: Add a reply and/or reaction to an existing pull request comment.",
+      "For the tool `get_notification_details`, which argument is described as: The ID of the notification",
+      "For the tool `list_global_security_advisories`, which argument is described as: Filter by Common Weakness Enumeration IDs (e.g. [\"79\", \"284\", \"22\"]).",
+      "For the tool `mark_all_notifications_read`, which argument is described as: Describes the last point that notifications were checked (optional). Default: Now",
+      "For the tool `projects_write`, which argument is described as: Start date in YYYY-MM-DD format. Used for 'create_project_status_update' and 'create_iteration_field' methods."
+    ]
+  },
+  "diagnostic12": {
+    "n": 12,
+    "informative_n": 9,
+    "arms": {
+      "control": {
+        "correct": 7,
+        "cap": 0,
+        "informative_correct": 5,
+        "by_kind": {
+          "lookup": {
+            "correct": 7,
+            "n": 12
+          }
+        }
+      },
+      "teacher": {
+        "correct": 12,
+        "cap": 0,
+        "informative_correct": 9,
+        "by_kind": {
+          "lookup": {
+            "correct": 12,
+            "n": 12
+          }
+        }
+      },
+      "none": {
+        "correct": 3,
+        "cap": 6,
+        "informative_correct": 0,
+        "by_kind": {
+          "lookup": {
+            "correct": 3,
+            "n": 12
+          }
+        }
+      },
+      "expanded": {
+        "correct": 9,
+        "cap": 1,
+        "informative_correct": 7,
+        "by_kind": {
+          "lookup": {
+            "correct": 9,
+            "n": 12
+          }
+        }
+      }
+    },
+    "gains": [
+      "Inspect the details of tag v1.2 in a particular repository. Name the connected tool that retrieves that specific tag rather than listing all tags.",
+      "An existing pull request needs a new description while retaining its title. Name the connected tool specifically for changing that description.",
+      "For mcp__github__update_pull_request_body, list the mandatory argument names only."
+    ],
+    "losses": [
+      "Given a GHSA identifier, retrieve that individual global advisory. Name the connected tool, not a search or listing tool."
+    ]
+  },
+  "artifacts": {
+    "control": {
+      "slots": 8192,
+      "exact": 0,
+      "compile_s": 2130.7742471694946,
+      "kv_bytes": 536870912,
+      "manifest_sha256": "724e43177da6e823d4df4aaa21e4dc2629a1c96fcd4f1c7b81f93ff29a5aa202"
+    },
+    "compiled": {
+      "slots": 8192,
+      "exact": 0,
+      "compile_s": 2478.556343317032,
+      "kv_bytes": 536870912,
+      "manifest_sha256": "593649b6d7d565ddb1e2acecfe8ecfd3b6cd0a934c3709671933338a17ed00a2"
+    }
+  }
+}

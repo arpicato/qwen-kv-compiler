@@ -1,0 +1,21 @@
+{
+  "complete": true,
+  "rows": [
+    {
+      "slots": 8192,
+      "manifest_sha256": "e704064af5b27ec77b68016099d1ca9a1a7e75c6f1961fa5671f8fba768735e3",
+      "roundtrip_exact": true,
+      "ids": [
+        63,
+        19349,
+        5022,
+        63
+      ],
+      "stop": "eos"
+    }
+  ],
+  "elapsed_s": 105.30077493493445,
+  "recurrent_injection_exact": true,
+  "wrapper_sha256": "4f073e7b0e4292ca780c5f2d293bc7d037bb80edc410758293a1001a29ef1ef7",
+  "peak_gib": 14.564812183380127
+}

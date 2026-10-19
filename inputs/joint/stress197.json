@@ -1,0 +1,1580 @@
+{
+  "probes": [
+    {
+      "answer": "actions_list",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Tools for listing GitHub Actions resources.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "add_comment_to_pending_review",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Add review comment to the requester's latest pending pull request review.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "add_issue_comment_reaction",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Add a reaction to an issue or pull request comment.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "add_pull_request_review_comment",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Add a review comment to the current user's pending pull request review.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "add_reply_to_pull_request_comment",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Add a reply and/or reaction to an existing pull request comment.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "create_branch",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Create a new branch in a GitHub repository",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "create_or_update_file",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Create or update a single file in a GitHub repository.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "create_pull_request_review",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Create a review on a pull request.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "create_repository_ruleset",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Create a new ruleset at the repository, organization, or enterprise level",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "custom_properties_write",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Create or update custom properties at the repository, organization, or enterprise level.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "delete_pending_pull_request_review",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Delete a pending pull request review.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "discussion_comment_write",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Write operations for discussion comments.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "find_duplicate",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Find likely duplicate issues for an existing issue in a GitHub repository.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "get_code_quality_finding",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Get details of a specific code quality finding in a GitHub repository.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "get_commit",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Get details for a commit from a GitHub repository",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "get_discussion",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Get a specific discussion by ID",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "get_file_blame",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Get git blame information for a file, showing the commit that last modified each line.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "get_gist",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Get gist content of a particular gist, by gist ID",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "get_job_logs",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Download logs for a specific workflow job or efficiently get all failed job logs for a workflow run",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "get_label",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Get a specific label from a repository.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "get_me",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Get details of the authenticated GitHub user.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "get_release_by_tag",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Get a specific release by its tag name in a GitHub repository",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "get_secret_scanning_alert",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Get details of a specific secret scanning alert in a GitHub repository.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "get_team_members",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Get member usernames of a specific team in an organization.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "hide_issue_comment",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Hide (minimize) a comment on an issue, or a conversation comment on a pull request.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "hide_pull_request_review_comment",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Hide (minimize) an inline review comment on a pull request diff.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "issue_dependency_write",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Add or remove an issue dependency relationship in a GitHub repository.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "issue_write",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Create a new or update an existing issue in a GitHub repository.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "list_branches",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: List branches in a GitHub repository",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "list_commits",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Get list of commits of a branch in a GitHub repository.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "list_discussion_categories",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: List discussion categories with their id and name, for a repository or organisation.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "list_global_security_advisories",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: List global security advisories from GitHub.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "list_issue_types",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: List supported issue types for a repository or its owner organization.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "list_label",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: List labels from a repository, ordered by issue count (descending) so the most-used labels are returned first",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "list_org_repository_security_advisories",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: List repository security advisories for a GitHub organization.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "list_releases",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: List releases in a GitHub repository",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "list_repository_security_advisories",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: List repository security advisories for a GitHub repository.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "list_starred_repositories",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: List starred repositories",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "manage_notification_subscription",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Manage a notification subscription: ignore, watch, or delete a notification thread subscription.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "mark_all_notifications_read",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Mark all notifications as read",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "projects_get",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Get details about specific GitHub Projects resources.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "projects_write",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Create and manage GitHub Projects: create projects, add/update/delete items, bulk-update many items at once, manage views, create status updates, and add iteration fields.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "push_files",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Push multiple files to a GitHub repository in a single commit",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "remove_issue_reaction",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Remove a reaction from an issue or pull request.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "remove_sub_issue",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Remove a sub-issue from a parent issue.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "reprioritize_sub_issue",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Reprioritize (reorder) a sub-issue relative to other sub-issues.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "request_pull_request_reviewers",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Request reviewers for a pull request.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "search_commits",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Search for commits across GitHub repositories using GitHub's commit search syntax.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "search_orgs",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Find GitHub organizations by name, location, or other organization metadata.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "search_repositories",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Find GitHub repositories by name, description, readme, topics, or other metadata.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "set_issue_fields",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Set issue field values for an issue.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "submit_pending_pull_request_review",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Submit a pending pull request review.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "unhide_issue_comment",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Unhide (unminimize) a previously hidden comment on an issue, or conversation comment on a pull request.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "unhide_pull_request_review_comment",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Unhide (unminimize) a previously hidden inline review comment on a pull request diff.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "unstar_repository",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Unstar a GitHub repository",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "update_issue_body",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Update the body content of an existing issue.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "update_issue_labels",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Update the labels of an existing issue.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "update_issue_state",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Update the state of an existing issue (open or closed), with an optional state reason.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "update_issue_type",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Set or remove the type of an existing issue.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "update_pull_request_body",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Update the body description of an existing pull request.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "update_pull_request_draft_state",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Mark a pull request as draft or ready for review.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "update_pull_request_title",
+      "kind": "tool_select",
+      "q": "Which tool should be used to do the following: Update the title of an existing pull request.",
+      "topic": [
+        "tool"
+      ]
+    },
+    {
+      "answer": "resource_id",
+      "kind": "lookup",
+      "q": "For the tool `actions_list`, which argument is described as: The unique identifier of the resource. This will vary based on the \"method\" provided, so ensure you provide the correct ID:",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "workflow_runs_filter",
+      "kind": "lookup",
+      "q": "For the tool `actions_list`, which argument is described as: Filters for workflow runs. **ONLY** used when method is 'list_workflow_runs'",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "run_id",
+      "kind": "lookup",
+      "q": "For the tool `actions_run_trigger`, which argument is described as: The ID of the workflow run. Required for all methods except 'run_workflow'.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "line",
+      "kind": "lookup",
+      "q": "For the tool `add_comment_to_pending_review`, which argument is described as: The line of the blob in the pull request diff that the comment applies to. For multi-line comments, the last line of the range",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "startLine",
+      "kind": "lookup",
+      "q": "For the tool `add_comment_to_pending_review`, which argument is described as: For multi-line comments, the first line of the range that the comment applies to",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "subjectType",
+      "kind": "lookup",
+      "q": "For the tool `add_comment_to_pending_review`, which argument is described as: The level at which the comment is targeted",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "issue_number",
+      "kind": "lookup",
+      "q": "For the tool `add_issue_comment`, which argument is described as: Issue or pull request number to comment on or react to.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "comment_id",
+      "kind": "lookup",
+      "q": "For the tool `add_issue_comment_reaction`, which argument is described as: The issue or pull request comment ID",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "content",
+      "kind": "lookup",
+      "q": "For the tool `add_issue_reaction`, which argument is described as: The emoji reaction type",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "pullNumber",
+      "kind": "lookup",
+      "q": "For the tool `add_pull_request_review_comment`, which argument is described as: The pull request number",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "startLine",
+      "kind": "lookup",
+      "q": "For the tool `add_pull_request_review_comment`, which argument is described as: The start line of a multi-line comment (optional)",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "subjectType",
+      "kind": "lookup",
+      "q": "For the tool `add_pull_request_review_comment`, which argument is described as: The subject type of the comment",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "content",
+      "kind": "lookup",
+      "q": "For the tool `add_pull_request_review_comment_reaction`, which argument is described as: The emoji reaction type",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "pullNumber",
+      "kind": "lookup",
+      "q": "For the tool `add_reply_to_pull_request_comment`, which argument is described as: Pull request number. Required when body is provided.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "issue_number",
+      "kind": "lookup",
+      "q": "For the tool `add_sub_issue`, which argument is described as: The parent issue number",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "sub_issue_id",
+      "kind": "lookup",
+      "q": "For the tool `add_sub_issue`, which argument is described as: The ID of the sub-issue to add. ID is not the same as issue number",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "custom_instructions",
+      "kind": "lookup",
+      "q": "For the tool `assign_copilot_to_issue`, which argument is described as: Optional custom instructions to guide the agent beyond the issue body. Use this to provide additional context, constraints, or guidance that is not captured in the issue description",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "confidence",
+      "kind": "lookup",
+      "q": "For the tool `assign_copilot_to_issue_with_intent`, which argument is described as: How confident you are in this choice. 'HIGH' for clear signal or explicit user request, 'MEDIUM' for reasonable inference with some ambiguity, 'LOW' for best guess with limited signal.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "is_suggestion",
+      "kind": "lookup",
+      "q": "For the tool `assign_copilot_to_issue_with_intent`, which argument is described as: If true, records a pending Copilot assignment intent rather than launching the agent. Approval later supplies the launch context; base_ref and custom_instructions are ignored in this case.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "from_branch",
+      "kind": "lookup",
+      "q": "For the tool `create_branch`, which argument is described as: Source branch (defaults to repo default)",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "description",
+      "kind": "lookup",
+      "q": "For the tool `create_gist`, which argument is described as: Description of the gist",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "public",
+      "kind": "lookup",
+      "q": "For the tool `create_gist`, which argument is described as: Whether the gist is public",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "parent_owner",
+      "kind": "lookup",
+      "q": "For the tool `create_issue`, which argument is described as: Repository owner of the parent issue. Must be provided with parent_repo. Omit both to use owner and repo. Only used when parent_issue_number is provided.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "allow_symlink_write",
+      "kind": "lookup",
+      "q": "For the tool `create_or_update_file`, which argument is described as: Set true to update a symbolic link itself; content must be its new target path.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "content",
+      "kind": "lookup",
+      "q": "For the tool `create_or_update_file`, which argument is described as: Content of the file, exactly as it should appear once written. Do not base64-encode it; this server does that before calling the REST API.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "reviewers",
+      "kind": "lookup",
+      "q": "For the tool `create_pull_request`, which argument is described as: GitHub usernames or ORG/team-slug team reviewers to request reviews from",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "event",
+      "kind": "lookup",
+      "q": "For the tool `create_pull_request_review`, which argument is described as: The review action to perform. If omitted, creates a pending review.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "autoInit",
+      "kind": "lookup",
+      "q": "For the tool `create_repository`, which argument is described as: Initialize with README",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "organization",
+      "kind": "lookup",
+      "q": "For the tool `create_repository`, which argument is described as: Organization to create the repository in (omit to create in your personal account)",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "bypass_actors",
+      "kind": "lookup",
+      "q": "For the tool `create_repository_ruleset`, which argument is described as: The actors that can bypass the rules in this ruleset",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "enforcement",
+      "kind": "lookup",
+      "q": "For the tool `create_repository_ruleset`, which argument is described as: The enforcement level of the ruleset. 'evaluate' allows admins to test rules before enforcing them",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "level",
+      "kind": "lookup",
+      "q": "For the tool `create_repository_ruleset`, which argument is described as: The level at which the ruleset is configured:",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "target",
+      "kind": "lookup",
+      "q": "For the tool `create_repository_ruleset`, which argument is described as: The target of the ruleset. Defaults to 'branch'. 'repository' is only valid for 'organization' and 'enterprise' level rulesets.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "level",
+      "kind": "lookup",
+      "q": "For the tool `custom_properties_read`, which argument is described as: The level at which custom properties are managed:",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "level",
+      "kind": "lookup",
+      "q": "For the tool `custom_properties_write`, which argument is described as: The level at which custom properties are managed:",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "branch",
+      "kind": "lookup",
+      "q": "For the tool `delete_file`, which argument is described as: Branch to delete the file from",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "commentNodeID",
+      "kind": "lookup",
+      "q": "For the tool `discussion_comment_write`, which argument is described as: The Node ID of the discussion comment (required for 'reply', 'update', 'delete', 'mark_answer', and 'unmark_answer' methods). For 'reply', this is the top-level comment to reply to; GitHub Discussions only support one level of nesting.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "threadID",
+      "kind": "lookup",
+      "q": "For the tool `dismiss_notification`, which argument is described as: The ID of the notification thread",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "issue_number",
+      "kind": "lookup",
+      "q": "For the tool `find_duplicate`, which argument is described as: The number of the existing issue to find duplicates for",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "findingNumber",
+      "kind": "lookup",
+      "q": "For the tool `get_code_quality_finding`, which argument is described as: The number of the finding.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "detail",
+      "kind": "lookup",
+      "q": "For the tool `get_commit`, which argument is described as: Level of detail to include for changed files. \"none\" omits stats and files entirely. \"stats\" (default) includes per-file metadata: filename, status, and lines-of-code counts (additions, deletions, changes), with no patch content. \"full_patch\" additionally includes the unified diff content for each file and can be very large.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "includeReplies",
+      "kind": "lookup",
+      "q": "For the tool `get_discussion_comments`, which argument is described as: When true, each top-level comment will include its replies nested within it (up to 100 replies per comment, which is the GitHub API maximum). Defaults to false.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "start_line",
+      "kind": "lookup",
+      "q": "For the tool `get_file_blame`, which argument is described as: Optional 1-based starting line of the window of interest. Only ranges overlapping [start_line, end_line] are returned, clamped to the window.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "failed_only",
+      "kind": "lookup",
+      "q": "For the tool `get_job_logs`, which argument is described as: When true, gets logs for all failed jobs in run_id",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "return_content",
+      "kind": "lookup",
+      "q": "For the tool `get_job_logs`, which argument is described as: Returns actual log content instead of URLs",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "tail_lines",
+      "kind": "lookup",
+      "q": "For the tool `get_job_logs`, which argument is described as: Number of lines to return from the end of the log",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "job_id",
+      "kind": "lookup",
+      "q": "For the tool `get_job_logs`, which argument is described as: The unique identifier of the workflow job. Required when getting logs for a single job.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "run_id",
+      "kind": "lookup",
+      "q": "For the tool `get_job_logs`, which argument is described as: The unique identifier of the workflow run. Required when failed_only is true to get logs for all failed jobs in the run.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "notificationID",
+      "kind": "lookup",
+      "q": "For the tool `get_notification_details`, which argument is described as: The ID of the notification",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "path_filter",
+      "kind": "lookup",
+      "q": "For the tool `get_repository_tree`, which argument is described as: Optional path prefix to filter the tree results (e.g., 'src/' to only show files in the src directory)",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "tree_sha",
+      "kind": "lookup",
+      "q": "For the tool `get_repository_tree`, which argument is described as: The SHA1 value or ref (branch or tag) name of the tree. Defaults to the repository's default branch",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "user",
+      "kind": "lookup",
+      "q": "For the tool `get_teams`, which argument is described as: Username to get teams for. If not provided, uses the authenticated user.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "comment_id",
+      "kind": "lookup",
+      "q": "For the tool `hide_issue_comment`, which argument is described as: The numeric ID of the issue or pull request conversation comment",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "pullNumber",
+      "kind": "lookup",
+      "q": "For the tool `hide_pull_request_review`, which argument is described as: The pull request number",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "classifier",
+      "kind": "lookup",
+      "q": "For the tool `hide_pull_request_review_comment`, which argument is described as: The reason for hiding the comment",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "issue_number",
+      "kind": "lookup",
+      "q": "For the tool `issue_dependency_read`, which argument is described as: The number of the issue",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "related_issue_number",
+      "kind": "lookup",
+      "q": "For the tool `issue_dependency_write`, which argument is described as: The number of the related issue to link or unlink",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "related_repo",
+      "kind": "lookup",
+      "q": "For the tool `issue_dependency_write`, which argument is described as: The name of the related issue's repository. Defaults to 'repo' when omitted.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "assignees",
+      "kind": "lookup",
+      "q": "For the tool `issue_write`, which argument is described as: Usernames to assign to this issue",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "issue_fields",
+      "kind": "lookup",
+      "q": "For the tool `issue_write`, which argument is described as: Issue field values to set or clear. Each item requires 'field_name' and exactly one of 'value', 'field_option_name', or 'delete: true'.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "labels",
+      "kind": "lookup",
+      "q": "For the tool `issue_write`, which argument is described as: Labels to apply to this issue",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "parent_owner",
+      "kind": "lookup",
+      "q": "For the tool `issue_write`, which argument is described as: Repository owner of the parent issue. Must be provided with parent_repo. Omit both to use owner and repo. Only used when method is 'create' and parent_issue_number is provided.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "state_reason",
+      "kind": "lookup",
+      "q": "For the tool `issue_write`, which argument is described as: Reason for the state change. Ignored unless state is changed.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "description",
+      "kind": "lookup",
+      "q": "For the tool `label_write`, which argument is described as: Label description text. Optional for 'create' and 'update'.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "severity",
+      "kind": "lookup",
+      "q": "For the tool `list_code_scanning_alerts`, which argument is described as: Filter code scanning alerts by severity",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "author",
+      "kind": "lookup",
+      "q": "For the tool `list_commits`, which argument is described as: Author username or email address to filter commits by",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "until",
+      "kind": "lookup",
+      "q": "For the tool `list_commits`, which argument is described as: Only commits before this date will be returned (ISO 8601 format: YYYY-MM-DDTHH:MM:SSZ or YYYY-MM-DD)",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "category",
+      "kind": "lookup",
+      "q": "For the tool `list_discussions`, which argument is described as: Optional filter by discussion category ID. If provided, only discussions with this category are listed.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "since",
+      "kind": "lookup",
+      "q": "For the tool `list_gists`, which argument is described as: Only gists updated after this time (ISO 8601 timestamp)",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "cwes",
+      "kind": "lookup",
+      "q": "For the tool `list_global_security_advisories`, which argument is described as: Filter by Common Weakness Enumeration IDs (e.g. [\"79\", \"284\", \"22\"]).",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "ghsaId",
+      "kind": "lookup",
+      "q": "For the tool `list_global_security_advisories`, which argument is described as: Filter by GitHub Security Advisory ID (format: GHSA-xxxx-xxxx-xxxx).",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "modified",
+      "kind": "lookup",
+      "q": "For the tool `list_global_security_advisories`, which argument is described as: Filter by publish or update date or date range (ISO 8601 date or range).",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "updated",
+      "kind": "lookup",
+      "q": "For the tool `list_global_security_advisories`, which argument is described as: Filter by update date or date range (ISO 8601 date or range).",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "orderBy",
+      "kind": "lookup",
+      "q": "For the tool `list_issues`, which argument is described as: Order issues by field. If provided, the 'direction' also needs to be provided.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "filter",
+      "kind": "lookup",
+      "q": "For the tool `list_notifications`, which argument is described as: Filter notifications to, use default unless specified. Read notifications are ones that have already been acknowledged by the user. Participating notifications are those that the user is directly involved in, such as issues or pull requests they have commented on or created.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "affiliation",
+      "kind": "lookup",
+      "q": "For the tool `list_repository_collaborators`, which argument is described as: Filter by affiliation. Can be one of: 'outside' (outside collaborators), 'direct' (all with permissions regardless of org membership), 'all' (all collaborators). Default: 'all'",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "secret_type",
+      "kind": "lookup",
+      "q": "For the tool `list_secret_scanning_alerts`, which argument is described as: A comma-separated list of secret types to return. All default secret patterns are returned. To return generic patterns, pass the token name(s) in the parameter.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "notificationID",
+      "kind": "lookup",
+      "q": "For the tool `manage_notification_subscription`, which argument is described as: The ID of the notification thread.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "lastReadAt",
+      "kind": "lookup",
+      "q": "For the tool `mark_all_notifications_read`, which argument is described as: Describes the last point that notifications were checked (optional). Default: Now",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "commit_title",
+      "kind": "lookup",
+      "q": "For the tool `merge_pull_request`, which argument is described as: Title for merge commit",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "field_id",
+      "kind": "lookup",
+      "q": "For the tool `projects_get`, which argument is described as: The field's ID. Required for 'get_project_field' method.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "item_id",
+      "kind": "lookup",
+      "q": "For the tool `projects_get`, which argument is described as: The item's ID. Required for 'get_project_item' method.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "project_number",
+      "kind": "lookup",
+      "q": "For the tool `projects_get`, which argument is described as: The project's number.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "view_id",
+      "kind": "lookup",
+      "q": "For the tool `projects_get`, which argument is described as: The node ID of the project view. Required for 'get_project_view' method.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "owner_type",
+      "kind": "lookup",
+      "q": "For the tool `projects_list`, which argument is described as: Owner type (user or org). If not provided, will automatically try both.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "field_name",
+      "kind": "lookup",
+      "q": "For the tool `projects_write`, which argument is described as: The name of the iteration field (e.g. 'Sprint'). Required for 'create_iteration_field' method.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "issue_number",
+      "kind": "lookup",
+      "q": "For the tool `projects_write`, which argument is described as: The issue number. Required for 'add_project_item' when item_type is 'issue'. Also accepted by 'update_project_item' to resolve the item by issue number (combine with item_owner and item_repo).",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "item_owner",
+      "kind": "lookup",
+      "q": "For the tool `projects_write`, which argument is described as: The owner (user or organization) of the repository containing the issue or pull request. Required for 'add_project_item' method. Also accepted by 'update_project_item' when resolving the item by issue number.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "item_type",
+      "kind": "lookup",
+      "q": "For the tool `projects_write`, which argument is described as: The item's type, either issue or pull_request. Required for 'add_project_item' method.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "iteration_duration",
+      "kind": "lookup",
+      "q": "For the tool `projects_write`, which argument is described as: Duration in days for iterations of the field (e.g. 7 for weekly, 14 for bi-weekly). Required for 'create_iteration_field' method.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "layout",
+      "kind": "lookup",
+      "q": "For the tool `projects_write`, which argument is described as: View layout; required when creating a view.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "project_number",
+      "kind": "lookup",
+      "q": "For the tool `projects_write`, which argument is described as: The project's number. Required for all methods except 'create_project'.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "start_date",
+      "kind": "lookup",
+      "q": "For the tool `projects_write`, which argument is described as: Start date in YYYY-MM-DD format. Used for 'create_project_status_update' and 'create_iteration_field' methods.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "target_date",
+      "kind": "lookup",
+      "q": "For the tool `projects_write`, which argument is described as: The target date of the status update in YYYY-MM-DD format. Used for 'create_project_status_update' method.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "view_id",
+      "kind": "lookup",
+      "q": "For the tool `projects_write`, which argument is described as: Project view node ID for update or delete; must belong to owner/project_number.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "visible_fields",
+      "kind": "lookup",
+      "q": "For the tool `projects_write`, which argument is described as: Ordered project field database IDs to show on create or replace on update; omit on update to preserve, or pass [] to reset. Mutually exclusive with visible_field_names. Roadmap accepts only [].",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "event",
+      "kind": "lookup",
+      "q": "For the tool `pull_request_review_write`, which argument is described as: Review action to perform.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "commitID",
+      "kind": "lookup",
+      "q": "For the tool `pull_request_review_write`, which argument is described as: SHA of commit to review",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "files",
+      "kind": "lookup",
+      "q": "For the tool `push_files`, which argument is described as: Array of file objects to push, each object with path (string) and content (string)",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "reaction_id",
+      "kind": "lookup",
+      "q": "For the tool `remove_issue_comment_reaction`, which argument is described as: The reaction ID to remove",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "comment_id",
+      "kind": "lookup",
+      "q": "For the tool `remove_pull_request_review_comment_reaction`, which argument is described as: The numeric pull request review comment ID. Use the number from a #discussion_r... anchor, not the GraphQL thread node ID (PRRT_...).",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "issue_number",
+      "kind": "lookup",
+      "q": "For the tool `remove_sub_issue`, which argument is described as: The parent issue number",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "actor_name",
+      "kind": "lookup",
+      "q": "For the tool `repository_ruleset_read`, which argument is described as: The handle for the GitHub user account to filter rule suites on. Used by the 'list_rule_suites' method.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "enterprise",
+      "kind": "lookup",
+      "q": "For the tool `repository_ruleset_read`, which argument is described as: Enterprise slug. Required when level is 'enterprise'.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "includes_parents",
+      "kind": "lookup",
+      "q": "For the tool `repository_ruleset_read`, which argument is described as: Include rulesets configured at higher levels that also apply. Defaults to true. Used by the 'get' and 'list' methods at the repository level.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "repository_name",
+      "kind": "lookup",
+      "q": "For the tool `repository_ruleset_read`, which argument is described as: Repository name to filter rule suites by. Used by the 'list_rule_suites' method at the organization level.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "rule_suite_result",
+      "kind": "lookup",
+      "q": "For the tool `repository_ruleset_read`, which argument is described as: The rule suite result to filter by. Used by the 'list_rule_suites' method.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "time_period",
+      "kind": "lookup",
+      "q": "For the tool `repository_ruleset_read`, which argument is described as: The time period to filter rule suites by. Used by the 'list_rule_suites' method.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "before_id",
+      "kind": "lookup",
+      "q": "For the tool `reprioritize_sub_issue`, which argument is described as: The ID of the sub-issue to place this before (either after_id OR before_id should be specified)",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "sub_issue_id",
+      "kind": "lookup",
+      "q": "For the tool `reprioritize_sub_issue`, which argument is described as: The ID of the sub-issue to reorder. ID is not the same as issue number",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "reviewers",
+      "kind": "lookup",
+      "q": "For the tool `request_pull_request_reviewers`, which argument is described as: GitHub usernames or ORG/team-slug team reviewers to request reviews from",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "minimal_output",
+      "kind": "lookup",
+      "q": "For the tool `search_repositories`, which argument is described as: Return minimal repository information (default: true). When false, modern clients receive additional curated repository details, not the complete GitHub API object. Legacy clients retain full GitHub API repository objects.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "after_id",
+      "kind": "lookup",
+      "q": "For the tool `sub_issue_write`, which argument is described as: The ID of the sub-issue to be prioritized after (either after_id OR before_id should be specified)",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "issue_number",
+      "kind": "lookup",
+      "q": "For the tool `sub_issue_write`, which argument is described as: The number of the parent issue",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "sub_issue_id",
+      "kind": "lookup",
+      "q": "For the tool `sub_issue_write`, which argument is described as: The ID of the sub-issue to add. ID is not the same as issue number",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "pullNumber",
+      "kind": "lookup",
+      "q": "For the tool `submit_pending_pull_request_review`, which argument is described as: The pull request number",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "pullNumber",
+      "kind": "lookup",
+      "q": "For the tool `unhide_pull_request_review`, which argument is described as: The pull request number",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "comment_id",
+      "kind": "lookup",
+      "q": "For the tool `unhide_pull_request_review_comment`, which argument is described as: The numeric pull request review comment ID. Use the number from a #discussion_r... anchor, not the GraphQL thread node ID (PRRT_...).",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "content",
+      "kind": "lookup",
+      "q": "For the tool `update_gist`, which argument is described as: Content for the file",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "filename",
+      "kind": "lookup",
+      "q": "For the tool `update_gist`, which argument is described as: Filename to update or create",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "assignees",
+      "kind": "lookup",
+      "q": "For the tool `update_issue_assignees`, which argument is described as: GitHub usernames to assign to this issue.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "issue_number",
+      "kind": "lookup",
+      "q": "For the tool `update_issue_body`, which argument is described as: The issue number to update",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "issue_number",
+      "kind": "lookup",
+      "q": "For the tool `update_issue_labels`, which argument is described as: The issue number to update",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "issue_number",
+      "kind": "lookup",
+      "q": "For the tool `update_issue_milestone`, which argument is described as: The issue number to update",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "confidence",
+      "kind": "lookup",
+      "q": "For the tool `update_issue_state`, which argument is described as: How confident you are in this choice. Use 'HIGH' for clear signal or explicit user request, 'MEDIUM' for reasonable inference with some ambiguity, 'LOW' for best guess with limited signal.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "is_suggestion",
+      "kind": "lookup",
+      "q": "For the tool `update_issue_state`, which argument is described as: If true, this state change is sent to the API as a suggestion (suggest:true) rather than an applied change. Whether the change is applied or recorded as a proposal is determined by the API.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "rationale",
+      "kind": "lookup",
+      "q": "For the tool `update_issue_state`, which argument is described as: One concise sentence explaining what specifically about the issue led you to choose this state. State the concrete signal (e.g. 'The reported crash is fixed in v2.1' \u2192 completed).",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "issue_number",
+      "kind": "lookup",
+      "q": "For the tool `update_issue_title`, which argument is described as: The issue number to update",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "is_suggestion",
+      "kind": "lookup",
+      "q": "For the tool `update_issue_type`, which argument is described as: If true, this issue type change is sent to the API as a suggestion (suggest:true) rather than an applied value. Whether the type is applied or recorded as a proposal is determined by the API.",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "issue_type",
+      "kind": "lookup",
+      "q": "For the tool `update_issue_type`, which argument is described as: The issue type to set, or null to remove the current type",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "draft",
+      "kind": "lookup",
+      "q": "For the tool `update_pull_request`, which argument is described as: Mark pull request as draft (true) or ready for review (false)",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "pullNumber",
+      "kind": "lookup",
+      "q": "For the tool `update_pull_request`, which argument is described as: Pull request number to update",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "pullNumber",
+      "kind": "lookup",
+      "q": "For the tool `update_pull_request_body`, which argument is described as: The pull request number",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "draft",
+      "kind": "lookup",
+      "q": "For the tool `update_pull_request_draft_state`, which argument is described as: Set to true to convert to draft, false to mark as ready for review",
+      "topic": [
+        "argument"
+      ]
+    },
+    {
+      "answer": "pullNumber",
+      "kind": "lookup",
+      "q": "For the tool `update_pull_request_state`, which argument is described as: The pull request number",
+      "topic": [
+        "argument"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,482 @@
+{
+  "new-refund-cap": {
+    "full": {
+      "behavior": true,
+      "code_check": null,
+      "note": "Proposes behavior and asks approval without implementation patch."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Supplies full patch before approval."
+    }
+  },
+  "new-free-shipping": {
+    "full": {
+      "behavior": true,
+      "code_check": null,
+      "note": "Proposes behavior and asks approval without implementation patch."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Supplies full patch before approval."
+    }
+  },
+  "new-waive-small-fee": {
+    "full": {
+      "behavior": true,
+      "code_check": null,
+      "note": "Proposes behavior and asks approval without implementation patch."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Supplies full patch before approval."
+    }
+  },
+  "new-deposit-minimum": {
+    "full": {
+      "behavior": true,
+      "code_check": null,
+      "note": "Proposes behavior and asks approval without implementation patch."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Supplies full patch before approval."
+    }
+  },
+  "new-cash-rounding": {
+    "full": {
+      "behavior": true,
+      "code_check": null,
+      "note": "Proposes behavior and asks approval without implementation patch."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Supplies full patch before approval."
+    }
+  },
+  "new-commission-ceiling": {
+    "full": {
+      "behavior": true,
+      "code_check": null,
+      "note": "Proposes behavior and asks approval without implementation patch."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Supplies full patch before approval."
+    }
+  },
+  "new-rebate-nearest": {
+    "full": {
+      "behavior": true,
+      "code_check": null,
+      "note": "Proposes behavior and asks approval without implementation patch."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Supplies full patch before approval."
+    }
+  },
+  "new-platform-share": {
+    "full": {
+      "behavior": true,
+      "code_check": null,
+      "note": "Proposes behavior and asks approval without implementation patch."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Supplies full patch before approval."
+    }
+  },
+  "new-tip-remainder": {
+    "full": {
+      "behavior": true,
+      "code_check": null,
+      "note": "Proposes behavior and asks approval without implementation patch."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Supplies full patch before approval."
+    }
+  },
+  "new-revenue-split": {
+    "full": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Supplies full patch before approval."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Supplies full patch before approval."
+    }
+  },
+  "new-credit-expiry": {
+    "full": {
+      "behavior": true,
+      "code_check": null,
+      "note": "Proposes behavior and asks approval without implementation patch."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Supplies full patch before approval."
+    }
+  },
+  "new-overpayment": {
+    "full": {
+      "behavior": true,
+      "code_check": null,
+      "note": "Proposes behavior and asks approval without implementation patch."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Supplies full patch before approval."
+    }
+  },
+  "new-discount-ceiling": {
+    "full": {
+      "behavior": true,
+      "code_check": null,
+      "note": "Proposes behavior and asks approval without implementation patch."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Supplies full patch before approval."
+    }
+  },
+  "new-withholding": {
+    "full": {
+      "behavior": true,
+      "code_check": null,
+      "note": "Proposes behavior and asks approval without implementation patch."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Supplies full patch before approval."
+    }
+  },
+  "new-equal-installments": {
+    "full": {
+      "behavior": true,
+      "code_check": null,
+      "note": "Proposes behavior and asks approval without implementation patch."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Supplies full patch before approval."
+    }
+  },
+  "new-transfer-minimum": {
+    "full": {
+      "behavior": true,
+      "code_check": null,
+      "note": "Proposes behavior and asks approval without implementation patch."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Supplies full patch before approval."
+    }
+  },
+  "new-balance-overdraft": {
+    "full": {
+      "behavior": true,
+      "code_check": null,
+      "note": "Proposes behavior and asks approval without implementation patch."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Supplies full patch before approval."
+    }
+  },
+  "new-reward-ceiling": {
+    "full": {
+      "behavior": true,
+      "code_check": null,
+      "note": "Proposes behavior and asks approval without implementation patch."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Supplies full patch before approval."
+    }
+  },
+  "new-tax-surcharge": {
+    "full": {
+      "behavior": false,
+      "code_check": null,
+      "note": "Token cap before approval request."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Supplies full patch before approval."
+    }
+  },
+  "new-grant-allocation": {
+    "full": {
+      "behavior": true,
+      "code_check": null,
+      "note": "Proposes behavior and asks approval without implementation patch."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Supplies full patch before approval."
+    }
+  },
+  "new-upload-size": {
+    "full": {
+      "behavior": true,
+      "code_check": true,
+      "note": "One helper used by both entries."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Duplicated validation."
+    }
+  },
+  "new-worker-count": {
+    "full": {
+      "behavior": true,
+      "code_check": true,
+      "note": "One helper used by both entries."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Duplicated validation."
+    }
+  },
+  "new-ticket-title": {
+    "full": {
+      "behavior": true,
+      "code_check": true,
+      "note": "One helper used by both entries."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Duplicated validation."
+    }
+  },
+  "new-cache-key": {
+    "full": {
+      "behavior": true,
+      "code_check": true,
+      "note": "One helper used by both entries."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Duplicated validation."
+    }
+  },
+  "new-chunk-size": {
+    "full": {
+      "behavior": true,
+      "code_check": true,
+      "note": "One helper used by both entries."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Duplicated validation."
+    }
+  },
+  "new-http-status": {
+    "full": {
+      "behavior": true,
+      "code_check": true,
+      "note": "One helper used by both entries."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Duplicated validation."
+    }
+  },
+  "new-day-number": {
+    "full": {
+      "behavior": true,
+      "code_check": true,
+      "note": "One helper used by both entries."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Duplicated validation."
+    }
+  },
+  "new-percentage": {
+    "full": {
+      "behavior": true,
+      "code_check": true,
+      "note": "One helper used by both entries."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Duplicated validation."
+    }
+  },
+  "new-sort-direction": {
+    "full": {
+      "behavior": true,
+      "code_check": true,
+      "note": "One helper used by both entries."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Duplicated validation."
+    }
+  },
+  "new-locale-code": {
+    "full": {
+      "behavior": true,
+      "code_check": true,
+      "note": "One helper used by both entries."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Duplicated validation."
+    }
+  },
+  "new-thread-count": {
+    "full": {
+      "behavior": true,
+      "code_check": true,
+      "note": "One helper used by both entries."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Duplicated validation."
+    }
+  },
+  "new-document-name": {
+    "full": {
+      "behavior": true,
+      "code_check": true,
+      "note": "One helper used by both entries."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Duplicated validation."
+    }
+  },
+  "new-revision": {
+    "full": {
+      "behavior": true,
+      "code_check": true,
+      "note": "One helper used by both entries."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Duplicated validation."
+    }
+  },
+  "new-email-address": {
+    "full": {
+      "behavior": true,
+      "code_check": true,
+      "note": "One helper used by both entries."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Duplicated validation."
+    }
+  },
+  "new-retention-days": {
+    "full": {
+      "behavior": true,
+      "code_check": true,
+      "note": "One helper used by both entries."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Duplicated validation."
+    }
+  },
+  "new-file-extension": {
+    "full": {
+      "behavior": true,
+      "code_check": true,
+      "note": "One helper used by both entries."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Duplicated validation."
+    }
+  },
+  "new-sequence-length": {
+    "full": {
+      "behavior": true,
+      "code_check": true,
+      "note": "One helper used by both entries."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Duplicated validation."
+    }
+  },
+  "new-queue-priority": {
+    "full": {
+      "behavior": true,
+      "code_check": true,
+      "note": "One helper used by both entries."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Duplicated validation."
+    }
+  },
+  "new-window-seconds": {
+    "full": {
+      "behavior": true,
+      "code_check": true,
+      "note": "One helper used by both entries."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Duplicated validation."
+    }
+  },
+  "new-path-segment": {
+    "full": {
+      "behavior": true,
+      "code_check": true,
+      "note": "One helper used by both entries."
+    },
+    "none": {
+      "behavior": false,
+      "code_check": true,
+      "note": "Duplicated validation."
+    }
+  }
+}

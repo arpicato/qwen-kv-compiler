@@ -1,0 +1,492 @@
+{
+  "complete": true,
+  "rows": [
+    {
+      "id": "behavior-money-shipping-unapproved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "behavior-money-shipping-approved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "behavior-money-refund-unapproved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "behavior-money-refund-approved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "behavior-money-split-unapproved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "behavior-money-split-approved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "behavior-money-reserve-unapproved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "behavior-money-reserve-approved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "behavior-money-cap-unapproved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "behavior-money-cap-approved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "behavior-money-discount-unapproved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "behavior-money-discount-approved",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "behavior-rule-batch-shared",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 17, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "behavior-rule-batch-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 17, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "behavior-rule-label-shared",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 17, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "behavior-rule-label-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 17, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "behavior-rule-count-shared",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 17, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "behavior-rule-count-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 17, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "behavior-rule-suffix-shared",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 17, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "behavior-rule-suffix-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 17, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "behavior-rule-window-shared",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 17, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "behavior-rule-window-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 17, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "behavior-rule-separator-shared",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [
+          "_validate"
+        ],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 17, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "behavior-rule-separator-distinct",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 17, in <module>\nAssertionError\n"
+      }
+    },
+    {
+      "id": "debug-behavior",
+      "positive": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": true,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": null
+      },
+      "negative": {
+        "code_extracted": true,
+        "signatures_preserved": true,
+        "functional_pass": false,
+        "common_private_helpers": [],
+        "manual_behavior_required": true,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\nAssertionError\n"
+      }
+    }
+  ]
+}

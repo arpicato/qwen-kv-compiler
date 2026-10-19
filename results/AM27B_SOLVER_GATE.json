@@ -1,0 +1,20 @@
+{
+  "complete": true,
+  "recipe": {
+    "protocol": "am27b-offpolicy-uniform-gate",
+    "identity": {
+      "capture_meta_sha256": "4e82af96c0274415fb5e6fb3e5150c2a48e1d7b533027f7594e289b9def4913c",
+      "first_layer_sha256": "889776e7d6a3ad9ed0877cd5c907806bd55046340bebf13dfa99808d0faf56c0",
+      "teacher_sha256": "2b0aca5daac30bbde147ab55472c918f501e147aae0a9f4ae268c5fcda9eb444",
+      "questions_sha256": "d4676d1ecd03f276d6408976652a301a68f3d06c9abe9ae95219d81781ff8115",
+      "prompt_sha256": "ea1bd5d8e31aed36e6890165bb825f5f92e551caf4bf44a2c24958812436f234",
+      "source_sha256": "ad9628a8efa171b9ce83623042e34ada7c3374c11aba63ff7caa1b787b414c1a",
+      "wrapper_sha256": "108af929fed5baad052944eef6e65cc386e8c6d459a61f320f19dd7c465cc88c"
+    },
+    "rows": 4096,
+    "upstream": "2020f6d37940fe013e7e7f1ebf409e5d107c5670"
+  },
+  "elapsed_s": 28.261348427040502,
+  "torch": "2.8.0+rocm6.4",
+  "head_sha256": "da787d208d86340879b60b72fae6746bdbce042ffaeb4fe1810376b98f0ff60a"
+}

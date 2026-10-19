@@ -1,0 +1,1547 @@
+{
+  "version": "natural-refactors-v3",
+  "cases": [
+    {
+      "id": "natural-count-zero",
+      "family": "numeric",
+      "cluster": "count-zero",
+      "functions": [
+        "schedule_batch",
+        "preview_batch"
+      ],
+      "q": "Zero-sized jobs currently get scheduled. Reject zero as well as negative counts in both job entry points; positive jobs should behave as before. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef schedule_batch(count):\n    if count < 0:\n        raise ValueError(\"invalid\")\n    return count * 2\n\ndef preview_batch(count):\n    if count < 0:\n        raise ValueError(\"invalid\")\n    return count + 1\n",
+      "code": "\ndef schedule_batch(count):\n    if count < 0:\n        raise ValueError(\"invalid\")\n    return count * 2\n\ndef preview_batch(count):\n    if count < 0:\n        raise ValueError(\"invalid\")\n    return count + 1\n",
+      "reference": "\ndef _validate(count):\n    if count <= 0:\n        raise ValueError(\"invalid\")\n\ndef schedule_batch(count):\n    _validate(count)\n    return count * 2\n\ndef preview_batch(count):\n    _validate(count)\n    return count + 1\n",
+      "checks": "original = {}\nexec('def schedule_batch(count):\\n    return count * 2\\n\\ndef preview_batch(count):\\n    return count + 1\\n', original)\nfor values in [(1,), (7,)]:\n    assert schedule_batch(*values) == original['schedule_batch'](*values), ('schedule_batch', values)\n    assert preview_batch(*values) == original['preview_batch'](*values), ('preview_batch', values)\nfor values in [(0,), (-1,)]:\n    try:\n        schedule_batch(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('schedule_batch', values, \"accepted invalid\"))\n    try:\n        preview_batch(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('preview_batch', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          1
+        ],
+        [
+          7
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          0
+        ],
+        [
+          -1
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-retry-limit",
+      "family": "numeric",
+      "cluster": "retry-limit",
+      "functions": [
+        "start_worker",
+        "preview_worker"
+      ],
+      "q": "Negative retry budgets slip through the worker and preview paths. Allow budgets from zero through twelve inclusive, and reject anything outside that range. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef start_worker(retries):\n    if retries > 12:\n        raise ValueError(\"invalid\")\n    return retries + 1\n\ndef preview_worker(retries):\n    if retries > 12:\n        raise ValueError(\"invalid\")\n    return retries * 3\n",
+      "code": "\ndef start_worker(retries):\n    if retries > 12:\n        raise ValueError(\"invalid\")\n    return retries + 1\n\ndef preview_worker(retries):\n    if retries > 12:\n        raise ValueError(\"invalid\")\n    return retries * 3\n",
+      "reference": "\ndef _validate(retries):\n    if not 0 <= retries <= 12:\n        raise ValueError(\"invalid\")\n\ndef start_worker(retries):\n    _validate(retries)\n    return retries + 1\n\ndef preview_worker(retries):\n    _validate(retries)\n    return retries * 3\n",
+      "checks": "original = {}\nexec('def start_worker(retries):\\n    return retries + 1\\n\\ndef preview_worker(retries):\\n    return retries * 3\\n', original)\nfor values in [(0,), (12,)]:\n    assert start_worker(*values) == original['start_worker'](*values), ('start_worker', values)\n    assert preview_worker(*values) == original['preview_worker'](*values), ('preview_worker', values)\nfor values in [(-1,), (13,)]:\n    try:\n        start_worker(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('start_worker', values, \"accepted invalid\"))\n    try:\n        preview_worker(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('preview_worker', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          0
+        ],
+        [
+          12
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          -1
+        ],
+        [
+          13
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-batch-multiple",
+      "family": "numeric",
+      "cluster": "batch-multiple",
+      "functions": [
+        "encode_upload",
+        "preview_upload"
+      ],
+      "q": "The encoder now accepts only positive batch sizes divisible by eight. Update both upload and dry-run entry points without changing what they return for accepted sizes. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef encode_upload(size):\n    if size <= 0:\n        raise ValueError(\"invalid\")\n    return size // 8\n\ndef preview_upload(size):\n    if size <= 0:\n        raise ValueError(\"invalid\")\n    return size + 8\n",
+      "code": "\ndef encode_upload(size):\n    if size <= 0:\n        raise ValueError(\"invalid\")\n    return size // 8\n\ndef preview_upload(size):\n    if size <= 0:\n        raise ValueError(\"invalid\")\n    return size + 8\n",
+      "reference": "\ndef _validate(size):\n    if size <= 0 or size % 8 != 0:\n        raise ValueError(\"invalid\")\n\ndef encode_upload(size):\n    _validate(size)\n    return size // 8\n\ndef preview_upload(size):\n    _validate(size)\n    return size + 8\n",
+      "checks": "original = {}\nexec('def encode_upload(size):\\n    return size // 8\\n\\ndef preview_upload(size):\\n    return size + 8\\n', original)\nfor values in [(8,), (24,)]:\n    assert encode_upload(*values) == original['encode_upload'](*values), ('encode_upload', values)\n    assert preview_upload(*values) == original['preview_upload'](*values), ('preview_upload', values)\nfor values in [(0,), (-8,), (7,), (9,)]:\n    try:\n        encode_upload(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('encode_upload', values, \"accepted invalid\"))\n    try:\n        preview_upload(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('preview_upload', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          8
+        ],
+        [
+          24
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          0
+        ],
+        [
+          -8
+        ],
+        [
+          7
+        ],
+        [
+          9
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-integer-bool",
+      "family": "numeric",
+      "cluster": "integer-bool",
+      "functions": [
+        "launch_pool",
+        "estimate_pool"
+      ],
+      "q": "True and False are being treated as worker counts. Reject booleans while continuing to accept ordinary integers in the launch and estimate paths. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef launch_pool(workers):\n    if not isinstance(workers, int):\n        raise ValueError(\"invalid\")\n    return workers + 2\n\ndef estimate_pool(workers):\n    if not isinstance(workers, int):\n        raise ValueError(\"invalid\")\n    return workers * 4\n",
+      "code": "\ndef launch_pool(workers):\n    if not isinstance(workers, int):\n        raise ValueError(\"invalid\")\n    return workers + 2\n\ndef estimate_pool(workers):\n    if not isinstance(workers, int):\n        raise ValueError(\"invalid\")\n    return workers * 4\n",
+      "reference": "\ndef _validate(workers):\n    if type(workers) is not int:\n        raise ValueError(\"invalid\")\n\ndef launch_pool(workers):\n    _validate(workers)\n    return workers + 2\n\ndef estimate_pool(workers):\n    _validate(workers)\n    return workers * 4\n",
+      "checks": "original = {}\nexec('def launch_pool(workers):\\n    return workers + 2\\n\\ndef estimate_pool(workers):\\n    return workers * 4\\n', original)\nfor values in [(0,), (3,), (-2,)]:\n    assert launch_pool(*values) == original['launch_pool'](*values), ('launch_pool', values)\n    assert estimate_pool(*values) == original['estimate_pool'](*values), ('estimate_pool', values)\nfor values in [(True,), (False,), (2.0,)]:\n    try:\n        launch_pool(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('launch_pool', values, \"accepted invalid\"))\n    try:\n        estimate_pool(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('estimate_pool', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          0
+        ],
+        [
+          3
+        ],
+        [
+          -2
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          true
+        ],
+        [
+          false
+        ],
+        [
+          2.0
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-finite-number",
+      "family": "numeric",
+      "cluster": "finite-number",
+      "functions": [
+        "store_reading",
+        "display_reading"
+      ],
+      "q": "Non-finite sensor readings are reaching the storage and display paths. Reject NaN and both infinities as well as negative readings; keep finite nonnegative readings valid. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\nimport math\n\ndef store_reading(reading):\n    if reading < 0:\n        raise ValueError(\"invalid\")\n    return reading * 2\n\ndef display_reading(reading):\n    if reading < 0:\n        raise ValueError(\"invalid\")\n    return str(reading)\n",
+      "code": "import math\n\ndef store_reading(reading):\n    if reading < 0:\n        raise ValueError(\"invalid\")\n    return reading * 2\n\ndef display_reading(reading):\n    if reading < 0:\n        raise ValueError(\"invalid\")\n    return str(reading)\n",
+      "reference": "import math\n\ndef _validate(reading):\n    if not math.isfinite(reading) or reading < 0:\n        raise ValueError(\"invalid\")\n\ndef store_reading(reading):\n    _validate(reading)\n    return reading * 2\n\ndef display_reading(reading):\n    _validate(reading)\n    return str(reading)\n",
+      "checks": "original = {}\nexec('def store_reading(reading):\\n    return reading * 2\\n\\ndef display_reading(reading):\\n    return str(reading)\\n', original)\nfor values in [(0.0,), (2.5,)]:\n    assert store_reading(*values) == original['store_reading'](*values), ('store_reading', values)\n    assert display_reading(*values) == original['display_reading'](*values), ('display_reading', values)\nfor values in [(-1.0,), (float(\"nan\"),), (float(\"inf\"),), (-float(\"inf\"),)]:\n    try:\n        store_reading(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('store_reading', values, \"accepted invalid\"))\n    try:\n        display_reading(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('display_reading', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          0.0
+        ],
+        [
+          2.5
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          -1.0
+        ],
+        [
+          "@nan"
+        ],
+        [
+          "@inf"
+        ],
+        [
+          "@-inf"
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-name-empty",
+      "family": "text",
+      "cluster": "name-empty",
+      "functions": [
+        "register_name",
+        "preview_name"
+      ],
+      "q": "Empty names are accepted by the registration and preview endpoints. Names must have one through sixteen characters; keep existing accepted-name output formatting. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef register_name(name):\n    if len(name) > 16:\n        raise ValueError(\"invalid\")\n    return name.upper()\n\ndef preview_name(name):\n    if len(name) > 16:\n        raise ValueError(\"invalid\")\n    return \"[\" + name + \"]\"\n",
+      "code": "\ndef register_name(name):\n    if len(name) > 16:\n        raise ValueError(\"invalid\")\n    return name.upper()\n\ndef preview_name(name):\n    if len(name) > 16:\n        raise ValueError(\"invalid\")\n    return \"[\" + name + \"]\"\n",
+      "reference": "\ndef _validate(name):\n    if not name or len(name) > 16:\n        raise ValueError(\"invalid\")\n\ndef register_name(name):\n    _validate(name)\n    return name.upper()\n\ndef preview_name(name):\n    _validate(name)\n    return \"[\" + name + \"]\"\n",
+      "checks": "original = {}\nexec('def register_name(name):\\n    return name.upper()\\n\\ndef preview_name(name):\\n    return \"[\" + name + \"]\"\\n', original)\nfor values in [('a',), ('abcdefghijklmnop',)]:\n    assert register_name(*values) == original['register_name'](*values), ('register_name', values)\n    assert preview_name(*values) == original['preview_name'](*values), ('preview_name', values)\nfor values in [('',), ('abcdefghijklmnopq',)]:\n    try:\n        register_name(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('register_name', values, \"accepted invalid\"))\n    try:\n        preview_name(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('preview_name', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          "a"
+        ],
+        [
+          "abcdefghijklmnop"
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          ""
+        ],
+        [
+          "abcdefghijklmnopq"
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-unicode-space",
+      "family": "text",
+      "cluster": "unicode-space",
+      "functions": [
+        "save_key",
+        "lookup_key"
+      ],
+      "q": "Tab and newline characters bypass the identifier checks. In the save and lookup entry points, reject any whitespace character, not just a space. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef save_key(key):\n    if \" \" in key:\n        raise ValueError(\"invalid\")\n    return key.upper()\n\ndef lookup_key(key):\n    if \" \" in key:\n        raise ValueError(\"invalid\")\n    return key + \":\"\n",
+      "code": "\ndef save_key(key):\n    if \" \" in key:\n        raise ValueError(\"invalid\")\n    return key.upper()\n\ndef lookup_key(key):\n    if \" \" in key:\n        raise ValueError(\"invalid\")\n    return key + \":\"\n",
+      "reference": "\ndef _validate(key):\n    if any(c.isspace() for c in key):\n        raise ValueError(\"invalid\")\n\ndef save_key(key):\n    _validate(key)\n    return key.upper()\n\ndef lookup_key(key):\n    _validate(key)\n    return key + \":\"\n",
+      "checks": "original = {}\nexec('def save_key(key):\\n    return key.upper()\\n\\ndef lookup_key(key):\\n    return key + \":\"\\n', original)\nfor values in [('alpha',), ('',)]:\n    assert save_key(*values) == original['save_key'](*values), ('save_key', values)\n    assert lookup_key(*values) == original['lookup_key'](*values), ('lookup_key', values)\nfor values in [('a b',), ('a\\tb',), ('a\\nb',), ('a\\xa0b',)]:\n    try:\n        save_key(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('save_key', values, \"accepted invalid\"))\n    try:\n        lookup_key(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('lookup_key', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          "alpha"
+        ],
+        [
+          ""
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          "a b"
+        ],
+        [
+          "a\tb"
+        ],
+        [
+          "a\nb"
+        ],
+        [
+          "a b"
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-ascii-digits",
+      "family": "text",
+      "cluster": "ascii-digits",
+      "functions": [
+        "submit_token",
+        "inspect_token"
+      ],
+      "q": "The wire format requires ASCII digits, but Unicode digits currently pass validation. Both submission paths should accept a nonempty sequence of ASCII digits only. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef submit_token(token):\n    if not token.isdigit():\n        raise ValueError(\"invalid\")\n    return token + \"!\"\n\ndef inspect_token(token):\n    if not token.isdigit():\n        raise ValueError(\"invalid\")\n    return len(token)\n",
+      "code": "\ndef submit_token(token):\n    if not token.isdigit():\n        raise ValueError(\"invalid\")\n    return token + \"!\"\n\ndef inspect_token(token):\n    if not token.isdigit():\n        raise ValueError(\"invalid\")\n    return len(token)\n",
+      "reference": "\ndef _validate(token):\n    if not token or any(c not in \"0123456789\" for c in token):\n        raise ValueError(\"invalid\")\n\ndef submit_token(token):\n    _validate(token)\n    return token + \"!\"\n\ndef inspect_token(token):\n    _validate(token)\n    return len(token)\n",
+      "checks": "original = {}\nexec('def submit_token(token):\\n    return token + \"!\"\\n\\ndef inspect_token(token):\\n    return len(token)\\n', original)\nfor values in [('0',), ('0012',)]:\n    assert submit_token(*values) == original['submit_token'](*values), ('submit_token', values)\n    assert inspect_token(*values) == original['inspect_token'](*values), ('inspect_token', values)\nfor values in [('',), ('١',), ('²',), ('12a',)]:\n    try:\n        submit_token(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('submit_token', values, \"accepted invalid\"))\n    try:\n        inspect_token(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('inspect_token', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          "0"
+        ],
+        [
+          "0012"
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          ""
+        ],
+        [
+          "١"
+        ],
+        [
+          "²"
+        ],
+        [
+          "12a"
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-case-sensitive-prefix",
+      "family": "text",
+      "cluster": "case-sensitive-prefix",
+      "functions": [
+        "enqueue_code",
+        "inspect_code"
+      ],
+      "q": "Job identifiers are case-sensitive on the server. Stop accepting JOB- and Job- prefixes in both queue operations; only the exact lowercase job- prefix is valid. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef enqueue_code(code):\n    if not code.lower().startswith(\"job-\"):\n        raise ValueError(\"invalid\")\n    return code + \":queued\"\n\ndef inspect_code(code):\n    if not code.lower().startswith(\"job-\"):\n        raise ValueError(\"invalid\")\n    return len(code)\n",
+      "code": "\ndef enqueue_code(code):\n    if not code.lower().startswith(\"job-\"):\n        raise ValueError(\"invalid\")\n    return code + \":queued\"\n\ndef inspect_code(code):\n    if not code.lower().startswith(\"job-\"):\n        raise ValueError(\"invalid\")\n    return len(code)\n",
+      "reference": "\ndef _validate(code):\n    if not code.startswith(\"job-\"):\n        raise ValueError(\"invalid\")\n\ndef enqueue_code(code):\n    _validate(code)\n    return code + \":queued\"\n\ndef inspect_code(code):\n    _validate(code)\n    return len(code)\n",
+      "checks": "original = {}\nexec('def enqueue_code(code):\\n    return code + \":queued\"\\n\\ndef inspect_code(code):\\n    return len(code)\\n', original)\nfor values in [('job-a',), ('job-',)]:\n    assert enqueue_code(*values) == original['enqueue_code'](*values), ('enqueue_code', values)\n    assert inspect_code(*values) == original['inspect_code'](*values), ('inspect_code', values)\nfor values in [('JOB-a',), ('Job-a',), ('task-a',)]:\n    try:\n        enqueue_code(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('enqueue_code', values, \"accepted invalid\"))\n    try:\n        inspect_code(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('inspect_code', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          "job-a"
+        ],
+        [
+          "job-"
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          "JOB-a"
+        ],
+        [
+          "Job-a"
+        ],
+        [
+          "task-a"
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-control-chars",
+      "family": "text",
+      "cluster": "control-chars",
+      "functions": [
+        "export_label",
+        "display_label"
+      ],
+      "q": "The export and display labels must contain no ASCII control characters, including DEL. They currently reject only newlines. Preserve ordinary spaces and printable Unicode. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef export_label(label):\n    if \"\\n\" in label:\n        raise ValueError(\"invalid\")\n    return label + \";\"\n\ndef display_label(label):\n    if \"\\n\" in label:\n        raise ValueError(\"invalid\")\n    return label.upper()\n",
+      "code": "\ndef export_label(label):\n    if \"\\n\" in label:\n        raise ValueError(\"invalid\")\n    return label + \";\"\n\ndef display_label(label):\n    if \"\\n\" in label:\n        raise ValueError(\"invalid\")\n    return label.upper()\n",
+      "reference": "\ndef _validate(label):\n    if any(ord(c) < 32 or ord(c) == 127 for c in label):\n        raise ValueError(\"invalid\")\n\ndef export_label(label):\n    _validate(label)\n    return label + \";\"\n\ndef display_label(label):\n    _validate(label)\n    return label.upper()\n",
+      "checks": "original = {}\nexec('def export_label(label):\\n    return label + \";\"\\n\\ndef display_label(label):\\n    return label.upper()\\n', original)\nfor values in [('a b',), ('é',), ('',)]:\n    assert export_label(*values) == original['export_label'](*values), ('export_label', values)\n    assert display_label(*values) == original['display_label'](*values), ('display_label', values)\nfor values in [('a\\tb',), ('a\\x00b',), ('a\\x7fb',), ('a\\nb',)]:\n    try:\n        export_label(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('export_label', values, \"accepted invalid\"))\n    try:\n        display_label(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('display_label', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          "a b"
+        ],
+        [
+          "é"
+        ],
+        [
+          ""
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          "a\tb"
+        ],
+        [
+          "a\u0000b"
+        ],
+        [
+          "ab"
+        ],
+        [
+          "a\nb"
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-relative-path",
+      "family": "path",
+      "cluster": "relative-path",
+      "functions": [
+        "fetch_asset",
+        "preview_asset"
+      ],
+      "q": "Relative asset paths can still contain parent-directory segments. Both fetch and preview must reject a complete .. segment anywhere, while retaining names such as a..b. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef fetch_asset(path):\n    if path.startswith(\"/\"):\n        raise ValueError(\"invalid\")\n    return \"assets/\" + path\n\ndef preview_asset(path):\n    if path.startswith(\"/\"):\n        raise ValueError(\"invalid\")\n    return path + \"?preview\"\n",
+      "code": "\ndef fetch_asset(path):\n    if path.startswith(\"/\"):\n        raise ValueError(\"invalid\")\n    return \"assets/\" + path\n\ndef preview_asset(path):\n    if path.startswith(\"/\"):\n        raise ValueError(\"invalid\")\n    return path + \"?preview\"\n",
+      "reference": "\ndef _validate(path):\n    if path.startswith(\"/\") or \"..\" in path.split(\"/\"):\n        raise ValueError(\"invalid\")\n\ndef fetch_asset(path):\n    _validate(path)\n    return \"assets/\" + path\n\ndef preview_asset(path):\n    _validate(path)\n    return path + \"?preview\"\n",
+      "checks": "original = {}\nexec('def fetch_asset(path):\\n    return \"assets/\" + path\\n\\ndef preview_asset(path):\\n    return path + \"?preview\"\\n', original)\nfor values in [('a/b',), ('a..b',)]:\n    assert fetch_asset(*values) == original['fetch_asset'](*values), ('fetch_asset', values)\n    assert preview_asset(*values) == original['preview_asset'](*values), ('preview_asset', values)\nfor values in [('/a',), ('../a',), ('a/../b',)]:\n    try:\n        fetch_asset(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('fetch_asset', values, \"accepted invalid\"))\n    try:\n        preview_asset(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('preview_asset', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          "a/b"
+        ],
+        [
+          "a..b"
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          "/a"
+        ],
+        [
+          "../a"
+        ],
+        [
+          "a/../b"
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-file-extension",
+      "family": "path",
+      "cluster": "file-extension",
+      "functions": [
+        "import_file",
+        "validate_file"
+      ],
+      "q": "Add support for .jsonl files to the import and validation endpoints. Keep .json valid, and continue rejecting other suffixes and uppercase variants. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef import_file(filename):\n    if not filename.endswith(\".json\"):\n        raise ValueError(\"invalid\")\n    return filename + \":import\"\n\ndef validate_file(filename):\n    if not filename.endswith(\".json\"):\n        raise ValueError(\"invalid\")\n    return len(filename)\n",
+      "code": "\ndef import_file(filename):\n    if not filename.endswith(\".json\"):\n        raise ValueError(\"invalid\")\n    return filename + \":import\"\n\ndef validate_file(filename):\n    if not filename.endswith(\".json\"):\n        raise ValueError(\"invalid\")\n    return len(filename)\n",
+      "reference": "\ndef _validate(filename):\n    if not filename.endswith((\".json\", \".jsonl\")):\n        raise ValueError(\"invalid\")\n\ndef import_file(filename):\n    _validate(filename)\n    return filename + \":import\"\n\ndef validate_file(filename):\n    _validate(filename)\n    return len(filename)\n",
+      "checks": "original = {}\nexec('def import_file(filename):\\n    return filename + \":import\"\\n\\ndef validate_file(filename):\\n    return len(filename)\\n', original)\nfor values in [('a.json',), ('a.jsonl',)]:\n    assert import_file(*values) == original['import_file'](*values), ('import_file', values)\n    assert validate_file(*values) == original['validate_file'](*values), ('validate_file', values)\nfor values in [('a.csv',), ('a.JSONL',), ('a.jsonl.bak',)]:\n    try:\n        import_file(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('import_file', values, \"accepted invalid\"))\n    try:\n        validate_file(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('validate_file', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          "a.json"
+        ],
+        [
+          "a.jsonl"
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          "a.csv"
+        ],
+        [
+          "a.JSONL"
+        ],
+        [
+          "a.jsonl.bak"
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-hidden-component",
+      "family": "path",
+      "cluster": "hidden-component",
+      "functions": [
+        "scan_path",
+        "archive_path"
+      ],
+      "q": "Hidden directories nested below a visible directory bypass the scan and archive checks. Reject paths with any dot-prefixed component, not only a leading dot. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef scan_path(path):\n    if path.startswith(\".\"):\n        raise ValueError(\"invalid\")\n    return path + \":scan\"\n\ndef archive_path(path):\n    if path.startswith(\".\"):\n        raise ValueError(\"invalid\")\n    return \"archive/\" + path\n",
+      "code": "\ndef scan_path(path):\n    if path.startswith(\".\"):\n        raise ValueError(\"invalid\")\n    return path + \":scan\"\n\ndef archive_path(path):\n    if path.startswith(\".\"):\n        raise ValueError(\"invalid\")\n    return \"archive/\" + path\n",
+      "reference": "\ndef _validate(path):\n    if any(part.startswith(\".\") for part in path.split(\"/\")):\n        raise ValueError(\"invalid\")\n\ndef scan_path(path):\n    _validate(path)\n    return path + \":scan\"\n\ndef archive_path(path):\n    _validate(path)\n    return \"archive/\" + path\n",
+      "checks": "original = {}\nexec('def scan_path(path):\\n    return path + \":scan\"\\n\\ndef archive_path(path):\\n    return \"archive/\" + path\\n', original)\nfor values in [('a/b',), ('a/b.c',)]:\n    assert scan_path(*values) == original['scan_path'](*values), ('scan_path', values)\n    assert archive_path(*values) == original['archive_path'](*values), ('archive_path', values)\nfor values in [('.cache/a',), ('a/.cache/b',), ('a/.file',)]:\n    try:\n        scan_path(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('scan_path', values, \"accepted invalid\"))\n    try:\n        archive_path(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('archive_path', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          "a/b"
+        ],
+        [
+          "a/b.c"
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          ".cache/a"
+        ],
+        [
+          "a/.cache/b"
+        ],
+        [
+          "a/.file"
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-empty-segment",
+      "family": "path",
+      "cluster": "empty-segment",
+      "functions": [
+        "publish_route",
+        "preview_route"
+      ],
+      "q": "Route paths with empty segments are producing inconsistent URLs. Reject empty segments in the publish and preview functions, including leading, trailing, and doubled slashes. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef publish_route(path):\n    if path == \"\":\n        raise ValueError(\"invalid\")\n    return \"/v1/\" + path\n\ndef preview_route(path):\n    if path == \"\":\n        raise ValueError(\"invalid\")\n    return path.upper()\n",
+      "code": "\ndef publish_route(path):\n    if path == \"\":\n        raise ValueError(\"invalid\")\n    return \"/v1/\" + path\n\ndef preview_route(path):\n    if path == \"\":\n        raise ValueError(\"invalid\")\n    return path.upper()\n",
+      "reference": "\ndef _validate(path):\n    if any(part == \"\" for part in path.split(\"/\")):\n        raise ValueError(\"invalid\")\n\ndef publish_route(path):\n    _validate(path)\n    return \"/v1/\" + path\n\ndef preview_route(path):\n    _validate(path)\n    return path.upper()\n",
+      "checks": "original = {}\nexec('def publish_route(path):\\n    return \"/v1/\" + path\\n\\ndef preview_route(path):\\n    return path.upper()\\n', original)\nfor values in [('a',), ('a/b',)]:\n    assert publish_route(*values) == original['publish_route'](*values), ('publish_route', values)\n    assert preview_route(*values) == original['preview_route'](*values), ('preview_route', values)\nfor values in [('',), ('/a',), ('a/',), ('a//b',)]:\n    try:\n        publish_route(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('publish_route', values, \"accepted invalid\"))\n    try:\n        preview_route(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('preview_route', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          "a"
+        ],
+        [
+          "a/b"
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          ""
+        ],
+        [
+          "/a"
+        ],
+        [
+          "a/"
+        ],
+        [
+          "a//b"
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-backslash",
+      "family": "path",
+      "cluster": "backslash",
+      "functions": [
+        "load_manifest",
+        "preview_manifest"
+      ],
+      "q": "These paths use forward slashes only. Reject any backslash in both manifest operations, in addition to the existing absolute-path check. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef load_manifest(path):\n    if path.startswith(\"/\"):\n        raise ValueError(\"invalid\")\n    return \"data/\" + path\n\ndef preview_manifest(path):\n    if path.startswith(\"/\"):\n        raise ValueError(\"invalid\")\n    return len(path)\n",
+      "code": "\ndef load_manifest(path):\n    if path.startswith(\"/\"):\n        raise ValueError(\"invalid\")\n    return \"data/\" + path\n\ndef preview_manifest(path):\n    if path.startswith(\"/\"):\n        raise ValueError(\"invalid\")\n    return len(path)\n",
+      "reference": "\ndef _validate(path):\n    if path.startswith(\"/\") or \"\\\\\" in path:\n        raise ValueError(\"invalid\")\n\ndef load_manifest(path):\n    _validate(path)\n    return \"data/\" + path\n\ndef preview_manifest(path):\n    _validate(path)\n    return len(path)\n",
+      "checks": "original = {}\nexec('def load_manifest(path):\\n    return \"data/\" + path\\n\\ndef preview_manifest(path):\\n    return len(path)\\n', original)\nfor values in [('a/b',), ('a.txt',)]:\n    assert load_manifest(*values) == original['load_manifest'](*values), ('load_manifest', values)\n    assert preview_manifest(*values) == original['preview_manifest'](*values), ('preview_manifest', values)\nfor values in [('/a',), ('a\\\\b',), ('\\\\a',)]:\n    try:\n        load_manifest(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('load_manifest', values, \"accepted invalid\"))\n    try:\n        preview_manifest(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('preview_manifest', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          "a/b"
+        ],
+        [
+          "a.txt"
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          "/a"
+        ],
+        [
+          "a\\b"
+        ],
+        [
+          "\\a"
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-unique-items",
+      "family": "collection",
+      "cluster": "unique-items",
+      "functions": [
+        "index_items",
+        "preview_items"
+      ],
+      "q": "Duplicate integer IDs cause duplicate work. Reject an empty list or repeated IDs in both indexing and preview; preserve the supplied order for unique IDs. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef index_items(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    return tuple(items)\n\ndef preview_items(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    return len(items)\n",
+      "code": "\ndef index_items(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    return tuple(items)\n\ndef preview_items(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    return len(items)\n",
+      "reference": "\ndef _validate(items):\n    if not items or len(set(items)) != len(items):\n        raise ValueError(\"invalid\")\n\ndef index_items(items):\n    _validate(items)\n    return tuple(items)\n\ndef preview_items(items):\n    _validate(items)\n    return len(items)\n",
+      "checks": "original = {}\nexec('def index_items(items):\\n    return tuple(items)\\n\\ndef preview_items(items):\\n    return len(items)\\n', original)\nfor values in [([3, 1],), ([0],)]:\n    assert index_items(*values) == original['index_items'](*values), ('index_items', values)\n    assert preview_items(*values) == original['preview_items'](*values), ('preview_items', values)\nfor values in [([],), ([1, 1],), ([2, 3, 2],)]:\n    try:\n        index_items(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('index_items', values, \"accepted invalid\"))\n    try:\n        preview_items(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('preview_items', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          [
+            3,
+            1
+          ]
+        ],
+        [
+          [
+            0
+          ]
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          []
+        ],
+        [
+          [
+            1,
+            1
+          ]
+        ],
+        [
+          [
+            2,
+            3,
+            2
+          ]
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-all-positive",
+      "family": "collection",
+      "cluster": "all-positive",
+      "functions": [
+        "submit_counts",
+        "estimate_counts"
+      ],
+      "q": "Batches must now contain at least one strictly positive count and no zero or negative counts. Apply this to submission and estimation without sorting the batch. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef submit_counts(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    return tuple(items)\n\ndef estimate_counts(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    return sum(items)\n",
+      "code": "\ndef submit_counts(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    return tuple(items)\n\ndef estimate_counts(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    return sum(items)\n",
+      "reference": "\ndef _validate(items):\n    if not items or any(v <= 0 for v in items):\n        raise ValueError(\"invalid\")\n\ndef submit_counts(items):\n    _validate(items)\n    return tuple(items)\n\ndef estimate_counts(items):\n    _validate(items)\n    return sum(items)\n",
+      "checks": "original = {}\nexec('def submit_counts(items):\\n    return tuple(items)\\n\\ndef estimate_counts(items):\\n    return sum(items)\\n', original)\nfor values in [([1],), ([2, 4],)]:\n    assert submit_counts(*values) == original['submit_counts'](*values), ('submit_counts', values)\n    assert estimate_counts(*values) == original['estimate_counts'](*values), ('estimate_counts', values)\nfor values in [([],), ([0, 2],), ([2, -1],)]:\n    try:\n        submit_counts(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('submit_counts', values, \"accepted invalid\"))\n    try:\n        estimate_counts(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('estimate_counts', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          [
+            1
+          ]
+        ],
+        [
+          [
+            2,
+            4
+          ]
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          []
+        ],
+        [
+          [
+            0,
+            2
+          ]
+        ],
+        [
+          [
+            2,
+            -1
+          ]
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-sorted-input",
+      "family": "collection",
+      "cluster": "sorted-input",
+      "functions": [
+        "merge_input",
+        "preview_merge"
+      ],
+      "q": "Merge inputs must already be in nondecreasing order. Reject descending pairs in both merge paths; duplicates are allowed, and the functions must not sort the input for the caller. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef merge_input(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    return tuple(items)\n\ndef preview_merge(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    return len(items)\n",
+      "code": "\ndef merge_input(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    return tuple(items)\n\ndef preview_merge(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    return len(items)\n",
+      "reference": "\ndef _validate(items):\n    if not items or any(a > b for a, b in zip(items, items[1:])):\n        raise ValueError(\"invalid\")\n\ndef merge_input(items):\n    _validate(items)\n    return tuple(items)\n\ndef preview_merge(items):\n    _validate(items)\n    return len(items)\n",
+      "checks": "original = {}\nexec('def merge_input(items):\\n    return tuple(items)\\n\\ndef preview_merge(items):\\n    return len(items)\\n', original)\nfor values in [([1],), ([1, 1, 3],)]:\n    assert merge_input(*values) == original['merge_input'](*values), ('merge_input', values)\n    assert preview_merge(*values) == original['preview_merge'](*values), ('preview_merge', values)\nfor values in [([],), ([2, 1],), ([1, 3, 2],)]:\n    try:\n        merge_input(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('merge_input', values, \"accepted invalid\"))\n    try:\n        preview_merge(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('preview_merge', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          [
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            1,
+            3
+          ]
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          []
+        ],
+        [
+          [
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            3,
+            2
+          ]
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-maximum-items",
+      "family": "collection",
+      "cluster": "maximum-items",
+      "functions": [
+        "send_batch",
+        "preview_send"
+      ],
+      "q": "The remote API lowered its batch limit from eight items to four. Enforce the new limit in both send and preview. Empty batches remain valid. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef send_batch(items):\n    if len(items) > 8:\n        raise ValueError(\"invalid\")\n    return tuple(items)\n\ndef preview_send(items):\n    if len(items) > 8:\n        raise ValueError(\"invalid\")\n    return len(items)\n",
+      "code": "\ndef send_batch(items):\n    if len(items) > 8:\n        raise ValueError(\"invalid\")\n    return tuple(items)\n\ndef preview_send(items):\n    if len(items) > 8:\n        raise ValueError(\"invalid\")\n    return len(items)\n",
+      "reference": "\ndef _validate(items):\n    if len(items) > 4:\n        raise ValueError(\"invalid\")\n\ndef send_batch(items):\n    _validate(items)\n    return tuple(items)\n\ndef preview_send(items):\n    _validate(items)\n    return len(items)\n",
+      "checks": "original = {}\nexec('def send_batch(items):\\n    return tuple(items)\\n\\ndef preview_send(items):\\n    return len(items)\\n', original)\nfor values in [([],), ([1, 2, 3, 4],)]:\n    assert send_batch(*values) == original['send_batch'](*values), ('send_batch', values)\n    assert preview_send(*values) == original['preview_send'](*values), ('preview_send', values)\nfor values in [([1, 2, 3, 4, 5],), ([0, 1, 2, 3, 4, 5, 6, 7, 8],)]:\n    try:\n        send_batch(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('send_batch', values, \"accepted invalid\"))\n    try:\n        preview_send(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('preview_send', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          []
+        ],
+        [
+          [
+            1,
+            2,
+            3,
+            4
+          ]
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-pair-width",
+      "family": "collection",
+      "cluster": "pair-width",
+      "functions": [
+        "write_rows",
+        "preview_rows"
+      ],
+      "q": "Each row must contain exactly two cells. The writer and preview currently only check that there are rows; reject short or wide rows too. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef write_rows(rows):\n    if not rows:\n        raise ValueError(\"invalid\")\n    return tuple(tuple(row) for row in rows)\n\ndef preview_rows(rows):\n    if not rows:\n        raise ValueError(\"invalid\")\n    return len(rows)\n",
+      "code": "\ndef write_rows(rows):\n    if not rows:\n        raise ValueError(\"invalid\")\n    return tuple(tuple(row) for row in rows)\n\ndef preview_rows(rows):\n    if not rows:\n        raise ValueError(\"invalid\")\n    return len(rows)\n",
+      "reference": "\ndef _validate(rows):\n    if not rows or any(len(row) != 2 for row in rows):\n        raise ValueError(\"invalid\")\n\ndef write_rows(rows):\n    _validate(rows)\n    return tuple(tuple(row) for row in rows)\n\ndef preview_rows(rows):\n    _validate(rows)\n    return len(rows)\n",
+      "checks": "original = {}\nexec('def write_rows(rows):\\n    return tuple(tuple(row) for row in rows)\\n\\ndef preview_rows(rows):\\n    return len(rows)\\n', original)\nfor values in [([[1, 2]],), ([[1, 2], [3, 4]],)]:\n    assert write_rows(*values) == original['write_rows'](*values), ('write_rows', values)\n    assert preview_rows(*values) == original['preview_rows'](*values), ('preview_rows', values)\nfor values in [([],), ([[1]],), ([[1, 2, 3]],)]:\n    try:\n        write_rows(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('write_rows', values, \"accepted invalid\"))\n    try:\n        preview_rows(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('preview_rows', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          [
+            [
+              1,
+              2
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          []
+        ],
+        [
+          [
+            [
+              1
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-required-keys",
+      "family": "mapping",
+      "cluster": "required-keys",
+      "functions": [
+        "ingest_record",
+        "preview_record"
+      ],
+      "q": "Records without a version cannot be replayed. Both ingestion and preview must require the presence of id and version. Zero and None values are allowed; this is a key-presence check. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef ingest_record(record):\n    if \"id\" not in record:\n        raise ValueError(\"invalid\")\n    return record[\"id\"]\n\ndef preview_record(record):\n    if \"id\" not in record:\n        raise ValueError(\"invalid\")\n    return len(record)\n",
+      "code": "\ndef ingest_record(record):\n    if \"id\" not in record:\n        raise ValueError(\"invalid\")\n    return record[\"id\"]\n\ndef preview_record(record):\n    if \"id\" not in record:\n        raise ValueError(\"invalid\")\n    return len(record)\n",
+      "reference": "\ndef _validate(record):\n    if \"id\" not in record or \"version\" not in record:\n        raise ValueError(\"invalid\")\n\ndef ingest_record(record):\n    _validate(record)\n    return record[\"id\"]\n\ndef preview_record(record):\n    _validate(record)\n    return len(record)\n",
+      "checks": "original = {}\nexec('def ingest_record(record):\\n    return record[\"id\"]\\n\\ndef preview_record(record):\\n    return len(record)\\n', original)\nfor values in [({'id': 0, 'version': None},), ({'id': 2, 'version': 1},)]:\n    assert ingest_record(*values) == original['ingest_record'](*values), ('ingest_record', values)\n    assert preview_record(*values) == original['preview_record'](*values), ('preview_record', values)\nfor values in [({},), ({'id': 2},), ({'version': 1},)]:\n    try:\n        ingest_record(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('ingest_record', values, \"accepted invalid\"))\n    try:\n        preview_record(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('preview_record', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          {
+            "id": 0,
+            "version": null
+          }
+        ],
+        [
+          {
+            "id": 2,
+            "version": 1
+          }
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          {}
+        ],
+        [
+          {
+            "id": 2
+          }
+        ],
+        [
+          {
+            "version": 1
+          }
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-unknown-keys",
+      "family": "mapping",
+      "cluster": "unknown-keys",
+      "functions": [
+        "execute_options",
+        "preview_options"
+      ],
+      "q": "Misspelled option names are silently accepted. For both execution and preview, timeout is required and retries is the only optional key. Reject any other key. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef execute_options(options):\n    if \"timeout\" not in options:\n        raise ValueError(\"invalid\")\n    return options[\"timeout\"]\n\ndef preview_options(options):\n    if \"timeout\" not in options:\n        raise ValueError(\"invalid\")\n    return len(options)\n",
+      "code": "\ndef execute_options(options):\n    if \"timeout\" not in options:\n        raise ValueError(\"invalid\")\n    return options[\"timeout\"]\n\ndef preview_options(options):\n    if \"timeout\" not in options:\n        raise ValueError(\"invalid\")\n    return len(options)\n",
+      "reference": "\ndef _validate(options):\n    if \"timeout\" not in options or bool(set(options) - {\"timeout\", \"retries\"}):\n        raise ValueError(\"invalid\")\n\ndef execute_options(options):\n    _validate(options)\n    return options[\"timeout\"]\n\ndef preview_options(options):\n    _validate(options)\n    return len(options)\n",
+      "checks": "original = {}\nexec('def execute_options(options):\\n    return options[\"timeout\"]\\n\\ndef preview_options(options):\\n    return len(options)\\n', original)\nfor values in [({'timeout': 0},), ({'timeout': 5, 'retries': 2},)]:\n    assert execute_options(*values) == original['execute_options'](*values), ('execute_options', values)\n    assert preview_options(*values) == original['preview_options'](*values), ('preview_options', values)\nfor values in [({},), ({'timeout': 5, 'retry': 2},)]:\n    try:\n        execute_options(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('execute_options', values, \"accepted invalid\"))\n    try:\n        preview_options(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('preview_options', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          {
+            "timeout": 0
+          }
+        ],
+        [
+          {
+            "timeout": 5,
+            "retries": 2
+          }
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          {}
+        ],
+        [
+          {
+            "timeout": 5,
+            "retry": 2
+          }
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-duplicate-values",
+      "family": "mapping",
+      "cluster": "duplicate-values",
+      "functions": [
+        "register_aliases",
+        "preview_aliases"
+      ],
+      "q": "Two aliases must not point at the same integer destination. Reject empty mappings and duplicate destinations in both alias entry points; alias names may differ freely. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef register_aliases(aliases):\n    if not aliases:\n        raise ValueError(\"invalid\")\n    return tuple(aliases)\n\ndef preview_aliases(aliases):\n    if not aliases:\n        raise ValueError(\"invalid\")\n    return len(aliases)\n",
+      "code": "\ndef register_aliases(aliases):\n    if not aliases:\n        raise ValueError(\"invalid\")\n    return tuple(aliases)\n\ndef preview_aliases(aliases):\n    if not aliases:\n        raise ValueError(\"invalid\")\n    return len(aliases)\n",
+      "reference": "\ndef _validate(aliases):\n    if not aliases or len(set(aliases.values())) != len(aliases):\n        raise ValueError(\"invalid\")\n\ndef register_aliases(aliases):\n    _validate(aliases)\n    return tuple(aliases)\n\ndef preview_aliases(aliases):\n    _validate(aliases)\n    return len(aliases)\n",
+      "checks": "original = {}\nexec('def register_aliases(aliases):\\n    return tuple(aliases)\\n\\ndef preview_aliases(aliases):\\n    return len(aliases)\\n', original)\nfor values in [({'a': 1},), ({'a': 1, 'b': 2},)]:\n    assert register_aliases(*values) == original['register_aliases'](*values), ('register_aliases', values)\n    assert preview_aliases(*values) == original['preview_aliases'](*values), ('preview_aliases', values)\nfor values in [({},), ({'a': 1, 'b': 1},)]:\n    try:\n        register_aliases(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('register_aliases', values, \"accepted invalid\"))\n    try:\n        preview_aliases(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('preview_aliases', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          {
+            "a": 1
+          }
+        ],
+        [
+          {
+            "a": 1,
+            "b": 2
+          }
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          {}
+        ],
+        [
+          {
+            "a": 1,
+            "b": 1
+          }
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-exclusive-options",
+      "family": "mapping",
+      "cluster": "exclusive-options",
+      "functions": [
+        "fetch_page",
+        "preview_page"
+      ],
+      "q": "Paging requests must specify exactly one of cursor or offset. Enforce that in fetch and preview; a present empty cursor or zero offset still counts as supplied. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef fetch_page(options):\n    if not options:\n        raise ValueError(\"invalid\")\n    return dict(options)\n\ndef preview_page(options):\n    if not options:\n        raise ValueError(\"invalid\")\n    return len(options)\n",
+      "code": "\ndef fetch_page(options):\n    if not options:\n        raise ValueError(\"invalid\")\n    return dict(options)\n\ndef preview_page(options):\n    if not options:\n        raise ValueError(\"invalid\")\n    return len(options)\n",
+      "reference": "\ndef _validate(options):\n    if (\"cursor\" in options) == (\"offset\" in options):\n        raise ValueError(\"invalid\")\n\ndef fetch_page(options):\n    _validate(options)\n    return dict(options)\n\ndef preview_page(options):\n    _validate(options)\n    return len(options)\n",
+      "checks": "original = {}\nexec('def fetch_page(options):\\n    return dict(options)\\n\\ndef preview_page(options):\\n    return len(options)\\n', original)\nfor values in [({'cursor': ''},), ({'offset': 0},)]:\n    assert fetch_page(*values) == original['fetch_page'](*values), ('fetch_page', values)\n    assert preview_page(*values) == original['preview_page'](*values), ('preview_page', values)\nfor values in [({},), ({'cursor': 'a', 'offset': 0},)]:\n    try:\n        fetch_page(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('fetch_page', values, \"accepted invalid\"))\n    try:\n        preview_page(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('preview_page', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          {
+            "cursor": ""
+          }
+        ],
+        [
+          {
+            "offset": 0
+          }
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          {}
+        ],
+        [
+          {
+            "cursor": "a",
+            "offset": 0
+          }
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-nested-config",
+      "family": "mapping",
+      "cluster": "nested-config",
+      "functions": [
+        "plan_config",
+        "preview_config"
+      ],
+      "q": "The planner and preview assume limits is a mapping with a workers key. Reject configurations that do not meet that shape instead of failing later. Worker zero remains allowed. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef plan_config(config):\n    if \"limits\" not in config:\n        raise ValueError(\"invalid\")\n    return dict(config)\n\ndef preview_config(config):\n    if \"limits\" not in config:\n        raise ValueError(\"invalid\")\n    return len(config)\n",
+      "code": "\ndef plan_config(config):\n    if \"limits\" not in config:\n        raise ValueError(\"invalid\")\n    return dict(config)\n\ndef preview_config(config):\n    if \"limits\" not in config:\n        raise ValueError(\"invalid\")\n    return len(config)\n",
+      "reference": "\ndef _validate(config):\n    if \"limits\" not in config or not isinstance(config[\"limits\"], dict) or \"workers\" not in config[\"limits\"]:\n        raise ValueError(\"invalid\")\n\ndef plan_config(config):\n    _validate(config)\n    return dict(config)\n\ndef preview_config(config):\n    _validate(config)\n    return len(config)\n",
+      "checks": "original = {}\nexec('def plan_config(config):\\n    return dict(config)\\n\\ndef preview_config(config):\\n    return len(config)\\n', original)\nfor values in [({'limits': {'workers': 0}},), ({'limits': {'workers': 3}},)]:\n    assert plan_config(*values) == original['plan_config'](*values), ('plan_config', values)\n    assert preview_config(*values) == original['preview_config'](*values), ('preview_config', values)\nfor values in [({},), ({'limits': []},), ({'limits': {}},)]:\n    try:\n        plan_config(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('plan_config', values, \"accepted invalid\"))\n    try:\n        preview_config(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('preview_config', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          {
+            "limits": {
+              "workers": 0
+            }
+          }
+        ],
+        [
+          {
+            "limits": {
+              "workers": 3
+            }
+          }
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          {}
+        ],
+        [
+          {
+            "limits": []
+          }
+        ],
+        [
+          {
+            "limits": {}
+          }
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-interval",
+      "family": "compound",
+      "cluster": "interval",
+      "functions": [
+        "book_interval",
+        "preview_interval"
+      ],
+      "q": "Zero-width intervals should no longer be accepted by booking or preview. Require the end to be strictly later than the start; negative endpoints themselves are allowed. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef book_interval(start, end):\n    if start > end:\n        raise ValueError(\"invalid\")\n    return end - start\n\ndef preview_interval(start, end):\n    if start > end:\n        raise ValueError(\"invalid\")\n    return (start, end)\n",
+      "code": "\ndef book_interval(start, end):\n    if start > end:\n        raise ValueError(\"invalid\")\n    return end - start\n\ndef preview_interval(start, end):\n    if start > end:\n        raise ValueError(\"invalid\")\n    return (start, end)\n",
+      "reference": "\ndef _validate(start, end):\n    if start >= end:\n        raise ValueError(\"invalid\")\n\ndef book_interval(start, end):\n    _validate(start, end)\n    return end - start\n\ndef preview_interval(start, end):\n    _validate(start, end)\n    return (start, end)\n",
+      "checks": "original = {}\nexec('def book_interval(start, end):\\n    return end - start\\n\\ndef preview_interval(start, end):\\n    return (start, end)\\n', original)\nfor values in [(0, 1,), (-3, -1,)]:\n    assert book_interval(*values) == original['book_interval'](*values), ('book_interval', values)\n    assert preview_interval(*values) == original['preview_interval'](*values), ('preview_interval', values)\nfor values in [(1, 1,), (2, 1,)]:\n    try:\n        book_interval(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('book_interval', values, \"accepted invalid\"))\n    try:\n        preview_interval(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('preview_interval', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          0,
+          1
+        ],
+        [
+          -3,
+          -1
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-page-size",
+      "family": "compound",
+      "cluster": "page-size",
+      "functions": [
+        "list_page",
+        "count_page"
+      ],
+      "q": "Page sizes outside one through one hundred bypass the list and count endpoints. Keep page numbering positive and enforce the inclusive size limits in both. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef list_page(page, size):\n    if page < 1:\n        raise ValueError(\"invalid\")\n    return (page - 1) * size\n\ndef count_page(page, size):\n    if page < 1:\n        raise ValueError(\"invalid\")\n    return size\n",
+      "code": "\ndef list_page(page, size):\n    if page < 1:\n        raise ValueError(\"invalid\")\n    return (page - 1) * size\n\ndef count_page(page, size):\n    if page < 1:\n        raise ValueError(\"invalid\")\n    return size\n",
+      "reference": "\ndef _validate(page, size):\n    if page < 1 or not 1 <= size <= 100:\n        raise ValueError(\"invalid\")\n\ndef list_page(page, size):\n    _validate(page, size)\n    return (page - 1) * size\n\ndef count_page(page, size):\n    _validate(page, size)\n    return size\n",
+      "checks": "original = {}\nexec('def list_page(page, size):\\n    return (page - 1) * size\\n\\ndef count_page(page, size):\\n    return size\\n', original)\nfor values in [(1, 1,), (3, 100,)]:\n    assert list_page(*values) == original['list_page'](*values), ('list_page', values)\n    assert count_page(*values) == original['count_page'](*values), ('count_page', values)\nfor values in [(0, 2,), (1, 0,), (1, 101,)]:\n    try:\n        list_page(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('list_page', values, \"accepted invalid\"))\n    try:\n        count_page(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('count_page', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          100
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          101
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-offset-alignment",
+      "family": "compound",
+      "cluster": "offset-alignment",
+      "functions": [
+        "read_block",
+        "preview_block"
+      ],
+      "q": "Offsets must be aligned to a positive block size. Add the alignment check to both read and preview while keeping nonnegative offsets, including zero. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef read_block(offset, block):\n    if offset < 0 or block <= 0:\n        raise ValueError(\"invalid\")\n    return offset // block\n\ndef preview_block(offset, block):\n    if offset < 0 or block <= 0:\n        raise ValueError(\"invalid\")\n    return (offset, block)\n",
+      "code": "\ndef read_block(offset, block):\n    if offset < 0 or block <= 0:\n        raise ValueError(\"invalid\")\n    return offset // block\n\ndef preview_block(offset, block):\n    if offset < 0 or block <= 0:\n        raise ValueError(\"invalid\")\n    return (offset, block)\n",
+      "reference": "\ndef _validate(offset, block):\n    if offset < 0 or block <= 0 or offset % block != 0:\n        raise ValueError(\"invalid\")\n\ndef read_block(offset, block):\n    _validate(offset, block)\n    return offset // block\n\ndef preview_block(offset, block):\n    _validate(offset, block)\n    return (offset, block)\n",
+      "checks": "original = {}\nexec('def read_block(offset, block):\\n    return offset // block\\n\\ndef preview_block(offset, block):\\n    return (offset, block)\\n', original)\nfor values in [(0, 4,), (12, 4,)]:\n    assert read_block(*values) == original['read_block'](*values), ('read_block', values)\n    assert preview_block(*values) == original['preview_block'](*values), ('preview_block', values)\nfor values in [(-4, 4,), (3, 0,), (3, 4,)]:\n    try:\n        read_block(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('read_block', values, \"accepted invalid\"))\n    try:\n        preview_block(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('preview_block', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          0,
+          4
+        ],
+        [
+          12,
+          4
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          -4,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-dimensions",
+      "family": "compound",
+      "cluster": "dimensions",
+      "functions": [
+        "render_tile",
+        "preview_tile"
+      ],
+      "q": "Images larger than sixty-four pixels in area must be rejected before render or preview. Width and height must still each be positive; exactly sixty-four pixels is valid. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef render_tile(width, height):\n    if width <= 0 or height <= 0:\n        raise ValueError(\"invalid\")\n    return width * height\n\ndef preview_tile(width, height):\n    if width <= 0 or height <= 0:\n        raise ValueError(\"invalid\")\n    return (width, height)\n",
+      "code": "\ndef render_tile(width, height):\n    if width <= 0 or height <= 0:\n        raise ValueError(\"invalid\")\n    return width * height\n\ndef preview_tile(width, height):\n    if width <= 0 or height <= 0:\n        raise ValueError(\"invalid\")\n    return (width, height)\n",
+      "reference": "\ndef _validate(width, height):\n    if width <= 0 or height <= 0 or width * height > 64:\n        raise ValueError(\"invalid\")\n\ndef render_tile(width, height):\n    _validate(width, height)\n    return width * height\n\ndef preview_tile(width, height):\n    _validate(width, height)\n    return (width, height)\n",
+      "checks": "original = {}\nexec('def render_tile(width, height):\\n    return width * height\\n\\ndef preview_tile(width, height):\\n    return (width, height)\\n', original)\nfor values in [(8, 8,), (1, 1,)]:\n    assert render_tile(*values) == original['render_tile'](*values), ('render_tile', values)\n    assert preview_tile(*values) == original['preview_tile'](*values), ('preview_tile', values)\nfor values in [(0, 4,), (9, 8,), (1, -1,)]:\n    try:\n        render_tile(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('render_tile', values, \"accepted invalid\"))\n    try:\n        preview_tile(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('preview_tile', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          8,
+          8
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          0,
+          4
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-bounded-window",
+      "family": "compound",
+      "cluster": "bounded-window",
+      "functions": [
+        "slice_window",
+        "preview_window"
+      ],
+      "q": "Requested byte windows can extend beyond the buffer. Both slice and preview must reject a window whose end exceeds total. Empty windows ending exactly at total remain valid. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef slice_window(offset, length, total):\n    if offset < 0 or length < 0:\n        raise ValueError(\"invalid\")\n    return (offset, offset + length)\n\ndef preview_window(offset, length, total):\n    if offset < 0 or length < 0:\n        raise ValueError(\"invalid\")\n    return length\n",
+      "code": "\ndef slice_window(offset, length, total):\n    if offset < 0 or length < 0:\n        raise ValueError(\"invalid\")\n    return (offset, offset + length)\n\ndef preview_window(offset, length, total):\n    if offset < 0 or length < 0:\n        raise ValueError(\"invalid\")\n    return length\n",
+      "reference": "\ndef _validate(offset, length, total):\n    if offset < 0 or length < 0 or offset + length > total:\n        raise ValueError(\"invalid\")\n\ndef slice_window(offset, length, total):\n    _validate(offset, length, total)\n    return (offset, offset + length)\n\ndef preview_window(offset, length, total):\n    _validate(offset, length, total)\n    return length\n",
+      "checks": "original = {}\nexec('def slice_window(offset, length, total):\\n    return (offset, offset + length)\\n\\ndef preview_window(offset, length, total):\\n    return length\\n', original)\nfor values in [(0, 4, 4,), (4, 0, 4,)]:\n    assert slice_window(*values) == original['slice_window'](*values), ('slice_window', values)\n    assert preview_window(*values) == original['preview_window'](*values), ('preview_window', values)\nfor values in [(3, 2, 4,), (-1, 1, 4,), (0, -1, 4,)]:\n    try:\n        slice_window(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('slice_window', values, \"accepted invalid\"))\n    try:\n        preview_window(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('preview_window', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          0,
+          4,
+          4
+        ],
+        [
+          4,
+          0,
+          4
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          3,
+          2,
+          4
+        ],
+        [
+          -1,
+          1,
+          4
+        ],
+        [
+          0,
+          -1,
+          4
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-date-validity",
+      "family": "stdlib",
+      "cluster": "date-validity",
+      "functions": [
+        "store_date",
+        "display_date"
+      ],
+      "q": "Calendar-invalid dates pass the storage and display checks. Validate actual Gregorian dates, including leap years, rather than independent month and day ranges. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef store_date(year, month, day):\n    if not 1 <= month <= 12 or not 1 <= day <= 31:\n        raise ValueError(\"invalid\")\n    return (year, month, day)\n\ndef display_date(year, month, day):\n    if not 1 <= month <= 12 or not 1 <= day <= 31:\n        raise ValueError(\"invalid\")\n    return f\"{year:04}-{month:02}-{day:02}\"\n",
+      "code": "\ndef store_date(year, month, day):\n    if not 1 <= month <= 12 or not 1 <= day <= 31:\n        raise ValueError(\"invalid\")\n    return (year, month, day)\n\ndef display_date(year, month, day):\n    if not 1 <= month <= 12 or not 1 <= day <= 31:\n        raise ValueError(\"invalid\")\n    return f\"{year:04}-{month:02}-{day:02}\"\n",
+      "reference": "from datetime import date\n\ndef valid_date(year, month, day):\n    try:\n        date(year, month, day)\n        return True\n    except ValueError:\n        return False\n\ndef _validate(year, month, day):\n    if not valid_date(year, month, day):\n        raise ValueError(\"invalid\")\n\ndef store_date(year, month, day):\n    _validate(year, month, day)\n    return (year, month, day)\n\ndef display_date(year, month, day):\n    _validate(year, month, day)\n    return f\"{year:04}-{month:02}-{day:02}\"\n",
+      "checks": "original = {}\nexec('def store_date(year, month, day):\\n    return (year, month, day)\\n\\ndef display_date(year, month, day):\\n    return f\"{year:04}-{month:02}-{day:02}\"\\n', original)\nfor values in [(2024, 2, 29,), (2023, 12, 31,)]:\n    assert store_date(*values) == original['store_date'](*values), ('store_date', values)\n    assert display_date(*values) == original['display_date'](*values), ('display_date', values)\nfor values in [(2023, 2, 29,), (2024, 4, 31,), (2024, 13, 1,)]:\n    try:\n        store_date(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('store_date', values, \"accepted invalid\"))\n    try:\n        display_date(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('display_date', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          2024,
+          2,
+          29
+        ],
+        [
+          2023,
+          12,
+          31
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          2023,
+          2,
+          29
+        ],
+        [
+          2024,
+          4,
+          31
+        ],
+        [
+          2024,
+          13,
+          1
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-ipv4",
+      "family": "stdlib",
+      "cluster": "ipv4",
+      "functions": [
+        "connect_ipv4",
+        "preview_ipv4"
+      ],
+      "q": "Four dot-separated pieces are not enough to validate an IPv4 address. Both connection and preview must reject invalid octets, nonnumeric pieces and IPv6; accept valid IPv4 only. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef connect_ipv4(address):\n    if len(address.split(\".\")) != 4:\n        raise ValueError(\"invalid\")\n    return address\n\ndef preview_ipv4(address):\n    if len(address.split(\".\")) != 4:\n        raise ValueError(\"invalid\")\n    return \"host=\" + address\n",
+      "code": "\ndef connect_ipv4(address):\n    if len(address.split(\".\")) != 4:\n        raise ValueError(\"invalid\")\n    return address\n\ndef preview_ipv4(address):\n    if len(address.split(\".\")) != 4:\n        raise ValueError(\"invalid\")\n    return \"host=\" + address\n",
+      "reference": "import ipaddress\n\ndef valid_ipv4(address):\n    try:\n        ipaddress.IPv4Address(address)\n        return True\n    except ValueError:\n        return False\n\ndef _validate(address):\n    if not valid_ipv4(address):\n        raise ValueError(\"invalid\")\n\ndef connect_ipv4(address):\n    _validate(address)\n    return address\n\ndef preview_ipv4(address):\n    _validate(address)\n    return \"host=\" + address\n",
+      "checks": "original = {}\nexec('def connect_ipv4(address):\\n    return address\\n\\ndef preview_ipv4(address):\\n    return \"host=\" + address\\n', original)\nfor values in [('127.0.0.1',), ('255.255.255.255',)]:\n    assert connect_ipv4(*values) == original['connect_ipv4'](*values), ('connect_ipv4', values)\n    assert preview_ipv4(*values) == original['preview_ipv4'](*values), ('preview_ipv4', values)\nfor values in [('256.1.2.3',), ('a.b.c.d',), ('::1',)]:\n    try:\n        connect_ipv4(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('connect_ipv4', values, \"accepted invalid\"))\n    try:\n        preview_ipv4(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('preview_ipv4', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          "127.0.0.1"
+        ],
+        [
+          "255.255.255.255"
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          "256.1.2.3"
+        ],
+        [
+          "a.b.c.d"
+        ],
+        [
+          "::1"
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-json-object",
+      "family": "stdlib",
+      "cluster": "json-object",
+      "functions": [
+        "load_settings",
+        "preview_settings"
+      ],
+      "q": "These two settings entry points require a JSON object. Reject malformed JSON, arrays, scalars and null instead of accepting every nonempty string. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef load_settings(text):\n    if not text:\n        raise ValueError(\"invalid\")\n    return text.strip()\n\ndef preview_settings(text):\n    if not text:\n        raise ValueError(\"invalid\")\n    return len(text)\n",
+      "code": "\ndef load_settings(text):\n    if not text:\n        raise ValueError(\"invalid\")\n    return text.strip()\n\ndef preview_settings(text):\n    if not text:\n        raise ValueError(\"invalid\")\n    return len(text)\n",
+      "reference": "import json\n\ndef valid_object(text):\n    try:\n        return isinstance(json.loads(text), dict)\n    except ValueError:\n        return False\n\ndef _validate(text):\n    if not valid_object(text):\n        raise ValueError(\"invalid\")\n\ndef load_settings(text):\n    _validate(text)\n    return text.strip()\n\ndef preview_settings(text):\n    _validate(text)\n    return len(text)\n",
+      "checks": "original = {}\nexec('def load_settings(text):\\n    return text.strip()\\n\\ndef preview_settings(text):\\n    return len(text)\\n', original)\nfor values in [('{}',), ('{\"a\":1}',)]:\n    assert load_settings(*values) == original['load_settings'](*values), ('load_settings', values)\n    assert preview_settings(*values) == original['preview_settings'](*values), ('preview_settings', values)\nfor values in [('',), ('[]',), ('null',), ('{bad}',), ('2',)]:\n    try:\n        load_settings(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('load_settings', values, \"accepted invalid\"))\n    try:\n        preview_settings(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('preview_settings', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          "{}"
+        ],
+        [
+          "{\"a\":1}"
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          ""
+        ],
+        [
+          "[]"
+        ],
+        [
+          "null"
+        ],
+        [
+          "{bad}"
+        ],
+        [
+          "2"
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-hex-bytes",
+      "family": "stdlib",
+      "cluster": "hex-bytes",
+      "functions": [
+        "load_digest",
+        "preview_digest"
+      ],
+      "q": "Even-length strings with non-hex characters currently pass both digest entry points. Require an even number of ASCII hexadecimal characters; the empty digest is valid and whitespace is not. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef load_digest(text):\n    if len(text) % 2 != 0:\n        raise ValueError(\"invalid\")\n    return text.lower()\n\ndef preview_digest(text):\n    if len(text) % 2 != 0:\n        raise ValueError(\"invalid\")\n    return len(text) // 2\n",
+      "code": "\ndef load_digest(text):\n    if len(text) % 2 != 0:\n        raise ValueError(\"invalid\")\n    return text.lower()\n\ndef preview_digest(text):\n    if len(text) % 2 != 0:\n        raise ValueError(\"invalid\")\n    return len(text) // 2\n",
+      "reference": "\ndef _validate(text):\n    if len(text) % 2 != 0 or any(c not in \"0123456789abcdefABCDEF\" for c in text):\n        raise ValueError(\"invalid\")\n\ndef load_digest(text):\n    _validate(text)\n    return text.lower()\n\ndef preview_digest(text):\n    _validate(text)\n    return len(text) // 2\n",
+      "checks": "original = {}\nexec('def load_digest(text):\\n    return text.lower()\\n\\ndef preview_digest(text):\\n    return len(text) // 2\\n', original)\nfor values in [('',), ('00aF',)]:\n    assert load_digest(*values) == original['load_digest'](*values), ('load_digest', values)\n    assert preview_digest(*values) == original['preview_digest'](*values), ('preview_digest', values)\nfor values in [('0',), ('gg',), ('aa bb',), ('  ',)]:\n    try:\n        load_digest(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('load_digest', values, \"accepted invalid\"))\n    try:\n        preview_digest(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('preview_digest', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          ""
+        ],
+        [
+          "00aF"
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          "0"
+        ],
+        [
+          "gg"
+        ],
+        [
+          "aa bb"
+        ],
+        [
+          "  "
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-utf8-length",
+      "family": "stdlib",
+      "cluster": "utf8-length",
+      "functions": [
+        "store_message",
+        "preview_message"
+      ],
+      "q": "The storage limit is eight UTF-8 bytes, not eight characters. Enforce the byte limit in both message paths; exactly eight bytes and an empty string are valid. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef store_message(text):\n    if len(text) > 8:\n        raise ValueError(\"invalid\")\n    return text\n\ndef preview_message(text):\n    if len(text) > 8:\n        raise ValueError(\"invalid\")\n    return text.upper()\n",
+      "code": "\ndef store_message(text):\n    if len(text) > 8:\n        raise ValueError(\"invalid\")\n    return text\n\ndef preview_message(text):\n    if len(text) > 8:\n        raise ValueError(\"invalid\")\n    return text.upper()\n",
+      "reference": "\ndef _validate(text):\n    if len(text.encode(\"utf-8\")) > 8:\n        raise ValueError(\"invalid\")\n\ndef store_message(text):\n    _validate(text)\n    return text\n\ndef preview_message(text):\n    _validate(text)\n    return text.upper()\n",
+      "checks": "original = {}\nexec('def store_message(text):\\n    return text\\n\\ndef preview_message(text):\\n    return text.upper()\\n', original)\nfor values in [('',), ('éééé',), ('abcdefgh',)]:\n    assert store_message(*values) == original['store_message'](*values), ('store_message', values)\n    assert preview_message(*values) == original['preview_message'](*values), ('preview_message', values)\nfor values in [('ééééé',), ('abcdefghi',)]:\n    try:\n        store_message(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('store_message', values, \"accepted invalid\"))\n    try:\n        preview_message(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('preview_message', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          ""
+        ],
+        [
+          "éééé"
+        ],
+        [
+          "abcdefgh"
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          "ééééé"
+        ],
+        [
+          "abcdefghi"
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-reserved-names",
+      "family": "protocol",
+      "cluster": "reserved-names",
+      "functions": [
+        "open_account",
+        "preview_account"
+      ],
+      "q": "Mixed-case spellings bypass the reserved-name checks. Reject admin and root case-insensitively in both account paths; do not reject names merely containing those words. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef open_account(name):\n    if name in (\"admin\", \"root\"):\n        raise ValueError(\"invalid\")\n    return name + \":open\"\n\ndef preview_account(name):\n    if name in (\"admin\", \"root\"):\n        raise ValueError(\"invalid\")\n    return len(name)\n",
+      "code": "\ndef open_account(name):\n    if name in (\"admin\", \"root\"):\n        raise ValueError(\"invalid\")\n    return name + \":open\"\n\ndef preview_account(name):\n    if name in (\"admin\", \"root\"):\n        raise ValueError(\"invalid\")\n    return len(name)\n",
+      "reference": "\ndef _validate(name):\n    if name.casefold() in (\"admin\", \"root\"):\n        raise ValueError(\"invalid\")\n\ndef open_account(name):\n    _validate(name)\n    return name + \":open\"\n\ndef preview_account(name):\n    _validate(name)\n    return len(name)\n",
+      "checks": "original = {}\nexec('def open_account(name):\\n    return name + \":open\"\\n\\ndef preview_account(name):\\n    return len(name)\\n', original)\nfor values in [('rooted',), ('administrator',)]:\n    assert open_account(*values) == original['open_account'](*values), ('open_account', values)\n    assert preview_account(*values) == original['preview_account'](*values), ('preview_account', values)\nfor values in [('admin',), ('ROOT',), ('AdMiN',)]:\n    try:\n        open_account(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('open_account', values, \"accepted invalid\"))\n    try:\n        preview_account(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('preview_account', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          "rooted"
+        ],
+        [
+          "administrator"
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          "admin"
+        ],
+        [
+          "ROOT"
+        ],
+        [
+          "AdMiN"
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-newline-header",
+      "family": "protocol",
+      "cluster": "newline-header",
+      "functions": [
+        "write_header",
+        "preview_header"
+      ],
+      "q": "Carriage returns can still enter a header value. Both write and preview must reject CR as well as LF, while spaces and tabs remain valid. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef write_header(value):\n    if \"\\n\" in value:\n        raise ValueError(\"invalid\")\n    return \"X-Value: \" + value\n\ndef preview_header(value):\n    if \"\\n\" in value:\n        raise ValueError(\"invalid\")\n    return len(value)\n",
+      "code": "\ndef write_header(value):\n    if \"\\n\" in value:\n        raise ValueError(\"invalid\")\n    return \"X-Value: \" + value\n\ndef preview_header(value):\n    if \"\\n\" in value:\n        raise ValueError(\"invalid\")\n    return len(value)\n",
+      "reference": "\ndef _validate(value):\n    if \"\\n\" in value or \"\\r\" in value:\n        raise ValueError(\"invalid\")\n\ndef write_header(value):\n    _validate(value)\n    return \"X-Value: \" + value\n\ndef preview_header(value):\n    _validate(value)\n    return len(value)\n",
+      "checks": "original = {}\nexec('def write_header(value):\\n    return \"X-Value: \" + value\\n\\ndef preview_header(value):\\n    return len(value)\\n', original)\nfor values in [('a b',), ('a\\tb',)]:\n    assert write_header(*values) == original['write_header'](*values), ('write_header', values)\n    assert preview_header(*values) == original['preview_header'](*values), ('preview_header', values)\nfor values in [('a\\rb',), ('a\\nb',), ('\\r\\n',)]:\n    try:\n        write_header(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('write_header', values, \"accepted invalid\"))\n    try:\n        preview_header(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('preview_header', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          "a b"
+        ],
+        [
+          "a\tb"
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          "a\rb"
+        ],
+        [
+          "a\nb"
+        ],
+        [
+          "\r\n"
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-delimiter",
+      "family": "protocol",
+      "cluster": "delimiter",
+      "functions": [
+        "write_field",
+        "preview_field"
+      ],
+      "q": "The separator format now reserves comma and semicolon as well as colon. Reject any of those delimiters in both field-name entry points; periods and underscores remain valid. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef write_field(name):\n    if \":\" in name:\n        raise ValueError(\"invalid\")\n    return name + \"=1\"\n\ndef preview_field(name):\n    if \":\" in name:\n        raise ValueError(\"invalid\")\n    return name.upper()\n",
+      "code": "\ndef write_field(name):\n    if \":\" in name:\n        raise ValueError(\"invalid\")\n    return name + \"=1\"\n\ndef preview_field(name):\n    if \":\" in name:\n        raise ValueError(\"invalid\")\n    return name.upper()\n",
+      "reference": "\ndef _validate(name):\n    if any(c in name for c in (\":\", \",\", \";\")):\n        raise ValueError(\"invalid\")\n\ndef write_field(name):\n    _validate(name)\n    return name + \"=1\"\n\ndef preview_field(name):\n    _validate(name)\n    return name.upper()\n",
+      "checks": "original = {}\nexec('def write_field(name):\\n    return name + \"=1\"\\n\\ndef preview_field(name):\\n    return name.upper()\\n', original)\nfor values in [('a.b',), ('a_b',)]:\n    assert write_field(*values) == original['write_field'](*values), ('write_field', values)\n    assert preview_field(*values) == original['preview_field'](*values), ('preview_field', values)\nfor values in [('a:b',), ('a,b',), ('a;b',)]:\n    try:\n        write_field(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('write_field', values, \"accepted invalid\"))\n    try:\n        preview_field(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('preview_field', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          "a.b"
+        ],
+        [
+          "a_b"
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          "a:b"
+        ],
+        [
+          "a,b"
+        ],
+        [
+          "a;b"
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-version-parts",
+      "family": "protocol",
+      "cluster": "version-parts",
+      "functions": [
+        "publish_version",
+        "preview_version"
+      ],
+      "q": "Release versions require exactly three nonempty ASCII numeric components. Update the publish and preview checks so forms like 1.x.3 or 1..3 are rejected; leading zeroes are allowed. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef publish_version(version):\n    if len(version.split(\".\")) != 3:\n        raise ValueError(\"invalid\")\n    return \"v\" + version\n\ndef preview_version(version):\n    if len(version.split(\".\")) != 3:\n        raise ValueError(\"invalid\")\n    return version.split(\".\")\n",
+      "code": "\ndef publish_version(version):\n    if len(version.split(\".\")) != 3:\n        raise ValueError(\"invalid\")\n    return \"v\" + version\n\ndef preview_version(version):\n    if len(version.split(\".\")) != 3:\n        raise ValueError(\"invalid\")\n    return version.split(\".\")\n",
+      "reference": "\ndef _validate(version):\n    if len(version.split(\".\")) != 3 or any(not p or any(c not in \"0123456789\" for c in p) for p in version.split(\".\")):\n        raise ValueError(\"invalid\")\n\ndef publish_version(version):\n    _validate(version)\n    return \"v\" + version\n\ndef preview_version(version):\n    _validate(version)\n    return version.split(\".\")\n",
+      "checks": "original = {}\nexec('def publish_version(version):\\n    return \"v\" + version\\n\\ndef preview_version(version):\\n    return version.split(\".\")\\n', original)\nfor values in [('1.2.3',), ('01.0.3',)]:\n    assert publish_version(*values) == original['publish_version'](*values), ('publish_version', values)\n    assert preview_version(*values) == original['preview_version'](*values), ('preview_version', values)\nfor values in [('1.x.3',), ('1..3',), ('1.2',), ('١.2.3',)]:\n    try:\n        publish_version(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('publish_version', values, \"accepted invalid\"))\n    try:\n        preview_version(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('preview_version', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          "1.2.3"
+        ],
+        [
+          "01.0.3"
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          "1.x.3"
+        ],
+        [
+          "1..3"
+        ],
+        [
+          "1.2"
+        ],
+        [
+          "١.2.3"
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    },
+    {
+      "id": "natural-token-alphabet",
+      "family": "protocol",
+      "cluster": "token-alphabet",
+      "functions": [
+        "encode_token",
+        "preview_token"
+      ],
+      "q": "Tokens sent by the encode and preview entry points must use only ASCII letters, digits, underscore or hyphen. Keep empty tokens invalid and reject spaces, Unicode letters and punctuation. Keep the public names, arguments and unrelated behavior unchanged. Invalid inputs should raise ValueError. Show complete replacement Python definitions, including any needed imports.\n\n\ndef encode_token(token):\n    if not token:\n        raise ValueError(\"invalid\")\n    return token + \"=\"\n\ndef preview_token(token):\n    if not token:\n        raise ValueError(\"invalid\")\n    return len(token)\n",
+      "code": "\ndef encode_token(token):\n    if not token:\n        raise ValueError(\"invalid\")\n    return token + \"=\"\n\ndef preview_token(token):\n    if not token:\n        raise ValueError(\"invalid\")\n    return len(token)\n",
+      "reference": "\ndef _validate(token):\n    if not token or any(c not in \"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-\" for c in token):\n        raise ValueError(\"invalid\")\n\ndef encode_token(token):\n    _validate(token)\n    return token + \"=\"\n\ndef preview_token(token):\n    _validate(token)\n    return len(token)\n",
+      "checks": "original = {}\nexec('def encode_token(token):\\n    return token + \"=\"\\n\\ndef preview_token(token):\\n    return len(token)\\n', original)\nfor values in [('Ab_09-',), ('x',)]:\n    assert encode_token(*values) == original['encode_token'](*values), ('encode_token', values)\n    assert preview_token(*values) == original['preview_token'](*values), ('preview_token', values)\nfor values in [('',), ('a b',), ('é',), ('a!',)]:\n    try:\n        encode_token(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('encode_token', values, \"accepted invalid\"))\n    try:\n        preview_token(*values)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(('preview_token', values, \"accepted invalid\"))\n",
+      "valid_inputs": [
+        [
+          "Ab_09-"
+        ],
+        [
+          "x"
+        ]
+      ],
+      "invalid_inputs": [
+        [
+          ""
+        ],
+        [
+          "a b"
+        ],
+        [
+          "é"
+        ],
+        [
+          "a!"
+        ]
+      ],
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "rubric": "Functional: accept/reject specified inputs and preserve accepted-input outputs/signatures. Structural: both entry points use one private helper actually executing the common changed validation; no duplicated changed validation in callers. Judge structure and functionality separately and jointly."
+    }
+  ],
+  "max_tokens": 1536,
+  "policy_scope": "Targeted shared-validation changes only. No approval, recall, distinct-contract or approved-money controls. No broad policy-compliance claim."
+}

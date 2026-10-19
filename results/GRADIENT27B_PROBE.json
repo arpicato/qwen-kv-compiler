@@ -1,0 +1,49 @@
+{
+  "question": "What should I use to install dependencies in a Node service?",
+  "answer": "pnpm",
+  "source_row": 0,
+  "source_sha256": "9b3ba2a6ab5b07373cf903cfea948358c3c1d411dd85009a66583b88d8be8988",
+  "protocol": "last-attention-layer-first32-value-rows-leaf-no-update-v1",
+  "results": [
+    {
+      "mode": "native",
+      "logits_requires_grad": false,
+      "logits_is_inference": true,
+      "argmax": 63,
+      "argmax_equal_native": true,
+      "logit_max_diff": 0.0,
+      "loss": 2.483602285385132,
+      "loss_requires_grad": false,
+      "gradient_present": false
+    },
+    {
+      "mode": "public_with_leaf",
+      "leaf_numel": 32768,
+      "logits_requires_grad": false,
+      "logits_is_inference": true,
+      "argmax": 63,
+      "argmax_equal_native": true,
+      "logit_max_diff": 0.0234375,
+      "loss": 2.4837734699249268,
+      "loss_requires_grad": false,
+      "gradient_present": false
+    },
+    {
+      "mode": "unwrapped_with_leaf",
+      "leaf_numel": 32768,
+      "logits_requires_grad": false,
+      "logits_is_inference": false,
+      "argmax": 63,
+      "argmax_equal_native": true,
+      "logit_max_diff": 0.01953125,
+      "loss": 2.4834792613983154,
+      "loss_requires_grad": false,
+      "gradient_present": false
+    }
+  ],
+  "model_forward_source": "/home/arpin/exllamav3-rocm/.venv-rocm/lib/python3.14/site-packages/torch/utils/_contextlib.py",
+  "model_forward_line": 373,
+  "layer": 63,
+  "complete": true,
+  "elapsed_s": 39.45098948478699
+}

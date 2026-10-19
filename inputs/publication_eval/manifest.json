@@ -1,0 +1,6 @@
+{
+  "inputs/publication_eval/cases.json": "65238db2a1e69f8b8d22a1a09d06d426e1034a62a7234ce04ab1b26dcce5893c",
+  "inputs/clean_eval_v2/cases.json": "cc82e236f669196f2ff1c80da211e6c8934ec7d1801e1a2b1b0e0833701680f8",
+  "inputs/transplant_refactors_v4/cases.json": "f469319e434e19d80d8b05fb1ff3e4680514121605b1dddd960e4e2c166aee81",
+  "inputs/joint/prompt.txt": "ea1bd5d8e31aed36e6890165bb825f5f92e551caf4bf44a2c24958812436f234"
+}

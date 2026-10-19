@@ -1,0 +1,27 @@
+{
+  "scope": "Qwen3.8-27B EXL3 3.5bpw, Linux gfx1100 RX7900XTX only",
+  "python": "3.14.4",
+  "model_repo": "Mia-AiLab/Qwen3.8-27B-EXL3-3.5bpw",
+  "model_revision": "19441ac874c4018295da848e250f23511361cda4",
+  "weight_sha256": {
+    "model-00001-of-00002.safetensors": "7b77214fe58ff15fed0b4af55e3cd92f38842b8711886d68954e8071ff8270c6",
+    "model-00002-of-00002.safetensors": "411c83bb1070b27f3d670fc93e38dca0f17eb66429f64b5706901b12613188b2"
+  },
+  "runtime_repo": "https://github.com/arpicato/exllamav3-rocm.git",
+  "runtime_commit": "25d0dd1f77e62feee587fe2bdb15c568e1e34359",
+  "runtime_distribution": "exllamav3==1.5.1",
+  "torch": "2.13.0+rocm7.2",
+  "rocm": "7.2",
+  "numpy": "2.5.2",
+  "safetensors": "0.8.0",
+  "tokenizers": "0.23.2",
+  "docker_code_check_image": "kvcompile-checks:repro",
+  "metadata_sha256": {
+    "config.json": "153407dcf65483b121759efc6bdd0e41e124e1e297496a9ba979936689a4b9d2",
+    "quantization_config.json": "d5e7e4c411084ef898b470e35a20181093bf3adbb1282e9d81674ce7b3d9069d",
+    "tokenizer.json": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3",
+    "tokenizer_config.json": "b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27",
+    "model.safetensors.index.json": "ee2d5e73b5f8311ad331ce3c94a29d1143225064b278a18fa9966cba54d2802e"
+  },
+  "historical_docker_code_check_image": "sha256:920724580607e4a415c032282a8f6bf7d1177f70a1fac542247310e561a64de5"
+}

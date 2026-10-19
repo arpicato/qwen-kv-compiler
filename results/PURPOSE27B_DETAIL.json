@@ -1,0 +1,112 @@
+{
+  "dev": {
+    "baseline_s": 111.26126432418823,
+    "candidate_controls_s": 553.318621635437,
+    "vs_reverse780": {
+      "previous_correct": 176,
+      "current_correct": 187,
+      "gains": 13,
+      "losses": 2
+    },
+    "slices": {
+      "direct_binding": {
+        "n": 98,
+        "control": 87,
+        "reverse780": 87,
+        "purpose780": 95,
+        "purpose_caps": 0
+      },
+      "other_argument": {
+        "n": 34,
+        "control": 29,
+        "reverse780": 32,
+        "purpose780": 34,
+        "purpose_caps": 0
+      }
+    }
+  },
+  "agent78": {
+    "baseline_s": 74.52948307991028,
+    "candidate_controls_s": 250.93483138084412,
+    "vs_reverse780": {
+      "previous_correct": 75,
+      "current_correct": 75,
+      "gains": 0,
+      "losses": 0
+    },
+    "slices": {
+      "shared20": {
+        "n": 20,
+        "control": 19,
+        "reverse780": 20,
+        "purpose780": 20,
+        "purpose_caps": 1
+      },
+      "other58": {
+        "n": 58,
+        "control": 56,
+        "reverse780": 55,
+        "purpose780": 55,
+        "purpose_caps": 0
+      }
+    }
+  },
+  "stress197": {
+    "baseline_s": 110.8592734336853,
+    "candidate_controls_s": 524.2597887516022,
+    "vs_reverse780": {
+      "previous_correct": 175,
+      "current_correct": 187,
+      "gains": 13,
+      "losses": 1
+    },
+    "slices": {
+      "direct_binding": {
+        "n": 101,
+        "control": 86,
+        "reverse780": 86,
+        "purpose780": 98,
+        "purpose_caps": 0
+      },
+      "other_argument": {
+        "n": 34,
+        "control": 32,
+        "reverse780": 33,
+        "purpose780": 33,
+        "purpose_caps": 0
+      }
+    }
+  },
+  "diagnostic12": {
+    "baseline_s": 45.25725746154785,
+    "candidate_controls_s": 74.89994430541992,
+    "vs_reverse780": {
+      "previous_correct": 7,
+      "current_correct": 9,
+      "gains": 3,
+      "losses": 1
+    },
+    "slices": {
+      "dev": {
+        "n": 6,
+        "control": 4,
+        "reverse780": 4,
+        "purpose780": 4,
+        "purpose_caps": 2
+      },
+      "test": {
+        "n": 6,
+        "control": 3,
+        "reverse780": 3,
+        "purpose780": 5,
+        "purpose_caps": 0
+      }
+    }
+  },
+  "timing": {
+    "capture_s": 1536.0431382656097,
+    "compile_s": 7557.3761694431305,
+    "eval_s": 1745.320464372635,
+    "total_s": 10838.739772081375
+  }
+}

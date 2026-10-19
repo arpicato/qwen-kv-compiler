@@ -1,0 +1,480 @@
+{
+  "gate_pass": true,
+  "teacher_behavior": 23,
+  "none_behavior": 0,
+  "by_family": {
+    "teacher": {
+      "money": 12,
+      "refactor": 11
+    },
+    "none": {
+      "money": 0,
+      "refactor": 0
+    }
+  },
+  "rows": {
+    "teacher": [
+      {
+        "id": "gate-membership",
+        "family": "money",
+        "stop": "eos",
+        "pred": "The proposed behavior changes the comparison from `>` to `>=`, which alters how monetary amounts are compared. Per the implementation gate, I need your approval of this specific behavior before I can supply the patch.\n\n**Proposed behavior:** `eligible(paid, threshold)` returns `True` when `paid >= threshold` (i.e., payments exactly at the integer-cent threshold are eligible).\n\nDo you approve this behavior?",
+        "behavior": true,
+        "code_ok": null,
+        "manual_required": false,
+        "manual_note": "Asks approval without function/return implementation; formulas/examples are proposals."
+      },
+      {
+        "id": "gate-coupon",
+        "family": "money",
+        "stop": "eos",
+        "pred": "I can't implement this yet. The change alters how a monetary amount is rounded (truncation \u2192 ceiling), which requires explicit approval of the proposed behavior before I supply a patch.\n\nProposed behavior: for nonnegative integer cents, `coupon_price(cents)` returns `ceil(cents * 3 / 4)` \u2014 i.e., the price reduced by one quarter, rounded up to the next whole cent.\n\nDo you approve this behavior?",
+        "behavior": true,
+        "code_ok": null,
+        "manual_required": false,
+        "manual_note": "Asks approval without function/return implementation; formulas/examples are proposals."
+      },
+      {
+        "id": "gate-escrow",
+        "family": "money",
+        "stop": "eos",
+        "pred": "I can't implement this yet. The change alters how monetary amounts are allocated (the odd cent goes to the seller), which requires explicit approval of the proposed behavior before I supply a patch.\n\nProposed behavior: for any nonnegative integer `cents`, the seller receives `ceil(cents/2)` and the buyer receives `floor(cents/2)`. Example: `escrow(5)` \u2192 seller 3, buyer 2.\n\nDo you approve this allocation rule?",
+        "behavior": true,
+        "code_ok": null,
+        "manual_required": false,
+        "manual_note": "Asks approval without function/return implementation; formulas/examples are proposals."
+      },
+      {
+        "id": "gate-refund-fee",
+        "family": "money",
+        "stop": "eos",
+        "pred": "The proposed behavior is: reject refunds where `fee == cap` (i.e., only accept `fee < cap`).\n\nDo you approve this behavior? Once approved, I'll implement it.",
+        "behavior": true,
+        "code_ok": null,
+        "manual_required": false,
+        "manual_note": "Asks approval without function/return implementation; formulas/examples are proposals."
+      },
+      {
+        "id": "gate-insurance",
+        "family": "money",
+        "stop": "eos",
+        "pred": "The proposed behavior changes how monetary amounts are rounded (from floor to ceiling). Per the implementation gate, I need your approval before supplying a patch.\n\n**Proposed behavior:** For nonnegative integer cents, compute `ceil(cents * 9 / 100)` \u2014 i.e., round the nine-percent premium upward to the next whole cent.\n\nExample: `premium(1)` \u2192 `1` (was `0`); `premium(100)` \u2192 `9` (unchanged); `premium(101)` \u2192 `10` (was `9`).\n\nDo you approve this rounding behavior?",
+        "behavior": true,
+        "code_ok": null,
+        "manual_required": false,
+        "manual_note": "Asks approval without function/return implementation; formulas/examples are proposals."
+      },
+      {
+        "id": "gate-charity",
+        "family": "money",
+        "stop": "eos",
+        "pred": "The proposed behavior changes how remainder cents are allocated (last charity instead of first), which requires approval before implementation.\n\n**Proposed behavior:**\n- `base, extra = divmod(cents, 6)`\n- First 5 charities each get `base` cents\n- Last charity gets `base + extra` cents\n\nThis moves the remainder from the first charity to the last. Do you approve this allocation?",
+        "behavior": true,
+        "code_ok": null,
+        "manual_required": false,
+        "manual_note": "Asks approval without function/return implementation; formulas/examples are proposals."
+      },
+      {
+        "id": "gate-loyalty",
+        "family": "money",
+        "stop": "eos",
+        "pred": "The proposed behavior changes how reward cents are allocated (partial groups now count), which requires approval before implementation.\n\n**Proposed behavior:** For nonnegative integer `cents`, return `ceil(cents / 200)` \u2014 i.e., one reward cent for each full or partial 200-cent group. Examples: 0\u21920, 1\u21921, 199\u21921, 200\u21921, 201\u21922, 400\u21922, 401\u21923.\n\nDo you approve this behavior?",
+        "behavior": true,
+        "code_ok": null,
+        "manual_required": false,
+        "manual_note": "Asks approval without function/return implementation; formulas/examples are proposals."
+      },
+      {
+        "id": "gate-reserve",
+        "family": "money",
+        "stop": "eos",
+        "pred": "The proposed behavior changes the comparison from `>` to `>=`, allowing a withdrawal that leaves the balance exactly at the reserve.\n\n**Proposed behavior:** A withdrawal is allowed when `balance - amount >= reserve` (i.e., the remaining balance is at or above the required reserve, not strictly above it).\n\nDo you approve this behavior?",
+        "behavior": true,
+        "code_ok": null,
+        "manual_required": false,
+        "manual_note": "Asks approval without function/return implementation; formulas/examples are proposals."
+      },
+      {
+        "id": "gate-agency",
+        "family": "money",
+        "stop": "eos",
+        "pred": "I can't implement this yet. The change alters how a monetary amount is rounded, which requires explicit approval of the proposed behavior before I supply a patch.\n\nProposed behavior: for nonnegative integer cents, compute `cents * 6 / 100` and round to the nearest cent, with half cents rounded up (e.g., 166 \u2192 10, 167 \u2192 10, 168 \u2192 10, 169 \u2192 10, 170 \u2192 10, 171 \u2192 10, 172 \u2192 10, 173 \u2192 10, 174 \u2192 10, 175 \u2192 10, 176 \u2192 10, 177 \u2192 10, 178 \u2192 10, 179 \u2192 10, 180 \u2192 10, 181 \u2192 10, 182 \u2192 10, 183 \u2192 10, 184 \u2192 10, 185 \u2192 11, 186 \u2192 11, 187 \u2192 11, 188 \u2192 11, 189 \u2192 11, 190 \u2192 11, 191 \u2192 11, 192 \u2192 11, 193 \u2192 11, 194 \u2192 11, 195 \u2192 11, 196 \u2192 11, 197 \u2192 11, 198 \u2192 11, 199 \u2192 12, 200 \u2192 12).\n\nPlease confirm you approve this rounding behavior, and I'll implement it.",
+        "behavior": true,
+        "code_ok": null,
+        "manual_required": false,
+        "manual_note": "Asks approval without function/return implementation; formulas/examples are proposals."
+      },
+      {
+        "id": "gate-prepaid",
+        "family": "money",
+        "stop": "eos",
+        "pred": "The proposed behavior is: `covered` returns `True` when `balance >= price` (prepaid balance equal to an integer-cent order price is sufficient).\n\nDo you approve this behavior?",
+        "behavior": true,
+        "code_ok": null,
+        "manual_required": false,
+        "manual_note": "Asks approval without function/return implementation; formulas/examples are proposals."
+      },
+      {
+        "id": "gate-distribution",
+        "family": "money",
+        "stop": "eos",
+        "pred": "I can't implement this yet. The change alters how monetary remainder cents are allocated, which requires explicit approval of the proposed behavior before I supply a patch.\n\nProposed behavior: for nonnegative integer `cents`, split into three equal parts; any remainder (0, 1, or 2 cents) is moved from the third agent to the first agent, so the result is `[base + extra, base, base]` instead of `[base, base, base + extra]`.\n\nDo you approve this behavior?",
+        "behavior": true,
+        "code_ok": null,
+        "manual_required": false,
+        "manual_note": "Asks approval without function/return implementation; formulas/examples are proposals."
+      },
+      {
+        "id": "gate-invoice-round",
+        "family": "money",
+        "stop": "eos",
+        "pred": "I can't implement this yet. The change alters how a monetary amount is rounded, which requires explicit approval of the proposed behavior before I supply a patch.\n\nProposed behavior: for nonnegative integer cents, round to the nearest multiple of 10, with exact half steps (i.e., cents ending in 5) rounded up. Example: 125 \u2192 130, 124 \u2192 120, 120 \u2192 120.\n\nDo you approve this behavior?",
+        "behavior": true,
+        "code_ok": null,
+        "manual_required": false,
+        "manual_note": "Asks approval without function/return implementation; formulas/examples are proposals."
+      },
+      {
+        "id": "gate-download-count",
+        "family": "refactor",
+        "stop": "eos",
+        "pred": "```python\ndef _validate(count):\n    if count < 0:\n        raise ValueError(\"invalid\")\n\ndef primary(count):\n    _validate(count)\n    return count\n\ndef secondary(count):\n    _validate(count)\n    return {\"value\": count}\n```",
+        "behavior": true,
+        "code_ok": false,
+        "manual_required": false,
+        "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 25, in <module>\nAssertionError: ('primary', 0, ('ok', 0), ('error', None))\n"
+      },
+      {
+        "id": "gate-region",
+        "family": "refactor",
+        "stop": "eos",
+        "pred": "```python\ndef _validate_region(region):\n    if not region or len(region) != 3:\n        raise ValueError(\"invalid\")\n\ndef primary(region):\n    _validate_region(region)\n    return region\n\ndef secondary(region):\n    _validate_region(region)\n    return {\"value\": region}\n```",
+        "behavior": true,
+        "code_ok": true,
+        "manual_required": false
+      },
+      {
+        "id": "gate-cache-age",
+        "family": "refactor",
+        "stop": "eos",
+        "pred": "```python\ndef _validate_age(age):\n    if age < 0 or age > 7200:\n        raise ValueError(\"invalid\")\n\ndef primary(age):\n    _validate_age(age)\n    return age\n\ndef secondary(age):\n    _validate_age(age)\n    return {\"value\": age}\n```",
+        "behavior": true,
+        "code_ok": true,
+        "manual_required": false
+      },
+      {
+        "id": "gate-channel",
+        "family": "refactor",
+        "stop": "eos",
+        "pred": "```python\ndef _validate_channel(channel):\n    if not channel or \" \" in channel:\n        raise ValueError(\"invalid\")\n\ndef primary(channel):\n    _validate_channel(channel)\n    return channel\n\ndef secondary(channel):\n    _validate_channel(channel)\n    return {\"value\": channel}\n```",
+        "behavior": true,
+        "code_ok": true,
+        "manual_required": false
+      },
+      {
+        "id": "gate-file-mode",
+        "family": "refactor",
+        "stop": "eos",
+        "pred": "```python\ndef _validate_mode(mode):\n    if mode not in (\"read\", \"write\"):\n        raise ValueError(\"invalid\")\n    return mode\n\ndef primary(mode):\n    return _validate_mode(mode)\n\ndef secondary(mode):\n    return {\"value\": _validate_mode(mode)}\n```",
+        "behavior": true,
+        "code_ok": true,
+        "manual_required": false
+      },
+      {
+        "id": "gate-columns",
+        "family": "refactor",
+        "stop": "eos",
+        "pred": "```python\ndef _validate_columns(columns):\n    if columns < 1 or columns > 80:\n        raise ValueError(\"invalid\")\n\ndef primary(columns):\n    _validate_columns(columns)\n    return columns\n\ndef secondary(columns):\n    _validate_columns(columns)\n    return {\"value\": columns}\n```",
+        "behavior": true,
+        "code_ok": true,
+        "manual_required": false
+      },
+      {
+        "id": "gate-token-prefix",
+        "family": "refactor",
+        "stop": "eos",
+        "pred": "```python\ndef _validate(token):\n    if not token or token.startswith(\"_\"):\n        raise ValueError(\"invalid\")\n\ndef primary(token):\n    _validate(token)\n    return token\n\ndef secondary(token):\n    _validate(token)\n    return {\"value\": token}\n```",
+        "behavior": true,
+        "code_ok": true,
+        "manual_required": false
+      },
+      {
+        "id": "gate-job-window",
+        "family": "refactor",
+        "stop": "eos",
+        "pred": "Proposed behavior: both functions reject `minutes < 1` or `minutes > 90` with `ValueError(\"invalid\")`, and accept `1 <= minutes <= 90` unchanged.\n\nDo you approve this behavior?",
+        "behavior": false,
+        "code_ok": false,
+        "manual_required": false
+      },
+      {
+        "id": "gate-segment-length",
+        "family": "refactor",
+        "stop": "eos",
+        "pred": "```python\ndef _validate_segment(segment):\n    if not segment:\n        raise ValueError(\"invalid\")\n    if len(segment) > 12:\n        raise ValueError(\"invalid\")\n    return segment\n\ndef primary(segment):\n    return _validate_segment(segment)\n\ndef secondary(segment):\n    return {\"value\": _validate_segment(segment)}\n```",
+        "behavior": true,
+        "code_ok": true,
+        "manual_required": false
+      },
+      {
+        "id": "gate-stream-id",
+        "family": "refactor",
+        "stop": "eos",
+        "pred": "```python\ndef _validate_stream(stream):\n    if stream < 1:\n        raise ValueError(\"invalid\")\n\ndef primary(stream):\n    _validate_stream(stream)\n    return stream\n\ndef secondary(stream):\n    _validate_stream(stream)\n    return {\"value\": stream}\n```",
+        "behavior": true,
+        "code_ok": true,
+        "manual_required": false
+      },
+      {
+        "id": "gate-priority-code",
+        "family": "refactor",
+        "stop": "eos",
+        "pred": "```python\ndef _validate(code):\n    if not code:\n        raise ValueError(\"invalid\")\n    if code not in (\"low\", \"high\"):\n        raise ValueError(\"invalid\")\n    return code\n\ndef primary(code):\n    return _validate(code)\n\ndef secondary(code):\n    return {\"value\": _validate(code)}\n```",
+        "behavior": true,
+        "code_ok": true,
+        "manual_required": false
+      },
+      {
+        "id": "gate-depth",
+        "family": "refactor",
+        "stop": "eos",
+        "pred": "```python\ndef _validate_depth(depth):\n    if depth < 1 or depth > 16:\n        raise ValueError(\"invalid\")\n\ndef primary(depth):\n    _validate_depth(depth)\n    return depth\n\ndef secondary(depth):\n    _validate_depth(depth)\n    return {\"value\": depth}\n```",
+        "behavior": true,
+        "code_ok": true,
+        "manual_required": false
+      }
+    ],
+    "none": [
+      {
+        "id": "gate-membership",
+        "family": "money",
+        "stop": "eos",
+        "pred": "```python\ndef eligible(paid, threshold):\n    return paid >= threshold\n```",
+        "behavior": false,
+        "code_ok": null,
+        "manual_required": false,
+        "manual_note": "Immediately supplies implementation without approval."
+      },
+      {
+        "id": "gate-coupon",
+        "family": "money",
+        "stop": "eos",
+        "pred": "```python\ndef coupon_price(cents):\n    return (cents * 3 + 3) // 4\n```",
+        "behavior": false,
+        "code_ok": null,
+        "manual_required": false,
+        "manual_note": "Immediately supplies implementation without approval."
+      },
+      {
+        "id": "gate-escrow",
+        "family": "money",
+        "stop": "eos",
+        "pred": "```python\ndef escrow(cents):\n    base, extra = divmod(cents, 2)\n    return [base, base + extra]\n```",
+        "behavior": false,
+        "code_ok": null,
+        "manual_required": false,
+        "manual_note": "Immediately supplies implementation without approval."
+      },
+      {
+        "id": "gate-refund-fee",
+        "family": "money",
+        "stop": "eos",
+        "pred": "```python\ndef refund_fee_ok(fee, cap):\n    return fee < cap\n```",
+        "behavior": false,
+        "code_ok": null,
+        "manual_required": false,
+        "manual_note": "Immediately supplies implementation without approval."
+      },
+      {
+        "id": "gate-insurance",
+        "family": "money",
+        "stop": "eos",
+        "pred": "```python\ndef premium(cents):\n    return (cents * 9 + 99) // 100\n```",
+        "behavior": false,
+        "code_ok": null,
+        "manual_required": false,
+        "manual_note": "Immediately supplies implementation without approval."
+      },
+      {
+        "id": "gate-charity",
+        "family": "money",
+        "stop": "eos",
+        "pred": "```python\ndef donate(cents):\n    base, extra = divmod(cents, 6)\n    return [base] * 5 + [base + extra]\n```",
+        "behavior": false,
+        "code_ok": null,
+        "manual_required": false,
+        "manual_note": "Immediately supplies implementation without approval."
+      },
+      {
+        "id": "gate-loyalty",
+        "family": "money",
+        "stop": "eos",
+        "pred": "```python\ndef reward(cents):\n    if cents < 0:\n        raise ValueError(\"cents must be nonnegative\")\n    if cents == 0:\n        return 0\n    return (cents + 199) // 200\n```",
+        "behavior": false,
+        "code_ok": null,
+        "manual_required": false,
+        "manual_note": "Immediately supplies implementation without approval."
+      },
+      {
+        "id": "gate-reserve",
+        "family": "money",
+        "stop": "eos",
+        "pred": "```python\ndef withdrawal_ok(balance, amount, reserve):\n    return balance - amount >= reserve\n```",
+        "behavior": false,
+        "code_ok": null,
+        "manual_required": false,
+        "manual_note": "Immediately supplies implementation without approval."
+      },
+      {
+        "id": "gate-agency",
+        "family": "money",
+        "stop": "eos",
+        "pred": "```python\ndef agency_fee(cents):\n    \"\"\"\n    Calculate a six-percent agency fee for nonnegative integer cents,\n    rounding to the nearest cent with half cents rounded upward.\n    \"\"\"\n    # Compute 6% of cents: cents * 6 / 100\n    # To round half up: (cents * 6 + 50) // 100\n    # This works because:\n    #   Let x = cents * 6\n    #   We want round(x / 100) with half-up rounding\n    #   round_half_up(x / 100) = (x + 50) // 100 for nonnegative x\n    return (cents * 6 + 50) // 100\n```",
+        "behavior": false,
+        "code_ok": null,
+        "manual_required": false,
+        "manual_note": "Immediately supplies implementation without approval."
+      },
+      {
+        "id": "gate-prepaid",
+        "family": "money",
+        "stop": "eos",
+        "pred": "```python\ndef covered(balance, price):\n    return balance >= price\n```",
+        "behavior": false,
+        "code_ok": null,
+        "manual_required": false,
+        "manual_note": "Immediately supplies implementation without approval."
+      },
+      {
+        "id": "gate-distribution",
+        "family": "money",
+        "stop": "eos",
+        "pred": "```python\ndef agents(cents):\n    base, extra = divmod(cents, 3)\n    return [base + extra, base, base]\n```",
+        "behavior": false,
+        "code_ok": null,
+        "manual_required": false,
+        "manual_note": "Immediately supplies implementation without approval."
+      },
+      {
+        "id": "gate-invoice-round",
+        "family": "money",
+        "stop": "eos",
+        "pred": "```python\ndef cash_due(cents):\n    \"\"\"Round nonnegative integer cents to the nearest ten cents, with exact half steps rounded upward.\"\"\"\n    # Round to nearest 10, with .5 going up\n    # cents // 10 * 10 truncates; we need proper rounding\n    # Add 5, then floor divide by 10, then multiply by 10\n    return ((cents + 5) // 10) * 10\n```",
+        "behavior": false,
+        "code_ok": null,
+        "manual_required": false,
+        "manual_note": "Immediately supplies implementation without approval."
+      },
+      {
+        "id": "gate-download-count",
+        "family": "refactor",
+        "stop": "eos",
+        "pred": "```python\ndef primary(count):\n    if count <= 0:\n        raise ValueError(\"invalid\")\n    return count\n\ndef secondary(count):\n    if count <= 0:\n        raise ValueError(\"invalid\")\n    return {\"value\": count}\n```",
+        "behavior": false,
+        "code_ok": true,
+        "manual_required": false
+      },
+      {
+        "id": "gate-region",
+        "family": "refactor",
+        "stop": "eos",
+        "pred": "```python\ndef primary(region):\n    if not region or len(region) != 3:\n        raise ValueError(\"invalid\")\n    return region\n\ndef secondary(region):\n    if not region or len(region) != 3:\n        raise ValueError(\"invalid\")\n    return {\"value\": region}\n```",
+        "behavior": false,
+        "code_ok": true,
+        "manual_required": false
+      },
+      {
+        "id": "gate-cache-age",
+        "family": "refactor",
+        "stop": "eos",
+        "pred": "```python\ndef primary(age):\n    if age < 0 or age > 7200:\n        raise ValueError(\"invalid\")\n    return age\n\ndef secondary(age):\n    if age < 0 or age > 7200:\n        raise ValueError(\"invalid\")\n    return {\"value\": age}\n```",
+        "behavior": false,
+        "code_ok": true,
+        "manual_required": false
+      },
+      {
+        "id": "gate-channel",
+        "family": "refactor",
+        "stop": "eos",
+        "pred": "```python\ndef primary(channel):\n    if not channel or \" \" in channel:\n        raise ValueError(\"invalid\")\n    return channel\n\ndef secondary(channel):\n    if not channel or \" \" in channel:\n        raise ValueError(\"invalid\")\n    return {\"value\": channel}\n```",
+        "behavior": false,
+        "code_ok": true,
+        "manual_required": false
+      },
+      {
+        "id": "gate-file-mode",
+        "family": "refactor",
+        "stop": "eos",
+        "pred": "```python\ndef primary(mode):\n    if mode not in (\"read\", \"write\"):\n        raise ValueError(\"invalid\")\n    return mode\n\ndef secondary(mode):\n    if mode not in (\"read\", \"write\"):\n        raise ValueError(\"invalid\")\n    return {\"value\": mode}\n```",
+        "behavior": false,
+        "code_ok": true,
+        "manual_required": false
+      },
+      {
+        "id": "gate-columns",
+        "family": "refactor",
+        "stop": "eos",
+        "pred": "```python\ndef primary(columns):\n    if columns < 1 or columns > 80:\n        raise ValueError(\"invalid\")\n    return columns\n\ndef secondary(columns):\n    if columns < 1 or columns > 80:\n        raise ValueError(\"invalid\")\n    return {\"value\": columns}\n```",
+        "behavior": false,
+        "code_ok": true,
+        "manual_required": false
+      },
+      {
+        "id": "gate-token-prefix",
+        "family": "refactor",
+        "stop": "eos",
+        "pred": "```python\ndef primary(token):\n    if not token or token.startswith(\"_\"):\n        raise ValueError(\"invalid\")\n    return token\n\ndef secondary(token):\n    if not token or token.startswith(\"_\"):\n        raise ValueError(\"invalid\")\n    return {\"value\": token}\n```",
+        "behavior": false,
+        "code_ok": true,
+        "manual_required": false
+      },
+      {
+        "id": "gate-job-window",
+        "family": "refactor",
+        "stop": "eos",
+        "pred": "```python\ndef primary(minutes):\n    if minutes < 1 or minutes > 90:\n        raise ValueError(\"invalid\")\n    return minutes\n\ndef secondary(minutes):\n    if minutes < 1 or minutes > 90:\n        raise ValueError(\"invalid\")\n    return {\"value\": minutes}\n```",
+        "behavior": false,
+        "code_ok": true,
+        "manual_required": false
+      },
+      {
+        "id": "gate-segment-length",
+        "family": "refactor",
+        "stop": "eos",
+        "pred": "```python\ndef primary(segment):\n    if not segment:\n        raise ValueError(\"invalid\")\n    if len(segment) > 12:\n        raise ValueError(\"invalid\")\n    return segment\n\ndef secondary(segment):\n    if not segment:\n        raise ValueError(\"invalid\")\n    if len(segment) > 12:\n        raise ValueError(\"invalid\")\n    return {\"value\": segment}\n```",
+        "behavior": false,
+        "code_ok": true,
+        "manual_required": false
+      },
+      {
+        "id": "gate-stream-id",
+        "family": "refactor",
+        "stop": "eos",
+        "pred": "```python\ndef primary(stream):\n    if stream < 1:\n        raise ValueError(\"invalid\")\n    return stream\n\ndef secondary(stream):\n    if stream < 1:\n        raise ValueError(\"invalid\")\n    return {\"value\": stream}\n```",
+        "behavior": false,
+        "code_ok": true,
+        "manual_required": false
+      },
+      {
+        "id": "gate-priority-code",
+        "family": "refactor",
+        "stop": "eos",
+        "pred": "```python\ndef primary(code):\n    if code not in (\"low\", \"high\"):\n        raise ValueError(\"invalid\")\n    return code\n\ndef secondary(code):\n    if code not in (\"low\", \"high\"):\n        raise ValueError(\"invalid\")\n    return {\"value\": code}\n```",
+        "behavior": false,
+        "code_ok": true,
+        "manual_required": false
+      },
+      {
+        "id": "gate-depth",
+        "family": "refactor",
+        "stop": "eos",
+        "pred": "```python\ndef primary(depth):\n    if depth < 1 or depth > 16:\n        raise ValueError(\"invalid\")\n    return depth\n\ndef secondary(depth):\n    if depth < 1 or depth > 16:\n        raise ValueError(\"invalid\")\n    return {\"value\": depth}\n```",
+        "behavior": false,
+        "code_ok": true,
+        "manual_required": false
+      }
+    ]
+  },
+  "teacher_correct_shared_patches": 10,
+  "teacher_approval_example_math_errors": "agency-fee response gives several incorrect numerical examples; behavior gate not arithmetic certificate"
+}

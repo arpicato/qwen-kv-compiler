@@ -1,0 +1,109 @@
+{
+  "behavior_structure": {
+    "4096": {
+      "compiled": {
+        "money_manual_review_required": 12,
+        "refactor_checks": 4,
+        "refactor_structure": 5
+      },
+      "none": {
+        "money_manual_review_required": 12,
+        "refactor_checks": 12,
+        "refactor_structure": 0
+      },
+      "teacher": {
+        "money_manual_review_required": 12,
+        "refactor_checks": 10,
+        "refactor_structure": 11
+      }
+    },
+    "8192": {
+      "compiled": {
+        "money_manual_review_required": 12,
+        "refactor_checks": 12,
+        "refactor_structure": 12
+      }
+    }
+  },
+  "complete": true,
+  "continuation": {
+    "candidate": {
+      "money_manual_review_required": 12,
+      "refactor_checks": 4,
+      "refactor_structure": 5
+    },
+    "control": {
+      "money_manual_review_required": 12,
+      "refactor_checks": 5,
+      "refactor_structure": 5
+    }
+  },
+  "probes": {
+    "agent78_4096": {
+      "compiled": {
+        "caps": 5,
+        "correct": 62,
+        "n": 78
+      },
+      "none": {
+        "caps": 74,
+        "correct": 32,
+        "n": 78
+      },
+      "teacher": {
+        "caps": 0,
+        "correct": 76,
+        "n": 78
+      }
+    },
+    "agent78_8192": {
+      "compiled": {
+        "caps": 1,
+        "correct": 72,
+        "n": 78
+      }
+    },
+    "stress197_4096": {
+      "compiled": {
+        "caps": 4,
+        "correct": 157,
+        "n": 197
+      },
+      "none": {
+        "caps": 159,
+        "correct": 91,
+        "n": 197
+      },
+      "teacher": {
+        "caps": 0,
+        "correct": 197,
+        "n": 197
+      }
+    },
+    "stress197_8192": {
+      "compiled": {
+        "caps": 0,
+        "correct": 181,
+        "n": 197
+      }
+    }
+  },
+  "tasks": {
+    "full": {
+      "correct": 40,
+      "n": 40
+    },
+    "joint4k": {
+      "correct": 24,
+      "n": 40
+    },
+    "joint8k": {
+      "correct": 29,
+      "n": 40
+    },
+    "none": {
+      "correct": 1,
+      "n": 40
+    }
+  }
+}

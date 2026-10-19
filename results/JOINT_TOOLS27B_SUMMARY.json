@@ -1,0 +1,209 @@
+{
+  "complete": true,
+  "probes": {
+    "agent78": {
+      "teacher": {
+        "correct": 76,
+        "n": 78,
+        "caps": 0,
+        "by_kind": {
+          "lookup": 27,
+          "style": 20,
+          "tool_select": 25,
+          "unrelated": 4
+        }
+      },
+      "none": {
+        "correct": 32,
+        "n": 78,
+        "caps": 74,
+        "by_kind": {
+          "lookup": 11,
+          "style": 14,
+          "tool_select": 3,
+          "unrelated": 4
+        }
+      },
+      "joint4k": {
+        "correct": 62,
+        "n": 78,
+        "caps": 5,
+        "by_kind": {
+          "lookup": 21,
+          "style": 18,
+          "tool_select": 19,
+          "unrelated": 4
+        }
+      },
+      "joint8k": {
+        "correct": 72,
+        "n": 78,
+        "caps": 1,
+        "by_kind": {
+          "lookup": 24,
+          "style": 18,
+          "tool_select": 26,
+          "unrelated": 4
+        }
+      }
+    },
+    "stress197": {
+      "teacher": {
+        "correct": 197,
+        "n": 197,
+        "caps": 0,
+        "by_kind": {
+          "lookup": 135,
+          "tool_select": 62
+        }
+      },
+      "none": {
+        "correct": 90,
+        "n": 197,
+        "caps": 159,
+        "by_kind": {
+          "lookup": 89,
+          "tool_select": 1
+        }
+      },
+      "joint4k": {
+        "correct": 157,
+        "n": 197,
+        "caps": 4,
+        "by_kind": {
+          "lookup": 113,
+          "tool_select": 44
+        }
+      },
+      "joint8k": {
+        "correct": 181,
+        "n": 197,
+        "caps": 0,
+        "by_kind": {
+          "lookup": 126,
+          "tool_select": 55
+        }
+      }
+    }
+  },
+  "tasks": {
+    "full": {
+      "correct": 40,
+      "n": 40,
+      "by_kind": {
+        "clarification": 8,
+        "policy_advice": 6,
+        "single_call": 20,
+        "two_step": 6
+      },
+      "failures": [],
+      "caps": 0
+    },
+    "none": {
+      "correct": 1,
+      "n": 40,
+      "by_kind": {
+        "clarification": 0,
+        "policy_advice": 0,
+        "single_call": 1,
+        "two_step": 0
+      },
+      "failures": [
+        "pr-body",
+        "pr-title",
+        "pr-ready",
+        "pr-close",
+        "pr-create",
+        "branch",
+        "issue-create",
+        "issue-body",
+        "issue-title",
+        "comment-edit",
+        "release",
+        "gist",
+        "advisory",
+        "file",
+        "blame",
+        "code-alert",
+        "dependency-alert",
+        "team",
+        "failed-logs",
+        "missing-repo",
+        "missing-pr",
+        "missing-gist",
+        "missing-tag",
+        "missing-comment",
+        "missing-branch",
+        "missing-team",
+        "missing-advisory",
+        "file-update-0",
+        "file-update-1",
+        "file-update-2",
+        "resolve-0",
+        "resolve-1",
+        "resolve-2",
+        "node",
+        "python",
+        "generated",
+        "migration",
+        "unrelated-failure",
+        "lint"
+      ],
+      "caps": 0
+    },
+    "joint4k": {
+      "correct": 24,
+      "n": 40,
+      "by_kind": {
+        "clarification": 4,
+        "policy_advice": 5,
+        "single_call": 12,
+        "two_step": 3
+      },
+      "failures": [
+        "pr-ready",
+        "branch",
+        "comment-edit",
+        "gist",
+        "advisory",
+        "blame",
+        "team",
+        "failed-logs",
+        "missing-gist",
+        "missing-comment",
+        "missing-branch",
+        "missing-team",
+        "resolve-0",
+        "resolve-1",
+        "resolve-2",
+        "generated"
+      ],
+      "caps": 0
+    },
+    "joint8k": {
+      "correct": 29,
+      "n": 40,
+      "by_kind": {
+        "clarification": 6,
+        "policy_advice": 6,
+        "single_call": 14,
+        "two_step": 3
+      },
+      "failures": [
+        "pr-ready",
+        "gist",
+        "blame",
+        "code-alert",
+        "dependency-alert",
+        "failed-logs",
+        "missing-gist",
+        "missing-comment",
+        "file-update-0",
+        "resolve-0",
+        "resolve-2"
+      ],
+      "caps": 0
+    }
+  },
+  "elapsed_s": 1274.2886748313904
+}

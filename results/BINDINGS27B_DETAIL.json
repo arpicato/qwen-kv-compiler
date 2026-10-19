@@ -1,0 +1,99 @@
+{
+  "dev": {
+    "baseline_s": 112.68297982215881,
+    "candidate_controls_s": 545.2077496051788,
+    "vs_previous476": {
+      "previous_correct": 179,
+      "current_correct": 176,
+      "gains": 4,
+      "losses": 7
+    },
+    "slices": {
+      "new_direct_binding": {
+        "n": 98,
+        "control_correct": 88,
+        "previous_correct": 88,
+        "current_correct": 87
+      },
+      "other_argument": {
+        "n": 34,
+        "control_correct": 29,
+        "previous_correct": 34,
+        "current_correct": 32
+      }
+    }
+  },
+  "agent78": {
+    "baseline_s": 75.03121209144592,
+    "candidate_controls_s": 253.44411873817444,
+    "vs_previous476": {
+      "previous_correct": 73,
+      "current_correct": 75,
+      "gains": 3,
+      "losses": 1
+    },
+    "slices": {
+      "historical_shared20": {
+        "n": 20,
+        "control_correct": 19,
+        "previous_correct": 20,
+        "current_correct": 20
+      },
+      "other58": {
+        "n": 58,
+        "control_correct": 56,
+        "previous_correct": 53,
+        "current_correct": 55
+      }
+    }
+  },
+  "stress197": {
+    "baseline_s": 111.3968358039856,
+    "candidate_controls_s": 517.1854555606842,
+    "vs_previous476": {
+      "previous_correct": 173,
+      "current_correct": 175,
+      "gains": 4,
+      "losses": 2
+    },
+    "slices": {
+      "new_direct_binding": {
+        "n": 101,
+        "control_correct": 86,
+        "previous_correct": 83,
+        "current_correct": 86
+      },
+      "other_argument": {
+        "n": 34,
+        "control_correct": 32,
+        "previous_correct": 33,
+        "current_correct": 33
+      }
+    }
+  },
+  "diagnostic12": {
+    "baseline_s": 46.46753001213074,
+    "candidate_controls_s": 74.15449595451355,
+    "vs_previous476": {
+      "previous_correct": 9,
+      "current_correct": 7,
+      "gains": 0,
+      "losses": 2
+    },
+    "slices": {
+      "dev": {
+        "n": 6,
+        "control_correct": 4,
+        "previous_correct": 5,
+        "current_correct": 4
+      },
+      "test": {
+        "n": 6,
+        "control_correct": 3,
+        "previous_correct": 4,
+        "current_correct": 3
+      }
+    }
+  },
+  "total_recorded_s": 11018.842955350876
+}

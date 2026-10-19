@@ -1,0 +1,47 @@
+{
+  "config": {
+    "frozen_sha256": "a33e05d2591ca9fc5deb8f61e9666ac2e2fb6def45cf2764921b81e75c067ef2",
+    "split": "debug",
+    "arms": [
+      "full"
+    ]
+  },
+  "complete": true,
+  "elapsed_s": 63.19611310958862,
+  "rows": {
+    "full": [
+      {
+        "id": "debug-read",
+        "family": "debug",
+        "ok": true,
+        "reason": "completed",
+        "trace": [
+          {
+            "pred": "{\"op\":\"read\",\"path\":\"notes.txt\"}",
+            "stop": "eos",
+            "tokens": 10,
+            "event": {
+              "tool": {
+                "path": "notes.txt",
+                "content": "fixture ready\n"
+              }
+            }
+          },
+          {
+            "pred": "{\"op\":\"finish\",\"text\":\"notes.txt contains: fixture ready\"}",
+            "stop": "eos",
+            "tokens": 14,
+            "event": {
+              "done": true,
+              "ok": true,
+              "reason": "completed"
+            }
+          }
+        ],
+        "final_files": {
+          "notes.txt": "fixture ready\n"
+        }
+      }
+    ]
+  }
+}

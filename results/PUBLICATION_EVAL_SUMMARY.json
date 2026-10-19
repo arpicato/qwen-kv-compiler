@@ -1,0 +1,252 @@
+{
+  "complete": true,
+  "counts": {
+    "knowledge": 60,
+    "tools": 60,
+    "behavior": 40
+  },
+  "scores": {
+    "full": {
+      "knowledge": 60,
+      "tools": 59,
+      "behavior": 33
+    },
+    "none": {
+      "knowledge": 28,
+      "tools": 2,
+      "behavior": 0
+    },
+    "joint4k": {
+      "knowledge": 46,
+      "tools": 51,
+      "behavior": 18
+    },
+    "joint8k": {
+      "knowledge": 55,
+      "tools": 56,
+      "behavior": 36
+    }
+  },
+  "details": {
+    "full": {
+      "knowledge": {
+        "tool_identity": {
+          "correct": 20,
+          "n": 20,
+          "caps": 0
+        },
+        "field_identity": {
+          "correct": 20,
+          "n": 20,
+          "caps": 0
+        },
+        "instruction_recall": {
+          "correct": 20,
+          "n": 20,
+          "caps": 0
+        }
+      },
+      "tools": {
+        "single_call": {
+          "completed": 20,
+          "n": 20
+        },
+        "clarification": {
+          "completed": 20,
+          "n": 20
+        },
+        "two_step": {
+          "completed": 19,
+          "n": 20
+        },
+        "attempted_calls": {
+          "n": 80,
+          "format_valid": 80,
+          "tool_correct": 79,
+          "schema_valid": 80,
+          "values_correct": 79,
+          "correct": 79
+        },
+        "unattempted_expected_calls": 0,
+        "clarification_first_action": {
+          "correct": 20,
+          "n": 20
+        },
+        "caps": 0
+      },
+      "behavior": {
+        "structure": 35,
+        "functional": 33,
+        "joint": 33,
+        "unnecessary_pauses": 5,
+        "caps": 0
+      }
+    },
+    "none": {
+      "knowledge": {
+        "tool_identity": {
+          "correct": 7,
+          "n": 20,
+          "caps": 0
+        },
+        "field_identity": {
+          "correct": 15,
+          "n": 20,
+          "caps": 0
+        },
+        "instruction_recall": {
+          "correct": 6,
+          "n": 20,
+          "caps": 0
+        }
+      },
+      "tools": {
+        "single_call": {
+          "completed": 2,
+          "n": 20
+        },
+        "clarification": {
+          "completed": 0,
+          "n": 20
+        },
+        "two_step": {
+          "completed": 0,
+          "n": 20
+        },
+        "attempted_calls": {
+          "n": 61,
+          "format_valid": 61,
+          "tool_correct": 26,
+          "schema_valid": 5,
+          "values_correct": 4,
+          "correct": 4
+        },
+        "unattempted_expected_calls": 19,
+        "clarification_first_action": {
+          "correct": 19,
+          "n": 20
+        },
+        "caps": 0
+      },
+      "behavior": {
+        "structure": 0,
+        "functional": 39,
+        "joint": 0,
+        "unnecessary_pauses": 0,
+        "caps": 0
+      }
+    },
+    "joint4k": {
+      "knowledge": {
+        "tool_identity": {
+          "correct": 18,
+          "n": 20,
+          "caps": 0
+        },
+        "field_identity": {
+          "correct": 18,
+          "n": 20,
+          "caps": 0
+        },
+        "instruction_recall": {
+          "correct": 10,
+          "n": 20,
+          "caps": 0
+        }
+      },
+      "tools": {
+        "single_call": {
+          "completed": 16,
+          "n": 20
+        },
+        "clarification": {
+          "completed": 16,
+          "n": 20
+        },
+        "two_step": {
+          "completed": 19,
+          "n": 20
+        },
+        "attempted_calls": {
+          "n": 80,
+          "format_valid": 80,
+          "tool_correct": 75,
+          "schema_valid": 75,
+          "values_correct": 71,
+          "correct": 71
+        },
+        "unattempted_expected_calls": 0,
+        "clarification_first_action": {
+          "correct": 20,
+          "n": 20
+        },
+        "caps": 0
+      },
+      "behavior": {
+        "structure": 20,
+        "functional": 19,
+        "joint": 18,
+        "unnecessary_pauses": 19,
+        "caps": 0
+      }
+    },
+    "joint8k": {
+      "knowledge": {
+        "tool_identity": {
+          "correct": 20,
+          "n": 20,
+          "caps": 0
+        },
+        "field_identity": {
+          "correct": 19,
+          "n": 20,
+          "caps": 0
+        },
+        "instruction_recall": {
+          "correct": 16,
+          "n": 20,
+          "caps": 0
+        }
+      },
+      "tools": {
+        "single_call": {
+          "completed": 20,
+          "n": 20
+        },
+        "clarification": {
+          "completed": 19,
+          "n": 20
+        },
+        "two_step": {
+          "completed": 17,
+          "n": 20
+        },
+        "attempted_calls": {
+          "n": 80,
+          "format_valid": 80,
+          "tool_correct": 79,
+          "schema_valid": 78,
+          "values_correct": 76,
+          "correct": 76
+        },
+        "unattempted_expected_calls": 0,
+        "clarification_first_action": {
+          "correct": 20,
+          "n": 20
+        },
+        "caps": 0
+      },
+      "behavior": {
+        "structure": 38,
+        "functional": 37,
+        "joint": 36,
+        "unnecessary_pauses": 1,
+        "caps": 0
+      }
+    }
+  },
+  "same_artifact_hashes": true,
+  "same_prompt_hash": true,
+  "provenance": "Saved v2 knowledge/tools and v4 behavior were evaluated separately using identical prompt/cache bytes; no claim of a previously completed one-process combined run.",
+  "behavior_scope": "Historically selected/inspected development bank, not independent holdout; behavior means correct shared-rule implementation on these cases only."
+}

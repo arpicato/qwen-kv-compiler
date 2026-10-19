@@ -1,0 +1,318 @@
+{
+  "complete": true,
+  "elapsed_s": 393.0323061943054,
+  "arms": {
+    "full": {
+      "knowledge": {
+        "tool_identity": {
+          "correct": 8,
+          "n": 8,
+          "caps": 0
+        },
+        "field_identity": {
+          "correct": 8,
+          "n": 8,
+          "caps": 0
+        },
+        "instruction_recall": {
+          "correct": 8,
+          "n": 8,
+          "caps": 0
+        }
+      },
+      "tools": {
+        "single_call": {
+          "completed": 8,
+          "n": 8
+        },
+        "clarification": {
+          "completed": 3,
+          "n": 4
+        },
+        "two_step": {
+          "completed": 4,
+          "n": 4
+        },
+        "attempted_calls": {
+          "n": 19,
+          "format_valid": 19,
+          "tool_correct": 19,
+          "schema_valid": 19,
+          "values_correct": 19,
+          "correct": 19
+        },
+        "unattempted_expected_calls": 1,
+        "clarification_first_action": {
+          "correct": 3,
+          "n": 4
+        },
+        "caps": 0
+      },
+      "behavior": {
+        "money_unapproved": {
+          "n": 6,
+          "process_or_structure_pass": 6,
+          "functional_pass": 0,
+          "both": 0,
+          "proposal_content_incorrect": 0
+        },
+        "money_approved": {
+          "n": 6,
+          "process_or_structure_pass": 6,
+          "functional_pass": 5,
+          "both": 5,
+          "proposal_content_incorrect": 0
+        },
+        "rule_shared": {
+          "n": 6,
+          "process_or_structure_pass": 6,
+          "functional_pass": 6,
+          "both": 6,
+          "proposal_content_incorrect": 0
+        },
+        "rule_distinct": {
+          "n": 6,
+          "process_or_structure_pass": 6,
+          "functional_pass": 6,
+          "both": 6,
+          "proposal_content_incorrect": 0
+        },
+        "caps": 0
+      }
+    },
+    "none": {
+      "knowledge": {
+        "tool_identity": {
+          "correct": 0,
+          "n": 8,
+          "caps": 7
+        },
+        "field_identity": {
+          "correct": 3,
+          "n": 8,
+          "caps": 0
+        },
+        "instruction_recall": {
+          "correct": 3,
+          "n": 8,
+          "caps": 1
+        }
+      },
+      "tools": {
+        "single_call": {
+          "completed": 1,
+          "n": 8
+        },
+        "clarification": {
+          "completed": 0,
+          "n": 4
+        },
+        "two_step": {
+          "completed": 1,
+          "n": 4
+        },
+        "attempted_calls": {
+          "n": 17,
+          "format_valid": 17,
+          "tool_correct": 8,
+          "schema_valid": 4,
+          "values_correct": 4,
+          "correct": 4
+        },
+        "unattempted_expected_calls": 3,
+        "clarification_first_action": {
+          "correct": 3,
+          "n": 4
+        },
+        "caps": 0
+      },
+      "behavior": {
+        "money_unapproved": {
+          "n": 6,
+          "process_or_structure_pass": 0,
+          "functional_pass": 5,
+          "both": 0,
+          "proposal_content_incorrect": 0
+        },
+        "money_approved": {
+          "n": 6,
+          "process_or_structure_pass": 6,
+          "functional_pass": 5,
+          "both": 5,
+          "proposal_content_incorrect": 0
+        },
+        "rule_shared": {
+          "n": 6,
+          "process_or_structure_pass": 0,
+          "functional_pass": 6,
+          "both": 0,
+          "proposal_content_incorrect": 0
+        },
+        "rule_distinct": {
+          "n": 6,
+          "process_or_structure_pass": 6,
+          "functional_pass": 6,
+          "both": 6,
+          "proposal_content_incorrect": 0
+        },
+        "caps": 0
+      }
+    },
+    "joint4k": {
+      "knowledge": {
+        "tool_identity": {
+          "correct": 8,
+          "n": 8,
+          "caps": 0
+        },
+        "field_identity": {
+          "correct": 7,
+          "n": 8,
+          "caps": 0
+        },
+        "instruction_recall": {
+          "correct": 5,
+          "n": 8,
+          "caps": 0
+        }
+      },
+      "tools": {
+        "single_call": {
+          "completed": 7,
+          "n": 8
+        },
+        "clarification": {
+          "completed": 2,
+          "n": 4
+        },
+        "two_step": {
+          "completed": 4,
+          "n": 4
+        },
+        "attempted_calls": {
+          "n": 19,
+          "format_valid": 19,
+          "tool_correct": 19,
+          "schema_valid": 18,
+          "values_correct": 17,
+          "correct": 17
+        },
+        "unattempted_expected_calls": 1,
+        "clarification_first_action": {
+          "correct": 3,
+          "n": 4
+        },
+        "caps": 0
+      },
+      "behavior": {
+        "money_unapproved": {
+          "n": 6,
+          "process_or_structure_pass": 6,
+          "functional_pass": 0,
+          "both": 0,
+          "proposal_content_incorrect": 1
+        },
+        "money_approved": {
+          "n": 6,
+          "process_or_structure_pass": 6,
+          "functional_pass": 6,
+          "both": 6,
+          "proposal_content_incorrect": 0
+        },
+        "rule_shared": {
+          "n": 6,
+          "process_or_structure_pass": 3,
+          "functional_pass": 6,
+          "both": 3,
+          "proposal_content_incorrect": 0
+        },
+        "rule_distinct": {
+          "n": 6,
+          "process_or_structure_pass": 6,
+          "functional_pass": 6,
+          "both": 6,
+          "proposal_content_incorrect": 0
+        },
+        "caps": 0
+      }
+    },
+    "joint8k": {
+      "knowledge": {
+        "tool_identity": {
+          "correct": 8,
+          "n": 8,
+          "caps": 0
+        },
+        "field_identity": {
+          "correct": 8,
+          "n": 8,
+          "caps": 0
+        },
+        "instruction_recall": {
+          "correct": 6,
+          "n": 8,
+          "caps": 0
+        }
+      },
+      "tools": {
+        "single_call": {
+          "completed": 8,
+          "n": 8
+        },
+        "clarification": {
+          "completed": 3,
+          "n": 4
+        },
+        "two_step": {
+          "completed": 3,
+          "n": 4
+        },
+        "attempted_calls": {
+          "n": 19,
+          "format_valid": 19,
+          "tool_correct": 19,
+          "schema_valid": 18,
+          "values_correct": 18,
+          "correct": 18
+        },
+        "unattempted_expected_calls": 1,
+        "clarification_first_action": {
+          "correct": 3,
+          "n": 4
+        },
+        "caps": 0
+      },
+      "behavior": {
+        "money_unapproved": {
+          "n": 6,
+          "process_or_structure_pass": 6,
+          "functional_pass": 0,
+          "both": 0,
+          "proposal_content_incorrect": 1
+        },
+        "money_approved": {
+          "n": 6,
+          "process_or_structure_pass": 6,
+          "functional_pass": 5,
+          "both": 5,
+          "proposal_content_incorrect": 0
+        },
+        "rule_shared": {
+          "n": 6,
+          "process_or_structure_pass": 2,
+          "functional_pass": 6,
+          "both": 2,
+          "proposal_content_incorrect": 0
+        },
+        "rule_distinct": {
+          "n": 6,
+          "process_or_structure_pass": 6,
+          "functional_pass": 6,
+          "both": 6,
+          "proposal_content_incorrect": 0
+        },
+        "caps": 0
+      }
+    }
+  }
+}

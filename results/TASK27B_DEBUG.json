@@ -1,0 +1,51 @@
+{
+  "config": {
+    "frozen_sha256": "d3bbef9c795fad7279127c62a59206ca139f7487a16bc4024a22ed836b10b9d2",
+    "split": "debug",
+    "arms": [
+      "full"
+    ],
+    "protocol": "offline-json-tasks27b-v1"
+  },
+  "complete": true,
+  "rows": {
+    "full": [
+      {
+        "id": "debug-direct",
+        "kind": "debug",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"call\":\"mcp__github__get_tag\",\"arguments\":{\"owner\":\"acme-platform\",\"repo\":\"sandbox\",\"tag\":\"debug-v1\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 29
+          }
+        ]
+      },
+      {
+        "id": "debug-ask",
+        "kind": "debug",
+        "ok": true,
+        "trace": [
+          {
+            "pred": "{\"ask\":\"What is the gist ID you want to fetch?\"}",
+            "ok": true,
+            "reason": "text rubric passed",
+            "stop": "eos",
+            "tokens": 14
+          },
+          {
+            "pred": "{\"call\":\"mcp__github__get_gist\",\"arguments\":{\"gist_id\":\"debug123\"}}",
+            "ok": true,
+            "reason": "accepted call",
+            "stop": "eos",
+            "tokens": 22
+          }
+        ]
+      }
+    ]
+  },
+  "elapsed_s": 64.11645078659058
+}

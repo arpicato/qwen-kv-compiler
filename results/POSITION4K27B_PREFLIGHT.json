@@ -1,0 +1,140 @@
+{
+  "selector": "decision-v1-eos-first-name-starts-fragments-fallback",
+  "max_pred_pos": 10,
+  "items_hash": "edbbd57aedee3d62",
+  "questions_sha256": "c3d42cfc23e3f8bd70bcfa86772e3ad1509689d0a88f9d9c19a1a8db86e5cc62",
+  "summary": {
+    "original_lookup": {
+      "n": 26,
+      "changed": 0,
+      "old": {
+        "name_tokens": 0,
+        "name_tokens_preceded_by_query": 0,
+        "name_start_tokens": 0,
+        "name_starts_preceded_by_query": 0,
+        "tool_leaf_start_tokens": 0,
+        "tool_leaf_starts_preceded_by_query": 0,
+        "eos_preceded_by_query": 21
+      },
+      "new": {
+        "name_tokens": 0,
+        "name_tokens_preceded_by_query": 0,
+        "name_start_tokens": 0,
+        "name_starts_preceded_by_query": 0,
+        "tool_leaf_start_tokens": 0,
+        "tool_leaf_starts_preceded_by_query": 0,
+        "eos_preceded_by_query": 21
+      }
+    },
+    "original_style": {
+      "n": 22,
+      "changed": 0,
+      "old": {
+        "name_tokens": 0,
+        "name_tokens_preceded_by_query": 0,
+        "name_start_tokens": 0,
+        "name_starts_preceded_by_query": 0,
+        "tool_leaf_start_tokens": 0,
+        "tool_leaf_starts_preceded_by_query": 0,
+        "eos_preceded_by_query": 22
+      },
+      "new": {
+        "name_tokens": 0,
+        "name_tokens_preceded_by_query": 0,
+        "name_start_tokens": 0,
+        "name_starts_preceded_by_query": 0,
+        "tool_leaf_start_tokens": 0,
+        "tool_leaf_starts_preceded_by_query": 0,
+        "eos_preceded_by_query": 22
+      }
+    },
+    "original_tool_select": {
+      "n": 23,
+      "changed": 0,
+      "old": {
+        "name_tokens": 0,
+        "name_tokens_preceded_by_query": 0,
+        "name_start_tokens": 0,
+        "name_starts_preceded_by_query": 0,
+        "tool_leaf_start_tokens": 0,
+        "tool_leaf_starts_preceded_by_query": 0,
+        "eos_preceded_by_query": 23
+      },
+      "new": {
+        "name_tokens": 0,
+        "name_tokens_preceded_by_query": 0,
+        "name_start_tokens": 0,
+        "name_starts_preceded_by_query": 0,
+        "tool_leaf_start_tokens": 0,
+        "tool_leaf_starts_preceded_by_query": 0,
+        "eos_preceded_by_query": 23
+      }
+    },
+    "added_lookup": {
+      "n": 137,
+      "changed": 137,
+      "old": {
+        "name_tokens": 2309,
+        "name_tokens_preceded_by_query": 722,
+        "name_start_tokens": 1078,
+        "name_starts_preceded_by_query": 139,
+        "tool_leaf_start_tokens": 136,
+        "tool_leaf_starts_preceded_by_query": 0,
+        "eos_preceded_by_query": 7
+      },
+      "new": {
+        "name_tokens": 2309,
+        "name_tokens_preceded_by_query": 1159,
+        "name_start_tokens": 1078,
+        "name_starts_preceded_by_query": 715,
+        "tool_leaf_start_tokens": 136,
+        "tool_leaf_starts_preceded_by_query": 131,
+        "eos_preceded_by_query": 137
+      }
+    },
+    "added_tool_select": {
+      "n": 268,
+      "changed": 267,
+      "old": {
+        "name_tokens": 2415,
+        "name_tokens_preceded_by_query": 484,
+        "name_start_tokens": 432,
+        "name_starts_preceded_by_query": 89,
+        "tool_leaf_start_tokens": 268,
+        "tool_leaf_starts_preceded_by_query": 0,
+        "eos_preceded_by_query": 63
+      },
+      "new": {
+        "name_tokens": 2415,
+        "name_tokens_preceded_by_query": 1311,
+        "name_start_tokens": 432,
+        "name_starts_preceded_by_query": 220,
+        "tool_leaf_start_tokens": 268,
+        "tool_leaf_starts_preceded_by_query": 268,
+        "eos_preceded_by_query": 268
+      }
+    },
+    "binding_lookup": {
+      "n": 304,
+      "changed": 0,
+      "old": {
+        "name_tokens": 482,
+        "name_tokens_preceded_by_query": 481,
+        "name_start_tokens": 304,
+        "name_starts_preceded_by_query": 304,
+        "tool_leaf_start_tokens": 0,
+        "tool_leaf_starts_preceded_by_query": 0,
+        "eos_preceded_by_query": 304
+      },
+      "new": {
+        "name_tokens": 482,
+        "name_tokens_preceded_by_query": 481,
+        "name_start_tokens": 304,
+        "name_starts_preceded_by_query": 304,
+        "tool_leaf_start_tokens": 0,
+        "tool_leaf_starts_preceded_by_query": 0,
+        "eos_preceded_by_query": 304
+      }
+    }
+  }
+}

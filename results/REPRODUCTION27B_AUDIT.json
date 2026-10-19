@@ -1,0 +1,369 @@
+{
+  "complete": true,
+  "phase_output_hashes_equal": true,
+  "layers": {
+    "3": {
+      "prefix_equal": {
+        "k_sys": true,
+        "v_sys": true
+      },
+      "equal_trajectory_arrays": {
+        "q_rot": 812,
+        "q_logical": 812,
+        "gate": 812,
+        "k_live": 812,
+        "v_live": 812,
+        "k_logical": 812
+      },
+      "projection_equal": true,
+      "projection_max_diff": 0.0
+    },
+    "7": {
+      "prefix_equal": {
+        "k_sys": false,
+        "v_sys": false
+      },
+      "equal_trajectory_arrays": {
+        "q_rot": 0,
+        "q_logical": 812,
+        "gate": 0,
+        "k_live": 0,
+        "v_live": 0,
+        "k_logical": 812
+      },
+      "projection_equal": true,
+      "projection_max_diff": 0.0
+    },
+    "11": {
+      "prefix_equal": {
+        "k_sys": false,
+        "v_sys": false
+      },
+      "equal_trajectory_arrays": {
+        "q_rot": 0,
+        "q_logical": 812,
+        "gate": 0,
+        "k_live": 0,
+        "v_live": 0,
+        "k_logical": 812
+      },
+      "projection_equal": true,
+      "projection_max_diff": 0.0
+    },
+    "15": {
+      "prefix_equal": {
+        "k_sys": false,
+        "v_sys": false
+      },
+      "equal_trajectory_arrays": {
+        "q_rot": 0,
+        "q_logical": 812,
+        "gate": 0,
+        "k_live": 0,
+        "v_live": 0,
+        "k_logical": 812
+      },
+      "projection_equal": true,
+      "projection_max_diff": 0.0
+    },
+    "19": {
+      "prefix_equal": {
+        "k_sys": false,
+        "v_sys": false
+      },
+      "equal_trajectory_arrays": {
+        "q_rot": 0,
+        "q_logical": 812,
+        "gate": 0,
+        "k_live": 0,
+        "v_live": 0,
+        "k_logical": 812
+      },
+      "projection_equal": true,
+      "projection_max_diff": 0.0
+    },
+    "23": {
+      "prefix_equal": {
+        "k_sys": false,
+        "v_sys": false
+      },
+      "equal_trajectory_arrays": {
+        "q_rot": 0,
+        "q_logical": 812,
+        "gate": 0,
+        "k_live": 0,
+        "v_live": 0,
+        "k_logical": 812
+      },
+      "projection_equal": true,
+      "projection_max_diff": 0.0
+    },
+    "27": {
+      "prefix_equal": {
+        "k_sys": false,
+        "v_sys": false
+      },
+      "equal_trajectory_arrays": {
+        "q_rot": 0,
+        "q_logical": 812,
+        "gate": 0,
+        "k_live": 0,
+        "v_live": 0,
+        "k_logical": 812
+      },
+      "projection_equal": true,
+      "projection_max_diff": 0.0
+    },
+    "31": {
+      "prefix_equal": {
+        "k_sys": false,
+        "v_sys": false
+      },
+      "equal_trajectory_arrays": {
+        "q_rot": 0,
+        "q_logical": 812,
+        "gate": 0,
+        "k_live": 0,
+        "v_live": 0,
+        "k_logical": 812
+      },
+      "projection_equal": true,
+      "projection_max_diff": 0.0
+    },
+    "35": {
+      "prefix_equal": {
+        "k_sys": false,
+        "v_sys": false
+      },
+      "equal_trajectory_arrays": {
+        "q_rot": 0,
+        "q_logical": 812,
+        "gate": 0,
+        "k_live": 0,
+        "v_live": 0,
+        "k_logical": 812
+      },
+      "projection_equal": true,
+      "projection_max_diff": 0.0
+    },
+    "39": {
+      "prefix_equal": {
+        "k_sys": false,
+        "v_sys": false
+      },
+      "equal_trajectory_arrays": {
+        "q_rot": 0,
+        "q_logical": 812,
+        "gate": 0,
+        "k_live": 0,
+        "v_live": 0,
+        "k_logical": 812
+      },
+      "projection_equal": true,
+      "projection_max_diff": 0.0
+    },
+    "43": {
+      "prefix_equal": {
+        "k_sys": false,
+        "v_sys": false
+      },
+      "equal_trajectory_arrays": {
+        "q_rot": 0,
+        "q_logical": 812,
+        "gate": 0,
+        "k_live": 0,
+        "v_live": 0,
+        "k_logical": 812
+      },
+      "projection_equal": true,
+      "projection_max_diff": 0.0
+    },
+    "47": {
+      "prefix_equal": {
+        "k_sys": false,
+        "v_sys": false
+      },
+      "equal_trajectory_arrays": {
+        "q_rot": 0,
+        "q_logical": 812,
+        "gate": 0,
+        "k_live": 0,
+        "v_live": 0,
+        "k_logical": 812
+      },
+      "projection_equal": true,
+      "projection_max_diff": 0.0
+    },
+    "51": {
+      "prefix_equal": {
+        "k_sys": false,
+        "v_sys": false
+      },
+      "equal_trajectory_arrays": {
+        "q_rot": 0,
+        "q_logical": 812,
+        "gate": 0,
+        "k_live": 0,
+        "v_live": 0,
+        "k_logical": 812
+      },
+      "projection_equal": true,
+      "projection_max_diff": 0.0
+    },
+    "55": {
+      "prefix_equal": {
+        "k_sys": false,
+        "v_sys": false
+      },
+      "equal_trajectory_arrays": {
+        "q_rot": 0,
+        "q_logical": 812,
+        "gate": 0,
+        "k_live": 0,
+        "v_live": 0,
+        "k_logical": 812
+      },
+      "projection_equal": true,
+      "projection_max_diff": 0.0
+    },
+    "59": {
+      "prefix_equal": {
+        "k_sys": false,
+        "v_sys": false
+      },
+      "equal_trajectory_arrays": {
+        "q_rot": 0,
+        "q_logical": 812,
+        "gate": 0,
+        "k_live": 0,
+        "v_live": 0,
+        "k_logical": 812
+      },
+      "projection_equal": true,
+      "projection_max_diff": 0.0
+    },
+    "63": {
+      "prefix_equal": {
+        "k_sys": false,
+        "v_sys": false
+      },
+      "equal_trajectory_arrays": {
+        "q_rot": 0,
+        "q_logical": 812,
+        "gate": 0,
+        "k_live": 0,
+        "v_live": 0,
+        "k_logical": 812
+      },
+      "projection_equal": true,
+      "projection_max_diff": 0.0
+    }
+  },
+  "export": {
+    "4k": {
+      "slots": 4096,
+      "bytes": 268435456,
+      "finite": true
+    },
+    "8k": {
+      "slots": 8192,
+      "bytes": 536870912,
+      "finite": true
+    },
+    "control": {
+      "slots": 4096,
+      "bytes": 268435456,
+      "finite": true
+    },
+    "candidate": {
+      "slots": 4096,
+      "bytes": 268435456,
+      "finite": true
+    }
+  },
+  "probe_parity": {
+    "agent78_4096": {
+      "teacher": {
+        "same_text": 78,
+        "n": 78,
+        "gains": 0,
+        "losses": 0
+      },
+      "none": {
+        "same_text": 77,
+        "n": 78,
+        "gains": 0,
+        "losses": 0
+      },
+      "compiled": {
+        "same_text": 76,
+        "n": 78,
+        "gains": 0,
+        "losses": 0
+      }
+    },
+    "agent78_8192": {
+      "compiled": {
+        "same_text": 77,
+        "n": 78,
+        "gains": 0,
+        "losses": 0
+      }
+    },
+    "stress197_4096": {
+      "teacher": {
+        "same_text": 197,
+        "n": 197,
+        "gains": 0,
+        "losses": 0
+      },
+      "none": {
+        "same_text": 196,
+        "n": 197,
+        "gains": 1,
+        "losses": 0
+      },
+      "compiled": {
+        "same_text": 196,
+        "n": 197,
+        "gains": 0,
+        "losses": 0
+      }
+    },
+    "stress197_8192": {
+      "compiled": {
+        "same_text": 197,
+        "n": 197,
+        "gains": 0,
+        "losses": 0
+      }
+    }
+  },
+  "task_parity": {
+    "full": {
+      "same_trace": 39,
+      "n": 40,
+      "gains": 0,
+      "losses": 0
+    },
+    "none": {
+      "same_trace": 40,
+      "n": 40,
+      "gains": 0,
+      "losses": 0
+    },
+    "joint4k": {
+      "same_trace": 40,
+      "n": 40,
+      "gains": 0,
+      "losses": 0
+    },
+    "joint8k": {
+      "same_trace": 38,
+      "n": 40,
+      "gains": 0,
+      "losses": 0
+    }
+  },
+  "elapsed_s": 141.33222031593323
+}

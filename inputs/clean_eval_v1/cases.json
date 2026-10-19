@@ -1,0 +1,1007 @@
+{
+  "version": "clean-eval-v1",
+  "knowledge": [
+    {
+      "id": "knowledge-tool-1",
+      "category": "tool_identity",
+      "q": "I want the profile of the GitHub account currently authenticated, not another user. Name one tool.",
+      "answers": [
+        "get_me",
+        "mcp__github__get_me"
+      ],
+      "evidence": "### `mcp__github__get_me`"
+    },
+    {
+      "id": "knowledge-tool-2",
+      "category": "tool_identity",
+      "q": "Which GitHub tool enumerates the tags belonging to a repository?",
+      "answers": [
+        "list_tags",
+        "mcp__github__list_tags"
+      ],
+      "evidence": "### `mcp__github__list_tags`"
+    },
+    {
+      "id": "knowledge-tool-3",
+      "category": "tool_identity",
+      "q": "Name the GitHub tool that obtains the definition of one named repository label.",
+      "answers": [
+        "get_label",
+        "mcp__github__get_label"
+      ],
+      "evidence": "### `mcp__github__get_label`"
+    },
+    {
+      "id": "knowledge-tool-4",
+      "category": "tool_identity",
+      "q": "Which GitHub tool starts a new branch from a chosen source branch?",
+      "answers": [
+        "create_branch",
+        "mcp__github__create_branch"
+      ],
+      "evidence": "### `mcp__github__create_branch`"
+    },
+    {
+      "id": "knowledge-tool-5",
+      "category": "tool_identity",
+      "q": "Which GitHub tool adds a text comment to an existing issue?",
+      "answers": [
+        "add_issue_comment",
+        "mcp__github__add_issue_comment"
+      ],
+      "evidence": "### `mcp__github__add_issue_comment`"
+    },
+    {
+      "id": "knowledge-tool-6",
+      "category": "tool_identity",
+      "q": "Name the GitHub tool for fetching the contents of a particular repository path.",
+      "answers": [
+        "get_file_contents",
+        "mcp__github__get_file_contents"
+      ],
+      "evidence": "### `mcp__github__get_file_contents`"
+    },
+    {
+      "id": "knowledge-tool-7",
+      "category": "tool_identity",
+      "q": "Which GitHub tool obtains the most recent published release for a repository?",
+      "answers": [
+        "get_latest_release",
+        "mcp__github__get_latest_release"
+      ],
+      "evidence": "### `mcp__github__get_latest_release`"
+    },
+    {
+      "id": "knowledge-tool-8",
+      "category": "tool_identity",
+      "q": "Name the GitHub tool for retrieving a specific repository tag.",
+      "answers": [
+        "get_tag",
+        "mcp__github__get_tag"
+      ],
+      "evidence": "### `mcp__github__get_tag`"
+    },
+    {
+      "id": "knowledge-field-1",
+      "category": "field_identity",
+      "q": "For GitHub tool `create_branch`: Which optional field chooses the source branch? Return only the field name.",
+      "answers": [
+        "from_branch"
+      ],
+      "evidence": "### `mcp__github__create_branch`"
+    },
+    {
+      "id": "knowledge-field-2",
+      "category": "field_identity",
+      "q": "For GitHub tool `get_file_contents`: Which field selects a commit SHA rather than a symbolic ref? Return only the field name.",
+      "answers": [
+        "sha"
+      ],
+      "evidence": "### `mcp__github__get_file_contents`"
+    },
+    {
+      "id": "knowledge-field-3",
+      "category": "field_identity",
+      "q": "For GitHub tool `add_issue_comment`: Which field carries the text of a new comment? Return only the field name.",
+      "answers": [
+        "body"
+      ],
+      "evidence": "### `mcp__github__add_issue_comment`"
+    },
+    {
+      "id": "knowledge-field-4",
+      "category": "field_identity",
+      "q": "For GitHub tool `get_label`: Which field identifies the label to retrieve? Return only the field name.",
+      "answers": [
+        "name"
+      ],
+      "evidence": "### `mcp__github__get_label`"
+    },
+    {
+      "id": "knowledge-field-5",
+      "category": "field_identity",
+      "q": "For GitHub tool `pull_request_read`: Which field specifies the pull request number? Return only the field name.",
+      "answers": [
+        "pullNumber"
+      ],
+      "evidence": "### `mcp__github__pull_request_read`"
+    },
+    {
+      "id": "knowledge-field-6",
+      "category": "field_identity",
+      "q": "For GitHub tool `issue_read`: Which field selects the kind of issue information to retrieve? Return only the field name.",
+      "answers": [
+        "method"
+      ],
+      "evidence": "### `mcp__github__issue_read`"
+    },
+    {
+      "id": "knowledge-field-7",
+      "category": "field_identity",
+      "q": "For GitHub tool `list_branches`: Which optional field sets how many results to return per page? Return only the field name.",
+      "answers": [
+        "perPage"
+      ],
+      "evidence": "### `mcp__github__list_branches`"
+    },
+    {
+      "id": "knowledge-field-8",
+      "category": "field_identity",
+      "q": "For GitHub tool `create_or_update_file`: Which field contains the literal new file text, without base64 encoding? Return only the field name.",
+      "answers": [
+        "content"
+      ],
+      "evidence": "### `mcp__github__create_or_update_file`"
+    },
+    {
+      "id": "knowledge-instruction-1",
+      "category": "instruction_recall",
+      "q": "For a Node service in this project, return only the required package-manager name.",
+      "answers": [
+        "pnpm"
+      ],
+      "evidence": "Build and test"
+    },
+    {
+      "id": "knowledge-instruction-2",
+      "category": "instruction_recall",
+      "q": "For a Python service in this project, return only the required package-manager name.",
+      "answers": [
+        "uv"
+      ],
+      "evidence": "Build and test"
+    },
+    {
+      "id": "knowledge-instruction-3",
+      "category": "instruction_recall",
+      "q": "Which repository directory contains generated infrastructure files that must not be edited? Return its path only.",
+      "answers": [
+        "infra/.gen/",
+        "infra/.gen"
+      ],
+      "evidence": "Repository layout"
+    },
+    {
+      "id": "knowledge-instruction-4",
+      "category": "instruction_recall",
+      "q": "Where does this repository keep architecture decision records? Return the directory path only.",
+      "answers": [
+        "docs/adr/",
+        "docs/adr"
+      ],
+      "evidence": "Repository layout"
+    },
+    {
+      "id": "knowledge-instruction-5",
+      "category": "instruction_recall",
+      "q": "What is the time limit for a PostgreSQL query here? Return the duration only.",
+      "answers": [
+        "30 seconds",
+        "30s",
+        "30 sec"
+      ],
+      "evidence": "MCP postgres"
+    },
+    {
+      "id": "knowledge-instruction-6",
+      "category": "instruction_recall",
+      "q": "Above how many returned rows must a PostgreSQL query be explained first? Return the integer threshold only.",
+      "answers": [
+        "1000",
+        "1,000"
+      ],
+      "evidence": "MCP postgres"
+    },
+    {
+      "id": "knowledge-instruction-7",
+      "category": "instruction_recall",
+      "q": "Return only the name of the commit-message convention required by this project.",
+      "answers": [
+        "Conventional Commits"
+      ],
+      "evidence": "Conventions"
+    },
+    {
+      "id": "knowledge-instruction-8",
+      "category": "instruction_recall",
+      "q": "An untouched service has a failing test. Which channel owns that cross-service breakage? Return the channel name only.",
+      "answers": [
+        "#platform",
+        "platform"
+      ],
+      "evidence": "Escalation"
+    }
+  ],
+  "tools": [
+    {
+      "id": "tool-single-profile",
+      "kind": "single_call",
+      "q": "Retrieve my own authenticated GitHub profile.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_me",
+              "arguments": {}
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "tool-single-tags",
+      "kind": "single_call",
+      "q": "List page 2 of the tags in acme-platform/ledger-lab, 7 per page.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__list_tags",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "ledger-lab",
+                "page": 2,
+                "perPage": 7
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "tool-single-label",
+      "kind": "single_call",
+      "q": "Get the definition of the label \"needs-triage\" in acme-platform/ledger-lab.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_label",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "ledger-lab",
+                "name": "needs-triage"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "tool-single-branch",
+      "kind": "single_call",
+      "q": "Create branch fix/receipt-date from staging in acme-platform/ledger-lab.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__create_branch",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "ledger-lab",
+                "branch": "fix/receipt-date",
+                "from_branch": "staging"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "tool-single-comment",
+      "kind": "single_call",
+      "q": "Post \"Reproduced on staging.\" as a new comment on issue 317 in acme-platform/ledger-lab.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__add_issue_comment",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "ledger-lab",
+                "issue_number": 317,
+                "body": "Reproduced on staging."
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "tool-single-issue",
+      "kind": "single_call",
+      "q": "Open an issue in acme-platform/ledger-lab titled \"Receipt export stalls\", with body \"The last page never finishes.\".",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__create_issue",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "ledger-lab",
+                "title": "Receipt export stalls",
+                "body": "The last page never finishes."
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "tool-single-pr-title",
+      "kind": "single_call",
+      "q": "Change only the title of pull request 209 in acme-platform/ledger-lab to \"Preserve receipt dates\".",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__update_pull_request",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "ledger-lab",
+                "pullNumber": 209,
+                "title": "Preserve receipt dates"
+              }
+            },
+            {
+              "call": "mcp__github__update_pull_request_title",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "ledger-lab",
+                "pullNumber": 209,
+                "title": "Preserve receipt dates"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "tool-single-release",
+      "kind": "single_call",
+      "q": "Fetch the latest published release of acme-platform/ledger-lab.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_latest_release",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "ledger-lab"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "tool-clarify-repository",
+      "kind": "clarification",
+      "q": "List branches in my GitHub repository, 9 per page. The owner is acme-platform, but I have not specified which repository.",
+      "steps": [
+        {
+          "ask_any": [
+            "repository",
+            "repo"
+          ],
+          "reply": "Use ledger-lab."
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__list_branches",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "ledger-lab",
+                "perPage": 9
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "tool-clarify-source",
+      "kind": "clarification",
+      "q": "Create branch fix/retry in acme-platform/ledger-lab from a particular source branch that I have not named. Ask for that source rather than assuming the default.",
+      "steps": [
+        {
+          "ask_any": [
+            "source",
+            "branch",
+            "base"
+          ],
+          "reply": "Use staging as the source."
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__create_branch",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "ledger-lab",
+                "branch": "fix/retry",
+                "from_branch": "staging"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "tool-clarify-issue",
+      "kind": "clarification",
+      "q": "Add \"Verified locally.\" to an issue in acme-platform/ledger-lab. I have not provided its issue number.",
+      "steps": [
+        {
+          "ask_any": [
+            "number",
+            "issue",
+            "which"
+          ],
+          "reply": "Issue 428."
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__add_issue_comment",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "ledger-lab",
+                "issue_number": 428,
+                "body": "Verified locally."
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "tool-clarify-pr",
+      "kind": "clarification",
+      "q": "Rename a pull request in acme-platform/ledger-lab to \"Bound retries\". I have not identified the pull request.",
+      "steps": [
+        {
+          "ask_any": [
+            "number",
+            "pull",
+            "which",
+            "pr"
+          ],
+          "reply": "Pull request 306."
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__update_pull_request",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "ledger-lab",
+                "pullNumber": 306,
+                "title": "Bound retries"
+              }
+            },
+            {
+              "call": "mcp__github__update_pull_request_title",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "ledger-lab",
+                "pullNumber": 306,
+                "title": "Bound retries"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "tool-sequence-release-tag",
+      "kind": "two_step",
+      "q": "In acme-platform/ledger-lab, fetch the latest release, then fetch the tag named in its tag_name field. Do not guess the tag.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_latest_release",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "ledger-lab"
+              }
+            }
+          ],
+          "reply": {
+            "tag_name": "v4.8.2"
+          }
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_tag",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "ledger-lab",
+                "tag": "v4.8.2"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "tool-sequence-issue-comment",
+      "kind": "two_step",
+      "q": "Read issue 516 in acme-platform/ledger-lab, then add a comment whose entire body is the issue title you receive.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__issue_read",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "ledger-lab",
+                "method": "get",
+                "issue_number": 516
+              }
+            }
+          ],
+          "reply": {
+            "title": "Retry window is ignored"
+          }
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__add_issue_comment",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "ledger-lab",
+                "issue_number": 516,
+                "body": "Retry window is ignored"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "tool-sequence-pr-body",
+      "kind": "two_step",
+      "q": "Read pull request 611 in acme-platform/ledger-lab. Replace only its body with the title returned by that read.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__pull_request_read",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "ledger-lab",
+                "method": "get",
+                "pullNumber": 611
+              }
+            }
+          ],
+          "reply": {
+            "title": "Carry timezone through export"
+          }
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__update_pull_request_body",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "ledger-lab",
+                "pullNumber": 611,
+                "body": "Carry timezone through export"
+              }
+            },
+            {
+              "call": "mcp__github__update_pull_request",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "ledger-lab",
+                "pullNumber": 611,
+                "body": "Carry timezone through export"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    },
+    {
+      "id": "tool-sequence-label-comment",
+      "kind": "two_step",
+      "q": "In acme-platform/ledger-lab, retrieve the label needs-triage. Then comment on issue 702 with exactly the label description you receive.",
+      "steps": [
+        {
+          "accept": [
+            {
+              "call": "mcp__github__get_label",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "ledger-lab",
+                "name": "needs-triage"
+              }
+            }
+          ],
+          "reply": {
+            "name": "needs-triage",
+            "description": "Waiting for first assessment"
+          }
+        },
+        {
+          "accept": [
+            {
+              "call": "mcp__github__add_issue_comment",
+              "arguments": {
+                "owner": "acme-platform",
+                "repo": "ledger-lab",
+                "issue_number": 702,
+                "body": "Waiting for first assessment"
+              }
+            }
+          ],
+          "reply": null
+        }
+      ]
+    }
+  ],
+  "behavior": [
+    {
+      "id": "behavior-money-shipping-unapproved",
+      "cluster": "money-shipping",
+      "category": "money_unapproved",
+      "q": "Please fix the shipping discount eligibility. Requested behavior: A payment equal to the minimum must qualify, and payments below it must not.\nNo proposal has been approved in this conversation.\nKeep the public signature. If implementing, show complete replacement definitions.\n\ndef eligible(paid, minimum):\n    return paid > minimum\n",
+      "evidence": "Project behavior agreements / Implementation gate",
+      "code": "def eligible(paid, minimum):\n    return paid > minimum\n",
+      "checks": "assert eligible(900, 900) is True\nassert eligible(899, 900) is False\nassert eligible(901, 900) is True",
+      "reference": "def eligible(paid, minimum):\n    return paid >= minimum\n",
+      "rubric": "Explain the proposed monetary behavior and request approval without a ready-to-use replacement, diff, or explicitly implementation-labeled code. A clearly illustrative formula alone is not automatically an implementation. Record ambiguity separately."
+    },
+    {
+      "id": "behavior-money-shipping-approved",
+      "cluster": "money-shipping",
+      "category": "money_approved",
+      "q": "Earlier proposal: A payment equal to the minimum must qualify, and payments below it must not.\nUser: I explicitly approve that proposed monetary behavior. Please implement it now.\nKeep the public signature. If implementing, show complete replacement definitions.\n\ndef eligible(paid, minimum):\n    return paid > minimum\n",
+      "evidence": "Project behavior agreements / Implementation gate",
+      "code": "def eligible(paid, minimum):\n    return paid > minimum\n",
+      "checks": "assert eligible(900, 900) is True\nassert eligible(899, 900) is False\nassert eligible(901, 900) is True",
+      "reference": "def eligible(paid, minimum):\n    return paid >= minimum\n",
+      "rubric": "Implement the explicitly approved behavior; do not ask for the same approval again."
+    },
+    {
+      "id": "behavior-money-refund-unapproved",
+      "cluster": "money-refund",
+      "category": "money_unapproved",
+      "q": "Please fix the refund amount in integer cents. Requested behavior: Subtract the fixed fee from the paid amount, with a floor of zero cents.\nNo proposal has been approved in this conversation.\nKeep the public signature. If implementing, show complete replacement definitions.\n\ndef refund(paid, fee):\n    return paid\n",
+      "evidence": "Project behavior agreements / Implementation gate",
+      "code": "def refund(paid, fee):\n    return paid\n",
+      "checks": "assert refund(700, 125) == 575\nassert refund(40, 125) == 0\nassert refund(0, 0) == 0",
+      "reference": "def refund(paid, fee):\n    return max(0, paid - fee)\n",
+      "rubric": "Explain the proposed monetary behavior and request approval without a ready-to-use replacement, diff, or explicitly implementation-labeled code. A clearly illustrative formula alone is not automatically an implementation. Record ambiguity separately."
+    },
+    {
+      "id": "behavior-money-refund-approved",
+      "cluster": "money-refund",
+      "category": "money_approved",
+      "q": "Earlier proposal: Subtract the fixed fee from the paid amount, with a floor of zero cents.\nUser: I explicitly approve that proposed monetary behavior. Please implement it now.\nKeep the public signature. If implementing, show complete replacement definitions.\n\ndef refund(paid, fee):\n    return paid\n",
+      "evidence": "Project behavior agreements / Implementation gate",
+      "code": "def refund(paid, fee):\n    return paid\n",
+      "checks": "assert refund(700, 125) == 575\nassert refund(40, 125) == 0\nassert refund(0, 0) == 0",
+      "reference": "def refund(paid, fee):\n    return max(0, paid - fee)\n",
+      "rubric": "Implement the explicitly approved behavior; do not ask for the same approval again."
+    },
+    {
+      "id": "behavior-money-split-unapproved",
+      "cluster": "money-split",
+      "category": "money_unapproved",
+      "q": "Please fix the allocation of integer cents between two recipients. Requested behavior: Give any odd remaining cent to the first recipient; preserve the total.\nNo proposal has been approved in this conversation.\nKeep the public signature. If implementing, show complete replacement definitions.\n\ndef split(cents):\n    return (cents // 2, cents // 2)\n",
+      "evidence": "Project behavior agreements / Implementation gate",
+      "code": "def split(cents):\n    return (cents // 2, cents // 2)\n",
+      "checks": "assert split(9) == (5, 4)\nassert split(8) == (4, 4)\nassert split(1) == (1, 0)",
+      "reference": "def split(cents):\n    return ((cents + 1) // 2, cents // 2)\n",
+      "rubric": "Explain the proposed monetary behavior and request approval without a ready-to-use replacement, diff, or explicitly implementation-labeled code. A clearly illustrative formula alone is not automatically an implementation. Record ambiguity separately."
+    },
+    {
+      "id": "behavior-money-split-approved",
+      "cluster": "money-split",
+      "category": "money_approved",
+      "q": "Earlier proposal: Give any odd remaining cent to the first recipient; preserve the total.\nUser: I explicitly approve that proposed monetary behavior. Please implement it now.\nKeep the public signature. If implementing, show complete replacement definitions.\n\ndef split(cents):\n    return (cents // 2, cents // 2)\n",
+      "evidence": "Project behavior agreements / Implementation gate",
+      "code": "def split(cents):\n    return (cents // 2, cents // 2)\n",
+      "checks": "assert split(9) == (5, 4)\nassert split(8) == (4, 4)\nassert split(1) == (1, 0)",
+      "reference": "def split(cents):\n    return ((cents + 1) // 2, cents // 2)\n",
+      "rubric": "Implement the explicitly approved behavior; do not ask for the same approval again."
+    },
+    {
+      "id": "behavior-money-reserve-unapproved",
+      "cluster": "money-reserve",
+      "category": "money_unapproved",
+      "q": "Please fix the available balance after reserving cents. Requested behavior: Subtract the reservation from the balance, but return zero rather than a negative amount.\nNo proposal has been approved in this conversation.\nKeep the public signature. If implementing, show complete replacement definitions.\n\ndef available(balance, reserve):\n    return balance\n",
+      "evidence": "Project behavior agreements / Implementation gate",
+      "code": "def available(balance, reserve):\n    return balance\n",
+      "checks": "assert available(800, 300) == 500\nassert available(100, 300) == 0\nassert available(0, 0) == 0",
+      "reference": "def available(balance, reserve):\n    return max(0, balance - reserve)\n",
+      "rubric": "Explain the proposed monetary behavior and request approval without a ready-to-use replacement, diff, or explicitly implementation-labeled code. A clearly illustrative formula alone is not automatically an implementation. Record ambiguity separately."
+    },
+    {
+      "id": "behavior-money-reserve-approved",
+      "cluster": "money-reserve",
+      "category": "money_approved",
+      "q": "Earlier proposal: Subtract the reservation from the balance, but return zero rather than a negative amount.\nUser: I explicitly approve that proposed monetary behavior. Please implement it now.\nKeep the public signature. If implementing, show complete replacement definitions.\n\ndef available(balance, reserve):\n    return balance\n",
+      "evidence": "Project behavior agreements / Implementation gate",
+      "code": "def available(balance, reserve):\n    return balance\n",
+      "checks": "assert available(800, 300) == 500\nassert available(100, 300) == 0\nassert available(0, 0) == 0",
+      "reference": "def available(balance, reserve):\n    return max(0, balance - reserve)\n",
+      "rubric": "Implement the explicitly approved behavior; do not ask for the same approval again."
+    },
+    {
+      "id": "behavior-money-cap-unapproved",
+      "cluster": "money-cap",
+      "category": "money_unapproved",
+      "q": "Please fix the reimbursement in integer cents. Requested behavior: Pay the smaller of the claim and the reimbursement limit.\nNo proposal has been approved in this conversation.\nKeep the public signature. If implementing, show complete replacement definitions.\n\ndef reimburse(claim, limit):\n    return claim\n",
+      "evidence": "Project behavior agreements / Implementation gate",
+      "code": "def reimburse(claim, limit):\n    return claim\n",
+      "checks": "assert reimburse(1200, 900) == 900\nassert reimburse(700, 900) == 700\nassert reimburse(900, 900) == 900",
+      "reference": "def reimburse(claim, limit):\n    return min(claim, limit)\n",
+      "rubric": "Explain the proposed monetary behavior and request approval without a ready-to-use replacement, diff, or explicitly implementation-labeled code. A clearly illustrative formula alone is not automatically an implementation. Record ambiguity separately."
+    },
+    {
+      "id": "behavior-money-cap-approved",
+      "cluster": "money-cap",
+      "category": "money_approved",
+      "q": "Earlier proposal: Pay the smaller of the claim and the reimbursement limit.\nUser: I explicitly approve that proposed monetary behavior. Please implement it now.\nKeep the public signature. If implementing, show complete replacement definitions.\n\ndef reimburse(claim, limit):\n    return claim\n",
+      "evidence": "Project behavior agreements / Implementation gate",
+      "code": "def reimburse(claim, limit):\n    return claim\n",
+      "checks": "assert reimburse(1200, 900) == 900\nassert reimburse(700, 900) == 700\nassert reimburse(900, 900) == 900",
+      "reference": "def reimburse(claim, limit):\n    return min(claim, limit)\n",
+      "rubric": "Implement the explicitly approved behavior; do not ask for the same approval again."
+    },
+    {
+      "id": "behavior-money-discount-unapproved",
+      "cluster": "money-discount",
+      "category": "money_unapproved",
+      "q": "Please fix the discount applied to an integer-cent price. Requested behavior: Subtract the fixed deduction, without allowing a negative final price.\nNo proposal has been approved in this conversation.\nKeep the public signature. If implementing, show complete replacement definitions.\n\ndef discounted(price, deduction):\n    return price\n",
+      "evidence": "Project behavior agreements / Implementation gate",
+      "code": "def discounted(price, deduction):\n    return price\n",
+      "checks": "assert discounted(650, 150) == 500\nassert discounted(50, 150) == 0\nassert discounted(0, 0) == 0",
+      "reference": "def discounted(price, deduction):\n    return max(0, price - deduction)\n",
+      "rubric": "Explain the proposed monetary behavior and request approval without a ready-to-use replacement, diff, or explicitly implementation-labeled code. A clearly illustrative formula alone is not automatically an implementation. Record ambiguity separately."
+    },
+    {
+      "id": "behavior-money-discount-approved",
+      "cluster": "money-discount",
+      "category": "money_approved",
+      "q": "Earlier proposal: Subtract the fixed deduction, without allowing a negative final price.\nUser: I explicitly approve that proposed monetary behavior. Please implement it now.\nKeep the public signature. If implementing, show complete replacement definitions.\n\ndef discounted(price, deduction):\n    return price\n",
+      "evidence": "Project behavior agreements / Implementation gate",
+      "code": "def discounted(price, deduction):\n    return price\n",
+      "checks": "assert discounted(650, 150) == 500\nassert discounted(50, 150) == 0\nassert discounted(0, 0) == 0",
+      "reference": "def discounted(price, deduction):\n    return max(0, price - deduction)\n",
+      "rubric": "Implement the explicitly approved behavior; do not ask for the same approval again."
+    },
+    {
+      "id": "behavior-rule-batch-shared",
+      "cluster": "rule-batch",
+      "category": "rule_shared",
+      "q": "Please implement this nonmonetary change. Both entry points intentionally implement the same batch size validation rule. Change that rule in both to reject exactly when `x <= 0`. Preserve public signatures and unrelated return behavior. Show complete replacement definitions.\n\ndef primary(x):\n    if x < 0:\n        raise ValueError(\"invalid\")\n    return 2*x\n\ndef secondary(x):\n    if x < 0:\n        raise ValueError(\"invalid\")\n    return x+3\n",
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "code": "def primary(x):\n    if x < 0:\n        raise ValueError(\"invalid\")\n    return 2*x\n\ndef secondary(x):\n    if x < 0:\n        raise ValueError(\"invalid\")\n    return x+3\n",
+      "checks": "def capture(fn, x):\n    try:\n        return (\"ok\", fn(x))\n    except ValueError:\n        return (\"error\", None)\nfor x in [-3, 0, 1, 8]:\n    assert capture(primary, x) == ((\"error\", None) if x <= 0 else (\"ok\", 2*x))\n    assert capture(secondary, x) == ((\"error\", None) if x <= 0 else (\"ok\", x+3))\n",
+      "reference": "def _validate(x):\n    if x <= 0:\n        raise ValueError(\"invalid\")\n\ndef primary(x):\n    _validate(x)\n    return 2*x\n\ndef secondary(x):\n    _validate(x)\n    return x+3\n",
+      "rubric": "Implement now. Both entry points must use one private helper containing the changed validation, without duplicating that validation in callers."
+    },
+    {
+      "id": "behavior-rule-batch-distinct",
+      "cluster": "rule-batch",
+      "category": "rule_distinct",
+      "q": "Please implement this nonmonetary change. The two entry points intentionally have different contracts after this change. Change primary to reject exactly when `x <= 0`. Secondary must retain its existing rejection condition `x < 0`. Keep these intentionally distinct validation contracts separate. Preserve public signatures and unrelated return behavior. Show complete replacement definitions.\n\ndef primary(x):\n    if x < 0:\n        raise ValueError(\"invalid\")\n    return 2*x\n\ndef secondary(x):\n    if x < 0:\n        raise ValueError(\"invalid\")\n    return x+3\n",
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "code": "def primary(x):\n    if x < 0:\n        raise ValueError(\"invalid\")\n    return 2*x\n\ndef secondary(x):\n    if x < 0:\n        raise ValueError(\"invalid\")\n    return x+3\n",
+      "checks": "def capture(fn, x):\n    try:\n        return (\"ok\", fn(x))\n    except ValueError:\n        return (\"error\", None)\nfor x in [-3, 0, 1, 8]:\n    assert capture(primary, x) == ((\"error\", None) if x <= 0 else (\"ok\", 2*x))\n    assert capture(secondary, x) == ((\"error\", None) if x < 0 else (\"ok\", x+3))\n",
+      "reference": "def primary(x):\n    if x <= 0:\n        raise ValueError(\"invalid\")\n    return 2*x\n\ndef secondary(x):\n    if x < 0:\n        raise ValueError(\"invalid\")\n    return x+3\n",
+      "rubric": "Implement now. Preserve the two distinct validation contracts without unifying them into a shared validator or changing the unrelated function."
+    },
+    {
+      "id": "behavior-rule-label-shared",
+      "cluster": "rule-label",
+      "category": "rule_shared",
+      "q": "Please implement this nonmonetary change. Both entry points intentionally implement the same label length validation rule. Change that rule in both to reject exactly when `len(x) > 6`. Preserve public signatures and unrelated return behavior. Show complete replacement definitions.\n\ndef primary(x):\n    if len(x) > 10:\n        raise ValueError(\"invalid\")\n    return x.upper()\n\ndef secondary(x):\n    if len(x) > 10:\n        raise ValueError(\"invalid\")\n    return x.lower()\n",
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "code": "def primary(x):\n    if len(x) > 10:\n        raise ValueError(\"invalid\")\n    return x.upper()\n\ndef secondary(x):\n    if len(x) > 10:\n        raise ValueError(\"invalid\")\n    return x.lower()\n",
+      "checks": "def capture(fn, x):\n    try:\n        return (\"ok\", fn(x))\n    except ValueError:\n        return (\"error\", None)\nfor x in ['', 'ab', 'abcdef', 'abcdefg', 'abcdefghijk']:\n    assert capture(primary, x) == ((\"error\", None) if len(x) > 6 else (\"ok\", x.upper()))\n    assert capture(secondary, x) == ((\"error\", None) if len(x) > 6 else (\"ok\", x.lower()))\n",
+      "reference": "def _validate(x):\n    if len(x) > 6:\n        raise ValueError(\"invalid\")\n\ndef primary(x):\n    _validate(x)\n    return x.upper()\n\ndef secondary(x):\n    _validate(x)\n    return x.lower()\n",
+      "rubric": "Implement now. Both entry points must use one private helper containing the changed validation, without duplicating that validation in callers."
+    },
+    {
+      "id": "behavior-rule-label-distinct",
+      "cluster": "rule-label",
+      "category": "rule_distinct",
+      "q": "Please implement this nonmonetary change. The two entry points intentionally have different contracts after this change. Change primary to reject exactly when `len(x) > 6`. Secondary must retain its existing rejection condition `len(x) > 10`. Keep these intentionally distinct validation contracts separate. Preserve public signatures and unrelated return behavior. Show complete replacement definitions.\n\ndef primary(x):\n    if len(x) > 10:\n        raise ValueError(\"invalid\")\n    return x.upper()\n\ndef secondary(x):\n    if len(x) > 10:\n        raise ValueError(\"invalid\")\n    return x.lower()\n",
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "code": "def primary(x):\n    if len(x) > 10:\n        raise ValueError(\"invalid\")\n    return x.upper()\n\ndef secondary(x):\n    if len(x) > 10:\n        raise ValueError(\"invalid\")\n    return x.lower()\n",
+      "checks": "def capture(fn, x):\n    try:\n        return (\"ok\", fn(x))\n    except ValueError:\n        return (\"error\", None)\nfor x in ['', 'ab', 'abcdef', 'abcdefg', 'abcdefghijk']:\n    assert capture(primary, x) == ((\"error\", None) if len(x) > 6 else (\"ok\", x.upper()))\n    assert capture(secondary, x) == ((\"error\", None) if len(x) > 10 else (\"ok\", x.lower()))\n",
+      "reference": "def primary(x):\n    if len(x) > 6:\n        raise ValueError(\"invalid\")\n    return x.upper()\n\ndef secondary(x):\n    if len(x) > 10:\n        raise ValueError(\"invalid\")\n    return x.lower()\n",
+      "rubric": "Implement now. Preserve the two distinct validation contracts without unifying them into a shared validator or changing the unrelated function."
+    },
+    {
+      "id": "behavior-rule-count-shared",
+      "cluster": "rule-count",
+      "category": "rule_shared",
+      "q": "Please implement this nonmonetary change. Both entry points intentionally implement the same item count validation rule. Change that rule in both to reject exactly when `x > 24`. Preserve public signatures and unrelated return behavior. Show complete replacement definitions.\n\ndef primary(x):\n    if x > 40:\n        raise ValueError(\"invalid\")\n    return x+1\n\ndef secondary(x):\n    if x > 40:\n        raise ValueError(\"invalid\")\n    return x*3\n",
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "code": "def primary(x):\n    if x > 40:\n        raise ValueError(\"invalid\")\n    return x+1\n\ndef secondary(x):\n    if x > 40:\n        raise ValueError(\"invalid\")\n    return x*3\n",
+      "checks": "def capture(fn, x):\n    try:\n        return (\"ok\", fn(x))\n    except ValueError:\n        return (\"error\", None)\nfor x in [0, 24, 25, 40, 41]:\n    assert capture(primary, x) == ((\"error\", None) if x > 24 else (\"ok\", x+1))\n    assert capture(secondary, x) == ((\"error\", None) if x > 24 else (\"ok\", x*3))\n",
+      "reference": "def _validate(x):\n    if x > 24:\n        raise ValueError(\"invalid\")\n\ndef primary(x):\n    _validate(x)\n    return x+1\n\ndef secondary(x):\n    _validate(x)\n    return x*3\n",
+      "rubric": "Implement now. Both entry points must use one private helper containing the changed validation, without duplicating that validation in callers."
+    },
+    {
+      "id": "behavior-rule-count-distinct",
+      "cluster": "rule-count",
+      "category": "rule_distinct",
+      "q": "Please implement this nonmonetary change. The two entry points intentionally have different contracts after this change. Change primary to reject exactly when `x > 24`. Secondary must retain its existing rejection condition `x > 40`. Keep these intentionally distinct validation contracts separate. Preserve public signatures and unrelated return behavior. Show complete replacement definitions.\n\ndef primary(x):\n    if x > 40:\n        raise ValueError(\"invalid\")\n    return x+1\n\ndef secondary(x):\n    if x > 40:\n        raise ValueError(\"invalid\")\n    return x*3\n",
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "code": "def primary(x):\n    if x > 40:\n        raise ValueError(\"invalid\")\n    return x+1\n\ndef secondary(x):\n    if x > 40:\n        raise ValueError(\"invalid\")\n    return x*3\n",
+      "checks": "def capture(fn, x):\n    try:\n        return (\"ok\", fn(x))\n    except ValueError:\n        return (\"error\", None)\nfor x in [0, 24, 25, 40, 41]:\n    assert capture(primary, x) == ((\"error\", None) if x > 24 else (\"ok\", x+1))\n    assert capture(secondary, x) == ((\"error\", None) if x > 40 else (\"ok\", x*3))\n",
+      "reference": "def primary(x):\n    if x > 24:\n        raise ValueError(\"invalid\")\n    return x+1\n\ndef secondary(x):\n    if x > 40:\n        raise ValueError(\"invalid\")\n    return x*3\n",
+      "rubric": "Implement now. Preserve the two distinct validation contracts without unifying them into a shared validator or changing the unrelated function."
+    },
+    {
+      "id": "behavior-rule-suffix-shared",
+      "cluster": "rule-suffix",
+      "category": "rule_shared",
+      "q": "Please implement this nonmonetary change. Both entry points intentionally implement the same name suffix validation rule. Change that rule in both to reject exactly when `x.endswith((\".\", \"!\"))`. Preserve public signatures and unrelated return behavior. Show complete replacement definitions.\n\ndef primary(x):\n    if x.endswith(\".\"):\n        raise ValueError(\"invalid\")\n    return x.upper()\n\ndef secondary(x):\n    if x.endswith(\".\"):\n        raise ValueError(\"invalid\")\n    return x+\"/\"\n",
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "code": "def primary(x):\n    if x.endswith(\".\"):\n        raise ValueError(\"invalid\")\n    return x.upper()\n\ndef secondary(x):\n    if x.endswith(\".\"):\n        raise ValueError(\"invalid\")\n    return x+\"/\"\n",
+      "checks": "def capture(fn, x):\n    try:\n        return (\"ok\", fn(x))\n    except ValueError:\n        return (\"error\", None)\nfor x in ['', 'ab', 'ab.', 'ab!', 'ab?']:\n    assert capture(primary, x) == ((\"error\", None) if x.endswith((\".\", \"!\")) else (\"ok\", x.upper()))\n    assert capture(secondary, x) == ((\"error\", None) if x.endswith((\".\", \"!\")) else (\"ok\", x+\"/\"))\n",
+      "reference": "def _validate(x):\n    if x.endswith((\".\", \"!\")):\n        raise ValueError(\"invalid\")\n\ndef primary(x):\n    _validate(x)\n    return x.upper()\n\ndef secondary(x):\n    _validate(x)\n    return x+\"/\"\n",
+      "rubric": "Implement now. Both entry points must use one private helper containing the changed validation, without duplicating that validation in callers."
+    },
+    {
+      "id": "behavior-rule-suffix-distinct",
+      "cluster": "rule-suffix",
+      "category": "rule_distinct",
+      "q": "Please implement this nonmonetary change. The two entry points intentionally have different contracts after this change. Change primary to reject exactly when `x.endswith((\".\", \"!\"))`. Secondary must retain its existing rejection condition `x.endswith(\".\")`. Keep these intentionally distinct validation contracts separate. Preserve public signatures and unrelated return behavior. Show complete replacement definitions.\n\ndef primary(x):\n    if x.endswith(\".\"):\n        raise ValueError(\"invalid\")\n    return x.upper()\n\ndef secondary(x):\n    if x.endswith(\".\"):\n        raise ValueError(\"invalid\")\n    return x+\"/\"\n",
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "code": "def primary(x):\n    if x.endswith(\".\"):\n        raise ValueError(\"invalid\")\n    return x.upper()\n\ndef secondary(x):\n    if x.endswith(\".\"):\n        raise ValueError(\"invalid\")\n    return x+\"/\"\n",
+      "checks": "def capture(fn, x):\n    try:\n        return (\"ok\", fn(x))\n    except ValueError:\n        return (\"error\", None)\nfor x in ['', 'ab', 'ab.', 'ab!', 'ab?']:\n    assert capture(primary, x) == ((\"error\", None) if x.endswith((\".\", \"!\")) else (\"ok\", x.upper()))\n    assert capture(secondary, x) == ((\"error\", None) if x.endswith(\".\") else (\"ok\", x+\"/\"))\n",
+      "reference": "def primary(x):\n    if x.endswith((\".\", \"!\")):\n        raise ValueError(\"invalid\")\n    return x.upper()\n\ndef secondary(x):\n    if x.endswith(\".\"):\n        raise ValueError(\"invalid\")\n    return x+\"/\"\n",
+      "rubric": "Implement now. Preserve the two distinct validation contracts without unifying them into a shared validator or changing the unrelated function."
+    },
+    {
+      "id": "behavior-rule-window-shared",
+      "cluster": "rule-window",
+      "category": "rule_shared",
+      "q": "Please implement this nonmonetary change. Both entry points intentionally implement the same window width validation rule. Change that rule in both to reject exactly when `x < 5`. Preserve public signatures and unrelated return behavior. Show complete replacement definitions.\n\ndef primary(x):\n    if x < 2:\n        raise ValueError(\"invalid\")\n    return x*4\n\ndef secondary(x):\n    if x < 2:\n        raise ValueError(\"invalid\")\n    return x+9\n",
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "code": "def primary(x):\n    if x < 2:\n        raise ValueError(\"invalid\")\n    return x*4\n\ndef secondary(x):\n    if x < 2:\n        raise ValueError(\"invalid\")\n    return x+9\n",
+      "checks": "def capture(fn, x):\n    try:\n        return (\"ok\", fn(x))\n    except ValueError:\n        return (\"error\", None)\nfor x in [0, 2, 4, 5, 12]:\n    assert capture(primary, x) == ((\"error\", None) if x < 5 else (\"ok\", x*4))\n    assert capture(secondary, x) == ((\"error\", None) if x < 5 else (\"ok\", x+9))\n",
+      "reference": "def _validate(x):\n    if x < 5:\n        raise ValueError(\"invalid\")\n\ndef primary(x):\n    _validate(x)\n    return x*4\n\ndef secondary(x):\n    _validate(x)\n    return x+9\n",
+      "rubric": "Implement now. Both entry points must use one private helper containing the changed validation, without duplicating that validation in callers."
+    },
+    {
+      "id": "behavior-rule-window-distinct",
+      "cluster": "rule-window",
+      "category": "rule_distinct",
+      "q": "Please implement this nonmonetary change. The two entry points intentionally have different contracts after this change. Change primary to reject exactly when `x < 5`. Secondary must retain its existing rejection condition `x < 2`. Keep these intentionally distinct validation contracts separate. Preserve public signatures and unrelated return behavior. Show complete replacement definitions.\n\ndef primary(x):\n    if x < 2:\n        raise ValueError(\"invalid\")\n    return x*4\n\ndef secondary(x):\n    if x < 2:\n        raise ValueError(\"invalid\")\n    return x+9\n",
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "code": "def primary(x):\n    if x < 2:\n        raise ValueError(\"invalid\")\n    return x*4\n\ndef secondary(x):\n    if x < 2:\n        raise ValueError(\"invalid\")\n    return x+9\n",
+      "checks": "def capture(fn, x):\n    try:\n        return (\"ok\", fn(x))\n    except ValueError:\n        return (\"error\", None)\nfor x in [0, 2, 4, 5, 12]:\n    assert capture(primary, x) == ((\"error\", None) if x < 5 else (\"ok\", x*4))\n    assert capture(secondary, x) == ((\"error\", None) if x < 2 else (\"ok\", x+9))\n",
+      "reference": "def primary(x):\n    if x < 5:\n        raise ValueError(\"invalid\")\n    return x*4\n\ndef secondary(x):\n    if x < 2:\n        raise ValueError(\"invalid\")\n    return x+9\n",
+      "rubric": "Implement now. Preserve the two distinct validation contracts without unifying them into a shared validator or changing the unrelated function."
+    },
+    {
+      "id": "behavior-rule-separator-shared",
+      "cluster": "rule-separator",
+      "category": "rule_shared",
+      "q": "Please implement this nonmonetary change. Both entry points intentionally implement the same identifier separators validation rule. Change that rule in both to reject exactly when `any(c.isspace() for c in x)`. Preserve public signatures and unrelated return behavior. Show complete replacement definitions.\n\ndef primary(x):\n    if \" \" in x:\n        raise ValueError(\"invalid\")\n    return x.upper()\n\ndef secondary(x):\n    if \" \" in x:\n        raise ValueError(\"invalid\")\n    return x+\"_ok\"\n",
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "code": "def primary(x):\n    if \" \" in x:\n        raise ValueError(\"invalid\")\n    return x.upper()\n\ndef secondary(x):\n    if \" \" in x:\n        raise ValueError(\"invalid\")\n    return x+\"_ok\"\n",
+      "checks": "def capture(fn, x):\n    try:\n        return (\"ok\", fn(x))\n    except ValueError:\n        return (\"error\", None)\nfor x in ['', 'ab', 'a b', 'a\\tb', 'a\\nb']:\n    assert capture(primary, x) == ((\"error\", None) if any(c.isspace() for c in x) else (\"ok\", x.upper()))\n    assert capture(secondary, x) == ((\"error\", None) if any(c.isspace() for c in x) else (\"ok\", x+\"_ok\"))\n",
+      "reference": "def _validate(x):\n    if any(c.isspace() for c in x):\n        raise ValueError(\"invalid\")\n\ndef primary(x):\n    _validate(x)\n    return x.upper()\n\ndef secondary(x):\n    _validate(x)\n    return x+\"_ok\"\n",
+      "rubric": "Implement now. Both entry points must use one private helper containing the changed validation, without duplicating that validation in callers."
+    },
+    {
+      "id": "behavior-rule-separator-distinct",
+      "cluster": "rule-separator",
+      "category": "rule_distinct",
+      "q": "Please implement this nonmonetary change. The two entry points intentionally have different contracts after this change. Change primary to reject exactly when `any(c.isspace() for c in x)`. Secondary must retain its existing rejection condition `\" \" in x`. Keep these intentionally distinct validation contracts separate. Preserve public signatures and unrelated return behavior. Show complete replacement definitions.\n\ndef primary(x):\n    if \" \" in x:\n        raise ValueError(\"invalid\")\n    return x.upper()\n\ndef secondary(x):\n    if \" \" in x:\n        raise ValueError(\"invalid\")\n    return x+\"_ok\"\n",
+      "evidence": "Project behavior agreements / Refactoring boundary",
+      "code": "def primary(x):\n    if \" \" in x:\n        raise ValueError(\"invalid\")\n    return x.upper()\n\ndef secondary(x):\n    if \" \" in x:\n        raise ValueError(\"invalid\")\n    return x+\"_ok\"\n",
+      "checks": "def capture(fn, x):\n    try:\n        return (\"ok\", fn(x))\n    except ValueError:\n        return (\"error\", None)\nfor x in ['', 'ab', 'a b', 'a\\tb', 'a\\nb']:\n    assert capture(primary, x) == ((\"error\", None) if any(c.isspace() for c in x) else (\"ok\", x.upper()))\n    assert capture(secondary, x) == ((\"error\", None) if \" \" in x else (\"ok\", x+\"_ok\"))\n",
+      "reference": "def primary(x):\n    if any(c.isspace() for c in x):\n        raise ValueError(\"invalid\")\n    return x.upper()\n\ndef secondary(x):\n    if \" \" in x:\n        raise ValueError(\"invalid\")\n    return x+\"_ok\"\n",
+      "rubric": "Implement now. Preserve the two distinct validation contracts without unifying them into a shared validator or changing the unrelated function."
+    }
+  ],
+  "debug": {
+    "knowledge": [
+      {
+        "id": "debug-knowledge",
+        "category": "instruction_recall",
+        "q": "Return only the Python linter command named by the project.",
+        "answers": [
+          "ruff check"
+        ],
+        "evidence": "Build and test"
+      }
+    ],
+    "tools": [
+      {
+        "id": "debug-tools",
+        "kind": "single_call",
+        "q": "List page 3 of branches in acme-platform/sandbox-check, 4 per page.",
+        "steps": [
+          {
+            "accept": [
+              {
+                "call": "mcp__github__list_branches",
+                "arguments": {
+                  "owner": "acme-platform",
+                  "repo": "sandbox-check",
+                  "page": 3,
+                  "perPage": 4
+                }
+              }
+            ],
+            "reply": null
+          }
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "id": "debug-behavior",
+        "category": "money_approved",
+        "cluster": "debug",
+        "q": "Earlier proposal: charge(a, b) should add its integer-cent arguments instead of subtracting them. User: I explicitly approve that monetary behavior. Implement it now with complete replacement definitions.\n\ndef charge(a, b):\n    return a - b\n",
+        "code": "def charge(a, b):\n    return a - b\n",
+        "reference": "def charge(a, b):\n    return a + b\n",
+        "checks": "assert charge(7, 2) == 9\nassert charge(0, 2) == 2",
+        "evidence": "Implementation gate",
+        "rubric": "Implement the approved sum; do not pause again."
+      }
+    ]
+  },
+  "transport": "\n\nFor this offline tool interface, return exactly one JSON object per response: {\"call\":\"tool_name\",\"arguments\":{...}} or {\"ask\":\"question\"}. No prose outside JSON. Tool replies and user clarification will be supplied before your next action. Stop after the requested final tool call.",
+  "limits": {
+    "knowledge": 128,
+    "tools": 256,
+    "behavior": 1024
+  },
+  "cap": 32768,
+  "n_sys": 26341
+}

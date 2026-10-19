@@ -1,0 +1,384 @@
+{
+  "dev": {
+    "n": 194,
+    "informative_n": 89,
+    "arms": {
+      "control": {
+        "correct": 167,
+        "cap": 1,
+        "informative_correct": 69,
+        "by_kind": {
+          "lookup": {
+            "correct": 116,
+            "n": 132
+          },
+          "tool_select": {
+            "correct": 51,
+            "n": 62
+          }
+        }
+      },
+      "teacher": {
+        "correct": 193,
+        "cap": 0,
+        "informative_correct": 89,
+        "by_kind": {
+          "lookup": {
+            "correct": 132,
+            "n": 132
+          },
+          "tool_select": {
+            "correct": 61,
+            "n": 62
+          }
+        }
+      },
+      "none": {
+        "correct": 104,
+        "cap": 151,
+        "informative_correct": 0,
+        "by_kind": {
+          "lookup": {
+            "correct": 103,
+            "n": 132
+          },
+          "tool_select": {
+            "correct": 1,
+            "n": 62
+          }
+        }
+      },
+      "expanded": {
+        "correct": 179,
+        "cap": 0,
+        "informative_correct": 79,
+        "by_kind": {
+          "lookup": {
+            "correct": 121,
+            "n": 132
+          },
+          "tool_select": {
+            "correct": 58,
+            "n": 62
+          }
+        }
+      }
+    },
+    "gains": [
+      "Which tool should be used to do the following: Add a comment and/or reaction to a specific issue or issue comment in a GitHub repository.",
+      "Which tool should be used to do the following: Add a reaction to an issue or pull request.",
+      "Which tool should be used to do the following: Add a reaction to a pull request review comment.",
+      "Which tool should be used to do the following: Get comments from a discussion",
+      "Which tool should be used to do the following: Get a global security advisory",
+      "Which tool should be used to do the following: Get details about a specific git tag in a GitHub repository",
+      "Which tool should be used to do the following: Read an issue's dependency relationships in a GitHub repository: the issues that block it (blocked_by) or the issues it blocks (blocking).",
+      "Which tool should be used to do the following: Search for pull requests in GitHub repositories using issues search syntax already scoped to is:pr",
+      "Which tool should be used to do the following: Add a sub-issue to a parent issue in a GitHub repository.",
+      "Which tool should be used to do the following: Unresolve a previously resolved review thread on a pull request.",
+      "For the tool `actions_get`, which argument is described as: The unique identifier of the resource. This will vary based on the \"method\" provided, so ensure you provide the correct ID:",
+      "For the tool `assign_copilot_to_issue`, which argument is described as: Git reference (e.g., branch) that the agent will start its work from. If not specified, defaults to the repository's default branch",
+      "For the tool `assign_copilot_to_issue_with_intent`, which argument is described as: Git reference (e.g., branch) that the agent will start its work from. If not specified, defaults to the repository's default branch. Ignored when is_suggestion is true",
+      "For the tool `create_pull_request_review`, which argument is described as: The SHA of the commit to review (optional, defaults to latest)",
+      "For the tool `create_pull_request_review`, which argument is described as: The pull request number",
+      "For the tool `fork_repository`, which argument is described as: Organization to fork to",
+      "For the tool `merge_pull_request`, which argument is described as: Extra detail for merge commit",
+      "For the tool `projects_write`, which argument is described as: The field/value to apply, using {\"id\": 123, \"value\": ...} or {\"name\": \"Status\", \"value\": ...}; null clears the field. Required for 'update_project_item' and 'update_project_items', where one top-level field/value applies to every item in a batch. For 'update_project_item' SINGLE_SELECT fields, the name form accepts option names; the ID form expects an option ID.",
+      "For the tool `request_pull_request_reviewers`, which argument is described as: The pull request number",
+      "For the tool `update_pull_request_draft_state`, which argument is described as: The pull request number"
+    ],
+    "losses": [
+      "Which tool should be used to do the following: Add a sub-issue to a parent issue.",
+      "Which tool should be used to do the following: Fork a GitHub repository to your account or specified organization",
+      "Which tool should be used to do the following: Fetch UI data for MCP Apps (labels, assignees, milestones, issue types, branches, issue fields, reviewers).",
+      "For the tool `actions_list`, which argument is described as: Filters for workflow jobs. **ONLY** used when method is 'list_workflow_jobs'",
+      "For the tool `create_repository_ruleset`, which argument is described as: Conditions for when this ruleset applies, e.g. {\"ref_name\": {\"include\": [\"refs/heads/main\"], \"exclude\": []}}",
+      "For the tool `issue_dependency_write`, which argument is described as: The owner of the related issue's repository. Defaults to 'owner' when omitted.",
+      "For the tool `repository_ruleset_read`, which argument is described as: Filter rule suites by ruleset evaluation mode. Used by the 'list_rule_suites' method.",
+      "For the tool `update_pull_request`, which argument is described as: Allow maintainer edits"
+    ]
+  },
+  "agent78": {
+    "n": 78,
+    "informative_n": 45,
+    "arms": {
+      "control": {
+        "correct": 75,
+        "cap": 1,
+        "informative_correct": 44,
+        "by_kind": {
+          "lookup": {
+            "correct": 27,
+            "n": 28
+          },
+          "style": {
+            "correct": 18,
+            "n": 20
+          },
+          "tool_select": {
+            "correct": 26,
+            "n": 26
+          },
+          "unrelated": {
+            "correct": 4,
+            "n": 4
+          }
+        }
+      },
+      "teacher": {
+        "correct": 76,
+        "cap": 1,
+        "informative_correct": 45,
+        "by_kind": {
+          "lookup": {
+            "correct": 27,
+            "n": 28
+          },
+          "style": {
+            "correct": 20,
+            "n": 20
+          },
+          "tool_select": {
+            "correct": 25,
+            "n": 26
+          },
+          "unrelated": {
+            "correct": 4,
+            "n": 4
+          }
+        }
+      },
+      "none": {
+        "correct": 32,
+        "cap": 74,
+        "informative_correct": 0,
+        "by_kind": {
+          "lookup": {
+            "correct": 11,
+            "n": 28
+          },
+          "style": {
+            "correct": 14,
+            "n": 20
+          },
+          "tool_select": {
+            "correct": 3,
+            "n": 26
+          },
+          "unrelated": {
+            "correct": 4,
+            "n": 4
+          }
+        }
+      },
+      "expanded": {
+        "correct": 71,
+        "cap": 2,
+        "informative_correct": 41,
+        "by_kind": {
+          "lookup": {
+            "correct": 24,
+            "n": 28
+          },
+          "style": {
+            "correct": 20,
+            "n": 20
+          },
+          "tool_select": {
+            "correct": 23,
+            "n": 26
+          },
+          "unrelated": {
+            "correct": 4,
+            "n": 4
+          }
+        }
+      }
+    },
+    "gains": [
+      "Are architecture decision records editable after they are written?",
+      "What kind of change must every database migration support?"
+    ],
+    "losses": [
+      "How are the secrets in infra/secrets/ encrypted?",
+      "Which skill authors and reviews a reversible database migration?",
+      "Which tool forks a repository?",
+      "For the tool `fork_repository`, which argument names the target owner?",
+      "How many sentry issue lookups are allowed per minute?",
+      "Which skill covers a backfill strategy?"
+    ]
+  },
+  "stress197": {
+    "n": 197,
+    "informative_n": 107,
+    "arms": {
+      "control": {
+        "correct": 165,
+        "cap": 1,
+        "informative_correct": 80,
+        "by_kind": {
+          "lookup": {
+            "correct": 118,
+            "n": 135
+          },
+          "tool_select": {
+            "correct": 47,
+            "n": 62
+          }
+        }
+      },
+      "teacher": {
+        "correct": 197,
+        "cap": 0,
+        "informative_correct": 107,
+        "by_kind": {
+          "lookup": {
+            "correct": 135,
+            "n": 135
+          },
+          "tool_select": {
+            "correct": 62,
+            "n": 62
+          }
+        }
+      },
+      "none": {
+        "correct": 90,
+        "cap": 159,
+        "informative_correct": 0,
+        "by_kind": {
+          "lookup": {
+            "correct": 89,
+            "n": 135
+          },
+          "tool_select": {
+            "correct": 1,
+            "n": 62
+          }
+        }
+      },
+      "expanded": {
+        "correct": 163,
+        "cap": 0,
+        "informative_correct": 79,
+        "by_kind": {
+          "lookup": {
+            "correct": 114,
+            "n": 135
+          },
+          "tool_select": {
+            "correct": 49,
+            "n": 62
+          }
+        }
+      }
+    },
+    "gains": [
+      "Which tool should be used to do the following: Write operations for discussion comments.",
+      "Which tool should be used to do the following: Get details of a specific code quality finding in a GitHub repository.",
+      "Which tool should be used to do the following: Get a specific release by its tag name in a GitHub repository",
+      "Which tool should be used to do the following: Hide (minimize) an inline review comment on a pull request diff.",
+      "Which tool should be used to do the following: Add or remove an issue dependency relationship in a GitHub repository.",
+      "Which tool should be used to do the following: List repository security advisories for a GitHub organization.",
+      "Which tool should be used to do the following: Manage a notification subscription: ignore, watch, or delete a notification thread subscription.",
+      "Which tool should be used to do the following: Update the body description of an existing pull request.",
+      "For the tool `add_pull_request_review_comment`, which argument is described as: The pull request number",
+      "For the tool `add_reply_to_pull_request_comment`, which argument is described as: Pull request number. Required when body is provided.",
+      "For the tool `create_repository`, which argument is described as: Organization to create the repository in (omit to create in your personal account)",
+      "For the tool `create_repository_ruleset`, which argument is described as: The actors that can bypass the rules in this ruleset",
+      "For the tool `list_global_security_advisories`, which argument is described as: Filter by GitHub Security Advisory ID (format: GHSA-xxxx-xxxx-xxxx).",
+      "For the tool `projects_write`, which argument is described as: The owner (user or organization) of the repository containing the issue or pull request. Required for 'add_project_item' method. Also accepted by 'update_project_item' when resolving the item by issue number.",
+      "For the tool `projects_write`, which argument is described as: Duration in days for iterations of the field (e.g. 7 for weekly, 14 for bi-weekly). Required for 'create_iteration_field' method."
+    ],
+    "losses": [
+      "Which tool should be used to do the following: Add a review comment to the current user's pending pull request review.",
+      "Which tool should be used to do the following: Add a reply and/or reaction to an existing pull request comment.",
+      "Which tool should be used to do the following: List labels from a repository, ordered by issue count (descending) so the most-used labels are returned first",
+      "Which tool should be used to do the following: Mark all notifications as read",
+      "Which tool should be used to do the following: Reprioritize (reorder) a sub-issue relative to other sub-issues.",
+      "Which tool should be used to do the following: Unstar a GitHub repository",
+      "For the tool `add_comment_to_pending_review`, which argument is described as: The level at which the comment is targeted",
+      "For the tool `add_pull_request_review_comment`, which argument is described as: The subject type of the comment",
+      "For the tool `add_pull_request_review_comment_reaction`, which argument is described as: The emoji reaction type",
+      "For the tool `create_branch`, which argument is described as: Source branch (defaults to repo default)",
+      "For the tool `create_repository`, which argument is described as: Initialize with README",
+      "For the tool `get_job_logs`, which argument is described as: Number of lines to return from the end of the log",
+      "For the tool `get_repository_tree`, which argument is described as: The SHA1 value or ref (branch or tag) name of the tree. Defaults to the repository's default branch",
+      "For the tool `manage_notification_subscription`, which argument is described as: The ID of the notification thread.",
+      "For the tool `mark_all_notifications_read`, which argument is described as: Describes the last point that notifications were checked (optional). Default: Now",
+      "For the tool `repository_ruleset_read`, which argument is described as: Include rulesets configured at higher levels that also apply. Defaults to true. Used by the 'get' and 'list' methods at the repository level.",
+      "For the tool `repository_ruleset_read`, which argument is described as: The time period to filter rule suites by. Used by the 'list_rule_suites' method."
+    ]
+  },
+  "diagnostic12": {
+    "n": 12,
+    "informative_n": 9,
+    "arms": {
+      "control": {
+        "correct": 7,
+        "cap": 0,
+        "informative_correct": 5,
+        "by_kind": {
+          "lookup": {
+            "correct": 7,
+            "n": 12
+          }
+        }
+      },
+      "teacher": {
+        "correct": 12,
+        "cap": 0,
+        "informative_correct": 9,
+        "by_kind": {
+          "lookup": {
+            "correct": 12,
+            "n": 12
+          }
+        }
+      },
+      "none": {
+        "correct": 3,
+        "cap": 6,
+        "informative_correct": 0,
+        "by_kind": {
+          "lookup": {
+            "correct": 3,
+            "n": 12
+          }
+        }
+      },
+      "expanded": {
+        "correct": 7,
+        "cap": 2,
+        "informative_correct": 4,
+        "by_kind": {
+          "lookup": {
+            "correct": 7,
+            "n": 12
+          }
+        }
+      }
+    },
+    "gains": [
+      "For mcp__github__get_tag, list the mandatory argument names only."
+    ],
+    "losses": [
+      "For mcp__github__discussion_comment_write, what method value marks a comment as the accepted answer? Give only that value."
+    ]
+  },
+  "artifacts": {
+    "control": {
+      "slots": 8192,
+      "exact": 0,
+      "compile_s": 2130.7742471694946,
+      "kv_bytes": 536870912,
+      "manifest_sha256": "724e43177da6e823d4df4aaa21e4dc2629a1c96fcd4f1c7b81f93ff29a5aa202"
+    },
+    "compiled": {
+      "slots": 4096,
+      "exact": 0,
+      "compile_s": 6167.127895593643,
+      "kv_bytes": 268435456,
+      "manifest_sha256": "54fb4a37199de5f68b3ce48c9e0401dab307681f79f19bdf794c1466a3dd9ae8"
+    }
+  }
+}

@@ -1,0 +1,3937 @@
+{
+  "n": 194,
+  "training_n": 476,
+  "failures": 13,
+  "failure_categories": {
+    "selection_answer_absent": 1,
+    "selection_answer_present": 1,
+    "no_explicit_field_answer": 9,
+    "field_name_only": 2
+  },
+  "all_categories": {
+    "field_name_only": {
+      "n": 46,
+      "failed": 2
+    },
+    "no_explicit_field_answer": {
+      "n": 61,
+      "failed": 9
+    },
+    "selection_answer_absent": {
+      "n": 11,
+      "failed": 1
+    },
+    "selection_answer_present": {
+      "n": 51,
+      "failed": 1
+    },
+    "source_description_answer_present": {
+      "n": 25,
+      "failed": 0
+    }
+  },
+  "hashes": {
+    "/tmp/opencode/coverage27b-questions-checked.json": "9b3ba2a6ab5b07373cf903cfea948358c3c1d411dd85009a66583b88d8be8988",
+    "/tmp/opencode/reread27b-evals/dev_own.json": "89443e71f4187a64f06a160be6788e408497d3b25cf64dc17ef4eb139b958218",
+    "prompts/agent_resident.txt": "0ba38930d86e54e73fc6d63ec1553be3d7e2d1b39f60091ea2e670fb318e20ef"
+  },
+  "cases": [
+    {
+      "q": "Which tool should be used to do the following: Get details about specific GitHub Actions resources.",
+      "answer": "actions_get",
+      "kind": "tool_select",
+      "pred": "`mcp__github__actions_get`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__actions_get",
+        "rows": [
+          94,
+          137,
+          171,
+          206
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Trigger GitHub Actions workflow operations, including running, re-running, cancelling workflow runs, and deleting workflow run logs.",
+      "answer": "actions_run_trigger",
+      "kind": "tool_select",
+      "pred": "`mcp__github__actions_run_trigger`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__actions_run_trigger",
+        "rows": [
+          371,
+          393
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Add a comment and/or reaction to a specific issue or issue comment in a GitHub repository.",
+      "answer": "add_issue_comment",
+      "kind": "tool_select",
+      "pred": "`mcp__github__add_issue_comment`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__add_issue_comment",
+        "rows": [
+          119,
+          409,
+          432
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Add a reaction to an issue or pull request.",
+      "answer": "add_issue_reaction",
+      "kind": "tool_select",
+      "pred": "`mcp__github__add_issue_reaction`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__add_issue_reaction",
+        "rows": [
+          174,
+          231,
+          344
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Add a reaction to a pull request review comment.",
+      "answer": "add_pull_request_review_comment_reaction",
+      "kind": "tool_select",
+      "pred": "`mcp__github__add_pull_request_review_comment_reaction`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__add_pull_request_review_comment_reaction",
+        "rows": [
+          191,
+          423
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Add a sub-issue to a parent issue.",
+      "answer": "add_sub_issue",
+      "kind": "tool_select",
+      "pred": "`mcp__github__add_sub_issue`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__add_sub_issue",
+        "rows": [
+          117,
+          133,
+          142,
+          230
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Create a new issue in a GitHub repository with a title and optional body.",
+      "answer": "create_issue",
+      "kind": "tool_select",
+      "pred": "`mcp__github__create_issue`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__create_issue",
+        "rows": [
+          159
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Create a new pull request in a GitHub repository.",
+      "answer": "create_pull_request",
+      "kind": "tool_select",
+      "pred": "`mcp__github__create_pull_request`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__create_pull_request",
+        "rows": [
+          105,
+          175,
+          292
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Create a new GitHub repository in your account or specified organization",
+      "answer": "create_repository",
+      "kind": "tool_select",
+      "pred": "`mcp__github__create_repository`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__create_repository",
+        "rows": [
+          125
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Read custom properties at the repository, organization, or enterprise level.",
+      "answer": "custom_properties_read",
+      "kind": "tool_select",
+      "pred": "`mcp__github__custom_properties_read`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__custom_properties_read",
+        "rows": [
+          154,
+          226,
+          275,
+          435
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Delete a file from a GitHub repository",
+      "answer": "delete_file",
+      "kind": "tool_select",
+      "pred": "`mcp__github__delete_file`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__delete_file",
+        "rows": [
+          126,
+          221,
+          445
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Delete a GitHub repository after the user confirms the exact owner/repository name",
+      "answer": "delete_repository",
+      "kind": "tool_select",
+      "pred": "`mcp__github__delete_repository`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__delete_repository",
+        "rows": [
+          246
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Dismiss a notification by marking it as read or done",
+      "answer": "dismiss_notification",
+      "kind": "tool_select",
+      "pred": "`mcp__github__dismiss_notification`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__dismiss_notification",
+        "rows": [
+          287,
+          408
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Fork a GitHub repository to your account or specified organization",
+      "answer": "fork_repository",
+      "kind": "tool_select",
+      "pred": "`mcp__github__fork_repository`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__fork_repository",
+        "rows": [
+          220,
+          322,
+          357
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Get details of a specific code scanning alert in a GitHub repository.",
+      "answer": "get_code_scanning_alert",
+      "kind": "tool_select",
+      "pred": "`mcp__github__get_code_scanning_alert`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__get_code_scanning_alert",
+        "rows": [
+          156
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Get details of a specific dependabot alert in a GitHub repository.",
+      "answer": "get_dependabot_alert",
+      "kind": "tool_select",
+      "pred": "`mcp__github__get_dependabot_alert`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__get_dependabot_alert",
+        "rows": [
+          129,
+          196,
+          223,
+          304,
+          406,
+          470
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Get comments from a discussion",
+      "answer": "get_discussion_comments",
+      "kind": "tool_select",
+      "pred": "`mcp__github__get_discussion_comments`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__get_discussion_comments",
+        "rows": [
+          123,
+          245,
+          326
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Get the contents of a file or directory from a GitHub repository",
+      "answer": "get_file_contents",
+      "kind": "tool_select",
+      "pred": "`mcp__github__get_file_contents`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__get_file_contents",
+        "rows": [
+          197,
+          318
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Get a global security advisory",
+      "answer": "get_global_security_advisory",
+      "kind": "tool_select",
+      "pred": "`mcp__github__get_global_security_advisory`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_absent",
+        "tool": "mcp__github__get_global_security_advisory",
+        "rows": [],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Get logs for GitHub Actions workflow jobs.",
+      "answer": "get_job_logs",
+      "kind": "tool_select",
+      "pred": "`mcp__github__get_job_logs`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__get_job_logs",
+        "rows": [
+          202
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Get the latest release in a GitHub repository",
+      "answer": "get_latest_release",
+      "kind": "tool_select",
+      "pred": "`mcp__github__get_latest_release`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__get_latest_release",
+        "rows": [
+          211
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Get detailed information for a specific GitHub notification, always call this tool when the user asks for details about a specific notification, if you don't know the ID list notifications first.",
+      "answer": "get_notification_details",
+      "kind": "tool_select",
+      "pred": "`mcp__github__get_notification_details`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__get_notification_details",
+        "rows": [
+          170
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Get the tree structure (files and directories) of a GitHub repository at a specific ref or SHA",
+      "answer": "get_repository_tree",
+      "kind": "tool_select",
+      "pred": "`mcp__github__get_repository_tree`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_absent",
+        "tool": "mcp__github__get_repository_tree",
+        "rows": [],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Get details about a specific git tag in a GitHub repository",
+      "answer": "get_tag",
+      "kind": "tool_select",
+      "pred": "`mcp__github__get_tag`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_absent",
+        "tool": "mcp__github__get_tag",
+        "rows": [],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Get details of the teams the user is a member of.",
+      "answer": "get_teams",
+      "kind": "tool_select",
+      "pred": "`mcp__github__get_team_members`",
+      "ok": false,
+      "coverage": {
+        "category": "selection_answer_absent",
+        "tool": "mcp__github__get_teams",
+        "rows": [],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Hide (minimize) the body of a submitted pull request review.",
+      "answer": "hide_pull_request_review",
+      "kind": "tool_select",
+      "pred": "`mcp__github__hide_pull_request_review`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__hide_pull_request_review",
+        "rows": [
+          157,
+          347
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Read an issue's dependency relationships in a GitHub repository: the issues that block it (blocked_by) or the issues it blocks (blocking).",
+      "answer": "issue_dependency_read",
+      "kind": "tool_select",
+      "pred": "`mcp__github__issue_dependency_read`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__issue_dependency_read",
+        "rows": [
+          415,
+          441
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Get information about a specific issue in a GitHub repository.",
+      "answer": "issue_read",
+      "kind": "tool_select",
+      "pred": "`mcp__github__issue_read`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__issue_read",
+        "rows": [
+          155,
+          329
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Perform write operations on repository labels.",
+      "answer": "label_write",
+      "kind": "tool_select",
+      "pred": "`mcp__github__label_write`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__label_write",
+        "rows": [
+          158,
+          338,
+          472
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: List code scanning alerts in a GitHub repository.",
+      "answer": "list_code_scanning_alerts",
+      "kind": "tool_select",
+      "pred": "`mcp__github__list_code_scanning_alerts`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__list_code_scanning_alerts",
+        "rows": [
+          91,
+          118,
+          140,
+          291
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: List dependabot alerts in a GitHub repository.",
+      "answer": "list_dependabot_alerts",
+      "kind": "tool_select",
+      "pred": "`mcp__github__list_dependabot_alerts`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__list_dependabot_alerts",
+        "rows": [
+          77
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: List discussions for a repository or organisation.",
+      "answer": "list_discussions",
+      "kind": "tool_select",
+      "pred": "`mcp__github__list_discussions`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_absent",
+        "tool": "mcp__github__list_discussions",
+        "rows": [],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: List issue fields for a repository or organization.",
+      "answer": "list_issue_fields",
+      "kind": "tool_select",
+      "pred": "`mcp__github__list_issue_fields`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__list_issue_fields",
+        "rows": [
+          177,
+          252
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: List issues in a GitHub repository.",
+      "answer": "list_issues",
+      "kind": "tool_select",
+      "pred": "`mcp__github__list_issues`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_absent",
+        "tool": "mcp__github__list_issues",
+        "rows": [],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Lists all GitHub notifications for the authenticated user, including unread notifications, mentions, review requests, assignments, and updates on issues or pull requests.",
+      "answer": "list_notifications",
+      "kind": "tool_select",
+      "pred": "`mcp__github__list_notifications`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__list_notifications",
+        "rows": [
+          343,
+          375
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: List pull requests in a GitHub repository.",
+      "answer": "list_pull_requests",
+      "kind": "tool_select",
+      "pred": "`mcp__github__list_pull_requests`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__list_pull_requests",
+        "rows": [
+          198,
+          364,
+          433
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: List collaborators of a GitHub repository.",
+      "answer": "list_repository_collaborators",
+      "kind": "tool_select",
+      "pred": "`mcp__github__list_repository_collaborators`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__list_repository_collaborators",
+        "rows": [
+          321,
+          413
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: List secret scanning alerts in a GitHub repository.",
+      "answer": "list_secret_scanning_alerts",
+      "kind": "tool_select",
+      "pred": "`mcp__github__list_secret_scanning_alerts`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_absent",
+        "tool": "mcp__github__list_secret_scanning_alerts",
+        "rows": [],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: List git tags in a GitHub repository",
+      "answer": "list_tags",
+      "kind": "tool_select",
+      "pred": "`mcp__github__list_tags`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__list_tags",
+        "rows": [
+          452
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Manage a repository notification subscription: ignore, watch, or delete repository notifications subscription for the provided repository.",
+      "answer": "manage_repository_notification_subscription",
+      "kind": "tool_select",
+      "pred": "`mcp__github__manage_repository_notification_subscription`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__manage_repository_notification_subscription",
+        "rows": [
+          152,
+          184,
+          331
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Merge a pull request in a GitHub repository.",
+      "answer": "merge_pull_request",
+      "kind": "tool_select",
+      "pred": "`mcp__github__merge_pull_request`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_absent",
+        "tool": "mcp__github__merge_pull_request",
+        "rows": [],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Tools for listing GitHub Projects resources.",
+      "answer": "projects_list",
+      "kind": "tool_select",
+      "pred": "`mcp__github__projects_list`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__projects_list",
+        "rows": [
+          98,
+          232,
+          270,
+          316,
+          348
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Get information on a specific pull request in GitHub repository.",
+      "answer": "pull_request_read",
+      "kind": "tool_select",
+      "pred": "`mcp__github__pull_request_read`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__pull_request_read",
+        "rows": [
+          208,
+          272,
+          284,
+          402,
+          450
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Remove a reaction from an issue or pull request comment.",
+      "answer": "remove_issue_comment_reaction",
+      "kind": "tool_select",
+      "pred": "`mcp__github__remove_issue_comment_reaction`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__remove_issue_comment_reaction",
+        "rows": [
+          101,
+          116
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Remove a reaction from a pull request review comment.",
+      "answer": "remove_pull_request_review_comment_reaction",
+      "kind": "tool_select",
+      "pred": "`mcp__github__remove_pull_request_review_comment_reaction`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__remove_pull_request_review_comment_reaction",
+        "rows": [
+          235
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Read rulesets at the repository, organization, or enterprise level, and rule suites at the repository or organization level.",
+      "answer": "repository_ruleset_read",
+      "kind": "tool_select",
+      "pred": "`mcp__github__repository_ruleset_read`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__repository_ruleset_read",
+        "rows": [
+          368
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Request a GitHub Copilot code review for a pull request.",
+      "answer": "request_copilot_review",
+      "kind": "tool_select",
+      "pred": "`mcp__github__request_copilot_review`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_absent",
+        "tool": "mcp__github__request_copilot_review",
+        "rows": [],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Fast and precise code search across ALL GitHub repositories using GitHub's native search engine.",
+      "answer": "search_code",
+      "kind": "tool_select",
+      "pred": "`mcp__github__search_code`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__search_code",
+        "rows": [
+          422
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Search issues using natural-language semantic matching.",
+      "answer": "search_issues",
+      "kind": "tool_select",
+      "pred": "`mcp__github__search_issues`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__search_issues",
+        "rows": [
+          194,
+          204,
+          359
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Search for pull requests in GitHub repositories using issues search syntax already scoped to is:pr",
+      "answer": "search_pull_requests",
+      "kind": "tool_select",
+      "pred": "`mcp__github__search_pull_request`",
+      "ok": false,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__search_pull_requests",
+        "rows": [
+          229
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Find GitHub users by username, real name, or other profile information.",
+      "answer": "search_users",
+      "kind": "tool_select",
+      "pred": "`mcp__github__search_users`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__search_users",
+        "rows": [
+          166,
+          288,
+          438,
+          458
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Add a sub-issue to a parent issue in a GitHub repository.",
+      "answer": "sub_issue_write",
+      "kind": "tool_select",
+      "pred": "`mcp__github__sub_issue_write`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__sub_issue_write",
+        "rows": [
+          88,
+          212,
+          271,
+          379
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Fetch UI data for MCP Apps (labels, assignees, milestones, issue types, branches, issue fields, reviewers).",
+      "answer": "ui_get",
+      "kind": "tool_select",
+      "pred": "`mcp__github__ui_get`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_absent",
+        "tool": "mcp__github__ui_get",
+        "rows": [],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Unhide (unminimize) the previously hidden body of a submitted pull request review.",
+      "answer": "unhide_pull_request_review",
+      "kind": "tool_select",
+      "pred": "`mcp__github__unhide_pull_request_review`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__unhide_pull_request_review",
+        "rows": [
+          473
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Unresolve a previously resolved review thread on a pull request.",
+      "answer": "unresolve_review_thread",
+      "kind": "tool_select",
+      "pred": "`mcp__github__unresolve_review_thread`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_absent",
+        "tool": "mcp__github__unresolve_review_thread",
+        "rows": [],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Update the assignees of an existing issue.",
+      "answer": "update_issue_assignees",
+      "kind": "tool_select",
+      "pred": "`mcp__github__update_issue_assignees`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__update_issue_assignees",
+        "rows": [
+          367
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Update the body of an existing issue or pull request conversation comment.",
+      "answer": "update_issue_comment",
+      "kind": "tool_select",
+      "pred": "`mcp__github__update_issue_comment`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__update_issue_comment",
+        "rows": [
+          190,
+          417
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Update the milestone of an existing issue.",
+      "answer": "update_issue_milestone",
+      "kind": "tool_select",
+      "pred": "`mcp__github__update_issue_milestone`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__update_issue_milestone",
+        "rows": [
+          384
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Update the title of an existing issue.",
+      "answer": "update_issue_title",
+      "kind": "tool_select",
+      "pred": "`mcp__github__update_issue_title`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__update_issue_title",
+        "rows": [
+          111,
+          162,
+          167
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Update an existing pull request in a GitHub repository.",
+      "answer": "update_pull_request",
+      "kind": "tool_select",
+      "pred": "`mcp__github__update_pull_request`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__update_pull_request",
+        "rows": [
+          340
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Update the branch of a pull request with the latest changes from the base branch.",
+      "answer": "update_pull_request_branch",
+      "kind": "tool_select",
+      "pred": "`mcp__github__update_pull_request_branch`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__update_pull_request_branch",
+        "rows": [
+          173,
+          236,
+          335,
+          372,
+          419
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "Which tool should be used to do the following: Update the state of an existing pull request (open or closed).",
+      "answer": "update_pull_request_state",
+      "kind": "tool_select",
+      "pred": "`mcp__github__update_pull_request_state`",
+      "ok": true,
+      "coverage": {
+        "category": "selection_answer_present",
+        "tool": "mcp__github__update_pull_request_state",
+        "rows": [
+          447
+        ],
+        "limitation": "name-answer supervision, not verified semantic intent equivalence"
+      }
+    },
+    {
+      "q": "For the tool `actions_get`, which argument is described as: The unique identifier of the resource. This will vary based on the \"method\" provided, so ensure you provide the correct ID:",
+      "answer": "resource_id",
+      "kind": "lookup",
+      "pred": "`resource_id`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__actions_get",
+        "field": "resource_id",
+        "required": true,
+        "source_description": "The unique identifier of the resource. This will vary based on the \"method\" provided, so ensure you provide the correct ID: - Provide a workflow ID or workflow file name (e.g. ci.yaml) for 'get_workflow' method. - Provide a workflow run ID for 'get_workflow_run', 'get_workflow_run_usage', and 'get_workflow_run_logs_url' methods. - Provide an artifact ID for 'download_workflow_run_artifact' method. - Provide a job ID for 'get_workflow_job' method.",
+        "rows": [
+          104,
+          181
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          104,
+          181
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `actions_list`, which argument is described as: Filters for workflow jobs. **ONLY** used when method is 'list_workflow_jobs'",
+      "answer": "workflow_jobs_filter",
+      "kind": "lookup",
+      "pred": "`workflow_jobs_filter`",
+      "ok": true,
+      "coverage": {
+        "category": "source_description_answer_present",
+        "tool": "mcp__github__actions_list",
+        "field": "workflow_jobs_filter",
+        "required": false,
+        "source_description": "Filters for workflow jobs. **ONLY** used when method is 'list_workflow_jobs'",
+        "rows": [
+          148,
+          256,
+          430
+        ],
+        "description_rows": [
+          256,
+          430
+        ],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          148,
+          256,
+          430
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `actions_run_trigger`, which argument is described as: Inputs the workflow accepts. Only used for 'run_workflow' method.",
+      "answer": "inputs",
+      "kind": "lookup",
+      "pred": "`inputs`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__actions_run_trigger",
+        "field": "inputs",
+        "required": false,
+        "source_description": "Inputs the workflow accepts. Only used for 'run_workflow' method.",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `actions_run_trigger`, which argument is described as: The workflow ID (numeric) or workflow file name (e.g., main.yml, ci.yaml). Required for 'run_workflow' method.",
+      "answer": "workflow_id",
+      "kind": "lookup",
+      "pred": "`workflow_id`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__actions_run_trigger",
+        "field": "workflow_id",
+        "required": false,
+        "source_description": "The workflow ID (numeric) or workflow file name (e.g., main.yml, ci.yaml). Required for 'run_workflow' method.",
+        "rows": [
+          400,
+          467
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          400,
+          467
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `add_comment_to_pending_review`, which argument is described as: The side of the diff to comment on. LEFT indicates the previous state, RIGHT indicates the new state",
+      "answer": "side",
+      "kind": "lookup",
+      "pred": "`side`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__add_comment_to_pending_review",
+        "field": "side",
+        "required": false,
+        "source_description": "The side of the diff to comment on. LEFT indicates the previous state, RIGHT indicates the new state",
+        "rows": [
+          213,
+          301
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          213,
+          301
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `add_comment_to_pending_review`, which argument is described as: For multi-line comments, the starting side of the diff that the comment applies to. LEFT indicates the previous state, RIGHT indicates the new state",
+      "answer": "startSide",
+      "kind": "lookup",
+      "pred": "`startSide`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__add_comment_to_pending_review",
+        "field": "startSide",
+        "required": false,
+        "source_description": "For multi-line comments, the starting side of the diff that the comment applies to. LEFT indicates the previous state, RIGHT indicates the new state",
+        "rows": [
+          213,
+          301
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          213,
+          301
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `add_issue_comment`, which argument is described as: The numeric ID of the issue or pull request comment to react to. Use this for reactions to comments; omit it to react to the issue or pull request itself. Cannot be combined with body.",
+      "answer": "comment_id",
+      "kind": "lookup",
+      "pred": "`comment_id`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__add_issue_comment",
+        "field": "comment_id",
+        "required": false,
+        "source_description": "The numeric ID of the issue or pull request comment to react to. Use this for reactions to comments; omit it to react to the issue or pull request itself. Cannot be combined with body.",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `add_issue_comment`, which argument is described as: Emoji reaction to add. Required unless body is provided.",
+      "answer": "reaction",
+      "kind": "lookup",
+      "pred": "`reaction`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__add_issue_comment",
+        "field": "reaction",
+        "required": false,
+        "source_description": "Emoji reaction to add. Required unless body is provided.",
+        "rows": [
+          119,
+          409
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `add_issue_comment_reaction`, which argument is described as: The emoji reaction type",
+      "answer": "content",
+      "kind": "lookup",
+      "pred": "`content`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__add_issue_comment_reaction",
+        "field": "content",
+        "required": true,
+        "source_description": "The emoji reaction type",
+        "rows": [
+          179
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `add_pull_request_review_comment`, which argument is described as: The line number in the diff to comment on (optional)",
+      "answer": "line",
+      "kind": "lookup",
+      "pred": "`line`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__add_pull_request_review_comment",
+        "field": "line",
+        "required": false,
+        "source_description": "The line number in the diff to comment on (optional)",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `add_pull_request_review_comment`, which argument is described as: The side of the diff to comment on (optional)",
+      "answer": "side",
+      "kind": "lookup",
+      "pred": "`side`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__add_pull_request_review_comment",
+        "field": "side",
+        "required": false,
+        "source_description": "The side of the diff to comment on (optional)",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `add_pull_request_review_comment`, which argument is described as: The start side of a multi-line comment (optional)",
+      "answer": "startSide",
+      "kind": "lookup",
+      "pred": "`startSide`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__add_pull_request_review_comment",
+        "field": "startSide",
+        "required": false,
+        "source_description": "The start side of a multi-line comment (optional)",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `add_pull_request_review_comment_reaction`, which argument is described as: The numeric pull request review comment ID. Use the number from a #discussion_r... anchor, not the GraphQL thread node ID (PRRT_...).",
+      "answer": "comment_id",
+      "kind": "lookup",
+      "pred": "`comment_id`",
+      "ok": true,
+      "coverage": {
+        "category": "source_description_answer_present",
+        "tool": "mcp__github__add_pull_request_review_comment_reaction",
+        "field": "comment_id",
+        "required": true,
+        "source_description": "The numeric pull request review comment ID. Use the number from a #discussion_r... anchor, not the GraphQL thread node ID (PRRT_...).",
+        "rows": [
+          161
+        ],
+        "description_rows": [
+          161
+        ],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          161
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `add_reply_to_pull_request_comment`, which argument is described as: The numeric ID of the pull request review comment to reply or react to. Use the number from a #discussion_r... anchor, not the GraphQL thread node ID (PRRT_...).",
+      "answer": "commentId",
+      "kind": "lookup",
+      "pred": "`comment_id`",
+      "ok": true,
+      "coverage": {
+        "category": "source_description_answer_present",
+        "tool": "mcp__github__add_reply_to_pull_request_comment",
+        "field": "commentId",
+        "required": true,
+        "source_description": "The numeric ID of the pull request review comment to reply or react to. Use the number from a #discussion_r... anchor, not the GraphQL thread node ID (PRRT_...).",
+        "rows": [
+          110,
+          222,
+          265
+        ],
+        "description_rows": [
+          110
+        ],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          110,
+          265
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `add_reply_to_pull_request_comment`, which argument is described as: Emoji reaction to add. Required unless body is provided.",
+      "answer": "reaction",
+      "kind": "lookup",
+      "pred": "`reaction`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__add_reply_to_pull_request_comment",
+        "field": "reaction",
+        "required": false,
+        "source_description": "Emoji reaction to add. Required unless body is provided.",
+        "rows": [
+          222,
+          265
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          265
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `add_sub_issue`, which argument is described as: If true, reparent the sub-issue if it already has a parent",
+      "answer": "replace_parent",
+      "kind": "lookup",
+      "pred": "`replace_parent`",
+      "ok": true,
+      "coverage": {
+        "category": "source_description_answer_present",
+        "tool": "mcp__github__add_sub_issue",
+        "field": "replace_parent",
+        "required": false,
+        "source_description": "If true, reparent the sub-issue if it already has a parent",
+        "rows": [
+          124
+        ],
+        "description_rows": [
+          124
+        ],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          124
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `assign_copilot_to_issue`, which argument is described as: Git reference (e.g., branch) that the agent will start its work from. If not specified, defaults to the repository's default branch",
+      "answer": "base_ref",
+      "kind": "lookup",
+      "pred": "`base_ref`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__assign_copilot_to_issue",
+        "field": "base_ref",
+        "required": false,
+        "source_description": "Git reference (e.g., branch) that the agent will start its work from. If not specified, defaults to the repository's default branch",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `assign_copilot_to_issue_with_intent`, which argument is described as: Git reference (e.g., branch) that the agent will start its work from. If not specified, defaults to the repository's default branch. Ignored when is_suggestion is true",
+      "answer": "base_ref",
+      "kind": "lookup",
+      "pred": "`base_branch`",
+      "ok": false,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__assign_copilot_to_issue_with_intent",
+        "field": "base_ref",
+        "required": false,
+        "source_description": "Git reference (e.g., branch) that the agent will start its work from. If not specified, defaults to the repository's default branch. Ignored when is_suggestion is true",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `assign_copilot_to_issue_with_intent`, which argument is described as: Optional custom instructions to guide the agent beyond the issue body. Ignored when is_suggestion is true",
+      "answer": "custom_instructions",
+      "kind": "lookup",
+      "pred": "`custom_instructions`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__assign_copilot_to_issue_with_intent",
+        "field": "custom_instructions",
+        "required": false,
+        "source_description": "Optional custom instructions to guide the agent beyond the issue body. Ignored when is_suggestion is true",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `assign_copilot_to_issue_with_intent`, which argument is described as: One concise sentence explaining what specifically about the issue led to choosing Copilot. State the concrete signal (e.g. 'Well-scoped task with clear acceptance criteria').",
+      "answer": "rationale",
+      "kind": "lookup",
+      "pred": "`rationale`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__assign_copilot_to_issue_with_intent",
+        "field": "rationale",
+        "required": true,
+        "source_description": "One concise sentence explaining what specifically about the issue led to choosing Copilot. State the concrete signal (e.g. 'Well-scoped task with clear acceptance criteria').",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `create_gist`, which argument is described as: Content for simple single-file gist creation",
+      "answer": "content",
+      "kind": "lookup",
+      "pred": "`content`",
+      "ok": true,
+      "coverage": {
+        "category": "source_description_answer_present",
+        "tool": "mcp__github__create_gist",
+        "field": "content",
+        "required": true,
+        "source_description": "Content for simple single-file gist creation",
+        "rows": [
+          254,
+          278
+        ],
+        "description_rows": [
+          254
+        ],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          254
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `create_gist`, which argument is described as: Filename for simple single-file gist creation",
+      "answer": "filename",
+      "kind": "lookup",
+      "pred": "`filename`",
+      "ok": true,
+      "coverage": {
+        "category": "source_description_answer_present",
+        "tool": "mcp__github__create_gist",
+        "field": "filename",
+        "required": true,
+        "source_description": "Filename for simple single-file gist creation",
+        "rows": [
+          254,
+          278
+        ],
+        "description_rows": [
+          254
+        ],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          254
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `create_issue`, which argument is described as: Issue number of the parent issue. The new issue is created and attached to this parent in the same operation.",
+      "answer": "parent_issue_number",
+      "kind": "lookup",
+      "pred": "`parent_issue_number`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__create_issue",
+        "field": "parent_issue_number",
+        "required": false,
+        "source_description": "Issue number of the parent issue. The new issue is created and attached to this parent in the same operation.",
+        "rows": [
+          431
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          431
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `create_issue`, which argument is described as: Repository name of the parent issue. Must be provided with parent_owner. Omit both to use owner and repo. Only used when parent_issue_number is provided.",
+      "answer": "parent_repo",
+      "kind": "lookup",
+      "pred": "`parent_repo`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__create_issue",
+        "field": "parent_repo",
+        "required": false,
+        "source_description": "Repository name of the parent issue. Must be provided with parent_owner. Omit both to use owner and repo. Only used when parent_issue_number is provided.",
+        "rows": [
+          431
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          431
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `create_or_update_file`, which argument is described as: Branch to create/update the file in",
+      "answer": "branch",
+      "kind": "lookup",
+      "pred": "The `branch` argument is described as \"Branch to create/update the file in\".",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__create_or_update_file",
+        "field": "branch",
+        "required": true,
+        "source_description": "Branch to create/update the file in",
+        "rows": [
+          439
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          439
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `create_pull_request`, which argument is described as: Allow maintainer edits",
+      "answer": "maintainer_can_modify",
+      "kind": "lookup",
+      "pred": "`maintainer_can_modify`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__create_pull_request",
+        "field": "maintainer_can_modify",
+        "required": false,
+        "source_description": "Allow maintainer edits",
+        "rows": [
+          377,
+          420
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          377,
+          420
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `create_pull_request_review`, which argument is described as: The SHA of the commit to review (optional, defaults to latest)",
+      "answer": "commitID",
+      "kind": "lookup",
+      "pred": "`commit_id`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__create_pull_request_review",
+        "field": "commitID",
+        "required": false,
+        "source_description": "The SHA of the commit to review (optional, defaults to latest)",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `create_pull_request_review`, which argument is described as: The pull request number",
+      "answer": "pullNumber",
+      "kind": "lookup",
+      "pred": "`pullNumber`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__create_pull_request_review",
+        "field": "pullNumber",
+        "required": true,
+        "source_description": "The pull request number",
+        "rows": [
+          168,
+          327,
+          464,
+          469
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          168,
+          327,
+          464,
+          469
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `create_repository`, which argument is described as: Repository description",
+      "answer": "description",
+      "kind": "lookup",
+      "pred": "`description`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__create_repository",
+        "field": "description",
+        "required": false,
+        "source_description": "Repository description",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `create_repository`, which argument is described as: Whether the repository should be private. Defaults to true (private) when omitted.",
+      "answer": "private",
+      "kind": "lookup",
+      "pred": "`private`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__create_repository",
+        "field": "private",
+        "required": false,
+        "source_description": "Whether the repository should be private. Defaults to true (private) when omitted.",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `create_repository_ruleset`, which argument is described as: Conditions for when this ruleset applies, e.g. {\"ref_name\": {\"include\": [\"refs/heads/main\"], \"exclude\": []}}",
+      "answer": "conditions",
+      "kind": "lookup",
+      "pred": "`conditions`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__create_repository_ruleset",
+        "field": "conditions",
+        "required": false,
+        "source_description": "Conditions for when this ruleset applies, e.g. {\"ref_name\": {\"include\": [\"refs/heads/main\"], \"exclude\": []}}",
+        "rows": [
+          264
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          264
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `create_repository_ruleset`, which argument is described as: Enterprise slug. Required when level is 'enterprise'.",
+      "answer": "enterprise",
+      "kind": "lookup",
+      "pred": "`enterprise`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__create_repository_ruleset",
+        "field": "enterprise",
+        "required": false,
+        "source_description": "Enterprise slug. Required when level is 'enterprise'.",
+        "rows": [
+          264,
+          290
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          264
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `create_repository_ruleset`, which argument is described as: An array of rules within the ruleset. Each rule is an object with a 'type' (e.g. 'creation', 'deletion', 'non_fast_forward', 'required_signatures', 'pull_request', 'required_status_checks') and, for rules that need configuration, a 'parameters' object",
+      "answer": "rules",
+      "kind": "lookup",
+      "pred": "`rules`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__create_repository_ruleset",
+        "field": "rules",
+        "required": true,
+        "source_description": "An array of rules within the ruleset. Each rule is an object with a 'type' (e.g. 'creation', 'deletion', 'non_fast_forward', 'required_signatures', 'pull_request', 'required_status_checks') and, for rules that need configuration, a 'parameters' object",
+        "rows": [
+          264
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          264
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `custom_properties_read`, which argument is described as: Enterprise slug. Required when level is 'enterprise'.",
+      "answer": "enterprise",
+      "kind": "lookup",
+      "pred": "`enterprise`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__custom_properties_read",
+        "field": "enterprise",
+        "required": false,
+        "source_description": "Enterprise slug. Required when level is 'enterprise'.",
+        "rows": [
+          160
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          160
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `custom_properties_write`, which argument is described as: Enterprise slug. Required when level is 'enterprise'.",
+      "answer": "enterprise",
+      "kind": "lookup",
+      "pred": "`enterprise`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__custom_properties_write",
+        "field": "enterprise",
+        "required": false,
+        "source_description": "Enterprise slug. Required when level is 'enterprise'.",
+        "rows": [
+          113,
+          115,
+          259,
+          262,
+          353,
+          356,
+          444
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          115,
+          262
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `custom_properties_write`, which argument is described as: The custom properties to create or update. At the repository level each item assigns a value ('property_name' and 'value'); at the organization and enterprise levels each item defines the schema ('property_name' and 'value_type', plus optional definition fields).",
+      "answer": "properties",
+      "kind": "lookup",
+      "pred": "The argument is `properties`.",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__custom_properties_write",
+        "field": "properties",
+        "required": true,
+        "source_description": "The custom properties to create or update. At the repository level each item assigns a value ('property_name' and 'value'); at the organization and enterprise levels each item defines the schema ('property_name' and 'value_type', plus optional definition fields).",
+        "rows": [
+          113,
+          115,
+          259,
+          262,
+          353,
+          356,
+          444
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          115,
+          262
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `delete_pending_pull_request_review`, which argument is described as: The pull request number",
+      "answer": "pullNumber",
+      "kind": "lookup",
+      "pred": "`pullNumber`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__delete_pending_pull_request_review",
+        "field": "pullNumber",
+        "required": true,
+        "source_description": "The pull request number",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `discussion_comment_write`, which argument is described as: Discussion number (required for 'add' and 'reply' methods)",
+      "answer": "discussionNumber",
+      "kind": "lookup",
+      "pred": "`discussionNumber`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__discussion_comment_write",
+        "field": "discussionNumber",
+        "required": false,
+        "source_description": "Discussion number (required for 'add' and 'reply' methods)",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `find_duplicate`, which argument is described as: Minimum similarity threshold a candidate must meet to be returned; higher values are stricter. When omitted, the API's high-precision default is used. The scale is defined by the API, so no client-side bounds are enforced.",
+      "answer": "confidence_threshold",
+      "kind": "lookup",
+      "pred": "The argument is `confidence_threshold`.",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__find_duplicate",
+        "field": "confidence_threshold",
+        "required": false,
+        "source_description": "Minimum similarity threshold a candidate must meet to be returned; higher values are stricter. When omitted, the API's high-precision default is used. The scale is defined by the API, so no client-side bounds are enforced.",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `fork_repository`, which argument is described as: Organization to fork to",
+      "answer": "organization",
+      "kind": "lookup",
+      "pred": "The argument is `organization`.",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__fork_repository",
+        "field": "organization",
+        "required": false,
+        "source_description": "Organization to fork to",
+        "rows": [
+          322,
+          357
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `get_code_scanning_alert`, which argument is described as: The number of the alert.",
+      "answer": "alertNumber",
+      "kind": "lookup",
+      "pred": "`alertNumber`",
+      "ok": true,
+      "coverage": {
+        "category": "source_description_answer_present",
+        "tool": "mcp__github__get_code_scanning_alert",
+        "field": "alertNumber",
+        "required": true,
+        "source_description": "The number of the alert.",
+        "rows": [
+          134,
+          289,
+          421
+        ],
+        "description_rows": [
+          134,
+          289
+        ],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          134,
+          289,
+          421
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `get_dependabot_alert`, which argument is described as: The number of the alert.",
+      "answer": "alertNumber",
+      "kind": "lookup",
+      "pred": "`alertNumber`",
+      "ok": true,
+      "coverage": {
+        "category": "source_description_answer_present",
+        "tool": "mcp__github__get_dependabot_alert",
+        "field": "alertNumber",
+        "required": true,
+        "source_description": "The number of the alert.",
+        "rows": [
+          97,
+          196
+        ],
+        "description_rows": [
+          97,
+          196
+        ],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          97
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `get_file_blame`, which argument is described as: Optional 1-based ending line of the window of interest. Must be >= start_line when both are provided.",
+      "answer": "end_line",
+      "kind": "lookup",
+      "pred": "`end_line`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__get_file_blame",
+        "field": "end_line",
+        "required": false,
+        "source_description": "Optional 1-based ending line of the window of interest. Must be >= start_line when both are provided.",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `get_global_security_advisory`, which argument is described as: GitHub Security Advisory ID (format: GHSA-xxxx-xxxx-xxxx).",
+      "answer": "ghsaId",
+      "kind": "lookup",
+      "pred": "`ghsa_id`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__get_global_security_advisory",
+        "field": "ghsaId",
+        "required": true,
+        "source_description": "GitHub Security Advisory ID (format: GHSA-xxxx-xxxx-xxxx).",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `get_job_logs`, which argument is described as: The unique identifier of the workflow job (required for single job logs)",
+      "answer": "job_id",
+      "kind": "lookup",
+      "pred": "`job_id`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__get_job_logs",
+        "field": "job_id",
+        "required": false,
+        "source_description": "The unique identifier of the workflow job (required for single job logs)",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `get_job_logs`, which argument is described as: Workflow run ID (required when using failed_only)",
+      "answer": "run_id",
+      "kind": "lookup",
+      "pred": "`run_id`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__get_job_logs",
+        "field": "run_id",
+        "required": false,
+        "source_description": "Workflow run ID (required when using failed_only)",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `get_job_logs`, which argument is described as: When true, gets logs for all failed jobs in the workflow run specified by run_id. Requires run_id to be provided.",
+      "answer": "failed_only",
+      "kind": "lookup",
+      "pred": "`failed_jobs`",
+      "ok": false,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__get_job_logs",
+        "field": "failed_only",
+        "required": false,
+        "source_description": "When true, gets logs for all failed jobs in run_id",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `get_release_by_tag`, which argument is described as: Tag name (e.g., 'v1.0.0')",
+      "answer": "tag",
+      "kind": "lookup",
+      "pred": "The `tag` argument.",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__get_release_by_tag",
+        "field": "tag",
+        "required": true,
+        "source_description": "Tag name (e.g., 'v1.0.0')",
+        "rows": [
+          399
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          399
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `get_repository_tree`, which argument is described as: Setting this parameter to true returns the objects or subtrees referenced by the tree. Default is false",
+      "answer": "recursive",
+      "kind": "lookup",
+      "pred": "`recursive`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__get_repository_tree",
+        "field": "recursive",
+        "required": false,
+        "source_description": "Setting this parameter to true returns the objects or subtrees referenced by the tree. Default is false",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `get_secret_scanning_alert`, which argument is described as: The number of the alert.",
+      "answer": "alertNumber",
+      "kind": "lookup",
+      "pred": "`alertNumber`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__get_secret_scanning_alert",
+        "field": "alertNumber",
+        "required": true,
+        "source_description": "The number of the alert.",
+        "rows": [
+          183
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `hide_issue_comment`, which argument is described as: The reason for hiding the comment",
+      "answer": "classifier",
+      "kind": "lookup",
+      "pred": "`classifier`",
+      "ok": true,
+      "coverage": {
+        "category": "source_description_answer_present",
+        "tool": "mcp__github__hide_issue_comment",
+        "field": "classifier",
+        "required": true,
+        "source_description": "The reason for hiding the comment",
+        "rows": [
+          237,
+          324,
+          373
+        ],
+        "description_rows": [
+          373
+        ],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          237,
+          373
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `hide_pull_request_review`, which argument is described as: The reason for hiding the comment",
+      "answer": "classifier",
+      "kind": "lookup",
+      "pred": "`classifier`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__hide_pull_request_review",
+        "field": "classifier",
+        "required": true,
+        "source_description": "The reason for hiding the comment",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `hide_pull_request_review`, which argument is described as: The numeric ID of the pull request review",
+      "answer": "review_id",
+      "kind": "lookup",
+      "pred": "`review_id`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__hide_pull_request_review",
+        "field": "review_id",
+        "required": true,
+        "source_description": "The numeric ID of the pull request review",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `hide_pull_request_review_comment`, which argument is described as: The numeric pull request review comment ID. Use the number from a #discussion_r... anchor, not the GraphQL thread node ID (PRRT_...).",
+      "answer": "comment_id",
+      "kind": "lookup",
+      "pred": "`comment_id`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__hide_pull_request_review_comment",
+        "field": "comment_id",
+        "required": true,
+        "source_description": "The numeric pull request review comment ID. Use the number from a #discussion_r... anchor, not the GraphQL thread node ID (PRRT_...).",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `issue_dependency_write`, which argument is described as: The number of the subject issue",
+      "answer": "issue_number",
+      "kind": "lookup",
+      "pred": "`issue_number`",
+      "ok": true,
+      "coverage": {
+        "category": "source_description_answer_present",
+        "tool": "mcp__github__issue_dependency_write",
+        "field": "issue_number",
+        "required": true,
+        "source_description": "The number of the subject issue",
+        "rows": [
+          397,
+          457
+        ],
+        "description_rows": [
+          397,
+          457
+        ],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          397,
+          457
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `issue_dependency_write`, which argument is described as: The owner of the related issue's repository. Defaults to 'owner' when omitted.",
+      "answer": "related_owner",
+      "kind": "lookup",
+      "pred": "`related_owner`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__issue_dependency_write",
+        "field": "related_owner",
+        "required": false,
+        "source_description": "The owner of the related issue's repository. Defaults to 'owner' when omitted.",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `issue_read`, which argument is described as: The number of the issue",
+      "answer": "issue_number",
+      "kind": "lookup",
+      "pred": "`issue_number`",
+      "ok": true,
+      "coverage": {
+        "category": "source_description_answer_present",
+        "tool": "mcp__github__issue_read",
+        "field": "issue_number",
+        "required": true,
+        "source_description": "The number of the issue",
+        "rows": [
+          405
+        ],
+        "description_rows": [
+          405
+        ],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          405
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `issue_write`, which argument is described as: Issue number that this issue is a duplicate of. Required when state_reason is 'duplicate'.",
+      "answer": "duplicate_of",
+      "kind": "lookup",
+      "pred": "`duplicate_of`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__issue_write",
+        "field": "duplicate_of",
+        "required": false,
+        "source_description": "Issue number that this issue is a duplicate of. Required when state_reason is 'duplicate'.",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `issue_write`, which argument is described as: Issue number to update",
+      "answer": "issue_number",
+      "kind": "lookup",
+      "pred": "`issue_number`",
+      "ok": true,
+      "coverage": {
+        "category": "source_description_answer_present",
+        "tool": "mcp__github__issue_write",
+        "field": "issue_number",
+        "required": false,
+        "source_description": "Issue number to update",
+        "rows": [
+          95,
+          149,
+          403,
+          418
+        ],
+        "description_rows": [
+          95,
+          149,
+          403,
+          418
+        ],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          95,
+          149,
+          403,
+          418
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `issue_write`, which argument is described as: Issue number of the parent issue. Only used when method is 'create' and cannot be combined with issue_fields. The new issue is created and attached to this parent in the same operation.",
+      "answer": "parent_issue_number",
+      "kind": "lookup",
+      "pred": "`parent_issue_number`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__issue_write",
+        "field": "parent_issue_number",
+        "required": false,
+        "source_description": "Issue number of the parent issue. Only used when method is 'create' and cannot be combined with issue_fields. The new issue is created and attached to this parent in the same operation.",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `issue_write`, which argument is described as: Repository name of the parent issue. Must be provided with parent_owner. Omit both to use owner and repo. Only used when method is 'create' and parent_issue_number is provided.",
+      "answer": "parent_repo",
+      "kind": "lookup",
+      "pred": "`parent_repo`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__issue_write",
+        "field": "parent_repo",
+        "required": false,
+        "source_description": "Repository name of the parent issue. Must be provided with parent_owner. Omit both to use owner and repo. Only used when method is 'create' and parent_issue_number is provided.",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `label_write`, which argument is described as: Label color as 6-character hex code without '#' prefix (e.g., 'f29513'). Required for 'create', optional for 'update'.",
+      "answer": "color",
+      "kind": "lookup",
+      "pred": "The argument is `color`.",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__label_write",
+        "field": "color",
+        "required": false,
+        "source_description": "Label color as 6-character hex code without '#' prefix (e.g., 'f29513'). Required for 'create', optional for 'update'.",
+        "rows": [
+          472
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `label_write`, which argument is described as: New name for the label (used only with 'update' method to rename)",
+      "answer": "new_name",
+      "kind": "lookup",
+      "pred": "`name`",
+      "ok": false,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__label_write",
+        "field": "new_name",
+        "required": false,
+        "source_description": "New name for the label (used only with 'update' method to rename)",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `list_code_scanning_alerts`, which argument is described as: The name of the tool used for code scanning.",
+      "answer": "tool_name",
+      "kind": "lookup",
+      "pred": "`tool`",
+      "ok": false,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__list_code_scanning_alerts",
+        "field": "tool_name",
+        "required": false,
+        "source_description": "The name of the tool used for code scanning.",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `list_commits`, which argument is described as: Only commits after this date will be returned (ISO 8601 format: YYYY-MM-DDTHH:MM:SSZ or YYYY-MM-DD)",
+      "answer": "since",
+      "kind": "lookup",
+      "pred": "`since`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__list_commits",
+        "field": "since",
+        "required": false,
+        "source_description": "Only commits after this date will be returned (ISO 8601 format: YYYY-MM-DDTHH:MM:SSZ or YYYY-MM-DD)",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `list_dependabot_alerts`, which argument is described as: Filter dependabot alerts by severity",
+      "answer": "severity",
+      "kind": "lookup",
+      "pred": "`severity`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__list_dependabot_alerts",
+        "field": "severity",
+        "required": false,
+        "source_description": "Filter dependabot alerts by severity",
+        "rows": [
+          425
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          425
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `list_discussions`, which argument is described as: Order discussions by field. If provided, the 'direction' also needs to be provided.",
+      "answer": "orderBy",
+      "kind": "lookup",
+      "pred": "`sort`",
+      "ok": false,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__list_discussions",
+        "field": "orderBy",
+        "required": false,
+        "source_description": "Order discussions by field. If provided, the 'direction' also needs to be provided.",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `list_global_security_advisories`, which argument is described as: Filter advisories by affected package or version (e.g. \"package1,package2@1.0.0\").",
+      "answer": "affects",
+      "kind": "lookup",
+      "pred": "The argument is `package`.",
+      "ok": false,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__list_global_security_advisories",
+        "field": "affects",
+        "required": false,
+        "source_description": "Filter advisories by affected package or version (e.g. \"package1,package2@1.0.0\").",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `list_global_security_advisories`, which argument is described as: Filter by package ecosystem.",
+      "answer": "ecosystem",
+      "kind": "lookup",
+      "pred": "The argument is `ecosystem`.",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__list_global_security_advisories",
+        "field": "ecosystem",
+        "required": false,
+        "source_description": "Filter by package ecosystem.",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `list_global_security_advisories`, which argument is described as: Whether to only return withdrawn advisories.",
+      "answer": "isWithdrawn",
+      "kind": "lookup",
+      "pred": "`is_withdrawn`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__list_global_security_advisories",
+        "field": "isWithdrawn",
+        "required": false,
+        "source_description": "Whether to only return withdrawn advisories.",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `list_global_security_advisories`, which argument is described as: Filter by publish date or date range (ISO 8601 date or range).",
+      "answer": "published",
+      "kind": "lookup",
+      "pred": "`published`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__list_global_security_advisories",
+        "field": "published",
+        "required": false,
+        "source_description": "Filter by publish date or date range (ISO 8601 date or range).",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `list_issues`, which argument is described as: Filter by custom issue field values. Each entry takes a field_name and a value; the server looks up the field and coerces the value to its type (single-select option name, text, number, or YYYY-MM-DD date).",
+      "answer": "field_filters",
+      "kind": "lookup",
+      "pred": "The argument is `field_values`.",
+      "ok": false,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__list_issues",
+        "field": "field_filters",
+        "required": false,
+        "source_description": "Filter by custom issue field values. Each entry takes a field_name and a value; the server looks up the field and coerces the value to its type (single-select option name, text, number, or YYYY-MM-DD date).",
+        "rows": [
+          315
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          315
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `list_issues`, which argument is described as: Filter by date (ISO 8601 timestamp)",
+      "answer": "since",
+      "kind": "lookup",
+      "pred": "`since`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__list_issues",
+        "field": "since",
+        "required": false,
+        "source_description": "Filter by date (ISO 8601 timestamp)",
+        "rows": [
+          315
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          315
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `list_notifications`, which argument is described as: Only show notifications updated after the given time (ISO 8601 format)",
+      "answer": "since",
+      "kind": "lookup",
+      "pred": "`since`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__list_notifications",
+        "field": "since",
+        "required": false,
+        "source_description": "Only show notifications updated after the given time (ISO 8601 format)",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `list_secret_scanning_alerts`, which argument is described as: Filter by resolution",
+      "answer": "resolution",
+      "kind": "lookup",
+      "pred": "`state`",
+      "ok": false,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__list_secret_scanning_alerts",
+        "field": "resolution",
+        "required": false,
+        "source_description": "Filter by resolution",
+        "rows": [
+          150
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          150
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `manage_notification_subscription`, which argument is described as: Action to perform: ignore, watch, or delete the notification subscription.",
+      "answer": "action",
+      "kind": "lookup",
+      "pred": "The `action` argument is described as: \"Action to perform: ignore, watch, or delete the notification subscription.\"",
+      "ok": true,
+      "coverage": {
+        "category": "source_description_answer_present",
+        "tool": "mcp__github__manage_notification_subscription",
+        "field": "action",
+        "required": true,
+        "source_description": "Action to perform: ignore, watch, or delete the notification subscription.",
+        "rows": [
+          309,
+          392
+        ],
+        "description_rows": [
+          309
+        ],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          309,
+          392
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `manage_repository_notification_subscription`, which argument is described as: Action to perform: ignore, watch, or delete the repository notification subscription.",
+      "answer": "action",
+      "kind": "lookup",
+      "pred": "The `action` argument is described as: \"Action to perform: ignore, watch, or delete the repository notification subscription.\"",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__manage_repository_notification_subscription",
+        "field": "action",
+        "required": true,
+        "source_description": "Action to perform: ignore, watch, or delete the repository notification subscription.",
+        "rows": [
+          152
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `merge_pull_request`, which argument is described as: Extra detail for merge commit",
+      "answer": "commit_message",
+      "kind": "lookup",
+      "pred": "`commit_title`",
+      "ok": false,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__merge_pull_request",
+        "field": "commit_message",
+        "required": false,
+        "source_description": "Extra detail for merge commit",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `merge_pull_request`, which argument is described as: The expected SHA of the pull request's HEAD ref",
+      "answer": "expectedHeadSha",
+      "kind": "lookup",
+      "pred": "`expectedHeadSha`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__merge_pull_request",
+        "field": "expectedHeadSha",
+        "required": false,
+        "source_description": "The expected SHA of the pull request's HEAD ref",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `projects_get`, which argument is described as: Specific list of field names to include in the response when getting a project item (e.g. [\"Status\", \"Priority\"]). Resolved server-side to field IDs \u2014 pass this instead of 'fields' when you only know the human-readable names. Mutually exclusive with 'fields' \u2014 provide one, not both. Only used for 'get_project_item' method.",
+      "answer": "field_names",
+      "kind": "lookup",
+      "pred": "`field_names`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__projects_get",
+        "field": "field_names",
+        "required": false,
+        "source_description": "Specific list of field names to include in the response when getting a project item (e.g. [\"Status\", \"Priority\"]). Resolved server-side to field IDs \u2014 pass this instead of 'fields' when you only know the human-readable names. Mutually exclusive with 'fields' \u2014 provide one, not both. Only used for 'get_project_item' method.",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `projects_get`, which argument is described as: Owner type (user or org). If not provided, will be automatically detected.",
+      "answer": "owner_type",
+      "kind": "lookup",
+      "pred": "`owner_type`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__projects_get",
+        "field": "owner_type",
+        "required": false,
+        "source_description": "Owner type (user or org). If not provided, will be automatically detected.",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `projects_get`, which argument is described as: The node ID of the project status update. Required for 'get_project_status_update' method.",
+      "answer": "status_update_id",
+      "kind": "lookup",
+      "pred": "`status_update_id`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__projects_get",
+        "field": "status_update_id",
+        "required": false,
+        "source_description": "The node ID of the project status update. Required for 'get_project_status_update' method.",
+        "rows": [
+          268,
+          391
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          268,
+          391
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `projects_list`, which argument is described as: Field names to include when listing project items (e.g. [\"Status\", \"Priority\"]). Resolved server-side to field IDs \u2014 pass this instead of 'fields' when you only know the human-readable names. Names that fail to resolve return a structured error. Mutually exclusive with 'fields' \u2014 provide one, not both. Only used for 'list_project_items' method.",
+      "answer": "field_names",
+      "kind": "lookup",
+      "pred": "`field_names`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__projects_list",
+        "field": "field_names",
+        "required": false,
+        "source_description": "Field names to include when listing project items (e.g. [\"Status\", \"Priority\"]). Resolved server-side to field IDs \u2014 pass this instead of 'fields' when you only know the human-readable names. Names that fail to resolve return a structured error. Mutually exclusive with 'fields' \u2014 provide one, not both. Only used for 'list_project_items' method.",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `projects_list`, which argument is described as: The project's number. Required for 'list_project_fields', 'list_project_items', 'list_project_views', and 'list_project_status_updates' methods.",
+      "answer": "project_number",
+      "kind": "lookup",
+      "pred": "`project_number`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__projects_list",
+        "field": "project_number",
+        "required": false,
+        "source_description": "The project's number. Required for 'list_project_fields', 'list_project_items', 'list_project_views', and 'list_project_status_updates' methods.",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `projects_write`, which argument is described as: Saved view filter; omit on update to preserve it, or pass null to clear it.",
+      "answer": "filter",
+      "kind": "lookup",
+      "pred": "`filter`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__projects_write",
+        "field": "filter",
+        "required": false,
+        "source_description": "Saved view filter; omit on update to preserve it, or pass null to clear it.",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `projects_write`, which argument is described as: The project item ID. Required for 'delete_project_item'. For 'update_project_item', provide either item_id, or (item_owner + item_repo + issue_number) to resolve the item by issue.",
+      "answer": "item_id",
+      "kind": "lookup",
+      "pred": "`item_id`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__projects_write",
+        "field": "item_id",
+        "required": false,
+        "source_description": "The project item ID. Required for 'delete_project_item'. For 'update_project_item', provide either item_id, or (item_owner + item_repo + issue_number) to resolve the item by issue.",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `projects_write`, which argument is described as: The name of the repository containing the issue or pull request. Required for 'add_project_item' method. Also accepted by 'update_project_item' when resolving the item by issue number.",
+      "answer": "item_repo",
+      "kind": "lookup",
+      "pred": "`repo`",
+      "ok": false,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__projects_write",
+        "field": "item_repo",
+        "required": false,
+        "source_description": "The name of the repository containing the issue or pull request. Required for 'add_project_item' method. Also accepted by 'update_project_item' when resolving the item by issue number.",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `projects_write`, which argument is described as: The items to update with the top-level 'updated_field'. Required for 'update_project_items'; prefer it over calling 'update_project_item' in a loop. Each entry must match exactly one reference variant: 'node_id', numeric 'item_id', or 'item_owner' + 'item_repo' + 'issue_number'. Limit: 50 items per call.",
+      "answer": "items",
+      "kind": "lookup",
+      "pred": "The argument is `items`.",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__projects_write",
+        "field": "items",
+        "required": false,
+        "source_description": "The items to update with the top-level 'updated_field'. Required for 'update_project_items'; prefer it over calling 'update_project_item' in a loop. Each entry must match exactly one reference variant: 'node_id', numeric 'item_id', or 'item_owner' + 'item_repo' + 'issue_number'. Limit: 50 items per call.",
+        "rows": [
+          192,
+          215
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `projects_write`, which argument is described as: Custom iterations for 'create_iteration_field' method. Only set this when you need iterations with varying durations, breaks between them, or specific titles. Otherwise omit it: GitHub auto-creates three iterations of 'iteration_duration' days starting on 'start_date', which is the right choice for most cases.",
+      "answer": "iterations",
+      "kind": "lookup",
+      "pred": "The argument is `iterations`.",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__projects_write",
+        "field": "iterations",
+        "required": false,
+        "source_description": "Custom iterations for 'create_iteration_field' method. Only set this when you need iterations with varying durations, breaks between them, or specific titles. Otherwise omit it: GitHub auto-creates three iterations of 'iteration_duration' days starting on 'start_date', which is the right choice for most cases.",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `projects_write`, which argument is described as: Owner type (user or org). Required for 'create_project' method. If not provided for other methods, will be automatically detected.",
+      "answer": "owner_type",
+      "kind": "lookup",
+      "pred": "`owner_type`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__projects_write",
+        "field": "owner_type",
+        "required": false,
+        "source_description": "Owner type (user or org). Required for 'create_project' method. If not provided for other methods, will be automatically detected.",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `projects_write`, which argument is described as: The pull request number (use when item_type is 'pull_request' for 'add_project_item' method). Provide either issue_number or pull_request_number.",
+      "answer": "pull_request_number",
+      "kind": "lookup",
+      "pred": "`pull_request_number`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__projects_write",
+        "field": "pull_request_number",
+        "required": false,
+        "source_description": "The pull request number (use when item_type is 'pull_request' for 'add_project_item' method). Provide either issue_number or pull_request_number.",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `projects_write`, which argument is described as: The status of the project. Used for 'create_project_status_update' method.",
+      "answer": "status",
+      "kind": "lookup",
+      "pred": "`status`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__projects_write",
+        "field": "status",
+        "required": false,
+        "source_description": "The status of the project. Used for 'create_project_status_update' method.",
+        "rows": [
+          192,
+          215
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `projects_write`, which argument is described as: The field/value to apply, using {\"id\": 123, \"value\": ...} or {\"name\": \"Status\", \"value\": ...}; null clears the field. Required for 'update_project_item' and 'update_project_items', where one top-level field/value applies to every item in a batch. For 'update_project_item' SINGLE_SELECT fields, the name form accepts option names; the ID form expects an option ID.",
+      "answer": "updated_field",
+      "kind": "lookup",
+      "pred": "The argument is `field_value`.",
+      "ok": false,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__projects_write",
+        "field": "updated_field",
+        "required": false,
+        "source_description": "The field/value to apply, using {\"id\": 123, \"value\": ...} or {\"name\": \"Status\", \"value\": ...}; null clears the field. Required for 'update_project_item' and 'update_project_items', where one top-level field/value applies to every item in a batch. For 'update_project_item' SINGLE_SELECT fields, the name form accepts option names; the ID form expects an option ID.",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `projects_write`, which argument is described as: Ordered project field names to show on create or replace on update; omit on update to preserve, or pass [] to reset. Mutually exclusive with visible_fields. Roadmap accepts only [].",
+      "answer": "visible_field_names",
+      "kind": "lookup",
+      "pred": "`visible_field_names`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__projects_write",
+        "field": "visible_field_names",
+        "required": false,
+        "source_description": "Ordered project field names to show on create or replace on update; omit on update to preserve, or pass [] to reset. Mutually exclusive with visible_fields. Roadmap accepts only [].",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `pull_request_review_write`, which argument is described as: The node ID of the review thread (e.g., PRRT_kwDOxxx). Required for resolve_thread and unresolve_thread methods. Get thread IDs from pull_request_read with method get_review_comments.",
+      "answer": "threadId",
+      "kind": "lookup",
+      "pred": "`thread_id`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__pull_request_review_write",
+        "field": "threadId",
+        "required": false,
+        "source_description": "The node ID of the review thread (e.g., PRRT_kwDOxxx). Required for resolve_thread and unresolve_thread methods. Get thread IDs from pull_request_read with method get_review_comments.",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `remove_issue_comment_reaction`, which argument is described as: The issue or pull request comment ID",
+      "answer": "comment_id",
+      "kind": "lookup",
+      "pred": "`comment_id`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__remove_issue_comment_reaction",
+        "field": "comment_id",
+        "required": true,
+        "source_description": "The issue or pull request comment ID",
+        "rows": [
+          75
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          75
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `remove_issue_reaction`, which argument is described as: The reaction ID to remove",
+      "answer": "reaction_id",
+      "kind": "lookup",
+      "pred": "`reaction_id`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__remove_issue_reaction",
+        "field": "reaction_id",
+        "required": true,
+        "source_description": "The reaction ID to remove",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `remove_pull_request_review_comment_reaction`, which argument is described as: The reaction ID to remove",
+      "answer": "reaction_id",
+      "kind": "lookup",
+      "pred": "`reaction_id`",
+      "ok": true,
+      "coverage": {
+        "category": "source_description_answer_present",
+        "tool": "mcp__github__remove_pull_request_review_comment_reaction",
+        "field": "reaction_id",
+        "required": true,
+        "source_description": "The reaction ID to remove",
+        "rows": [
+          241
+        ],
+        "description_rows": [
+          241
+        ],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          241
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `remove_sub_issue`, which argument is described as: The ID of the sub-issue to remove. ID is not the same as issue number",
+      "answer": "sub_issue_id",
+      "kind": "lookup",
+      "pred": "`sub_issue_id`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__remove_sub_issue",
+        "field": "sub_issue_id",
+        "required": true,
+        "source_description": "The ID of the sub-issue to remove. ID is not the same as issue number",
+        "rows": [
+          112
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `repository_ruleset_read`, which argument is described as: Branch name. Required for the 'get_rules_for_branch' method.",
+      "answer": "branch",
+      "kind": "lookup",
+      "pred": "`branch`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__repository_ruleset_read",
+        "field": "branch",
+        "required": false,
+        "source_description": "Branch name. Required for the 'get_rules_for_branch' method.",
+        "rows": [
+          426
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          426
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `repository_ruleset_read`, which argument is described as: Filter rule suites by ruleset evaluation mode. Used by the 'list_rule_suites' method.",
+      "answer": "evaluate_status",
+      "kind": "lookup",
+      "pred": "`evaluate_status`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__repository_ruleset_read",
+        "field": "evaluate_status",
+        "required": false,
+        "source_description": "Filter rule suites by ruleset evaluation mode. Used by the 'list_rule_suites' method.",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `repository_ruleset_read`, which argument is described as: The level at which the ruleset is configured:",
+      "answer": "level",
+      "kind": "lookup",
+      "pred": "`level`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__repository_ruleset_read",
+        "field": "level",
+        "required": true,
+        "source_description": "The level at which the ruleset is configured: - 'repository': A ruleset on a single repository (requires 'owner' and 'repo'). - 'organization': A ruleset covering repositories in an organization (requires 'org'). - 'enterprise': A ruleset covering repositories across an enterprise (requires 'enterprise').",
+        "rows": [
+          426
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          426
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `repository_ruleset_read`, which argument is described as: Rule suite ID. Required for the 'get_rule_suite' method.",
+      "answer": "rule_suite_id",
+      "kind": "lookup",
+      "pred": "`rule_suite_id`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__repository_ruleset_read",
+        "field": "rule_suite_id",
+        "required": false,
+        "source_description": "Rule suite ID. Required for the 'get_rule_suite' method.",
+        "rows": [
+          426
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          426
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `repository_ruleset_read`, which argument is described as: Ruleset ID. Required for the 'get' method.",
+      "answer": "ruleset_id",
+      "kind": "lookup",
+      "pred": "`ruleset_id`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__repository_ruleset_read",
+        "field": "ruleset_id",
+        "required": false,
+        "source_description": "Ruleset ID. Required for the 'get' method.",
+        "rows": [
+          426
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          426
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `reprioritize_sub_issue`, which argument is described as: The ID of the sub-issue to place this after (either after_id OR before_id should be specified)",
+      "answer": "after_id",
+      "kind": "lookup",
+      "pred": "`after_id`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__reprioritize_sub_issue",
+        "field": "after_id",
+        "required": false,
+        "source_description": "The ID of the sub-issue to place this after (either after_id OR before_id should be specified)",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `reprioritize_sub_issue`, which argument is described as: The parent issue number",
+      "answer": "issue_number",
+      "kind": "lookup",
+      "pred": "`issue_number`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__reprioritize_sub_issue",
+        "field": "issue_number",
+        "required": true,
+        "source_description": "The parent issue number",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `request_pull_request_reviewers`, which argument is described as: The pull request number",
+      "answer": "pullNumber",
+      "kind": "lookup",
+      "pred": "`pullNumber`",
+      "ok": true,
+      "coverage": {
+        "category": "source_description_answer_present",
+        "tool": "mcp__github__request_pull_request_reviewers",
+        "field": "pullNumber",
+        "required": true,
+        "source_description": "The pull request number",
+        "rows": [
+          238
+        ],
+        "description_rows": [
+          238
+        ],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          238
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `resolve_review_thread`, which argument is described as: The node ID of the review thread to resolve (e.g., PRRT_kwDOxxx)",
+      "answer": "threadID",
+      "kind": "lookup",
+      "pred": "`thread_id`",
+      "ok": true,
+      "coverage": {
+        "category": "source_description_answer_present",
+        "tool": "mcp__github__resolve_review_thread",
+        "field": "threadID",
+        "required": true,
+        "source_description": "The node ID of the review thread to resolve (e.g., PRRT_kwDOxxx)",
+        "rows": [
+          188,
+          339
+        ],
+        "description_rows": [
+          188,
+          339
+        ],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          188,
+          339
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `set_issue_fields`, which argument is described as: The issue number to update",
+      "answer": "issue_number",
+      "kind": "lookup",
+      "pred": "`issue_number`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__set_issue_fields",
+        "field": "issue_number",
+        "required": true,
+        "source_description": "The issue number to update",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `sub_issue_write`, which argument is described as: The ID of the sub-issue to be prioritized before (either after_id OR before_id should be specified)",
+      "answer": "before_id",
+      "kind": "lookup",
+      "pred": "`before_id`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__sub_issue_write",
+        "field": "before_id",
+        "required": false,
+        "source_description": "The ID of the sub-issue to be prioritized before (either after_id OR before_id should be specified)",
+        "rows": [
+          424,
+          437
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          424,
+          437
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `sub_issue_write`, which argument is described as: When true, replaces the sub-issue's current parent issue. Use with 'add' method only.",
+      "answer": "replace_parent",
+      "kind": "lookup",
+      "pred": "`replace_parent`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__sub_issue_write",
+        "field": "replace_parent",
+        "required": false,
+        "source_description": "When true, replaces the sub-issue's current parent issue. Use with 'add' method only.",
+        "rows": [
+          424,
+          437
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          424,
+          437
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `submit_pending_pull_request_review`, which argument is described as: The review action to perform",
+      "answer": "event",
+      "kind": "lookup",
+      "pred": "`event`",
+      "ok": true,
+      "coverage": {
+        "category": "source_description_answer_present",
+        "tool": "mcp__github__submit_pending_pull_request_review",
+        "field": "event",
+        "required": true,
+        "source_description": "The review action to perform",
+        "rows": [
+          102,
+          362
+        ],
+        "description_rows": [
+          102,
+          362
+        ],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          102,
+          362
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `unhide_issue_comment`, which argument is described as: The numeric ID of the issue or pull request conversation comment",
+      "answer": "comment_id",
+      "kind": "lookup",
+      "pred": "`comment_id`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__unhide_issue_comment",
+        "field": "comment_id",
+        "required": true,
+        "source_description": "The numeric ID of the issue or pull request conversation comment",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `unhide_pull_request_review`, which argument is described as: The numeric ID of the pull request review",
+      "answer": "review_id",
+      "kind": "lookup",
+      "pred": "`review_id`",
+      "ok": true,
+      "coverage": {
+        "category": "source_description_answer_present",
+        "tool": "mcp__github__unhide_pull_request_review",
+        "field": "review_id",
+        "required": true,
+        "source_description": "The numeric ID of the pull request review",
+        "rows": [
+          81,
+          376
+        ],
+        "description_rows": [
+          81,
+          376
+        ],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          81,
+          376
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `unresolve_review_thread`, which argument is described as: The node ID of the review thread to unresolve (e.g., PRRT_kwDOxxx)",
+      "answer": "threadID",
+      "kind": "lookup",
+      "pred": "`thread_id`",
+      "ok": true,
+      "coverage": {
+        "category": "source_description_answer_present",
+        "tool": "mcp__github__unresolve_review_thread",
+        "field": "threadID",
+        "required": true,
+        "source_description": "The node ID of the review thread to unresolve (e.g., PRRT_kwDOxxx)",
+        "rows": [
+          146
+        ],
+        "description_rows": [
+          146
+        ],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          146
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `update_gist`, which argument is described as: Updated description of the gist",
+      "answer": "description",
+      "kind": "lookup",
+      "pred": "The argument is `description`.",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__update_gist",
+        "field": "description",
+        "required": false,
+        "source_description": "Updated description of the gist",
+        "rows": [
+          182
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          182
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `update_gist`, which argument is described as: ID of the gist to update",
+      "answer": "gist_id",
+      "kind": "lookup",
+      "pred": "`gist_id`",
+      "ok": true,
+      "coverage": {
+        "category": "source_description_answer_present",
+        "tool": "mcp__github__update_gist",
+        "field": "gist_id",
+        "required": true,
+        "source_description": "ID of the gist to update",
+        "rows": [
+          182
+        ],
+        "description_rows": [
+          182
+        ],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          182
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `update_issue_assignees`, which argument is described as: The issue number to update",
+      "answer": "issue_number",
+      "kind": "lookup",
+      "pred": "`issue_number`",
+      "ok": true,
+      "coverage": {
+        "category": "source_description_answer_present",
+        "tool": "mcp__github__update_issue_assignees",
+        "field": "issue_number",
+        "required": true,
+        "source_description": "The issue number to update",
+        "rows": [
+          454
+        ],
+        "description_rows": [
+          454
+        ],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          454
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `update_issue_comment`, which argument is described as: The numeric ID of the issue or pull request conversation comment to update. Do not use a pull request review comment ID.",
+      "answer": "comment_id",
+      "kind": "lookup",
+      "pred": "`comment_id`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__update_issue_comment",
+        "field": "comment_id",
+        "required": true,
+        "source_description": "The numeric ID of the issue or pull request conversation comment to update. Do not use a pull request review comment ID.",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `update_issue_labels`, which argument is described as: Labels to apply to this issue.",
+      "answer": "labels",
+      "kind": "lookup",
+      "pred": "The `labels` argument is described as: \"Labels to apply to this issue.\"",
+      "ok": true,
+      "coverage": {
+        "category": "source_description_answer_present",
+        "tool": "mcp__github__update_issue_labels",
+        "field": "labels",
+        "required": true,
+        "source_description": "Labels to apply to this issue.",
+        "rows": [
+          76,
+          99,
+          305
+        ],
+        "description_rows": [
+          76
+        ],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          76,
+          305
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `update_issue_milestone`, which argument is described as: The milestone number to set on the issue",
+      "answer": "milestone",
+      "kind": "lookup",
+      "pred": "`milestone`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__update_issue_milestone",
+        "field": "milestone",
+        "required": true,
+        "source_description": "The milestone number to set on the issue",
+        "rows": [
+          384
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `update_issue_state`, which argument is described as: The issue number of the canonical issue this issue duplicates. Only valid when state_reason is 'duplicate'. Required when is_suggestion is true and state_reason is 'duplicate'. The issue number is resolved to a database ID before being sent to the API.",
+      "answer": "duplicate_of",
+      "kind": "lookup",
+      "pred": "`duplicate_of`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__update_issue_state",
+        "field": "duplicate_of",
+        "required": false,
+        "source_description": "The issue number of the canonical issue this issue duplicates. Only valid when state_reason is 'duplicate'. Required when is_suggestion is true and state_reason is 'duplicate'. The issue number is resolved to a database ID before being sent to the API.",
+        "rows": [
+          210,
+          412
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          210,
+          412
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `update_issue_state`, which argument is described as: The issue number to update",
+      "answer": "issue_number",
+      "kind": "lookup",
+      "pred": "`issue_number`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__update_issue_state",
+        "field": "issue_number",
+        "required": true,
+        "source_description": "The issue number to update",
+        "rows": [
+          210,
+          412
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          210,
+          412
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `update_issue_state`, which argument is described as: The reason for the state change (only for closed state)",
+      "answer": "state_reason",
+      "kind": "lookup",
+      "pred": "`state_reason`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__update_issue_state",
+        "field": "state_reason",
+        "required": false,
+        "source_description": "The reason for the state change (only for closed state)",
+        "rows": [
+          210,
+          412
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          210,
+          412
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `update_issue_type`, which argument is described as: How confident you are in this choice. Use 'HIGH' for clear signal or explicit user request, 'MEDIUM' for reasonable inference with some ambiguity, 'LOW' for best guess with limited signal.",
+      "answer": "confidence",
+      "kind": "lookup",
+      "pred": "`confidence`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__update_issue_type",
+        "field": "confidence",
+        "required": false,
+        "source_description": "How confident you are in this choice. Use 'HIGH' for clear signal or explicit user request, 'MEDIUM' for reasonable inference with some ambiguity, 'LOW' for best guess with limited signal.",
+        "rows": [
+          82
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          82
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `update_issue_type`, which argument is described as: The issue number to update",
+      "answer": "issue_number",
+      "kind": "lookup",
+      "pred": "`issue_number`",
+      "ok": true,
+      "coverage": {
+        "category": "source_description_answer_present",
+        "tool": "mcp__github__update_issue_type",
+        "field": "issue_number",
+        "required": true,
+        "source_description": "The issue number to update",
+        "rows": [
+          82
+        ],
+        "description_rows": [
+          82
+        ],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          82
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `update_issue_type`, which argument is described as: One concise sentence explaining what specifically about the issue led you to choose this type. State the concrete signal (e.g. 'Reports a crash when saving' \u2192 bug, 'Asks for dark mode support' \u2192 feature).",
+      "answer": "rationale",
+      "kind": "lookup",
+      "pred": "`rationale`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__update_issue_type",
+        "field": "rationale",
+        "required": false,
+        "source_description": "One concise sentence explaining what specifically about the issue led you to choose this type. State the concrete signal (e.g. 'Reports a crash when saving' \u2192 bug, 'Asks for dark mode support' \u2192 feature).",
+        "rows": [
+          82
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          82
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `update_pull_request`, which argument is described as: Allow maintainer edits",
+      "answer": "maintainer_can_modify",
+      "kind": "lookup",
+      "pred": "`maintainer_can_modify`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__update_pull_request",
+        "field": "maintainer_can_modify",
+        "required": false,
+        "source_description": "Allow maintainer edits",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `update_pull_request`, which argument is described as: GitHub usernames or ORG/team-slug team reviewers to request reviews from",
+      "answer": "reviewers",
+      "kind": "lookup",
+      "pred": "`reviewers`",
+      "ok": true,
+      "coverage": {
+        "category": "no_explicit_field_answer",
+        "tool": "mcp__github__update_pull_request",
+        "field": "reviewers",
+        "required": false,
+        "source_description": "GitHub usernames or ORG/team-slug team reviewers to request reviews from",
+        "rows": [],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `update_pull_request_branch`, which argument is described as: The expected SHA of the pull request's HEAD ref",
+      "answer": "expectedHeadSha",
+      "kind": "lookup",
+      "pred": "`expectedHeadSha`",
+      "ok": true,
+      "coverage": {
+        "category": "source_description_answer_present",
+        "tool": "mcp__github__update_pull_request_branch",
+        "field": "expectedHeadSha",
+        "required": false,
+        "source_description": "The expected SHA of the pull request's HEAD ref",
+        "rows": [
+          130,
+          386
+        ],
+        "description_rows": [
+          130
+        ],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          130,
+          386
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `update_pull_request_draft_state`, which argument is described as: The pull request number",
+      "answer": "pullNumber",
+      "kind": "lookup",
+      "pred": "`pullNumber`",
+      "ok": true,
+      "coverage": {
+        "category": "source_description_answer_present",
+        "tool": "mcp__github__update_pull_request_draft_state",
+        "field": "pullNumber",
+        "required": true,
+        "source_description": "The pull request number",
+        "rows": [
+          163,
+          282
+        ],
+        "description_rows": [
+          163
+        ],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          163,
+          282
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    },
+    {
+      "q": "For the tool `update_pull_request_title`, which argument is described as: The pull request number",
+      "answer": "pullNumber",
+      "kind": "lookup",
+      "pred": "`pullNumber`",
+      "ok": true,
+      "coverage": {
+        "category": "field_name_only",
+        "tool": "mcp__github__update_pull_request_title",
+        "field": "pullNumber",
+        "required": true,
+        "source_description": "The pull request number",
+        "rows": [
+          463
+        ],
+        "description_rows": [],
+        "reverse_binding_rows": [],
+        "lookup_list_rows": [
+          463
+        ],
+        "limitation": "lexical audit; paraphrased purpose coverage may be missed"
+      }
+    }
+  ]
+}

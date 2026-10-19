@@ -1,0 +1,2506 @@
+{
+  "config": {
+    "freeze_sha256": "ecf8ac4c9f9ef8f8ebf3aef1db036b9be37ccce77c050e121190d58ea9629cce",
+    "split": "test",
+    "arms": [
+      "full",
+      "none",
+      "joint4k",
+      "joint8k"
+    ]
+  },
+  "complete": true,
+  "elapsed_s": 603.7908756732941,
+  "rows": {
+    "full": {
+      "knowledge": [],
+      "tools": [],
+      "behavior": [
+        {
+          "id": "natural-count-zero",
+          "category": null,
+          "pred": "```python\ndef _validate_count(count):\n    if count <= 0:\n        raise ValueError(\"invalid\")\n\ndef schedule_batch(count):\n    _validate_count(count)\n    return count * 2\n\ndef preview_batch(count):\n    _validate_count(count)\n    return count + 1\n```",
+          "stop": "eos",
+          "tokens": 66,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_count"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-retry-limit",
+          "category": null,
+          "pred": "```python\ndef _validate_retries(retries):\n    if retries < 0 or retries > 12:\n        raise ValueError(\"invalid\")\n    return retries\n\ndef start_worker(retries):\n    _validate_retries(retries)\n    return retries + 1\n\ndef preview_worker(retries):\n    _validate_retries(retries)\n    return retries * 3\n```",
+          "stop": "eos",
+          "tokens": 84,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_retries"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-batch-multiple",
+          "category": null,
+          "pred": "```python\ndef _validate_batch_size(size):\n    if size <= 0 or size % 8 != 0:\n        raise ValueError(\"invalid\")\n\ndef encode_upload(size):\n    _validate_batch_size(size)\n    return size // 8\n\ndef preview_upload(size):\n    _validate_batch_size(size)\n    return size + 8\n```",
+          "stop": "eos",
+          "tokens": 77,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_batch_size"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-integer-bool",
+          "category": null,
+          "pred": "```python\ndef launch_pool(workers):\n    if isinstance(workers, bool) or not isinstance(workers, int):\n        raise ValueError(\"invalid\")\n    return workers + 2\n\ndef estimate_pool(workers):\n    if isinstance(workers, bool) or not isinstance(workers, int):\n        raise ValueError(\"invalid\")\n    return workers * 4\n```",
+          "stop": "eos",
+          "tokens": 80,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-finite-number",
+          "category": null,
+          "pred": "```python\nimport math\n\ndef _validate_reading(reading):\n    if not math.isfinite(reading) or reading < 0:\n        raise ValueError(\"invalid\")\n\ndef store_reading(reading):\n    _validate_reading(reading)\n    return reading * 2\n\ndef display_reading(reading):\n    _validate_reading(reading)\n    return str(reading)\n```",
+          "stop": "eos",
+          "tokens": 82,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_reading"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-name-empty",
+          "category": null,
+          "pred": "```python\ndef register_name(name):\n    if not (1 <= len(name) <= 16):\n        raise ValueError(\"invalid\")\n    return name.upper()\n\ndef preview_name(name):\n    if not (1 <= len(name) <= 16):\n        raise ValueError(\"invalid\")\n    return \"[\" + name + \"]\"\n```",
+          "stop": "eos",
+          "tokens": 74,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-unicode-space",
+          "category": null,
+          "pred": "```python\nimport re\n\ndef save_key(key):\n    if re.search(r\"\\s\", key):\n        raise ValueError(\"invalid\")\n    return key.upper()\n\ndef lookup_key(key):\n    if re.search(r\"\\s\", key):\n        raise ValueError(\"invalid\")\n    return key + \":\"\n```",
+          "stop": "eos",
+          "tokens": 67,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-ascii-digits",
+          "category": null,
+          "pred": "```python\nimport re\n\n_ASCII_DIGITS = re.compile(r\"[0-9]+\")\n\ndef _validate_ascii_digits(token):\n    if not _ASCII_DIGITS.fullmatch(token):\n        raise ValueError(\"invalid\")\n\ndef submit_token(token):\n    _validate_ascii_digits(token)\n    return token + \"!\"\n\ndef inspect_token(token):\n    _validate_ascii_digits(token)\n    return len(token)\n```",
+          "stop": "eos",
+          "tokens": 89,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_ascii_digits"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-case-sensitive-prefix",
+          "category": null,
+          "pred": "```python\ndef enqueue_code(code):\n    if not code.startswith(\"job-\"):\n        raise ValueError(\"invalid\")\n    return code + \":queued\"\n\ndef inspect_code(code):\n    if not code.startswith(\"job-\"):\n        raise ValueError(\"invalid\")\n    return len(code)\n```",
+          "stop": "eos",
+          "tokens": 64,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-control-chars",
+          "category": null,
+          "pred": "```python\nimport re\n\n_CONTROL_RE = re.compile(r\"[\\x00-\\x1f\\x7f]\")\n\ndef export_label(label):\n    if _CONTROL_RE.search(label):\n        raise ValueError(\"invalid\")\n    return label + \";\"\n\ndef display_label(label):\n    if _CONTROL_RE.search(label):\n        raise ValueError(\"invalid\")\n    return label.upper()\n```",
+          "stop": "eos",
+          "tokens": 83,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-relative-path",
+          "category": null,
+          "pred": "```python\ndef fetch_asset(path):\n    if path.startswith(\"/\"):\n        raise ValueError(\"invalid\")\n    if \"..\" in path.split(\"/\"):\n        raise ValueError(\"invalid\")\n    return \"assets/\" + path\n\ndef preview_asset(path):\n    if path.startswith(\"/\"):\n        raise ValueError(\"invalid\")\n    if \"..\" in path.split(\"/\"):\n        raise ValueError(\"invalid\")\n    return path + \"?preview\"\n```",
+          "stop": "eos",
+          "tokens": 94,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-file-extension",
+          "category": null,
+          "pred": "```python\ndef import_file(filename):\n    if not (filename.endswith(\".json\") or filename.endswith(\".jsonl\")):\n        raise ValueError(\"invalid\")\n    return filename + \":import\"\n\ndef validate_file(filename):\n    if not (filename.endswith(\".json\") or filename.endswith(\".jsonl\")):\n        raise ValueError(\"invalid\")\n    return len(filename)\n```",
+          "stop": "eos",
+          "tokens": 80,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-hidden-component",
+          "category": null,
+          "pred": "```python\ndef _reject_hidden(path):\n    if any(part.startswith(\".\") for part in path.split(\"/\")):\n        raise ValueError(\"invalid\")\n\ndef scan_path(path):\n    _reject_hidden(path)\n    return path + \":scan\"\n\ndef archive_path(path):\n    _reject_hidden(path)\n    return \"archive/\" + path\n```",
+          "stop": "eos",
+          "tokens": 75,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_reject_hidden"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-empty-segment",
+          "category": null,
+          "pred": "```python\ndef _validate_path(path):\n    if path == \"\":\n        raise ValueError(\"invalid\")\n    if path.startswith(\"/\"):\n        raise ValueError(\"invalid\")\n    if path.endswith(\"/\"):\n        raise ValueError(\"invalid\")\n    if \"//\" in path:\n        raise ValueError(\"invalid\")\n\ndef publish_route(path):\n    _validate_path(path)\n    return \"/v1/\" + path\n\ndef preview_route(path):\n    _validate_path(path)\n    return path.upper()\n```",
+          "stop": "eos",
+          "tokens": 109,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_path"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-backslash",
+          "category": null,
+          "pred": "```python\ndef load_manifest(path):\n    if path.startswith(\"/\") or \"\\\\\" in path:\n        raise ValueError(\"invalid\")\n    return \"data/\" + path\n\ndef preview_manifest(path):\n    if path.startswith(\"/\") or \"\\\\\" in path:\n        raise ValueError(\"invalid\")\n    return len(path)\n```",
+          "stop": "eos",
+          "tokens": 66,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-unique-items",
+          "category": null,
+          "pred": "```python\ndef index_items(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    if len(set(items)) != len(items):\n        raise ValueError(\"invalid\")\n    return tuple(items)\n\ndef preview_items(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    if len(set(items)) != len(items):\n        raise ValueError(\"invalid\")\n    return len(items)\n```",
+          "stop": "eos",
+          "tokens": 90,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-all-positive",
+          "category": null,
+          "pred": "```python\ndef _validate_counts(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    if any(c <= 0 for c in items):\n        raise ValueError(\"invalid\")\n\ndef submit_counts(items):\n    _validate_counts(items)\n    return tuple(items)\n\ndef estimate_counts(items):\n    _validate_counts(items)\n    return sum(items)\n```",
+          "stop": "eos",
+          "tokens": 82,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_counts"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-sorted-input",
+          "category": null,
+          "pred": "```python\ndef merge_input(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    for i in range(len(items) - 1):\n        if items[i] > items[i + 1]:\n            raise ValueError(\"invalid\")\n    return tuple(items)\n\ndef preview_merge(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    for i in range(len(items) - 1):\n        if items[i] > items[i + 1]:\n            raise ValueError(\"invalid\")\n    return len(items)\n```",
+          "stop": "eos",
+          "tokens": 120,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-maximum-items",
+          "category": null,
+          "pred": "```python\ndef _check_batch(items):\n    if len(items) > 4:\n        raise ValueError(\"invalid\")\n\ndef send_batch(items):\n    _check_batch(items)\n    return tuple(items)\n\ndef preview_send(items):\n    _check_batch(items)\n    return len(items)\n```",
+          "stop": "eos",
+          "tokens": 66,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_check_batch"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-pair-width",
+          "category": null,
+          "pred": "```python\ndef write_rows(rows):\n    if not rows:\n        raise ValueError(\"invalid\")\n    for row in rows:\n        if len(row) != 2:\n            raise ValueError(\"invalid\")\n    return tuple(tuple(row) for row in rows)\n\ndef preview_rows(rows):\n    if not rows:\n        raise ValueError(\"invalid\")\n    for row in rows:\n        if len(row) != 2:\n            raise ValueError(\"invalid\")\n    return len(rows)\n```",
+          "stop": "eos",
+          "tokens": 108,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-required-keys",
+          "category": null,
+          "pred": "```python\ndef ingest_record(record):\n    if \"id\" not in record or \"version\" not in record:\n        raise ValueError(\"invalid\")\n    return record[\"id\"]\n\ndef preview_record(record):\n    if \"id\" not in record or \"version\" not in record:\n        raise ValueError(\"invalid\")\n    return len(record)\n```",
+          "stop": "eos",
+          "tokens": 77,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-unknown-keys",
+          "category": null,
+          "pred": "```python\ndef execute_options(options):\n    if \"timeout\" not in options:\n        raise ValueError(\"invalid\")\n    if any(k not in (\"timeout\", \"retries\") for k in options):\n        raise ValueError(\"invalid\")\n    return options[\"timeout\"]\n\ndef preview_options(options):\n    if \"timeout\" not in options:\n        raise ValueError(\"invalid\")\n    if any(k not in (\"timeout\", \"retries\") for k in options):\n        raise ValueError(\"invalid\")\n    return len(options)\n```",
+          "stop": "eos",
+          "tokens": 115,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-duplicate-values",
+          "category": null,
+          "pred": "```python\ndef _validate_aliases(aliases):\n    if not aliases:\n        raise ValueError(\"invalid\")\n    seen = set()\n    for name, dest in aliases:\n        if dest in seen:\n            raise ValueError(\"duplicate destination\")\n        seen.add(dest)\n\ndef register_aliases(aliases):\n    _validate_aliases(aliases)\n    return tuple(aliases)\n\ndef preview_aliases(aliases):\n    _validate_aliases(aliases)\n    return len(aliases)\n```",
+          "stop": "eos",
+          "tokens": 105,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": false,
+            "common_private_helpers": [
+              "_validate_aliases"
+            ],
+            "manual_behavior_required": true,
+            "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\n  File \"<stdin>\", line 11, in register_aliases\n  File \"<stdin>\", line 5, in _validate_aliases\nValueError: not enough values to unpack (expected 2, got 1)\n"
+          }
+        },
+        {
+          "id": "natural-exclusive-options",
+          "category": null,
+          "pred": "```python\ndef fetch_page(options):\n    if not options:\n        raise ValueError(\"invalid\")\n    cursor = options.get(\"cursor\")\n    offset = options.get(\"offset\")\n    has_cursor = cursor is not None\n    has_offset = offset is not None\n    if has_cursor == has_offset:\n        raise ValueError(\"exactly one of cursor or offset required\")\n    return dict(options)\n\ndef preview_page(options):\n    if not options:\n        raise ValueError(\"invalid\")\n    cursor = options.get(\"cursor\")\n    offset = options.get(\"offset\")\n    has_cursor = cursor is not None\n    has_offset = offset is not None\n    if has_cursor == has_offset:\n        raise ValueError(\"exactly one of cursor or offset required\")\n    return len(options)\n```",
+          "stop": "eos",
+          "tokens": 172,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-nested-config",
+          "category": null,
+          "pred": "```python\ndef plan_config(config):\n    if \"limits\" not in config:\n        raise ValueError(\"invalid\")\n    limits = config[\"limits\"]\n    if not isinstance(limits, dict) or \"workers\" not in limits:\n        raise ValueError(\"invalid\")\n    workers = limits[\"workers\"]\n    if not isinstance(workers, int) or isinstance(workers, bool) or workers < 0:\n        raise ValueError(\"invalid\")\n    return dict(config)\n\ndef preview_config(config):\n    if \"limits\" not in config:\n        raise ValueError(\"invalid\")\n    limits = config[\"limits\"]\n    if not isinstance(limits, dict) or \"workers\" not in limits:\n        raise ValueError(\"invalid\")\n    workers = limits[\"workers\"]\n    if not isinstance(workers, int) or isinstance(workers, bool) or workers < 0:\n        raise ValueError(\"invalid\")\n    return len(config)\n```",
+          "stop": "eos",
+          "tokens": 204,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-interval",
+          "category": null,
+          "pred": "```python\ndef _validate_interval(start, end):\n    if start >= end:\n        raise ValueError(\"invalid\")\n\ndef book_interval(start, end):\n    _validate_interval(start, end)\n    return end - start\n\ndef preview_interval(start, end):\n    _validate_interval(start, end)\n    return (start, end)\n```",
+          "stop": "eos",
+          "tokens": 75,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_interval"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-page-size",
+          "category": null,
+          "pred": "```python\ndef list_page(page, size):\n    if page < 1:\n        raise ValueError(\"invalid\")\n    if not 1 <= size <= 100:\n        raise ValueError(\"invalid\")\n    return (page - 1) * size\n\ndef count_page(page, size):\n    if page < 1:\n        raise ValueError(\"invalid\")\n    if not 1 <= size <= 100:\n        raise ValueError(\"invalid\")\n    return size\n```",
+          "stop": "eos",
+          "tokens": 107,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-offset-alignment",
+          "category": null,
+          "pred": "```python\ndef read_block(offset, block):\n    if offset < 0 or block <= 0:\n        raise ValueError(\"invalid\")\n    if offset % block != 0:\n        raise ValueError(\"offset not aligned to block size\")\n    return offset // block\n\ndef preview_block(offset, block):\n    if offset < 0 or block <= 0:\n        raise ValueError(\"invalid\")\n    if offset % block != 0:\n        raise ValueError(\"offset not aligned to block size\")\n    return (offset, block)\n```",
+          "stop": "eos",
+          "tokens": 118,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-dimensions",
+          "category": null,
+          "pred": "```python\ndef _validate_tile(width, height):\n    if width <= 0 or height <= 0:\n        raise ValueError(\"invalid\")\n    if width * height > 64:\n        raise ValueError(\"invalid\")\n\ndef render_tile(width, height):\n    _validate_tile(width, height)\n    return width * height\n\ndef preview_tile(width, height):\n    _validate_tile(width, height)\n    return (width, height)\n```",
+          "stop": "eos",
+          "tokens": 99,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_tile"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-bounded-window",
+          "category": null,
+          "pred": "```python\ndef slice_window(offset, length, total):\n    if offset < 0 or length < 0:\n        raise ValueError(\"invalid\")\n    if offset + length > total:\n        raise ValueError(\"invalid\")\n    return (offset, offset + length)\n\ndef preview_window(offset, length, total):\n    if offset < 0 or length < 0:\n        raise ValueError(\"invalid\")\n    if offset + length > total:\n        raise ValueError(\"invalid\")\n    return length\n```",
+          "stop": "eos",
+          "tokens": 110,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-date-validity",
+          "category": null,
+          "pred": "```python\nimport calendar\n\ndef store_date(year, month, day):\n    if not calendar.isleap(year) and month == 2 and day > 28:\n        raise ValueError(\"invalid\")\n    if not 1 <= month <= 12 or not 1 <= day <= calendar.monthrange(year, month)[1]:\n        raise ValueError(\"invalid\")\n    return (year, month, day)\n\ndef display_date(year, month, day):\n    if not calendar.isleap(year) and month == 2 and day > 28:\n        raise ValueError(\"invalid\")\n    if not 1 <= month <= 12 or not 1 <= day <= calendar.monthrange(year, month)[1]:\n        raise ValueError(\"invalid\")\n    return f\"{year:04}-{month:02}-{day:02}\"\n```",
+          "stop": "eos",
+          "tokens": 185,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-ipv4",
+          "category": null,
+          "pred": "```python\nimport ipaddress\n\n\ndef connect_ipv4(address):\n    _validate_ipv4(address)\n    return address\n\n\ndef preview_ipv4(address):\n    _validate_ipv4(address)\n    return \"host=\" + address\n\n\ndef _validate_ipv4(address):\n    try:\n        ipaddress.IPv4Address(address)\n    except (ipaddress.AddressValueError, ValueError):\n        raise ValueError(\"invalid\")\n```",
+          "stop": "eos",
+          "tokens": 91,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_ipv4"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-json-object",
+          "category": null,
+          "pred": "```python\nimport json\n\n\ndef load_settings(text):\n    if not text:\n        raise ValueError(\"invalid\")\n    try:\n        value = json.loads(text)\n    except json.JSONDecodeError:\n        raise ValueError(\"invalid\")\n    if not isinstance(value, dict):\n        raise ValueError(\"invalid\")\n    return value\n\n\ndef preview_settings(text):\n    if not text:\n        raise ValueError(\"invalid\")\n    try:\n        value = json.loads(text)\n    except json.JSONDecodeError:\n        raise ValueError(\"invalid\")\n    if not isinstance(value, dict):\n        raise ValueError(\"invalid\")\n    return len(value)\n```",
+          "stop": "eos",
+          "tokens": 141,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 30, in <module>\nAssertionError: ('load_settings', ('{}',))\n"
+          }
+        },
+        {
+          "id": "natural-hex-bytes",
+          "category": null,
+          "pred": "```python\nimport re\n\n_HEX_RE = re.compile(r\"^(?:[0-9a-fA-F]{2})*$\")\n\ndef load_digest(text):\n    if not _HEX_RE.match(text):\n        raise ValueError(\"invalid\")\n    return text.lower()\n\ndef preview_digest(text):\n    if not _HEX_RE.match(text):\n        raise ValueError(\"invalid\")\n    return len(text) // 2\n```",
+          "stop": "eos",
+          "tokens": 94,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-utf8-length",
+          "category": null,
+          "pred": "```python\ndef store_message(text):\n    if not isinstance(text, str):\n        raise ValueError(\"invalid\")\n    if len(text.encode(\"utf-8\")) > 8:\n        raise ValueError(\"invalid\")\n    return text\n\ndef preview_message(text):\n    if not isinstance(text, str):\n        raise ValueError(\"invalid\")\n    if len(text.encode(\"utf-8\")) > 8:\n        raise ValueError(\"invalid\")\n    return text.upper()\n```",
+          "stop": "eos",
+          "tokens": 102,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-reserved-names",
+          "category": null,
+          "pred": "```python\ndef open_account(name):\n    if name.lower() in (\"admin\", \"root\"):\n        raise ValueError(\"invalid\")\n    return name + \":open\"\n\ndef preview_account(name):\n    if name.lower() in (\"admin\", \"root\"):\n        raise ValueError(\"invalid\")\n    return len(name)\n```",
+          "stop": "eos",
+          "tokens": 70,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-newline-header",
+          "category": null,
+          "pred": "```python\ndef write_header(value):\n    if \"\\n\" in value or \"\\r\" in value:\n        raise ValueError(\"invalid\")\n    return \"X-Value: \" + value\n\ndef preview_header(value):\n    if \"\\n\" in value or \"\\r\" in value:\n        raise ValueError(\"invalid\")\n    return len(value)\n```",
+          "stop": "eos",
+          "tokens": 77,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-delimiter",
+          "category": null,
+          "pred": "```python\ndef _validate_field_name(name):\n    for ch in (\":\", \",\", \";\"):\n        if ch in name:\n            raise ValueError(\"invalid\")\n\ndef write_field(name):\n    _validate_field_name(name)\n    return name + \"=1\"\n\ndef preview_field(name):\n    _validate_field_name(name)\n    return name.upper()\n```",
+          "stop": "eos",
+          "tokens": 79,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_field_name"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-version-parts",
+          "category": null,
+          "pred": "```python\nimport re\n\ndef publish_version(version):\n    if not re.fullmatch(r\"[0-9]+\\.[0-9]+\\.[0-9]+\", version):\n        raise ValueError(\"invalid\")\n    return \"v\" + version\n\ndef preview_version(version):\n    if not re.fullmatch(r\"[0-9]+\\.[0-9]+\\.[0-9]+\", version):\n        raise ValueError(\"invalid\")\n    return version.split(\".\")\n```",
+          "stop": "eos",
+          "tokens": 99,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-token-alphabet",
+          "category": null,
+          "pred": "```python\nimport re\n\n_TOKEN_RE = re.compile(r\"^[A-Za-z0-9_-]+$\")\n\n\ndef encode_token(token):\n    if not token or not _TOKEN_RE.match(token):\n        raise ValueError(\"invalid\")\n    return token + \"=\"\n\n\ndef preview_token(token):\n    if not token or not _TOKEN_RE.match(token):\n        raise ValueError(\"invalid\")\n    return len(token)\n```",
+          "stop": "eos",
+          "tokens": 89,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        }
+      ]
+    },
+    "none": {
+      "knowledge": [],
+      "tools": [],
+      "behavior": [
+        {
+          "id": "natural-count-zero",
+          "category": null,
+          "pred": "```python\ndef schedule_batch(count):\n    if count <= 0:\n        raise ValueError(\"invalid\")\n    return count * 2\n\ndef preview_batch(count):\n    if count <= 0:\n        raise ValueError(\"invalid\")\n    return count + 1\n```",
+          "stop": "eos",
+          "tokens": 60,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-retry-limit",
+          "category": null,
+          "pred": "```python\ndef start_worker(retries):\n    if retries < 0 or retries > 12:\n        raise ValueError(\"invalid\")\n    return retries + 1\n\ndef preview_worker(retries):\n    if retries < 0 or retries > 12:\n        raise ValueError(\"invalid\")\n    return retries * 3\n```",
+          "stop": "eos",
+          "tokens": 74,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-batch-multiple",
+          "category": null,
+          "pred": "```python\ndef encode_upload(size):\n    if size <= 0 or size % 8 != 0:\n        raise ValueError(\"invalid\")\n    return size // 8\n\ndef preview_upload(size):\n    if size <= 0 or size % 8 != 0:\n        raise ValueError(\"invalid\")\n    return size + 8\n```",
+          "stop": "eos",
+          "tokens": 76,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-integer-bool",
+          "category": null,
+          "pred": "```python\ndef launch_pool(workers):\n    if isinstance(workers, bool) or not isinstance(workers, int):\n        raise ValueError(\"invalid\")\n    return workers + 2\n\ndef estimate_pool(workers):\n    if isinstance(workers, bool) or not isinstance(workers, int):\n        raise ValueError(\"invalid\")\n    return workers * 4\n```",
+          "stop": "eos",
+          "tokens": 80,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-finite-number",
+          "category": null,
+          "pred": "```python\nimport math\n\ndef store_reading(reading):\n    if not isinstance(reading, (int, float)):\n        raise ValueError(\"invalid\")\n    if math.isnan(reading) or math.isinf(reading) or reading < 0:\n        raise ValueError(\"invalid\")\n    return reading * 2\n\ndef display_reading(reading):\n    if not isinstance(reading, (int, float)):\n        raise ValueError(\"invalid\")\n    if math.isnan(reading) or math.isinf(reading) or reading < 0:\n        raise ValueError(\"invalid\")\n    return str(reading)\n```",
+          "stop": "eos",
+          "tokens": 131,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-name-empty",
+          "category": null,
+          "pred": "```python\ndef register_name(name):\n    if not isinstance(name, str) or len(name) < 1 or len(name) > 16:\n        raise ValueError(\"invalid\")\n    return name.upper()\n\ndef preview_name(name):\n    if not isinstance(name, str) or len(name) < 1 or len(name) > 16:\n        raise ValueError(\"invalid\")\n    return \"[\" + name + \"]\"\n```",
+          "stop": "eos",
+          "tokens": 94,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-unicode-space",
+          "category": null,
+          "pred": "```python\nimport string\n\n\ndef save_key(key):\n    if any(c in string.whitespace for c in key):\n        raise ValueError(\"invalid\")\n    return key.upper()\n\n\ndef lookup_key(key):\n    if any(c in string.whitespace for c in key):\n        raise ValueError(\"invalid\")\n    return key + \":\"\n```",
+          "stop": "eos",
+          "tokens": 73,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('save_key', ('a\\xa0b',), 'accepted invalid')\n"
+          }
+        },
+        {
+          "id": "natural-ascii-digits",
+          "category": null,
+          "pred": "```python\ndef submit_token(token):\n    if not token or not all(c in '0123456789' for c in token):\n        raise ValueError(\"invalid\")\n    return token + \"!\"\n\ndef inspect_token(token):\n    if not token or not all(c in '0123456789' for c in token):\n        raise ValueError(\"invalid\")\n    return len(token)\n```",
+          "stop": "eos",
+          "tokens": 97,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-case-sensitive-prefix",
+          "category": null,
+          "pred": "```python\ndef enqueue_code(code):\n    if not code.startswith(\"job-\"):\n        raise ValueError(\"invalid\")\n    return code + \":queued\"\n\ndef inspect_code(code):\n    if not code.startswith(\"job-\"):\n        raise ValueError(\"invalid\")\n    return len(code)\n```",
+          "stop": "eos",
+          "tokens": 64,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-control-chars",
+          "category": null,
+          "pred": "```python\ndef export_label(label):\n    for ch in label:\n        if ord(ch) < 32 or ord(ch) == 127:\n            raise ValueError(\"invalid\")\n    return label + \";\"\n\ndef display_label(label):\n    for ch in label:\n        if ord(ch) < 32 or ord(ch) == 127:\n            raise ValueError(\"invalid\")\n    return label.upper()\n```",
+          "stop": "eos",
+          "tokens": 96,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-relative-path",
+          "category": null,
+          "pred": "```python\ndef fetch_asset(path):\n    if path.startswith(\"/\"):\n        raise ValueError(\"invalid\")\n    # Reject any complete \"..\" segment anywhere in the path\n    segments = path.split(\"/\")\n    for segment in segments:\n        if segment == \"..\":\n            raise ValueError(\"invalid\")\n    return \"assets/\" + path\n\ndef preview_asset(path):\n    if path.startswith(\"/\"):\n        raise ValueError(\"invalid\")\n    # Reject any complete \"..\" segment anywhere in the path\n    segments = path.split(\"/\")\n    for segment in segments:\n        if segment == \"..\":\n            raise ValueError(\"invalid\")\n    return path + \"?preview\"\n```",
+          "stop": "eos",
+          "tokens": 142,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-file-extension",
+          "category": null,
+          "pred": "```python\ndef import_file(filename):\n    if not (filename.endswith(\".json\") or filename.endswith(\".jsonl\")):\n        raise ValueError(\"invalid\")\n    return filename + \":import\"\n\ndef validate_file(filename):\n    if not (filename.endswith(\".json\") or filename.endswith(\".jsonl\")):\n        raise ValueError(\"invalid\")\n    return len(filename)\n```",
+          "stop": "eos",
+          "tokens": 80,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-hidden-component",
+          "category": null,
+          "pred": "```python\ndef scan_path(path):\n    parts = path.split(\"/\")\n    for part in parts:\n        if part.startswith(\".\"):\n            raise ValueError(\"invalid\")\n    return path + \":scan\"\n\ndef archive_path(path):\n    parts = path.split(\"/\")\n    for part in parts:\n        if part.startswith(\".\"):\n            raise ValueError(\"invalid\")\n    return \"archive/\" + path\n```",
+          "stop": "eos",
+          "tokens": 88,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-empty-segment",
+          "category": null,
+          "pred": "```python\ndef publish_route(path):\n    if not isinstance(path, str):\n        raise ValueError(\"invalid\")\n    if path == \"\":\n        raise ValueError(\"invalid\")\n    # Check for leading slash\n    if path.startswith(\"/\"):\n        raise ValueError(\"invalid\")\n    # Check for trailing slash\n    if path.endswith(\"/\"):\n        raise ValueError(\"invalid\")\n    # Check for doubled slashes\n    if \"//\" in path:\n        raise ValueError(\"invalid\")\n    # Check for empty segments (e.g., \"a//b\" already caught, but also check for segments that are empty)\n    # Actually, the above checks cover leading, trailing, and doubled slashes.\n    # But we should also ensure no empty segments in the middle.\n    # Splitting by \"/\" and checking for empty strings would catch all cases.\n    segments = path.split(\"/\")\n    for seg in segments:\n        if seg == \"\":\n            raise ValueError(\"invalid\")\n    return \"/v1/\" + path\n\n\ndef preview_route(path):\n    if not isinstance(path, str):\n        raise ValueError(\"invalid\")\n    if path == \"\":\n        raise ValueError(\"invalid\")\n    # Check for leading slash\n    if path.startswith(\"/\"):\n        raise ValueError(\"invalid\")\n    # Check for trailing slash\n    if path.endswith(\"/\"):\n        raise ValueError(\"invalid\")\n    # Check for doubled slashes\n    if \"//\" in path:\n        raise ValueError(\"invalid\")\n    # Check for empty segments\n    segments = path.split(\"/\")\n    for seg in segments:\n        if seg == \"\":\n            raise ValueError(\"invalid\")\n    return path.upper()\n```",
+          "stop": "eos",
+          "tokens": 359,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-backslash",
+          "category": null,
+          "pred": "```python\ndef load_manifest(path):\n    if path.startswith(\"/\"):\n        raise ValueError(\"invalid\")\n    if \"\\\\\" in path:\n        raise ValueError(\"invalid\")\n    return \"data/\" + path\n\ndef preview_manifest(path):\n    if path.startswith(\"/\"):\n        raise ValueError(\"invalid\")\n    if \"\\\\\" in path:\n        raise ValueError(\"invalid\")\n    return len(path)\n```",
+          "stop": "eos",
+          "tokens": 86,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-unique-items",
+          "category": null,
+          "pred": "```python\ndef index_items(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    seen = set()\n    for item in items:\n        if item in seen:\n            raise ValueError(\"invalid\")\n        seen.add(item)\n    return tuple(items)\n\ndef preview_items(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    seen = set()\n    for item in items:\n        if item in seen:\n            raise ValueError(\"invalid\")\n        seen.add(item)\n    return len(items)\n```",
+          "stop": "eos",
+          "tokens": 120,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-all-positive",
+          "category": null,
+          "pred": "```python\ndef submit_counts(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    for item in items:\n        if not isinstance(item, (int, float)) or isinstance(item, bool):\n            raise ValueError(\"invalid\")\n        if item <= 0:\n            raise ValueError(\"invalid\")\n    return tuple(items)\n\ndef estimate_counts(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    for item in items:\n        if not isinstance(item, (int, float)) or isinstance(item, bool):\n            raise ValueError(\"invalid\")\n        if item <= 0:\n            raise ValueError(\"invalid\")\n    return sum(items)\n```",
+          "stop": "eos",
+          "tokens": 148,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-sorted-input",
+          "category": null,
+          "pred": "```python\ndef merge_input(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    # Check that items are in nondecreasing order\n    for i in range(len(items) - 1):\n        if items[i] > items[i + 1]:\n            raise ValueError(\"invalid\")\n    return tuple(items)\n\ndef preview_merge(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    # Check that items are in nondecreasing order\n    for i in range(len(items) - 1):\n        if items[i] > items[i + 1]:\n            raise ValueError(\"invalid\")\n    return len(items)\n```",
+          "stop": "eos",
+          "tokens": 144,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-maximum-items",
+          "category": null,
+          "pred": "```python\ndef send_batch(items):\n    if len(items) > 4:\n        raise ValueError(\"invalid\")\n    return tuple(items)\n\ndef preview_send(items):\n    if len(items) > 4:\n        raise ValueError(\"invalid\")\n    return len(items)\n```",
+          "stop": "eos",
+          "tokens": 62,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-pair-width",
+          "category": null,
+          "pred": "```python\ndef write_rows(rows):\n    if not rows:\n        raise ValueError(\"invalid\")\n    for row in rows:\n        if len(row) != 2:\n            raise ValueError(\"invalid\")\n    return tuple(tuple(row) for row in rows)\n\ndef preview_rows(rows):\n    if not rows:\n        raise ValueError(\"invalid\")\n    for row in rows:\n        if len(row) != 2:\n            raise ValueError(\"invalid\")\n    return len(rows)\n```",
+          "stop": "eos",
+          "tokens": 108,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-required-keys",
+          "category": null,
+          "pred": "```python\ndef ingest_record(record):\n    if \"id\" not in record or \"version\" not in record:\n        raise ValueError(\"invalid\")\n    return record[\"id\"]\n\ndef preview_record(record):\n    if \"id\" not in record or \"version\" not in record:\n        raise ValueError(\"invalid\")\n    return len(record)\n```",
+          "stop": "eos",
+          "tokens": 77,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-unknown-keys",
+          "category": null,
+          "pred": "```python\ndef execute_options(options):\n    \"\"\"Validate and return timeout from options dict.\n    \n    Required keys: timeout\n    Optional keys: retries\n    Any other key raises ValueError.\n    \"\"\"\n    allowed_keys = {\"timeout\", \"retries\"}\n    for key in options:\n        if key not in allowed_keys:\n            raise ValueError(f\"invalid option: {key}\")\n    if \"timeout\" not in options:\n        raise ValueError(\"timeout is required\")\n    return options[\"timeout\"]\n\n\ndef preview_options(options):\n    \"\"\"Validate and return length of options dict.\n    \n    Required keys: timeout\n    Optional keys: retries\n    Any other key raises ValueError.\n    \"\"\"\n    allowed_keys = {\"timeout\", \"retries\"}\n    for key in options:\n        if key not in allowed_keys:\n            raise ValueError(f\"invalid option: {key}\")\n    if \"timeout\" not in options:\n        raise ValueError(\"timeout is required\")\n    return len(options)\n```",
+          "stop": "eos",
+          "tokens": 217,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-duplicate-values",
+          "category": null,
+          "pred": "```python\ndef register_aliases(aliases):\n    if not aliases:\n        raise ValueError(\"invalid\")\n    # Check for duplicate destinations\n    seen_destinations = set()\n    for alias, dest in aliases:\n        if dest in seen_destinations:\n            raise ValueError(\"invalid\")\n        seen_destinations.add(dest)\n    return tuple(aliases)\n\ndef preview_aliases(aliases):\n    if not aliases:\n        raise ValueError(\"invalid\")\n    # Check for duplicate destinations\n    seen_destinations = set()\n    for alias, dest in aliases:\n        if dest in seen_destinations:\n            raise ValueError(\"invalid\")\n        seen_destinations.add(dest)\n    return len(aliases)\n```",
+          "stop": "eos",
+          "tokens": 154,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\n  File \"<stdin>\", line 6, in register_aliases\nValueError: not enough values to unpack (expected 2, got 1)\n"
+          }
+        },
+        {
+          "id": "natural-exclusive-options",
+          "category": null,
+          "pred": "```python\ndef fetch_page(options):\n    if not options:\n        raise ValueError(\"invalid\")\n    \n    has_cursor = 'cursor' in options\n    has_offset = 'offset' in options\n    \n    if has_cursor and has_offset:\n        raise ValueError(\"invalid\")\n    if not has_cursor and not has_offset:\n        raise ValueError(\"invalid\")\n    \n    return dict(options)\n\ndef preview_page(options):\n    if not options:\n        raise ValueError(\"invalid\")\n    \n    has_cursor = 'cursor' in options\n    has_offset = 'offset' in options\n    \n    if has_cursor and has_offset:\n        raise ValueError(\"invalid\")\n    if not has_cursor and not has_offset:\n        raise ValueError(\"invalid\")\n    \n    return len(options)\n```",
+          "stop": "eos",
+          "tokens": 166,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-nested-config",
+          "category": null,
+          "pred": "```python\ndef plan_config(config):\n    if \"limits\" not in config:\n        raise ValueError(\"invalid\")\n    limits = config[\"limits\"]\n    if not isinstance(limits, dict):\n        raise ValueError(\"invalid\")\n    if \"workers\" not in limits:\n        raise ValueError(\"invalid\")\n    workers = limits[\"workers\"]\n    if not isinstance(workers, int) or isinstance(workers, bool):\n        raise ValueError(\"invalid\")\n    if workers < 0:\n        raise ValueError(\"invalid\")\n    return dict(config)\n\ndef preview_config(config):\n    if \"limits\" not in config:\n        raise ValueError(\"invalid\")\n    limits = config[\"limits\"]\n    if not isinstance(limits, dict):\n        raise ValueError(\"invalid\")\n    if \"workers\" not in limits:\n        raise ValueError(\"invalid\")\n    workers = limits[\"workers\"]\n    if not isinstance(workers, int) or isinstance(workers, bool):\n        raise ValueError(\"invalid\")\n    if workers < 0:\n        raise ValueError(\"invalid\")\n    return len(config)\n```",
+          "stop": "eos",
+          "tokens": 240,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-interval",
+          "category": null,
+          "pred": "```python\ndef book_interval(start, end):\n    if start >= end:\n        raise ValueError(\"invalid\")\n    return end - start\n\ndef preview_interval(start, end):\n    if start >= end:\n        raise ValueError(\"invalid\")\n    return (start, end)\n```",
+          "stop": "eos",
+          "tokens": 62,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-page-size",
+          "category": null,
+          "pred": "```python\ndef list_page(page, size):\n    if page < 1:\n        raise ValueError(\"invalid\")\n    if size < 1 or size > 100:\n        raise ValueError(\"invalid\")\n    return (page - 1) * size\n\ndef count_page(page, size):\n    if page < 1:\n        raise ValueError(\"invalid\")\n    if size < 1 or size > 100:\n        raise ValueError(\"invalid\")\n    return size\n```",
+          "stop": "eos",
+          "tokens": 109,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-offset-alignment",
+          "category": null,
+          "pred": "```python\ndef read_block(offset, block):\n    if offset < 0 or block <= 0:\n        raise ValueError(\"invalid\")\n    if offset % block != 0:\n        raise ValueError(\"invalid\")\n    return offset // block\n\ndef preview_block(offset, block):\n    if offset < 0 or block <= 0:\n        raise ValueError(\"invalid\")\n    if offset % block != 0:\n        raise ValueError(\"invalid\")\n    return (offset, block)\n```",
+          "stop": "eos",
+          "tokens": 108,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-dimensions",
+          "category": null,
+          "pred": "```python\ndef render_tile(width, height):\n    if width <= 0 or height <= 0:\n        raise ValueError(\"invalid\")\n    if width * height > 64:\n        raise ValueError(\"invalid\")\n    return width * height\n\ndef preview_tile(width, height):\n    if width <= 0 or height <= 0:\n        raise ValueError(\"invalid\")\n    if width * height > 64:\n        raise ValueError(\"invalid\")\n    return (width, height)\n```",
+          "stop": "eos",
+          "tokens": 110,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-bounded-window",
+          "category": null,
+          "pred": "```python\ndef slice_window(offset, length, total):\n    if offset < 0 or length < 0:\n        raise ValueError(\"invalid\")\n    if offset + length > total:\n        raise ValueError(\"invalid\")\n    return (offset, offset + length)\n\ndef preview_window(offset, length, total):\n    if offset < 0 or length < 0:\n        raise ValueError(\"invalid\")\n    if offset + length > total:\n        raise ValueError(\"invalid\")\n    return length\n```",
+          "stop": "eos",
+          "tokens": 110,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-date-validity",
+          "category": null,
+          "pred": "```python\nimport calendar\n\n\ndef store_date(year, month, day):\n    if not 1 <= month <= 12:\n        raise ValueError(\"invalid\")\n    if not 1 <= day <= calendar.monthrange(year, month)[1]:\n        raise ValueError(\"invalid\")\n    return (year, month, day)\n\n\ndef display_date(year, month, day):\n    if not 1 <= month <= 12:\n        raise ValueError(\"invalid\")\n    if not 1 <= day <= calendar.monthrange(year, month)[1]:\n        raise ValueError(\"invalid\")\n    return f\"{year:04}-{month:02}-{day:02}\"\n```",
+          "stop": "eos",
+          "tokens": 147,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-ipv4",
+          "category": null,
+          "pred": "```python\ndef connect_ipv4(address):\n    \"\"\"Validate an IPv4 address and return it if valid.\"\"\"\n    if not isinstance(address, str):\n        raise ValueError(\"invalid\")\n    \n    parts = address.split(\".\")\n    if len(parts) != 4:\n        raise ValueError(\"invalid\")\n    \n    for part in parts:\n        # Must be non-empty and contain only digits\n        if not part.isdigit():\n            raise ValueError(\"invalid\")\n        # Must be a valid octet (0-255)\n        value = int(part)\n        if value < 0 or value > 255:\n            raise ValueError(\"invalid\")\n        # Reject leading zeros (e.g., \"01\", \"001\") unless the part is exactly \"0\"\n        if len(part) > 1 and part[0] == '0':\n            raise ValueError(\"invalid\")\n    \n    return address\n\n\ndef preview_ipv4(address):\n    \"\"\"Validate an IPv4 address and return a preview string.\"\"\"\n    if not isinstance(address, str):\n        raise ValueError(\"invalid\")\n    \n    parts = address.split(\".\")\n    if len(parts) != 4:\n        raise ValueError(\"invalid\")\n    \n    for part in parts:\n        # Must be non-empty and contain only digits\n        if not part.isdigit():\n            raise ValueError(\"invalid\")\n        # Must be a valid octet (0-255)\n        value = int(part)\n        if value < 0 or value > 255:\n            raise ValueError(\"invalid\")\n        # Reject leading zeros (e.g., \"01\", \"001\") unless the part is exactly \"0\"\n        if len(part) > 1 and part[0] == '0':\n            raise ValueError(\"invalid\")\n    \n    return \"host=\" + address\n```",
+          "stop": "eos",
+          "tokens": 402,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-json-object",
+          "category": null,
+          "pred": "```python\nimport json\n\n\ndef load_settings(text):\n    if not text:\n        raise ValueError(\"invalid\")\n    try:\n        parsed = json.loads(text)\n    except (json.JSONDecodeError, TypeError):\n        raise ValueError(\"invalid\")\n    if not isinstance(parsed, dict):\n        raise ValueError(\"invalid\")\n    return parsed\n\n\ndef preview_settings(text):\n    if not text:\n        raise ValueError(\"invalid\")\n    try:\n        parsed = json.loads(text)\n    except (json.JSONDecodeError, TypeError):\n        raise ValueError(\"invalid\")\n    if not isinstance(parsed, dict):\n        raise ValueError(\"invalid\")\n    return len(parsed)\n```",
+          "stop": "eos",
+          "tokens": 147,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 30, in <module>\nAssertionError: ('load_settings', ('{}',))\n"
+          }
+        },
+        {
+          "id": "natural-hex-bytes",
+          "category": null,
+          "pred": "```python\nimport re\n\n_HEX_RE = re.compile(r'^[0-9a-fA-F]*$')\n\n\ndef load_digest(text):\n    if not isinstance(text, str):\n        raise ValueError(\"invalid\")\n    if not _HEX_RE.match(text):\n        raise ValueError(\"invalid\")\n    if len(text) % 2 != 0:\n        raise ValueError(\"invalid\")\n    return text.lower()\n\n\ndef preview_digest(text):\n    if not isinstance(text, str):\n        raise ValueError(\"invalid\")\n    if not _HEX_RE.match(text):\n        raise ValueError(\"invalid\")\n    if len(text) % 2 != 0:\n        raise ValueError(\"invalid\")\n    return len(text) // 2\n```",
+          "stop": "eos",
+          "tokens": 161,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-utf8-length",
+          "category": null,
+          "pred": "```python\ndef store_message(text):\n    if not isinstance(text, str):\n        raise ValueError(\"invalid\")\n    encoded = text.encode('utf-8')\n    if len(encoded) > 8:\n        raise ValueError(\"invalid\")\n    return text\n\ndef preview_message(text):\n    if not isinstance(text, str):\n        raise ValueError(\"invalid\")\n    encoded = text.encode('utf-8')\n    if len(encoded) > 8:\n        raise ValueError(\"invalid\")\n    return text.upper()\n```",
+          "stop": "eos",
+          "tokens": 114,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-reserved-names",
+          "category": null,
+          "pred": "```python\ndef open_account(name):\n    if not isinstance(name, str):\n        raise ValueError(\"invalid\")\n    if name.lower() in (\"admin\", \"root\"):\n        raise ValueError(\"invalid\")\n    return name + \":open\"\n\ndef preview_account(name):\n    if not isinstance(name, str):\n        raise ValueError(\"invalid\")\n    if name.lower() in (\"admin\", \"root\"):\n        raise ValueError(\"invalid\")\n    return len(name)\n```",
+          "stop": "eos",
+          "tokens": 102,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-newline-header",
+          "category": null,
+          "pred": "```python\ndef write_header(value):\n    if \"\\n\" in value or \"\\r\" in value:\n        raise ValueError(\"invalid\")\n    return \"X-Value: \" + value\n\ndef preview_header(value):\n    if \"\\n\" in value or \"\\r\" in value:\n        raise ValueError(\"invalid\")\n    return len(value)\n```",
+          "stop": "eos",
+          "tokens": 77,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-delimiter",
+          "category": null,
+          "pred": "```python\ndef write_field(name):\n    if \":\" in name or \",\" in name or \";\" in name:\n        raise ValueError(\"invalid\")\n    return name + \"=1\"\n\ndef preview_field(name):\n    if \":\" in name or \",\" in name or \";\" in name:\n        raise ValueError(\"invalid\")\n    return name.upper()\n```",
+          "stop": "eos",
+          "tokens": 74,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-version-parts",
+          "category": null,
+          "pred": "```python\ndef publish_version(version):\n    parts = version.split(\".\")\n    if len(parts) != 3:\n        raise ValueError(\"invalid\")\n    for part in parts:\n        if not part:\n            raise ValueError(\"invalid\")\n        if not part.isascii():\n            raise ValueError(\"invalid\")\n        if not part.isdigit():\n            raise ValueError(\"invalid\")\n    return \"v\" + version\n\ndef preview_version(version):\n    parts = version.split(\".\")\n    if len(parts) != 3:\n        raise ValueError(\"invalid\")\n    for part in parts:\n        if not part:\n            raise ValueError(\"invalid\")\n        if not part.isascii():\n            raise ValueError(\"invalid\")\n        if not part.isdigit():\n            raise ValueError(\"invalid\")\n    return parts\n```",
+          "stop": "eos",
+          "tokens": 174,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-token-alphabet",
+          "category": null,
+          "pred": "```python\nimport re\n\n_TOKEN_PATTERN = re.compile(r'^[A-Za-z0-9_-]+$')\n\n\ndef encode_token(token):\n    if not token:\n        raise ValueError(\"invalid\")\n    if not _TOKEN_PATTERN.match(token):\n        raise ValueError(\"invalid\")\n    return token + \"=\"\n\n\ndef preview_token(token):\n    if not token:\n        raise ValueError(\"invalid\")\n    if not _TOKEN_PATTERN.match(token):\n        raise ValueError(\"invalid\")\n    return len(token)\n```",
+          "stop": "eos",
+          "tokens": 109,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        }
+      ]
+    },
+    "joint4k": {
+      "knowledge": [],
+      "tools": [],
+      "behavior": [
+        {
+          "id": "natural-count-zero",
+          "category": null,
+          "pred": "```python\ndef schedule_batch(count):\n    if count <= 0:\n        raise ValueError(\"invalid\")\n    return count * 2\n\ndef preview_batch(count):\n    if count <= 0:\n        raise ValueError(\"invalid\")\n    return count + 1\n```",
+          "stop": "eos",
+          "tokens": 60,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-retry-limit",
+          "category": null,
+          "pred": "```python\ndef _validate_retries(retries):\n    if not (0 <= retries <= 12):\n        raise ValueError(\"invalid\")\n\ndef start_worker(retries):\n    _validate_retries(retries)\n    return retries + 1\n\ndef preview_worker(retries):\n    _validate_retries(retries)\n    return retries * 3\n```",
+          "stop": "eos",
+          "tokens": 79,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_retries"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-batch-multiple",
+          "category": null,
+          "pred": "```python\ndef _validate_batch_size(size):\n    if size <= 0 or size % 8 != 0:\n        raise ValueError(\"invalid\")\n\ndef encode_upload(size):\n    _validate_batch_size(size)\n    return size // 8\n\ndef preview_upload(size):\n    _validate_batch_size(size)\n    return size + 8\n```",
+          "stop": "eos",
+          "tokens": 77,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_batch_size"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-integer-bool",
+          "category": null,
+          "pred": "```python\ndef launch_pool(workers):\n    if isinstance(workers, bool) or not isinstance(workers, int):\n        raise ValueError(\"invalid\")\n    return workers + 2\n\ndef estimate_pool(workers):\n    if isinstance(workers, bool) or not isinstance(workers, int):\n        raise ValueError(\"invalid\")\n    return workers * 4\n```",
+          "stop": "eos",
+          "tokens": 80,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-finite-number",
+          "category": null,
+          "pred": "```python\nimport math\n\ndef _validate_reading(reading):\n    if not math.isfinite(reading) or reading < 0:\n        raise ValueError(\"invalid\")\n\ndef store_reading(reading):\n    _validate_reading(reading)\n    return reading * 2\n\ndef display_reading(reading):\n    _validate_reading(reading)\n    return str(reading)\n```",
+          "stop": "eos",
+          "tokens": 82,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_reading"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-name-empty",
+          "category": null,
+          "pred": "```python\ndef register_name(name):\n    if not (1 <= len(name) <= 16):\n        raise ValueError(\"invalid\")\n    return name.upper()\n\ndef preview_name(name):\n    if not (1 <= len(name) <= 16):\n        raise ValueError(\"invalid\")\n    return \"[\" + name + \"]\"\n```",
+          "stop": "eos",
+          "tokens": 74,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-unicode-space",
+          "category": null,
+          "pred": "```python\nimport string\n\ndef save_key(key):\n    if any(c in string.whitespace for c in key):\n        raise ValueError(\"invalid\")\n    return key.upper()\n\ndef lookup_key(key):\n    if any(c in string.whitespace for c in key):\n        raise ValueError(\"invalid\")\n    return key + \":\"\n```",
+          "stop": "eos",
+          "tokens": 73,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 24, in <module>\nAssertionError: ('save_key', ('a\\xa0b',), 'accepted invalid')\n"
+          }
+        },
+        {
+          "id": "natural-ascii-digits",
+          "category": null,
+          "pred": "```python\ndef _is_ascii_digits(token):\n    return len(token) > 0 and all(c in \"0123456789\" for c in token)\n\ndef submit_token(token):\n    if not _is_ascii_digits(token):\n        raise ValueError(\"invalid\")\n    return token + \"!\"\n\ndef inspect_token(token):\n    if not _is_ascii_digits(token):\n        raise ValueError(\"invalid\")\n    return len(token)\n```",
+          "stop": "eos",
+          "tokens": 101,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_is_ascii_digits"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-case-sensitive-prefix",
+          "category": null,
+          "pred": "```python\ndef enqueue_code(code):\n    if not code.startswith(\"job-\"):\n        raise ValueError(\"invalid\")\n    return code + \":queued\"\n\ndef inspect_code(code):\n    if not code.startswith(\"job-\"):\n        raise ValueError(\"invalid\")\n    return len(code)\n```",
+          "stop": "eos",
+          "tokens": 64,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-control-chars",
+          "category": null,
+          "pred": "```python\nimport re\n\n_CONTROL_RE = re.compile(r\"[\\x00-\\x1f\\x7f]\")\n\ndef export_label(label):\n    if _CONTROL_RE.search(label):\n        raise ValueError(\"invalid\")\n    return label + \";\"\n\ndef display_label(label):\n    if _CONTROL_RE.search(label):\n        raise ValueError(\"invalid\")\n    return label.upper()\n```",
+          "stop": "eos",
+          "tokens": 83,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-relative-path",
+          "category": null,
+          "pred": "```python\ndef _reject_parent_segments(path):\n    if \"..\" in path.split(\"/\"):\n        raise ValueError(\"invalid\")\n\ndef fetch_asset(path):\n    if path.startswith(\"/\"):\n        raise ValueError(\"invalid\")\n    _reject_parent_segments(path)\n    return \"assets/\" + path\n\ndef preview_asset(path):\n    if path.startswith(\"/\"):\n        raise ValueError(\"invalid\")\n    _reject_parent_segments(path)\n    return path + \"?preview\"\n```",
+          "stop": "eos",
+          "tokens": 101,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_reject_parent_segments"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-file-extension",
+          "category": null,
+          "pred": "```python\ndef import_file(filename):\n    if not (filename.endswith(\".json\") or filename.endswith(\".jsonl\")):\n        raise ValueError(\"invalid\")\n    return filename + \":import\"\n\ndef validate_file(filename):\n    if not (filename.endswith(\".json\") or filename.endswith(\".jsonl\")):\n        raise ValueError(\"invalid\")\n    return len(filename)\n```",
+          "stop": "eos",
+          "tokens": 80,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-hidden-component",
+          "category": null,
+          "pred": "```python\ndef _reject_hidden(path):\n    if any(part.startswith(\".\") for part in path.split(\"/\")):\n        raise ValueError(\"invalid\")\n\ndef scan_path(path):\n    _reject_hidden(path)\n    return path + \":scan\"\n\ndef archive_path(path):\n    _reject_hidden(path)\n    return \"archive/\" + path\n```",
+          "stop": "eos",
+          "tokens": 75,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_reject_hidden"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-empty-segment",
+          "category": null,
+          "pred": "```python\ndef _validate_path(path):\n    if path == \"\":\n        raise ValueError(\"invalid\")\n    if path.startswith(\"/\"):\n        raise ValueError(\"invalid\")\n    if path.endswith(\"/\"):\n        raise ValueError(\"invalid\")\n    if \"//\" in path:\n        raise ValueError(\"invalid\")\n\ndef publish_route(path):\n    _validate_path(path)\n    return \"/v1/\" + path\n\ndef preview_route(path):\n    _validate_path(path)\n    return path.upper()\n```",
+          "stop": "eos",
+          "tokens": 109,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_path"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-backslash",
+          "category": null,
+          "pred": "```python\ndef load_manifest(path):\n    if path.startswith(\"/\") or \"\\\\\" in path:\n        raise ValueError(\"invalid\")\n    return \"data/\" + path\n\ndef preview_manifest(path):\n    if path.startswith(\"/\") or \"\\\\\" in path:\n        raise ValueError(\"invalid\")\n    return len(path)\n```",
+          "stop": "eos",
+          "tokens": 66,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-unique-items",
+          "category": null,
+          "pred": "```python\ndef index_items(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    if len(set(items)) != len(items):\n        raise ValueError(\"invalid\")\n    return tuple(items)\n\ndef preview_items(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    if len(set(items)) != len(items):\n        raise ValueError(\"invalid\")\n    return len(items)\n```",
+          "stop": "eos",
+          "tokens": 90,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-all-positive",
+          "category": null,
+          "pred": "```python\ndef _validate_counts(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    if any(c <= 0 for c in items):\n        raise ValueError(\"invalid\")\n\ndef submit_counts(items):\n    _validate_counts(items)\n    return tuple(items)\n\ndef estimate_counts(items):\n    _validate_counts(items)\n    return sum(items)\n```",
+          "stop": "eos",
+          "tokens": 82,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_counts"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-sorted-input",
+          "category": null,
+          "pred": "```python\ndef merge_input(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    for i in range(len(items) - 1):\n        if items[i] > items[i + 1]:\n            raise ValueError(\"invalid\")\n    return tuple(items)\n\ndef preview_merge(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    for i in range(len(items) - 1):\n        if items[i] > items[i + 1]:\n            raise ValueError(\"invalid\")\n    return len(items)\n```",
+          "stop": "eos",
+          "tokens": 120,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-maximum-items",
+          "category": null,
+          "pred": "```python\ndef send_batch(items):\n    if len(items) > 4:\n        raise ValueError(\"invalid\")\n    return tuple(items)\n\ndef preview_send(items):\n    if len(items) > 4:\n        raise ValueError(\"invalid\")\n    return len(items)\n```",
+          "stop": "eos",
+          "tokens": 62,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-pair-width",
+          "category": null,
+          "pred": "```python\ndef write_rows(rows):\n    if not rows:\n        raise ValueError(\"invalid\")\n    for row in rows:\n        if len(row) != 2:\n            raise ValueError(\"invalid\")\n    return tuple(tuple(row) for row in rows)\n\ndef preview_rows(rows):\n    if not rows:\n        raise ValueError(\"invalid\")\n    for row in rows:\n        if len(row) != 2:\n            raise ValueError(\"invalid\")\n    return len(rows)\n```",
+          "stop": "eos",
+          "tokens": 108,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-required-keys",
+          "category": null,
+          "pred": "```python\ndef ingest_record(record):\n    if \"id\" not in record or \"version\" not in record:\n        raise ValueError(\"invalid\")\n    return record[\"id\"]\n\ndef preview_record(record):\n    if \"id\" not in record or \"version\" not in record:\n        raise ValueError(\"invalid\")\n    return len(record)\n```",
+          "stop": "eos",
+          "tokens": 77,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-unknown-keys",
+          "category": null,
+          "pred": "```python\ndef execute_options(options):\n    allowed = {\"timeout\", \"retries\"}\n    if not set(options) <= allowed:\n        raise ValueError(\"invalid\")\n    if \"timeout\" not in options:\n        raise ValueError(\"invalid\")\n    return options[\"timeout\"]\n\ndef preview_options(options):\n    allowed = {\"timeout\", \"retries\"}\n    if not set(options) <= allowed:\n        raise ValueError(\"invalid\")\n    if \"timeout\" not in options:\n        raise ValueError(\"invalid\")\n    return len(options)\n```",
+          "stop": "eos",
+          "tokens": 119,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-duplicate-values",
+          "category": null,
+          "pred": "```python\ndef register_aliases(aliases):\n    if not aliases:\n        raise ValueError(\"invalid\")\n    destinations = [dest for _, dest in aliases]\n    if len(destinations) != len(set(destinations)):\n        raise ValueError(\"invalid\")\n    return tuple(aliases)\n\ndef preview_aliases(aliases):\n    if not aliases:\n        raise ValueError(\"invalid\")\n    destinations = [dest for _, dest in aliases]\n    if len(destinations) != len(set(destinations)):\n        raise ValueError(\"invalid\")\n    return len(aliases)\n```",
+          "stop": "eos",
+          "tokens": 122,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 20, in <module>\n  File \"<stdin>\", line 4, in register_aliases\nValueError: not enough values to unpack (expected 2, got 1)\n"
+          }
+        },
+        {
+          "id": "natural-exclusive-options",
+          "category": null,
+          "pred": "```python\ndef fetch_page(options):\n    if not options:\n        raise ValueError(\"invalid\")\n    has_cursor = \"cursor\" in options\n    has_offset = \"offset\" in options\n    if has_cursor == has_offset:\n        raise ValueError(\"exactly one of cursor or offset required\")\n    return dict(options)\n\ndef preview_page(options):\n    if not options:\n        raise ValueError(\"invalid\")\n    has_cursor = \"cursor\" in options\n    has_offset = \"offset\" in options\n    if has_cursor == has_offset:\n        raise ValueError(\"exactly one of cursor or offset required\")\n    return len(options)\n```",
+          "stop": "eos",
+          "tokens": 140,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-nested-config",
+          "category": null,
+          "pred": "```python\ndef _validate_limits(config):\n    if \"limits\" not in config:\n        raise ValueError(\"invalid\")\n    limits = config[\"limits\"]\n    if not isinstance(limits, dict) or \"workers\" not in limits:\n        raise ValueError(\"invalid\")\n    workers = limits[\"workers\"]\n    if not isinstance(workers, int) or isinstance(workers, bool) or workers < 0:\n        raise ValueError(\"invalid\")\n\ndef plan_config(config):\n    _validate_limits(config)\n    return dict(config)\n\ndef preview_config(config):\n    _validate_limits(config)\n    return len(config)\n```",
+          "stop": "eos",
+          "tokens": 137,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_limits"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-interval",
+          "category": null,
+          "pred": "```python\ndef book_interval(start, end):\n    if start >= end:\n        raise ValueError(\"invalid\")\n    return end - start\n\ndef preview_interval(start, end):\n    if start >= end:\n        raise ValueError(\"invalid\")\n    return (start, end)\n```",
+          "stop": "eos",
+          "tokens": 62,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-page-size",
+          "category": null,
+          "pred": "```python\ndef list_page(page, size):\n    if page < 1:\n        raise ValueError(\"invalid\")\n    if not 1 <= size <= 100:\n        raise ValueError(\"invalid\")\n    return (page - 1) * size\n\ndef count_page(page, size):\n    if page < 1:\n        raise ValueError(\"invalid\")\n    if not 1 <= size <= 100:\n        raise ValueError(\"invalid\")\n    return size\n```",
+          "stop": "eos",
+          "tokens": 107,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-offset-alignment",
+          "category": null,
+          "pred": "```python\ndef read_block(offset, block):\n    if offset < 0 or block <= 0:\n        raise ValueError(\"invalid\")\n    if offset % block != 0:\n        raise ValueError(\"offset not aligned to block\")\n    return offset // block\n\ndef preview_block(offset, block):\n    if offset < 0 or block <= 0:\n        raise ValueError(\"invalid\")\n    if offset % block != 0:\n        raise ValueError(\"offset not aligned to block\")\n    return (offset, block)\n```",
+          "stop": "eos",
+          "tokens": 116,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-dimensions",
+          "category": null,
+          "pred": "```python\ndef _validate_tile(width, height):\n    if width <= 0 or height <= 0:\n        raise ValueError(\"invalid\")\n    if width * height > 64:\n        raise ValueError(\"invalid\")\n\ndef render_tile(width, height):\n    _validate_tile(width, height)\n    return width * height\n\ndef preview_tile(width, height):\n    _validate_tile(width, height)\n    return (width, height)\n```",
+          "stop": "eos",
+          "tokens": 99,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_tile"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-bounded-window",
+          "category": null,
+          "pred": "```python\ndef slice_window(offset, length, total):\n    if offset < 0 or length < 0:\n        raise ValueError(\"invalid\")\n    if offset + length > total:\n        raise ValueError(\"invalid\")\n    return (offset, offset + length)\n\ndef preview_window(offset, length, total):\n    if offset < 0 or length < 0:\n        raise ValueError(\"invalid\")\n    if offset + length > total:\n        raise ValueError(\"invalid\")\n    return length\n```",
+          "stop": "eos",
+          "tokens": 110,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-date-validity",
+          "category": null,
+          "pred": "```python\nimport calendar\n\ndef store_date(year, month, day):\n    if not 1 <= month <= 12 or not 1 <= day <= calendar.monthrange(year, month)[1]:\n        raise ValueError(\"invalid\")\n    return (year, month, day)\n\ndef display_date(year, month, day):\n    if not 1 <= month <= 12 or not 1 <= day <= calendar.monthrange(year, month)[1]:\n        raise ValueError(\"invalid\")\n    return f\"{year:04}-{month:02}-{day:02}\"\n```",
+          "stop": "eos",
+          "tokens": 127,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-ipv4",
+          "category": null,
+          "pred": "```python\ndef connect_ipv4(address):\n    parts = address.split(\".\")\n    if len(parts) != 4:\n        raise ValueError(\"invalid\")\n    for part in parts:\n        if not part.isdigit():\n            raise ValueError(\"invalid\")\n        if len(part) > 1 and part[0] == \"0\":\n            raise ValueError(\"invalid\")\n        if int(part) > 255:\n            raise ValueError(\"invalid\")\n    return address\n\ndef preview_ipv4(address):\n    parts = address.split(\".\")\n    if len(parts) != 4:\n        raise ValueError(\"invalid\")\n    for part in parts:\n        if not part.isdigit():\n            raise ValueError(\"invalid\")\n        if len(part) > 1 and part[0] == \"0\":\n            raise ValueError(\"invalid\")\n        if int(part) > 255:\n            raise ValueError(\"invalid\")\n    return \"host=\" + address\n```",
+          "stop": "eos",
+          "tokens": 208,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-json-object",
+          "category": null,
+          "pred": "```python\nimport json\n\n\ndef load_settings(text):\n    if not text:\n        raise ValueError(\"invalid\")\n    try:\n        value = json.loads(text)\n    except json.JSONDecodeError:\n        raise ValueError(\"invalid\")\n    if not isinstance(value, dict):\n        raise ValueError(\"invalid\")\n    return value\n\n\ndef preview_settings(text):\n    if not text:\n        raise ValueError(\"invalid\")\n    try:\n        value = json.loads(text)\n    except json.JSONDecodeError:\n        raise ValueError(\"invalid\")\n    if not isinstance(value, dict):\n        raise ValueError(\"invalid\")\n    return len(value)\n```",
+          "stop": "eos",
+          "tokens": 141,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 30, in <module>\nAssertionError: ('load_settings', ('{}',))\n"
+          }
+        },
+        {
+          "id": "natural-hex-bytes",
+          "category": null,
+          "pred": "```python\nimport re\n\n_HEX_RE = re.compile(r\"^[0-9a-fA-F]*$\")\n\ndef load_digest(text):\n    if not _HEX_RE.match(text):\n        raise ValueError(\"invalid\")\n    if len(text) % 2 != 0:\n        raise ValueError(\"invalid\")\n    return text.lower()\n\ndef preview_digest(text):\n    if not _HEX_RE.match(text):\n        raise ValueError(\"invalid\")\n    if len(text) % 2 != 0:\n        raise ValueError(\"invalid\")\n    return len(text) // 2\n```",
+          "stop": "eos",
+          "tokens": 129,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-utf8-length",
+          "category": null,
+          "pred": "```python\ndef store_message(text):\n    if len(text.encode(\"utf-8\")) > 8:\n        raise ValueError(\"invalid\")\n    return text\n\ndef preview_message(text):\n    if len(text.encode(\"utf-8\")) > 8:\n        raise ValueError(\"invalid\")\n    return text.upper()\n```",
+          "stop": "eos",
+          "tokens": 70,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-reserved-names",
+          "category": null,
+          "pred": "```python\ndef open_account(name):\n    if name.lower() in (\"admin\", \"root\"):\n        raise ValueError(\"invalid\")\n    return name + \":open\"\n\ndef preview_account(name):\n    if name.lower() in (\"admin\", \"root\"):\n        raise ValueError(\"invalid\")\n    return len(name)\n```",
+          "stop": "eos",
+          "tokens": 70,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-newline-header",
+          "category": null,
+          "pred": "```python\ndef write_header(value):\n    if \"\\n\" in value or \"\\r\" in value:\n        raise ValueError(\"invalid\")\n    return \"X-Value: \" + value\n\ndef preview_header(value):\n    if \"\\n\" in value or \"\\r\" in value:\n        raise ValueError(\"invalid\")\n    return len(value)\n```",
+          "stop": "eos",
+          "tokens": 77,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-delimiter",
+          "category": null,
+          "pred": "```python\ndef write_field(name):\n    if any(c in name for c in \":;,\"):\n        raise ValueError(\"invalid\")\n    return name + \"=1\"\n\ndef preview_field(name):\n    if any(c in name for c in \":;,\"):\n        raise ValueError(\"invalid\")\n    return name.upper()\n```",
+          "stop": "eos",
+          "tokens": 70,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-version-parts",
+          "category": null,
+          "pred": "```python\nimport re\n\ndef publish_version(version):\n    if not re.fullmatch(r\"[0-9]+\\.[0-9]+\\.[0-9]+\", version):\n        raise ValueError(\"invalid\")\n    return \"v\" + version\n\ndef preview_version(version):\n    if not re.fullmatch(r\"[0-9]+\\.[0-9]+\\.[0-9]+\", version):\n        raise ValueError(\"invalid\")\n    return version.split(\".\")\n```",
+          "stop": "eos",
+          "tokens": 99,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-token-alphabet",
+          "category": null,
+          "pred": "```python\nimport re\n\n_TOKEN_RE = re.compile(r\"^[A-Za-z0-9_-]+$\")\n\n\ndef encode_token(token):\n    if not token or not _TOKEN_RE.match(token):\n        raise ValueError(\"invalid\")\n    return token + \"=\"\n\n\ndef preview_token(token):\n    if not token or not _TOKEN_RE.match(token):\n        raise ValueError(\"invalid\")\n    return len(token)\n```",
+          "stop": "eos",
+          "tokens": 89,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        }
+      ]
+    },
+    "joint8k": {
+      "knowledge": [],
+      "tools": [],
+      "behavior": [
+        {
+          "id": "natural-count-zero",
+          "category": null,
+          "pred": "```python\ndef _validate_count(count):\n    if count <= 0:\n        raise ValueError(\"invalid\")\n\ndef schedule_batch(count):\n    _validate_count(count)\n    return count * 2\n\ndef preview_batch(count):\n    _validate_count(count)\n    return count + 1\n```",
+          "stop": "eos",
+          "tokens": 66,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_count"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-retry-limit",
+          "category": null,
+          "pred": "```python\ndef _validate_retries(retries):\n    if retries < 0 or retries > 12:\n        raise ValueError(\"invalid\")\n    return retries\n\ndef start_worker(retries):\n    _validate_retries(retries)\n    return retries + 1\n\ndef preview_worker(retries):\n    _validate_retries(retries)\n    return retries * 3\n```",
+          "stop": "eos",
+          "tokens": 84,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_retries"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-batch-multiple",
+          "category": null,
+          "pred": "```python\ndef encode_upload(size):\n    if size <= 0 or size % 8 != 0:\n        raise ValueError(\"invalid\")\n    return size // 8\n\ndef preview_upload(size):\n    if size <= 0 or size % 8 != 0:\n        raise ValueError(\"invalid\")\n    return size + 8\n```",
+          "stop": "eos",
+          "tokens": 76,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-integer-bool",
+          "category": null,
+          "pred": "```python\ndef launch_pool(workers):\n    if isinstance(workers, bool) or not isinstance(workers, int):\n        raise ValueError(\"invalid\")\n    return workers + 2\n\ndef estimate_pool(workers):\n    if isinstance(workers, bool) or not isinstance(workers, int):\n        raise ValueError(\"invalid\")\n    return workers * 4\n```",
+          "stop": "eos",
+          "tokens": 80,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-finite-number",
+          "category": null,
+          "pred": "```python\nimport math\n\ndef store_reading(reading):\n    if not math.isfinite(reading) or reading < 0:\n        raise ValueError(\"invalid\")\n    return reading * 2\n\ndef display_reading(reading):\n    if not math.isfinite(reading) or reading < 0:\n        raise ValueError(\"invalid\")\n    return str(reading)\n```",
+          "stop": "eos",
+          "tokens": 81,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-name-empty",
+          "category": null,
+          "pred": "```python\ndef register_name(name):\n    if not (1 <= len(name) <= 16):\n        raise ValueError(\"invalid\")\n    return name.upper()\n\ndef preview_name(name):\n    if not (1 <= len(name) <= 16):\n        raise ValueError(\"invalid\")\n    return \"[\" + name + \"]\"\n```",
+          "stop": "eos",
+          "tokens": 74,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-unicode-space",
+          "category": null,
+          "pred": "```python\nimport string\n\ndef save_key(key):\n    if any(c in string.whitespace for c in key):\n        raise ValueError(\"invalid\")\n    return key.upper()\n\ndef lookup_key(key):\n    if any(c in string.whitespace for c in key):\n        raise ValueError(\"invalid\")\n    return key + \":\"\n```",
+          "stop": "eos",
+          "tokens": 73,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 24, in <module>\nAssertionError: ('save_key', ('a\\xa0b',), 'accepted invalid')\n"
+          }
+        },
+        {
+          "id": "natural-ascii-digits",
+          "category": null,
+          "pred": "```python\nimport re\n\n_ASCII_DIGITS = re.compile(r\"[0-9]+\")\n\ndef _validate_ascii_digits(token):\n    if not _ASCII_DIGITS.fullmatch(token):\n        raise ValueError(\"invalid\")\n\ndef submit_token(token):\n    _validate_ascii_digits(token)\n    return token + \"!\"\n\ndef inspect_token(token):\n    _validate_ascii_digits(token)\n    return len(token)\n```",
+          "stop": "eos",
+          "tokens": 89,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_ascii_digits"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-case-sensitive-prefix",
+          "category": null,
+          "pred": "```python\ndef enqueue_code(code):\n    if not code.startswith(\"job-\"):\n        raise ValueError(\"invalid\")\n    return code + \":queued\"\n\ndef inspect_code(code):\n    if not code.startswith(\"job-\"):\n        raise ValueError(\"invalid\")\n    return len(code)\n```",
+          "stop": "eos",
+          "tokens": 64,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-control-chars",
+          "category": null,
+          "pred": "```python\nimport re\n\n_CONTROL_RE = re.compile(r\"[\\x00-\\x1f\\x7f]\")\n\ndef export_label(label):\n    if _CONTROL_RE.search(label):\n        raise ValueError(\"invalid\")\n    return label + \";\"\n\ndef display_label(label):\n    if _CONTROL_RE.search(label):\n        raise ValueError(\"invalid\")\n    return label.upper()\n```",
+          "stop": "eos",
+          "tokens": 83,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-relative-path",
+          "category": null,
+          "pred": "```python\ndef fetch_asset(path):\n    if path.startswith(\"/\"):\n        raise ValueError(\"invalid\")\n    if \"..\" in path.split(\"/\"):\n        raise ValueError(\"invalid\")\n    return \"assets/\" + path\n\ndef preview_asset(path):\n    if path.startswith(\"/\"):\n        raise ValueError(\"invalid\")\n    if \"..\" in path.split(\"/\"):\n        raise ValueError(\"invalid\")\n    return path + \"?preview\"\n```",
+          "stop": "eos",
+          "tokens": 94,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-file-extension",
+          "category": null,
+          "pred": "```python\ndef import_file(filename):\n    if not (filename.endswith(\".json\") or filename.endswith(\".jsonl\")):\n        raise ValueError(\"invalid\")\n    return filename + \":import\"\n\ndef validate_file(filename):\n    if not (filename.endswith(\".json\") or filename.endswith(\".jsonl\")):\n        raise ValueError(\"invalid\")\n    return len(filename)\n```",
+          "stop": "eos",
+          "tokens": 80,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-hidden-component",
+          "category": null,
+          "pred": "```python\ndef _reject_hidden(path):\n    if any(part.startswith(\".\") for part in path.split(\"/\")):\n        raise ValueError(\"invalid\")\n\ndef scan_path(path):\n    _reject_hidden(path)\n    return path + \":scan\"\n\ndef archive_path(path):\n    _reject_hidden(path)\n    return \"archive/\" + path\n```",
+          "stop": "eos",
+          "tokens": 75,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_reject_hidden"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-empty-segment",
+          "category": null,
+          "pred": "```python\ndef _validate_path(path):\n    if path == \"\":\n        raise ValueError(\"invalid\")\n    if path.startswith(\"/\"):\n        raise ValueError(\"invalid\")\n    if path.endswith(\"/\"):\n        raise ValueError(\"invalid\")\n    if \"//\" in path:\n        raise ValueError(\"invalid\")\n\ndef publish_route(path):\n    _validate_path(path)\n    return \"/v1/\" + path\n\ndef preview_route(path):\n    _validate_path(path)\n    return path.upper()\n```",
+          "stop": "eos",
+          "tokens": 109,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_path"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-backslash",
+          "category": null,
+          "pred": "```python\ndef load_manifest(path):\n    if path.startswith(\"/\") or \"\\\\\" in path:\n        raise ValueError(\"invalid\")\n    return \"data/\" + path\n\ndef preview_manifest(path):\n    if path.startswith(\"/\") or \"\\\\\" in path:\n        raise ValueError(\"invalid\")\n    return len(path)\n```",
+          "stop": "eos",
+          "tokens": 66,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-unique-items",
+          "category": null,
+          "pred": "```python\ndef index_items(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    if len(set(items)) != len(items):\n        raise ValueError(\"invalid\")\n    return tuple(items)\n\ndef preview_items(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    if len(set(items)) != len(items):\n        raise ValueError(\"invalid\")\n    return len(items)\n```",
+          "stop": "eos",
+          "tokens": 90,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-all-positive",
+          "category": null,
+          "pred": "```python\ndef _validate_counts(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    if any(c <= 0 for c in items):\n        raise ValueError(\"invalid\")\n\ndef submit_counts(items):\n    _validate_counts(items)\n    return tuple(items)\n\ndef estimate_counts(items):\n    _validate_counts(items)\n    return sum(items)\n```",
+          "stop": "eos",
+          "tokens": 82,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_counts"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-sorted-input",
+          "category": null,
+          "pred": "```python\ndef merge_input(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    for i in range(len(items) - 1):\n        if items[i] > items[i + 1]:\n            raise ValueError(\"invalid\")\n    return tuple(items)\n\ndef preview_merge(items):\n    if not items:\n        raise ValueError(\"invalid\")\n    for i in range(len(items) - 1):\n        if items[i] > items[i + 1]:\n            raise ValueError(\"invalid\")\n    return len(items)\n```",
+          "stop": "eos",
+          "tokens": 120,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-maximum-items",
+          "category": null,
+          "pred": "```python\ndef _check_batch(items):\n    if len(items) > 4:\n        raise ValueError(\"invalid\")\n\ndef send_batch(items):\n    _check_batch(items)\n    return tuple(items)\n\ndef preview_send(items):\n    _check_batch(items)\n    return len(items)\n```",
+          "stop": "eos",
+          "tokens": 66,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_check_batch"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-pair-width",
+          "category": null,
+          "pred": "```python\ndef write_rows(rows):\n    if not rows:\n        raise ValueError(\"invalid\")\n    for row in rows:\n        if len(row) != 2:\n            raise ValueError(\"invalid\")\n    return tuple(tuple(row) for row in rows)\n\ndef preview_rows(rows):\n    if not rows:\n        raise ValueError(\"invalid\")\n    for row in rows:\n        if len(row) != 2:\n            raise ValueError(\"invalid\")\n    return len(rows)\n```",
+          "stop": "eos",
+          "tokens": 108,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-required-keys",
+          "category": null,
+          "pred": "```python\ndef ingest_record(record):\n    if \"id\" not in record or \"version\" not in record:\n        raise ValueError(\"invalid\")\n    return record[\"id\"]\n\ndef preview_record(record):\n    if \"id\" not in record or \"version\" not in record:\n        raise ValueError(\"invalid\")\n    return len(record)\n```",
+          "stop": "eos",
+          "tokens": 77,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-unknown-keys",
+          "category": null,
+          "pred": "```python\ndef execute_options(options):\n    allowed = {\"timeout\", \"retries\"}\n    if not set(options) <= allowed:\n        raise ValueError(\"invalid\")\n    if \"timeout\" not in options:\n        raise ValueError(\"invalid\")\n    return options[\"timeout\"]\n\ndef preview_options(options):\n    allowed = {\"timeout\", \"retries\"}\n    if not set(options) <= allowed:\n        raise ValueError(\"invalid\")\n    if \"timeout\" not in options:\n        raise ValueError(\"invalid\")\n    return len(options)\n```",
+          "stop": "eos",
+          "tokens": 119,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-duplicate-values",
+          "category": null,
+          "pred": "```python\ndef register_aliases(aliases):\n    if not aliases:\n        raise ValueError(\"invalid\")\n    seen = set()\n    for name, dest in aliases:\n        if dest in seen:\n            raise ValueError(\"invalid\")\n        seen.add(dest)\n    return tuple(aliases)\n\ndef preview_aliases(aliases):\n    if not aliases:\n        raise ValueError(\"invalid\")\n    seen = set()\n    for name, dest in aliases:\n        if dest in seen:\n            raise ValueError(\"invalid\")\n        seen.add(dest)\n    return len(aliases)\n```",
+          "stop": "eos",
+          "tokens": 128,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 24, in <module>\n  File \"<stdin>\", line 5, in register_aliases\nValueError: not enough values to unpack (expected 2, got 1)\n"
+          }
+        },
+        {
+          "id": "natural-exclusive-options",
+          "category": null,
+          "pred": "```python\ndef fetch_page(options):\n    if not options:\n        raise ValueError(\"invalid\")\n    cursor = options.get(\"cursor\")\n    offset = options.get(\"offset\")\n    has_cursor = cursor is not None\n    has_offset = offset is not None\n    if has_cursor == has_offset:\n        raise ValueError(\"exactly one of cursor or offset required\")\n    return dict(options)\n\ndef preview_page(options):\n    if not options:\n        raise ValueError(\"invalid\")\n    cursor = options.get(\"cursor\")\n    offset = options.get(\"offset\")\n    has_cursor = cursor is not None\n    has_offset = offset is not None\n    if has_cursor == has_offset:\n        raise ValueError(\"exactly one of cursor or offset required\")\n    return len(options)\n```",
+          "stop": "eos",
+          "tokens": 172,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-nested-config",
+          "category": null,
+          "pred": "```python\ndef plan_config(config):\n    if \"limits\" not in config:\n        raise ValueError(\"invalid\")\n    limits = config[\"limits\"]\n    if not isinstance(limits, dict) or \"workers\" not in limits:\n        raise ValueError(\"invalid\")\n    workers = limits[\"workers\"]\n    if not isinstance(workers, int) or isinstance(workers, bool) or workers < 0:\n        raise ValueError(\"invalid\")\n    return dict(config)\n\ndef preview_config(config):\n    if \"limits\" not in config:\n        raise ValueError(\"invalid\")\n    limits = config[\"limits\"]\n    if not isinstance(limits, dict) or \"workers\" not in limits:\n        raise ValueError(\"invalid\")\n    workers = limits[\"workers\"]\n    if not isinstance(workers, int) or isinstance(workers, bool) or workers < 0:\n        raise ValueError(\"invalid\")\n    return len(config)\n```",
+          "stop": "eos",
+          "tokens": 204,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-interval",
+          "category": null,
+          "pred": "```python\ndef book_interval(start, end):\n    if start >= end:\n        raise ValueError(\"invalid\")\n    return end - start\n\ndef preview_interval(start, end):\n    if start >= end:\n        raise ValueError(\"invalid\")\n    return (start, end)\n```",
+          "stop": "eos",
+          "tokens": 62,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-page-size",
+          "category": null,
+          "pred": "```python\ndef list_page(page, size):\n    if page < 1:\n        raise ValueError(\"invalid\")\n    if not (1 <= size <= 100):\n        raise ValueError(\"invalid\")\n    return (page - 1) * size\n\ndef count_page(page, size):\n    if page < 1:\n        raise ValueError(\"invalid\")\n    if not (1 <= size <= 100):\n        raise ValueError(\"invalid\")\n    return size\n```",
+          "stop": "eos",
+          "tokens": 107,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-offset-alignment",
+          "category": null,
+          "pred": "```python\ndef read_block(offset, block):\n    if offset < 0 or block <= 0:\n        raise ValueError(\"invalid\")\n    if offset % block != 0:\n        raise ValueError(\"offset not aligned to block size\")\n    return offset // block\n\ndef preview_block(offset, block):\n    if offset < 0 or block <= 0:\n        raise ValueError(\"invalid\")\n    if offset % block != 0:\n        raise ValueError(\"offset not aligned to block size\")\n    return (offset, block)\n```",
+          "stop": "eos",
+          "tokens": 118,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-dimensions",
+          "category": null,
+          "pred": "```python\ndef _validate_tile(width, height):\n    if width <= 0 or height <= 0:\n        raise ValueError(\"invalid\")\n    if width * height > 64:\n        raise ValueError(\"invalid\")\n\ndef render_tile(width, height):\n    _validate_tile(width, height)\n    return width * height\n\ndef preview_tile(width, height):\n    _validate_tile(width, height)\n    return (width, height)\n```",
+          "stop": "eos",
+          "tokens": 99,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_tile"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-bounded-window",
+          "category": null,
+          "pred": "```python\ndef slice_window(offset, length, total):\n    if offset < 0 or length < 0:\n        raise ValueError(\"invalid\")\n    if offset + length > total:\n        raise ValueError(\"invalid\")\n    return (offset, offset + length)\n\ndef preview_window(offset, length, total):\n    if offset < 0 or length < 0:\n        raise ValueError(\"invalid\")\n    if offset + length > total:\n        raise ValueError(\"invalid\")\n    return length\n```",
+          "stop": "eos",
+          "tokens": 110,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-date-validity",
+          "category": null,
+          "pred": "```python\nimport calendar\n\ndef store_date(year, month, day):\n    if not 1 <= month <= 12 or not 1 <= day <= calendar.monthrange(year, month)[1]:\n        raise ValueError(\"invalid\")\n    return (year, month, day)\n\ndef display_date(year, month, day):\n    if not 1 <= month <= 12 or not 1 <= day <= calendar.monthrange(year, month)[1]:\n        raise ValueError(\"invalid\")\n    return f\"{year:04}-{month:02}-{day:02}\"\n```",
+          "stop": "eos",
+          "tokens": 127,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-ipv4",
+          "category": null,
+          "pred": "```python\ndef connect_ipv4(address):\n    parts = address.split(\".\")\n    if len(parts) != 4:\n        raise ValueError(\"invalid\")\n    for part in parts:\n        if not part.isdigit():\n            raise ValueError(\"invalid\")\n        if len(part) > 1 and part[0] == \"0\":\n            raise ValueError(\"invalid\")\n        if int(part) > 255:\n            raise ValueError(\"invalid\")\n    return address\n\ndef preview_ipv4(address):\n    parts = address.split(\".\")\n    if len(parts) != 4:\n        raise ValueError(\"invalid\")\n    for part in parts:\n        if not part.isdigit():\n            raise ValueError(\"invalid\")\n        if len(part) > 1 and part[0] == \"0\":\n            raise ValueError(\"invalid\")\n        if int(part) > 255:\n            raise ValueError(\"invalid\")\n    return \"host=\" + address\n```",
+          "stop": "eos",
+          "tokens": 208,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-json-object",
+          "category": null,
+          "pred": "```python\nimport json\n\n\ndef load_settings(text):\n    if not text:\n        raise ValueError(\"invalid\")\n    try:\n        value = json.loads(text)\n    except json.JSONDecodeError:\n        raise ValueError(\"invalid\")\n    if not isinstance(value, dict):\n        raise ValueError(\"invalid\")\n    return value\n\n\ndef preview_settings(text):\n    if not text:\n        raise ValueError(\"invalid\")\n    try:\n        value = json.loads(text)\n    except json.JSONDecodeError:\n        raise ValueError(\"invalid\")\n    if not isinstance(value, dict):\n        raise ValueError(\"invalid\")\n    return len(value)\n```",
+          "stop": "eos",
+          "tokens": 141,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": false,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 30, in <module>\nAssertionError: ('load_settings', ('{}',))\n"
+          }
+        },
+        {
+          "id": "natural-hex-bytes",
+          "category": null,
+          "pred": "```python\nimport re\n\n_HEX_RE = re.compile(r\"^[0-9a-fA-F]*$\")\n\ndef load_digest(text):\n    if not _HEX_RE.match(text):\n        raise ValueError(\"invalid\")\n    if len(text) % 2 != 0:\n        raise ValueError(\"invalid\")\n    return text.lower()\n\ndef preview_digest(text):\n    if not _HEX_RE.match(text):\n        raise ValueError(\"invalid\")\n    if len(text) % 2 != 0:\n        raise ValueError(\"invalid\")\n    return len(text) // 2\n```",
+          "stop": "eos",
+          "tokens": 129,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-utf8-length",
+          "category": null,
+          "pred": "```python\ndef store_message(text):\n    if len(text.encode(\"utf-8\")) > 8:\n        raise ValueError(\"invalid\")\n    return text\n\ndef preview_message(text):\n    if len(text.encode(\"utf-8\")) > 8:\n        raise ValueError(\"invalid\")\n    return text.upper()\n```",
+          "stop": "eos",
+          "tokens": 70,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-reserved-names",
+          "category": null,
+          "pred": "```python\ndef open_account(name):\n    if name.lower() in (\"admin\", \"root\"):\n        raise ValueError(\"invalid\")\n    return name + \":open\"\n\ndef preview_account(name):\n    if name.lower() in (\"admin\", \"root\"):\n        raise ValueError(\"invalid\")\n    return len(name)\n```",
+          "stop": "eos",
+          "tokens": 70,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-newline-header",
+          "category": null,
+          "pred": "```python\ndef write_header(value):\n    if \"\\n\" in value or \"\\r\" in value:\n        raise ValueError(\"invalid\")\n    return \"X-Value: \" + value\n\ndef preview_header(value):\n    if \"\\n\" in value or \"\\r\" in value:\n        raise ValueError(\"invalid\")\n    return len(value)\n```",
+          "stop": "eos",
+          "tokens": 77,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-delimiter",
+          "category": null,
+          "pred": "```python\ndef _validate_field_name(name):\n    for ch in (\":\", \",\", \";\"):\n        if ch in name:\n            raise ValueError(\"invalid\")\n\ndef write_field(name):\n    _validate_field_name(name)\n    return name + \"=1\"\n\ndef preview_field(name):\n    _validate_field_name(name)\n    return name.upper()\n```",
+          "stop": "eos",
+          "tokens": 79,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [
+              "_validate_field_name"
+            ],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-version-parts",
+          "category": null,
+          "pred": "```python\nimport re\n\ndef publish_version(version):\n    if not re.fullmatch(r\"[0-9]+\\.[0-9]+\\.[0-9]+\", version):\n        raise ValueError(\"invalid\")\n    return \"v\" + version\n\ndef preview_version(version):\n    if not re.fullmatch(r\"[0-9]+\\.[0-9]+\\.[0-9]+\", version):\n        raise ValueError(\"invalid\")\n    return version.split(\".\")\n```",
+          "stop": "eos",
+          "tokens": 99,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        },
+        {
+          "id": "natural-token-alphabet",
+          "category": null,
+          "pred": "```python\nimport re\n\n_TOKEN_RE = re.compile(r\"^[A-Za-z0-9_-]+$\")\n\n\ndef encode_token(token):\n    if not token or not _TOKEN_RE.match(token):\n        raise ValueError(\"invalid\")\n    return token + \"=\"\n\n\ndef preview_token(token):\n    if not token or not _TOKEN_RE.match(token):\n        raise ValueError(\"invalid\")\n    return len(token)\n```",
+          "stop": "eos",
+          "tokens": 89,
+          "code_check": {
+            "code_extracted": true,
+            "signatures_preserved": true,
+            "functional_pass": true,
+            "common_private_helpers": [],
+            "manual_behavior_required": true,
+            "error": null
+          }
+        }
+      ]
+    }
+  }
+}

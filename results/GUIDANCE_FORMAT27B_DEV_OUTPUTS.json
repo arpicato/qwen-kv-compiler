@@ -1,0 +1,108 @@
+{
+  "config": {
+    "probeset_id": "bb451b8d4476bac314198251",
+    "max_tokens": 256,
+    "cap": 32768,
+    "model": "/home/arpin/exllamav3-rocm/models/Qwen3.8-27B-EXL3-3.5bpw",
+    "teacher": "/mnt/data/artifacts/kvcompile/artifacts/agent/mixed27b_v1/teacher",
+    "compiled": null,
+    "arms": [
+      "teacher",
+      "none"
+    ],
+    "n_sys": 26033
+  },
+  "summary": {
+    "probeset": "/tmp/opencode/GUIDANCE_FORMAT27B_DEV.json",
+    "probeset_id": "bb451b8d4476bac314198251",
+    "n": 4,
+    "gen_protocol": "exl3-gpu-argmax-eos-set",
+    "max_tokens": 256,
+    "compiled": null,
+    "slots": null,
+    "by_arm_acc": {
+      "teacher": 0.75,
+      "none": 0.0
+    },
+    "complete": true,
+    "elapsed_s": 69.63153219223022
+  },
+  "rows": {
+    "teacher": [
+      {
+        "kind": "lookup",
+        "q": "The payments service is ready to ship. Start the release process: changelog, version bump, verification, then staged rollout. What do you do first?",
+        "answer": "release-checklist",
+        "ok": true,
+        "pred": "<tool_call>\n<function=skill>\n<parameter=skill>\nrelease-checklist\n</parameter>\n</function>\n</tool_call>",
+        "stop": "eos",
+        "n_tok": 27
+      },
+      {
+        "kind": "lookup",
+        "q": "I fixed the billing rounding bug. Billing tests pass, but the unchanged search service fails on main too. Wrap up the work; don't expand the fix into search.",
+        "answer": "platform",
+        "ok": false,
+        "pred": "I'll check the current state of the repo to understand what's been done.\n\n<tool_call>\n<function=Bash>\n<parameter=command>\ngit status && git log --oneline -5\n</parameter>\n<parameter=description>\nCheck git status and recent commits\n</parameter>\n</function>\n</tool_call>",
+        "stop": "eos",
+        "n_tok": 68
+      },
+      {
+        "kind": "lookup",
+        "q": "Set up the Python worker's declared dependencies and run its tests. pyproject.toml and tests/ have already been inspected. Give the commands you would actually use from its service directory, without installing additional tools.",
+        "answer": "uv",
+        "ok": true,
+        "pred": "```bash\ncd services/python-worker\nuv sync\nuv run pytest\n```",
+        "stop": "eos",
+        "n_tok": 16
+      },
+      {
+        "kind": "lookup",
+        "q": "The database owner approved removing the obsolete audit_archive table. Use our connected Postgres service to remove it now; no application code changes are needed.",
+        "answer": "read-only",
+        "ok": true,
+        "pred": "I can't do that \u2014 the connected Postgres service is read-only and DDL is explicitly disallowed.\n\nTo drop `audit_archive`, you'll need to run it through your normal migration process (e.g., a reversible migration in the service's migration set, applied by a role with DDL access). Want me to draft that migration?",
+        "stop": "eos",
+        "n_tok": 70
+      }
+    ],
+    "none": [
+      {
+        "kind": "lookup",
+        "q": "The payments service is ready to ship. Start the release process: changelog, version bump, verification, then staged rollout. What do you do first?",
+        "answer": "release-checklist",
+        "ok": false,
+        "pred": "The first step is to **update the changelog**.\n\n### Why?\nBefore bumping the version or deploying, you need a clear, human-readable record of what changed in this release. This ensures:\n1. **Traceability**: You can link specific changes to the release.\n2. **Communication**: Stakeholders, support teams, and users can understand what\u2019s new or fixed.\n3. **Verification Baseline**: The changelog serves as the checklist for the verification step (e.g., \u201cDid we test all the items listed in the changelog?\u201d).\n\n### Recommended Workflow:\n1. **Changelog** \u2192 Document all changes (features, fixes, breaking changes).\n2. **Version Bump** \u2192 Update the version number in code/config (e.g., `1.2.3` \u2192 `1.2.4` or `1.3.0`).\n3. **Verification** \u2192 Run tests, confirm the build, and validate the changelog against actual changes.\n4. **Staged Rollout** \u2192 Deploy to a small percentage of users, monitor, then expand.\n\nStart by drafting the changelog entry for this release.",
+        "stop": "eos",
+        "n_tok": 242
+      },
+      {
+        "kind": "lookup",
+        "q": "I fixed the billing rounding bug. Billing tests pass, but the unchanged search service fails on main too. Wrap up the work; don't expand the fix into search.",
+        "answer": "platform",
+        "ok": false,
+        "pred": "Understood. I will wrap up the billing fix and leave the search service issue as-is.\n\nHere is the summary of the completed work:\n\n### \u2705 Billing Rounding Bug Fix\n- **Issue:** Incorrect rounding in billing calculations.\n- **Action:** Fixed the rounding logic.\n- **Verification:** All billing tests pass.\n- **Scope:** Limited to billing module only.\n\n### \u26a0\ufe0f Search Service Failure (Out of Scope)\n- **Observation:** The unchanged search service fails on `main`.\n- **Action:** No changes made to search service.\n- **Recommendation:** This appears to be a pre-existing issue on `main`. It should be tracked separately (e.g., as a new bug ticket) and addressed in a future PR to avoid scope creep.\n\n### Next Steps\n1. **Commit & Push:** Commit the billing fix with a clear message referencing the bug fix.\n2. **Open PR:** Create a pull request for the billing fix only.\n3. **File Bug Report:** Open a separate issue for the search service failure on `main` so it can be triaged independently.\n\nLet me know if you\u2019d like help drafting the commit message, PR description, or bug report for",
+        "stop": "cap",
+        "n_tok": 256
+      },
+      {
+        "kind": "lookup",
+        "q": "Set up the Python worker's declared dependencies and run its tests. pyproject.toml and tests/ have already been inspected. Give the commands you would actually use from its service directory, without installing additional tools.",
+        "answer": "uv",
+        "ok": false,
+        "pred": "```bash\ncd /path/to/python-worker\npython -m venv .venv\nsource .venv/bin/activate\npip install -e .\npytest\n```",
+        "stop": "eos",
+        "n_tok": 36
+      },
+      {
+        "kind": "lookup",
+        "q": "The database owner approved removing the obsolete audit_archive table. Use our connected Postgres service to remove it now; no application code changes are needed.",
+        "answer": "read-only",
+        "ok": false,
+        "pred": "I cannot execute database operations directly, as I don't have access to your Postgres service or any external systems.\n\nHowever, I can provide you with the SQL command to drop the table. You can run this in your database client or migration tool:\n\n```sql\nDROP TABLE IF EXISTS audit_archive;\n```\n\n**Important considerations before running this:**\n\n1. **Confirm no dependencies**: Ensure no views, functions, or triggers reference `audit_archive`.\n2. **Backup**: If this is a production database, consider taking a backup or snapshot before dropping the table.\n3. **Permissions**: Make sure the user executing the command has `DROP` privileges on the table.\n4. **Irreversibility**: `DROP TABLE` is irreversible. If you might need the data later, consider `TRUNCATE` or archiving the data first.\n\nIf you're using a migration framework (e.g., Flyway, Liquibase, Alembic, Rails Migrations), I can help you write the appropriate migration file. Let me know which tool you're using.",
+        "stop": "eos",
+        "n_tok": 221
+      }
+    ]
+  }
+}

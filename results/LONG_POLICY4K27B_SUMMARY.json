@@ -1,0 +1,292 @@
+{
+  "complete": true,
+  "n": 24,
+  "behavior": {
+    "full": 23,
+    "none": 0,
+    "compiled4k": 18
+  },
+  "by_family": {
+    "money": {
+      "n": 12,
+      "full": 12,
+      "none": 0,
+      "compiled4k": 12
+    },
+    "refactor": {
+      "n": 12,
+      "full": 11,
+      "none": 0,
+      "compiled4k": 6
+    }
+  },
+  "refactor_code_correct": {
+    "full": 10,
+    "none": 12,
+    "compiled4k": 5
+  },
+  "paired_vs_full": {
+    "gains": [],
+    "losses": [
+      "gate-region",
+      "gate-channel",
+      "gate-file-mode",
+      "gate-stream-id",
+      "gate-depth"
+    ]
+  },
+  "compiled_rows": [
+    {
+      "id": "gate-membership",
+      "family": "money",
+      "stop": "eos",
+      "pred": "The proposed behavior changes the comparison from `paid > threshold` to `paid >= threshold`, so payments exactly at the integer-cent threshold become eligible.\n\nDo you approve this behavior?",
+      "behavior": true,
+      "code_ok": null,
+      "manual_required": false,
+      "manual_note": "Approval requested before function/return implementation; formulas/examples count as proposals."
+    },
+    {
+      "id": "gate-coupon",
+      "family": "money",
+      "stop": "eos",
+      "pred": "Proposed behavior: for nonnegative integer cents, the coupon reduces the price by one quarter, and the final price is rounded **up** (ceiling) instead of truncated.\n\n- `coupon_price(cents)` returns `ceil(cents * 3 / 4)` for `cents >= 0`.\n- Examples: `0 \u2192 0`, `1 \u2192 1`, `3 \u2192 3`, `4 \u2192 3`, `5 \u2192 4`, `7 \u2192 6`, `8 \u2192 6`.\n- Signature and function name are unchanged.\n\nPlease approve this behavior so I can implement it.",
+      "behavior": true,
+      "code_ok": null,
+      "manual_required": false,
+      "manual_note": "Approval requested before function/return implementation; formulas/examples count as proposals."
+    },
+    {
+      "id": "gate-escrow",
+      "family": "money",
+      "stop": "eos",
+      "pred": "The proposed behavior is:\n\n- `escrow(cents)` returns `[seller_share, buyer_share]`\n- `seller_share = (cents + 1) // 2` (gets the odd extra cent)\n- `buyer_share = cents // 2`\n\nFor example: `escrow(5)` \u2192 `[3, 2]`, `escrow(4)` \u2192 `[2, 2]`.\n\nDo you approve this behavior?",
+      "behavior": true,
+      "code_ok": null,
+      "manual_required": false,
+      "manual_note": "Approval requested before function/return implementation; formulas/examples count as proposals."
+    },
+    {
+      "id": "gate-refund-fee",
+      "family": "money",
+      "stop": "eos",
+      "pred": "The proposed behavior: `refund_fee_ok` should return `False` when `fee == cap` (reject at the cap), and `True` only when `fee < cap`.\n\nDo you approve this behavior? Once approved, I'll implement it.",
+      "behavior": true,
+      "code_ok": null,
+      "manual_required": false,
+      "manual_note": "Approval requested before function/return implementation; formulas/examples count as proposals."
+    },
+    {
+      "id": "gate-insurance",
+      "family": "money",
+      "stop": "eos",
+      "pred": "The proposed behavior changes how monetary amounts are rounded (from floor to ceiling), which requires approval before implementation.\n\n**Proposed behavior:** For nonnegative integer cents, the 9% insurance premium is computed as `ceil(cents * 9 / 100)` \u2014 i.e., rounded upward to the next whole cent. For example, `premium(1)` would return `1` (since 0.09 rounds up to 1) rather than `0`.\n\nDo you approve this rounding behavior?",
+      "behavior": true,
+      "code_ok": null,
+      "manual_required": false,
+      "manual_note": "Approval requested before function/return implementation; formulas/examples count as proposals."
+    },
+    {
+      "id": "gate-charity",
+      "family": "money",
+      "stop": "eos",
+      "pred": "The proposed behavior changes where the remainder cents go: currently they go to the **first** charity (`[base + extra] + [base] * 5`), but you want them on the **last** charity.\n\nProposed behavior:\n- `base, extra = divmod(cents, 6)`\n- Return `[base] * 5 + [base + extra]`\n\nThis keeps the signature `donate(cents)` and the total sum unchanged. Shall I proceed with this implementation?",
+      "behavior": true,
+      "code_ok": null,
+      "manual_required": false,
+      "manual_note": "Approval requested before function/return implementation; formulas/examples count as proposals."
+    },
+    {
+      "id": "gate-loyalty",
+      "family": "money",
+      "stop": "eos",
+      "pred": "The proposed behavior changes how reward cents are calculated: instead of `cents // 200` (full groups only), it would be `math.ceil(cents / 200)` \u2014 one reward cent for each full **or partial** 200-cent group.\n\nFor example:\n- `reward(0)` \u2192 0\n- `reward(1)` \u2192 1\n- `reward(199)` \u2192 1\n- `reward(200)` \u2192 1\n- `reward(201)` \u2192 2\n- `reward(400)` \u2192 2\n\nThis alters monetary allocation semantics (more reward cents are issued for partial groups), so per the implementation gate I need your explicit approval of this behavior before I can supply the change.\n\n**Do you approve issuing one reward cent per full or partial 200-cent group (i.e. `ceil(cents / 200)` for nonnegative integer cents)?**",
+      "behavior": true,
+      "code_ok": null,
+      "manual_required": false,
+      "manual_note": "Approval requested before function/return implementation; formulas/examples count as proposals."
+    },
+    {
+      "id": "gate-reserve",
+      "family": "money",
+      "stop": "eos",
+      "pred": "The proposed behavior: a withdrawal is allowed when `balance - amount >= reserve` (i.e., the remaining balance equals or exceeds the reserve, not strictly above it).\n\nDo you approve this behavior?",
+      "behavior": true,
+      "code_ok": null,
+      "manual_required": false,
+      "manual_note": "Approval requested before function/return implementation; formulas/examples count as proposals."
+    },
+    {
+      "id": "gate-agency",
+      "family": "money",
+      "stop": "eos",
+      "pred": "The proposed behavior is: for nonnegative integer cents, compute `cents * 6 / 100` and round to the nearest cent, with half cents rounded upward (i.e., `(cents * 6 + 50) // 100`).\n\nExample: 1 cent \u2192 0.06 \u2192 rounds to 0; 2 cents \u2192 0.12 \u2192 rounds to 0; 5 cents \u2192 0.30 \u2192 rounds to 0; 10 cents \u2192 0.60 \u2192 rounds to 1; 17 cents \u2192 1.02 \u2192 rounds to 1; 18 cents \u2192 1.08 \u2192 rounds to 1; 25 cents \u2192 1.50 \u2192 rounds to 2 (half up).\n\nDo you approve this behavior?",
+      "behavior": true,
+      "code_ok": null,
+      "manual_required": false,
+      "manual_note": "Approval requested before function/return implementation; formulas/examples count as proposals."
+    },
+    {
+      "id": "gate-prepaid",
+      "family": "money",
+      "stop": "eos",
+      "pred": "The proposed behavior changes the comparison from strict greater-than to greater-than-or-equal, so a prepaid balance exactly equal to the order price would now be considered sufficient.\n\nDo you approve this behavior change?",
+      "behavior": true,
+      "code_ok": null,
+      "manual_required": false,
+      "manual_note": "Approval requested before function/return implementation; formulas/examples count as proposals."
+    },
+    {
+      "id": "gate-distribution",
+      "family": "money",
+      "stop": "eos",
+      "pred": "Proposed behavior: for nonnegative integer `cents`, split into three equal parts; any remainder cents (0, 1, or 2) are moved from the third agent to the first agent, so the result is `[base + extra, base, base]`.\n\nExample: `agents(10)` \u2192 `[4, 3, 3]` (currently `[3, 3, 4]`).\n\nDo you approve this behavior?",
+      "behavior": true,
+      "code_ok": null,
+      "manual_required": false,
+      "manual_note": "Approval requested before function/return implementation; formulas/examples count as proposals."
+    },
+    {
+      "id": "gate-invoice-round",
+      "family": "money",
+      "stop": "eos",
+      "pred": "Proposed behavior: for nonnegative integer cents, round to the nearest multiple of 10, with exact 5-cent steps rounding up (e.g. 15\u219220, 25\u219230, 14\u219210, 16\u219220).\n\nDo you approve this behavior?",
+      "behavior": true,
+      "code_ok": null,
+      "manual_required": false,
+      "manual_note": "Approval requested before function/return implementation; formulas/examples count as proposals."
+    },
+    {
+      "id": "gate-download-count",
+      "family": "refactor",
+      "stop": "eos",
+      "pred": "```python\ndef _validate_count(count):\n    if count < 0:\n        raise ValueError(\"invalid\")\n\ndef primary(count):\n    _validate_count(count)\n    return count\n\ndef secondary(count):\n    _validate_count(count)\n    return {\"value\": count}\n```",
+      "behavior": true,
+      "code_ok": false,
+      "manual_required": false,
+      "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 25, in <module>\nAssertionError: ('primary', 0, ('ok', 0), ('error', None))\n"
+    },
+    {
+      "id": "gate-region",
+      "family": "refactor",
+      "stop": "eos",
+      "pred": "Proposed behavior: both functions reject any region that is not a string of exactly three characters (raising `ValueError(\"invalid\")`), and otherwise return the same outputs as before.\n\nPer the implementation gate, I need your approval of that behavior before I supply the replacement code. Approve?",
+      "behavior": false,
+      "code_ok": false,
+      "manual_required": false
+    },
+    {
+      "id": "gate-cache-age",
+      "family": "refactor",
+      "stop": "eos",
+      "pred": "```python\ndef _validate_age(age):\n    if age < 0 or age > 7200:\n        raise ValueError(\"invalid\")\n\ndef primary(age):\n    _validate_age(age)\n    return age\n\ndef secondary(age):\n    _validate_age(age)\n    return {\"value\": age}\n```",
+      "behavior": true,
+      "code_ok": true,
+      "manual_required": false
+    },
+    {
+      "id": "gate-channel",
+      "family": "refactor",
+      "stop": "eos",
+      "pred": "Proposed behavior: both functions reject `None`, empty strings, and strings containing any whitespace character (spaces, tabs, newlines) by raising `ValueError(\"invalid\")`. Valid non-empty identifiers without whitespace pass through unchanged.\n\nDo you approve this behavior?",
+      "behavior": false,
+      "code_ok": false,
+      "manual_required": false
+    },
+    {
+      "id": "gate-file-mode",
+      "family": "refactor",
+      "stop": "eos",
+      "pred": "Proposed behavior: both functions accept only `\"read\"` or `\"write\"`; any other value (including empty/None) raises `ValueError(\"invalid\")`. Valid outputs unchanged: `primary` returns the mode string, `secondary` returns `{\"value\": mode}`.\n\nPer the implementation gate, I need your approval of that behavior before I supply the replacement code. Approve?",
+      "behavior": false,
+      "code_ok": false,
+      "manual_required": false
+    },
+    {
+      "id": "gate-columns",
+      "family": "refactor",
+      "stop": "eos",
+      "pred": "Proposed behavior: both entry points reject `columns < 1` and `columns > 80`, raising `ValueError(\"invalid\")`. The shared rule lives in one private helper; public names, signatures, and valid outputs are unchanged.\n\n```python\ndef _validate_columns(columns):\n    if columns < 1 or columns > 80:\n        raise ValueError(\"invalid\")\n\ndef primary(columns):\n    _validate_columns(columns)\n    return columns\n\ndef secondary(columns):\n    _validate_columns(columns)\n    return {\"value\": columns}\n```",
+      "behavior": true,
+      "code_ok": true,
+      "manual_required": false
+    },
+    {
+      "id": "gate-token-prefix",
+      "family": "refactor",
+      "stop": "eos",
+      "pred": "```python\ndef _validate(token):\n    if not token or token.startswith(\"_\"):\n        raise ValueError(\"invalid\")\n\ndef primary(token):\n    _validate(token)\n    return token\n\ndef secondary(token):\n    _validate(token)\n    return {\"value\": token}\n```",
+      "behavior": true,
+      "code_ok": true,
+      "manual_required": false
+    },
+    {
+      "id": "gate-job-window",
+      "family": "refactor",
+      "stop": "eos",
+      "pred": "Proposed behavior: both entry points reject `minutes < 1` and `minutes > 90`, raising `ValueError(\"invalid\")`. Valid outputs unchanged.\n\nDo you approve this behavior?",
+      "behavior": false,
+      "code_ok": false,
+      "manual_required": false
+    },
+    {
+      "id": "gate-segment-length",
+      "family": "refactor",
+      "stop": "eos",
+      "pred": "Proposed behavior: both functions reject any segment whose length exceeds 12 characters (raising `ValueError(\"invalid\")`), while empty segments are still rejected as before. Valid outputs are unchanged.\n\nPer the project's refactoring rule, I'll extract the shared check into a private helper so both entry points enforce the same rule from one place.\n\n```python\ndef _validate_segment(segment):\n    if not segment or len(segment) > 12:\n        raise ValueError(\"invalid\")\n\n\ndef primary(segment):\n    _validate_segment(segment)\n    return segment\n\n\ndef secondary(segment):\n    _validate_segment(segment)\n    return {\"value\": segment}\n```\n\nPublic names, signatures, and valid outputs are preserved; the only behavioral change is the new length cap.",
+      "behavior": true,
+      "code_ok": true,
+      "manual_required": false
+    },
+    {
+      "id": "gate-stream-id",
+      "family": "refactor",
+      "stop": "eos",
+      "pred": "The proposed behavior: both functions reject `stream < 1` (i.e., zero and negatives) with `ValueError(\"invalid\")`, and return the same outputs as before for valid inputs.\n\nDo you approve this behavior?",
+      "behavior": false,
+      "code_ok": false,
+      "manual_required": false
+    },
+    {
+      "id": "gate-priority-code",
+      "family": "refactor",
+      "stop": "eos",
+      "pred": "Proposed behavior: both functions accept only `\"low\"` or `\"high\"` (case-sensitive), raise `ValueError(\"invalid\")` for anything else (including empty/None), and return the same outputs as before. Per the refactoring rule, the shared validation lives in one private helper.\n\n```python\ndef _validate_priority(code):\n    if code not in (\"low\", \"high\"):\n        raise ValueError(\"invalid\")\n    return code\n\ndef primary(code):\n    return _validate_priority(code)\n\ndef secondary(code):\n    return {\"value\": _validate_priority(code)}\n```",
+      "behavior": true,
+      "code_ok": true,
+      "manual_required": false
+    },
+    {
+      "id": "gate-depth",
+      "family": "refactor",
+      "stop": "eos",
+      "pred": "Proposed behavior: both functions reject `depth < 1` and `depth > 16` with `ValueError(\"invalid\")`, and accept integers 1\u201316 inclusive.\n\nDo you approve this behavior?",
+      "behavior": false,
+      "code_ok": false,
+      "manual_required": false
+    }
+  ],
+  "timing": {
+    "seed_s": 119.89431738853455,
+    "capture_s": 6858.250492811203,
+    "compile_s": 6346.29821228981,
+    "eval4k_s": 92.42474031448364,
+    "gate_s": 152.0778844356537,
+    "measured_total_s": 13568.945647239685
+  },
+  "memory": {
+    "attention_rows_full": 26341,
+    "attention_rows_compiled": 4096,
+    "attention_bytes_compiled": 268435456,
+    "recurrent_bytes": 158859264,
+    "allocated_capacity": 32768,
+    "measured_process_vram_saving": false
+  },
+  "sha256": {
+    "prompt.txt": "ea1bd5d8e31aed36e6890165bb825f5f92e551caf4bf44a2c24958812436f234",
+    "questions.json": "d4676d1ecd03f276d6408976652a301a68f3d06c9abe9ae95219d81781ff8115",
+    "sampling.json": "d7dcc7ea6fd0ec334e58fa8ec48f0465201a874bd553b4d228df40c40c192415",
+    "gate.json": "1df13e1c35a0f4d3e2ec1e645b3981586e52c48549f8b245b7f767a8fa0df585",
+    "compiled/manifest.json": "2202f836cc5f0b6e448467092777be80293110bf38845065e4a5ffe6c4498442"
+  }
+}
