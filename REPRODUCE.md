@@ -1,5 +1,12 @@
 # Reproduction on the original target
 
+For the method and testing design, start with [README.md](README.md). This guide
+is for **new model runs**, not rechecking saved tables. The two studies are
+separate: first build 27B compiler caches using the 19-phase recipe below, or follow
+the 4B section for a fresh three-method comparison. The 27B AM section uses captures
+from the 27B recipe. Model weights and GPU dependencies are external prerequisites;
+none of the fitting commands are needed for `evaluate.py verify`.
+
 For the current evaluation-only interface use [EVALUATION.md](EVALUATION.md) and
 `scripts/evaluate.py`. This document retains the original 19-phase reproduction
 recipe, including its historical evaluation suites and negative continuation.
@@ -34,8 +41,11 @@ Use Python3.14.4 with the matching ROCm7.2Torch build; follow the pinned runtime
 ROCm installation instructions for its extension/toolchain. Install that checkout
 in the environment. `uv.lock` covers only the small NumPy/safetensors dependencies,
 NOT ROCm/Torch/native extensions. The runner rejects version/commit/hash mismatch;
-it does not silently install a CPU/CUDA wheel. The present verification uses the
-existing, unchanged shared environment; it is not a fresh runtime installation.
+it does not silently install a CPU/CUDA wheel. The original 19-phase reproduction
+used the existing, unchanged shared environment.
+A later isolated installation and short inference/resume checks also passed;
+That does not mean all 19 phases were repeated during installation validation.
+See [RELEASE_VALIDATION.md](results/RELEASE_VALIDATION.md) for the distinction.
 
 Code checks require Docker and a small reproducible Python3.12.3image:
 

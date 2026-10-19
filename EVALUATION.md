@@ -1,5 +1,13 @@
 # Final evaluation interface
 
+This guide assumes caches have already been fitted. For an explanation of the
+compiler, Attention Matching (AM), CARTRIDGES, and the testing design, start with
+[README.md](README.md). To build caches from scratch, use [REPRODUCE.md](REPRODUCE.md).
+An **arm** below means one experimental variant, such as full prefix or compiler8k.
+**Freeze** records the exact inputs and artifact hashes before generation; it does
+not train anything. **Preflight** tests reference solutions and deliberately buggy
+controls to check the evaluation harness, not the language model.
+
 Use `scripts/evaluate.py` for both studies. Default cases:
 `inputs/publication_final/cases.json` (60 knowledge, 60 tools, 120 behavior).
 The frozen rubric is its README. References/checks are evaluator-only; model input
@@ -79,6 +87,8 @@ python3 scripts/evaluate.py report --raw /path/to/raw.json --review /path/to/rev
 
 Report refuses mismatched response hashes, labels, intersections or pairs. It
 does not independently infer semantics. [Review packet](results/INDEPENDENT_REVIEW.md)
-describes the still-open independent review. No pooled overall score, pristine
+is available for optional future independent review. Current publication uses
+the explicit exploratory disclaimer; no independent review has been performed.
+No pooled overall score, pristine
 holdout, equal-compute or general safety/method-superiority claim. Full 4B fails
 the target policy behaviors, so do not claim their compressed retention.

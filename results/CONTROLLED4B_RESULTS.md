@@ -1,7 +1,10 @@
 # Controlled Qwen3-4B comparison
 
 Authorized 2026-10-18; branch `eval/4b-controlled-comparison`.
-Status: preparation and non-test parity gates; no trained candidate scores yet.
+**Current status:** capture, all three fits, five-arm evaluation and manual review
+are complete. Final results use240cases, not the earlier160case development set.
+See [final results](FINAL_EVAL_RESULTS.md) for scores and interpretation. Sections
+below retain chronological preparation/failure checkpoints, not active job status.
 This supersedes the paused old plan for this new run, not its historical results.
 
 ## Fixed scope before capture
