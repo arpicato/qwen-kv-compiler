@@ -12,7 +12,10 @@ exploratory, not independently reviewed.
 | [Controlled 4B protocol](CONTROLLED4B_RESULTS.md) | Shared training examples, capture checks, compiler/AM/CARTRIDGES training and selection; chronological checkpoints |
 | [27B Attention Matching](AM27B_RESULTS.md) | AM 4k results and the original failed FP16 8k fit |
 | [27B AM FP32-value follow-up](AM27B_FP32_RESULTS.md) | Separate successful 8k run, changed precision/memory, results and limitations |
+| [27B uniform versus allocated prefixes](NONUNIFORM_RESULTS.md) | Equal head-row budgets, separate FP32-value extension, reviewed outcomes and wall times; not equal bytes |
+| [27B matched useful-prefix byte cap](EQUAL_MEMORY_RESULTS.md) | 256 MiB cap, explicitly reused compiler results, two fresh AM arms, reviewed behavior, timing and implementation recheck |
 | [Source reproduction](REPRODUCTION27B_RESULTS.md) | Completed 19-phase 27B reproduction on the original runtime, including numerical differences |
+| [Public GitHub clone reproduction](GITHUB_RECREATION.md) | Fresh 27B generation/hash audit complete; its separate behavior review and fresh AM/4B reproduction remain unfinished |
 | [Release validation](RELEASE_VALIDATION.md) | Git-free CPU checks, Docker preflight, fresh dependency installation, and short inference/resume checks |
 
 ## Find the underlying data
@@ -24,6 +27,12 @@ exploratory, not independently reviewed.
 - **27B AM:** `AM27B_4K_{RAW,REVIEW,SUMMARY}.json` and
   `AM27B_8K_FP32_{RAW,REVIEW,SUMMARY}.json`.
 - **4B:** `FINAL_EVAL4B_{FULL,NONE,COMPILER,AM,CARTRIDGES}_{RAW,REVIEW,SUMMARY}.json`.
+- **Equal-row allocation:** `NONUNIFORM_{RAW,REVIEW,SUMMARY,FREEZE,TIMING}.json`;
+  method-specific `*_CURVES.json` / `*_ALLOCATION.json` record the proxy and DP.
+- **Byte-capped follow-up:** `EQUAL_MEMORY_{RAW,REVIEW,SUMMARY,FREEZE,TIMING}.json`
+  contains only fresh AM responses; compiler responses/reviews remain in the
+  original `NONUNIFORM_*` files. `EQUAL_MEMORY_IMPLEMENTATION_RECHECK.json`
+  records the real-tensor/attention and task-score recheck.
 - **Run identities:** matching freeze/manifests record source, input, model and
   artifact hashes. Reviews bind labels to the exact response bytes.
 

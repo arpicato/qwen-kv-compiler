@@ -74,9 +74,10 @@ AM comes from [Fast KV Compaction via Attention Matching](https://arxiv.org/abs/
 
 **These are workload-specific comparisons, not reproductions of the papers'
 headline benchmarks.** Here, AM fits queries captured with the original full
-cache (“off-policy”) and gives each head the same row budget. Its pinned recipe
+cache (“off-policy”); the original comparisons give each head the same row budget. Its pinned recipe
 uses RMS attention scoring, two nonnegative least-squares iterations for row
-weights, and an unregularized least-squares value solve. We do not test its
+weights, and an unregularized least-squares value solve. The follow-ups below test
+our fixed-grid, training-proxy head allocation for both methods—not upstream AM's
 optimized allocation or on-policy settings. CARTRIDGES uses the same 812 examples
 as the other methods, rather than a separately generated self-study dataset.
 
@@ -194,6 +195,67 @@ process-VRAM savings nor inference speedups from these tables.
 [AM 4k and original failure](results/AM27B_RESULTS.md) ·
 [AM 8k FP32V](results/AM27B_FP32_RESULTS.md)
 
+### 27B follow-ups: allocation and matched useful-prefix bytes
+
+We also test uniform versus per-head allocation, using a fixed training-only
+attention proxy and exact total budget—not evaluation scores—to choose head
+lengths. The [equal-row study](results/NONUNIFORM_RESULTS.md) keeps a mean of
+4,096 rows/head; AM's FP32 values make its useful payload larger than compiler's.
+The separate [byte-capped study](results/EQUAL_MEMORY_RESULTS.md) instead caps
+useful payload at 256 MiB, including AM's row biases. AM gets 2,727 mean
+rows/head; compiler keeps 4,096. Compiler tensors and results are explicitly
+reused; the two smaller AM variants have 480 fresh responses and 240 new manual
+behavior reviews. Original full/no-prefix controls are reused, not rerun.
+
+At **equal rows**, allocation changes the results as follows (uniform→allocated):
+
+| Measurement | Compiler, 256 MiB | AM FP32V, 384.5 MiB |
+|---|---:|---:|
+| Knowledge /60 |46→53|55→53|
+| Mock-tool tasks /60 |51→48|52→52|
+| Approval gate + correct proposal /20 |17→18|16→19|
+| Shared structure + code checks /40 |19→23|22→29|
+| Unnecessary approval requests on refactors /80 ↓ |18→9|10→7|
+
+Allocation improves these sharing measures for both methods, but compiler loses
+tool tasks and AM loses knowledge answers. This table is **not byte-matched**.
+
+| At the 256 MiB useful-payload cap | Compiler uniform | Compiler allocated | AM uniform | AM allocated |
+|---|---:|---:|---:|---:|
+| Knowledge /60 |46|53|50|56|
+| Mock-tool tasks /60 |51|48|47|54|
+| Approval gate + correct proposal /20 |17|18|16|16|
+| Premature implementation /20 ↓ |0|1|4|2|
+| Already-approved code checks /20 |18|18|19|19|
+| Shared structure + code checks /40 |19|23|10|20|
+| Distinct contract + code checks /40 |39|39|39|38|
+| Unnecessary approval requests on refactors /80 ↓ |18|9|31|13|
+
+Allocated AM leads knowledge/tools here; allocated compiler does better on these
+approval/sharing measures. Smaller allocated AM also beats larger allocated AM
+on tasks (56/54 versus 53/52) but loses shared refactors (20/40 versus 29/40).
+Real tensor/head assembly, masking, byte accounting and saved task scores were
+rechecked; this does not identify why the task scores improved or establish a
+general size trend. No pooled winner or multi-seed/held-out claim.
+
+**Useful bytes are not total VRAM:** AM leaves 11,392 bytes unused under the cap.
+Its useful FP32 values are already counted; padding, native placeholders,
+workspaces and recurrent state add further memory. All follow-up variants use
+the research padded attention path. Reported fitting and
+evaluation wall times include their stated overheads, not pure token throughput.
+Fresh smaller-AM grid fits total 10.0 minutes; its two-arm evaluation takes
+55m55s. See the reports for compiler's historical/reused fitting costs, complete
+behavior metrics, original FP16 failure, and interrupted-work timing.
+
+**AM fits much faster in this implementation.** In the equal-row study, the 4k
+uniform fit took 4.5 minutes for AM versus 107.5 minutes for compiler (historical,
+reused). Compiler's allocated fit took another 115.0 minutes after its grid fits;
+AM assembles selected grid heads without another fit. Evaluation went the other
+way: compiler uniform/allocated took 10.0/9.9 minutes per 240 cases versus AM
+30.8/42.3 minutes. These are observed implementation-specific wall times, with
+different precision/solver paths and response lengths—not intrinsic algorithmic
+speedups or isolated inference-throughput measurements.
+
 ### 4B: different knowledge/tool tradeoffs; inconclusive behavior retention
 
 | Measurement | Full prefix | No prefix | Compiler | AM | CARTRIDGES |
@@ -226,6 +288,8 @@ sharing result must not be confused with the earlier suite's 36/40.
 
 ```sh
 python3 scripts/evaluate.py verify
+python3 tests/test_nonuniform_results.py
+python3 tests/test_equal_memory_results.py
 ```
 
 This regrades saved knowledge/tool traces and validates hashes/manual labels;
@@ -238,8 +302,11 @@ above. Weights and fitted caches are not included. No other hardware/backend is
 validated. [Validation record](results/RELEASE_VALIDATION.md) documents CPU tests,
 Docker checks, fresh dependency installation and short generation/resume checks.
 A separate 19-phase source reproduction took 5h 27m on the existing runtime;
-numerical drift is disclosed. A new reproduction from the public clone is in
-progress, not yet a completed result.
+numerical drift is disclosed. A separate public-clone 27B reproduction completed
+all 19 phases, final generation and artifact-hash audit; its new behavior review
+remains pending, and fresh public-clone AM/4B reproduction is deferred. This is
+not a completed all-method public-clone reproduction. See its
+[status report](results/GITHUB_RECREATION.md).
 
 ## Contents and license
 

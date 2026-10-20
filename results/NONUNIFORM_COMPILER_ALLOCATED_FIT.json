@@ -1,0 +1,90 @@
+{
+  "complete": true,
+  "identity": {
+    "protocol": "c688f8253ac21d7480bdfe883d1fde92716e7ff7edb2c26145984ce4158310f9",
+    "allocation": "64fb6dd3ee12f9438de52a6c03f55b179ac41c2e449e636d87f6d12cf07efc16"
+  },
+  "layers": {
+    "3": {
+      "sha256": "433b2a5002196803c791953f60d4b2a8ee442d8bed2a2ca3f61fff06016ff377",
+      "initial_loss": 0.16004759818315506,
+      "final_loss": 0.004428040236234665
+    },
+    "7": {
+      "sha256": "f896a73572c4bb0c334694481aa8898cfe6ade153134aa19d5ffb26ea5cec389",
+      "initial_loss": 0.14525380730628967,
+      "final_loss": 0.0077666789293289185
+    },
+    "11": {
+      "sha256": "f54c8587d16d7d816629ad3f16b6af99bb280640415a0fced0bbe1d35d103cc0",
+      "initial_loss": 0.1911490112543106,
+      "final_loss": 0.009645696729421616
+    },
+    "15": {
+      "sha256": "297c8634813bbe3827f5d0278e856643e2263a531e308d50a6e01921385a58f2",
+      "initial_loss": 0.11025543138384819,
+      "final_loss": 0.007455606013536453
+    },
+    "19": {
+      "sha256": "c1c6539ae2501b5455c00a57a37534fca39e15291a5094a15f1161fd710c3185",
+      "initial_loss": 0.13100432604551315,
+      "final_loss": 0.011821053922176361
+    },
+    "23": {
+      "sha256": "3064691bb444251da1f67c13f35b47d11470c635012fa2306cc00f7015e4ea56",
+      "initial_loss": 0.2324108649045229,
+      "final_loss": 0.010752476751804352
+    },
+    "27": {
+      "sha256": "3f5ec4636c67f3541e583c5cdb3d4f6a3ea915df31836767ab7d7923e7d13d89",
+      "initial_loss": 0.20717934891581535,
+      "final_loss": 0.013618987053632736
+    },
+    "31": {
+      "sha256": "41ae8fd7889d19ee95054803427848b3cc6a19fe86cef4b28d12578ae5985846",
+      "initial_loss": 0.19527911394834518,
+      "final_loss": 0.01830967515707016
+    },
+    "35": {
+      "sha256": "0a225ddb0fce2779470887f7756fbcf0386b61802af074be0ed97b1697ac1d8b",
+      "initial_loss": 0.20177017524838448,
+      "final_loss": 0.0273357592523098
+    },
+    "39": {
+      "sha256": "891c9f25a68546cb703b407ba7a506f1f0db8e2161645c1b58d123d6108ec16a",
+      "initial_loss": 0.1868477389216423,
+      "final_loss": 0.022539958357810974
+    },
+    "43": {
+      "sha256": "e104d47b1fd5b0532f3daf08fc7bd36c58676305ef0e90c55f43b7de2e06eab4",
+      "initial_loss": 0.24314075149595737,
+      "final_loss": 0.03493429720401764
+    },
+    "47": {
+      "sha256": "cc477f2b947d6752300cf2b47c690007908049b1d892c9add8190bf7c4105f6f",
+      "initial_loss": 0.2561367657035589,
+      "final_loss": 0.04320141300559044
+    },
+    "51": {
+      "sha256": "d15c54092b533ae8b1eda6c8d3d1741284463378494d443b055e99d4e034c4a2",
+      "initial_loss": 0.47658499144017696,
+      "final_loss": 0.09105073288083076
+    },
+    "55": {
+      "sha256": "6e19d89c1eb74ae0005a5fd2e4480a6bc51444d587db86556607c85629dfc0bc",
+      "initial_loss": 0.6950939167290926,
+      "final_loss": 0.05760585516691208
+    },
+    "59": {
+      "sha256": "6b4058458bd8e53bc6aabe6dda476bdacc5d7c56b05d46b0cf0d87ac50adab49",
+      "initial_loss": 2.801177840679884,
+      "final_loss": 0.2716451995074749
+    },
+    "63": {
+      "sha256": "b68c3415df9eb0617b62923ed9ad46a42c63adf800407066f64bec431e18e6be",
+      "initial_loss": 3.2840258218348026,
+      "final_loss": 0.5485643241554499
+    }
+  },
+  "elapsed_s": 6899.247327390942
+}

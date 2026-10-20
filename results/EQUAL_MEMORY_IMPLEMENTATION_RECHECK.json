@@ -1,0 +1,151 @@
+{
+  "complete": true,
+  "scope": "Read-only CPU: exact grid/head/export assembly, actual FP32 tensor bytes and padded-vs-unpadded attention; no model regeneration or solver rerun.",
+  "studies": {
+    "nonuniform27b_fp32v_v1": {
+      "protocol_sha256": "c688f8253ac21d7480bdfe883d1fde92716e7ff7edb2c26145984ce4158310f9",
+      "freeze_sha256": "d51b6e85f63f448bb4821ca27df579c6b0b552e19c272b3bbce9532bb74a8dbd",
+      "arms": {
+        "uniform": {
+          "heads_checked": 64,
+          "useful_tensor_bytes": 403177472,
+          "export_manifest_sha256": "be42bd9dd4827eee45a3cffe9f54911b390058a5e282bf0c9a160a0ac7398060"
+        },
+        "allocated": {
+          "heads_checked": 64,
+          "useful_tensor_bytes": 403177472,
+          "export_manifest_sha256": "469b03541a1ecd13c98f5c1a414dcab01168f45fea0257e66b0b658e897f0bef"
+        }
+      }
+    },
+    "equal_memory27b_v1": {
+      "protocol_sha256": "1531ebde4c110c3c4602e834e85693059f3625c5e15ed57e5c208e4756ddb2a6",
+      "freeze_sha256": "a008bc51b78de41bedd9da660cce2656cc0ed4fe303303e4f32dcb888e8b0481",
+      "arms": {
+        "uniform": {
+          "heads_checked": 64,
+          "useful_tensor_bytes": 268424064,
+          "export_manifest_sha256": "58dba6013a9c449896e1efc23602861b6adcdbd70a1cf34e03bd5664509c8608"
+        },
+        "allocated": {
+          "heads_checked": 64,
+          "useful_tensor_bytes": 268424064,
+          "export_manifest_sha256": "278317bd9d777884fa5a621b3b8e1f8942afa6d451c0386bd7b301b6bf1e137c"
+        }
+      }
+    }
+  },
+  "attention_checks": [
+    {
+      "study": "nonuniform27b_fp32v_v1",
+      "variant": "uniform",
+      "layer": 3,
+      "max_abs_diff": 0.000244140625
+    },
+    {
+      "study": "nonuniform27b_fp32v_v1",
+      "variant": "uniform",
+      "layer": 31,
+      "max_abs_diff": 0.0009765625
+    },
+    {
+      "study": "nonuniform27b_fp32v_v1",
+      "variant": "uniform",
+      "layer": 63,
+      "max_abs_diff": 0.0078125
+    },
+    {
+      "study": "nonuniform27b_fp32v_v1",
+      "variant": "allocated",
+      "layer": 3,
+      "max_abs_diff": 0.000244140625
+    },
+    {
+      "study": "nonuniform27b_fp32v_v1",
+      "variant": "allocated",
+      "layer": 31,
+      "max_abs_diff": 0.0009765625
+    },
+    {
+      "study": "nonuniform27b_fp32v_v1",
+      "variant": "allocated",
+      "layer": 63,
+      "max_abs_diff": 0.0078125
+    },
+    {
+      "study": "equal_memory27b_v1",
+      "variant": "uniform",
+      "layer": 3,
+      "max_abs_diff": 0.0009765625
+    },
+    {
+      "study": "equal_memory27b_v1",
+      "variant": "uniform",
+      "layer": 31,
+      "max_abs_diff": 0.000244140625
+    },
+    {
+      "study": "equal_memory27b_v1",
+      "variant": "uniform",
+      "layer": 63,
+      "max_abs_diff": 0.0078125
+    },
+    {
+      "study": "equal_memory27b_v1",
+      "variant": "allocated",
+      "layer": 3,
+      "max_abs_diff": 0.0009765625
+    },
+    {
+      "study": "equal_memory27b_v1",
+      "variant": "allocated",
+      "layer": 31,
+      "max_abs_diff": 0.00048828125
+    },
+    {
+      "study": "equal_memory27b_v1",
+      "variant": "allocated",
+      "layer": 63,
+      "max_abs_diff": 0.0078125
+    }
+  ],
+  "same_capture_and_proxy_examples": true,
+  "same_solver_attention_loader_runner_code": true,
+  "elapsed_s": 59.09721402300056,
+  "finished_utc": "2026-10-20T03:54:52.134642+00:00",
+  "saved_task_regrade": {
+    "larger": {
+      "raw_snapshot_sha256": "bb0b5fbd0f8327648e5d9bee652a9c1b8d0b9d767314693ab36326e29cafbcbb",
+      "freeze_sha256": "d51b6e85f63f448bb4821ca27df579c6b0b552e19c272b3bbce9532bb74a8dbd",
+      "raw_complete": true,
+      "cases_sha256": "5670887a4f28ff98de3567131b10b4151500e44e66c3b448862573e1a4c5fafc",
+      "scores": {
+        "am_uniform": {
+          "knowledge": 55,
+          "tools": 52
+        },
+        "am_allocated": {
+          "knowledge": 53,
+          "tools": 52
+        }
+      }
+    },
+    "smaller": {
+      "raw_snapshot_sha256": "475a9713aa48fc71f15ddc4ebc1524275a4085851e17d75bb092b523064f5f1e",
+      "freeze_sha256": "a008bc51b78de41bedd9da660cce2656cc0ed4fe303303e4f32dcb888e8b0481",
+      "raw_complete": false,
+      "cases_sha256": "5670887a4f28ff98de3567131b10b4151500e44e66c3b448862573e1a4c5fafc",
+      "scores": {
+        "am_uniform": {
+          "knowledge": 50,
+          "tools": 47
+        },
+        "am_allocated": {
+          "knowledge": 56,
+          "tools": 54
+        }
+      }
+    }
+  },
+  "raw_snapshot_note": "Smaller task suites are complete and regraded; behavior generation may still be in progress in this immutable snapshot. This is not a complete behavior review."
+}

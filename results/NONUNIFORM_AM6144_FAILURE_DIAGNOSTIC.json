@@ -1,0 +1,53 @@
+{
+  "complete": true,
+  "layer": 19,
+  "kv_head": 1,
+  "slots": 6144,
+  "lstsq": [
+    {
+      "matrix_shape": [
+        39630,
+        6144
+      ],
+      "solution_shape": [
+        6144,
+        1
+      ],
+      "dtype": "torch.float32",
+      "fp32_finite": true,
+      "fp16_finite": true,
+      "max_abs": 289.3599853515625,
+      "nonfinite_fp16": 0
+    },
+    {
+      "matrix_shape": [
+        39630,
+        6144
+      ],
+      "solution_shape": [
+        6144,
+        256
+      ],
+      "dtype": "torch.float32",
+      "fp32_finite": true,
+      "fp16_finite": false,
+      "max_abs": 71021.34375,
+      "nonfinite_fp16": 1
+    }
+  ],
+  "files": {
+    "/mnt/data/artifacts/kvcompile/github-recreate-20261019/27b/traj/layer_019.pkl": "d6d8194aa75d943959261d97154ad06e6008b7e47e9715536e9d9dc95e6d29b6",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_v2/am6144/heads/head_016.safetensors": "155d473484c1fa311076bdbd341928006a3705885c51f0fc1d01af45db3cf32b",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_v2/am6144/manifest.json": "ac0e1f2d587628641c8f82e7cdba52230846db2ab95cca9bff87115987ddc878",
+    "/tmp/opencode/nonuniform-diagnostic/am27b_diagnose.py": "db9f042e79113ce686bc70e9e2e373c5925e61a7c345dfe8cddd13dafd6e2f3b",
+    "/tmp/opencode/nonuniform-diagnostic/am_block_scores.py": "971a52ec6909685dfdc07130d63b5dfaa74378e6772e6a3348d65f95a2a8a680"
+  },
+  "upstream_commit": "2020f6d37940fe013e7e7f1ebf409e5d107c5670",
+  "output_finite": {
+    "k": true,
+    "beta": true,
+    "v": false
+  },
+  "elapsed_s": 19.571352552971803,
+  "torch": "2.8.0+rocm6.4"
+}

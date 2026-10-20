@@ -25,6 +25,19 @@ response-bound manual reviews, intersections and paired denominators, and compar
 saved summaries. 27B original knowledge/tools are separate v2 runs with identical
 prompt/cache hashes; final behavior is a new version. AM and 4B ran all 240 cases.
 This does not execute generated code or turn manual labels into independent review.
+The main verifier covers the original 27B/4B/AM tables. For the separately recorded
+allocation follow-ups, also run these stdlib-only saved-evidence checks:
+
+```sh
+python3 tests/test_nonuniform_results.py
+python3 tests/test_equal_memory_results.py
+```
+
+They verify task grades, response-bound reviews, exact allocations, smoke/timing
+identities and compiler reuse. They do not rerun model generation or Docker
+assertions. The byte-capped raw file contains only the 480 new AM responses;
+compiler results are referenced from the equal-row study, not relabeled as fresh.
+
 The older 160-case verifier remains available explicitly for historical provenance:
 
 ```sh

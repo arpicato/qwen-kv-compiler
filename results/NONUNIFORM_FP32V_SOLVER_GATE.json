@@ -1,0 +1,18 @@
+{
+  "complete": true,
+  "slots": 6144,
+  "layer": 19,
+  "kv_head": 1,
+  "diagnostic_sha256": "f415386041e0a583ece57f120f6afcbca3dc5c22bee83b2955597c1ec03c0859",
+  "max_abs": 71021.53125,
+  "previous_max_abs": 71021.34375,
+  "same_run_lsq_exact": true,
+  "fp16_nonfinite": 1,
+  "head_sha256": "5f5dcd99ee243ccf9d282176e689b6a5cf4a29f65338467eb0d21771eec55ba0",
+  "rng_sha256": "155d473484c1fa311076bdbd341928006a3705885c51f0fc1d01af45db3cf32b",
+  "capture_sha256": "d6d8194aa75d943959261d97154ad06e6008b7e47e9715536e9d9dc95e6d29b6",
+  "source_sha256": "e252fa3f5537eb7396a5aaae9445aa9688817c390093a023b25290cc63f4ce0d",
+  "block_sha256": "971a52ec6909685dfdc07130d63b5dfaa74378e6772e6a3348d65f95a2a8a680",
+  "torch": "2.8.0+rocm6.4",
+  "elapsed_s": 27.10822296596598
+}

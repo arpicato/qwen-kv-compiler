@@ -4,6 +4,7 @@ Run individual files directly with Python from the project root; no test framewo
 is required for the current checks. Tests do not train a real model.
 
 Dependency-free:
+- `test_head_allocation.py`: exact fixed-budget selection vs exhaustive fixtures.
 - `test_release.py`: exact Git-free inventory and obvious credential rejection.
 - `test_final_eval_results.py`, `test_final4b_results.py`, `test_am27b_results.py`: final response-bound reviews, frozen identities, paired counts and regraded traces.
 - `test_compare4b.py`: shared812train examples, grouped validation, causal query/EOS indexing and group-weighted validation. `test_compare4b_am.py` needs Torch and the pinned `COMPACTION_DIR`; tiny CPU solver/checkpoint parity only.
@@ -25,6 +26,9 @@ Dependency-free:
 
 NumPy required: `test_probe_diversity.py`, `test_probesets.py`, `test_grader_parity.py`.
 PyTorch/NumPy/safetensors: `test_compile_resume.py`, `test_cosine_normalization.py`.
+`test_nonuniform_cache.py` and `test_nonuniform_pipeline.py` use the same packages,
+CPU-only: ragged masks, serialization, identities, GPU opt-in rejection and fake
+model evaluation/resume. Set CUDA/HIP/ROCR_VISIBLE_DEVICES=-1.
 `test_policy_coverage_outputs27b.py` requires explicit items and an existing Docker
 image argument; executes calibration code in an isolated container, never on host.
 

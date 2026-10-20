@@ -171,7 +171,10 @@ def run(frozen_path, out, split, arms, selected_suites=None):
         if arm not in ('full', 'none'):
             folder = Path(f['arms'][arm])
             slots = json.loads((folder / 'manifest.json').read_text())['slots']
-            if arm == 'am8k_fp32':
+            if f.get('cache_layout') == 'padded-head-lengths-v1':
+                from nonuniform_cache import load_prefix
+                compiled,biases,values=load_prefix(folder,with_values=True)
+            elif arm == 'am8k_fp32':
                 from am27b_attention import load_fp32_prefix
                 compiled,biases,values=load_fp32_prefix(folder,slots)
             else:

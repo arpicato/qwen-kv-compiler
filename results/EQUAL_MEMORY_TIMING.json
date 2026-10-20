@@ -1,0 +1,173 @@
+{
+  "complete": true,
+  "source_log_sha256": {
+    "equal-memory-sequence.log": "4dc6c7bd263a75abe53eeb51c3e427a778cd4c01bcb5ff768965170df66ef0ca",
+    "equal-memory-am-only-generation.log": "62f4a3c6bc397c9904be82bc7eec599aba442a1040ccc435c49f87427de52f27",
+    "equal-memory-evaluate.log": "6d89ea1c56149c7a7464fe535c3188f8b989e1f0496f64c122ccbc1749749d5e"
+  },
+  "stage_log_lines": [
+    "2026-10-20T02:22:19.739895+00:00 elapsed=0.0s START phase=prepare",
+    "2026-10-20T02:24:27.174331+00:00 elapsed=127.4s DONE phase=prepare outputs=1",
+    "2026-10-20T02:24:27.174402+00:00 elapsed=127.4s START phase=solver-gate",
+    "2026-10-20T02:25:36.171332+00:00 elapsed=196.4s DONE phase=solver-gate outputs=2",
+    "2026-10-20T02:25:36.171406+00:00 elapsed=196.4s START phase=native-gate",
+    "2026-10-20T02:27:59.496860+00:00 elapsed=339.8s DONE phase=native-gate outputs=1",
+    "2026-10-20T02:27:59.499872+00:00 elapsed=339.8s START phase=fp32-solver-gate",
+    "2026-10-20T02:29:05.604294+00:00 elapsed=405.9s DONE phase=fp32-solver-gate outputs=3",
+    "2026-10-20T02:29:05.604385+00:00 elapsed=405.9s START phase=fp32-native-gate",
+    "2026-10-20T02:31:10.548325+00:00 elapsed=530.8s DONE phase=fp32-native-gate outputs=1",
+    "2026-10-20T02:31:10.551379+00:00 elapsed=530.8s START phase=am1363",
+    "2026-10-20T02:34:27.977703+00:00 elapsed=728.2s DONE phase=am1363 outputs=82",
+    "2026-10-20T02:34:27.978180+00:00 elapsed=728.2s START phase=am2727",
+    "2026-10-20T02:38:20.124291+00:00 elapsed=960.4s DONE phase=am2727 outputs=82",
+    "2026-10-20T02:38:20.124476+00:00 elapsed=960.4s START phase=am4091",
+    "2026-10-20T02:43:12.274476+00:00 elapsed=1252.5s DONE phase=am4091 outputs=82",
+    "2026-10-20T02:43:12.274779+00:00 elapsed=1252.5s START phase=am-curves",
+    "2026-10-20T02:45:44.018769+00:00 elapsed=1404.3s DONE phase=am-curves outputs=1",
+    "2026-10-20T02:45:44.021648+00:00 elapsed=1404.3s START phase=am-allocate",
+    "2026-10-20T02:46:20.158204+00:00 elapsed=1440.4s DONE phase=am-allocate outputs=1",
+    "2026-10-20T02:46:20.159060+00:00 elapsed=1440.4s START phase=compiler-uniform-export",
+    "2026-10-20T02:47:07.771609+00:00 elapsed=1488.0s DONE phase=compiler-uniform-export outputs=17",
+    "2026-10-20T02:47:07.772160+00:00 elapsed=1488.0s START phase=compiler-allocated-export",
+    "2026-10-20T02:48:23.118661+00:00 elapsed=1563.4s DONE phase=compiler-allocated-export outputs=17",
+    "2026-10-20T02:48:23.119016+00:00 elapsed=1563.4s START phase=am-uniform-export",
+    "2026-10-20T02:49:08.167570+00:00 elapsed=1608.4s DONE phase=am-uniform-export outputs=17",
+    "2026-10-20T02:49:08.167690+00:00 elapsed=1608.4s START phase=am-allocated-export",
+    "2026-10-20T02:49:54.312015+00:00 elapsed=1654.6s DONE phase=am-allocated-export outputs=17",
+    "2026-10-20T02:49:54.312228+00:00 elapsed=1654.6s START phase=smoke",
+    "2026-10-20T02:52:20.638898+00:00 elapsed=1800.9s DONE phase=smoke outputs=1",
+    "2026-10-20T02:52:20.639587+00:00 elapsed=1800.9s START phase=freeze",
+    "2026-10-20T02:53:52.765430+00:00 elapsed=1893.0s DONE phase=freeze outputs=1",
+    "2026-10-20T02:53:52.765856+00:00 elapsed=1893.0s START phase=evaluate"
+  ],
+  "stages": {
+    "prepare": {
+      "start_utc": "2026-10-20T02:22:19.739895+00:00",
+      "end_utc": "2026-10-20T02:24:27.174331+00:00",
+      "wall_s": 127.434436
+    },
+    "solver-gate": {
+      "start_utc": "2026-10-20T02:24:27.174402+00:00",
+      "end_utc": "2026-10-20T02:25:36.171332+00:00",
+      "wall_s": 68.99693
+    },
+    "native-gate": {
+      "start_utc": "2026-10-20T02:25:36.171406+00:00",
+      "end_utc": "2026-10-20T02:27:59.496860+00:00",
+      "wall_s": 143.325454
+    },
+    "fp32-solver-gate": {
+      "start_utc": "2026-10-20T02:27:59.499872+00:00",
+      "end_utc": "2026-10-20T02:29:05.604294+00:00",
+      "wall_s": 66.104422
+    },
+    "fp32-native-gate": {
+      "start_utc": "2026-10-20T02:29:05.604385+00:00",
+      "end_utc": "2026-10-20T02:31:10.548325+00:00",
+      "wall_s": 124.94394
+    },
+    "am1363": {
+      "start_utc": "2026-10-20T02:31:10.551379+00:00",
+      "end_utc": "2026-10-20T02:34:27.977703+00:00",
+      "wall_s": 197.426324
+    },
+    "am2727": {
+      "start_utc": "2026-10-20T02:34:27.978180+00:00",
+      "end_utc": "2026-10-20T02:38:20.124291+00:00",
+      "wall_s": 232.146111
+    },
+    "am4091": {
+      "start_utc": "2026-10-20T02:38:20.124476+00:00",
+      "end_utc": "2026-10-20T02:43:12.274476+00:00",
+      "wall_s": 292.15
+    },
+    "am-curves": {
+      "start_utc": "2026-10-20T02:43:12.274779+00:00",
+      "end_utc": "2026-10-20T02:45:44.018769+00:00",
+      "wall_s": 151.74399
+    },
+    "am-allocate": {
+      "start_utc": "2026-10-20T02:45:44.021648+00:00",
+      "end_utc": "2026-10-20T02:46:20.158204+00:00",
+      "wall_s": 36.136556
+    },
+    "compiler-uniform-export": {
+      "start_utc": "2026-10-20T02:46:20.159060+00:00",
+      "end_utc": "2026-10-20T02:47:07.771609+00:00",
+      "wall_s": 47.612549
+    },
+    "compiler-allocated-export": {
+      "start_utc": "2026-10-20T02:47:07.772160+00:00",
+      "end_utc": "2026-10-20T02:48:23.118661+00:00",
+      "wall_s": 75.346501
+    },
+    "am-uniform-export": {
+      "start_utc": "2026-10-20T02:48:23.119016+00:00",
+      "end_utc": "2026-10-20T02:49:08.167570+00:00",
+      "wall_s": 45.048554
+    },
+    "am-allocated-export": {
+      "start_utc": "2026-10-20T02:49:08.167690+00:00",
+      "end_utc": "2026-10-20T02:49:54.312015+00:00",
+      "wall_s": 46.144325
+    },
+    "smoke": {
+      "start_utc": "2026-10-20T02:49:54.312228+00:00",
+      "end_utc": "2026-10-20T02:52:20.638898+00:00",
+      "wall_s": 146.32667
+    },
+    "freeze": {
+      "start_utc": "2026-10-20T02:52:20.639587+00:00",
+      "end_utc": "2026-10-20T02:53:52.765430+00:00",
+      "wall_s": 92.125843
+    }
+  },
+  "interrupted_evaluation": {
+    "start_utc": "2026-10-20T02:53:52.765856+00:00",
+    "end_utc": "2026-10-20T03:03:55.878562+00:00",
+    "wall_s": 603.112706,
+    "preserved_responses": 214,
+    "scope": "Deliberately stopped redundant compiler generation; excluded from scored comparison, not hidden."
+  },
+  "evaluation_boundary_lines": [
+    "2026-10-20T03:30:41.218470+00:00 elapsed=1509.7s completed=240/480 rate=0.159/s ETA=1509.7s arm=am_uniform suite=behavior id=gate-depth-distinct",
+    "2026-10-20T04:01:26.236170+00:00 elapsed=3354.7s completed=480/480 rate=0.143/s ETA=0.0s arm=am_allocated suite=behavior id=gate-depth-distinct"
+  ],
+  "evaluation_arms": {
+    "am_uniform": {
+      "cumulative_elapsed_s": 1509.7,
+      "wall_interval_s": 1509.7
+    },
+    "am_allocated": {
+      "cumulative_elapsed_s": 3354.7,
+      "wall_interval_s": 1845.0
+    }
+  },
+  "am_internal_fit_s": {
+    "1363": 154.82657017291058,
+    "2727": 193.11952017608564,
+    "4091": 251.78797945496626
+  },
+  "am_internal_fit_total_s": 599.7340698039625,
+  "am_only_execution": {
+    "complete": true,
+    "command": [
+      "/mnt/data/artifacts/kvcompile/release-validation-20261019/exl-env/bin/python",
+      "-B",
+      "scripts/evaluate.py",
+      "run",
+      "--freeze",
+      "/mnt/data/artifacts/kvcompile/equal_memory27b_v1/freeze.json",
+      "--out",
+      "/mnt/data/artifacts/kvcompile/equal_memory27b_v1/raw-am.json",
+      "--arms",
+      "am_uniform,am_allocated"
+    ],
+    "elapsed_s": 3408.0056473939912,
+    "finished_utc": "2026-10-20T04:01:38.523872+00:00",
+    "raw_sha256": "9d38befd9e6956ce487a0e05b68519ea6809bafb071409ca5f1bbaecd58dd804",
+    "compiler_provenance": "Reused original nonuniform27b_fp32v_v1 responses explicitly; interrupted equal-memory raw.json is preserved and excluded."
+  },
+  "total_launch_to_generation_end_s": 5958.783977,
+  "scope": "Observed wall time, not GPU-active time or throughput. First AM interval includes shared hashing/model setup; transition includes prefix load. Generation, Docker grading and persistence included. Capture, projections and compiler fits reused; prior failed studies excluded. Total includes interruption/restart gap; artifact/recheck audits overlap generation; manual review outside final automated completion."
+}

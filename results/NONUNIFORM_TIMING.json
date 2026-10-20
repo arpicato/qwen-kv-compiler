@@ -1,0 +1,192 @@
+{
+  "complete": true,
+  "source_sha256": {
+    "/tmp/opencode/nonuniform-wall-sequence.log": "9b88a78e93ca9fa4bf734733b586e9c3612f1133d1b4088b1fa7cf306d1cc1fc",
+    "/tmp/opencode/nonuniform-wall-evaluate.log": "b9422f88905a205cf41fa03ff57c09d963398ad8884829220f9eaffec14343c7"
+  },
+  "stage_log_lines": [
+    "2026-10-19T18:25:22.982274+00:00 elapsed=0.0s START phase=prepare",
+    "2026-10-19T18:26:59.014599+00:00 elapsed=96.0s DONE phase=prepare outputs=1",
+    "2026-10-19T18:26:59.014673+00:00 elapsed=96.0s START phase=solver-gate",
+    "2026-10-19T18:27:53.596523+00:00 elapsed=150.6s DONE phase=solver-gate outputs=2",
+    "2026-10-19T18:27:53.596608+00:00 elapsed=150.6s START phase=native-gate",
+    "2026-10-19T18:30:21.781363+00:00 elapsed=298.8s DONE phase=native-gate outputs=1",
+    "2026-10-19T18:30:21.784167+00:00 elapsed=298.8s START phase=fp32-solver-gate",
+    "2026-10-19T18:31:24.361735+00:00 elapsed=361.4s DONE phase=fp32-solver-gate outputs=3",
+    "2026-10-19T18:31:24.363646+00:00 elapsed=361.4s START phase=fp32-native-gate",
+    "2026-10-19T18:33:25.021413+00:00 elapsed=482.0s DONE phase=fp32-native-gate outputs=1",
+    "2026-10-19T18:33:25.024360+00:00 elapsed=482.0s START phase=am2048",
+    "2026-10-19T18:37:17.870189+00:00 elapsed=714.9s DONE phase=am2048 outputs=82",
+    "2026-10-19T18:37:17.872463+00:00 elapsed=714.9s START phase=am4096",
+    "2026-10-19T18:42:23.733886+00:00 elapsed=1020.8s DONE phase=am4096 outputs=82",
+    "2026-10-19T18:42:23.734317+00:00 elapsed=1020.8s START phase=am6144",
+    "2026-10-19T18:48:50.042140+00:00 elapsed=1407.1s DONE phase=am6144 outputs=82",
+    "2026-10-19T18:48:50.042770+00:00 elapsed=1407.1s START phase=compiler2048",
+    "2026-10-19T20:26:44.251795+00:00 elapsed=7281.3s DONE phase=compiler2048 outputs=17",
+    "2026-10-19T20:26:44.251909+00:00 elapsed=7281.3s START phase=compiler6144",
+    "2026-10-19T22:21:43.806563+00:00 elapsed=14180.8s DONE phase=compiler6144 outputs=17",
+    "2026-10-19T22:21:43.806818+00:00 elapsed=14180.8s START phase=compiler-curves",
+    "2026-10-19T22:23:44.926533+00:00 elapsed=14301.9s DONE phase=compiler-curves outputs=1",
+    "2026-10-19T22:23:44.926621+00:00 elapsed=14301.9s START phase=compiler-allocate",
+    "2026-10-19T22:24:16.657821+00:00 elapsed=14333.7s DONE phase=compiler-allocate outputs=1",
+    "2026-10-19T22:24:16.659777+00:00 elapsed=14333.7s START phase=am-curves",
+    "2026-10-19T22:26:25.652006+00:00 elapsed=14462.7s DONE phase=am-curves outputs=1",
+    "2026-10-19T22:26:25.652087+00:00 elapsed=14462.7s START phase=am-allocate",
+    "2026-10-19T22:27:01.380622+00:00 elapsed=14498.4s DONE phase=am-allocate outputs=1",
+    "2026-10-19T22:27:01.380944+00:00 elapsed=14498.4s START phase=compiler-allocated-fit",
+    "2026-10-20T00:22:37.422411+00:00 elapsed=21434.4s DONE phase=compiler-allocated-fit outputs=17",
+    "2026-10-20T00:22:37.422557+00:00 elapsed=21434.4s START phase=compiler-uniform-export",
+    "2026-10-20T00:23:19.100945+00:00 elapsed=21476.1s DONE phase=compiler-uniform-export outputs=17",
+    "2026-10-20T00:23:19.101056+00:00 elapsed=21476.1s START phase=compiler-allocated-export",
+    "2026-10-20T00:24:00.870484+00:00 elapsed=21517.9s DONE phase=compiler-allocated-export outputs=17",
+    "2026-10-20T00:24:00.870615+00:00 elapsed=21517.9s START phase=am-uniform-export",
+    "2026-10-20T00:24:45.843338+00:00 elapsed=21562.9s DONE phase=am-uniform-export outputs=17",
+    "2026-10-20T00:24:45.843451+00:00 elapsed=21562.9s START phase=am-allocated-export",
+    "2026-10-20T00:25:34.356347+00:00 elapsed=21611.4s DONE phase=am-allocated-export outputs=17",
+    "2026-10-20T00:25:34.356503+00:00 elapsed=21611.4s START phase=smoke",
+    "2026-10-20T00:28:18.453746+00:00 elapsed=21775.5s DONE phase=smoke outputs=1",
+    "2026-10-20T00:28:18.456520+00:00 elapsed=21775.5s START phase=freeze",
+    "2026-10-20T00:29:56.827011+00:00 elapsed=21873.8s DONE phase=freeze outputs=1",
+    "2026-10-20T00:29:56.830821+00:00 elapsed=21873.8s START phase=evaluate",
+    "2026-10-20T02:04:09.504400+00:00 elapsed=27526.5s DONE phase=evaluate outputs=1",
+    "2026-10-20T02:04:09.504799+00:00 elapsed=27526.5s DONE all stages; manual review pending artifact=/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1"
+  ],
+  "evaluation_boundary_lines": [
+    "2026-10-20T00:41:05.262595+00:00 elapsed=599.9s completed=240/960 rate=0.400/s ETA=1799.8s arm=compiler_uniform suite=behavior id=gate-depth-distinct",
+    "2026-10-20T00:50:58.876907+00:00 elapsed=1193.5s completed=480/960 rate=0.402/s ETA=1193.5s arm=compiler_allocated suite=behavior id=gate-depth-distinct",
+    "2026-10-20T01:21:48.711809+00:00 elapsed=3043.4s completed=720/960 rate=0.237/s ETA=1014.5s arm=am_uniform suite=behavior id=gate-depth-distinct",
+    "2026-10-20T02:04:06.472393+00:00 elapsed=5581.1s completed=960/960 rate=0.172/s ETA=0.0s arm=am_allocated suite=behavior id=gate-depth-distinct"
+  ],
+  "stages": {
+    "prepare": {
+      "start_utc": "2026-10-19T18:25:22.982274+00:00",
+      "end_utc": "2026-10-19T18:26:59.014599+00:00",
+      "wall_s": 96.032325
+    },
+    "solver-gate": {
+      "start_utc": "2026-10-19T18:26:59.014673+00:00",
+      "end_utc": "2026-10-19T18:27:53.596523+00:00",
+      "wall_s": 54.58185
+    },
+    "native-gate": {
+      "start_utc": "2026-10-19T18:27:53.596608+00:00",
+      "end_utc": "2026-10-19T18:30:21.781363+00:00",
+      "wall_s": 148.184755
+    },
+    "fp32-solver-gate": {
+      "start_utc": "2026-10-19T18:30:21.784167+00:00",
+      "end_utc": "2026-10-19T18:31:24.361735+00:00",
+      "wall_s": 62.577568
+    },
+    "fp32-native-gate": {
+      "start_utc": "2026-10-19T18:31:24.363646+00:00",
+      "end_utc": "2026-10-19T18:33:25.021413+00:00",
+      "wall_s": 120.657767
+    },
+    "am2048": {
+      "start_utc": "2026-10-19T18:33:25.024360+00:00",
+      "end_utc": "2026-10-19T18:37:17.870189+00:00",
+      "wall_s": 232.845829
+    },
+    "am4096": {
+      "start_utc": "2026-10-19T18:37:17.872463+00:00",
+      "end_utc": "2026-10-19T18:42:23.733886+00:00",
+      "wall_s": 305.861423
+    },
+    "am6144": {
+      "start_utc": "2026-10-19T18:42:23.734317+00:00",
+      "end_utc": "2026-10-19T18:48:50.042140+00:00",
+      "wall_s": 386.307823
+    },
+    "compiler2048": {
+      "start_utc": "2026-10-19T18:48:50.042770+00:00",
+      "end_utc": "2026-10-19T20:26:44.251795+00:00",
+      "wall_s": 5874.209025
+    },
+    "compiler6144": {
+      "start_utc": "2026-10-19T20:26:44.251909+00:00",
+      "end_utc": "2026-10-19T22:21:43.806563+00:00",
+      "wall_s": 6899.554654
+    },
+    "compiler-curves": {
+      "start_utc": "2026-10-19T22:21:43.806818+00:00",
+      "end_utc": "2026-10-19T22:23:44.926533+00:00",
+      "wall_s": 121.119715
+    },
+    "compiler-allocate": {
+      "start_utc": "2026-10-19T22:23:44.926621+00:00",
+      "end_utc": "2026-10-19T22:24:16.657821+00:00",
+      "wall_s": 31.7312
+    },
+    "am-curves": {
+      "start_utc": "2026-10-19T22:24:16.659777+00:00",
+      "end_utc": "2026-10-19T22:26:25.652006+00:00",
+      "wall_s": 128.992229
+    },
+    "am-allocate": {
+      "start_utc": "2026-10-19T22:26:25.652087+00:00",
+      "end_utc": "2026-10-19T22:27:01.380622+00:00",
+      "wall_s": 35.728535
+    },
+    "compiler-allocated-fit": {
+      "start_utc": "2026-10-19T22:27:01.380944+00:00",
+      "end_utc": "2026-10-20T00:22:37.422411+00:00",
+      "wall_s": 6936.041467
+    },
+    "compiler-uniform-export": {
+      "start_utc": "2026-10-20T00:22:37.422557+00:00",
+      "end_utc": "2026-10-20T00:23:19.100945+00:00",
+      "wall_s": 41.678388
+    },
+    "compiler-allocated-export": {
+      "start_utc": "2026-10-20T00:23:19.101056+00:00",
+      "end_utc": "2026-10-20T00:24:00.870484+00:00",
+      "wall_s": 41.769428
+    },
+    "am-uniform-export": {
+      "start_utc": "2026-10-20T00:24:00.870615+00:00",
+      "end_utc": "2026-10-20T00:24:45.843338+00:00",
+      "wall_s": 44.972723
+    },
+    "am-allocated-export": {
+      "start_utc": "2026-10-20T00:24:45.843451+00:00",
+      "end_utc": "2026-10-20T00:25:34.356347+00:00",
+      "wall_s": 48.512896
+    },
+    "smoke": {
+      "start_utc": "2026-10-20T00:25:34.356503+00:00",
+      "end_utc": "2026-10-20T00:28:18.453746+00:00",
+      "wall_s": 164.097243
+    },
+    "freeze": {
+      "start_utc": "2026-10-20T00:28:18.456520+00:00",
+      "end_utc": "2026-10-20T00:29:56.827011+00:00",
+      "wall_s": 98.370491
+    },
+    "evaluate": {
+      "start_utc": "2026-10-20T00:29:56.830821+00:00",
+      "end_utc": "2026-10-20T02:04:09.504400+00:00",
+      "wall_s": 5652.673579
+    }
+  },
+  "evaluation_arms": {
+    "compiler_uniform": {
+      "cumulative_elapsed_s": 599.9,
+      "wall_interval_s": 599.9
+    },
+    "compiler_allocated": {
+      "cumulative_elapsed_s": 1193.5,
+      "wall_interval_s": 593.6
+    },
+    "am_uniform": {
+      "cumulative_elapsed_s": 3043.4,
+      "wall_interval_s": 1849.9
+    },
+    "am_allocated": {
+      "cumulative_elapsed_s": 5581.1,
+      "wall_interval_s": 2537.7
+    }
+  },
+  "total_wall_s": 27526.522525,
+  "scope": "Observed wall time, not GPU-active time. Stage intervals include identity hashing, imports, subprocess teardown and output-hash receipts. Evaluation intervals end at successive 240-response log boundaries; first includes shared runner setup; 0.1s log precision. Includes generation, Docker grading and persistence; not tokens/s."
+}

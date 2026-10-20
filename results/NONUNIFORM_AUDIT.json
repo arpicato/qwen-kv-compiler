@@ -1,0 +1,10 @@
+{
+  "complete": true,
+  "frozen_files": 179,
+  "stage_receipts": 22,
+  "stage_output_hashes": 380,
+  "raw_sha256": "bb0b5fbd0f8327648e5d9bee652a9c1b8d0b9d767314693ab36326e29cafbcbb",
+  "freeze_sha256": "d51b6e85f63f448bb4821ca27df579c6b0b552e19c272b3bbce9532bb74a8dbd",
+  "completed_resume": true,
+  "elapsed_s": 127.1683536459459
+}

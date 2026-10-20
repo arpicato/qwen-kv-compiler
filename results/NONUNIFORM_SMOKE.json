@@ -1,0 +1,133 @@
+{
+  "complete": true,
+  "protocol_sha256": "c688f8253ac21d7480bdfe883d1fde92716e7ff7edb2c26145984ce4158310f9",
+  "files": {
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_uniform/manifest.json": "cd352e63218ea59b9e75d97d7e227040fef3a1bd7c50a5e819c228988256f560",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_uniform/layer_003.safetensors": "3a648763b01682823a5396c66cd4231357b8d6015addf678cc509ff5c33290cf",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_uniform/layer_007.safetensors": "c9cc78c1942280beca4825f51bfbf0dd21b79dc4eafe7abf403b0f0a54839e77",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_uniform/layer_011.safetensors": "c46bf6d88e7ea2836f881e8fb50634447170ba1335846a4b2a5e614ea38a79f9",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_uniform/layer_015.safetensors": "6188841ecbe751b61f95900855c9a239ee0d10968160a40758a36bb11471b459",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_uniform/layer_019.safetensors": "a49d9738a0c6d6e557c748941e749d2c54306df223c138b9cd44c614bc552881",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_uniform/layer_023.safetensors": "43e5badb7d00b8715db54a30714328890962a9342f06c8899a309b4f68885b44",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_uniform/layer_027.safetensors": "09e8e058d2279e346f160ebe25197f2372e3efd0a6be261e3f166bc8a7469e4d",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_uniform/layer_031.safetensors": "d633254389c13afefa7f9462b7ccf5285138db831cf18f49fc7b9503eaae0a3d",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_uniform/layer_035.safetensors": "d6f5d312b46eb73374e996a42aafc1544a58d49e5a5fa7bb0a3ed6f91aa3226d",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_uniform/layer_039.safetensors": "201e18d25714fc1a86fb207d93b826ac4095e2fcaa4de06262d3a4cd0ade311d",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_uniform/layer_043.safetensors": "af3b6ff8e7054cd712d61ec274455117d5efec96a37d3774e483b507a8d5d6cf",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_uniform/layer_047.safetensors": "28feb7e96165cb343df77440ffa6e9e954423fcfdd5b4a3d99bd329ab4f47fdd",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_uniform/layer_051.safetensors": "d1221e54a56238a34b1abad79383810a56b78413d48ede989d9b5d2f94dac599",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_uniform/layer_055.safetensors": "848bfd64f93720ca537838e713b8b542e7e8a93bf072e472791264b337f2bda1",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_uniform/layer_059.safetensors": "655b2ee4f782f91de22407125a3feda90d4b8bed312548225b793dc1a1c5c1d9",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_uniform/layer_063.safetensors": "dc048b553e5bc9782a050e0fda553da325e61b6cfff9b1bc545e04d8d1428a67",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_allocated/manifest.json": "7b49968439cb3f49a281375856ea072a53943e956ae0cfbb5e83da23110a3216",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_allocated/layer_003.safetensors": "433b2a5002196803c791953f60d4b2a8ee442d8bed2a2ca3f61fff06016ff377",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_allocated/layer_007.safetensors": "f896a73572c4bb0c334694481aa8898cfe6ade153134aa19d5ffb26ea5cec389",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_allocated/layer_011.safetensors": "f54c8587d16d7d816629ad3f16b6af99bb280640415a0fced0bbe1d35d103cc0",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_allocated/layer_015.safetensors": "297c8634813bbe3827f5d0278e856643e2263a531e308d50a6e01921385a58f2",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_allocated/layer_019.safetensors": "c1c6539ae2501b5455c00a57a37534fca39e15291a5094a15f1161fd710c3185",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_allocated/layer_023.safetensors": "3064691bb444251da1f67c13f35b47d11470c635012fa2306cc00f7015e4ea56",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_allocated/layer_027.safetensors": "3f5ec4636c67f3541e583c5cdb3d4f6a3ea915df31836767ab7d7923e7d13d89",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_allocated/layer_031.safetensors": "41ae8fd7889d19ee95054803427848b3cc6a19fe86cef4b28d12578ae5985846",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_allocated/layer_035.safetensors": "0a225ddb0fce2779470887f7756fbcf0386b61802af074be0ed97b1697ac1d8b",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_allocated/layer_039.safetensors": "891c9f25a68546cb703b407ba7a506f1f0db8e2161645c1b58d123d6108ec16a",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_allocated/layer_043.safetensors": "e104d47b1fd5b0532f3daf08fc7bd36c58676305ef0e90c55f43b7de2e06eab4",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_allocated/layer_047.safetensors": "cc477f2b947d6752300cf2b47c690007908049b1d892c9add8190bf7c4105f6f",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_allocated/layer_051.safetensors": "d15c54092b533ae8b1eda6c8d3d1741284463378494d443b055e99d4e034c4a2",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_allocated/layer_055.safetensors": "6e19d89c1eb74ae0005a5fd2e4480a6bc51444d587db86556607c85629dfc0bc",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_allocated/layer_059.safetensors": "6b4058458bd8e53bc6aabe6dda476bdacc5d7c56b05d46b0cf0d87ac50adab49",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/compiler_allocated/layer_063.safetensors": "b68c3415df9eb0617b62923ed9ad46a42c63adf800407066f64bec431e18e6be",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_uniform/manifest.json": "be42bd9dd4827eee45a3cffe9f54911b390058a5e282bf0c9a160a0ac7398060",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_uniform/layer_003.safetensors": "06f1763de2c21dddfba089cd94aac3c847e379d0d3236760d0fffd5895c997c9",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_uniform/layer_007.safetensors": "7d2f02fba86f0ef2d4863d955442cceb7b85fe52511f8e9bcd389e6597bdb911",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_uniform/layer_011.safetensors": "47d60318fa7fc9c833864b00faa04e28a37c9b3315693d219b6a7519c70c1334",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_uniform/layer_015.safetensors": "962862294a44957ca485d4227f05beab2d16fd2774aab8e3ba6b4bb4afbf9e13",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_uniform/layer_019.safetensors": "ed0ac864bab24a38ec41a894510de6f589c607a8de37378566a22da459c02ca9",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_uniform/layer_023.safetensors": "c57deea0b67240070e5b8a6235617754c29c5d92c2ef9ddaea74ea21c11d5fb1",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_uniform/layer_027.safetensors": "01a000cb62ae02229a53d4505115b2692a6c34a5eedfb978377839eef470a961",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_uniform/layer_031.safetensors": "04666419deb4e314d4e872a2b812594c1d5aceaf8b22fd16d2467e677348ea54",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_uniform/layer_035.safetensors": "c83c2c819666b101d101bc68b0cac051ec23b87bc7e68a8b4af9ca28cb835662",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_uniform/layer_039.safetensors": "18f9206ab56672e8c38fe2acf0e02784b1227ca2287dbfcf877c5509306d8ec4",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_uniform/layer_043.safetensors": "0a6b0e0948b72f9bb77e4a7a3913ad9d538c65369a21b7262825e80b09434a1e",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_uniform/layer_047.safetensors": "cd343c514658268b815fa327454bbf8304a4b668fe816c0880d6dd96e44b1b53",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_uniform/layer_051.safetensors": "a650ae807a03e1cc9dbaf431271f0101abd3a8a6622752e2a197c7707bc88ec9",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_uniform/layer_055.safetensors": "ad20b22d6a9fdefdc4a6ce67a3b5fd145dad4616888654fc34598f7db5e91e97",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_uniform/layer_059.safetensors": "55e5b50150ae2737df40a9c8eff1878e357f2604d08e454b1f0f5861c695872b",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_uniform/layer_063.safetensors": "2e31f906a1f6e54f115d46a13897748f107c7c5b88e07d6506f3fb881b48c50e",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_allocated/manifest.json": "469b03541a1ecd13c98f5c1a414dcab01168f45fea0257e66b0b658e897f0bef",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_allocated/layer_003.safetensors": "aeec9e1c187e100f6430cb4c0e9fb5024bd87ded92b9fb27499369da824fdad2",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_allocated/layer_007.safetensors": "23e2fc10769f91b888d43165b5d0eb6a87bc5b065617c8095c6b083e40178518",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_allocated/layer_011.safetensors": "791f5e86b1d714232064f442751c39b1282c6709b0bc68c0347bdfeb594222c9",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_allocated/layer_015.safetensors": "94be196ee3800bbf325ca63fb27d5c577727bc35c27c4e9dca509ece3394ed16",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_allocated/layer_019.safetensors": "5035bc4fe9a1367e386dafb73c1e7f44622aa7a5ea5af28a643b1befee3efab4",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_allocated/layer_023.safetensors": "05c80256ae941c92cbadb3bd4fbb7ef61d621218ea499dba957736c622a0f4ce",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_allocated/layer_027.safetensors": "5108bdfc141d9308e236edb43ff083d618c6b9838d6c456d7f5a19d7ab465525",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_allocated/layer_031.safetensors": "420ef8a0d92e321e8d2f25341103af023ad5a86641218ec635839743eef7d291",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_allocated/layer_035.safetensors": "7c7452388e3d6f7b4cada007f93e4e94a9ba21e8002833103814a25e90a0bb89",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_allocated/layer_039.safetensors": "96795c692f5335f346df6bbde10153da7e6d674b2e5b594b4109c78c9112a3fc",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_allocated/layer_043.safetensors": "560fb9d9090fc8c7a1b249e0ee05c1f322c18842241b282eaee689e3260716dc",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_allocated/layer_047.safetensors": "58ce9cd3d02f7f7eed8971db7af14e750760394ace7e2c934e5e8dd3d52c7205",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_allocated/layer_051.safetensors": "5473123cf886f53dde3d241794fd03f01f9c9d7d3ede445d1b6ba7c57e76123f",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_allocated/layer_055.safetensors": "6a15c5c801d73f623ffa8c8a9ddc5b85cbf46b2a8c69b3348bf874b49e79791f",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_allocated/layer_059.safetensors": "d6d5b84b3c39807e319b1374e6ff5c4940abd6035d5700a64d97f8f4af14bc36",
+    "/mnt/data/artifacts/kvcompile/nonuniform27b_fp32v_v1/am_allocated/layer_063.safetensors": "fe1705004a2a5a08fccca98311a6c3a7550bae0987c020b3e657cb8d163de84e"
+  },
+  "model": "/mnt/data/models/Qwen3.8-27B-EXL3-3.5bpw",
+  "rows": {
+    "compiler_uniform": {
+      "roundtrip_exact": true,
+      "recurrent_injection_exact": true,
+      "ids": [
+        63,
+        19349,
+        5022,
+        63
+      ],
+      "stop": "eos",
+      "manifest_sha256": "cd352e63218ea59b9e75d97d7e227040fef3a1bd7c50a5e819c228988256f560"
+    },
+    "compiler_allocated": {
+      "roundtrip_exact": true,
+      "recurrent_injection_exact": true,
+      "ids": [
+        63,
+        19349,
+        5022,
+        63
+      ],
+      "stop": "eos",
+      "manifest_sha256": "7b49968439cb3f49a281375856ea072a53943e956ae0cfbb5e83da23110a3216"
+    },
+    "am_uniform": {
+      "roundtrip_exact": true,
+      "recurrent_injection_exact": true,
+      "ids": [
+        63,
+        19349,
+        5022,
+        63
+      ],
+      "stop": "eos",
+      "manifest_sha256": "be42bd9dd4827eee45a3cffe9f54911b390058a5e282bf0c9a160a0ac7398060"
+    },
+    "am_allocated": {
+      "roundtrip_exact": true,
+      "recurrent_injection_exact": true,
+      "ids": [
+        63,
+        19349,
+        5022,
+        63
+      ],
+      "stop": "eos",
+      "manifest_sha256": "469b03541a1ecd13c98f5c1a414dcab01168f45fea0257e66b0b658e897f0bef"
+    }
+  },
+  "question": "What should I use to install dependencies in a Node service?",
+  "native_parity": {
+    "ids_equal": true,
+    "max_logit_diff": 0.03515625,
+    "tolerance": 0.25
+  },
+  "elapsed_s": 67.3941339510493,
+  "peak_gib": 14.037240982055664
+}
