@@ -3,10 +3,11 @@
 Current status: experiments and technical release validation complete;
 **published with an exploratory disclaimer** at
 [arpicato/qwen-kv-compiler](https://github.com/arpicato/qwen-kv-compiler).
-The user authorized creation and push of the audited snapshot on2026-10-19.
-That public snapshot predates the local allocation follow-ups; those additions
-have not been pushed at this checkpoint. User authorized publishing the follow-up
-update on 2026-10-20; final export/diff checks precede push, never private history.
+The user authorized creation and push of the audited snapshot on 2026-10-19,
+then authorized the allocation follow-up update on 2026-10-20. That update was
+pushed after export and diff checks; public main was
+`076e25688479fb07577cae7ffd141d68f8044b10` at the last verified check.
+The README edit after that checkpoint is local and has not been published.
 The old proposal in `FINAL_PUBLICATION_PLAN.md` was approved and executed; its
 chronology is retained, not permission to launch additional experiments.
 
@@ -24,7 +25,7 @@ chronology is retained, not permission to launch additional experiments.
 | Isolated runtime install / short inference | Passed: fresh install6,826s, checks1,609s; compiler4k/8k, AM4k/FP32V8k, allfive4Barms and completed resumes. Evidence: `RELEASE_RUNTIME_SMOKES.json`; initial failure retained |
 | Independent behavior review | Not performed. User selected publication with an explicit exploratory/AI-assistant/unblinded disclaimer instead; README and main report disclose this. Optional review packet retained |
 | Privacy/license/public archive | Audited source snapshot published with user approval; no weights/caches or operational notes. Notices retained; audit is not legal certification |
-| User approval and public upload | Authorized and completed2026-10-19; clean public history, not the private development branches |
+| User approval and public upload | Initial release and allocation follow-up authorized and pushed; clean public history, not the private development branches |
 
 Supported claims: static-prefix compression on this pinned 27B target; observed
 tool/sharing/gating tradeoffs versus off-policy uniform AM, with precision/backend/
@@ -49,7 +50,7 @@ agreement or change any score. Source-prompt notices and provenance limitations
 remain, including the unrecorded OpenCode instruction revision. Audit is not a
 legal certification or a certification of the unshipped private Git history.
 
-## Before uploading the local follow-ups
+## Allocation follow-up upload record
 
 2026-10-20 checkpoint: reader-facing links/scope corrected; current Git-free
 595-file / 594-hash export passed exact inventory and credential-signature scan,
@@ -67,9 +68,9 @@ the release inventory (local record preserved): final export is 594 files /
   exact Git-free inventory/hash/credential-signature checks and CPU suite on that
   export. Do not ship `AGENTS.md`, operational notes, private Git history, models,
   caches or credentials. Existing license/source-prompt notices remain required.
-- Use a clean checkout of the public repository, review the exact update diff,
-  and obtain explicit approval before push. Earlier publication approval is not
-  blanket authorization for this update.
+- The allocation update was pushed from a clean public checkout after the user
+  approved it. Later edits need their own diff review and approval before push;
+  never push the private development history.
 - Independent behavior review, further seeds/holdouts and completing deferred
   public-clone reproduction are optional stronger validation, not work already
   completed. Do not advertise those as passed gates.
