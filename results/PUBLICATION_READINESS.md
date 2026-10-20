@@ -7,7 +7,7 @@ The user authorized creation and push of the audited snapshot on 2026-10-19,
 then authorized the allocation follow-up update on 2026-10-20. That update was
 pushed after export and diff checks; public main was
 `076e25688479fb07577cae7ffd141d68f8044b10` at the last verified check.
-The README edit after that checkpoint is local and has not been published.
+Subsequent documentation edits require their own reviewed public update.
 The old proposal in `FINAL_PUBLICATION_PLAN.md` was approved and executed; its
 chronology is retained, not permission to launch additional experiments.
 
