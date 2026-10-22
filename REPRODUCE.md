@@ -104,6 +104,11 @@ differences rather than choosing whichever run scores better.
 
 ## Controlled 4B and AM runtimes
 
+The retired research environment’s full package snapshot is recorded in
+[`requirements/kvbench/requirements.txt`](requirements/kvbench/requirements.txt),
+with scope and model provenance in its [README](requirements/kvbench/README.md).
+
+
 Use separate environments: 27B inference needs the pinned Python3.14.4/
 Torch2.13.0+rocm7.2; 4B and AM solving use Python3.12/Torch2.8.0+rocm6.4,
 Transformers4.57.1, accelerate1.12.0, NumPy2.5.4, safetensors0.8.0,
