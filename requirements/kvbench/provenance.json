@@ -1,0 +1,16 @@
+{
+  "python": "3.12.15",
+  "requirements": "requirements.txt",
+  "runtime_recipe": "../../REPRODUCE.md#controlled-4b-and-am-runtimes",
+  "upstream_code_pins": "../../runtime.json",
+  "model": {
+    "repo_id": "Qwen/Qwen3-4B",
+    "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "existing_file_hash_record": "../../results/CONTROLLED4B_CAPTURE_AUDIT.json"
+  },
+  "retired_earlier_comparison_dataset": {
+    "repo_id": "hazyresearch/m07d28_mtob_synthesize_qwen3-4b_n65536-0",
+    "revision": "5f126220e1ebed30fadcea4abfe01399dba6568d",
+    "scope": "Earlier comparison cache; separate from the final controlled authored evaluation and calibration data."
+  }
+}
